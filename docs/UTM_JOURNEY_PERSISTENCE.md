@@ -143,7 +143,7 @@ import UtmLinkInjector from "@/components/analytics/utm-link-injector";
 ```typescript
 // If link already has UTM params, don't override
 const hasUtmParams = UTM_PARAM_KEYS.some((param) =>
-  url.searchParams.has(param)
+  url.searchParams.has(param),
 );
 if (hasUtmParams) return href;
 ```
@@ -245,7 +245,7 @@ document.addEventListener(
       console.log("Link clicked:", link.href);
     }
   },
-  true
+  true,
 );
 ```
 
@@ -275,7 +275,7 @@ document.addEventListener(
       } catch {
         return false;
       }
-    }
+    },
   );
 
   console.log(`📊 Found ${internalLinks.length} internal links\n`);
@@ -385,7 +385,7 @@ document.addEventListener(
 
 ```typescript
 const hasUtmParams = UTM_PARAM_KEYS.some((param) =>
-  url.searchParams.has(param)
+  url.searchParams.has(param),
 );
 if (hasUtmParams) return href;
 ```

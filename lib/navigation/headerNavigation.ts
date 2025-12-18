@@ -52,8 +52,8 @@ export const headerNavigation = {
       href: "/blog",
     },
     {
-      text: "ABOUT US",
-      href: "/about-us",
+      text: "NOSOTROS",
+      href: "/nosotros",
     },
     {
       text: "CONTACT US",

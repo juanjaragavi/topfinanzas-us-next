@@ -40,7 +40,7 @@ export default function TopAds() {
                         '/terms',
                         '/privacy-policy',
                         '/cookie-policy',
-                        '/about-us',
+                        '/nosotros',
                         '/contactanos',
                         '/quiz'
                     ]

@@ -141,7 +141,7 @@ bash ./scripts/git-workflow.sh
 const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ className, ...props }, ref) => (
     <div className={cn("base-styles", className)} ref={ref} {...props} />
-  )
+  ),
 );
 Component.displayName = "Component";
 ```

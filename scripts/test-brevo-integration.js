@@ -35,7 +35,7 @@ async function testBrevoIntegration() {
   console.log(`   Email: ${testData.email_address} (UNIQUE)`);
   console.log(`   Income: ${testData.fields.cual_es_tu_ingreso_mensual}`);
   console.log(
-    `   Preference: ${testData.fields.que_es_lo_que_mas_importante_en_una_tarjeta_de_credito}\n`
+    `   Preference: ${testData.fields.que_es_lo_que_mas_importante_en_una_tarjeta_de_credito}\n`,
   );
 
   try {
@@ -63,7 +63,7 @@ async function testBrevoIntegration() {
       console.log(`   ✓ COUNTRIES attribute set to "United Kingdom"`);
       console.log(`   ✓ All user data preserved in Brevo attributes`);
       console.log(
-        "\n📋 Check Brevo dashboard to verify the contact was created.\n"
+        "\n📋 Check Brevo dashboard to verify the contact was created.\n",
       );
       return true;
     } else {
@@ -76,7 +76,7 @@ async function testBrevoIntegration() {
     console.error("\n❌ ERROR: Failed to connect to API");
     console.error("   Error details:", error.message);
     console.error(
-      "\n💡 Make sure your development server is running on port 3030"
+      "\n💡 Make sure your development server is running on port 3030",
     );
     console.error("   Run: npm run dev\n");
     return false;

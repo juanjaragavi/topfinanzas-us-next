@@ -201,7 +201,10 @@ export default function Contactanos() {
     const isMessageValid = formData.message.trim().length > 0; // Simple check
 
     if (!isMessageValid) {
-      setErrors((prev) => ({ ...prev, message: "Por favor describe tu necesidad" }));
+      setErrors((prev) => ({
+        ...prev,
+        message: "Por favor describe tu necesidad",
+      }));
     } else {
       setErrors((prev) => ({ ...prev, message: null }));
     }
@@ -240,7 +243,6 @@ export default function Contactanos() {
 
     // Clear errors on change if needed, or implement live validation as before
     if (errors[name as keyof typeof errors]) {
-      // @ts-ignore
       setErrors((prev) => ({ ...prev, [name]: null }));
     }
   };
@@ -295,7 +297,6 @@ export default function Contactanos() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
       <div className="container mx-auto px-4 py-12 max-w-6xl bg-white">
-
         {/* Title */}
         <h1 className="text-4xl font-bold text-gray-900 mb-12">Contáctanos</h1>
 
@@ -303,7 +304,10 @@ export default function Contactanos() {
           {/* Left Column: Image & Text */}
           <div className="md:col-span-5 flex flex-col items-start space-y-8">
             {/* Image matches screenshot vertical aspect ratio */}
-            <div className="w-full relative overflow-hidden shadow-lg" style={{ aspectRatio: '360/738' }}>
+            <div
+              className="w-full relative overflow-hidden shadow-lg"
+              style={{ aspectRatio: "360/738" }}
+            >
               {/* Using style for aspect ratio based on image dimensions provided in URL */}
               {/* 360x738 is approx 1:2 */}
               <Image
@@ -318,23 +322,32 @@ export default function Contactanos() {
 
           {/* Right Column: Content & Form */}
           <div className="md:col-span-7 flex flex-col space-y-6">
-
             <div className="space-y-4 text-lg text-gray-700">
               <p className="font-medium">
-                ¿Te preguntas cómo puedes lograr un cambio significativo en tus finanzas personales?
+                ¿Te preguntas cómo puedes lograr un cambio significativo en tus
+                finanzas personales?
               </p>
               <p>
-                Si estás listo para embarcarte en una travesía transformadora hacia la estabilidad y la prosperidad financiera, estamos aquí para acompañarte. Contáctanos a través del correo electrónico
+                Si estás listo para embarcarte en una travesía transformadora
+                hacia la estabilidad y la prosperidad financiera, estamos aquí
+                para acompañarte. Contáctanos a través del correo electrónico
               </p>
               <p className="font-bold text-gray-900">
-                <a href="mailto:info@topfinanzas.com" className="hover:text-blue-600 transition-colors">
+                <a
+                  href="mailto:info@topfinanzas.com"
+                  className="hover:text-blue-600 transition-colors"
+                >
                   info@topfinanzas.com
                 </a>
-                <span className="font-normal"> o completa el formulario a continuación para compartir tus inquietudes, ideas o planes. Nos comprometemos a responder con agilidad y a ser tus aliados en cada etapa de este emocionante viaje que transformará tu vida.</span>
+                <span className="font-normal">
+                  {" "}
+                  o completa el formulario a continuación para compartir tus
+                  inquietudes, ideas o planes. Nos comprometemos a responder con
+                  agilidad y a ser tus aliados en cada etapa de este emocionante
+                  viaje que transformará tu vida.
+                </span>
               </p>
-              <p>
-                ¡Esperamos saber de ti pronto!
-              </p>
+              <p>¡Esperamos saber de ti pronto!</p>
             </div>
 
             {/* Form */}
@@ -345,8 +358,12 @@ export default function Contactanos() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg-green-50 p-8 rounded-xl border border-green-200 text-center"
                 >
-                  <h3 className="text-2xl font-bold text-green-700 mb-2">¡Mensaje Enviado!</h3>
-                  <p className="text-green-600 mb-6">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+                  <h3 className="text-2xl font-bold text-green-700 mb-2">
+                    ¡Mensaje Enviado!
+                  </h3>
+                  <p className="text-green-600 mb-6">
+                    Gracias por contactarnos. Te responderemos a la brevedad.
+                  </p>
                   <button
                     onClick={() => setSubmitSuccess(false)}
                     className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
@@ -362,18 +379,24 @@ export default function Contactanos() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Nombre"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.name ? 'border-red-500' : ''}`}
+                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.name ? "border-red-500" : ""}`}
                     />
-                    {errors.name && <p className="text-red-500 text-sm pl-4">{errors.name}</p>}
+                    {errors.name && (
+                      <p className="text-red-500 text-sm pl-4">{errors.name}</p>
+                    )}
 
                     <Input
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Apellido"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.lastName ? 'border-red-500' : ''}`}
+                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.lastName ? "border-red-500" : ""}`}
                     />
-                    {errors.lastName && <p className="text-red-500 text-sm pl-4">{errors.lastName}</p>}
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm pl-4">
+                        {errors.lastName}
+                      </p>
+                    )}
 
                     <Input
                       name="email"
@@ -381,9 +404,13 @@ export default function Contactanos() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Correo"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.email ? 'border-red-500' : ''}`}
+                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.email ? "border-red-500" : ""}`}
                     />
-                    {errors.email && <p className="text-red-500 text-sm pl-4">{errors.email}</p>}
+                    {errors.email && (
+                      <p className="text-red-500 text-sm pl-4">
+                        {errors.email}
+                      </p>
+                    )}
 
                     <Input
                       name="phone"
@@ -391,18 +418,26 @@ export default function Contactanos() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="telefono" // Match lowercase from requirement/screenshot
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.phone ? 'border-red-500' : ''}`}
+                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.phone ? "border-red-500" : ""}`}
                     />
-                    {errors.phone && <p className="text-red-500 text-sm pl-4">{errors.phone}</p>}
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm pl-4">
+                        {errors.phone}
+                      </p>
+                    )}
 
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="describe tu necesidad" // Match lowercase
-                      className={`rounded-3xl border-gray-300 py-4 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 min-h-[150px] resize-none ${errors.message ? 'border-red-500' : ''}`}
+                      className={`rounded-3xl border-gray-300 py-4 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 min-h-[150px] resize-none ${errors.message ? "border-red-500" : ""}`}
                     />
-                    {errors.message && <p className="text-red-500 text-sm pl-4">{errors.message}</p>}
+                    {errors.message && (
+                      <p className="text-red-500 text-sm pl-4">
+                        {errors.message}
+                      </p>
+                    )}
                   </div>
 
                   <div className="flex items-start gap-3 mt-4 px-2">
@@ -416,18 +451,32 @@ export default function Contactanos() {
                       <Label htmlFor="terms" className="mr-1">
                         Acepto
                       </Label>
-                      <Link href="/privacy-policy" className="text-blue-500 hover:underline">
+                      <Link
+                        href="/privacy-policy"
+                        className="text-blue-500 hover:underline"
+                      >
                         políticas de tratamiento de datos
                       </Link>{" "}
                       y{" "}
-                      <Link href="/terms" className="text-blue-500 hover:underline">
+                      <Link
+                        href="/terms"
+                        className="text-blue-500 hover:underline"
+                      >
                         términos y condiciones
                       </Link>
                     </div>
                   </div>
-                  {errors.general && <p className="text-red-500 text-sm pl-4">{errors.general}</p>}
+                  {errors.general && (
+                    <p className="text-red-500 text-sm pl-4">
+                      {errors.general}
+                    </p>
+                  )}
 
-                  {submitError && <div className="text-red-600 text-sm text-center bg-red-50 p-2 rounded">{submitError}</div>}
+                  {submitError && (
+                    <div className="text-red-600 text-sm text-center bg-red-50 p-2 rounded">
+                      {submitError}
+                    </div>
+                  )}
 
                   <div className="flex justify-center mt-8">
                     <button
@@ -445,7 +494,8 @@ export default function Contactanos() {
             {/* Social Media - Below Form */}
             <div className="mt-16 text-center">
               <h3 className="text-xl text-gray-800 mb-6 font-medium">
-                Siguenos en nuestras redes sociales y toma el control de tus finanzas
+                Siguenos en nuestras redes sociales y toma el control de tus
+                finanzas
               </h3>
               <div className="flex justify-center space-x-4">
                 <Link
@@ -486,7 +536,6 @@ export default function Contactanos() {
                 </Link>
               </div>
             </div>
-
           </div>
         </div>
       </div>

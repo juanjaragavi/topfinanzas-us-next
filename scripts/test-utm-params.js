@@ -154,7 +154,7 @@ async function runTests() {
   // Test WITHOUT UTM (should work)
   results.withoutUTM = await testScenario(
     "Submission WITHOUT UTM Parameters",
-    testWithoutUTM
+    testWithoutUTM,
   );
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -162,7 +162,7 @@ async function runTests() {
   // Test WITH UTM (the problematic case)
   results.withUTM = await testScenario(
     "Submission WITH UTM Parameters",
-    testWithUTM
+    testWithUTM,
   );
 
   // Final summary
@@ -170,10 +170,10 @@ async function runTests() {
   console.log("📊 TEST RESULTS SUMMARY");
   console.log("=".repeat(60));
   console.log(
-    `Without UTM Parameters: ${results.withoutUTM ? "✅ PASSED" : "❌ FAILED"}`
+    `Without UTM Parameters: ${results.withoutUTM ? "✅ PASSED" : "❌ FAILED"}`,
   );
   console.log(
-    `With UTM Parameters:    ${results.withUTM ? "✅ PASSED" : "❌ FAILED"}`
+    `With UTM Parameters:    ${results.withUTM ? "✅ PASSED" : "❌ FAILED"}`,
   );
 
   if (results.withoutUTM && !results.withUTM) {

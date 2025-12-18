@@ -112,7 +112,7 @@ async function testMarketingIntegrations() {
     if (convertKitResult) {
       if (convertKitSuccess) {
         console.log(
-          `✅ ConvertKit Success (status ${convertKitResult.status})`
+          `✅ ConvertKit Success (status ${convertKitResult.status})`,
         );
       } else {
         console.log("❌ ConvertKit Failed", convertKitResult);
@@ -157,16 +157,16 @@ async function runTests() {
   console.log("📊 Test Results Summary");
   console.log("==============================================");
   console.log(
-    `Google Sheets API: ${results.sheets ? "✅ PASSED" : "❌ FAILED"}`
+    `Google Sheets API: ${results.sheets ? "✅ PASSED" : "❌ FAILED"}`,
   );
   console.log(`Brevo API: ${results.brevo ? "✅ PASSED" : "❌ FAILED"}`);
   console.log(
-    `ConvertKit API: ${results.convertkit ? "✅ PASSED" : "❌ FAILED"}`
+    `ConvertKit API: ${results.convertkit ? "✅ PASSED" : "❌ FAILED"}`,
   );
 
   const allPassed = results.sheets && results.brevo && results.convertkit;
   console.log(
-    `\n${allPassed ? "✅ ALL TESTS PASSED" : "❌ SOME TESTS FAILED"}`
+    `\n${allPassed ? "✅ ALL TESTS PASSED" : "❌ SOME TESTS FAILED"}`,
   );
 
   process.exit(allPassed ? 0 : 1);
