@@ -73,6 +73,8 @@ export default function CreditCardFormToProduct() {
     incomeText: "", // Add a new field to store the text value
     email: "",
     firstName: "",
+    lastName: "",
+    phone: "",
     receiveMessages: false,
   });
 
@@ -350,7 +352,7 @@ export default function CreditCardFormToProduct() {
           );
 
           setTimeout(() => {
-            redirectWithUtmParams("https://linkly.link/2ERav");
+            redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
           }, 800);
           return;
         }
@@ -402,7 +404,7 @@ export default function CreditCardFormToProduct() {
         );
 
         setTimeout(() => {
-          redirectWithUtmParams("https://linkly.link/2ERav");
+          redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
         }, 800);
       } catch (error) {
         formLogger.error("[QUIZ] Error handling submission", error);

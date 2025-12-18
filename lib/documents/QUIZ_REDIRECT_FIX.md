@@ -26,7 +26,7 @@ Replaced all occurrences of the broken external URL with an internal redirect to
 **Changes:**
 
 - **Old**: `router.push("https://linkly.link/2ERav")`
-- **New**: `router.push("/credit-card-recommender-p1")`
+- **New**: `router.push("/recomendador-de-tarjetas-de-credito-p1")`
 
 ### Affected Code Sections
 
@@ -50,7 +50,7 @@ After successful form submission, users are now redirected to the internal recom
 
 - [ ] Test quiz form submission (new user)
 - [ ] Test quiz form submission (duplicate/returning user)
-- [ ] Verify redirect to `/credit-card-recommender-p1` works
+- [ ] Verify redirect to `/recomendador-de-tarjetas-de-credito-p1` works
 - [ ] Confirm UTM parameters are preserved
 - [ ] Verify cookies are set correctly
 - [ ] Test analytics conversion events fire properly
@@ -77,4 +77,4 @@ After successful form submission, users are now redirected to the internal recom
 **Fixed by**: GitHub Copilot
 **Date**: October 15, 2025
 **Issue**: Quiz redirect failure due to broken external URL
-**Resolution**: Replaced with internal redirect to `/credit-card-recommender-p1`
+**Resolution**: Replaced with internal redirect to `/recomendador-de-tarjetas-de-credito-p1`

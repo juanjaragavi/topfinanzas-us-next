@@ -778,7 +778,7 @@ export default function FinancialSolutionsPage() {
           your financial profile and specific needs.
         </p>
         <Link
-          href="/credit-card-recommender-p1"
+          href="/recomendador-de-tarjetas-de-credito-p1"
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 inline-block transition-colors rounded-full"
         >
           Go to Recommender

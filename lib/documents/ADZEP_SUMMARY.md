@@ -53,7 +53,7 @@ The AdZep tag has been successfully implemented in your Next.js project with the
 ### Files Modified
 
 - `/app/layout.tsx` - Added AdZep integration
-- `/app/credit-card-recommender-p1/page.tsx` - Example enhanced tracking
+- `/app/recomendador-de-tarjetas-de-credito-p1/page.tsx` - Example enhanced tracking
 
 ## 🎮 How It Works
 

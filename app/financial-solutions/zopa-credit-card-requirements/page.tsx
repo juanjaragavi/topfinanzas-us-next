@@ -414,7 +414,7 @@ export default function ZopaCreditCardRequirementsPage() {
                       → Understanding Credit Card Types and Benefits
                     </Link>
                     <Link
-                      href="/credit-card-recommender-p1"
+                      href="/recomendador-de-tarjetas-de-credito-p1"
                       className="block text-md text-[#6CE6B5] hover:text-[#5BD5A4] font-medium text-left"
                     >
                       → Find Your Perfect Credit Card Match

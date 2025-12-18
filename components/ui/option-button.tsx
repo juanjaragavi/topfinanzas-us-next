@@ -22,10 +22,11 @@ export default function OptionButton({
     <motion.button
       type="button"
       onClick={onClick}
-      className={`flex items-center justify-center w-full px-4 py-2 sm:py-3 rounded-full border-2 transition-all duration-200 ${selected
+      className={`flex items-center justify-center w-full px-4 py-2 sm:py-3 rounded-full border-2 transition-all duration-200 ${
+        selected
           ? "bg-[#2E74B5] border-[#2E74B5] text-white shadow-lg scale-[1.02]"
           : "bg-white border-[#2E74B5] text-[#2E74B5] hover:bg-blue-50 shadow-md"
-        } ${className}`}
+      } ${className}`}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}

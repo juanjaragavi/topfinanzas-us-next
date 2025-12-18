@@ -57,7 +57,7 @@ Used an automated script (`scripts/fix-mobile-button-tap.js`) to replace inline 
 
 ```tsx
 <Link
-  href="/credit-card-recommender-p1"
+  href="/recomendador-de-tarjetas-de-credito-p1"
   className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
 >
 ```
@@ -66,7 +66,7 @@ Used an automated script (`scripts/fix-mobile-button-tap.js`) to replace inline 
 
 ```tsx
 <Link
-  href="/credit-card-recommender-p1"
+  href="/recomendador-de-tarjetas-de-credito-p1"
   className="cta-button-orange"
 >
 ```

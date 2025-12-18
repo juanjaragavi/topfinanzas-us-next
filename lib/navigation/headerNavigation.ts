@@ -44,8 +44,8 @@ export const headerNavigation = {
   /** Main navigation items */
   mainNavItems: [
     {
-      text: "CARD RECOMMENDER",
-      href: "/credit-card-recommender-p1",
+      text: "RECOMENDADOR DE TARJETAS",
+      href: "/recomendador-de-tarjetas-de-credito-p1",
     },
     {
       text: "BLOG",
@@ -82,8 +82,8 @@ export const headerNavigation = {
         href: "/personal-finance",
       },
       {
-        text: "Card Recommender", // Tool
-        href: "/credit-card-recommender-p1",
+        text: "Recomendador de Tarjetas", // Tool
+        href: "/recomendador-de-tarjetas-de-credito-p1",
       },
     ],
   },

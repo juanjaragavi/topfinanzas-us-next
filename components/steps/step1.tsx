@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import OptionButton from "../ui/option-button";
 import { step1Strings } from "@/lib/strings";
-import { commonStrings } from "@/lib/constants";
 import ProgressIndicator from "../ProgressIndicator";
 import VisitorCounter from "../VisitorCounter";
 

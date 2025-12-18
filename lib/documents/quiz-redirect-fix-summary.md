@@ -99,7 +99,7 @@ Both guards now consistently respect the validation setting.
 1. User visits `/quiz?utm_source=google&utm_campaign=prod`
 2. User completes quiz form
 3. User revisits `/quiz?utm_source=google&utm_campaign=prod`
-4. **Redirect occurs** - user sent to `/credit-card-recommender-p1?utm_source=google&utm_campaign=prod`
+4. **Redirect occurs** - user sent to `/recomendador-de-tarjetas-de-credito-p1?utm_source=google&utm_campaign=prod`
 
 ## Benefits
 

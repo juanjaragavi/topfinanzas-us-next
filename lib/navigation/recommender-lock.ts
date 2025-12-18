@@ -3,7 +3,7 @@ export const RECOMMENDER_LOCK_COOKIE = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_STORAGE_KEY = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
 const RECOMMENDER_PATH_PATTERN =
-  /^\/credit-card-recommender(?:-[a-z0-9-]+)?(?:\/.+)?$/i;
+  /^\/(?:credit-card-recommender|recomendador-de-tarjetas-de-credito)(?:-[a-z0-9-]+)?(?:\/.+)?$/i;
 
 export interface RecommenderLockPayload {
   pathname: string;
@@ -122,7 +122,7 @@ function safeGetLocalStorage(key: string): string | null {
   try {
     return window.localStorage.getItem(key);
   } catch (error) {
-    logger.warn("Failed to access localStorage", error);
+    logger.error("Failed to access localStorage", error);
     return null;
   }
 }
@@ -135,7 +135,7 @@ function safeSetLocalStorage(key: string, value: string) {
   try {
     window.localStorage.setItem(key, value);
   } catch (error) {
-    logger.warn("Failed to write to localStorage", error);
+    logger.error("Failed to write to localStorage", error);
   }
 }
 
@@ -147,7 +147,7 @@ function safeRemoveLocalStorage(key: string) {
   try {
     window.localStorage.removeItem(key);
   } catch (error) {
-    logger.warn("Failed to remove item from localStorage", error);
+    logger.error("Failed to remove item from localStorage", error);
   }
 }
 

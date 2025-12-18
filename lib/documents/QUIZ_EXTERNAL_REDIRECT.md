@@ -2,7 +2,7 @@
 
 ## Summary
 
-Changed the Quiz CTA button redirect from internal path `/credit-card-recommender-p1` to external link router `https://linkly.link/2ERav` with full UTM parameter preservation.
+Changed the Quiz CTA button redirect from internal path `/recomendador-de-tarjetas-de-credito-p1` to external link router `https://linkly.link/2ERav` with full UTM parameter preservation.
 
 ## Date
 
@@ -45,10 +45,10 @@ New utility module with two main functions:
 
 1. Added import: `import { redirectWithUtmParams } from "@/lib/utils/url-builder";`
 2. Updated duplicate submission redirect (line ~354):
-   - **Before:** `router.push("/credit-card-recommender-p1");`
+   - **Before:** `router.push("/recomendador-de-tarjetas-de-credito-p1");`
    - **After:** `redirectWithUtmParams("https://linkly.link/2ERav");`
 3. Updated successful submission redirect (line ~406):
-   - **Before:** `router.push("/credit-card-recommender-p1");`
+   - **Before:** `router.push("/recomendador-de-tarjetas-de-credito-p1");`
    - **After:** `redirectWithUtmParams("https://linkly.link/2ERav");`
 
 #### `/components/credit-card-form-to-product.tsx`
@@ -57,10 +57,10 @@ New utility module with two main functions:
 
 1. Added import: `import { redirectWithUtmParams } from "@/lib/utils/url-builder";`
 2. Updated duplicate submission redirect (line ~354):
-   - **Before:** `router.push("/credit-card-recommender-p1");`
+   - **Before:** `router.push("/recomendador-de-tarjetas-de-credito-p1");`
    - **After:** `redirectWithUtmParams("https://linkly.link/2ERav");`
 3. Updated successful submission redirect (line ~409):
-   - **Before:** `router.push("/credit-card-recommender-p1");`
+   - **Before:** `router.push("/recomendador-de-tarjetas-de-credito-p1");`
    - **After:** `redirectWithUtmParams("https://linkly.link/2ERav");`
 
 ## Technical Implementation
@@ -127,7 +127,7 @@ git checkout dev -- components/credit-card-form-to-product.tsx
 git checkout dev -- lib/utils/url-builder.ts
 ```
 
-Or simply replace `redirectWithUtmParams("https://linkly.link/2ERav")` back to `router.push("/credit-card-recommender-p1")` in both form files.
+Or simply replace `redirectWithUtmParams("https://linkly.link/2ERav")` back to `router.push("/recomendador-de-tarjetas-de-credito-p1")` in both form files.
 
 ## Notes
 

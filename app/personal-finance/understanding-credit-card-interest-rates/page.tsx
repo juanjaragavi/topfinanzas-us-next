@@ -331,7 +331,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
                 <Link
-                  href="/credit-card-recommender-p1"
+                  href="/recomendador-de-tarjetas-de-credito-p1"
                   className="cta-button-orange"
                 >
                   Compare Credit Card Rates & Offers

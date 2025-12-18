@@ -13,7 +13,6 @@ import {
   BRAND_STATIC_FIELDS,
   BRAND_STATIC_FIELDS_LOWER,
   UTM_PARAM_KEYS,
-  formStrings,
   commonStrings,
 } from "@/lib/constants";
 import { step1Strings, step2Strings } from "@/lib/strings";
@@ -91,7 +90,6 @@ export default function CreditCardForm() {
   const hasAutoSubmittedRef = useRef(false);
 
   const totalSteps = 3;
-  const progress = Math.round(((step - 1) / (totalSteps - 1)) * 100) || 0;
 
   const updateFormData = useCallback((data: Partial<typeof formData>) => {
     setFormData((prev) => ({ ...prev, ...data }));
@@ -353,7 +351,7 @@ export default function CreditCardForm() {
           );
 
           setTimeout(() => {
-            redirectWithUtmParams("https://linkly.link/2ERav");
+            redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
           }, 800);
           return;
         }
@@ -361,7 +359,7 @@ export default function CreditCardForm() {
         if (!sheetsResponse.ok) {
           throw new Error(
             (sheetsResult as { error?: string })?.error ||
-            "Failed to add registration to sheet",
+              "Failed to add registration to sheet",
           );
         }
 
@@ -402,7 +400,7 @@ export default function CreditCardForm() {
         );
 
         setTimeout(() => {
-          redirectWithUtmParams("https://linkly.link/2ERav");
+          redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
         }, 800);
       } catch (error) {
         formLogger.error("[QUIZ] Error handling submission", error);

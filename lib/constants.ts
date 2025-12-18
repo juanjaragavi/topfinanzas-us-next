@@ -69,3 +69,7 @@ export const step3Strings = {
     phone: "Número de teléfono",
   },
 };
+
+// DEPRECATED: This URL was used for the external recommender flow.
+// Kept for backup purposes during the migration to the internal Next.js recommender.
+export const DEPRECATED_LINKLY_REDIRECT = "https://linkly.link/2ERav";

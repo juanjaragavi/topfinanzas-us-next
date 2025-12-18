@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-import { step3Strings, commonStrings } from "@/lib/constants";
+import { step3Strings } from "@/lib/constants";
 import { step3Texts } from "@/lib/strings";
 import VisitorCounter from "../VisitorCounter";
 import ProgressIndicator from "../ProgressIndicator";
@@ -210,7 +210,10 @@ export default function Step3({
         transition={{ delay: 0.2 }}
       >
         <div className="space-y-0.5">
-          <Label htmlFor="firstName" className="text-xs font-bold text-gray-700 ml-1">
+          <Label
+            htmlFor="firstName"
+            className="text-xs font-bold text-gray-700 ml-1"
+          >
             {step3Strings.fields.name}
           </Label>
           <Input
@@ -220,17 +223,21 @@ export default function Step3({
             onChange={handleFirstNameChange}
             onBlur={() => validateFirstName(firstName)}
             required
-            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${errors.firstName
-              ? "border-red-500"
-              : "border-gray-300 focus:border-[#2E74B5]"
-              }`}
+            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${
+              errors.firstName
+                ? "border-red-500"
+                : "border-gray-300 focus:border-[#2E74B5]"
+            }`}
             placeholder={step3Strings.placeholders.name}
             aria-label={step3Strings.fields.name}
           />
         </div>
 
         <div className="space-y-0.5">
-          <Label htmlFor="lastName" className="text-xs font-bold text-gray-700 ml-1">
+          <Label
+            htmlFor="lastName"
+            className="text-xs font-bold text-gray-700 ml-1"
+          >
             {step3Strings.fields.lastName}
           </Label>
           <Input
@@ -240,17 +247,21 @@ export default function Step3({
             onChange={handleLastNameChange}
             onBlur={() => validateLastName(lastName)}
             required
-            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${errors.lastName
-              ? "border-red-500"
-              : "border-gray-300 focus:border-[#2E74B5]"
-              }`}
+            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${
+              errors.lastName
+                ? "border-red-500"
+                : "border-gray-300 focus:border-[#2E74B5]"
+            }`}
             placeholder={step3Strings.placeholders.lastName}
             aria-label={step3Strings.fields.lastName}
           />
         </div>
 
         <div className="space-y-0.5">
-          <Label htmlFor="email" className="text-xs font-bold text-gray-700 ml-1">
+          <Label
+            htmlFor="email"
+            className="text-xs font-bold text-gray-700 ml-1"
+          >
             {step3Strings.fields.email}
           </Label>
           <Input
@@ -260,17 +271,21 @@ export default function Step3({
             onChange={handleEmailChange}
             onBlur={() => validateEmail(email)}
             required
-            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${errors.email
-              ? "border-red-500"
-              : "border-gray-300 focus:border-[#2E74B5]"
-              }`}
+            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${
+              errors.email
+                ? "border-red-500"
+                : "border-gray-300 focus:border-[#2E74B5]"
+            }`}
             placeholder={step3Strings.placeholders.email}
             aria-label={step3Strings.fields.email}
           />
         </div>
 
         <div className="space-y-0.5">
-          <Label htmlFor="phone" className="text-xs font-bold text-gray-700 ml-1">
+          <Label
+            htmlFor="phone"
+            className="text-xs font-bold text-gray-700 ml-1"
+          >
             {step3Strings.fields.phone}
           </Label>
           <Input
@@ -280,10 +295,11 @@ export default function Step3({
             onChange={handlePhoneChange}
             onBlur={() => validatePhone(phone)}
             required
-            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${errors.phone
-              ? "border-red-500"
-              : "border-gray-300 focus:border-[#2E74B5]"
-              }`}
+            className={`h-11 sm:h-12 text-base sm:text-lg border-2 ${
+              errors.phone
+                ? "border-red-500"
+                : "border-gray-300 focus:border-[#2E74B5]"
+            }`}
             placeholder={step3Strings.placeholders.phone}
             aria-label={step3Strings.fields.phone}
           />
@@ -311,10 +327,12 @@ export default function Step3({
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full py-3 sm:py-4 text-lg sm:text-xl font-black rounded-full transition-all shadow-lg ${isSubmitting
-              ? "bg-gray-400 text-white cursor-not-allowed"
-              : "bg-[#457cb3] hover:bg-[#2E74B5] text-white active:scale-95"
-              }`}
+            onClick={handleFormSubmit}
+            className={`w-full py-3 sm:py-4 text-lg sm:text-xl font-black rounded-full transition-all shadow-lg ${
+              isSubmitting
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-[#457cb3] hover:bg-[#2E74B5] text-white active:scale-95"
+            }`}
           >
             {isSubmitting ? "ENVIANDO..." : step3Strings.button}
           </button>
@@ -322,7 +340,9 @@ export default function Step3({
 
         {submissionMessage && (
           <p
-            className={`text-center text-xs sm:text-sm font-bold ${submissionStatus === "error" ? "text-red-500" : "text-[#2E74B5]"}`}
+            className={`text-center text-xs sm:text-sm font-bold ${
+              submissionStatus === "error" ? "text-red-500" : "text-[#2E74B5]"
+            }`}
           >
             {submissionMessage}
           </p>
