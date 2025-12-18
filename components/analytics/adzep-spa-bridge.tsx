@@ -164,7 +164,6 @@ export default function AdZepSPABridge() {
       window.removeEventListener("popstate", handlePopState);
       clearPending();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return null;

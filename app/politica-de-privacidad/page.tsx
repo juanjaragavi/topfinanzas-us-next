@@ -3,37 +3,37 @@ import path from "path";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/mdx-components";
+import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
 
 export const metadata = {
-  title: "Terms and Conditions - TopFinance UK",
+  title: "Política de Privacidad - TopFinanzas MX",
   description:
-    "Read the Terms and Conditions for the use of TopFinance UK services and website.",
+    "Conoce cómo TopFinanzas MX protege tu información personal y qué derechos tienes sobre tus datos.",
 };
 
-export default async function TermsPage() {
+export default async function PrivacyPolicyPage() {
   // Read the MDX file
   const filePath = path.join(
     process.cwd(),
-    "content/legal/terms-conditions.mdx",
+    "content/legal/politica-de-privacidad.mdx",
   );
-  let source = "# Terms and Conditions\n\nContent not found.";
+  let source = "# Política de Privacidad\n\nContenido no encontrado.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    logger.error("Error loading terms and conditions file:", error);
+    logger.error("Error loading privacy policy file:", error);
     source =
-      "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
+      "# Error al cargar el contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
   }
 
   // Compile MDX content, properly handling frontmatter
   const { content } = await compileMDX({
     source,
-    components: useMDXComponents({}),
+    components: getMDXComponents({}),
     options: { parseFrontmatter: true },
   });
 

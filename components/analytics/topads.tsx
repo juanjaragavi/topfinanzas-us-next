@@ -32,14 +32,14 @@ export default function TopAds() {
             window.topAds = window.topAds || {};
 
             topAds.config = {
-                domain: 'TOPFIN_UK',
+                domain: 'TOPFIN_MX',
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 pageSetting: {
                     exclude: [
-                        '/terms',
-                        '/privacy-policy',
-                        '/cookie-policy',
+                        '/terminos-y-condiciones',
+                        '/politica-de-privacidad',
+                        '/politica-de-cookies',
                         '/nosotros',
                         '/contactanos',
                         '/quiz'
@@ -52,8 +52,8 @@ export default function TopAds() {
                     },
                     offerwall: {
                         status: 'active',
-                        logoUrl: 'https://media.topfinanzas.com/images/logo-english.webp',
-                        websiteName: 'TopFinanzas UK',
+                        logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
+                        websiteName: 'TopFinanzas MX',
                         cooldown: '12',
                         exclude: [
                             '/invit-credit-card-rec-uk'

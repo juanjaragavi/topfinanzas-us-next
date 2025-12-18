@@ -31,35 +31,18 @@ function CreditCardRecommenderPageContent() {
               Descubre tu tarjeta de crédito ideal
             </h1>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
-
-            <p className="text-left text-sm leading-6 text-gray-800 my-8">
-              En <strong>TopFinanzas</strong>, te ayudamos a tomar el control de
-              tus finanzas. Te ofrecemos el mejor análisis de tarjetas de
-              crédito y las mejores recomendaciones para que encuentres
-              fácilmente la ideal para ti, maximices tus recompensas, organices
-              tus gastos y disfrutes de beneficios exclusivos. Explora nuestras
-              recomendaciones y encuentra la tarjeta que mejor se adapta a ti.
+            <p className="text-left text-sm leading-6 text-gray-800 mb-8">
+              Encontrar la tarjeta correcta es simple. Maximiza tus recompensas,
+              organiza tus gastos y disfruta de beneficios exclusivos. ¡Explora
+              y elige la tarjeta ideal para ti!
             </p>
 
-            <div className="mt-8 mb-4">
-              <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
-                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <span>Aceptar recomendación</span>
-                    <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-sm font-bold">
-                        ➔
-                      </span>
-                    </div>
-                  </div>
-                </Button>
-              </Link>
-            </div>
+            <div id="square01" data-topads data-topads-size="square"></div>
 
-            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6 mt-12">
+            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6 mt-8">
               ¿Por qué elegir nuestro recomendador de tarjetas de crédito?
             </h2>
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
                 <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
@@ -87,6 +70,21 @@ function CreditCardRecommenderPageContent() {
               </div>
             </div>
 
+            <div className="mt-8 mb-4">
+              <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
+                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-2">
+                    <span>Aceptar recomendación</span>
+                    <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
+                      <span className="text-[#80E67D] text-sm font-bold">
+                        ➔
+                      </span>
+                    </div>
+                  </div>
+                </Button>
+              </Link>
+            </div>
+
             <p className="text-left text-sm leading-6 text-gray-800 mb-4">
               Nuestras recomendaciones están diseñadas para conectar tus metas
               financieras con las tarjetas que mejor se adaptan a tus
@@ -95,7 +93,7 @@ function CreditCardRecommenderPageContent() {
               decisiones informadas.
             </p>
 
-            <p className="text-left text-sm leading-6 text-gray-800 mb-10">
+            <p className="text-left text-sm leading-6 text-gray-800 mb-8">
               Con nuestra guía, transformarás tu tarjeta de crédito en una
               herramienta que simplifica tus finanzas y te ayuda a alcanzar tus
               objetivos sin complicaciones.
@@ -115,6 +113,7 @@ function CreditCardRecommenderPageContent() {
                 </Button>
               </Link>
             </div>
+
             <p className="text-center text-sm mb-12">
               <Link
                 className="text-[#2E74B5] font-medium"
@@ -256,42 +255,6 @@ function CreditCardRecommenderPageContent() {
               nuestras recomendaciones y encuentra la tarjeta que mejor se
               adapta a ti.
             </p>
-
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
-              Beneficios a tu alcance
-            </h2>
-            <div className="grid grid-cols-2 gap-4 mb-10">
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">
-                  Recompensas por tus compras:
-                </h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Acumula el 9% de cada compra en puntos, utilizables en una
-                  amplia variedad de productos y servicios.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Seguridad avanzada:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Protección total para tus compras en línea con un CVV dinámico
-                  que cambia con cada transacción.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Accesible para todos:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Solo necesitas un ingreso mínimo de $6,000 mensuales para
-                  disfrutar de todos sus beneficios.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Compromiso ambiental:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Fabricada con más del 85% de plástico reciclado, ayudando al
-                  planeta con cada compra.
-                </p>
-              </div>
-            </div>
 
             <div className="my-10">
               <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">

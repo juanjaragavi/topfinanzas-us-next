@@ -67,7 +67,7 @@ const poppins = localFont({
 });
 
 // Define base URL for metadata
-const baseUrl = "https://mx.topfinanzas.com";
+const baseUrl = "https://topfinanzas.com/mx";
 
 // Temporarily disable AdZep script to isolate TopAds testing
 const ENABLE_ADZEP = false;

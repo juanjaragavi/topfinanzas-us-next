@@ -2,7 +2,14 @@
 
 ## Project Overview
 
-This Next.js project (`mx.topfinanzas.com`) is a Mexican-focused financial comparison website built with modern web technologies. It is a migration of an existing WordPress site (`mx.topfinanzas.com`) to a Next.js platform, cloned from the TopFinance UK architecture (`uk.topfinanzas.com`). The project specializes in credit cards, personal loans, and financial guidance tailored for the Mexican market.
+This Next.js project (`topfinanzas.com/mx`) is a Mexican-focused financial comparison website built with modern web technologies. It is a migration of an existing WordPress site (`topfinanzas.com/mx`) to a Next.js platform, cloned from the TopFinance UK architecture (`uk.topfinanzas.com`). The project specializes in credit cards, personal loans, and financial guidance tailored for the Mexican market.
+
+## Production URL Rules
+
+- **Original URL**: `https://mx.topfinanzas.com` (Deprecated)
+- **Official Production URL**: `https://topfinanzas.com/mx`
+- **Internal Links**: All internal links must be relative (`/path`) or absolute starting with `/mx/` (if the subpath is handled by Next.js) or `https://topfinanzas.com/mx/`.
+- **Sitemap**: Sitemaps must use `https://topfinanzas.com/mx/` as the base URL.
 
 ## System Architecture
 

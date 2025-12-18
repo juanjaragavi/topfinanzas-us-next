@@ -1,0 +1,25 @@
+feat(localization): localize landing pages and legal pages for Mexican market
+
+## Landing Page Variant Localization
+- Rename credit-card-recommender-p2 → recomendador-de-tarjetas-de-credito-p2
+- Rename credit-card-recommender-p3 → recomendador-de-tarjetas-de-credito-p3
+- Translate all p2/p3 content to Spanish using p1 as reference
+- Update product links from UK banks to BBVA México
+- Fix p1 metadata.ts (was still UK-specific)
+
+## New Mexican Invite Landing Page
+- Create invit-recomendador-tarjetas-mx with Spanish content
+- Convert credit limits: £1,000-£5,000 → $10,000-$50,000 MXN
+- Replace UK product references with BBVA México
+
+## Legal Pages Localization
+- Rename cookie-policy → politica-de-cookies
+- Rename privacy-policy → politica-de-privacidad
+- Rename terms → terminos-y-condiciones
+- Translate all MDX content to Spanish
+- Update legal references to Mexican regulations (LFPDPPP, PROFECO)
+
+## Navigation & Configuration Updates
+- Update footerNavigation.ts with Spanish legal page paths
+- Update sitemap.xml with new localized URLs
+- Update production URL to topfinanzas.com/mx

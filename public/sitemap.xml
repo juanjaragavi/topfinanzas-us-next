@@ -1,613 +1,295 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- 
-        UK TopFinanzas Sitemap
-        Total URLs: 604
-        Last Generated: 2025-10-23
-        
-        Note: Google ignores <priority> and <changefreq> tags, but they're included
-        for compatibility with other search engines (Bing, Yandex, etc.)
-        
-        Best Practices Applied:
-        - UTF-8 encoding
-        - W3C Datetime format for lastmod
-        - Fully-qualified absolute URLs
-        - Under 50,000 URL limit
-        - Under 50MB size limit
-    -->
     <!-- Main Pages -->
     <url>
-        <loc>https://uk.topfinanzas.com/</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://topfinanzas.com/mx/</loc>
+        <lastmod>2025-04-06</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/nosotros</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>quarterly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/contactanos</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>quarterly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/blog</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <!-- Recommender Tools & Quizzes -->
-    <url>
-        <loc>https://uk.topfinanzas.com/recomendador-de-tarjetas-de-credito-p1</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/recomendador-de-tarjetas-de-credito-p1</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/credit-card-recommender-p2</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/credit-card-recommender-p3</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/invit-credit-card-rec-uk</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/quiz</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/quiz-2</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <!-- Product Category Pages -->
-    <url>
-        <loc>https://uk.topfinanzas.com/credit-cards</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://topfinanzas.com/mx/blog</loc>
+        <lastmod>2025-04-06</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-loans</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <!-- Legal Pages -->
-    <url>
-        <loc>https://uk.topfinanzas.com/privacy-policy</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/politica-de-privacidad</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/cookie-policy</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/politica-de-cookies</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/terms</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/terminos-y-condiciones</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <!-- Category Archive Pages -->
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://topfinanzas.com/mx/personal-finance</loc>
+        <lastmod>2025-04-06</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://topfinanzas.com/mx/financial-solutions</loc>
+        <lastmod>2025-04-06</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <!-- Personal Finance Articles -->
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/best-personal-loans</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/best-personal-loans</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/best-rewards-credit-cards</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/best-rewards-credit-cards</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/cashback-credit-cards</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/cashback-credit-cards</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/combine-finances-after-marriage-or-moving-in</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/credit-card-types-benefits</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/creating-a-budget-youll-actually-stick-to</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/getting-out-of-debt</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/credit-card-types-benefits</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/no-annual-fee-credit-cards</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/ditching-impulse-buys-mindful-spending</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/personal-loans-debt-strategy</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/getting-out-of-debt</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/tips-for-choosing-an-online-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/how-to-ask-for-a-raise</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/top-credit-cards-0-intro-apr</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/inflation-proof-your-life</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/money-management-for-beginners</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/no-annual-fee-credit-cards</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/personal-loans-debt-strategy</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/setting-financial-goals</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/side-hustle-or-second-job</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/tips-for-choosing-an-online-loan</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/top-credit-cards-0-intro-apr</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/travel-credit-cards</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/understanding-credit-card-interest-rates</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/what-is-financial-health</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/personal-finance/what-is-lifestyle-creep</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/personal-finance/understanding-credit-card-interest-rates</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <!-- Financial Solutions Articles -->
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/barclaycard-avios-plus</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/barclaycard-avios-plus</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/barclaycard-avios-plus-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/barclays-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/barclays-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/barclays-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/capify-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/capify-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/capify-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/curve-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/curve-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/curve-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/fleximize-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/fleximize-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/fleximize-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-circle-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/funding-circle-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-circle-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-options-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/funding-options-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-options-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-xchange-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/funding-xchange-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/funding-xchange-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/halifax-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/halifax-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/halifax-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/halifax-world-elite-mastercard</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/halifax-world-elite-mastercard</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/halifax-world-elite-mastercard-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/hsbc-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/hsbc-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/hsbc-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/iwoca-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/iwoca-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/iwoca-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/lloyds-bank-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/lloyds-bank-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/lloyds-bank-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/lloyds-bank-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/lloyds-bank-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/lloyds-bank-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/marketfinance-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/marketfinance-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/marketfinance-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/monzo-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/monzo-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/monzo-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/monzo-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/monzo-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/monzo-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/nationwide-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/nationwide-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/nationwide-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/natwest-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/natwest-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/natwest-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/natwest-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/natwest-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/natwest-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/revolut-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/revolut-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/revolut-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/revolut-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/revolut-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/revolut-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/santander-uk-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/santander-uk-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/santander-uk-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/santander-uk-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/santander-uk-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/santander-uk-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/starling-bank-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/starling-bank-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/starling-bank-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/starling-bank-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/starling-bank-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/starling-bank-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/tsb-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/tsb-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/tsb-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/tsb-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/tsb-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/tsb-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/virgin-money-credit-card</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/virgin-money-credit-card</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/virgin-money-credit-card-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/virgin-money-personal-loan</loc>
-        <lastmod>2025-10-23</lastmod>
+        <loc>https://topfinanzas.com/mx/financial-solutions/virgin-money-personal-loan</loc>
+        <lastmod>2025-04-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://uk.topfinanzas.com/financial-solutions/virgin-money-personal-loan-requirements</loc>
-        <lastmod>2025-10-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
     </url>
 </urlset>

@@ -452,14 +452,14 @@ export default function Contactanos() {
                         Acepto
                       </Label>
                       <Link
-                        href="/privacy-policy"
+                        href="/politica-de-privacidad"
                         className="text-blue-500 hover:underline"
                       >
                         políticas de tratamiento de datos
                       </Link>{" "}
                       y{" "}
                       <Link
-                        href="/terms"
+                        href="/terminos-y-condiciones"
                         className="text-blue-500 hover:underline"
                       >
                         términos y condiciones

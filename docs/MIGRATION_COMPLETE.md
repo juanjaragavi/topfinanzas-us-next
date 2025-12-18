@@ -103,8 +103,8 @@ All instances of `console.log`, `console.warn`, `console.error`, `console.info`,
 ### Page Components (6 files)
 
 ✅ `/app/recomendador-de-tarjetas-de-credito-p1/page.tsx` - 2 statements → `logger`  
-✅ `/app/credit-card-recommender-p2/page.tsx` - 1 statement → `logger`  
-✅ `/app/credit-card-recommender-p3/page.tsx` - 1 statement → `logger`  
+✅ `/app/recomendador-de-tarjetas-de-credito-p2/page.tsx` - 1 statement → `logger`  
+✅ `/app/recomendador-de-tarjetas-de-credito-p3/page.tsx` - 1 statement → `logger`  
 ✅ `/app/page.tsx` - 1 statement → `logger`  
 ✅ `/app/layout.tsx` - 1 statement → `logger`  
 ✅ `/app/quiz/page.tsx` - 1 statement → `logger`

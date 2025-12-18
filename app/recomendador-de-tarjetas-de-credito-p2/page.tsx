@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useState, Suspense } from "react";
 import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
 
-function CreditCardRecommenderPageContent() {
+function CreditCardRecommenderContent() {
   useRecommenderPageGuard();
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
 
@@ -319,7 +319,7 @@ function CreditCardRecommenderPageContent() {
 export default function CreditCardRecommenderPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <CreditCardRecommenderPageContent />
+      <CreditCardRecommenderContent />
     </Suspense>
   );
 }

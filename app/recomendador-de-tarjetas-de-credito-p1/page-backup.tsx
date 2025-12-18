@@ -44,11 +44,11 @@ function CreditCardRecommenderPageContent() {
 
             <div className="mt-8 mb-4">
               <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
-                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
+                <Button className="bg-[#71C96C] hover:bg-[#5BAD56] text-white font-bold text-lg py-4 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Aceptar recomendación</span>
                     <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-sm font-bold">
+                      <span className="text-[#71C96C] text-sm font-bold">
                         ➔
                       </span>
                     </div>
@@ -60,30 +60,28 @@ function CreditCardRecommenderPageContent() {
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6 mt-12">
               ¿Por qué elegir nuestro recomendador de tarjetas de crédito?
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 mb-8">
               <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
+                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-5 h-5 flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-xs">✓</span>
                 </div>
-                <span className="font-bold text-sm sm:text-lg">
+                <span className="font-bold text-sm">
                   Opciones personalizadas
                 </span>
               </div>
               <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
+                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-5 h-5 flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-xs">✓</span>
                 </div>
-                <span className="font-bold text-sm sm:text-lg">
+                <span className="font-bold text-sm">
                   Completamente gratuito
                 </span>
               </div>
               <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
+                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-5 h-5 flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-xs">✓</span>
                 </div>
-                <span className="font-bold text-sm sm:text-lg">
-                  Asesoría experta
-                </span>
+                <span className="font-bold text-sm">Asesoría experta</span>
               </div>
             </div>
 
@@ -103,11 +101,11 @@ function CreditCardRecommenderPageContent() {
 
             <div className="mt-8 mb-4">
               <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
-                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
+                <Button className="bg-[#71C96C] hover:bg-[#5BAD56] text-white font-bold text-lg py-4 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Nuestra mejor recomendación</span>
                     <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-sm font-bold">
+                      <span className="text-[#71C96C] text-sm font-bold">
                         ➔
                       </span>
                     </div>
@@ -115,7 +113,7 @@ function CreditCardRecommenderPageContent() {
                 </Button>
               </Link>
             </div>
-            <p className="text-center text-sm mb-12">
+            <p className="text-center text-sm mb-8">
               <Link
                 className="text-[#2E74B5] font-medium"
                 href="/financial-solutions/bbva-tarjeta-de-credito-azul-requisitos"
@@ -212,7 +210,7 @@ function CreditCardRecommenderPageContent() {
                   <p className="text-left text-sm">
                     Las tarjetas con acumulación de millas o acceso a salones
                     VIP son ideales para viajeros frecuentes, permitiéndote
-                    ahorrar en vuelos y disfrutar de beneficios exclusivos.
+                    ahorra en vuelos y disfrutar de beneficios exclusivos.
                   </p>
                 </div>
               )}
@@ -260,7 +258,7 @@ function CreditCardRecommenderPageContent() {
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
               Beneficios a tu alcance
             </h2>
-            <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="space-y-1">
                 <h3 className="font-bold text-sm">
                   Recompensas por tus compras:

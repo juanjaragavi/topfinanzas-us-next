@@ -3,22 +3,22 @@ import path from "path";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/mdx-components";
+import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
 
 export const metadata = {
-  title: "Cookie Policy - TopFinance UK",
+  title: "Política de Cookies - TopFinanzas MX",
   description:
-    "Learn about how TopFinance UK uses cookies and similar technologies on our website.",
+    "Obtén más información sobre cómo TopFinanzas MX utiliza cookies y tecnologías similares en nuestro sitio web.",
 };
 
 export default async function CookiePolicyPage() {
   // Read the MDX file
   const filePath = path.join(
     process.cwd(),
-    "content/legal/cookie-policy.mdx", // Updated path
+    "content/legal/politica-de-cookies.mdx", // Updated path
   );
-  let source = "# Cookie Policy\n\nContent not found.";
+  let source = "# Política de Cookies\n\nContenido no encontrado.";
 
   try {
     if (fs.existsSync(filePath)) {
@@ -27,13 +27,13 @@ export default async function CookiePolicyPage() {
   } catch (error) {
     logger.error("Error loading cookie policy file:", error); // Updated error message
     source =
-      "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
+      "# Error al cargar el contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
   }
 
   // Compile MDX content, properly handling frontmatter
   const { content } = await compileMDX({
     source,
-    components: useMDXComponents({}),
+    components: getMDXComponents({}),
     options: { parseFrontmatter: true },
   });
 
