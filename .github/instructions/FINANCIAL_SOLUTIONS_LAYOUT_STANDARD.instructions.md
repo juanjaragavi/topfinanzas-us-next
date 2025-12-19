@@ -47,7 +47,7 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 ```typescript
 export function generateMetadata() {
   return {
-    title: "{Product Name}: {Value Proposition} - Top Finance UK",
+    title: "{Product Name}: {Value Proposition} - TopFinanzas US",
     description: "{Compelling 150-160 character description}",
     keywords: "{comma-separated keywords}",
   };
@@ -284,10 +284,10 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 export function generateMetadata() {
   return {
     title:
-      "{Product Name} Requirements: Everything You Need to Know - Top Finance UK",
+      "{Product Name} Requirements: Everything You Need to Know - TopFinanzas US",
     description: "{Eligibility and application information, 150-160 chars}",
     keywords:
-      "{product name} requirements, eligibility, application, credit score, UK credit cards",
+      "{product name} requirements, eligibility, application, credit score",
   };
 }
 ```
@@ -685,11 +685,11 @@ The following elements are **STRICTLY PROHIBITED** and must be removed if found:
   - In Related Articles box: `text-blue-700 hover:underline hover:text-blue-900 transition-colors`
   - In body text: `text-blue-600 underline`
 
-### FCA Compliance Notes
+### US Disclosure Notes
 
-- Include representative APR in Requirements page "Understanding the Costs" section
-- Add risk warnings where appropriate (e.g., "Your home may be repossessed...")
-- Use disclaimers like "subject to status" and "terms and conditions apply"
+- Include APR/fee disclosures in the Requirements page "Understanding the Costs" section (aligned with issuer terms)
+- Add risk notes where appropriate (e.g., interest charges if balances aren’t paid in full)
+- Use clear disclaimers such as "terms and conditions apply" and avoid implying guarantees
 - Avoid absolute promises; use "may be eligible" instead of "you will qualify"
 
 ---

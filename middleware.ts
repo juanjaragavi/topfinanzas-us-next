@@ -5,8 +5,8 @@ import {
 } from "@/lib/navigation/recommender-lock";
 
 const QUIZ_PATHS = ["/quiz", "/quiz-2"];
-const SITE_BASE_URL = "https://uk.topfinanzas.com";
-const SUPPORTED_HREFLANGS = ["en-gb", "en"];
+const SITE_BASE_URL = "https://us.topfinanzas.com";
+const SUPPORTED_HREFLANGS = ["en-us", "en"];
 
 function isRestrictedQuizPath(pathname: string): boolean {
   return QUIZ_PATHS.some(

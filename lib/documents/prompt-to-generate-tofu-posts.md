@@ -18,8 +18,8 @@ Generate a blog article following these rules:
 - **Content Focus:** Money Management
 - **SEO Intent Type:** Informational
 - **Funnel Stage:** TOFU (Top of Funnel)
-- **Market:** United Kingdom
-- **Language:** English (United Kingdom)
+- **Market:** United States
+- **Language:** English (United States)
 
 ## Data Sources
 
@@ -36,18 +36,18 @@ Generate a blog article following these rules:
 
 ### Internal Linking Resource
 
-**UK Site Sitemap**
+**US Site Sitemap**
 
-- **Location**: <https://uk.topfinanzas.com/sitemap.xml>
+- **Location**: <https://us.topfinanzas.com/sitemap.xml>
 - **Access method**: Use `fetch_txt` tool
 - **Purpose**: Identify existing articles and pages for internal linking opportunities
 - **Usage**: Add at least 3 relevant internal links per article using Next.js Link component
 
 ### Supportive References (Optional)
 
-- MoneyHelper UK: <https://www.moneyhelper.org.uk/en>
-- FCA Guidelines: <https://www.handbook.fca.org.uk/handbook/COBS/4/>
-- Financial Ombudsman Service: <https://www.financial-ombudsman.org.uk/>
+- CFPB (Consumer Financial Protection Bureau): <https://www.consumerfinance.gov/>
+- Federal Reserve (consumer resources): <https://www.federalreserve.gov/consumerscommunities.htm>
+- IRS (tax basics): <https://www.irs.gov/>
 
 </BlogArticleRequest>
 
@@ -62,7 +62,7 @@ Generate a blog article following these rules:
    - Hero Image URL
    - Any supporting notes or angles
 
-3. **Retrieve UK Sitemap**: Use `fetch_txt` to access <https://uk.topfinanzas.com/sitemap.xml> and identify:
+3. **Retrieve US Sitemap**: Use `fetch_txt` to access <https://us.topfinanzas.com/sitemap.xml> and identify:
    - Existing Personal Finance articles for internal linking
    - Related Financial Solutions product pages
    - Category index pages
@@ -71,12 +71,12 @@ Generate a blog article following these rules:
    - Confirm this is a cluster article (Is Pillar? = No)
    - Target 800-1,000 words (TOFU funnel stage)
    - Plan 2-4 content sections with H2/H3 headings
-   - Map at least 3 internal links to existing UK pages
+   - Map at least 3 internal links to existing US pages
 
 5. **Generate Content**: Create ONE complete Next.js page component (`.tsx`) with:
    - Production-ready TypeScript code
-   - British English throughout
-   - FCA-compliant disclaimers
+   - US English throughout
+   - No misleading claims; no guaranteed outcomes; include clear disclosures where relevant
    - SEO metadata (title, description, keywords)
    - Hero image from CSV or CDN
    - Ad placeholders (`square01`, `square02`)
@@ -104,8 +104,8 @@ ONE complete Next.js page component:
 - **Format**: Production-ready TypeScript (.tsx)
 - **Structure**: Matching existing Personal Finance articles
 - **Content**: 800-1,000 words, entirely new and original
-- **Compliance**: FCA-aware, no personalised advice, balanced information
-- **Links**: Minimum 3 internal links to live UK pages
+- **Compliance**: No personalized advice; balanced information; avoid guarantees
+- **Links**: Minimum 3 internal links to live US pages
 - **Components**: Header, CompactFooter, AIContentDisclaimer, ad placeholders
 - **Metadata**: Complete generateMetadata() function with title, description, keywords
 

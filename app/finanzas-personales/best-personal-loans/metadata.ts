@@ -1,15 +1,15 @@
 export const metadata = {
-  title: "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
+  title: "Best Personal Loans in the US: Your Complete Guide | TopFinanzas US",
   description:
-    "Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays.",
+    "Comprehensive guide to personal loans in the US, including rates, terms, and application requirements from leading lenders.",
   keywords:
-    "best personal loans UK, UK loan providers, personal loan comparison, loan interest rates UK, Nationwide loans, Santander loans, Barclays loans",
+    "best personal loans US, US loan providers, personal loan comparison, loan interest rates US",
   openGraph: {
     title:
-      "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
+      "Best Personal Loans in the US: Your Complete Guide | TopFinanzas US",
     description:
-      "Find the perfect personal loan for your needs with our comprehensive guide to the UK's top lenders, rates, and application requirements.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/best-personal-loans",
+      "Find the perfect personal loan for your needs with our comprehensive guide to lenders, rates, and application requirements.",
+    url: "https://us.topfinanzas.com/finanzas-personales/best-personal-loans",
     type: "article",
     publishedTime: "2025-03-30T12:00:00Z", // Note: Date might need updating
     authors: ["Top Finance Team"],

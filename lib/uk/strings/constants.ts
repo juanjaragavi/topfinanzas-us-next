@@ -1,7 +1,7 @@
-// Constant strings used throughout the application for UK market
+// Constant strings used throughout the application
 
 export const metadata = {
-  title: "Find Your Perfect Credit Card - TopFinance UK",
+  title: "Find Your Perfect Credit Card - TopFinanzas US",
   description: "Find the perfect credit card tailored to your needs",
 };
 
@@ -48,6 +48,6 @@ export const step3Strings = {
     email: "example@email.com",
     name: "Your first name",
     lastName: "Your last name",
-    phone: "11 digits (e.g. 07123456789)",
+    phone: "10 digits (e.g. 4155551234)",
   },
 };

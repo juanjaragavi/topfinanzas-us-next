@@ -19,4 +19,4 @@ User-agent: Anthropic-AI
 Disallow: / # Disallow Anthropic AI
 
 # Sitemap location
-Sitemap: https://uk.topfinanzas.com/sitemap.xml
+Sitemap: https://us.topfinanzas.com/sitemap.xml

@@ -78,7 +78,7 @@ New utility module with two main functions:
 **User visits:**
 
 ```text
-https://uk.topfinanzas.com/quiz?utm_source=google&utm_campaign=credit_cards&utm_medium=cpc
+https://us.topfinanzas.com/quiz?utm_source=google&utm_campaign=credit_cards&utm_medium=cpc
 ```
 
 **UTM parameters stored in sessionStorage:**

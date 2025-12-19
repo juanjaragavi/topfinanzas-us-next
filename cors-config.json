@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://uk.topfinanzas.com"],
+    "origin": ["https://us.topfinanzas.com"],
     "method": ["GET"],
     "responseHeader": ["Content-Type"],
     "maxAgeSeconds": 3600

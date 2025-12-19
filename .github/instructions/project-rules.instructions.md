@@ -2,11 +2,11 @@
 applyTo: "**"
 ---
 
-# Next.js Project Configuration Rules for TopFinance UK
+# Next.js Project Configuration Rules for TopFinanzas US
 
 ## Project Overview
 
-This Next.js project (uk-topfinanzas-com) is a UK-focused financial comparison website built with modern web technologies. The project specializes in credit cards, personal loans, and financial guidance tailored for the UK market.
+This Next.js project (`topfinanzas-us-next`) is the migration target for the legacy WordPress site `https://us.topfinanzas.com`. The legacy US and MX templates share identical UI/UX, so migrations should reuse existing components and focus on content localization to US English plus US-specific adaptations.
 
 ## System Architecture
 
@@ -143,36 +143,34 @@ import { CustomComponent } from "./custom-component";
 - **API Routes**: Appropriate cache headers
 - **Dynamic Content**: Strategic ISR usage
 
-## UK Market Specifics
+## US Market Specifics
 
 ### 1. Localization
 
-- **Language**: UK English (en-GB)
-- **Currency**: GBP (£) formatting
-- **Date Format**: DD/MM/YYYY
-- **Address Format**: UK postcode system
+- **Language**: US English (en-US)
+- **Currency**: USD ($) formatting
+- **Date Format**: Prefer MM/DD/YYYY
+- **Address Format**: US ZIP code system
 
-### 2. Financial Compliance
+### 2. Financial Compliance (General)
 
-- **APR Display**: UK regulatory format
-- **Representative Examples**: FCA requirements
-- **Terms & Conditions**: UK legal compliance
-- **Data Protection**: GDPR compliance
+- Avoid UK-only regulatory language (FCA) and MX-only regulatory language (CONDUSEF/PROFECO/CAT) unless a page explicitly requires it.
+- Do not promise approvals, guaranteed rates, or outcomes.
+- Prefer disclosures and terminology present on the legacy US WordPress source page.
 
 ### 3. Content Guidelines
 
-- **Financial Terms**: UK-specific terminology
-- **Regulatory Info**: FCA disclaimers
-- **Contact Details**: UK phone numbers
-- **Business Hours**: UK timezone (GMT/BST)
+- Use US terminology, examples, and comparisons.
+- Use US contact formats where applicable (e.g., +1 phone numbers).
+
 
 ## Analytics Integration
 
 ### 1. Google Tag Manager
 
-- **Container ID**: UK-specific GTM container
-- **Event Tracking**: UK user interactions
-- **Conversion Tracking**: UK-specific goals
+- **Container ID**: US GTM container (environment-specific)
+- **Event Tracking**: US user interactions
+- **Conversion Tracking**: US-specific goals
 
 ### 2. AdZep Integration
 
@@ -337,7 +335,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 - **Core Web Vitals**: Continuous monitoring
 - **Error Tracking**: Production error monitoring
-- **User Analytics**: UK user behavior tracking
+- **User Analytics**: US user behavior tracking
 - **Conversion Tracking**: Financial product conversions
 
 ### 2. Maintenance Tasks
@@ -345,7 +343,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - **Dependency Updates**: Regular updates
 - **Security Patches**: Timely security updates
 - **Performance Audits**: Regular performance reviews
-- **Content Updates**: UK market updates
+- **Content Updates**: US market updates
 
 ## Best Practices Summary
 
@@ -370,11 +368,11 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - Fast loading times
 - Intuitive navigation
 
-### 4. UK Market Focus
+### 4. US Market Focus
 
-- Use UK-specific terminology
-- Comply with UK regulations
-- Target UK user behavior
-- Optimize for UK search engines
+- Use US terminology
+- Avoid UK/MX-only regulatory references unless explicitly needed
+- Target US user behavior
+- Optimize for US search intent
 
-This configuration ensures the Next.js project maintains high code quality, performance, and compliance with UK market requirements while providing an excellent user experience for UK financial service seekers.
+This configuration ensures the Next.js project maintains high code quality, performance, and US-market relevance while providing an excellent user experience for US financial service seekers.

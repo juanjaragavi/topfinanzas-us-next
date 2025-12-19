@@ -53,7 +53,7 @@ The following UK-specific elements were adapted for the US market:
 | Financial Ombudsman Service       | Federal Trade Commission (FTC)              |
 | British English                   | American English                            |
 | DD Month YYYY format              | Month DD, YYYY format                       |
-| uk.topfinanzas.com                | kardtrust.com                               |
+| us.topfinanzas.com                | kardtrust.com                               |
 | Top Finance UK                    | KardTrust                                   |
 
 ## Documentation Created in KardTrust

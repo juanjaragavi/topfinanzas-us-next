@@ -8,14 +8,14 @@
  * Usage: node scripts/test-production.js
  */
 
-const PRODUCTION_URL = "https://uk.topfinanzas.com";
+const PRODUCTION_URL = "https://us.topfinanzas.com";
 
 const testData = {
   sheetsPayload: {
     email: "production.test@example.com",
     firstName: "Production Test",
     preferenceText: "Credit Cards",
-    incomeText: "£25,000 - £35,000",
+    incomeText: "$25,000 - $35,000",
     utm_source: "production-test",
     utm_medium: "verification",
     utm_campaign: "env-setup-test",
@@ -26,7 +26,7 @@ const testData = {
     first_name: "Production Test",
     fields: {
       preference: "Credit Cards",
-      income: "£25,000 - £35,000",
+      income: "$25,000 - $35,000",
       utm_source: "production-test",
       utm_medium: "verification",
       utm_campaign: "env-setup-test",

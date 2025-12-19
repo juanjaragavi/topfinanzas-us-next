@@ -70,7 +70,7 @@ Located in `/components/analytics/topads.tsx`:
 
 ```javascript
 topAds.config = {
-  domain: "uk.topfinanzas.com",
+  domain: "us.topfinanzas.com",
   networkCode: "23062212598",
   autoStart: false,
   lazyLoad: "hard",
@@ -84,8 +84,8 @@ topAds.config = {
     interstitial: { status: "active" },
     offerwall: {
       status: "active",
-      logoUrl: "https://uk.topfinanzas.com/apple-touch-icon.png",
-      websiteName: "TopFinance UK",
+      logoUrl: "https://us.topfinanzas.com/apple-touch-icon.png",
+      websiteName: "TopFinanzas US",
       cooldown: "12",
     },
   },

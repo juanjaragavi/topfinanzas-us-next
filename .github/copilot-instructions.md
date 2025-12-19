@@ -1,8 +1,8 @@
-# UK TopFinanzas Copilot Instructions
+# US TopFinanzas Copilot Instructions
 
 ## Project Architecture
 
-This is a **Next.js 15+ App Router** financial comparison site for the UK market, built with TypeScript and Tailwind CSS. The architecture centers around credit card/loan comparison tools with multi-step forms and comprehensive analytics tracking.
+This is a **Next.js 15+ App Router** financial comparison site for the US market (migration target for `https://us.topfinanzas.com`), built with TypeScript and Tailwind CSS. The architecture centers around credit card/loan comparison tools with multi-step forms and comprehensive analytics tracking.
 
 ### Key System Components
 
@@ -58,11 +58,11 @@ export default function Step1({ formData, updateFormData }: StepProps) {
 }
 ```
 
-#### 4. UK Market Specifics
+#### 4. US Market Specifics
 
-- **Currency**: Always GBP (£) formatting
-- **Compliance**: FCA regulatory requirements in financial content
-- **Localization**: UK English (en-GB), DD/MM/YYYY dates
+- **Currency**: Prefer USD ($) formatting
+- **Localization**: US English (en-US), prefer MM/DD/YYYY dates
+- **Content**: Avoid UK-only (FCA) or MX-only (CAT/CONDUSEF/PROFECO) regulatory terms unless explicitly needed
 - **Business Context**: Credit cards, personal loans, financial guidance
 
 ## Development Workflows
@@ -94,7 +94,7 @@ bash ./scripts/git-workflow.sh
 - Copy `.env.example` to `.env.production`
 - Production environment files stored in `/opt/app/` with strict permissions
 - Google Sheets API requires `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_PRIVATE_KEY`
-- AdZep integration requires UK-specific script URL
+- AdZep integration requires the environment-appropriate script URL for the US deployment
 - Kit.com API integration for newsletter subscriptions
 - Multiple environment files in use: `.env`, `.env.production`, `.env.local`
 
@@ -172,16 +172,16 @@ export async function POST(req: Request) {
 
 - Blog posts in `/content/` with frontmatter
 - Custom MDX components for financial content
-- UK regulatory compliance in financial product descriptions
+- Avoid UK-only (FCA) and MX-only (CONDUSEF/PROFECO/CAT) regulatory references unless explicitly needed
 
 ### SEO Pattern
 
 ```typescript
 // In page.tsx files
 export const metadata: Metadata = {
-  title: "UK-specific title",
-  description: "FCA-compliant description",
-  // UK-specific metadata
+  title: "US-focused title",
+  description: "Clear, accurate description (no guarantees)",
+  // US-focused metadata
 };
 ```
 
@@ -190,7 +190,7 @@ export const metadata: Metadata = {
 1. **Port Configuration**: Development runs on port 3030, not 3000
 2. **Analytics Order**: GTM loads before AdZep in layout
 3. **Form Navigation**: Always call `window.scrollTo(0, 0)` on step changes
-4. **UK Compliance**: Include regulatory disclaimers for financial products
+4. **Compliance**: Avoid guarantees; use clear disclosures as needed
 5. **Git Workflow**: NEVER bypass the automated script for commits
 
 ## File Naming Conventions
@@ -200,7 +200,7 @@ export const metadata: Metadata = {
 - Utilities: Descriptive names in `/lib/utils/`
 - Constants: Centralized in `/lib/constants.ts`
 
-This project prioritizes UK financial compliance, performance optimization, and comprehensive analytics tracking. Always consider FCA regulations when working with financial content.
+This project prioritizes performance optimization and comprehensive analytics tracking, with US-market content and disclosures.
 
 ## Instruction Files System
 

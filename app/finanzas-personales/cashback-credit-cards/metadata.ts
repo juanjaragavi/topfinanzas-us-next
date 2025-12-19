@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
+    "Best Cashback Credit Cards for Maximizing Your Rewards | TopFinanzas US",
   description:
     "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
   keywords:
-    "cashback credit cards UK, best cashback cards, earn money back, credit card rewards UK, compare cashback cards",
+    "cashback credit cards US, best cashback cards, earn money back, credit card rewards US, compare cashback cards",
   openGraph: {
     title:
-      "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
+      "Best Cashback Credit Cards for Maximizing Your Rewards | TopFinanzas US",
     description:
       "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/cashback-credit-cards",
+    url: "https://us.topfinanzas.com/finanzas-personales/cashback-credit-cards",
     type: "article",
     // publishedTime: "YYYY-MM-DDTHH:mm:ssZ", // Add if available in MDX frontmatter later
     authors: ["Top Finance Team"], // Add if available in MDX frontmatter later
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
+      "Best Cashback Credit Cards for Maximizing Your Rewards | TopFinanzas US",
     description:
       "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
-    images: ["https://media.topfinanzas.com/images/uk/download-8-1.webp"], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/placeholder.webp"], // Add if featuredImage is available
   },
 };

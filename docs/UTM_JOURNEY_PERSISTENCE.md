@@ -20,7 +20,7 @@ UTM parameters were being stored in sessionStorage and added to URLs via `router
 When users start a quiz with UTM parameters like:
 
 ```bash
-https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886
+https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886
 ```
 
 They need to maintain these parameters through:

@@ -146,7 +146,7 @@ lib/documents/commit-message.txt   | updated
 **Test URL**:
 
 ```bash
-https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open
+https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open
 ```
 
 **Expected Behavior**:

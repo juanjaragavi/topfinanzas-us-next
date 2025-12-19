@@ -30,11 +30,11 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - NO grid layouts for related articles
 - Use circular badges with arrows for all bullet points
 - Benefits page uses `ResponsiveImage`, Requirements page uses `Image`
-- Both pages must include `uk_topfinanzas_3` and `uk_topfinanzas_4` ad units
+- Both pages must include the existing in-repo ad units (currently `uk_topfinanzas_3` and `uk_topfinanzas_4`)
 - AI Content Disclaimer must appear before footer
 - All text must use `text-left` alignment
 
-**Template Reference**: `/app/soluciones-financieras/barclaycard-avios-plus/` (both pages)
+**Template Reference**: Use an existing Financial Solutions page in this repo that already follows the standard (both Benefits and Requirements pages).
 
 ## Required Locations for Blog Post Integration
 
@@ -46,13 +46,13 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 ```typescript
 {
-  title: "Article Title | Top Finance UK",
+  title: "Article Title | TopFinanzas US",
   slug: "article-slug", // Must match directory name
   description: "Article description/excerpt",
   image: "https://media.topfinanzas.com/images/article-image.webp",
   category: "Personal Finance" | "Financial Solutions",
   categoryPath: "/finanzas-personales" | "/soluciones-financieras",
-  date: "DD Month YYYY", // e.g., "27 August 2025"
+  date: "Month DD, YYYY", // e.g., "August 27, 2025"
 }
 ```
 
@@ -72,11 +72,11 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 ```typescript
 {
-  title: "Article Title | Top Finance UK",
+  title: "Article Title | TopFinanzas US",
   slug: "article-slug",
   description: "Article description/excerpt",
   image: "https://media.topfinanzas.com/images/article-image.webp",
-  date: "DD Month YYYY",
+  date: "Month DD, YYYY",
   category: "guide" | "creditCards" | "loans" | "debt", // Category filter
 }
 ```

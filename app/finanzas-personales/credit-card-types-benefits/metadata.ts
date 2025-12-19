@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
+    "Credit Cards - Types, Benefits, and Keys to Financial Health | TopFinanzas US",
   description:
     "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
   keywords:
-    "credit card types UK, credit card benefits, responsible credit card use, credit card rewards, credit card guide UK",
+    "credit card types US, credit card benefits, responsible credit card use, credit card rewards, credit card guide US",
   openGraph: {
     title:
-      "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
+      "Credit Cards - Types, Benefits, and Keys to Financial Health | TopFinanzas US",
     description:
       "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/credit-card-types-benefits",
+    url: "https://us.topfinanzas.com/finanzas-personales/credit-card-types-benefits",
     type: "article",
     // publishedTime: "YYYY-MM-DDTHH:mm:ssZ", // Add if available in MDX frontmatter later
     authors: ["Top Finance Team"], // Add if available in MDX frontmatter later
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
+      "Credit Cards - Types, Benefits, and Keys to Financial Health | TopFinanzas US",
     description:
       "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
     images: [
-      "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp",
+      "https://media.topfinanzas.com/images/placeholder.webp",
     ], // Add if featuredImage is available
   },
 };

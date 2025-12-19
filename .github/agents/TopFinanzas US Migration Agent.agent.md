@@ -1,5 +1,5 @@
 ---
-description: "This is the Agent in charge of providing the Next.js project configuration rules for the TopFinanzas MX migration. It outlines coding standards, file structure, localization requirements, and best practices specific to the Mexican market."
+description: "(US migration) Agent instructions for migrating the legacy WordPress site https://us.topfinanzas.com to this Next.js codebase. Focus: UI parity with legacy templates, US English localization, and US market adaptations."
 tools:
   [
     "vscode",
@@ -23,18 +23,46 @@ tools:
   ]
 ---
 
-# Next.js Project Configuration Rules for TopFinanzas MX
+# Next.js Project Configuration Rules for TopFinanzas US (Migration Agent)
 
 ## Project Overview
 
-This Next.js project (`topfinanzas.com/mx`) is a Mexican-focused financial comparison website built with modern web technologies. It is a migration of an existing WordPress site (`topfinanzas.com/mx`) to a Next.js platform, cloned from the TopFinance UK architecture (`uk.topfinanzas.com`). The project specializes in credit cards, personal loans, and financial guidance tailored for the Mexican market.
+This Next.js project is the target for the **migration of the legacy WordPress site**:
 
-## Production URL Rules
+- **Source (legacy)**: `https://us.topfinanzas.com` (WordPress)
+- **Target (this repo)**: Next.js App Router + TypeScript
 
-- **Original URL**: `https://mx.topfinanzas.com` (Deprecated)
-- **Official Production URL**: `https://topfinanzas.com/mx`
-- **Internal Links**: All internal links must be relative (`/path`) or absolute starting with `/mx/` (if the subpath is handled by Next.js) or `https://topfinanzas.com/mx/`.
-- **Sitemap**: Sitemaps must use `https://topfinanzas.com/mx/` as the base URL.
+This repository was cloned from the recently migrated MX project (which itself came from the UK architecture), so some **hardcoded literals may still be mixed** (British English and Mexican Spanish). The legacy **US and MX templates share identical UI/UX**, which means the migration should prioritize **component reuse** and focus on **content localization + US market adaptations**.
+
+## URL Rules (US)
+
+- **Canonical base**: `https://us.topfinanzas.com`
+- **Internal links**: Prefer relative links (`/path`) for in-app navigation.
+- **Sitemap base**: Use `https://us.topfinanzas.com/` when constructing absolute sitemap URLs.
+
+## Migration Workflow (Required)
+
+When migrating a page from WordPress to Next.js:
+
+1. **Match layout first**: Replicate structure and hierarchy (headings, sections, CTAs) to maintain UX parity.
+2. **Extract US copy from the source**: Use `us.topfinanzas.com` as the authority for headings, microcopy, disclosures, and CTA text.
+3. **Localize to US English (en-US)**:
+   - Remove British spellings/terms (e.g., “authorised”, “whilst”) → US spellings (“authorized”, “while”).
+   - Remove Mexico-specific Spanish copy unless the US source is Spanish (default: English).
+4. **US market adaptation checks**:
+   - Currency: `$` + USD context (avoid MXN/GBP assumptions).
+   - Dates: prefer `MM/DD/YYYY` in UI unless the legacy US source uses another style.
+   - Phone numbers: +1 formats where needed.
+   - Regulatory language: avoid UK-only references (FCA) or Mexico-only references (CONDUSEF/PROFECO/CAT).
+5. **Verify key interactions**: Ensure forms, routing, analytics hooks, and tracking behave the same after migration.
+
+## Screenshot & Parity Guidance
+
+When using screenshots for parity checks:
+
+- Always capture screenshots from the **US WordPress source** (`us.topfinanzas.com`).
+- Validate: hero content, CTA placement, headings, spacing, and any “trust” sections.
+- If something is ambiguous, choose the simplest interpretation that preserves UX parity.
 
 ## System Architecture
 
@@ -171,42 +199,34 @@ import { CustomComponent } from "./custom-component";
 - **API Routes**: Appropriate cache headers
 - **Dynamic Content**: Strategic ISR usage
 
-## Mexican Market Specifics
+## US Market Specifics
 
 ### 1. Localization
 
-- **Language**: Mexican Spanish (es-MX)
-- **Currency**: MXN ($) formatting. Note: Use `$`symbol, unlike UK`£`.
-- **Date Format**: DD/MM/YYYY (Common in Mexico).
-- **Address Format**: Mexican postal system (Colonia, Alcaldía/Municipio, CP).
+- **Language**: US English (en-US)
+- **Currency**: USD (`$`) formatting (avoid MXN/GBP assumptions)
+- **Date format**: Prefer `MM/DD/YYYY` unless the US legacy source dictates otherwise
+- **Address format**: US address conventions when needed (Street, City, State, ZIP)
 
-### 2. Localization Strategy (MANDATORY)
+### 2. Localization Strategy (Required)
 
-- **Route Localization**: All migrating directories and URL routes must be translated from English to Spanish (e.g., `app/contact-us` → `app/contactanos`).
-- **File Naming**: Apply this localization naming convention to all file names and folders for page migrations.
-- **Refactoring Scope**: Any renaming operation must include a site-wide search-and-replace to update all associated imports, internal links, and routing references to ensure no broken links remain.
+- **Primary rule**: The legacy US WordPress page is the source of truth for copy.
+- **Routes**: Use clear, US-appropriate slugs; do not introduce `/mx/` prefixes.
+- **Refactors**: Any renaming must include updating imports, internal links, and routing references.
 
-### 2. Financial Compliance
+### 3. Compliance & Content Safety (General)
 
-- **APR Display**: CAT (Costo Anual Total) must be prominently displayed as per Mexican regulations.
-- **Representative Examples**: CONDUSEF requirements for transparency.
-- **Terms & Conditions**: Compliance with PROFECO (Federal Consumer Attorney's Office).
-- **Data Protection**: LFPDPPP (Ley Federal de Protección de Datos Personales en Posesión de los Particulares) compliance.
-
-### 3. Content Guidelines
-
-- **Financial Terms**: MX-specific terminology (e.g., "Meses sin intereses", "CAT", "Buró de Crédito").
-- **Regulatory Info**: CONDUSEF disclaimers.
-- **Contact Details**: Mexican phone numbers (+52).
-- **Business Hours**: Mexico City Time (CST/CDT).
+- Avoid UK-only regulatory language (FCA) and MX-only regulatory language (CONDUSEF/PROFECO/CAT).
+- Avoid guaranteeing approvals, rates, or outcomes.
+- Use clear disclosures for APR/rates where applicable; prefer wording present on the US source page.
 
 ## Analytics Integration
 
 ### 1. Google Tag Manager
 
-- **Container ID**: MX-specific GTM container.
-- **Event Tracking**: MX user interactions.
-- **Conversion Tracking**: MX-specific goals.
+- **Container ID**: US GTM container (environment-specific)
+- **Event Tracking**: US user interactions
+- **Conversion Tracking**: US-specific goals
 
 ### 2. AdZep Integration
 
@@ -329,7 +349,7 @@ import { CustomComponent } from "./custom-component";
 
 - **Core Web Vitals**: Continuous monitoring
 - **Error Tracking**: Production error monitoring
-- **User Analytics**: MX user behavior tracking
+- **User Analytics**: US user behavior tracking
 - **Conversion Tracking**: Financial product conversions
 
 ### 2. Maintenance Tasks
@@ -337,7 +357,7 @@ import { CustomComponent } from "./custom-component";
 - **Dependency Updates**: Regular updates
 - **Security Patches**: Timely security updates
 - **Performance Audits**: Regular performance reviews
-- **Content Updates**: MX market updates
+- **Content Updates**: US market updates
 
 ## Best Practices Summary
 
@@ -362,14 +382,14 @@ import { CustomComponent } from "./custom-component";
 - Fast loading times
 - Intuitive navigation
 
-### 4. Mexican Market Focus
+### 4. US Market Focus
 
-- Use MX-specific terminology
-- Comply with Mexican regulations
-- Target MX user behavior
-- Optimize for MX search engines
+- Use US terminology
+- Avoid UK/MX-only regulatory references unless explicitly needed
+- Target US user behavior
+- Optimize for US search intent
 
-This configuration ensures the Next.js project maintains high code quality, performance, and compliance with Mexican market requirements while providing an excellent user experience for Mexican financial service seekers.
+This configuration ensures the Next.js project maintains high code quality, performance, and US-market relevance while providing an excellent user experience for US financial service seekers.
 
 ## Push and Commit Guidelines
 
@@ -387,7 +407,7 @@ This procedure is initiated when the user issues the prompt "Push and commit our
 
    ```json
    {
-     "repo_path": "/Users/macbookpro/GitHub/topfinanzas-mx-next"
+       "repo_path": "/Users/macbookpro/GitHub/topfinanzas-us-next"
    }
    ```
 

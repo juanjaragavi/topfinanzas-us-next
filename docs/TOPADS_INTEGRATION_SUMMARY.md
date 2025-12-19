@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully integrated TopAds advertising system into TopFinance UK Next.js project following the provided instructions. The implementation includes script loading, SPA navigation handling, ad placement components, and comprehensive documentation.
+Successfully integrated TopAds advertising system into TopFinanzas US Next.js project following the provided instructions. The implementation includes script loading, SPA navigation handling, ad placement components, and comprehensive documentation.
 
 ## Changes Made
 
@@ -19,7 +19,7 @@ Successfully integrated TopAds advertising system into TopFinance UK Next.js pro
 
 **Key Features:**
 
-- UK domain: `uk.topfinanzas.com`
+- US domain: `us.topfinanzas.com`
 - Network code: `23062212598`
 - Configuration for anchor, interstitial, and offerwall ads
 - Performance marks for monitoring
@@ -96,9 +96,9 @@ Added to body section:
 
 Updated configuration:
 
-- Domain: `topfinanzas.com` → `uk.topfinanzas.com`
-- Website name: `TopFinanzas` → `TopFinance UK`
-- Logo URL: Updated to UK-specific path
+- Domain: `topfinanzas.com` → `us.topfinanzas.com`
+- Website name: `TopFinanzas` → `TopFinanzas US`
+- Logo URL: Updated to US-specific path
 - All other settings preserved
 
 #### `/app/utm-test/page.tsx` (Test Example)
@@ -211,13 +211,13 @@ Example usage in `/app/utm-test/page.tsx`:
 
 ## Configuration
 
-### UK-Specific Settings
+### US-Specific Settings
 
 ```javascript
 {
-  domain: "uk.topfinanzas.com",
-  websiteName: "TopFinance UK",
-  logoUrl: "https://uk.topfinanzas.com/apple-touch-icon.png",
+   domain: "us.topfinanzas.com",
+   websiteName: "TopFinanzas US",
+   logoUrl: "https://us.topfinanzas.com/apple-touch-icon.png",
   // ... other settings
 }
 ```
@@ -318,7 +318,7 @@ Development mode includes extensive logging:
 ## Files Structure
 
 ```markdown
-uk-topfinanzas-com/
+topfinanzas-us-next/
 ├── components/
 │ ├── ads/
 │ │ └── topads-placement.tsx [NEW]
@@ -409,5 +409,5 @@ document.querySelectorAll("[data-topads]"); // Find ad containers
 
 **Implementation Date**: November 13, 2025  
 **Implemented By**: CodeCraft Pro  
-**Project**: TopFinance UK (uk-topfinanzas-com)  
+**Project**: TopFinanzas US (us-topfinanzas-com)  
 **Status**: ✅ Complete and Ready for Testing

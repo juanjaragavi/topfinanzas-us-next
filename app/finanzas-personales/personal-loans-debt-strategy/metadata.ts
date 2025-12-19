@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
+  title: "Personal Loans - A Strategy for Managing Debt | TopFinanzas US",
   description:
     "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
   keywords:
-    "personal loans UK, debt consolidation loan, manage debt UK, debt strategy, unsecured loans, loan comparison UK",
+    "personal loans US, debt consolidation loan, manage debt, debt strategy, unsecured loans, loan comparison",
   openGraph: {
-    title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
+    title: "Personal Loans - A Strategy for Managing Debt | TopFinanzas US",
     description:
       "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/personal-loans-debt-strategy",
+    url: "https://us.topfinanzas.com/finanzas-personales/personal-loans-debt-strategy",
     type: "article",
     // publishedTime: "YYYY-MM-DDTHH:mm:ssZ", // Add if available in MDX frontmatter later
     authors: ["Top Finance Team"], // Add if available in MDX frontmatter later
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
+    title: "Personal Loans - A Strategy for Managing Debt | TopFinanzas US",
     description:
       "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
     images: [
-      "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp",
+      "https://media.topfinanzas.com/images/placeholder.webp",
     ],
   },
 };

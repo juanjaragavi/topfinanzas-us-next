@@ -6,7 +6,7 @@ The Google Sheets API is returning **500 Internal Server Error** in production b
 
 ## Error Details
 
-- **URL**: <https://uk.topfinanzas.com/api/sheets>
+- **URL**: <https://us.topfinanzas.com/api/sheets>
 - **Status**: 500 Internal Server Error
 - **Error Message**: "Failed to add data to sheet"
 - **Root Cause**: Missing Google Sheets credentials in production environment
@@ -17,39 +17,12 @@ Add these variables to your production environment:
 
 ```bash
 # Google Sheets API Configuration
-GOOGLE_SERVICE_ACCOUNT_EMAIL=sheets-service-account@absolute-brook-452020-d5.iam.gserviceaccount.com
-GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbTvwo+VETRWO5
-pay4rZxmAAZS7Ww94B3+S9MDMnAv4B+uQYh1nwNoMmCWfblMxPnkl+SOSwVKObLC
-IKVNvWqaG/VYPEQlJDAZA0k/RnVvY/6IGWC1dNrM+c4zvwGLcZQC9CarerqqnwPS
-deVPtYxVkAT206HquswoeLvmri3M4by2wWs/h/mCKnR1BaKR5q5EymCBZgXXsm5S
-SH22FOatbkZFCnhPN+J2bQcHRhUeSAYJQ2SWdcvu3dcbhw8Q2G5t+Sg+RzHndILr
-kZtV65Ix5JqgixoRoMHavkBbW7JTwJBdq9yrf1gV6FBqOMqQkoNx6C5RE4uIK3fa
-x9qWqfS7AgMBAAECggEADARE7t3SYnLv5vE8CJaCtlgUAKE/yBgqrI9tDYTK/uSR
-99Nhbch7wE7aWgSjjaBRbQQhouZbcNi+gcKWLC9P0wfrJp2OwlY8SHKUpeHvd14M
-SVrSoL65anfZo544sHJVwN+t6sF7zvONmw+YtAhnmxycGQY5ngoEO8d5zEcI/Wvb
-Cb+Wi0sXOnDBWjiyXqfutpcMaAE2gBck5t76enYW068vrX5tqhVaOyPzD40U2Pvp
-pLmccUU2H0++6lzRmYmG3c1ioxN1Y3WBw1emHZfk7ruupc/7hFMBhn5GEfPFoWHv
-ntWUuYKxm9XiE74DFAA6J17vhPPJ1y8VDu0jUptH8QKBgQD+k6v9TjFQBGcp/nkQ
-86nzl4L4hZ6wXaRRK95qutQIK/uTATBFKoTra3lPiSoq/1kGaDmB60NRCq8RLyxm
-CUC/6Aez9Lq1K/3kpPfiDf1/310M4V4VV/G2mxwzkawIp2QnkwCKlP224DuVjvuw
-N9TTgzl9ZDM7D3mZT4YEDm+MyQKBgQDciNcaCyvZ7h2zVNNjZcEokVm6UaNeOUdJ
-2O5u/BGDMz4iW0yJXfF2nZTQ+n+w8S7UPVukcQy9cDRRSUNZ8cTZs3qnp24VuZ4G
-gvQDwtUC81B9viIENFXfJ/qxl7k+zK+akWjW0ndtRfcFBiYEmjvt+5RSZ1RRHXMw
-T+4yp/rrYwKBgQC5MT3NcGNpHTrbDraNgWQhwxdQqQtuq0BMmEgdhjmWlEBXiWbO
-+gZlp/JAzLxzOPxPL+SdwUJgIxCFxLZcp+CFekqYO7DS+OSivutgc+L0cc2kABJM
-HoTE3QNf9FmclgDC1SpwpcAHmAlgW/p2D7dwAqcAs7KdBT3lLDeGneXCGQKBgGBq
-QwBT2fwRKlL4xuIx3lzKDxxyDKZpDE2w1a0X7uAZSxTiLXfw5lwhUKp8mc7V4s9P
-c/1Un2lC4NyY1yU/mfxDh2A8xtggqoHWRrBOQapkjdAri9uitdg2NlfmKUrXWf6N
-i/Q/V48ig3hi08Q3WfQVhSbxnd9IrM92YoErB3xZAoGBALWIz9n5Y0Ac0PEjW2Kr
-7FYPnH3FpbA9mbKIvFtq90ATTFG4N9UQLEfWnUQQpjpRWhSRLhmr/T+fv78ex2jI
-kzV7K5q9z18dolbRbBXjGOeSBk/005pYv65c3KA+Q9idOseNwPWqRWdo8cbDNxAR
-ekMQCv3cMi2QUiBJ2CmDu4cW
------END PRIVATE KEY-----"
-GOOGLE_SHEET_ID=11Su3cEkJbVPcCqix2oc1Md-3XbKagySuobf9FfakdIs
+GOOGLE_SERVICE_ACCOUNT_EMAIL=[YOUR_SERVICE_ACCOUNT_EMAIL]
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n[YOUR_PRIVATE_KEY]\n-----END PRIVATE KEY-----"
+GOOGLE_SHEET_ID=[YOUR_SHEET_ID]
 
-# Brevo API Configuration (already set)
-BREVO_API_KEY=xkeysib-[REDACTED_FOR_SECURITY]
+# Brevo API Configuration
+BREVO_API_KEY=[YOUR_BREVO_API_KEY]
 ```
 
 ## Deployment Steps
@@ -92,13 +65,13 @@ After setting up environment variables:
 1. **Test the API directly**:
 
    ```bash
-   curl -X POST https://uk.topfinanzas.com/api/sheets \
+      curl -X POST https://us.topfinanzas.com/api/sheets \
    -H "Content-Type: application/json" \
    -d '{
        "email": "test@example.com",
        "firstName": "Test User",
        "preferenceText": "Credit Cards",
-       "incomeText": "£25,000 - £35,000",
+         "incomeText": "$25,000 - $35,000",
        "utm_source": "test",
        "utm_medium": "verification"
    }'
@@ -114,7 +87,7 @@ After setting up environment variables:
    ```
 
 2. **Test the quiz form**
-   - Go to: <https://uk.topfinanzas.com/quiz>
+   - Go to: <https://us.topfinanzas.com/quiz>
    - Fill out the form completely
    - Submit and check for errors in console
    - Verify data appears in Google Sheets
@@ -122,7 +95,7 @@ After setting up environment variables:
 3. **Check Brevo dashboard**
    - Go to: <https://app.brevo.com/contact/list/9>
    - Verify new contact was created
-   - Check that COUNTRIES field is "United Kingdom"
+   - Check that COUNTRIES field is "United States" (or your intended locale value)
 
 ## Common Issues
 

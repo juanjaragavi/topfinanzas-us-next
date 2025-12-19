@@ -1,7 +1,7 @@
-// Constant strings used throughout the application for UK market
+// Constant strings used throughout the application
 
 export const metadata = {
-  title: "Find Your Perfect Credit Card - TopFinance UK",
+  title: "Find Your Perfect Credit Card - TopFinanzas US",
   description: "Find the perfect credit card tailored to your needs",
 };
 
@@ -14,8 +14,8 @@ export const UTM_PARAM_KEYS = [
 ] as const;
 
 export const BRAND_STATIC_FIELDS = {
-  Pais: "México",
-  Marca: "Top Finanzas",
+  Pais: "United States",
+  Marca: "TopFinanzas",
 } as const;
 
 export const BRAND_STATIC_FIELDS_LOWER = {

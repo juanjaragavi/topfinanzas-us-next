@@ -4,7 +4,7 @@
 
 ### Symptoms
 
-When UTM parameters were present in the URL (e.g., `https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open`), interactive elements such as:
+When UTM parameters were present in the URL (e.g., `https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open`), interactive elements such as:
 
 - Call to Action (CTA) buttons
 - Inline text links
@@ -96,7 +96,7 @@ return () => {
 1. **Test with UTM Parameters**
 
    ```bash
-   https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_term=open&utm_content=banner
+  https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_term=open&utm_content=banner
    ```
 
    - Click on any CTA button (should work on first click)
@@ -111,7 +111,7 @@ return () => {
 3. **Test Article Pages**
 
    ```bash
-   https://uk.topfinanzas.com/soluciones-financieras/santander-uk-credit-card?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_term=open&utm_content=banner
+  https://us.topfinanzas.com/soluciones-financieras/santander-uk-credit-card?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_term=open&utm_content=banner
    ```
 
    - Click on CTA buttons in the article

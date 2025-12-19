@@ -2,12 +2,12 @@
 
 ## Overview
 
-TopAds has been successfully integrated into the TopFinance UK Next.js project. This implementation provides:
+TopAds has been successfully integrated into the TopFinanzas US Next.js project. This implementation provides:
 
 - Script loading with Next.js optimization
 - Automatic SPA (Single Page Application) navigation handling
 - Ad placement components for easy integration
-- UK-specific configuration
+- US-specific configuration
 - Development logging and debugging
 
 ## Files Created/Modified
@@ -38,9 +38,9 @@ TopAds has been successfully integrated into the TopFinance UK Next.js project. 
    - Integrated `<TopAdsSPAHandler />` in body section
 
 2. **`/lib/documents/config.js`**
-   - Updated domain to "uk.topfinanzas.com"
-   - Updated logo URL to UK-specific path
-   - Updated website name to "TopFinance UK"
+  - Updated domain to "us.topfinanzas.com"
+  - Updated logo URL to US-specific path
+  - Updated website name to "TopFinanzas US"
 
 3. **`/app/utm-test/page.tsx`** (example)
    - Added two test ad placements (square01, square02)
@@ -126,7 +126,7 @@ The generated HTML:
 
 ```javascript
 topAds.config = {
-  domain: "uk.topfinanzas.com", // UK-specific domain
+  domain: "us.topfinanzas.com", // US-specific domain
   networkCode: "23062212598", // Your network code
   autoStart: false, // Manual control
   lazyLoad: "hard", // Performance optimization
@@ -147,8 +147,8 @@ topAds.config = {
     },
     offerwall: {
       status: "active", // Enable offerwall
-      logoUrl: "https://uk.topfinanzas.com/apple-touch-icon.png", // UK logo
-      websiteName: "TopFinance UK", // UK branding
+      logoUrl: "https://us.topfinanzas.com/apple-touch-icon.png", // Site logo
+      websiteName: "TopFinanzas US", // US branding
       cooldown: "12", // Hours between shows
       include: [], // All pages
       exclude: [], // No exclusions
@@ -360,11 +360,11 @@ To test the implementation:
 - Minimal impact on page performance
 - 100ms delay ensures DOM is ready
 
-### UK Market Specifics
+### US Market Specifics
 
-- Domain: `uk.topfinanzas.com`
-- Branding: "TopFinance UK"
-- Logo: UK-specific apple-touch-icon.png
+- Domain: `us.topfinanzas.com`
+- Branding: "TopFinanzas US"
+- Logo: US apple-touch-icon.png
 
 ## Troubleshooting
 
@@ -437,6 +437,6 @@ For integration issues:
 ---
 
 **Implementation Date**: November 13, 2025  
-**Project**: TopFinance UK (uk-topfinanzas-com)  
+**Project**: TopFinanzas US (us-topfinanzas-com)  
 **Framework**: Next.js 15+ with App Router  
 **TypeScript**: Enabled with strict mode

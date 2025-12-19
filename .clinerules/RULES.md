@@ -1,8 +1,8 @@
-# Next.js Project Configuration Rules for TopFinance UK
+# Next.js Project Configuration Rules for TopFinanzas US
 
 ## Project Overview
 
-This Next.js project (uk-topfinanzas-com) is a UK-focused financial comparison website built with modern web technologies. The project specializes in credit cards, personal loans, and financial guidance tailored for the UK market.
+This Next.js project (`topfinanzas-us-next`) is the migration target for the legacy WordPress site `https://us.topfinanzas.com`. The legacy US and MX templates share identical UI/UX, so migrations should reuse existing components and focus on content localization to US English plus US-specific adaptations.
 
 ## System Architecture
 
@@ -139,36 +139,33 @@ import { CustomComponent } from "./custom-component";
 - **API Routes**: Appropriate cache headers
 - **Dynamic Content**: Strategic ISR usage
 
-## UK Market Specifics
+## US Market Specifics
 
 ### 1. Localization
 
-- **Language**: UK English (en-GB)
-- **Currency**: GBP (£) formatting
-- **Date Format**: DD/MM/YYYY
-- **Address Format**: UK postcode system
+- **Language**: US English (en-US)
+- **Currency**: USD ($) formatting
+- **Date Format**: Prefer MM/DD/YYYY
+- **Address Format**: US ZIP code system
 
-### 2. Financial Compliance
+### 2. Financial Compliance (General)
 
-- **APR Display**: UK regulatory format
-- **Representative Examples**: FCA requirements
-- **Terms & Conditions**: UK legal compliance
-- **Data Protection**: GDPR compliance
+- Avoid UK-only regulatory language (FCA) and MX-only regulatory language (CONDUSEF/PROFECO/CAT) unless a page explicitly requires it.
+- Do not promise approvals, guaranteed rates, or outcomes.
+- Prefer disclosures and terminology present on the legacy US WordPress source page.
 
 ### 3. Content Guidelines
 
-- **Financial Terms**: UK-specific terminology
-- **Regulatory Info**: FCA disclaimers
-- **Contact Details**: UK phone numbers
-- **Business Hours**: UK timezone (GMT/BST)
+- Use US terminology, examples, and comparisons.
+- Use US contact formats where applicable (e.g., +1 phone numbers).
 
 ## Analytics Integration
 
 ### 1. Google Tag Manager
 
-- **Container ID**: UK-specific GTM container
-- **Event Tracking**: UK user interactions
-- **Conversion Tracking**: UK-specific goals
+- **Container ID**: US GTM container (environment-specific)
+- **Event Tracking**: US user interactions
+- **Conversion Tracking**: US-specific goals
 
 ### 2. AdZep Integration
 
@@ -261,11 +258,11 @@ import { CustomComponent } from "./custom-component";
 
 ## Agent Authoring Directive
 
-- Whenever the agent is prompted to generate a new blog post or article for this UK site:
-  - First, review `lib/documents/blog-post-generation-prompt.md` to follow the latest content generation rules and UK localisation requirements.
+- Whenever the agent is prompted to generate a new blog post or article for this US site:
+  - First, review `lib/TOFU_BLOG_POST_GENERATION.instructions.md` and `.github/instructions/BLOG_POST_INTEGRATION.instructions.md` to follow the latest content generation rules and US localization requirements.
   - Also consult `lib/documents/topfinanzas-us-topic-outline.csv` to determine article type (pillar vs cluster), tentative title, content focus, and related cluster/pillar context.
-  - Use the UK sitemap at `https://uk.topfinanzas.com/sitemap.xml` to avoid duplicating already published content and to build correct internal links.
-  - Produce content in UK English conventions (en-GB) and ensure internal links point to the `uk.topfinanzas.com` domain.
+  - Use the US sitemap at `https://us.topfinanzas.com/sitemap.xml` to avoid duplicating already published content and to build correct internal links.
+  - Produce content in US English conventions (en-US) and ensure internal links point to the `us.topfinanzas.com` domain (or use relative links where appropriate).
   - If the funnel stage is TOFU, create the new blog post under `app/finanzas-personales`, matching the structure and layout used by existing articles in that directory, but write entirely new, original content.
 
 ## Git Workflow
@@ -296,7 +293,7 @@ import { CustomComponent } from "./custom-component";
 
 - **Core Web Vitals**: Continuous monitoring
 - **Error Tracking**: Production error monitoring
-- **User Analytics**: UK user behavior tracking
+- **User Analytics**: US user behavior tracking
 - **Conversion Tracking**: Financial product conversions
 
 ### 2. Maintenance Tasks
@@ -304,7 +301,7 @@ import { CustomComponent } from "./custom-component";
 - **Dependency Updates**: Regular updates
 - **Security Patches**: Timely security updates
 - **Performance Audits**: Regular performance reviews
-- **Content Updates**: UK market updates
+- **Content Updates**: US market updates
 
 ## Best Practices Summary
 
@@ -329,11 +326,11 @@ import { CustomComponent } from "./custom-component";
 - Fast loading times
 - Intuitive navigation
 
-### 4. UK Market Focus
+### 4. US Market Focus
 
-- Use UK-specific terminology
-- Comply with UK regulations
-- Target UK user behavior
-- Optimize for UK search engines
+- Use US terminology
+- Avoid UK/MX-only regulatory references unless explicitly needed
+- Target US user behavior
+- Optimize for US search intent
 
-This configuration ensures the Next.js project maintains high code quality, performance, and compliance with UK market requirements while providing an excellent user experience for UK financial service seekers.
+This configuration ensures the Next.js project maintains high code quality, performance, and US-market relevance while providing an excellent user experience for US financial service seekers.

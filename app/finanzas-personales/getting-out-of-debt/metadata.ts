@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Practical Guide to Getting Out of Debt | Top Finance UK",
+  title: "Practical Guide to Getting Out of Debt | TopFinanzas US",
   description:
     "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
   keywords:
-    "getting out of debt UK, debt management plan, debt consolidation UK, debt advice, emergency fund, snowball method, avalanche method",
+    "getting out of debt, debt management plan, debt consolidation, debt advice, emergency fund, snowball method, avalanche method",
   openGraph: {
-    title: "Practical Guide to Getting Out of Debt | Top Finance UK",
+    title: "Practical Guide to Getting Out of Debt | TopFinanzas US",
     description:
       "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/getting-out-of-debt",
+    url: "https://us.topfinanzas.com/finanzas-personales/getting-out-of-debt",
     type: "article",
     // publishedTime: "YYYY-MM-DDTHH:mm:ssZ", // Add if available in MDX frontmatter later
     authors: ["Top Finance Team"], // Add if available in MDX frontmatter later
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Practical Guide to Getting Out of Debt | Top Finance UK",
+    title: "Practical Guide to Getting Out of Debt | TopFinanzas US",
     description:
       "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
     images: [
-      "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
+      "https://media.topfinanzas.com/images/placeholder.webp",
     ], // Add if featuredImage is available
   },
 };

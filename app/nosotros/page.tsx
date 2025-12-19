@@ -161,7 +161,7 @@ export default function AboutUs() {
 
           <div className="mb-12">
             <Image
-              src="https://topfinanzas.com/mx/wp-content/uploads/2023/11/NOSOTROS2-1180x307.jpg"
+              src="https://media.topfinanzas.com/images/placeholder.webp"
               alt="Equipo Top Finanzas"
               width={1180}
               height={307}

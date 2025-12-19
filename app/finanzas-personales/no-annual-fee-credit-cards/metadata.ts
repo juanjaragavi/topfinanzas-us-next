@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Top Credit Cards With No Annual Fees | Top Finance UK",
+  title: "Top Credit Cards With No Annual Fees | TopFinanzas US",
   description:
     "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
   keywords:
-    "no annual fee credit cards UK, best no annual fee cards, cashback no annual fee, rewards no annual fee, 0 APR no annual fee",
+    "no annual fee credit cards US, best no annual fee cards, cashback no annual fee, rewards no annual fee, 0 APR no annual fee",
   openGraph: {
-    title: "Top Credit Cards With No Annual Fees | Top Finance UK",
+    title: "Top Credit Cards With No Annual Fees | TopFinanzas US",
     description:
       "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/no-annual-fee-credit-cards",
+    url: "https://us.topfinanzas.com/finanzas-personales/no-annual-fee-credit-cards",
     type: "article",
     // publishedTime: "YYYY-MM-DDTHH:mm:ssZ", // Add if available in MDX frontmatter later
     authors: ["Top Finance Team"], // Add if available in MDX frontmatter later
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Credit Cards With No Annual Fees | Top Finance UK",
+    title: "Top Credit Cards With No Annual Fees | TopFinanzas US",
     description:
       "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
     images: [
-      "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp",
+      "https://media.topfinanzas.com/images/placeholder.webp",
     ], // Add if featuredImage is available
   },
 };

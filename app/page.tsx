@@ -255,7 +255,7 @@ export default function Home() {
                 categorySlug: post.categoryPath,
                 date: post.frontmatter.date
                   ? new Date(post.frontmatter.date).toLocaleDateString(
-                      "es-MX",
+                      "en-US",
                       { year: "numeric", month: "long", day: "numeric" },
                     )
                   : undefined,
@@ -308,7 +308,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -331,7 +331,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -354,7 +354,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",

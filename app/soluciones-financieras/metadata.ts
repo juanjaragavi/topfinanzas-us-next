@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 
 // Metadata specifically for the /soluciones-financieras landing page
 export const metadata: Metadata = {
-  title: "Soluciones Financieras: Tarjetas y Préstamos | TopFinanzas MX",
+  title: "Financial Solutions: Credit Cards & Loans | TopFinanzas US",
   description:
-    "Explora guías completas y comparativas de las mejores tarjetas de crédito y préstamos personales en México. Encuentra requisitos, beneficios y solicita la solución financiera adecuada.",
+    "Explore guides and comparisons of credit cards and personal loans in the United States. Find requirements, benefits, and choose the right financial solution.",
   keywords:
-    "soluciones financieras México, tarjetas de crédito México, préstamos personales México, comparar tarjetas, comparar préstamos, BBVA, Citibanamex, HSBC, Santander, Nu, mejores finanzas México",
+    "financial solutions US, credit cards US, personal loans US, compare credit cards, compare loans, personal finance",
   openGraph: {
-    title: "Soluciones Financieras: Tarjetas y Préstamos | TopFinanzas MX",
+    title: "Financial Solutions: Credit Cards & Loans | TopFinanzas US",
     description:
-      "Tu guía de las mejores tarjetas de crédito y préstamos personales disponibles en México. Compara opciones y encuentra la mejor para ti.",
+      "Your guide to credit cards and personal loans in the United States. Compare options and find the best fit for you.",
     images: [
       {
         // Using a relevant UK product image
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
-    url: "https://topfinanzas.com/mx/soluciones-financieras", // Assuming this is the correct URL
+    url: "https://us.topfinanzas.com/soluciones-financieras",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soluciones Financieras: Tarjetas y Préstamos | TopFinanzas MX",
+    title: "Financial Solutions: Credit Cards & Loans | TopFinanzas US",
     description:
-      "Tu guía de las mejores tarjetas de crédito y préstamos personales disponibles en México. Compara opciones y encuentra la mejor para ti.",
+      "Your guide to credit cards and personal loans in the United States. Compare options and find the best fit for you.",
     images: [
       "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
     ],

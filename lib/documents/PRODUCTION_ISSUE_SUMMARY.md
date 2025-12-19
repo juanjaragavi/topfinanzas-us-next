@@ -2,7 +2,7 @@
 
 ## Problem
 
-The quiz form on **uk.topfinanzas.com** is failing to save user data with a **500 Internal Server Error**.
+The quiz form on **us.topfinanzas.com** is failing to save user data with a **500 Internal Server Error**.
 
 ## Root Cause
 
@@ -11,7 +11,7 @@ The quiz form on **uk.topfinanzas.com** is failing to save user data with a **50
 ## Evidence
 
 1. ✅ Local testing works perfectly (we created test contact successfully)
-2. ❌ Production shows: `POST https://uk.topfinanzas.com/api/sheets 500 (Internal Server Error)`
+2. ❌ Production shows: `POST https://us.topfinanzas.com/api/sheets 500 (Internal Server Error)`
 3. ❌ Console error: `[QUIZ] Error handling submission Error: Failed to add data to sheet`
 4. ✅ Brevo IS working in production (you have 1 contact in List #9 - "Test User")
 
@@ -33,7 +33,7 @@ BREVO_API_KEY=xkeysib-[REDACTED_FOR_SECURITY]
 1. **Access your production server/hosting platform**
 2. **Add the environment variables** (see PRODUCTION_SETUP.md for exact values)
 3. **Restart/rebuild your application**
-4. **Test the quiz form** at uk.topfinanzas.com/quiz
+4. **Test the quiz form** at <https://us.topfinanzas.com/quiz>
 
 ### Detailed Instructions
 
@@ -46,7 +46,7 @@ After adding environment variables, test:
 - Submit quiz form
 - Check browser console (should show success, no errors)
 - Verify data appears in Google Sheets
-- Check Brevo dashboard for new contact with "United Kingdom" in COUNTRIES
+- Check Brevo dashboard for new contact with "United States" in COUNTRIES (or your intended locale value)
 
 ## Why Local Works But Production Doesn't
 

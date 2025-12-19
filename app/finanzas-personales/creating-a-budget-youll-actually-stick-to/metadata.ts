@@ -1,16 +1,16 @@
 export const metadata = {
   title:
-    "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | Top Finance UK",
+    "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | TopFinanzas US",
   description:
-    "A simple UK‑focused guide to building a budget you’ll actually keep — no giant spreadsheets required. Learn 50/30/20, zero‑based budgeting, digital pots, and a 7‑day quick start.",
+    "A simple guide to building a budget you’ll actually keep — no giant spreadsheets required. Learn 50/30/20, zero‑based budgeting, digital envelopes, and a 7‑day quick start.",
   keywords:
-    "personal finance budget UK, how to create a budget UK, 50/30/20 method, zero-based budgeting UK, digital envelopes UK, beginner budgeting UK",
+    "personal finance budget US, how to create a budget, 50/30/20 method, zero-based budgeting, digital envelopes, beginner budgeting",
   openGraph: {
     title:
-      "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | Top Finance UK",
+      "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | TopFinanzas US",
     description:
-      "Build a realistic UK budget with practical methods like 50/30/20, zero‑based budgeting, and digital pots — plus a 7‑day quick start plan.",
-    url: "https://uk.topfinanzas.com/finanzas-personales/creating-a-budget-youll-actually-stick-to",
+      "Build a realistic budget with practical methods like 50/30/20 and zero‑based budgeting — plus a 7‑day quick start plan.",
+    url: "https://us.topfinanzas.com/finanzas-personales/creating-a-budget-youll-actually-stick-to",
     type: "article",
     publishedTime: "2025-09-04T12:00:00Z",
     authors: ["Top Finance Team"],

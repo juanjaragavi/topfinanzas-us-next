@@ -18,14 +18,14 @@ Generate a financial product page pair (benefits and requirements), following th
 - **Content Focus:** Product features, benefits, eligibility, application process
 - **SEO Intent Type:** Commercial/Transactional
 - **Funnel Stage:** MOFU/BOFU (Consideration/Decision)
-- **Market:** United Kingdom
-- **Language:** English (United Kingdom)
+- **Market:** United States
+- **Language:** English (United States)
 
 ## Brand and Visual Assets
 
 - **Brand Color:** #[hexcode] (hex color code for primary brand buttons/accents)
-- **Hero Image URL:** <https://media.topfinanzas.com/images/uk/[product-slug].webp>
-- **Requirements Image URL:** <https://media.topfinanzas.com/images/uk/[product-slug]-requirements.webp>
+- **Hero Image URL:** <https://media.topfinanzas.com/images/us/[product-slug].webp> (or the correct US CDN path used by this repo)
+- **Requirements Image URL:** <https://media.topfinanzas.com/images/us/[product-slug]-requirements.webp> (or the correct US CDN path used by this repo)
 
 ## Data Sources
 
@@ -46,7 +46,7 @@ Generate a financial product page pair (benefits and requirements), following th
   - Welcome bonuses or introductory offers
   - Reward structures and earning rates
   - Special terms, conditions, or promotional offers
-  - FCA-required risk warnings and representative examples
+  - Any rate/fee disclosures and eligibility notes required by the provider’s official terms
 
 ### Secondary Data Source
 
@@ -65,9 +65,9 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ### Internal Linking Resource
 
-#### UK Site Sitemap
+#### US Site Sitemap
 
-- **Location**: <https://uk.topfinanzas.com/sitemap.xml>
+- **Location**: <https://us.topfinanzas.com/sitemap.xml>
 - **Access method**: Use `fetch_txt` tool
 - **Purpose**: Identify existing articles and pages for internal linking opportunities
 - **Usage**: Add 2-3 relevant internal links per page using Next.js Link component
@@ -86,7 +86,7 @@ Generate a financial product page pair (benefits and requirements), following th
    - Welcome bonuses or introductory offers
    - Reward structures (e.g., Ocean Credit Card earning rates)
    - Any special terms, conditions, or promotional offers
-   - FCA-required representative APR examples and risk warnings
+   - Any representative APR examples / disclosures required by the official provider terms
 
 3. **Supplement with CSV Data**: Use `fetch_txt` to access the CSV at `lib/documents/topfinanzas-us-topic-outline.csv`. Cross-reference the extracted information with the corresponding product row to ensure:
    - Brand color hex code is available
@@ -94,7 +94,7 @@ Generate a financial product page pair (benefits and requirements), following th
    - SEO metadata (keywords, page title) is complete
    - Content focus and suggested angles are noted
 
-4. **Retrieve UK Sitemap**: Use `fetch_txt` to access <https://uk.topfinanzas.com/sitemap.xml> and identify:
+4. **Retrieve US Sitemap**: Use `fetch_txt` to access <https://us.topfinanzas.com/sitemap.xml> and identify:
    - Related credit card product pages
    - Relevant Personal Finance articles (e.g., credit card guides, rewards strategies)
    - Financial Solutions category pages
@@ -103,13 +103,13 @@ Generate a financial product page pair (benefits and requirements), following th
 5. **Data Synthesis and Validation**:
    - Compare official website data with CSV data
    - Prioritize official website for current rates, fees, and terms
-   - Ensure all critical information is accurate and FCA-compliant
+   - Ensure all critical information is accurate and not misleading
    - Flag any contradictions or missing information
 
 6. **Generate Content**: Create TWO complete Next.js page components (.tsx files) with:
    - Production-ready TypeScript code
-   - British English throughout
-   - FCA-compliant representative APR examples and risk warnings
+   - US English throughout
+   - Clear disclosures for rates/fees and eligibility; avoid guarantees
    - SEO metadata (title, description, keywords)
    - Brand-colored CTAs using provided hex code
    - Hero images from CSV or CDN
@@ -149,7 +149,7 @@ Both files must:
 - Use `data-category="credit-cards"` attribute
 - Include complete `generateMetadata()` function
 - Apply brand color (#[hexcode]) to buttons and accents
-- Contain FCA-compliant disclaimers and representative APR examples
+- Contain clear, US-appropriate disclosures (APR, fees, eligibility) and a "not financial advice" disclaimer
 - Follow existing template structure and styling patterns
 - Be production-ready with no placeholders or TODOs
 
@@ -167,10 +167,6 @@ Review these existing pages for structure and styling patterns:
 
 <ExampleURLsForReference>
 
-Additional UK financial product URLs for pattern reference:
-
-- HSBC Rewards Credit Card: <https://www.hsbc.co.uk/credit-cards/products/rewards/>
-- NatWest Credit Card: <https://www.natwest.com/credit-cards.html>
-- Santander Personal Loan: <https://www.santander.co.uk/personal/loans/personal-loan>
+Use the official issuer product URL provided in the request as the source of truth for rates, fees, and terms.
 
 </ExampleURLsForReference>

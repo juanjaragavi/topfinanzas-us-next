@@ -96,9 +96,9 @@ Modified `components/analytics/utm-persister.tsx` with:
 Test URLs with UTM parameters:
 
 ```bash
-https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=test
+https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=test
 
-https://uk.topfinanzas.com/soluciones-financieras/santander-uk-credit-card?utm_source=adwords&utm_medium=cpc
+https://us.topfinanzas.com/soluciones-financieras/santander-uk-credit-card?utm_source=adwords&utm_medium=cpc
 ```
 
 ### Browser Console Test

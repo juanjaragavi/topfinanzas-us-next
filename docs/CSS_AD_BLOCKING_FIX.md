@@ -172,7 +172,7 @@ These rules **enable** interaction rather than block it, ensuring users can alwa
 
 ### Production Testing Required
 
-1. **Navigate to**: `https://uk.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open`
+1. **Navigate to**: `https://us.topfinanzas.com/quiz?utm_source=adwords&utm_medium=cpc&utm_campaign=22524445886&utm_content=banner&utm_term=open`
 2. **Fill form**: Name: Juan, Email: <juanamillo@gmail.com>
 3. **Submit form**
 4. **Verify**: Interstitial ad appears and is clickable

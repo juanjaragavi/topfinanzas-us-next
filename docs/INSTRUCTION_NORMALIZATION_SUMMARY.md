@@ -143,7 +143,7 @@ Incorrect Implementation (Do Not Use):
 
 ## 5. Verification Results
 
-### ✅ UK TopFinanzas (uk-topfinanzas-com)
+### ✅ TopFinanzas US (topfinanzas-us-next)
 
 - Line 127: Normalized formatting ✓
 - Lines 143-146: Three CTA rules added with normalized language ✓
@@ -178,7 +178,7 @@ Incorrect Implementation (Do Not Use):
 ### System Instructions Update
 
 **Status:** ✅ Complete  
-**Projects Updated:** uk-topfinanzas-com, kardtrust  
+**Projects Updated:** topfinanzas-us-next, kardtrust  
 **Pattern Applied:** Normalized emphasis, added explicit external CTA guidance
 
 **Key Benefits:**
@@ -235,16 +235,16 @@ Incorrect Implementation (Do Not Use):
 
 ### For System Instruction Updates
 
-1. **Update both projects** (uk-topfinanzas-com and kardtrust) when making changes
+1. **Update both projects** (topfinanzas-us-next and kardtrust) when making changes
 2. **Maintain normalized formatting** (avoid excessive bold/CRITICAL emphasis)
-3. **Preserve market-specific differences** (FCA vs CFPB/FTC, ad unit IDs)
+3. **Preserve market-specific differences** (ad unit IDs, terminology, compliance notes)
 4. **Test with LLM generation** to ensure instructions produce correct output
 
 ---
 
 ## 9. Files Reference
 
-### UK TopFinanzas Project
+### TopFinanzas US Project
 
 - **Instructions:** `/lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md`
 - **Requirements Pages:** `/app/soluciones-financieras/*-requirements/page.tsx` (20 files)
@@ -259,9 +259,9 @@ Incorrect Implementation (Do Not Use):
 
 ## 10. Completion Checklist
 
-- [x] Normalize formatting in uk-topfinanzas-com instructions
-- [x] Add External CTA guidance to uk-topfinanzas-com Rules section
-- [x] Add External CTA guidance to uk-topfinanzas-com OutputFormatting section
+- [x] Normalize formatting in topfinanzas-us-next instructions
+- [x] Add External CTA guidance to topfinanzas-us-next Rules section
+- [x] Add External CTA guidance to topfinanzas-us-next OutputFormatting section
 - [x] Replicate page structure update to kardtrust (line 128)
 - [x] Replicate Rules section updates to kardtrust (lines 143-146)
 - [x] Replicate OutputFormatting section to kardtrust (lines 672+)
@@ -277,7 +277,7 @@ Incorrect Implementation (Do Not Use):
 
 ## Conclusion
 
-The instruction normalization and cross-project replication is now complete. Both uk-topfinanzas-com and kardtrust projects have:
+The instruction normalization and cross-project replication is now complete. Both topfinanzas-us-next and kardtrust projects have:
 
 1. ✅ Clean, readable instruction formatting
 2. ✅ Explicit external CTA linking guidance
