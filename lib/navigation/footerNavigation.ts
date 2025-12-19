@@ -110,11 +110,11 @@ export const footerNavigation = {
   legalLinks: [
     {
       text: "Términos y condiciones",
-      href: "/terminos-y-condiciones",
+      href: "/terminos-y-condiciones-de-uso",
     },
     {
       text: "Política de privacidad",
-      href: "/politica-de-privacidad",
+      href: "/politica-privacidad",
     },
     {
       text: "Política de Cookies",
