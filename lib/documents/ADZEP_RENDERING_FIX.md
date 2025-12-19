@@ -147,7 +147,7 @@ The selector `[id^='uk_topfinanzas_']` matches all of these.
 
 ### Initial Page Load
 
-- [x] Navigate to `/soluciones-financieras/barclaycard-avios-plus-requirements`
+- [x] Navigate to `/financial-solutions/barclaycard-avios-plus-requirements`
 - [x] Wait for page to fully load
 - [x] Verify `uk_topfinanzas_3` container is detected
 - [x] Verify `uk_topfinanzas_4` container is detected

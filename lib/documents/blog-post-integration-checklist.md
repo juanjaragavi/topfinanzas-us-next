@@ -4,7 +4,7 @@
 
 ### ✅ Content Creation
 
-- [x] Created article file at `/app/finanzas-personales/inflation-proof-your-life/page.tsx`
+- [x] Created article file at `/app/personal-finance/inflation-proof-your-life/page.tsx`
 - [x] 950+ words of original US-focused content
 - [x] Proper heading hierarchy (H1, H2, H3)
 - [x] 10+ internal links to relevant content
@@ -28,7 +28,7 @@
 ### ✅ Site Integration
 
 - [x] Added to Blog Listing (`/app/blog/page.tsx`)
-- [x] Added to Personal Finance Category (`/app/finanzas-personales/page.tsx`)
+- [x] Added to Personal Finance Category (`/app/personal-finance/page.tsx`)
 - [x] Updated Recent Articles sidebar (`/components/mdx/blog-layout.tsx`)
 - [x] Proper date sorting (October 15, 2025)
 
@@ -71,16 +71,16 @@
 
 ### 🔗 Internal Links Verified
 
-1. [x] `/finanzas-personales/creating-a-budget-youll-actually-stick-to`
-2. [x] `/finanzas-personales/money-management-for-beginners`
-3. [x] `/finanzas-personales/ditching-impulse-buys-mindful-spending`
-4. [x] `/finanzas-personales/how-to-ask-for-a-raise`
-5. [x] `/finanzas-personales/side-hustle-or-second-job`
-6. [x] `/finanzas-personales/top-credit-cards-0-intro-apr`
-7. [x] `/finanzas-personales/best-personal-loans`
-8. [x] `/finanzas-personales/getting-out-of-debt`
-9. [x] `/finanzas-personales/setting-financial-goals`
-10. [x] `/finanzas-personales` (category page)
+1. [x] `/personal-finance/creating-a-budget-youll-actually-stick-to`
+2. [x] `/personal-finance/money-management-for-beginners`
+3. [x] `/personal-finance/ditching-impulse-buys-mindful-spending`
+4. [x] `/personal-finance/how-to-ask-for-a-raise`
+5. [x] `/personal-finance/side-hustle-or-second-job`
+6. [x] `/personal-finance/top-credit-cards-0-intro-apr`
+7. [x] `/personal-finance/best-personal-loans`
+8. [x] `/personal-finance/getting-out-of-debt`
+9. [x] `/personal-finance/setting-financial-goals`
+10. [x] `/personal-finance` (category page)
 
 ## Summary
 

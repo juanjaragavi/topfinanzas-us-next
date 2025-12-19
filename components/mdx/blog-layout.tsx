@@ -79,7 +79,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving"
+                          href="/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           La Psicología del Gasto: Cómo Detener las Compras
@@ -104,7 +104,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/automate-your-wealth"
+                          href="/personal-finance/automate-your-wealth"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Automatiza tu Riqueza: Sistema de Finanzas
@@ -129,7 +129,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/inflation-proof-your-life"
+                          href="/personal-finance/inflation-proof-your-life"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Protege tu Vida de la Inflación: 7 Movimientos
@@ -140,7 +140,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Lifestyle Creep Article */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/lifestyle-creep-finanzas-personales.webp"
+                        src="https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp"
                         alt="What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"
                         width={50}
                         height={50}
@@ -154,7 +154,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/what-is-lifestyle-creep"
+                          href="/personal-finance/what-is-lifestyle-creep"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           ¿Qué es la "Inflación del Estilo de Vida"?
@@ -178,7 +178,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/creating-a-budget-youll-actually-stick-to"
+                          href="/personal-finance/creating-a-budget-youll-actually-stick-to"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Crea un Presupuesto que Realmente Funcione
@@ -202,7 +202,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/finanzas-personales/best-personal-loans"
+                          href="/personal-finance/best-personal-loans"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Los Mejores Préstamos Personales
@@ -215,7 +215,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarCategories>
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/finanzas-personales"
+                        href="/personal-finance"
                         className="text-sm hover:underline font-medium" // Made font medium
                       >
                         Finanzas Personales
@@ -224,7 +224,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     </div>
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/soluciones-financieras"
+                        href="/financial-solutions"
                         className="text-sm hover:underline font-medium" // Made font medium
                       >
                         Soluciones Financieras

@@ -79,24 +79,24 @@ Used an automated script (`scripts/fix-mobile-button-tap.js`) to replace inline 
 
 ### Personal Finance Articles (18 files)
 
-- `app/finanzas-personales/cashback-credit-cards/page.tsx`
-- `app/finanzas-personales/creating-a-budget-youll-actually-stick-to/page.tsx`
-- `app/finanzas-personales/what-is-financial-health/page.tsx`
-- `app/finanzas-personales/best-rewards-credit-cards/page.tsx`
-- `app/finanzas-personales/no-annual-fee-credit-cards/page.tsx`
-- `app/finanzas-personales/money-management-for-beginners/page.tsx`
-- `app/finanzas-personales/setting-financial-goals/page.tsx`
-- `app/finanzas-personales/top-credit-cards-0-intro-apr/page.tsx`
-- `app/finanzas-personales/understanding-credit-card-interest-rates/page.tsx`
-- `app/finanzas-personales/best-personal-loans/page.tsx`
-- `app/finanzas-personales/side-hustle-or-second-job/page.tsx`
-- `app/finanzas-personales/inflation-proof-your-life/page.tsx`
-- `app/finanzas-personales/credit-card-types-benefits/page.tsx`
-- `app/finanzas-personales/travel-credit-cards/page.tsx`
-- `app/finanzas-personales/getting-out-of-debt/page.tsx`
-- `app/finanzas-personales/tips-for-choosing-an-online-loan/page.tsx`
-- `app/finanzas-personales/combine-finances-after-marriage-or-moving-in/page.tsx`
-- `app/finanzas-personales/personal-loans-debt-strategy/page.tsx`
+- `app/personal-finance/cashback-credit-cards/page.tsx`
+- `app/personal-finance/creating-a-budget-youll-actually-stick-to/page.tsx`
+- `app/personal-finance/what-is-financial-health/page.tsx`
+- `app/personal-finance/best-rewards-credit-cards/page.tsx`
+- `app/personal-finance/no-annual-fee-credit-cards/page.tsx`
+- `app/personal-finance/money-management-for-beginners/page.tsx`
+- `app/personal-finance/setting-financial-goals/page.tsx`
+- `app/personal-finance/top-credit-cards-0-intro-apr/page.tsx`
+- `app/personal-finance/understanding-credit-card-interest-rates/page.tsx`
+- `app/personal-finance/best-personal-loans/page.tsx`
+- `app/personal-finance/side-hustle-or-second-job/page.tsx`
+- `app/personal-finance/inflation-proof-your-life/page.tsx`
+- `app/personal-finance/credit-card-types-benefits/page.tsx`
+- `app/personal-finance/travel-credit-cards/page.tsx`
+- `app/personal-finance/getting-out-of-debt/page.tsx`
+- `app/personal-finance/tips-for-choosing-an-online-loan/page.tsx`
+- `app/personal-finance/combine-finances-after-marriage-or-moving-in/page.tsx`
+- `app/personal-finance/personal-loans-debt-strategy/page.tsx`
 
 ## Testing Recommendations
 

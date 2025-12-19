@@ -23,8 +23,8 @@ Remove excessive `priority={true}` flags from blog post and financial solution p
 
 **Files Audited:**
 
-- `app/finanzas-personales/**/*.tsx` - 21 files
-- `app/soluciones-financieras/**/*.tsx` - 56 files
+- `app/personal-finance/**/*.tsx` - 21 files
+- `app/financial-solutions/**/*.tsx` - 56 files
 - `components/layout/header.tsx` - 1 file (logo - kept priority)
 
 ---
@@ -47,7 +47,7 @@ Created and executed automated Node.js script: `scripts/remove-priority-flags.js
 
 - ✅ getting-out-of-debt/page.tsx
 - ✅ cashback-credit-cards/page.tsx
-- ✅ page.tsx (finanzas-personales index)
+- ✅ page.tsx (personal-finance index)
 - ✅ money-management-for-beginners/page.tsx
 - ✅ best-rewards-credit-cards/page.tsx
 - ✅ what-is-financial-health/page.tsx
@@ -85,8 +85,8 @@ Created and executed automated Node.js script: `scripts/remove-priority-flags.js
 - Header logo - components/layout/header.tsx
 
 // ❌ REMOVE priority={true} - Below-the-fold content
-- Blog post hero images (all finanzas-personales pages)
-- Financial solution hero images (all soluciones-financieras pages)
+- Blog post hero images (all personal-finance pages)
+- Financial solution hero images (all financial-solutions pages)
 - Featured post cards
 - Sidebar images
 - Footer images
@@ -359,8 +359,8 @@ node scripts/remove-priority-flags.js
 
 ### Application Files (Modified)
 
-- **21 files** in `app/finanzas-personales/`
-- **56 files** in `app/soluciones-financieras/`
+- **21 files** in `app/personal-finance/`
+- **56 files** in `app/financial-solutions/`
 - **Total: 77 files modified**
 
 ### Files Unchanged (Verified)

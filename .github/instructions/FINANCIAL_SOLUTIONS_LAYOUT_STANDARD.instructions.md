@@ -1,14 +1,14 @@
 ---
-applyTo: "app/soluciones-financieras/**"
+applyTo: "app/financial-solutions/**"
 ---
 
 # Financial Solutions Layout Standard
 
 ## Overview
 
-This document defines the **mandatory standardized layout** for all Credit Card and Personal Loan product pages in the Financial Solutions category (`/app/soluciones-financieras/`). This standard has been validated against Google Analytics and Google Ads performance metrics and must be strictly enforced for all existing and new product pages.
+This document defines the **mandatory standardized layout** for all Credit Card and Personal Loan product pages in the Financial Solutions category (`/app/financial-solutions/`). This standard has been validated against Google Analytics and Google Ads performance metrics and must be strictly enforced for all existing and new product pages.
 
-**Template Reference**: `/app/soluciones-financieras/barclaycard-avios-plus/` (Benefits page) and `/app/soluciones-financieras/barclaycard-avios-plus-requirements/` (Requirements page)
+**Template Reference**: `/app/financial-solutions/barclaycard-avios-plus/` (Benefits page) and `/app/financial-solutions/barclaycard-avios-plus-requirements/` (Requirements page)
 
 ## Critical Rules
 
@@ -22,8 +22,8 @@ This document defines the **mandatory standardized layout** for all Credit Card 
 
 Every financial product must have **TWO separate pages**:
 
-1. **Benefits Page**: `/soluciones-financieras/{product-slug}/page.tsx`
-2. **Requirements Page**: `/soluciones-financieras/{product-slug}-requirements/page.tsx`
+1. **Benefits Page**: `/financial-solutions/{product-slug}/page.tsx`
+2. **Requirements Page**: `/financial-solutions/{product-slug}-requirements/page.tsx`
 
 ---
 
@@ -109,7 +109,7 @@ export default function ProductPage() {
 
               {/* ELEMENT 8: VIEW REQUIREMENTS BUTTON */}
               <div className="text-left my-8">
-                <Link href="/soluciones-financieras/{product-slug}-requirements">
+                <Link href="/financial-solutions/{product-slug}-requirements">
                   <Button className="bg-[{BRAND_COLOR}] hover:bg-green-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
                   </Button>
@@ -169,7 +169,7 @@ export default function ProductPage() {
 
                 {/* ELEMENT 14: PROMOTIONAL IMAGE WITH LINK */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/finanzas-personales/{related-article}/">
+                  <Link href="/personal-finance/{related-article}/">
                     <ResponsiveImage
                       src="https://media.topfinanzas.com/images/ads/{promo-image}.webp"
                       alt="{Promo alt text}"
@@ -192,7 +192,7 @@ export default function ProductPage() {
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
                     <li>
                       <Link
-                        href="/finanzas-personales/{article-1}/"
+                        href="/personal-finance/{article-1}/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         {Article 1 Title}
@@ -200,7 +200,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <Link
-                        href="/finanzas-personales/{article-2}/"
+                        href="/personal-finance/{article-2}/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         {Article 2 Title}
@@ -208,7 +208,7 @@ export default function ProductPage() {
                     </li>
                     <li>
                       <Link
-                        href="/finanzas-personales/{article-3}/"
+                        href="/personal-finance/{article-3}/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         {Article 3 Title}
@@ -239,7 +239,7 @@ export default function ProductPage() {
 
                 {/* ELEMENT 18: FINAL CTA BUTTON */}
                 <div className="text-left my-8">
-                  <Link href="/soluciones-financieras/{product-slug}-requirements">
+                  <Link href="/financial-solutions/{product-slug}-requirements">
                     <Button className="bg-[{BRAND_COLOR}] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements
                     </Button>
@@ -410,7 +410,7 @@ export default function ProductRequirementsPage() {
 
                 {/* ELEMENT 11: PROMOTIONAL IMAGE WITH LINK */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/finanzas-personales/{related-article}">
+                  <Link href="/personal-finance/{related-article}">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/{promo-image}.webp"
                       alt="{Promo alt text}"
@@ -461,7 +461,7 @@ export default function ProductRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/finanzas-personales/{related-article}/"
+                    href="/personal-finance/{related-article}/"
                     className="text-blue-600 underline"
                   >
                     {Link text}
@@ -472,7 +472,7 @@ export default function ProductRequirementsPage() {
 
                 {/* ELEMENT 15: SECOND PROMOTIONAL IMAGE */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/finanzas-personales/{related-article}">
+                  <Link href="/personal-finance/{related-article}">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/{promo-image}.webp"
                       alt="{Promo alt text}"

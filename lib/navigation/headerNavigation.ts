@@ -67,7 +67,7 @@ export const headerNavigation = {
     items: [
       {
         text: "Financial Solutions", // Main MOFU category
-        href: "/soluciones-financieras",
+        href: "/financial-solutions",
       },
       {
         text: "Cards", // Specific MOFU sub-category
@@ -79,7 +79,7 @@ export const headerNavigation = {
       },
       {
         text: "Personal Finance", // TOFU category
-        href: "/finanzas-personales",
+        href: "/personal-finance",
       },
       {
         text: "Card Finder", // Tool
@@ -98,27 +98,27 @@ export const headerNavigation = {
         items: [
           {
             text: cleanTitle("Best Personal Loans"),
-            href: "/finanzas-personales/best-personal-loans",
+            href: "/personal-finance/best-personal-loans",
           },
           {
             text: cleanTitle("Rewards Credit Cards"),
-            href: "/finanzas-personales/best-rewards-credit-cards",
+            href: "/personal-finance/best-rewards-credit-cards",
           },
           {
             text: cleanTitle("Best Cashback Cards"),
-            href: "/finanzas-personales/cashback-credit-cards",
+            href: "/personal-finance/cashback-credit-cards",
           },
           {
             text: cleanTitle("Credit Cards: Types and Benefits"),
-            href: "/finanzas-personales/credit-card-types-benefits",
+            href: "/personal-finance/credit-card-types-benefits",
           },
           {
             text: cleanTitle("Practical Guide to Getting Out of Debt"),
-            href: "/finanzas-personales/getting-out-of-debt",
+            href: "/personal-finance/getting-out-of-debt",
           },
           {
             text: "View more...",
-            href: "/finanzas-personales",
+            href: "/personal-finance",
             isEmphasis: true,
           }, // Link to category archive
         ],
@@ -129,27 +129,27 @@ export const headerNavigation = {
         items: [
           {
             text: cleanTitle("Barclaycard Avios Plus"),
-            href: "/soluciones-financieras/barclaycard-avios-plus",
+            href: "/financial-solutions/barclaycard-avios-plus",
           },
           {
             text: cleanTitle("Curve Credit Card"),
-            href: "/soluciones-financieras/curve-credit-card",
+            href: "/financial-solutions/curve-credit-card",
           },
           {
             text: cleanTitle("Halifax World Elite Mastercard"),
-            href: "/soluciones-financieras/halifax-world-elite-mastercard",
+            href: "/financial-solutions/halifax-world-elite-mastercard",
           },
           {
             text: cleanTitle("Lloyds Bank Credit Card"),
-            href: "/soluciones-financieras/lloyds-bank-credit-card",
+            href: "/financial-solutions/lloyds-bank-credit-card",
           },
           {
             text: cleanTitle("Monzo Credit Card"),
-            href: "/soluciones-financieras/monzo-credit-card",
+            href: "/financial-solutions/monzo-credit-card",
           },
           {
             text: "View more...",
-            href: "/soluciones-financieras",
+            href: "/financial-solutions",
             isEmphasis: true,
           }, // Link to category archive
         ],
@@ -160,27 +160,27 @@ export const headerNavigation = {
         items: [
           {
             text: cleanTitle("Barclays Personal Loan"),
-            href: "/soluciones-financieras/barclays-personal-loan",
+            href: "/financial-solutions/barclays-personal-loan",
           },
           {
             text: cleanTitle("Capify Business Finance"),
-            href: "/soluciones-financieras/capify-personal-loan",
+            href: "/financial-solutions/capify-personal-loan",
           },
           {
             text: cleanTitle("Fleximize Business Loans"),
-            href: "/soluciones-financieras/fleximize-personal-loan",
+            href: "/financial-solutions/fleximize-personal-loan",
           },
           {
             text: cleanTitle("Funding Circle Business Loan"),
-            href: "/soluciones-financieras/funding-circle-personal-loan",
+            href: "/financial-solutions/funding-circle-personal-loan",
           },
           {
             text: cleanTitle("Funding Options Marketplace"),
-            href: "/soluciones-financieras/funding-options-personal-loan",
+            href: "/financial-solutions/funding-options-personal-loan",
           },
           {
             text: "View more...",
-            href: "/soluciones-financieras",
+            href: "/financial-solutions",
             isEmphasis: true,
           }, // Link to category archive
         ],
@@ -192,35 +192,35 @@ export const headerNavigation = {
       posts: [
         {
           title: cleanTitle("Best Personal Loans"),
-          href: "/finanzas-personales/best-personal-loans",
+          href: "/personal-finance/best-personal-loans",
           image:
             "https://media.topfinanzas.com/images/best-personal-loans.webp",
           category: "Personal Finance",
-          categoryHref: "/finanzas-personales",
+          categoryHref: "/personal-finance",
         },
         {
           title: cleanTitle("Practical Guide to Getting Out of Debt"),
-          href: "/finanzas-personales/getting-out-of-debt",
+          href: "/personal-finance/getting-out-of-debt",
           image:
             "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
           category: "Personal Finance",
-          categoryHref: "/finanzas-personales",
+          categoryHref: "/personal-finance",
         },
         {
           title: cleanTitle("Barclaycard Avios Plus Card"),
-          href: "/soluciones-financieras/barclaycard-avios-plus",
+          href: "/financial-solutions/barclaycard-avios-plus",
           image:
             "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
           category: "Cards",
-          categoryHref: "/soluciones-financieras",
+          categoryHref: "/financial-solutions",
         },
         {
           title: cleanTitle("HSBC Personal Loan"),
-          href: "/soluciones-financieras/hsbc-personal-loan",
+          href: "/financial-solutions/hsbc-personal-loan",
           image:
             "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
           category: "Loans",
-          categoryHref: "/soluciones-financieras",
+          categoryHref: "/financial-solutions",
         },
       ],
     },

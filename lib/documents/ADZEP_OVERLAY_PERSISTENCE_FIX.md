@@ -2,7 +2,7 @@
 
 ## Issue Description
 
-**Problem**: An empty overlay was appearing and persisting on credit card product articles (e.g., `/soluciones-financieras/santander-uk-credit-card`) shortly after page load. The overlay consisted of a small loading indicator positioned at the bottom-right of the page that wouldn't disappear.
+**Problem**: An empty overlay was appearing and persisting on credit card product articles (e.g., `/financial-solutions/santander-uk-credit-card`) shortly after page load. The overlay consisted of a small loading indicator positioned at the bottom-right of the page that wouldn't disappear.
 
 **User Impact**:
 
@@ -16,7 +16,7 @@
 
 The AdZep SPA Bridge uses an overlay system to prevent layout shifts while ad units initialize:
 
-1. **Overlay Shows**: When navigating to article-like paths (including `/soluciones-financieras/*`)
+1. **Overlay Shows**: When navigating to article-like paths (including `/financial-solutions/*`)
 2. **Ad Activation**: System attempts to activate AdZep and render ads
 3. **Verification**: Checks if ad creatives have rendered
 4. **Overlay Hides**: Should hide once ads render or after verification retries
@@ -208,7 +208,7 @@ const clearPending = () => {
 
 ### Product Pages (Financial Solutions)
 
-- [x] Navigate to `/soluciones-financieras/santander-uk-credit-card`
+- [x] Navigate to `/financial-solutions/santander-uk-credit-card`
 - [x] Verify overlay appears briefly (< 3 seconds)
 - [x] Verify overlay fades in smoothly
 - [x] Verify overlay disappears within 3 seconds
@@ -230,7 +230,7 @@ const clearPending = () => {
 
 ### Navigation Between Pages
 
-- [x] Navigate from one soluciones-financieras page to another
+- [x] Navigate from one financial-solutions page to another
 - [x] Verify overlay shows and hides properly on each navigation
 - [x] Verify no overlays stack or persist
 

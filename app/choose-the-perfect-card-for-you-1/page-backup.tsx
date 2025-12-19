@@ -43,7 +43,7 @@ function CreditCardRecommenderPageContent() {
             </p>
 
             <div className="mt-8 mb-4">
-              <Link href="/soluciones-financieras/bbva-tarjeta-de-credito-azul">
+              <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
                 <Button className="bg-[#71C96C] hover:bg-[#5BAD56] text-white font-bold text-lg py-4 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Aceptar recomendación</span>
@@ -100,7 +100,7 @@ function CreditCardRecommenderPageContent() {
             </p>
 
             <div className="mt-8 mb-4">
-              <Link href="/soluciones-financieras/bbva-tarjeta-de-credito-azul">
+              <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
                 <Button className="bg-[#71C96C] hover:bg-[#5BAD56] text-white font-bold text-lg py-4 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Nuestra mejor recomendación</span>
@@ -116,7 +116,7 @@ function CreditCardRecommenderPageContent() {
             <p className="text-center text-sm mb-8">
               <Link
                 className="text-[#2E74B5] font-medium"
-                href="/soluciones-financieras/bbva-tarjeta-de-credito-azul-requisitos"
+                href="/financial-solutions/bbva-tarjeta-de-credito-azul-requisitos"
               >
                 Aprende cómo solicitarla
               </Link>
@@ -292,7 +292,7 @@ function CreditCardRecommenderPageContent() {
             </div>
 
             <div className="my-10">
-              <Link href="/soluciones-financieras/bbva-tarjeta-de-credito-azul">
+              <Link href="/financial-solutions/bbva-tarjeta-de-credito-azul">
                 <div className="relative w-full h-auto rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
                   <Image
                     src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"

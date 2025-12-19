@@ -29,7 +29,7 @@ export const advertisements: Advertisement[] = [
       width: 350,
       height: 300,
     },
-    link: "/finanzas-personales/best-personal-loans", // Updated link
+    link: "/personal-finance/best-personal-loans", // Updated link
     format: "square",
     active: true,
   },
@@ -42,7 +42,7 @@ export const advertisements: Advertisement[] = [
       width: 320,
       height: 620,
     },
-    link: "/finanzas-personales/credit-card-types-benefits", // Updated link
+    link: "/personal-finance/credit-card-types-benefits", // Updated link
     format: "portrait",
     active: true,
   },

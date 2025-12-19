@@ -32,7 +32,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
     authorImage = "/placeholder-user.webp",
     readingTime = "6 minute read",
     // Default categories updated to reflect current structure
-    categories = [{ name: "Personal Finance", slug: "finanzas-personales" }],
+    categories = [{ name: "Personal Finance", slug: "personal-finance" }],
     featuredImage = "https://media.topfinanzas.com/images/favicon.webp",
     excerpt = "",
     views = 0,
@@ -52,9 +52,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 key={index}
                 // Updated category link logic
                 href={
-                  category.slug === "soluciones-financieras"
-                    ? "/soluciones-financieras"
-                    : "/finanzas-personales"
+                  category.slug === "financial-solutions"
+                    ? "/financial-solutions"
+                    : "/personal-finance"
                 }
                 className="uppercase text-link text-sm font-medium mr-2 hover:underline"
               >
@@ -255,9 +255,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <Link
                       key={index}
                       href={
-                        category.slug === "soluciones-financieras"
-                          ? "/soluciones-financieras"
-                          : "/finanzas-personales"
+                        category.slug === "financial-solutions"
+                          ? "/financial-solutions"
+                          : "/personal-finance"
                       } // Updated Tag Link Logic
                       className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[10px] mr-2 mb-2 hover:bg-gray-200 transition-colors"
                     >
@@ -340,7 +340,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 </h3>
                 <div className="space-y-4">
                   <Link
-                    href="/finanzas-personales/best-personal-loans" // Updated Recent Article Link 1
+                    href="/personal-finance/best-personal-loans" // Updated Recent Article Link 1
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
@@ -361,7 +361,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </Link>
 
                   <Link
-                    href="/finanzas-personales/getting-out-of-debt" // Updated Recent Article Link 2
+                    href="/personal-finance/getting-out-of-debt" // Updated Recent Article Link 2
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
@@ -383,7 +383,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </Link>
 
                   <Link
-                    href="/finanzas-personales/tips-for-choosing-an-online-loan" // Updated Recent Article Link 3
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Updated Recent Article Link 3
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
@@ -414,7 +414,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 <ul className="space-y-2">
                   <li>
                     <Link
-                      href="/finanzas-personales" // Updated Category Link 1
+                      href="/personal-finance" // Updated Category Link 1
                       className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Personal Finance</span>
@@ -423,7 +423,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </li>
                   <li>
                     <Link
-                      href="/soluciones-financieras" // Updated Category Link 2
+                      href="/financial-solutions" // Updated Category Link 2
                       className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Financial Solutions</span>

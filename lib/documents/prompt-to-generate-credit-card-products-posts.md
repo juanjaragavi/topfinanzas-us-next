@@ -119,8 +119,8 @@ Generate a financial product page pair (benefits and requirements), following th
    - `AIContentDisclaimer` component at the end of each page
 
 7. **Directory Placement**: Create files at:
-   - `/app/soluciones-financieras/[product-slug]/page.tsx` (benefits page)
-   - `/app/soluciones-financieras/[product-slug]-requirements/page.tsx` (requirements page)
+   - `/app/financial-solutions/[product-slug]/page.tsx` (benefits page)
+   - `/app/financial-solutions/[product-slug]-requirements/page.tsx` (requirements page)
 
 8. **Content Length**: Follow guidelines based on product type:
    - Credit Card Benefits Page: 800-1,200 words
@@ -133,13 +133,13 @@ Generate a financial product page pair (benefits and requirements), following th
 TWO complete Next.js page components:
 
 1. **Main Product Benefits Page**
-   - **File**: `/app/soluciones-financieras/[product-slug]/page.tsx`
+   - **File**: `/app/financial-solutions/[product-slug]/page.tsx`
    - **Focus**: Features, benefits, rewards, value propositions
    - **Sections**: Introduction, key features, detailed benefits, CTAs
    - **Links**: Requirements page, related products, relevant guides
 
 2. **Requirements Page**
-   - **File**: `/app/soluciones-financieras/[product-slug]-requirements/page.tsx`
+   - **File**: `/app/financial-solutions/[product-slug]-requirements/page.tsx`
    - **Focus**: Eligibility, application process, costs, documentation
    - **Sections**: Qualification criteria, required docs, costs/fees, application steps, FAQs
    - **Links**: Benefits page, related products, personal finance guides
@@ -159,9 +159,9 @@ Both files must:
 
 Review these existing pages for structure and styling patterns:
 
-- `/app/soluciones-financieras/curve-credit-card/page.tsx` (if it exists)
-- `/app/soluciones-financieras/hsbc-personal-loan/page.tsx`
-- Any other credit card product pages in `/app/soluciones-financieras/`
+- `/app/financial-solutions/curve-credit-card/page.tsx` (if it exists)
+- `/app/financial-solutions/hsbc-personal-loan/page.tsx`
+- Any other credit card product pages in `/app/financial-solutions/`
 
 </TemplateReferences>
 

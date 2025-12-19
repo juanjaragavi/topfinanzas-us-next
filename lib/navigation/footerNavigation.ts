@@ -42,23 +42,23 @@ export const footerNavigation = {
   categoryItems: [
     {
       text: "Personal Finance",
-      href: "/finanzas-personales",
+      href: "/personal-finance",
     },
     {
       text: "Financial Solutions",
-      href: "/soluciones-financieras",
+      href: "/financial-solutions",
     },
     {
       text: "Home Finance",
-      href: "/finanzas-personales",
+      href: "/personal-finance",
     },
     {
       text: "Student Finance",
-      href: "/finanzas-personales",
+      href: "/personal-finance",
     },
     {
       text: "SME Finance",
-      href: "/finanzas-personales",
+      href: "/personal-finance",
     },
   ],
 

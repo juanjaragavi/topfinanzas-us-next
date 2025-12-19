@@ -71,7 +71,7 @@ function CreditCardRecommenderPageContent() {
             </div>
 
             <div className="mt-8 mb-4">
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Accept Recommendation</span>
@@ -99,7 +99,7 @@ function CreditCardRecommenderPageContent() {
             </p>
 
             <div className="mt-8 mb-4">
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
                     <span>Our Top Recommendation</span>
@@ -116,7 +116,7 @@ function CreditCardRecommenderPageContent() {
             <p className="text-center text-sm mb-12">
               <Link
                 className="text-[#2E74B5] font-medium"
-                href="/soluciones-financieras/barclaycard-avios-plus-requisitos"
+                href="/financial-solutions/barclaycard-avios-plus-requisitos"
               >
                 Learn How to Apply
               </Link>
@@ -254,7 +254,7 @@ function CreditCardRecommenderPageContent() {
             </p>
 
             <div className="my-10">
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <div className="relative w-full h-auto rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
                   <Image
                     src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"

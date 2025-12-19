@@ -592,8 +592,8 @@ class AnalyticsValidator {
       const pathname = window.location.pathname;
       const shouldHaveAds =
         pathname.startsWith("/blog/") ||
-        pathname.startsWith("/soluciones-financieras/") ||
-        pathname.startsWith("/finanzas-personales/");
+        pathname.startsWith("/financial-solutions/") ||
+        pathname.startsWith("/personal-finance/");
 
       if (!shouldHaveAds) {
         return {

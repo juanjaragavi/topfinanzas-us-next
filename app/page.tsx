@@ -56,11 +56,11 @@ const allPosts: PostData[] = [
       featuredImage:
         "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp", // Keep image for layout
       categories: [
-        { name: "Financial Solutions", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "financial-solutions" },
       ],
     },
     category: "Financial Solutions",
-    categoryPath: "/soluciones-financieras",
+    categoryPath: "/financial-solutions",
   },
   {
     slug: "hsbc-personal-loan",
@@ -71,11 +71,11 @@ const allPosts: PostData[] = [
       featuredImage:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       categories: [
-        { name: "Financial Solutions", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "financial-solutions" },
       ],
     },
     category: "Financial Solutions",
-    categoryPath: "/soluciones-financieras",
+    categoryPath: "/financial-solutions",
   },
   {
     slug: "funding-circle-personal-loan",
@@ -87,11 +87,11 @@ const allPosts: PostData[] = [
       featuredImage:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       categories: [
-        { name: "Financial Solutions", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "financial-solutions" },
       ],
     },
     category: "Financial Solutions",
-    categoryPath: "/soluciones-financieras",
+    categoryPath: "/financial-solutions",
   },
   {
     slug: "best-rewards-credit-cards",
@@ -102,10 +102,10 @@ const allPosts: PostData[] = [
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
-      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
-    categoryPath: "/finanzas-personales",
+    categoryPath: "/personal-finance",
   },
   {
     slug: "getting-out-of-debt",
@@ -115,10 +115,10 @@ const allPosts: PostData[] = [
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
-    categoryPath: "/finanzas-personales",
+    categoryPath: "/personal-finance",
   },
   {
     slug: "top-credit-cards-0-intro-apr",
@@ -127,10 +127,10 @@ const allPosts: PostData[] = [
       description: "Compare the best credit cards offering 0% intro APR...",
       date: "2025-04-03T00:00:00Z",
       featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp",
-      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
-    categoryPath: "/finanzas-personales",
+    categoryPath: "/personal-finance",
   },
   {
     slug: "best-personal-loans",
@@ -140,10 +140,10 @@ const allPosts: PostData[] = [
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
-    categoryPath: "/finanzas-personales",
+    categoryPath: "/personal-finance",
   },
   {
     slug: "tips-for-choosing-an-online-loan",
@@ -153,10 +153,10 @@ const allPosts: PostData[] = [
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
-    categoryPath: "/finanzas-personales",
+    categoryPath: "/personal-finance",
   },
 ];
 

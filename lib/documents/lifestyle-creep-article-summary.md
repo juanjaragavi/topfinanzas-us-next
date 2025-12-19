@@ -4,7 +4,7 @@
 
 **Title:** What Is 'Lifestyle Creep' and How Is It Silently Draining Your Wallet?
 
-**URL:** `/finanzas-personales/what-is-lifestyle-creep`
+**URL:** `/personal-finance/what-is-lifestyle-creep`
 
 **Date Created:** 9 October 2025
 
@@ -60,9 +60,9 @@
 
 The article includes three strategic internal links:
 
-1. [Money Management for Beginners](/finanzas-personales/money-management-for-beginners)
-2. [Creating a Budget You'll Actually Stick To](/finanzas-personales/creating-a-budget-youll-actually-stick-to)
-3. [Setting Financial Goals](/finanzas-personales/setting-financial-goals)
+1. [Money Management for Beginners](/personal-finance/money-management-for-beginners)
+2. [Creating a Budget You'll Actually Stick To](/personal-finance/creating-a-budget-youll-actually-stick-to)
+3. [Setting Financial Goals](/personal-finance/setting-financial-goals)
 
 ## SEO Optimization
 
@@ -77,7 +77,7 @@ The article has been successfully integrated into:
 
 ✅ **Main blog listing** (`app/blog/page.tsx`) - Added to allPosts array with date 9 October 2025
 
-✅ **Personal Finance category page** (`app/finanzas-personales/page.tsx`) - Added with "guide" category
+✅ **Personal Finance category page** (`app/personal-finance/page.tsx`) - Added with "guide" category
 
 ✅ **Blog sidebar recent articles** (`components/mdx/blog-layout.tsx`) - Added as first/newest article
 
@@ -85,19 +85,19 @@ The article has been successfully integrated into:
 
 ### New File
 
-- `/app/finanzas-personales/what-is-lifestyle-creep/page.tsx` - Main article component
+- `/app/personal-finance/what-is-lifestyle-creep/page.tsx` - Main article component
 
 ### Modified Files
 
 1. `/app/blog/page.tsx` - Added article entry to allPosts array
-2. `/app/finanzas-personales/page.tsx` - Added article entry to category page
+2. `/app/personal-finance/page.tsx` - Added article entry to category page
 3. `/components/mdx/blog-layout.tsx` - Added to recent articles sidebar (top position)
 
 ## Image Requirements
 
 **Primary Image:**
 
-- URL: `https://media.topfinanzas.com/images/lifestyle-creep-finanzas-personales.webp`
+- URL: `https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp`
 - Alt Text: "Understanding lifestyle creep and its impact on personal finance in the UK"
 - Dimensions: 800x450px
 - Format: WebP

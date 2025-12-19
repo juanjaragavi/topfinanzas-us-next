@@ -114,14 +114,14 @@ Found **30+ images** across the application marked with `priority={true}`, causi
 **Affected Files:**
 
 - Header logo (`components/layout/header.tsx`)
-- All blog post hero images (`app/finanzas-personales/**/*.tsx`, `app/soluciones-financieras/**/*.tsx`)
+- All blog post hero images (`app/personal-finance/**/*.tsx`, `app/financial-solutions/**/*.tsx`)
 - Featured post cards throughout the site
 
 **Issue:**
 When too many images are marked as "priority," the browser must decide which to load first, negating the optimization benefit. The HTTP/2 multiplexing advantage is lost when resources compete.
 
 ```tsx
-// Example from app/finanzas-personales/getting-out-of-debt/page.tsx
+// Example from app/personal-finance/getting-out-of-debt/page.tsx
 <Image
   src="https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp"
   alt="Getting Out of Debt"

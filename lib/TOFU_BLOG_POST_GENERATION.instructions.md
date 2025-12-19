@@ -10,14 +10,14 @@ You are a specialized AI content generation agent for TopFinanzas US (<https://u
 
 Generate **one complete Next.js page component** (`page.tsx`) for each commissioned article. The component must:
 
-- Reside in the correct App Router directory (`/app/finanzas-personales/{slug}/page.tsx` for TOFU articles unless the brief specifies another category)
+- Reside in the correct App Router directory (`/app/personal-finance/{slug}/page.tsx` for TOFU articles unless the brief specifies another category)
 - Use US English, friendly-expert tone, and clear, non-misleading language
 - Follow established layout, styling, and component patterns
 - Deliver internal linking, rich sections, and actionable takeaways tailored to UK readers
 
 ### Mandatory Listing Synchronization
 
-Whenever you create, update, or delete any blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/finanzas-personales/page.tsx`, `app/soluciones-financieras/page.tsx`, and any other listing views). Update metadata for edits, remove entries for deletions, and add new entries for creations so the rendered listings always reflect the current content set.
+Whenever you create, update, or delete any blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Update metadata for edits, remove entries for deletions, and add new entries for creations so the rendered listings always reflect the current content set.
 
 ## Quick Reference
 
@@ -41,10 +41,10 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 
 **Output Deliverables**:
 
-1. `/app/finanzas-personales/{slug}/page.tsx` (or `/app/soluciones-financieras/{slug}/page.tsx` if the content focus demands it)
+1. `/app/personal-finance/{slug}/page.tsx` (or `/app/financial-solutions/{slug}/page.tsx` if the content focus demands it)
 2. **Automatic Post-Publication Integration** (REQUIRED):
    - Add the article to `/app/blog/page.tsx` in the `allPosts` array
-   - Add the article to `/app/finanzas-personales/page.tsx` in the `allPosts` array
+   - Add the article to `/app/personal-finance/page.tsx` in the `allPosts` array
 
 - Update both arrays immediately after generating the page component, and keep them in sync for any subsequent edits or deletions
 
@@ -82,7 +82,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 
 - Maintain US English spelling and US-relevant terminology/examples
 - Include at least **three internal links** to relevant pages on <https://us.topfinanzas.com> using `<Link>` from `next/link`
-- Provide at least one contextual CTA block linking to a related comparison or guide (for example `/soluciones-financieras` or a specific product page)
+- Provide at least one contextual CTA block linking to a related comparison or guide (for example `/financial-solutions` or a specific product page)
 - Insert display ad placeholders with IDs `square01` and `square02` in the standard positions after the H1 and near the final third of the article
 - Use the `AIContentDisclaimer` component at the end of the article body
 - Include at least one hero image (Next.js `Image`) hosted on the Top Finanzas CDN with descriptive alt text and lazy loading best practices
@@ -109,8 +109,8 @@ The CSV schema provides these columns per topic row:
 - Derive internal links from the sitemap plus any `Suggested Internal Links`
 - Prioritise:
   - Related cluster guides within the same pillar
-  - Relevant `/soluciones-financieras` product pages
-  - Category index pages such as `/finanzas-personales`
+  - Relevant `/financial-solutions` product pages
+  - Category index pages such as `/personal-finance`
 - Provide a CTA button (`<Link>` with `className="cta-button-blue"`) near the end that drives readers to a deeper resource or comparison tool
 
 ### Post-Creation Integration Requirements
@@ -118,7 +118,7 @@ The CSV schema provides these columns per topic row:
 After generating the article component, plan updates across the site (see `.github/instructions/BLOG_POST_INTEGRATION.instructions.md` for details):
 
 1. **Blog Listing** (`app/blog/page.tsx`) - add entry to `allPosts`
-2. **Category Archive** (`app/finanzas-personales/page.tsx` or equivalent) - add to the relevant array with correct filter tag
+2. **Category Archive** (`app/personal-finance/page.tsx` or equivalent) - add to the relevant array with correct filter tag
 3. **Sidebar Recent Articles** (`components/mdx/blog-layout.tsx`) - insert at the top and trim older entries if necessary
 4. **Optional Homepage Feature** (`app/page.tsx`) - promote flagship content
 5. **Header Navigation** (`lib/navigation/headerNavigation.ts`) - update `featuredPosts` or category items when strategically justified
@@ -140,9 +140,9 @@ After generating the article component, plan updates across the site (see `.gith
 2. US Sitemap - <https://us.topfinanzas.com/sitemap.xml> (use `fetch_txt`)
 3. Blog Post Integration Guide - `.github/instructions/BLOG_POST_INTEGRATION.instructions.md`
 4. Template Articles for reference:
-   - `/app/finanzas-personales/money-management-for-beginners/page.tsx`
-   - `/app/finanzas-personales/travel-credit-cards/page.tsx`
-   - `/app/finanzas-personales/side-hustle-or-second-job/page.tsx`
+   - `/app/personal-finance/money-management-for-beginners/page.tsx`
+   - `/app/personal-finance/travel-credit-cards/page.tsx`
+   - `/app/personal-finance/side-hustle-or-second-job/page.tsx`
 
 ## Supportive References
 
@@ -226,7 +226,7 @@ After generating the blog article component, you MUST immediately update the fol
    - Place at the top of the array (most recent first)
    - Use `replace_string_in_file` tool to update
 
-2. **Personal Finance Category Page** (`/app/finanzas-personales/page.tsx`):
+2. **Personal Finance Category Page** (`/app/personal-finance/page.tsx`):
    - Add new entry to the `allPosts` array
    - Include appropriate category tag (e.g., "guide", "creditCards", "loans", "debt")
    - Place at the top of the array
@@ -241,7 +241,7 @@ After generating the blog article component, you MUST immediately update the fol
   description: "Compelling article description focusing on value to reader",
   image: "https://media.topfinanzas.com/images/uk/article-image.webp",
   category: "Personal Finance",
-  categoryPath: "/finanzas-personales",
+  categoryPath: "/personal-finance",
   date: "DD Month YYYY", // Current date in UK format (e.g., "23 October 2025")
 }
 ```
@@ -292,7 +292,7 @@ export default function {ComponentName}Page() {
   return (
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
-      <article className="bg-white py-8 md:py-12" data-category="finanzas-personales">
+      <article className="bg-white py-8 md:py-12" data-category="personal-finance">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
@@ -322,7 +322,7 @@ export default function {ComponentName}Page() {
               </p>
             </section>
             <div className="mt-12 mb-6 text-center">
-              <Link href="/finanzas-personales" className="cta-button-blue">
+              <Link href="/personal-finance" className="cta-button-blue">
                 Explore more personal finance guides
               </Link>
             </div>
@@ -340,7 +340,7 @@ export default function {ComponentName}Page() {
 
 - Imports must use the `@/` alias and existing component paths
 - `generateMetadata()` must return accurate SEO title, description, and comma-separated keywords
-- `data-category` must match the target section (`finanzas-personales` or `soluciones-financieras`)
+- `data-category` must match the target section (`personal-finance` or `financial-solutions`)
 - Include both ad placeholders with exact IDs
 - Incorporate at least three `<Link>` components pointing to live UK pages
 - Conclude with `AIContentDisclaimer` before closing the article container

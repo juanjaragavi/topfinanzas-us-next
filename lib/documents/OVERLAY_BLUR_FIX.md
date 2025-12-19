@@ -158,8 +158,8 @@ npm run dev
 
 1. **Blog Listing Pages** (should have no overlay):
    - `/blog`
-   - `/finanzas-personales`
-   - `/soluciones-financieras`
+   - `/personal-finance`
+   - `/financial-solutions`
    - `/credit-cards`
 
 2. **Article Pages** (should have no overlay, but ads should load):

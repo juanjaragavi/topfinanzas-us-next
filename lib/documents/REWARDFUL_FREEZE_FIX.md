@@ -4,7 +4,7 @@
 
 **Problem:** After the "Rewardful não ficou pronto no tempo limite" warning appears, navigation completely freezes. A transparent overlay remains on the page, blocking all scrolling and clicking.
 
-**URL Affected:** `/soluciones-financieras/starling-bank-credit-card` (and other article pages)
+**URL Affected:** `/financial-solutions/starling-bank-credit-card` (and other article pages)
 
 ## Root Cause Analysis
 

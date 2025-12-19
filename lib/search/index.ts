@@ -12,47 +12,47 @@ const SEARCH_INDEX: SearchResult[] = [
     title: "Tarjeta de Crédito Premium: Recompensas de Viaje Exclusivas",
     description:
       "La tarjeta ideal para viajeros frecuentes con beneficios premium...",
-    url: "/soluciones-financieras/barclaycard-avios-plus",
+    url: "/financial-solutions/barclaycard-avios-plus",
     category: "Soluciones Financieras",
   },
   {
     title: "Préstamo Personal HSBC: Financiamiento Flexible (MX)",
     description:
       "Descubre los préstamos personales de HSBC con tasas competitivas...",
-    url: "/soluciones-financieras/hsbc-personal-loan",
+    url: "/financial-solutions/hsbc-personal-loan",
     category: "Soluciones Financieras",
   },
   {
     title: "Préstamo para Negocios Funding Circle",
     description: "Explora los préstamos para negocios de Funding Circle...",
-    url: "/soluciones-financieras/funding-circle-personal-loan",
+    url: "/financial-solutions/funding-circle-personal-loan",
     category: "Soluciones Financieras",
   },
   {
     title: "Las Mejores Tarjetas de Crédito con Recompensas",
     description: "Descubre las mejores tarjetas de crédito con recompensas...",
-    url: "/finanzas-personales/best-rewards-credit-cards",
+    url: "/personal-finance/best-rewards-credit-cards",
     category: "Finanzas Personales",
   },
   {
     title: "Guía Práctica para Salir de Deudas",
     description:
       "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
-    url: "/finanzas-personales/getting-out-of-debt",
+    url: "/personal-finance/getting-out-of-debt",
     category: "Finanzas Personales",
   },
   {
     title: "Mejores Tarjetas de Crédito con Meses Sin Intereses",
     description:
       "Compara las mejores tarjetas de crédito que ofrecen meses sin intereses...",
-    url: "/finanzas-personales/top-credit-cards-0-intro-apr",
+    url: "/personal-finance/top-credit-cards-0-intro-apr",
     category: "Finanzas Personales",
   },
   {
     title: "Mejores Préstamos Personales en México",
     description:
       "Guía completa de los mejores préstamos personales en México...",
-    url: "/finanzas-personales/best-personal-loans",
+    url: "/personal-finance/best-personal-loans",
     category: "Finanzas Personales",
   },
 ];

@@ -10,23 +10,23 @@ export interface SearchItem {
 // In a real application, this might be generated at build time
 export const searchIndex: SearchItem[] = [
   {
-    id: "/finanzas-personales/best-personal-loans",
-    href: "/finanzas-personales/best-personal-loans",
+    id: "/personal-finance/best-personal-loans",
+    href: "/personal-finance/best-personal-loans",
     title: "Best Personal Loans in the UK: Your Complete Guide",
     description:
       "Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders.",
     // image: "/path/to/image.jpg", // Add image later if available
   },
   {
-    id: "/finanzas-personales/best-rewards-credit-cards",
-    href: "/finanzas-personales/best-rewards-credit-cards",
+    id: "/personal-finance/best-rewards-credit-cards",
+    href: "/personal-finance/best-rewards-credit-cards",
     title: "Best Rewards Credit Cards in the UK (Updated)",
     description:
       "Discover the top rewards credit cards in the UK offering points, miles, and cashback for your spending habits.",
   },
   {
-    id: "/finanzas-personales/cashback-credit-cards",
-    href: "/finanzas-personales/cashback-credit-cards",
+    id: "/personal-finance/cashback-credit-cards",
+    href: "/personal-finance/cashback-credit-cards",
     title: "Top Cashback Credit Cards UK",
     description:
       "Find the best cashback credit cards in the UK. Compare offers and earn money back on your everyday purchases.",

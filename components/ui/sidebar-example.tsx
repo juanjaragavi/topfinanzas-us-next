@@ -104,7 +104,7 @@ export default function SidebarExample() {
             <SidebarCategories>
               <div className="flex items-center justify-between">
                 <Link
-                  href="/finanzas-personales"
+                  href="/personal-finance"
                   className="text-sm hover:underline"
                 >
                   Finanzas Personales

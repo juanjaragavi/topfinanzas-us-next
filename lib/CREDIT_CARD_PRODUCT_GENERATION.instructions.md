@@ -23,7 +23,7 @@ Each page must be:
 
 ### Mandatory Listing Synchronization
 
-Any time you create, update, or delete blog content or listing entries for the **Financial Solutions** or **Personal Finance** categories, you must immediately replicate that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/finanzas-personales/page.tsx`, `app/soluciones-financieras/page.tsx`, and any other listing pages). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so these arrays always match the published content.
+Any time you create, update, or delete blog content or listing entries for the **Financial Solutions** or **Personal Finance** categories, you must immediately replicate that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing pages). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so these arrays always match the published content.
 
 ## Quick Reference
 
@@ -41,15 +41,15 @@ Any time you create, update, or delete blog content or listing entries for the *
 
 **Output Deliverables**:
 
-1. `/app/soluciones-financieras/{productSlug}/page.tsx` (benefits page)
-2. `/app/soluciones-financieras/{productSlug}-requirements/page.tsx` (requirements page)
+1. `/app/financial-solutions/{productSlug}/page.tsx` (benefits page)
+2. `/app/financial-solutions/{productSlug}-requirements/page.tsx` (requirements page)
 3. **Automatic Post-Publication Integration** (REQUIRED):
    - Add the product to `/app/blog/page.tsx` in the `allPosts` array under "Financial Solutions" category
-   - Add the product to `/app/soluciones-financieras/page.tsx` in the appropriate content array:
+   - Add the product to `/app/financial-solutions/page.tsx` in the appropriate content array:
      - For credit cards: add to `creditCardsContent` array with appropriate `type` ("traditional", "neobank", or "fintech")
      - For personal loans: add to `allLoansContent` array with appropriate `type` ("personal", "sme_fintech", "neobank", "marketplace", or "guide")
    - **For credit cards ONLY**: Also add to `/app/credit-cards/page.tsx` in the `creditCardsContent` array
-   - **DO NOT** add products to `/app/finanzas-personales/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
+   - **DO NOT** add products to `/app/personal-finance/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
 
 - Update all required arrays immediately after generating the page components and keep them synchronized whenever edits or deletions occur
 
@@ -68,9 +68,9 @@ Any time you create, update, or delete blog content or listing entries for the *
 
 Financial product pages in this Next.js project consist of **TWO separate page components**:
 
-#### Page 1: Main Product Benefits Page (`/soluciones-financieras/{product-slug}/page.tsx`)
+#### Page 1: Main Product Benefits Page (`/financial-solutions/{product-slug}/page.tsx`)
 
-#### Page 2: Requirements Page (`/soluciones-financieras/{product-slug}-requirements/page.tsx`)
+#### Page 2: Requirements Page (`/financial-solutions/{product-slug}-requirements/page.tsx`)
 
 **CRITICAL**: All Financial Solutions pages MUST follow the exact standardized layout documented in:
 
@@ -273,15 +273,15 @@ of features, requirements, and terms without excessive verbosity.
 Examine these existing pages to understand exact structure, component usage, and styling:
 
 1. **Credit Card Benefits Page**
-   - Path: `/app/soluciones-financieras/barclaycard-avios-plus/page.tsx`
+   - Path: `/app/financial-solutions/barclaycard-avios-plus/page.tsx`
    - Use for: Credit card benefits page structure
 
 2. **Credit Card Requirements Page**
-   - Path: `/app/soluciones-financieras/barclaycard-avios-plus-requirements/page.tsx`
+   - Path: `/app/financial-solutions/barclaycard-avios-plus-requirements/page.tsx`
    - Use for: Credit card requirements page structure
 
 3. **Personal Loan Page**
-   - Path: `/app/soluciones-financieras/hsbc-personal-loan/page.tsx`
+   - Path: `/app/financial-solutions/hsbc-personal-loan/page.tsx`
    - Use for: Loan product structure and variations
 
 **Access method**: Use workspace file system tools to read these template files
@@ -305,7 +305,7 @@ Examine these existing pages to understand exact structure, component usage, and
 - **TypeScript proficiency**: Generate complete Next.js/TypeScript page components (.tsx files)
 - **Next.js 14+ expertise**: Follow App Router conventions, file-based routing, and modern React patterns
 - **Component composition**: Implement proper component structure with imports, metadata, and exports
-- **Template adherence**: Replicate exact structure and patterns from existing soluciones-financieras pages
+- **Template adherence**: Replicate exact structure and patterns from existing financial-solutions pages
 - **Styling consistency**: Apply Tailwind CSS classes matching project design system
 
 ### Content Creation
@@ -440,10 +440,10 @@ When you receive a user request with product details including the **Official Pr
 
 **Examine Existing Patterns**
 
-- Read template pages in `/app/soluciones-financieras/` directory:
-  - `/app/soluciones-financieras/barclaycard-avios-plus/page.tsx` (benefits example)
-  - `/app/soluciones-financieras/barclaycard-avios-plus-requirements/page.tsx` (requirements example)
-  - `/app/soluciones-financieras/hsbc-personal-loan/page.tsx` (loan example)
+- Read template pages in `/app/financial-solutions/` directory:
+  - `/app/financial-solutions/barclaycard-avios-plus/page.tsx` (benefits example)
+  - `/app/financial-solutions/barclaycard-avios-plus-requirements/page.tsx` (requirements example)
+  - `/app/financial-solutions/hsbc-personal-loan/page.tsx` (loan example)
 - Understand component structure, styling patterns, and TypeScript conventions
 - Identify correct import paths and component usage
 
@@ -472,11 +472,11 @@ When you receive a user request with product details including the **Official Pr
 
 **Generate TWO Complete Page Components**
 
-- **File 1**: Benefits page (`/app/soluciones-financieras/{productSlug}/page.tsx`)
+- **File 1**: Benefits page (`/app/financial-solutions/{productSlug}/page.tsx`)
   - Complete imports, generateMetadata(), default export function
   - Full JSX structure with all sections and components
   - Brand-colored CTAs and proper ad container placements
-- **File 2**: Requirements page (`/app/soluciones-financieras/{productSlug}-requirements/page.tsx`)
+- **File 2**: Requirements page (`/app/financial-solutions/{productSlug}-requirements/page.tsx`)
   - Complete imports, generateMetadata(), default export function
   - Full JSX structure with eligibility, documentation, costs, FAQ
   - Clear disclosures (APR, fees, eligibility), a "not financial advice" disclaimer, and cross-links to benefits page
@@ -502,11 +502,11 @@ After generating both page components, you MUST immediately update the following
 
 1. **Blog Main Page** (`/app/blog/page.tsx`):
    - Add new entry to the `allPosts` array under the "Financial Solutions" category section
-   - Include: title, slug, description, image, category ("Financial Solutions"), categoryPath ("/soluciones-financieras"), date
+   - Include: title, slug, description, image, category ("Financial Solutions"), categoryPath ("/financial-solutions"), date
    - Place at the top of the "Financial Solutions" section (most recent first)
    - Use `replace_string_in_file` tool to update
 
-2. **Financial Solutions Category Page** (`/app/soluciones-financieras/page.tsx`):
+2. **Financial Solutions Category Page** (`/app/financial-solutions/page.tsx`):
    - **For Credit Cards**: Add new entry to the `creditCardsContent` array
      - Include: title, slug, description, image, date, type
      - `type` must be one of: "traditional" (major banks), "neobank" (Monzo, Starling, etc.), or "fintech" (Curve, Bip, etc.)
@@ -527,7 +527,7 @@ After generating both page components, you MUST immediately update the following
 
 **IMPORTANT**:
 
-- **DO NOT** add product pages to `/app/finanzas-personales/page.tsx`
+- **DO NOT** add product pages to `/app/personal-finance/page.tsx`
 - The Personal Finance page is ONLY for educational guides and comparison articles, NOT individual product pages
 - **Credit card products** must be added to THREE pages: Blog page, Financial Solutions page, AND Credit Cards page
 - **Loan products** must be added to TWO pages: Blog page AND Financial Solutions page (NOT Credit Cards page)
@@ -542,7 +542,7 @@ After generating both page components, you MUST immediately update the following
   description: "Brief product description focusing on key benefits",
   image: "https://media.topfinanzas.com/images/uk/product-image.webp",
   category: "Financial Solutions",
-  categoryPath: "/soluciones-financieras",
+  categoryPath: "/financial-solutions",
   date: "DD Month YYYY", // Current date in UK format
 }
 ```
@@ -588,7 +588,7 @@ After generating both page components, you MUST immediately update the following
 - **Missing critical info** (APR, fees, brand color, image URLs): Request information before proceeding
 - **Ambiguous/contradictory data**: Inform user of discrepancy and request clarification
 
-**CRITICAL OUTPUT REQUIREMENT**: Both files must be production-ready TypeScript code that can be placed directly in `/app/soluciones-financieras/` directory structure without modification.
+**CRITICAL OUTPUT REQUIREMENT**: Both files must be production-ready TypeScript code that can be placed directly in `/app/financial-solutions/` directory structure without modification.
 
 </ExpectedBehaviorAndInteraction>
 
@@ -596,7 +596,7 @@ After generating both page components, you MUST immediately update the following
 
 The final output must consist of **TWO complete Next.js/TypeScript page component files** (.tsx):
 
-## File 1: Benefits Page (`/app/soluciones-financieras/{product-slug}/page.tsx`)
+## File 1: Benefits Page (`/app/financial-solutions/{product-slug}/page.tsx`)
 
 ```typescript
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -627,7 +627,7 @@ export default function ProductNamePage() {
 }
 ```
 
-## File 2: Requirements Page (`/app/soluciones-financieras/{product-slug}-requirements/page.tsx`)
+## File 2: Requirements Page (`/app/financial-solutions/{product-slug}-requirements/page.tsx`)
 
 ```typescript
 import Image from "next/image";
@@ -696,7 +696,7 @@ Incorrect Implementation (Do Not Use):
 
 ```typescript
 <div className="text-left my-8">
-  <Link href="/soluciones-financieras/product-name">
+  <Link href="/financial-solutions/product-name">
   <Button className="bg-brandColor hover:bg-brandColorHover text-white font-medium text-md py-2 px-8 rounded-full w-full">
       View Card Benefits
     </Button>
@@ -727,7 +727,7 @@ If critical product information (APR, fees, eligibility, brand color, image URLs
 - Proper styling requires the brand color hex code
 - Complete pages require hero image URLs
 
-**Template Adherence**: Always examine existing template pages in `/app/soluciones-financieras/` to ensure your output matches the established patterns. If you're unsure about a specific implementation detail, refer to the existing codebase rather than inventing new patterns.
+**Template Adherence**: Always examine existing template pages in `/app/financial-solutions/` to ensure your output matches the established patterns. If you're unsure about a specific implementation detail, refer to the existing codebase rather than inventing new patterns.
 
 **Component Structure**: If a component name or import path seems unclear, check existing pages for the correct syntax. Common components include:
 

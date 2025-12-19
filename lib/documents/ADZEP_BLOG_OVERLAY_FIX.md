@@ -2,7 +2,7 @@
 
 ## Issue Description
 
-**Problem**: Empty overlays were appearing on blog listing/archive pages (like `/blog`, `/finanzas-personales`, `/soluciones-financieras`) shortly after page load. These overlays would persist for up to 3 seconds before disappearing, creating a poor user experience.
+**Problem**: Empty overlays were appearing on blog listing/archive pages (like `/blog`, `/personal-finance`, `/financial-solutions`) shortly after page load. These overlays would persist for up to 3 seconds before disappearing, creating a poor user experience.
 
 **User Impact**:
 
@@ -32,8 +32,8 @@ export function isArticlePath(pathname: string | null | undefined): boolean {
 **Article Path Prefixes**:
 
 - `/blog`
-- `/soluciones-financieras`
-- `/finanzas-personales`
+- `/financial-solutions`
+- `/personal-finance`
 - `/credit-cards`
 
 ### The Problem
@@ -42,8 +42,8 @@ The original logic treated both listing pages and article pages the same:
 
 - ✅ `/blog` → detected as article path (incorrect - no ads here)
 - ✅ `/blog/best-personal-loans` → detected as article path (correct - has ads)
-- ✅ `/finanzas-personales` → detected as article path (incorrect - no ads here)
-- ✅ `/finanzas-personales/cashback-credit-cards` → detected as article path (correct - has ads)
+- ✅ `/personal-finance` → detected as article path (incorrect - no ads here)
+- ✅ `/personal-finance/cashback-credit-cards` → detected as article path (correct - has ads)
 
 **Why This Was Wrong**:
 
@@ -90,7 +90,7 @@ export function isArticlePath(pathname: string | null | undefined): boolean {
   );
 
   // Only consider it an article path if it's NOT a listing page
-  // i.e., it's a sub-path like /blog/article-slug or /finanzas-personales/article-slug
+  // i.e., it's a sub-path like /blog/article-slug or /personal-finance/article-slug
   return !isListingPage;
 }
 ```
@@ -106,8 +106,8 @@ export function isArticlePath(pathname: string | null | undefined): boolean {
 
 - ❌ `/blog` → matches prefix BUT is listing page → returns `false`
 - ✅ `/blog/best-personal-loans` → matches prefix AND NOT listing → returns `true`
-- ❌ `/finanzas-personales` → matches prefix BUT is listing page → returns `false`
-- ✅ `/finanzas-personales/cashback-credit-cards` → matches prefix AND NOT listing → returns `true`
+- ❌ `/personal-finance` → matches prefix BUT is listing page → returns `false`
+- ✅ `/personal-finance/cashback-credit-cards` → matches prefix AND NOT listing → returns `true`
 
 ### The Flow (After Fix)
 
@@ -137,8 +137,8 @@ Result: Brief, purposeful overlay during ad initialization
 **Listing/Archive Pages**:
 
 - `/blog` - Main blog archive
-- `/finanzas-personales` - Personal finance category
-- `/soluciones-financieras` - Financial solutions category
+- `/personal-finance` - Personal finance category
+- `/financial-solutions` - Financial solutions category
 - `/credit-cards` - Credit cards category
 
 ### Pages Unaffected (Still Show Overlay)
@@ -147,9 +147,9 @@ Result: Brief, purposeful overlay during ad initialization
 
 - `/blog/best-personal-loans`
 - `/blog/cashback-credit-cards`
-- `/finanzas-personales/travel-credit-cards`
-- `/finanzas-personales/no-annual-fee-credit-cards`
-- `/soluciones-financieras/santander-uk-credit-card`
+- `/personal-finance/travel-credit-cards`
+- `/personal-finance/no-annual-fee-credit-cards`
+- `/financial-solutions/santander-uk-credit-card`
 - All other individual article pages
 
 ### Ad Container Detection
@@ -192,16 +192,16 @@ Result: Brief, purposeful overlay during ad initialization
 ### Listing Pages (Should NOT Show Overlay)
 
 - [ ] Navigate to `/blog` → No overlay appears
-- [ ] Navigate to `/finanzas-personales` → No overlay appears
-- [ ] Navigate to `/soluciones-financieras` → No overlay appears
+- [ ] Navigate to `/personal-finance` → No overlay appears
+- [ ] Navigate to `/financial-solutions` → No overlay appears
 - [ ] Navigate to `/credit-cards` → No overlay appears
 - [ ] All listing pages load instantly without overlay
 
 ### Individual Articles (Should Show Overlay Briefly)
 
 - [ ] Navigate to `/blog/best-personal-loans` → Overlay appears < 1 second
-- [ ] Navigate to `/finanzas-personales/cashback-credit-cards` → Overlay appears then hides when ads load
-- [ ] Navigate to `/soluciones-financieras/santander-uk-credit-card` → Brief overlay during ad init
+- [ ] Navigate to `/personal-finance/cashback-credit-cards` → Overlay appears then hides when ads load
+- [ ] Navigate to `/financial-solutions/santander-uk-credit-card` → Brief overlay during ad init
 - [ ] Verify ads actually render on article pages
 
 ### Navigation Between Pages
@@ -316,7 +316,7 @@ Good UX (unchanged)
 
 ## Expected Behavior
 
-### On Listing Pages (`/blog`, `/finanzas-personales`, etc.)
+### On Listing Pages (`/blog`, `/personal-finance`, etc.)
 
 1. **Page loads** instantly
 2. **No overlay** appears

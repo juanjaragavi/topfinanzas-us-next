@@ -220,7 +220,7 @@ export default function PrestamosArchivePage() {
               image={post.image}
               slug={post.slug}
               category="Préstamos Personales"
-              categorySlug="/soluciones-financieras"
+              categorySlug="/financial-solutions"
               date={post.date}
               type={post.type}
               showBadge={true}

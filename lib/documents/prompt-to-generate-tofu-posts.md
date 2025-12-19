@@ -85,12 +85,12 @@ Generate a blog article following these rules:
    - `AIContentDisclaimer` component at the end
 
 6. **Directory Placement**: Since Funnel Stage is TOFU, create the file at:
-   - `/app/finanzas-personales/{slug}/page.tsx`
+   - `/app/personal-finance/{slug}/page.tsx`
    - Derive slug from Tentative Title (lowercase, kebab-case)
 
 7. **Integration Notes**: After generating the component, provide a brief checklist of required follow-up updates:
    - `app/blog/page.tsx` - add to allPosts array
-   - `app/finanzas-personales/page.tsx` - add to category archive
+   - `app/personal-finance/page.tsx` - add to category archive
    - `components/mdx/blog-layout.tsx` - update sidebar recent articles
    - Optional: Homepage feature or header navigation if flagship content
 
@@ -100,7 +100,7 @@ Generate a blog article following these rules:
 
 ONE complete Next.js page component:
 
-- **File**: `/app/finanzas-personales/{slug}/page.tsx`
+- **File**: `/app/personal-finance/{slug}/page.tsx`
 - **Format**: Production-ready TypeScript (.tsx)
 - **Structure**: Matching existing Personal Finance articles
 - **Content**: 800-1,000 words, entirely new and original
@@ -115,8 +115,8 @@ ONE complete Next.js page component:
 
 Review these existing articles for structure and styling patterns:
 
-- `/app/finanzas-personales/money-management-for-beginners/page.tsx`
-- `/app/finanzas-personales/travel-credit-cards/page.tsx`
-- `/app/finanzas-personales/side-hustle-or-second-job/page.tsx`
+- `/app/personal-finance/money-management-for-beginners/page.tsx`
+- `/app/personal-finance/travel-credit-cards/page.tsx`
+- `/app/personal-finance/side-hustle-or-second-job/page.tsx`
 
 </TemplateReferences>

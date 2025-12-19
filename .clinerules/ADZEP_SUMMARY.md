@@ -52,7 +52,7 @@ The AdZep tag has been successfully implemented in your Next.js project with the
 ### Files Modified
 
 - `/app/layout.tsx` - Added AdZep integration
-- `/app/soluciones-financieras/*\/page.tsx` - Ad unit placement refactor
+- `/app/financial-solutions/*\/page.tsx` - Ad unit placement refactor
 
 ## 🎮 How It Works
 

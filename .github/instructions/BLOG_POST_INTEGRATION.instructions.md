@@ -6,7 +6,7 @@ When creating new blog articles, they must be added to multiple locations across
 
 ## Mandatory Listing Synchronization
 
-Any time you create, update, or delete a blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/finanzas-personales/page.tsx`, `app/soluciones-financieras/page.tsx`, and any other listing views). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so the rendered listings always align with the current content set.
+Any time you create, update, or delete a blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so the rendered listings always align with the current content set.
 
 ## Financial Solutions Layout Standard
 
@@ -51,7 +51,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
   description: "Article description/excerpt",
   image: "https://media.topfinanzas.com/images/article-image.webp",
   category: "Personal Finance" | "Financial Solutions",
-  categoryPath: "/finanzas-personales" | "/soluciones-financieras",
+  categoryPath: "/personal-finance" | "/financial-solutions",
   date: "Month DD, YYYY", // e.g., "August 27, 2025"
 }
 ```
@@ -64,7 +64,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 ### 2. Category Archive Pages
 
-#### Personal Finance Category (`app/finanzas-personales/page.tsx`)
+#### Personal Finance Category (`app/personal-finance/page.tsx`)
 
 **Location**: `allPosts` array (around line 32)
 
@@ -88,7 +88,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - Choose appropriate category filter: "guide", "creditCards", "loans", "debt"
 - Must be added here for articles to appear in Personal Finance section
 
-#### Financial Solutions Category (`app/soluciones-financieras/page.tsx`)
+#### Financial Solutions Category (`app/financial-solutions/page.tsx`)
 
 **Location**: If this page exists, follow similar pattern for Financial Solutions articles
 
@@ -107,7 +107,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
   image="https://media.topfinanzas.com/images/article-image.webp"
   slug="article-slug"
   category="Personal Finance"
-  categorySlug="/finanzas-personales"
+  categorySlug="/personal-finance"
   date="Month DD, YYYY"
   orientation="horizontal"
   priority={false}
@@ -142,7 +142,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
   />
   <div>
     <Link
-      href="/finanzas-personales/article-slug"
+      href="/personal-finance/article-slug"
       className="text-sm font-medium hover:underline line-clamp-2"
     >
       Article Title
@@ -168,10 +168,10 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 ```typescript
 {
   title: cleanTitle("Article Title"),
-  href: "/finanzas-personales/article-slug",
+  href: "/personal-finance/article-slug",
   image: "https://media.topfinanzas.com/images/article-image.webp",
   category: "Personal Finance",
-  categoryHref: "/finanzas-personales",
+  categoryHref: "/personal-finance",
 }
 ```
 
@@ -192,7 +192,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 ```typescript
 {
   text: cleanTitle("Article Title"),
-  href: "/finanzas-personales/article-slug",
+  href: "/personal-finance/article-slug",
 }
 ```
 
@@ -206,7 +206,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 ### When Creating a New Blog Post (and Maintaining Existing Posts):
 
-1. **Create the article file**: `/app/finanzas-personales/[slug]/page.tsx` or `/app/soluciones-financieras/[slug]/page.tsx`
+1. **Create the article file**: `/app/personal-finance/[slug]/page.tsx` or `/app/financial-solutions/[slug]/page.tsx`
 
 2. **Update Blog Listing** (`app/blog/page.tsx`):
    - Add entry to `allPosts` array
@@ -215,8 +215,8 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - Ensure slug matches directory name exactly; for edits, update the existing entry; for deletions, remove the entry entirely
 
 3. **Update Category Archive** (Required for proper categorization):
-   - **Personal Finance**: Add to `app/finanzas-personales/page.tsx` `allPosts` array
-   - **Financial Solutions**: Add to `app/soluciones-financieras/page.tsx` if exists
+   - **Personal Finance**: Add to `app/personal-finance/page.tsx` `allPosts` array
+   - **Financial Solutions**: Add to `app/financial-solutions/page.tsx` if exists
 
 - Choose appropriate category filter for filtering functionality; for edits, update the existing entry; for deletions, remove the entry entirely
 
@@ -242,8 +242,8 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 
 ### URL Structure Requirements
 
-- **Personal Finance**: `/finanzas-personales/[slug]`
-- **Financial Solutions**: `/soluciones-financieras/[slug]`
+- **Personal Finance**: `/personal-finance/[slug]`
+- **Financial Solutions**: `/financial-solutions/[slug]`
 - **Slug Format**: lowercase, hyphen-separated, no special characters
 - **Consistency**: Slug must match directory name exactly
 
@@ -286,7 +286,7 @@ Before publishing, verify:
 **Locations Updated**:
 
 1. ✅ `app/blog/page.tsx` - Added to allPosts array
-2. ✅ `app/finanzas-personales/page.tsx` - Added to Personal Finance category
+2. ✅ `app/personal-finance/page.tsx` - Added to Personal Finance category
 3. 🔄 Consider for homepage feature
 4. 🔄 Add to sidebar recent articles
 5. 🔄 Consider for header featured posts

@@ -29,8 +29,8 @@
 
 - Only activates on article pages:
   - `/blog/*`
-  - `/finanzas-personales/*`
-  - `/soluciones-financieras/*`
+  - `/personal-finance/*`
+  - `/financial-solutions/*`
 - Preserves interstitials on other pages (homepage, quiz, etc.)
 - **Logic:** Built into the blocker component
 
@@ -149,8 +149,8 @@ const interval = setInterval(removeInterstitials, 1000);
 ```typescript
 const isArticlePage =
   pathname?.startsWith("/blog/") ||
-  pathname?.startsWith("/finanzas-personales/") ||
-  pathname?.startsWith("/soluciones-financieras/");
+  pathname?.startsWith("/personal-finance/") ||
+  pathname?.startsWith("/financial-solutions/");
 ```
 
 ## 🎯 Success Criteria

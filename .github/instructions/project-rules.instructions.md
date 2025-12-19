@@ -267,7 +267,7 @@ When creating new blog articles, they must be integrated across multiple locatio
 
 ### 3. Financial Solutions Layout Standard
 
-**CRITICAL**: All Credit Card and Personal Loan product pages in `/app/soluciones-financieras/` MUST follow the exact standardized layout documented in:
+**CRITICAL**: All Credit Card and Personal Loan product pages in `/app/financial-solutions/` MUST follow the exact standardized layout documented in:
 
 **`.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`**
 
@@ -290,7 +290,7 @@ This layout standard is **mandatory and non-negotiable**. It has been validated 
 - Include both ad units: `uk_topfinanzas_3` and `uk_topfinanzas_4`
 - AI Content Disclaimer must appear before footer
 
-**Template Reference**: `/app/soluciones-financieras/barclaycard-avios-plus/` (both Benefits and Requirements pages)
+**Template Reference**: `/app/financial-solutions/barclaycard-avios-plus/` (both Benefits and Requirements pages)
 
 **Before creating or modifying any Financial Solutions page**:
 

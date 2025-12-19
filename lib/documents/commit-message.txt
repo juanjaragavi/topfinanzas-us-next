@@ -1,6 +1,8 @@
-feat: localize about us page for US market
+refactor: localize URL paths for US market
 
-- Updated content to English (US)
-- Added missing sections (Goal, Commitment, Empowering)
-- Updated FAQs to English
-- Aligned visual layout with US requirements
+- Rename `app/finanzas-personales` to `app/personal-finance`
+- Rename `app/soluciones-financieras` to `app/financial-solutions`
+- Update all internal links, imports, and redirects to use English paths
+- Update `headerNavigation.ts` with new category URLs
+- Update `sitemap.xml` files (public and app)
+- Update project documentation and instruction files to reflect new structure

@@ -49,7 +49,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "2 December 2025",
     },
     {
@@ -61,7 +61,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "25 November 2025",
     },
     {
@@ -73,7 +73,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "19 November 2025",
     },
     {
@@ -85,7 +85,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "13 November 2025",
     },
     {
@@ -97,7 +97,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "5 November 2025",
     },
     {
@@ -109,7 +109,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "28 October 2025",
     },
     // Financial Solutions - Credit Cards
@@ -122,7 +122,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -134,7 +134,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -146,7 +146,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -158,7 +158,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -170,7 +170,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -182,7 +182,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -194,7 +194,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -206,7 +206,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -218,7 +218,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
@@ -229,7 +229,7 @@ export default function BlogArchivePage() {
         "La tarjeta Ocean ofrece límites de crédito desde £200 hasta £8,000 sin anualidad. Verifica tu elegibilidad con QuickCheck sin afectar tu historial.",
       image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -240,7 +240,7 @@ export default function BlogArchivePage() {
         "La tarjeta Fluid ofrece 0% de interés en transferencias de saldo por 9 meses, ayudándote a ahorrar y liquidar tus deudas más rápido.",
       image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -252,7 +252,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -264,7 +264,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -275,7 +275,7 @@ export default function BlogArchivePage() {
         "Descubre las tarjetas Vanquis con límites personalizados y funciones galardonadas para construir crédito, además de transferencias de saldo al 0%.",
       image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -287,7 +287,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -298,7 +298,7 @@ export default function BlogArchivePage() {
         "La tarjeta Aqua ofrece límites personalizados, herramientas de apoyo experto y protección contra fraude 24/7 para construir crédito con seguridad.",
       image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -309,7 +309,7 @@ export default function BlogArchivePage() {
         "Descubre Bip: una solución de crédito sin tarjeta física, sin comisiones ocultas y con actualizaciones de saldo al instante.",
       image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -321,7 +321,7 @@ export default function BlogArchivePage() {
       image:
         "https://cdn.prod.website-files.com/6209512878b45f39119ebfb5/6839943447d06a3292522ecd_head-p-800.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -332,7 +332,7 @@ export default function BlogArchivePage() {
         "Descubre la tarjeta Zopa con gestión sencilla desde la app, función Credit Cushion, sin comisiones en el extranjero y servicio galardonado.",
       image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
@@ -343,7 +343,7 @@ export default function BlogArchivePage() {
         "La tarjeta Marbles te ayuda a gestionar tus finanzas con un límite manejable, verificador de elegibilidad rápido y sin anualidad.",
       image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     // Personal Finance Posts
@@ -356,7 +356,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "15 October 2025",
     },
     {
@@ -366,7 +366,7 @@ export default function BlogArchivePage() {
       description: "Guía completa sobre los mejores préstamos personales...",
       image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "30 March 2025",
     },
     {
@@ -378,7 +378,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -388,7 +388,7 @@ export default function BlogArchivePage() {
       description: "¡Descubra las mejores tarjetas de crédito con cashback!...",
       image: "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -400,7 +400,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -411,7 +411,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -421,7 +421,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -433,7 +433,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -445,7 +445,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "30 March 2025",
     },
     {
@@ -456,7 +456,7 @@ export default function BlogArchivePage() {
         "Compara las mejores tarjetas de crédito que ofrecen tasas del 0%...",
       image: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -467,7 +467,7 @@ export default function BlogArchivePage() {
         "Aprenda cómo funcionan las tasas de interés de las tarjetas...",
       image: "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
@@ -478,7 +478,7 @@ export default function BlogArchivePage() {
         "Con el aumento del costo de vida, muchos buscan formas de aumentar sus ingresos. Ya sea un segundo trabajo tradicional o un emprendimiento paralelo, elegir correctamente es clave.",
       image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "27 August 2025",
     },
     {
@@ -489,7 +489,7 @@ export default function BlogArchivePage() {
         "Una guía de presupuesto moderna que cubre la regla 50/30/20, presupuesto base cero y herramientas digitales.",
       image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "4 September 2025",
     },
     {
@@ -501,7 +501,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/how-to-ask-for-a-raise.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "3 October 2025",
     },
     {
@@ -511,9 +511,9 @@ export default function BlogArchivePage() {
       description:
         "Descubra cómo el aumento gradual de sus gastos al ganar más dinero puede sabotear sus metas financieras y aprenda estrategias para evitarlo.",
       image:
-        "https://media.topfinanzas.com/images/lifestyle-creep-finanzas-personales.webp",
+        "https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "9 October 2025",
     },
     {
@@ -525,7 +525,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
       category: "Finanzas Personales",
-      categoryPath: "/finanzas-personales",
+      categoryPath: "/personal-finance",
       date: "23 October 2025",
     },
     // Financial Solutions Posts (Add relevant ones)
@@ -537,7 +537,7 @@ export default function BlogArchivePage() {
         "La tarjeta Barclaycard Avios Plus ofrece beneficios de viaje premium...",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "4 April 2025", // Example date
     },
     {
@@ -549,7 +549,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "4 April 2025",
     },
     {
@@ -560,7 +560,7 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "2 April 2025",
     },
     {
@@ -571,10 +571,10 @@ export default function BlogArchivePage() {
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       category: "Soluciones Financieras",
-      categoryPath: "/soluciones-financieras",
+      categoryPath: "/financial-solutions",
       date: "4 April 2025",
     },
-    // ... Add more posts from soluciones-financieras as needed
+    // ... Add more posts from financial-solutions as needed
   ];
 
   // Sort posts by date (newest first). Supports ISO strings and "DD Month YYYY".
@@ -679,7 +679,7 @@ export default function BlogArchivePage() {
       {/* Category Highlights */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <Link
-          href="/finanzas-personales"
+          href="/personal-finance"
           className="block p-6 bg-blue-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-blue-800 mb-2">
@@ -691,7 +691,7 @@ export default function BlogArchivePage() {
           </p>
         </Link>
         <Link
-          href="/soluciones-financieras"
+          href="/financial-solutions"
           className="block p-6 bg-green-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-green-800 mb-2">

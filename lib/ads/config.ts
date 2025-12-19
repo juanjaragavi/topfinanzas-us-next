@@ -41,8 +41,8 @@ export const adZepConfig: AdZepConfig = {
   ],
   articlePathPrefixes: [
     "/blog",
-    "/soluciones-financieras",
-    "/finanzas-personales",
+    "/financial-solutions",
+    "/personal-finance",
     "/tarjetas",
   ],
   // Pages where ads should NEVER be activated
@@ -75,7 +75,7 @@ export function isArticlePath(pathname: string | null | undefined): boolean {
   );
 
   // Only consider it an article path if it's NOT a listing page
-  // i.e., it's a sub-path like /blog/article-slug or /finanzas-personales/article-slug
+  // i.e., it's a sub-path like /blog/article-slug or /personal-finance/article-slug
   return !isListingPage;
 }
 

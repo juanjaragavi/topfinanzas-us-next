@@ -70,9 +70,9 @@ export async function GET() {
     );
 
     // Run checks but don't collect posts for now
-    await checkMetadataExistence("app/finanzas-personales", "Personal Finance");
+    await checkMetadataExistence("app/personal-finance", "Personal Finance");
     await checkMetadataExistence(
-      "app/soluciones-financieras",
+      "app/financial-solutions",
       "Financial Solutions",
     );
 

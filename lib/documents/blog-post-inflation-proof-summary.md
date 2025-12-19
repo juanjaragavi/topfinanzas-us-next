@@ -47,27 +47,27 @@ Engaging opening that acknowledges UK households feeling the squeeze from rising
 
 ## Internal Links Included
 
-1. `/finanzas-personales/creating-a-budget-youll-actually-stick-to` - Budget creation guide
-2. `/finanzas-personales/money-management-for-beginners` - Foundational money management
-3. `/finanzas-personales/ditching-impulse-buys-mindful-spending` - Mindful spending strategies
-4. `/finanzas-personales/how-to-ask-for-a-raise` - Salary negotiation guide
-5. `/finanzas-personales/side-hustle-or-second-job` - Income boosting strategies
-6. `/finanzas-personales/top-credit-cards-0-intro-apr` - 0% APR cards (mentioned twice)
-7. `/finanzas-personales/best-personal-loans` - Personal loan comparison (mentioned twice)
-8. `/finanzas-personales/getting-out-of-debt` - Comprehensive debt guide
-9. `/finanzas-personales/setting-financial-goals` - Goal setting during uncertainty
-10. `/finanzas-personales` - Personal Finance category page
+1. `/personal-finance/creating-a-budget-youll-actually-stick-to` - Budget creation guide
+2. `/personal-finance/money-management-for-beginners` - Foundational money management
+3. `/personal-finance/ditching-impulse-buys-mindful-spending` - Mindful spending strategies
+4. `/personal-finance/how-to-ask-for-a-raise` - Salary negotiation guide
+5. `/personal-finance/side-hustle-or-second-job` - Income boosting strategies
+6. `/personal-finance/top-credit-cards-0-intro-apr` - 0% APR cards (mentioned twice)
+7. `/personal-finance/best-personal-loans` - Personal loan comparison (mentioned twice)
+8. `/personal-finance/getting-out-of-debt` - Comprehensive debt guide
+9. `/personal-finance/setting-financial-goals` - Goal setting during uncertainty
+10. `/personal-finance` - Personal Finance category page
 
 ## Technical Implementation
 
 ### File Created
 
-`/app/finanzas-personales/inflation-proof-your-life/page.tsx`
+`/app/personal-finance/inflation-proof-your-life/page.tsx`
 
 ### Structure
 
 - Uses standard Next.js 14 App Router pattern
-- Follows existing finanzas-personales article template
+- Follows existing personal-finance article template
 - Includes Header, CompactFooter, AIContentDisclaimer components
 - Ad unit placements: `uk_topfinanzas_3` and `uk_topfinanzas_4`
 - Responsive image with proper Next.js Image component
@@ -94,7 +94,7 @@ Engaging opening that acknowledges UK households feeling the squeeze from rising
 
 ### 2. Personal Finance Category Page ✅
 
-- **File:** `/app/finanzas-personales/page.tsx`
+- **File:** `/app/personal-finance/page.tsx`
 - **Added:** New post entry to `allPosts` array
 - **Category:** "guide"
 - **Position:** First (most recent)

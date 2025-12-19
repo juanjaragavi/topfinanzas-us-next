@@ -21,7 +21,7 @@ export default function TarjetasArchivePage() {
     setIsClient(true);
   }, []);
 
-  // Complete list of credit card content (synchronized with soluciones-financieras/page.tsx)
+  // Complete list of credit card content (synchronized with financial-solutions/page.tsx)
   const creditCardsContent: PostItem[] = [
     // Latest Products (October 2025)
     {
@@ -413,10 +413,10 @@ export default function TarjetasArchivePage() {
               title={post.title}
               description={post.description}
               image={post.image}
-              // Posts are located under /soluciones-financieras/
+              // Posts are located under /financial-solutions/
               slug={post.slug}
               category="Tarjetas de Crédito" // Static category for this page
-              categorySlug="/soluciones-financieras" // Base path for these posts
+              categorySlug="/financial-solutions" // Base path for these posts
               date={post.date}
               type={post.type}
               showBadge={true} // Show type badge if desired

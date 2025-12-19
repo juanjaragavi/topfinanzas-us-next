@@ -66,7 +66,7 @@ Created a React component that actively monitors and removes interstitials:
 #### Key Features
 
 1. **Path-Based Activation**
-   - Only runs on article pages: `/blog/`, `/finanzas-personales/`, `/soluciones-financieras/`
+   - Only runs on article pages: `/blog/`, `/personal-finance/`, `/financial-solutions/`
    - Doesn't interfere with interstitials on other pages (homepage, quiz, etc.)
 
 2. **MutationObserver Monitoring**
@@ -187,7 +187,7 @@ The blocker runs client-side and activates automatically on article pages.
 
 - Homepage can still show interstitials
 - Quiz pages can show interstitials
-- Only blocked on `/blog/`, `/finanzas-personales/`, `/soluciones-financieras/` sub-pages
+- Only blocked on `/blog/`, `/personal-finance/`, `/financial-solutions/` sub-pages
 
 ## Performance Impact
 

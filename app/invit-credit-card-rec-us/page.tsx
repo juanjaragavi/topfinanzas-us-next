@@ -48,22 +48,22 @@ export default function InvitRecomendadorTarjetasMXPage() {
 
             {/* Opciones de límite centradas (botones verdes) */}
             <div className="grid grid-cols-1 gap-3 my-4">
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                   TARJETA HASTA $10,000 MXN
                 </Button>
               </Link>
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                   TARJETA HASTA $25,000 MXN
                 </Button>
               </Link>
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                   TARJETA HASTA $50,000 MXN
                 </Button>
               </Link>
-              <Link href="/soluciones-financieras/barclaycard-avios-plus">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                   MÁS OPCIONES
                 </Button>
@@ -90,7 +90,7 @@ export default function InvitRecomendadorTarjetasMXPage() {
                 </p>
               </div>
               <div className="mt-6">
-                <Link href="/soluciones-financieras/barclaycard-avios-plus">
+                <Link href="/financial-solutions/barclaycard-avios-plus">
                   <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                     ACEPTAR RECOMENDACIÓN
                   </Button>
@@ -279,7 +279,7 @@ export default function InvitRecomendadorTarjetasMXPage() {
                     ¡La más solicitada por nuestros lectores! Descúbrela hoy...
                   </p>
                   <Link
-                    href="/soluciones-financieras/barclaycard-avios-plus-requisitos"
+                    href="/financial-solutions/barclaycard-avios-plus-requisitos"
                     className="w-full"
                   >
                     <Button className="bg-[#E11D48] hover:bg-[#BE123C] text-white font-semibold py-2 w-full rounded-md">
