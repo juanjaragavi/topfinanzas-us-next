@@ -115,7 +115,7 @@ export default function SidebarExample() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Link href="/tarjetas" className="text-sm hover:underline">
+                <Link href="/cards" className="text-sm hover:underline">
                   Tarjetas
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">

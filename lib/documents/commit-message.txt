@@ -1,8 +1,9 @@
-refactor: localize URL paths for US market
+refactor: localize URL paths and update navigation
 
-- Rename `app/finanzas-personales` to `app/personal-finance`
-- Rename `app/soluciones-financieras` to `app/financial-solutions`
-- Update all internal links, imports, and redirects to use English paths
-- Update `headerNavigation.ts` with new category URLs
-- Update `sitemap.xml` files (public and app)
-- Update project documentation and instruction files to reflect new structure
+- Rename 'prestamos' to 'loans'
+- Rename 'tarjetas' to 'cards'
+- Rename 'campana-quiz' to 'campaign-quiz'
+- Update sitemap.xml with new paths
+- Update headerNavigation.ts with new paths
+- Update mobile menu in header.tsx to show only Personal Finance and Financial Solutions
+- Update internal links in various files

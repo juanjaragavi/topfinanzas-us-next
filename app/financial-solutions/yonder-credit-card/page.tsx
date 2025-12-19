@@ -20,7 +20,7 @@ export default function YonderCreditCardPage() {
   return (
     <main
       className="bg-white min-h-screen flex flex-col"
-      data-category="tarjetas"
+      data-category="cards"
     >
       <Header />
 
@@ -246,7 +246,7 @@ export default function YonderCreditCardPage() {
                     </li>
                     <li>
                       <Link
-                        href="/tarjetas"
+                        href="/cards"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         Compare Top UK Credit Cards

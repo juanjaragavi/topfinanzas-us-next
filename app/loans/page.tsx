@@ -197,7 +197,7 @@ export default function PrestamosArchivePage() {
   }
 
   const pageContent = (
-    <div data-category="prestamos">
+    <div data-category="loans">
       <h1 className="text-4xl font-bold mb-6 text-gray-800">
         Préstamos Personales
       </h1>

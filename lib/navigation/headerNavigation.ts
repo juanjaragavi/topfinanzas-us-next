@@ -66,24 +66,12 @@ export const headerNavigation = {
     text: "CATEGORIES",
     items: [
       {
-        text: "Financial Solutions", // Main MOFU category
-        href: "/financial-solutions",
-      },
-      {
-        text: "Cards", // Specific MOFU sub-category
-        href: "/tarjetas", // Link to new dedicated page
-      },
-      {
-        text: "Personal Loans", // Specific MOFU sub-category
-        href: "/prestamos", // Link to new dedicated page
-      },
-      {
         text: "Personal Finance", // TOFU category
         href: "/personal-finance",
       },
       {
-        text: "Card Finder", // Tool
-        href: "/choose-the-perfect-card-for-you-1",
+        text: "Financial Solutions", // Main MOFU category
+        href: "/financial-solutions",
       },
     ],
   },

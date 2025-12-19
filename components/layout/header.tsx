@@ -507,36 +507,20 @@ export function Header() {
               </button>
               {isCategoriesOpen && (
                 <div className="bg-gray-50 px-6 py-2 space-y-2">
-                  {/* Mock categories based on reference + existing nav */}
-                  <div className="flex items-center text-gray-600 py-1">
+                  <Link
+                    href="/personal-finance"
+                    className="flex items-center text-gray-600 py-1 hover:text-blue-600"
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Smart Savings</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
+                    <span>Personal Finance</span>
+                  </Link>
+                  <Link
+                    href="/financial-solutions"
+                    className="flex items-center text-gray-600 py-1 hover:text-blue-600"
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Zero Debt</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Choose Your Card</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Home Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Student Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>SME Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finance for Everyone</span>
-                  </div>
-                  {/* ... others matching list */}
+                    <span>Financial Solutions</span>
+                  </Link>
                 </div>
               )}
             </div>
@@ -545,7 +529,7 @@ export function Header() {
 
             {/* LOANS */}
             <Link
-              href="/prestamos"
+              href="/loans"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
               LOANS
@@ -555,7 +539,7 @@ export function Header() {
 
             {/* CREDIT CARDS */}
             <Link
-              href="/tarjetas"
+              href="/cards"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
               CREDIT CARDS

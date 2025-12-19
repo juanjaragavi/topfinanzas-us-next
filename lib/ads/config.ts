@@ -43,7 +43,7 @@ export const adZepConfig: AdZepConfig = {
     "/blog",
     "/financial-solutions",
     "/personal-finance",
-    "/tarjetas",
+    "/cards",
   ],
   // Pages where ads should NEVER be activated
   excludedPaths: ["/quiz", "/quiz-2"],

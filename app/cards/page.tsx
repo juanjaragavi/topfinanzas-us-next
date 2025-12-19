@@ -391,7 +391,11 @@ export default function TarjetasArchivePage() {
   }
 
   const pageContent = (
+<<<<<<<< Updated upstream:app/tarjetas/page.tsx
     <div data-category="tarjetas">
+========
+    <div data-category="cards">
+>>>>>>>> Stashed changes:app/cards/page.tsx
       <h1 className="text-4xl font-bold mb-6 text-gray-800">
         Tarjetas de Crédito
       </h1>
