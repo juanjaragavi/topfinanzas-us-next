@@ -149,7 +149,7 @@ window.performance.getEntriesByName("topads-execution");
 npm run dev
 
 # Visit test page
-# Open http://localhost:3030/utm-test
+# Open http://localhost:3040/utm-test
 
 # Check console for:
 # [TopAds] Component mounted

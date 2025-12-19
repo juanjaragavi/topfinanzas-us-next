@@ -166,7 +166,7 @@ export function FeaturedPostCard({
               href={postUrl}
               className="text-blue-600 hover:text-blue-800 font-medium"
             >
-              Leer más →
+              Read more →
             </Link>
           </div>
         )}

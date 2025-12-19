@@ -36,7 +36,7 @@ The ConvertKit (Kit.com) subscriber integration has been reinstated alongside th
 
 ## Testing
 
-Run the end-to-end validation after starting the dev server on port 3030:
+Run the end-to-end validation after starting the dev server on port 3040:
 
 ```bash
 node scripts/test-full-flow.js

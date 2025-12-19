@@ -37,11 +37,11 @@ export default function TopAds() {
                 lazyLoad: 'soft',
                 pageSetting: {
                     exclude: [
-                    '/terminos-y-condiciones-de-uso',
-                    '/politica-privacidad',
-                        '/politica-de-cookies',
-                        '/nosotros',
-                        '/contactanos',
+                    '/terms-conditions',
+                    '/privacy-policy',
+                        '/cookie-policy',
+                        '/about-us',
+                        '/contact-us',
                         '/quiz'
                     ]
                 },

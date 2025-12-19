@@ -190,7 +190,7 @@ try {
 
 ```bash
 # Start at quiz with UTM params
-http://localhost:3030/quiz?utm_source=test&utm_medium=cpc&utm_campaign=test_campaign
+http://localhost:3040/quiz?utm_source=test&utm_medium=cpc&utm_campaign=test_campaign
 
 # Click through quiz steps
 # Verify URL maintains UTM params at each step
@@ -204,7 +204,7 @@ http://localhost:3030/quiz?utm_source=test&utm_medium=cpc&utm_campaign=test_camp
 
 ```bash
 # Start at home WITH UTM params
-http://localhost:3030/?utm_source=google&utm_medium=organic
+http://localhost:3040/?utm_source=google&utm_medium=organic
 
 # Click on any internal link
 # Verify link includes UTM params
@@ -217,7 +217,7 @@ http://localhost:3030/?utm_source=google&utm_medium=organic
 
 ```bash
 # Start with UTM params
-http://localhost:3030/?utm_source=test
+http://localhost:3040/?utm_source=test
 
 # Click external link (e.g., to google.com)
 # Verify external link doesn't get UTM params (correct)

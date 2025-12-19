@@ -153,7 +153,7 @@ The fix carefully preserves all AdZep functionality:
 
 ```bash
 npm run dev
-# Test on localhost:3030
+# Test on localhost:3040
 ```
 
 1. **Blog Listing Pages** (should have no overlay):

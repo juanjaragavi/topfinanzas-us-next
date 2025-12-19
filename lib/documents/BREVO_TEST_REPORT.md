@@ -99,7 +99,7 @@
 
 - **Email**: <test.api.1759871106@topnetworks.co>
 - **Name**: Juan Miguel
-- **Server**: <http://localhost:3030>
+- **Server**: <http://localhost:3040>
 - **Response Status**: 200 OK
 - **Contact ID**: 47439
 
@@ -274,7 +274,7 @@ npm run test:brevo
 # Test direct API connection
 npm run test:brevo-direct
 
-# Test Next.js API route (requires server on port 3030)
+# Test Next.js API route (requires server on port 3040)
 npm run test:brevo-api
 ```
 

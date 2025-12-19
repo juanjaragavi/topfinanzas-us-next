@@ -163,7 +163,6 @@ import { CustomComponent } from "./custom-component";
 - Use US terminology, examples, and comparisons.
 - Use US contact formats where applicable (e.g., +1 phone numbers).
 
-
 ## Analytics Integration
 
 ### 1. Google Tag Manager

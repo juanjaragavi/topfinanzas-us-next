@@ -10,7 +10,7 @@ import { CheckCircle } from "lucide-react";
 function DownloadGuidePageContent() {
   const handleDownload = () => {
     window.open(
-      "https://media.topfinanzas.com/documents/tips-vida-financiera-mex_compressed.pdf",
+      "https://media.topfinanzas.com/documents/tips-financial-life-usa_compressed.pdf",
       "_blank",
     );
   };
@@ -38,10 +38,10 @@ function DownloadGuidePageContent() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-sm leading-tight">
-              Bienvenido a TopFinanzas MX
+              Welcome to TopFinanzas
             </h1>
             <p className="text-white/90 text-lg md:text-xl max-w-xl mb-6 drop-shadow-sm leading-relaxed">
-              Expertos en bienestar financiero para ti y tu familia.
+              Experts in financial wellness for you and your family.
             </p>
           </div>
         </div>
@@ -52,39 +52,39 @@ function DownloadGuidePageContent() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 leading-tight">
-              ¡Bienvenido a TOP!
+              Welcome to TOP!
             </h2>
 
             <p className="text-left text-base leading-7 text-gray-800 mb-6">
-              Somos expertos en consejos de bienestar monetario para todos. En
-              TopFinanzas te ayudamos a tomar el control de tus finanzas
-              personales de manera sencilla y efectiva.
+              We are experts in financial wellness advice for everyone. At
+              TopFinanzas, we help you take control of your personal finances
+              simply and effectively.
             </p>
 
             {/* Ad Container */}
             <div id="square01" data-topads data-topads-size="square"></div>
 
             <h3 className="text-lg font-bold text-gray-800 mt-8 mb-4">
-              ¿Qué hacemos?
+              What do we do?
             </h3>
 
             <div className="space-y-3 mb-8">
               <div className="flex items-start">
                 <CheckCircle className="text-[#71C96C] w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
                 <span className="text-sm sm:text-base text-gray-700">
-                  Investigamos productos para que tú no tengas que hacerlo.
+                  We research products so you don't have to.
                 </span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="text-[#71C96C] w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
                 <span className="text-sm sm:text-base text-gray-700">
-                  Compartimos consejos para tu bienestar patrimonial.
+                  We share tips for your financial well-being.
                 </span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="text-[#71C96C] w-5 h-5 mr-3 flex-shrink-0 mt-0.5" />
                 <span className="text-sm sm:text-base text-gray-700">
-                  Nunca te cobraremos un solo peso.
+                  We will never charge you a single cent.
                 </span>
               </div>
             </div>
@@ -92,13 +92,13 @@ function DownloadGuidePageContent() {
             {/* Download Section */}
             <div className="bg-gray-50 rounded-xl p-6 md:p-8 mb-8">
               <p className="text-center text-gray-800 font-medium mb-2">
-                Para comenzar...
+                To start...
               </p>
               <p className="text-center text-gray-700 mb-4">
-                Lee nuestra Guía de Bienestar Monetario.
+                Read our Financial Wellness Guide.
               </p>
               <p className="text-center text-gray-600 text-sm mb-6">
-                Descárgala ahora y comienza a tomar el control de tu patrimonio
+                Download it now and start taking control of your wealth
                 👇
               </p>
 
@@ -107,7 +107,7 @@ function DownloadGuidePageContent() {
                 className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-4 w-full rounded-full inline-flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
               >
                 <div className="flex items-center space-x-2">
-                  <span>DESCARGAR PDF AHORA</span>
+                  <span>DOWNLOAD PDF NOW</span>
                   <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
                     <span className="text-[#80E67D] text-sm font-bold">↓</span>
                   </div>
@@ -116,10 +116,10 @@ function DownloadGuidePageContent() {
             </div>
 
             <p className="text-center text-gray-600 text-sm mb-4">
-              Más consejos están por llegar pronto.
+              More tips are coming soon.
             </p>
             <p className="text-center text-gray-800 font-medium">
-              ¡Es un gusto tenerte aquí!
+              We're glad to have you here!
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ function DownloadGuidePageContent() {
 
 export default function DownloadGuidePage() {
   return (
-    <Suspense fallback={<div>Cargando...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       <DownloadGuidePageContent />
     </Suspense>
   );

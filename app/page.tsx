@@ -43,136 +43,119 @@ const cleanTitle = (title: string): string => {
   return title.split("|")[0].split(":")[0].split(" - ")[0].trim();
 };
 
-// --- Hardcoded Post Data (Localized for MX) ---
+// --- Hardcoded Post Data (Localized for US) ---
 // Using a subset of posts for the homepage, sorted by date descending
 const allPosts: PostData[] = [
   {
     slug: "barclaycard-avios-plus",
     frontmatter: {
-      title: "Tarjeta de Crédito Premium: Recompensas de Viaje Exclusivas",
+      title: "Premium Credit Card: Exclusive Travel Rewards",
       description:
-        "La tarjeta ideal para viajeros frecuentes con beneficios premium...",
+        "The ideal card for frequent travelers with premium benefits...",
       date: "2025-10-29T00:00:00Z", // Matching legacy date
       featuredImage:
         "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp", // Keep image for layout
       categories: [
-        { name: "Soluciones Financieras", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "soluciones-financieras" },
       ],
     },
-    category: "Soluciones Financieras",
+    category: "Financial Solutions",
     categoryPath: "/soluciones-financieras",
   },
   {
     slug: "hsbc-personal-loan",
     frontmatter: {
-      title: "Préstamo Personal HSBC: Financiamiento Flexible (MX)",
-      description:
-        "Descubre los préstamos personales de HSBC con tasas competitivas...",
+      title: "HSBC Personal Loan: Flexible Financing",
+      description: "Discover HSBC personal loans with competitive rates...",
       date: "2025-04-04T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       categories: [
-        { name: "Soluciones Financieras", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "soluciones-financieras" },
       ],
     },
-    category: "Soluciones Financieras",
+    category: "Financial Solutions",
     categoryPath: "/soluciones-financieras",
   },
   {
     slug: "funding-circle-personal-loan",
     frontmatter: {
-      title: "Préstamo para Negocios Funding Circle",
+      title: "Funding Circle Business Loan",
       description:
-        "Explora los préstamos para negocios de Funding Circle con financiamiento rápido y flexible...",
+        "Explore Funding Circle business loans with fast and flexible financing...",
       date: "2025-04-04T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       categories: [
-        { name: "Soluciones Financieras", slug: "soluciones-financieras" },
+        { name: "Financial Solutions", slug: "soluciones-financieras" },
       ],
     },
-    category: "Soluciones Financieras",
+    category: "Financial Solutions",
     categoryPath: "/soluciones-financieras",
   },
   {
     slug: "best-rewards-credit-cards",
     frontmatter: {
-      title:
-        "Las Mejores Tarjetas de Crédito con Recompensas | Top Finanzas MX",
+      title: "Best Rewards Credit Cards | Top Finanzas US",
       description:
-        "Descubre las mejores tarjetas de crédito con recompensas para maximizar tus gastos...",
+        "Discover the best rewards credit cards to maximize your spending...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
-      categories: [
-        { name: "Finanzas Personales", slug: "finanzas-personales" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/finanzas-personales",
   },
   {
     slug: "getting-out-of-debt",
     frontmatter: {
-      title: "Guía Práctica para Salir de Deudas | Top Finanzas MX",
-      description:
-        "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
+      title: "Practical Guide to Getting Out of Debt | Top Finanzas US",
+      description: "Feeling overwhelmed by debt? Get practical strategies...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      categories: [
-        { name: "Finanzas Personales", slug: "finanzas-personales" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/finanzas-personales",
   },
   {
     slug: "top-credit-cards-0-intro-apr",
     frontmatter: {
-      title:
-        "Mejores Tarjetas de Crédito con Meses Sin Intereses | Top Finanzas MX",
-      description:
-        "Compara las mejores tarjetas de crédito que ofrecen meses sin intereses...",
+      title: "Best 0% Intro APR Credit Cards | Top Finanzas US",
+      description: "Compare the best credit cards offering 0% intro APR...",
       date: "2025-04-03T00:00:00Z",
       featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp",
-      categories: [
-        { name: "Finanzas Personales", slug: "finanzas-personales" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/finanzas-personales",
   },
   {
     slug: "best-personal-loans",
     frontmatter: {
-      title: "Mejores Préstamos Personales en México: Tu Guía Completa",
-      description:
-        "Guía completa de los mejores préstamos personales en México...",
+      title: "Best Personal Loans in the US: Your Complete Guide",
+      description: "Complete guide to the best personal loans in the US...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      categories: [
-        { name: "Finanzas Personales", slug: "finanzas-personales" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/finanzas-personales",
   },
   {
     slug: "tips-for-choosing-an-online-loan",
     frontmatter: {
-      title:
-        "5 Consejos Esenciales para Elegir un Préstamo en Línea | Top Finanzas MX",
-      description: "Navega el mundo de los préstamos en línea con confianza...",
+      title: "5 Essential Tips for Choosing an Online Loan | Top Finanzas US",
+      description: "Navigate the world of online loans with confidence...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      categories: [
-        { name: "Finanzas Personales", slug: "finanzas-personales" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "finanzas-personales" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/finanzas-personales",
   },
 ];
@@ -180,13 +163,13 @@ const allPosts: PostData[] = [
 // Reuse posts to populate sections for demo purposes since we have limited hardcoded data
 const savingsPosts = [...allPosts, ...allPosts]
   .slice(0, 4)
-  .map((p) => ({ ...p, category: "Ahorro inteligente" }));
+  .map((p) => ({ ...p, category: "Smart Savings" }));
 const debtPosts = [...allPosts, ...allPosts]
   .slice(2, 6)
-  .map((p) => ({ ...p, category: "Deuda cero" }));
+  .map((p) => ({ ...p, category: "Zero Debt" }));
 const cardPosts = [...allPosts, ...allPosts]
   .slice(4, 8)
-  .map((p) => ({ ...p, category: "Elige tu tarjeta" }));
+  .map((p) => ({ ...p, category: "Choose Your Card" }));
 
 // --- End of Hardcoded Data ---
 
@@ -207,11 +190,11 @@ export default function Home() {
       <section className="bg-[#015ECC] text-white px-6 py-24 md:py-32 lg:py-40">
         <div className="container mx-auto px-4 text-left">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 drop-shadow-sm leading-tight">
-            Bienvenidos a Top Finanzas
+            Welcome to Top Finance
           </h1>
           <p className="text-white text-2xl md:text-xl lg:text-2xl max-w-3xl mb-8 md:mb-12 drop-shadow-sm leading-relaxed font-medium">
-            Donde cada decisión financiera amplía tu mundo. <br />
-            Decide sabiamente, vive plenamente.
+            Where every financial decision expands your world. <br />
+            Choose wisely, live fully.
           </p>
         </div>
       </section>
@@ -297,7 +280,7 @@ export default function Home() {
           {/* Category Sections - Sharp Corners & Hero+List Layout */}
 
           <CategorySection
-            title="Ahorro inteligente"
+            title="Finances for Everyone"
             posts={savingsPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -320,7 +303,7 @@ export default function Home() {
           />
 
           <CategorySection
-            title="Deuda cero"
+            title="Financial Solutions"
             posts={debtPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -343,7 +326,7 @@ export default function Home() {
           />
 
           <CategorySection
-            title="Elige tu tarjeta"
+            title="Choose Your Card"
             posts={cardPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -377,10 +360,10 @@ export default function Home() {
                   variant="secondary"
                   className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  Anterior
+                  Previous
                 </Button>
                 <span className="text-sm text-gray-700">
-                  Página {currentPage} de {totalPages}
+                  Page {currentPage} of {totalPages}
                 </span>
                 <Button
                   onClick={() =>
@@ -390,7 +373,7 @@ export default function Home() {
                   variant="secondary"
                   className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  Siguiente
+                  Next
                 </Button>
               </div>
             ) : (

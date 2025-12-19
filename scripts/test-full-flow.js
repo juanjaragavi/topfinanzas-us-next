@@ -10,7 +10,7 @@
  * Usage: node scripts/test-full-flow.js
  */
 
-const BASE_URL = "http://localhost:3030";
+const BASE_URL = "http://localhost:3040";
 
 // Test data matching the credit-card-form.tsx payload structure
 const testData = {

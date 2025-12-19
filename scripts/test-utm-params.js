@@ -8,7 +8,7 @@
  * Usage: node scripts/test-utm-params.js
  */
 
-const BASE_URL = "http://localhost:3030";
+const BASE_URL = "http://localhost:3040";
 
 // Test data WITH UTM parameters (like production)
 const testWithUTM = {

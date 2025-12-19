@@ -23,8 +23,6 @@ export const metadata: Metadata = {
       "Top Rewards Credit Cards to Maximize Your Spending | TopFinanzas US",
     description:
       "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
-    images: [
-      "https://media.topfinanzas.com/images/placeholder.webp",
-    ], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/placeholder.webp"], // Add if featuredImage is available
   },
 };

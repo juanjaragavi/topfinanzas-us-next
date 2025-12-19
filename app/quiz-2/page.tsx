@@ -50,7 +50,7 @@ export default function Home() {
         <AdController disableAds={true} />
         <div className="flex min-h-[60vh] items-center justify-center px-4">
           <p className="text-sm text-gray-600 text-center">
-            Redirecting you to your personalised credit card recommendations…
+            Redirecting you to your personalized credit card recommendations…
           </p>
         </div>
       </section>

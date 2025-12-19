@@ -78,9 +78,7 @@ function UtmTestContent() {
 
           <Button
             variant="secondary"
-            onClick={() =>
-              navigateTo("/recomendador-de-tarjetas-de-credito-p1")
-            }
+            onClick={() => navigateTo("/choose-the-perfect-card-for-you-1")}
           >
             Card Recommender
           </Button>

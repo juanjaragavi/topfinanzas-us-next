@@ -28,25 +28,25 @@ function CreditCardRecommenderPageContent() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight">
-              Descubre tu tarjeta de crédito ideal
+              Discover Your Ideal Credit Card
             </h1>
 
             <div id="square01" data-topads data-topads-size="square"></div>
 
             <p className="text-left text-sm leading-6 text-gray-800 my-8">
-              En <strong>TopFinanzas</strong>, te ayudamos a tomar el control de
-              tus finanzas. Te ofrecemos el mejor análisis de tarjetas de
-              crédito y las mejores recomendaciones para que encuentres
-              fácilmente la ideal para ti, maximices tus recompensas, organices
-              tus gastos y disfrutes de beneficios exclusivos. Explora nuestras
-              recomendaciones y encuentra la tarjeta que mejor se adapta a ti.
+              At <strong>TopFinanzas</strong>, we help you take control of your
+              finances. We offer the best credit card analysis and
+              recommendations so you can easily find the one that suits you
+              best, maximize your rewards, organize your spending, and enjoy
+              exclusive benefits. Explore our recommendations and find the card
+              that fits you perfectly.
             </p>
 
             <div className="mt-8 mb-4">
               <Link href="/soluciones-financieras/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <span>Aceptar recomendación</span>
+                    <span>Accept Recommendation</span>
                     <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
                       <span className="text-[#80E67D] text-sm font-bold">
                         ➔
@@ -58,7 +58,7 @@ function CreditCardRecommenderPageContent() {
             </div>
 
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6 mt-12">
-              ¿Por qué elegir nuestro recomendador de tarjetas de crédito?
+              Why Choose Our Credit Card Recommender?
             </h2>
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
@@ -66,7 +66,7 @@ function CreditCardRecommenderPageContent() {
                   <span className="text-white font-bold text-sm">➔</span>
                 </div>
                 <span className="font-bold text-sm sm:text-lg">
-                  Opciones personalizadas
+                  Personalized Options
                 </span>
               </div>
               <div className="flex items-center">
@@ -74,7 +74,7 @@ function CreditCardRecommenderPageContent() {
                   <span className="text-white font-bold text-sm">➔</span>
                 </div>
                 <span className="font-bold text-sm sm:text-lg">
-                  Completamente gratuito
+                  Completely Free
                 </span>
               </div>
               <div className="flex items-center">
@@ -82,30 +82,29 @@ function CreditCardRecommenderPageContent() {
                   <span className="text-white font-bold text-sm">➔</span>
                 </div>
                 <span className="font-bold text-sm sm:text-lg">
-                  Asesoría experta
+                  Expert Advice
                 </span>
               </div>
             </div>
 
             <p className="text-left text-sm leading-6 text-gray-800 mb-4">
-              Nuestras recomendaciones están diseñadas para conectar tus metas
-              financieras con las tarjetas que mejor se adaptan a tus
-              necesidades. Desde el cashback hasta las recompensas de viaje, te
-              damos opciones claras y fáciles de entender para que tomes
-              decisiones informadas.
+              Our recommendations are designed to connect your financial goals
+              with the cards that best suit your needs. From cashback to travel
+              rewards, we give you clear and easy-to-understand options so you
+              can make informed decisions.
             </p>
 
             <p className="text-left text-sm leading-6 text-gray-800 mb-10">
-              Con nuestra guía, transformarás tu tarjeta de crédito en una
-              herramienta que simplifica tus finanzas y te ayuda a alcanzar tus
-              objetivos sin complicaciones.
+              With our guide, you will transform your credit card into a tool
+              that simplifies your finances and helps you reach your goals
+              without complications.
             </p>
 
             <div className="mt-8 mb-4">
               <Link href="/soluciones-financieras/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <span>Nuestra mejor recomendación</span>
+                    <span>Our Top Recommendation</span>
                     <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
                       <span className="text-[#80E67D] text-sm font-bold">
                         ➔
@@ -120,7 +119,7 @@ function CreditCardRecommenderPageContent() {
                 className="text-[#2E74B5] font-medium"
                 href="/soluciones-financieras/barclaycard-avios-plus-requisitos"
               >
-                Aprende cómo solicitarla
+                Learn How to Apply
               </Link>
             </p>
 
@@ -139,7 +138,7 @@ function CreditCardRecommenderPageContent() {
                   <h3
                     className={`font-bold text-md leading-tight ${openFaq === "benefits" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
                   >
-                    ¿Qué beneficios tiene una tarjeta sin anualidad?
+                    What are the benefits of a no-annual-fee card?
                   </h3>
                 </div>
               </button>
@@ -149,9 +148,9 @@ function CreditCardRecommenderPageContent() {
                   id="faq-benefits-content"
                 >
                   <p className="text-left text-sm">
-                    Una tarjeta sin anualidad te ayuda a ahorrar costos
-                    recurrentes mientras disfrutas de beneficios clave como
-                    cashback o puntos por tus compras.
+                    A no-annual-fee card helps you save on recurring costs while
+                    enjoying key benefits like cashback or points on your
+                    purchases.
                   </p>
                 </div>
               )}
@@ -170,7 +169,7 @@ function CreditCardRecommenderPageContent() {
                   <h3
                     className={`font-bold text-md leading-tight ${openFaq === "cashback" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
                   >
-                    ¿Cómo funciona el cashback?
+                    How does cashback work?
                   </h3>
                 </div>
               </button>
@@ -180,8 +179,8 @@ function CreditCardRecommenderPageContent() {
                   id="faq-cashback-content"
                 >
                   <p className="text-left text-sm">
-                    Recibes un porcentaje de tus compras como efectivo que
-                    puedes usar para reducir saldos o gastar como prefieras.
+                    You receive a percentage of your purchases back as cash that
+                    you can use to reduce balances or spend however you prefer.
                   </p>
                 </div>
               )}
@@ -200,7 +199,7 @@ function CreditCardRecommenderPageContent() {
                   <h3
                     className={`font-bold text-md leading-tight ${openFaq === "travelers" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
                   >
-                    ¿Cuál es la mejor opción para viajeros?
+                    What is the best option for travelers?
                   </h3>
                 </div>
               </button>
@@ -210,9 +209,9 @@ function CreditCardRecommenderPageContent() {
                   id="faq-travelers-content"
                 >
                   <p className="text-left text-sm">
-                    Las tarjetas con acumulación de millas o acceso a salones
-                    VIP son ideales para viajeros frecuentes, permitiéndote
-                    ahorrar en vuelos y disfrutar de beneficios exclusivos.
+                    Cards that earn miles or offer VIP lounge access are ideal
+                    for frequent travelers, allowing you to save on flights and
+                    enjoy exclusive benefits.
                   </p>
                 </div>
               )}
@@ -231,7 +230,7 @@ function CreditCardRecommenderPageContent() {
                   <h3
                     className={`font-bold text-md leading-tight ${openFaq === "online" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
                   >
-                    ¿Es seguro usar tarjetas de crédito en línea?
+                    Is it safe to use credit cards online?
                   </h3>
                 </div>
               </button>
@@ -241,54 +240,51 @@ function CreditCardRecommenderPageContent() {
                   id="faq-online-content"
                 >
                   <p className="text-left text-sm">
-                    Sí, muchas tarjetas ofrecen tecnología avanzada como CVV
-                    dinámico y alertas instantáneas para proteger tus
-                    transacciones.
+                    Yes, many cards offer advanced technology like dynamic CVV
+                    and instant alerts to protect your transactions.
                   </p>
                 </div>
               )}
             </div>
 
             <p className="text-left text-sm leading-6 text-gray-800 mb-12">
-              Haz de tu tarjeta de crédito una aliada para alcanzar tus metas
-              financieras. Desde cashback hasta recompensas de viaje, elige una
-              opción que simplifique tu vida y maximice tus beneficios. Explora
-              nuestras recomendaciones y encuentra la tarjeta que mejor se
-              adapta a ti.
+              Make your credit card an ally in reaching your financial goals.
+              From cashback to travel rewards, choose an option that simplifies
+              your life and maximizes your benefits. Explore our recommendations
+              and find the card that best suits you.
             </p>
 
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
-              Beneficios a tu alcance
+              Benefits Within Reach
             </h2>
             <div className="grid grid-cols-2 gap-4 mb-10">
               <div className="space-y-1">
                 <h3 className="font-bold text-sm">
-                  Recompensas por tus compras:
+                  Rewards for your purchases:
                 </h3>
                 <p className="text-xs text-gray-600 leading-tight">
-                  Acumula el 9% de cada compra en puntos, utilizables en una
-                  amplia variedad de productos y servicios.
+                  Earn points on every purchase, redeemable for a wide variety
+                  of products and services.
                 </p>
               </div>
               <div className="space-y-1">
-                <h3 className="font-bold text-sm">Seguridad avanzada:</h3>
+                <h3 className="font-bold text-sm">Advanced Security:</h3>
                 <p className="text-xs text-gray-600 leading-tight">
-                  Protección total para tus compras en línea con un CVV dinámico
-                  que cambia con cada transacción.
+                  Total protection for your online purchases with advanced
+                  security features.
                 </p>
               </div>
               <div className="space-y-1">
-                <h3 className="font-bold text-sm">Accesible para todos:</h3>
+                <h3 className="font-bold text-sm">Accessible to All:</h3>
                 <p className="text-xs text-gray-600 leading-tight">
-                  Solo necesitas un ingreso mínimo de $6,000 mensuales para
-                  disfrutar de todos sus beneficios.
+                  Competitive income requirements to enjoy all the benefits.
                 </p>
               </div>
               <div className="space-y-1">
-                <h3 className="font-bold text-sm">Compromiso ambiental:</h3>
+                <h3 className="font-bold text-sm">Environmental Commitment:</h3>
                 <p className="text-xs text-gray-600 leading-tight">
-                  Fabricada con más del 85% de plástico reciclado, ayudando al
-                  planeta con cada compra.
+                  Cards made with recycled materials, helping the planet with
+                  every purchase.
                 </p>
               </div>
             </div>

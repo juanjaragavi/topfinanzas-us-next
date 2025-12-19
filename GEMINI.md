@@ -172,7 +172,6 @@ import { CustomComponent } from "./custom-component";
 - Prefer US terminology and examples.
 - Use US contact formats where applicable (e.g., +1 phone numbers).
 
-
 ## Analytics Integration
 
 ### 1. Google Tag Manager
@@ -360,7 +359,7 @@ This procedure is initiated when the user issues the prompt "Push and commit our
 
    ```json
    {
-       "repo_path": "/Users/macbookpro/GitHub/topfinanzas-us-next"
+     "repo_path": "/Users/macbookpro/GitHub/topfinanzas-us-next"
    }
    ```
 

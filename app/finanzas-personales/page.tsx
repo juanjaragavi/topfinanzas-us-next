@@ -17,11 +17,11 @@ interface PostItem {
 
 // Define filter categories
 const categories = {
-  all: "Todos",
-  creditCards: "Tarjetas",
-  loans: "Préstamos",
-  debt: "Deuda",
-  guide: "Guías",
+  all: "All",
+  creditCards: "Credit Cards",
+  loans: "Loans",
+  debt: "Debt",
+  guide: "Guides",
 };
 
 export default function PersonalFinanceArchivePage() {
@@ -37,10 +37,10 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
-        "Cómo Rasterar tus Gastos por 30 Días y Saber a Dónde Va tu Dinero | Top Finanzas MX",
+        "How to Track Your Spending for 30 Days and Know Where Your Money Goes | Top Finanzas US",
       slug: "how-to-track-your-spending-for-30-days",
       description:
-        "Deja de adivinar sobre tus finanzas. Aprende un método sencillo de seguimiento de gastos de 30 días para descubrir a dónde va realmente tu dinero y crear hábitos duraderos.",
+        "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and create lasting habits.",
       image:
         "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
       date: "2 December 2025",
@@ -48,10 +48,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "La Psicología del Gasto: Cómo Detener las Compras Impulsivas | Top Finanzas MX",
+        "The Psychology of Spending: How to Stop Impulse Buying | Top Finanzas US",
       slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
       description:
-        "Descubra por qué compramos por impulso y aprenda estrategias prácticas para dominar su mentalidad de dinero. Empiece a ahorrar de forma consciente hoy mismo.",
+        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start saving mindfully today.",
       image:
         "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
       date: "25 November 2025",
@@ -59,10 +59,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        'Automatiza tu Riqueza: Sistema de Finanzas "Configúralo y Olvídalo" | Top Finanzas MX',
+        "Automate Your Wealth: 'Set It and Forget It' Finance System | Top Finanzas US",
       slug: "automate-your-wealth",
       description:
-        'Aprenda cómo automatizar sus finanzas con nuestro sistema "Configúralo y olvídalo". Ahorre tiempo, reduzca el estrés y genere riqueza sin esfuerzo.',
+        "Learn how to automate your finances with our 'Set it and forget it' system. Save time, reduce stress, and build wealth effortlessly.",
       image:
         "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
       date: "19 November 2025",
@@ -70,10 +70,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Deja de Vivir de Quincena en Quincena: 3 Cambios para Romper el Ciclo | Top Finanzas MX",
+        "Stop Living Paycheck to Paycheck: 3 Changes to Break the Cycle | Top Finanzas US",
       slug: "stop-living-paycheck-to-paycheck",
       description:
-        "Escapa del ciclo de vivir al día con tres cambios prácticos en el flujo de caja. Aprende cómo las familias están construyendo un respiro sin sacrificios dramáticos.",
+        "Escape the cycle of living paycheck to paycheck with three practical cash flow changes. Learn how families are building breathing room without dramatic sacrifices.",
       image:
         "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
       date: "13 November 2025",
@@ -81,10 +81,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Chequeo de Salud Financiera: ¿A Dónde se Va tu Dinero? | Top Finanzas MX",
+        "Financial Health Check: Where Does Your Money Go? | Top Finanzas US",
       slug: "financial-health-check-where-does-your-money-go",
       description:
-        "Descubra a dónde va realmente su dinero con nuestro rápido chequeo de salud financiera. Aprenda métodos sencillos de seguimiento que revelan patrones de gasto.",
+        "Discover where your money really goes with our quick financial health check. Learn simple tracking methods that reveal spending patterns.",
       image:
         "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
       date: "5 November 2025",
@@ -92,10 +92,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Los Costos Ocultos de Ser Propietario de una Casa | Top Finanzas MX",
+        "The Hidden Costs of Homeownership | Top Finanzas US",
       slug: "hidden-costs-of-homeownership",
       description:
-        "Descubra los gastos inesperados que sorprenden a los propietarios de viviendas. Desde el mantenimiento hasta los seguros, aprenda a presupuestar los costos ocultos.",
+        "Discover the unexpected expenses that surprise homeowners. From maintenance to insurance, learn how to budget for hidden costs.",
       image:
         "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
       date: "28 October 2025",

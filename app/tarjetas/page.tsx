@@ -25,60 +25,60 @@ export default function TarjetasArchivePage() {
   const creditCardsContent: PostItem[] = [
     // Latest Products (October 2025)
     {
-      title: "Tarjeta RBS Purchase & Balance Transfer",
+      title: "RBS Purchase & Balance Transfer Card",
       slug: "rbs-purchase-balance-transfer-card",
       description:
-        "La tarjeta RBS Purchase & Balance Transfer ofrece 0% de interés en compras hasta por 20 meses y 0% en transferencias de saldo por hasta 18 meses. Sin anualidad.",
+        "The RBS Purchase & Balance Transfer card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjetas de Crédito Bank of Scotland",
+      title: "Bank of Scotland Credit Cards",
       slug: "bank-of-scotland-credit-cards",
       description:
-        "Bank of Scotland ofrece tarjetas para gastos diarios, transferencias de saldo y construcción de crédito. Verifica tu elegibilidad sin afectar tu historial.",
+        "Bank of Scotland offers cards for everyday spending, balance transfers, and credit building. Check your eligibility without affecting your credit score.",
       image:
         "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito First Direct",
+      title: "First Direct Credit Card",
       slug: "first-direct-credit-card",
       description:
-        "La tarjeta First Direct 1st ofrece 0% de interés en compras por 12 meses, tasas competitivas sin anualidad y servicio al cliente galardonado 24/7.",
+        "The First Direct 1st card offers 0% interest on purchases for 12 months, competitive rates with no annual fee, and award-winning 24/7 customer service.",
       image:
         "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito The Co-operative Bank",
+      title: "The Co-operative Bank Credit Card",
       slug: "the-co-operative-bank-credit-card",
       description:
-        "La tarjeta Members de The Co-operative ofrece 0.5% de cashback en tiendas Co-op y 0.3% en todos los demás lugares, sin comisión anual.",
+        "The Co-operative Members card offers 0.5% cashback at Co-op stores and 0.3% everywhere else, with no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito M&S Rewards",
+      title: "M&S Rewards Credit Card",
       slug: "ms-rewards-credit-card",
       description:
-        "La tarjeta M&S Rewards ofrece puntos en todos tus gastos en M&S y más allá, beneficios exclusivos para miembros y tasas competitivas.",
+        "The M&S Rewards card offers points on all your M&S spending and beyond, exclusive member benefits, and competitive rates.",
       image:
         "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjetas de Crédito Tesco Bank Clubcard",
+      title: "Tesco Bank Clubcard Credit Cards",
       slug: "tesco-bank-clubcard-credit-cards",
       description:
-        "Descubra las tarjetas Tesco Bank Clubcard con tasas del 0%, opciones de CAT bajo y puntos Clubcard en tus gastos diarios.",
+        "Discover Tesco Bank Clubcard cards with 0% rates, low APR options, and Clubcard points on your everyday spending.",
       image:
         "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
       date: "24 October 2025",
@@ -88,65 +88,65 @@ export default function TarjetasArchivePage() {
       title: "American Express Preferred Rewards Gold",
       slug: "american-express-preferred-rewards-gold-credit-card",
       description:
-        "La tarjeta American Express Gold ofrece puntos Membership Rewards premium, seguro de viaje integral y beneficios de estilo de vida exclusivos.",
+        "The American Express Gold card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Nationwide Building Society",
+      title: "Nationwide Building Society Credit Card",
       slug: "nationwide-building-society-credit-card",
       description:
-        "La tarjeta Member de Nationwide ofrece dos opciones al 0%: hasta 24 meses en transferencias de saldo o 15 meses en compras.",
+        "The Nationwide Member card offers two 0% options: up to 24 months on balance transfers or 15 months on purchases.",
       image:
         "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito HSBC Rewards",
+      title: "HSBC Rewards Credit Card",
       slug: "hsbc-rewards-credit-card",
       description:
-        "La tarjeta HSBC Rewards ofrece puntos en tus gastos diarios, 0% de interés en compras por 6 meses y un bono de bienvenida.",
+        "The HSBC Rewards card offers points on your everyday spending, 0% interest on purchases for 6 months, and a welcome bonus.",
       image:
         "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Ocean",
+      title: "Ocean Credit Card",
       slug: "ocean-credit-card",
       description:
-        "La tarjeta Ocean ofrece límites de crédito flexibles sin anualidad. Verifica tu elegibilidad rápido sin afectar tu historial crediticio.",
+        "The Ocean card offers flexible credit limits with no annual fee. Check your eligibility quickly without affecting your credit score.",
       image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Fluid",
+      title: "Fluid Credit Card",
       slug: "fluid-credit-card",
       description:
-        "La tarjeta Fluid ofrece 0% de interés en transferencias de saldo por 9 meses, ayudándote a ahorrar y liquidar deudas más rápido.",
+        "The Fluid card offers 0% interest on balance transfers for 9 months, helping you save and pay off debt faster.",
       image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta John Lewis Partnership",
+      title: "John Lewis Partnership Card",
       slug: "john-lewis-partnership-card",
       description:
-        "La tarjeta John Lewis Partnership te permite ganar puntos valiosos en tus compras diarias en John Lewis, Waitrose y más allá.",
+        "The John Lewis Partnership card lets you earn valuable points on your everyday purchases at John Lewis, Waitrose, and beyond.",
       image:
         "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito 118 118 Money",
+      title: "118 118 Money Credit Card",
       slug: "118-118-money-credit-card",
       description:
-        "La tarjeta 118 118 Money ofrece límites personalizados y términos claros para ayudarte a construir o mejorar tu historial crediticio.",
+        "The 118 118 Money card offers personalized limits and clear terms to help you build or improve your credit history.",
       image:
         "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
       date: "23 October 2025",

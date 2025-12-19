@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     title: "Personal Loans - A Strategy for Managing Debt | TopFinanzas US",
     description:
       "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-    images: [
-      "https://media.topfinanzas.com/images/placeholder.webp",
-    ],
+    images: ["https://media.topfinanzas.com/images/placeholder.webp"],
   },
 };

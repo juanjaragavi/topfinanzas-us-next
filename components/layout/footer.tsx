@@ -141,6 +141,14 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
+        <div className="mb-8 text-center max-w-4xl mx-auto">
+          <p className="text-xs text-white/80 leading-relaxed">
+            <span className="font-bold">
+              {footerContent.legal.disclaimer.label}
+            </span>{" "}
+            {footerContent.legal.disclaimer.text}
+          </p>
+        </div>
 
         {/* Bottom Copyright */}
         <div className="text-left border-t border-white/20 pt-6">

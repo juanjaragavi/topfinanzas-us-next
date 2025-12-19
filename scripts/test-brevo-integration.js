@@ -3,7 +3,7 @@
  * Tests the /api/subscribe endpoint with sample data
  */
 
-const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3030";
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3040";
 
 // Generate unique email with timestamp
 const timestamp = Math.floor(Date.now() / 1000);
@@ -76,7 +76,7 @@ async function testBrevoIntegration() {
     console.error("\n❌ ERROR: Failed to connect to API");
     console.error("   Error details:", error.message);
     console.error(
-      "\n💡 Make sure your development server is running on port 3030",
+      "\n💡 Make sure your development server is running on port 3040",
     );
     console.error("   Run: npm run dev\n");
     return false;

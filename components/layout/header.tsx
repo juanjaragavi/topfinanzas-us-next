@@ -129,21 +129,21 @@ export function Header() {
   }, [lastScrollY]);
 
   const archiveMonths = [
-    "octubre 2025",
-    "septiembre 2025",
-    "agosto 2025",
-    "julio 2025",
-    "junio 2025",
-    "mayo 2025",
-    "febrero 2025",
-    "enero 2025",
-    "diciembre 2024",
-    "septiembre 2024",
-    "agosto 2024",
-    "julio 2024",
-    "enero 2024",
-    "diciembre 2023",
-    "noviembre 2023",
+    "October 2025",
+    "September 2025",
+    "August 2025",
+    "July 2025",
+    "June 2025",
+    "May 2025",
+    "February 2025",
+    "January 2025",
+    "December 2024",
+    "September 2024",
+    "August 2024",
+    "July 2024",
+    "January 2024",
+    "December 2023",
+    "November 2023",
   ];
 
   return (
@@ -492,14 +492,14 @@ export function Header() {
 
           {/* Menu Items */}
           <div className="flex-1 py-4">
-            {/* CATEGORÍAS */}
+            {/* CATEGORIES */}
             <div>
               <button
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
                 className="flex items-center justify-between w-full px-6 py-3 text-left"
               >
                 <span className="font-bold text-gray-800 uppercase tracking-wide">
-                  CATEGORÍAS
+                  CATEGORIES
                 </span>
                 <ChevronDown
                   className={`w-5 h-5 text-gray-400 transition-transform ${isCategoriesOpen ? "rotate-180" : ""}`}
@@ -510,31 +510,31 @@ export function Header() {
                   {/* Mock categories based on reference + existing nav */}
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Ahorro inteligente</span>
+                    <span>Smart Savings</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Deuda cero</span>
+                    <span>Zero Debt</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Elige tu tarjeta</span>
+                    <span>Choose Your Card</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finanzas para el hogar</span>
+                    <span>Home Finance</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finanzas para estudiantes</span>
+                    <span>Student Finance</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finanzas para pymes</span>
+                    <span>SME Finance</span>
                   </div>
                   <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finanzas para todos</span>
+                    <span>Finance for Everyone</span>
                   </div>
                   {/* ... others matching list */}
                 </div>
@@ -543,30 +543,30 @@ export function Header() {
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* PRÉSTAMOS */}
+            {/* LOANS */}
             <Link
               href="/prestamos"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
-              PRÉSTAMOS
+              LOANS
             </Link>
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* TARJETAS DE CRÉDITO */}
+            {/* CREDIT CARDS */}
             <Link
               href="/tarjetas"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
-              TARJETAS DE CRÉDITO
+              CREDIT CARDS
             </Link>
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* Archivos (Styled with Red Arrow per screenshot? No, looks like regular header) */}
+            {/* Archives (Styled with Red Arrow per screenshot? No, looks like regular header) */}
             <div className="px-6 py-4">
               <h3 className="font-bold text-gray-700 text-lg mb-4 flex items-center">
-                Archivos
+                Archives
                 {/* Screenshot has a red arrow line under 'Archivos'? Or separating it? 
                     Actually looks like a red arrow graphic separating sections or highlighting. 
                     For now, sticking to clean typography.

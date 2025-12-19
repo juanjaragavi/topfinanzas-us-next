@@ -20,7 +20,7 @@ Since the APIs work when tested directly but data isn't being sent from the actu
 
 1. Open browser DevTools (F12 or Cmd+Option+I)
 2. Go to Console tab
-3. Navigate to <http://localhost:3030/quiz>
+3. Navigate to <http://localhost:3040/quiz>
 4. Fill out and submit the form
 5. Look for:
    - Any errors in the console
@@ -99,7 +99,7 @@ node scripts/test-full-flow.js
    npm run dev
    ```
 
-2. Open <http://localhost:3030/quiz> in your browser
+2. Open <http://localhost:3040/quiz> in your browser
 
 3. Open DevTools Console (Cmd+Option+I)
 
@@ -164,7 +164,7 @@ Based on the code review, here are the most likely issues:
 - The form checks for existing registration cookies
 - If cookies exist, it might redirect immediately
 
-**Solution:** Clear cookies for localhost:3030
+**Solution:** Clear cookies for localhost:3040
 
 ## 🔧 Debugging Commands
 
@@ -183,7 +183,7 @@ location.reload();
 ### Check if APIs are reachable from browser
 
 ```javascript
-// In browser console on localhost:3030
+// In browser console on localhost:3040
 fetch("/api/sheets", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -202,10 +202,10 @@ fetch("/api/sheets", {
 ## 📋 Checklist
 
 - [ ] Dev server is running (`npm run dev`)
-- [ ] Navigated to <http://localhost:3030/quiz>
+- [ ] Navigated to <http://localhost:3040/quiz>
 - [ ] Browser DevTools Console is open
 - [ ] Browser DevTools Network tab is open
-- [ ] Cookies cleared for localhost:3030
+- [ ] Cookies cleared for localhost:3040
 - [ ] Form filled out completely
 - [ ] Clicked Submit button
 - [ ] Checked Console for errors

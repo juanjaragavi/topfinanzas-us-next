@@ -11,9 +11,9 @@ UK TopFinanzas is a Next.js 14+ financial services comparison website for the UK
 ### Development & Build
 
 ```bash
-npm run dev      # Start development server on port 3030 with Turbo
+npm run dev      # Start development server on port 3040 with Turbo
 npm run build    # Production build
-npm run start    # Start production server on port 3030
+npm run start    # Start production server on port 3040
 npm run lint     # Run ESLint
 ```
 
@@ -194,7 +194,7 @@ const { activateAds } = useAdZep();
 
 ### Critical Performance Settings
 
-- Port 3030 for both development and production
+- Port 3040 for both development and production
 - PM2 process manager for production (`uk-topfinanzas-com` process name)
 - Webpack build workers and parallel compilation enabled
 - CSS optimization and package import optimization
@@ -219,7 +219,7 @@ const { activateAds } = useAdZep();
 
 ## Common Issues & Solutions
 
-1. **Port 3030 in use**: Kill existing process or use different port
+1. **Port 3040 in use**: Kill existing process or use different port
 2. **Git merge conflicts**: Script automatically resolves by keeping current changes
 3. **AdZep not loading**: Check script order in layout.tsx (GTM must load first)
 4. **Form submission failing**: Verify Google Sheets API credentials

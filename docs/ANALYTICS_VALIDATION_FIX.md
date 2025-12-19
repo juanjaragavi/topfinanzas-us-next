@@ -21,7 +21,7 @@ The AdZep SPA Bridge was hitting max retries on pages without ad containers (lik
 
 ### 3. **Context Issues**
 
-- Tests were running on `localhost:3030` (development environment)
+- Tests were running on `localhost:3040` (development environment)
 - Homepage path `/` doesn't have ad containers (expected)
 - No UTM parameters in URL (expected for local testing)
 - Production-oriented validation checks were failing in dev mode
@@ -171,7 +171,7 @@ if (tries >= adZepConfig.verifyRetries) {
 ### 1. **Test Without UTM Parameters (Current State)**
 
 ```bash
-http://localhost:3030/
+http://localhost:3040/
 ```
 
 - ✅ All validation tests should show "SKIPPED" status
@@ -181,7 +181,7 @@ http://localhost:3030/
 ### 2. **Test With UTM Parameters**
 
 ```bash
-http://localhost:3030/?utm_source=test&utm_medium=cpc&utm_campaign=test_campaign
+http://localhost:3040/?utm_source=test&utm_medium=cpc&utm_campaign=test_campaign
 ```
 
 - ✅ UTM validations should run and pass
@@ -191,8 +191,8 @@ http://localhost:3030/?utm_source=test&utm_medium=cpc&utm_campaign=test_campaign
 ### 3. **Test on Article Pages**
 
 ```bash
-http://localhost:3030/blog/some-article
-http://localhost:3030/soluciones-financieras/some-product
+http://localhost:3040/blog/some-article
+http://localhost:3040/soluciones-financieras/some-product
 ```
 
 - ✅ GAM validation should expect ad slots

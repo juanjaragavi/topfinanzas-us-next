@@ -14,7 +14,7 @@ import { analyticsLogger } from "@/lib/logger";
  * "Blocked aria-hidden on a <body> element because it would hide the entire
  * accessibility tree from assistive technology users."
  *
- * Source: :3030/#google_vignette (Google Ads Vignette interstitials)
+ * Source: :3040/#google_vignette (Google Ads Vignette interstitials)
  *
  * This component monitors the body element and removes the aria-hidden attribute
  * if any ad script tries to set it, ensuring the page remains accessible.

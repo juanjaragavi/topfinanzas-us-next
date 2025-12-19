@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     title: "Top Credit Cards With No Annual Fees | TopFinanzas US",
     description:
       "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
-    images: [
-      "https://media.topfinanzas.com/images/placeholder.webp",
-    ], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/placeholder.webp"], // Add if featuredImage is available
   },
 };

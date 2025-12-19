@@ -29,35 +29,35 @@ export const footerNavigation = {
       href: "/",
     },
     {
-      text: "Contáctanos",
-      href: "/contactanos",
+      text: "Contact Us",
+      href: "/contact-us",
     },
     {
-      text: "Nosotros",
-      href: "/nosotros",
+      text: "About Us",
+      href: "/about-us",
     },
   ],
 
   /** Categories section - Updated */
   categoryItems: [
     {
-      text: "Finanzas personales",
+      text: "Personal Finance",
       href: "/finanzas-personales",
     },
     {
-      text: "Soluciones financieras",
+      text: "Financial Solutions",
       href: "/soluciones-financieras",
     },
     {
-      text: "Finanzas para el hogar",
+      text: "Home Finance",
       href: "/finanzas-personales",
     },
     {
-      text: "Finanzas para estudiantes",
+      text: "Student Finance",
       href: "/finanzas-personales",
     },
     {
-      text: "Finanzas para pymes",
+      text: "SME Finance",
       href: "/finanzas-personales",
     },
   ],
@@ -67,7 +67,7 @@ export const footerNavigation = {
 
   /** Social media links */
   socialMedia: {
-    title: "Síguenos en nuestra redes sociales",
+    title: "Follow us on social media",
     links: [
       {
         platform: "Facebook",
@@ -109,16 +109,16 @@ export const footerNavigation = {
   /** Legal links */
   legalLinks: [
     {
-      text: "Términos y condiciones",
-      href: "/terminos-y-condiciones-de-uso",
+      text: "Terms and Conditions",
+      href: "/terms-conditions",
     },
     {
-      text: "Política de privacidad",
-      href: "/politica-privacidad",
+      text: "Privacy Policy",
+      href: "/privacy-policy",
     },
     {
-      text: "Política de Cookies",
-      href: "/politica-de-cookies",
+      text: "Cookie Policy",
+      href: "/cookie-policy",
     },
   ],
 };

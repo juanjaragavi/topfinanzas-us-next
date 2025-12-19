@@ -7,25 +7,22 @@ import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
 
 export const metadata = {
-  title: "Términos y Condiciones - TopFinanzas MX",
+  title: "Política de Privacidad - TopFinanzas MX",
   description:
-    "Lee los Términos y Condiciones para el uso de los servicios y el sitio web de TopFinanzas MX.",
+    "Conoce cómo TopFinanzas MX protege tu información personal y qué derechos tienes sobre tus datos.",
 };
 
-export default async function TermsPage() {
+export default async function PrivacyPolicyPage() {
   // Read the MDX file
-  const filePath = path.join(
-    process.cwd(),
-    "content/legal/terminos-y-condiciones.mdx",
-  );
-  let source = "# Términos y Condiciones\n\nContenido no encontrado.";
+  const filePath = path.join(process.cwd(), "content/legal/privacy-policy.mdx");
+  let source = "# Política de Privacidad\n\nContenido no encontrado.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    logger.error("Error loading terms and conditions file:", error);
+    logger.error("Error loading privacy policy file:", error);
     source =
       "# Error al cargar el contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
   }

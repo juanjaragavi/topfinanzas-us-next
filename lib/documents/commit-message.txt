@@ -1,1 +1,6 @@
-feat: Add Privacy Policy and Terms of Service pages with localization support
+feat: localize about us page for US market
+
+- Updated content to English (US)
+- Added missing sections (Goal, Commitment, Empowering)
+- Updated FAQs to English
+- Aligned visual layout with US requirements

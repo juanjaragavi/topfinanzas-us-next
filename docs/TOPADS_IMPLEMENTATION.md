@@ -38,9 +38,10 @@ TopAds has been successfully integrated into the TopFinanzas US Next.js project.
    - Integrated `<TopAdsSPAHandler />` in body section
 
 2. **`/lib/documents/config.js`**
-  - Updated domain to "us.topfinanzas.com"
-  - Updated logo URL to US-specific path
-  - Updated website name to "TopFinanzas US"
+
+- Updated domain to "us.topfinanzas.com"
+- Updated logo URL to US-specific path
+- Updated website name to "TopFinanzas US"
 
 3. **`/app/utm-test/page.tsx`** (example)
    - Added two test ad placements (square01, square02)

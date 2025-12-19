@@ -3,7 +3,7 @@ export const RECOMMENDER_LOCK_COOKIE = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_STORAGE_KEY = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
 const RECOMMENDER_PATH_PATTERN =
-  /^\/(?:credit-card-recommender|recomendador-de-tarjetas-de-credito)(?:-[a-z0-9-]+)?(?:\/.+)?$/i;
+  /^\/(?:credit-card-recommender|recomendador-de-tarjetas-de-credito|choose-the-perfect-card-for-you)(?:-[a-z0-9-]+)?(?:\/.+)?$/i;
 
 export interface RecommenderLockPayload {
   pathname: string;

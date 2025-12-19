@@ -352,7 +352,7 @@ export default function CreditCardFormToProduct() {
           );
 
           setTimeout(() => {
-            redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
+            redirectWithUtmParams("/choose-the-perfect-card-for-you-1");
           }, 800);
           return;
         }
@@ -404,7 +404,7 @@ export default function CreditCardFormToProduct() {
         );
 
         setTimeout(() => {
-          redirectWithUtmParams("/recomendador-de-tarjetas-de-credito-p1");
+          redirectWithUtmParams("/choose-the-perfect-card-for-you-1");
         }, 800);
       } catch (error) {
         formLogger.error("[QUIZ] Error handling submission", error);

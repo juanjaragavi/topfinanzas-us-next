@@ -7,25 +7,25 @@ import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
 
 export const metadata = {
-  title: "Política de Privacidad - TopFinanzas MX",
+  title: "Política de Cookies - TopFinanzas MX",
   description:
-    "Conoce cómo TopFinanzas MX protege tu información personal y qué derechos tienes sobre tus datos.",
+    "Obtén más información sobre cómo TopFinanzas MX utiliza cookies y tecnologías similares en nuestro sitio web.",
 };
 
-export default async function PrivacyPolicyPage() {
+export default async function CookiePolicyPage() {
   // Read the MDX file
   const filePath = path.join(
     process.cwd(),
-    "content/legal/politica-de-privacidad.mdx",
+    "content/legal/cookie-policy.mdx", // Updated path
   );
-  let source = "# Política de Privacidad\n\nContenido no encontrado.";
+  let source = "# Política de Cookies\n\nContenido no encontrado.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    logger.error("Error loading privacy policy file:", error);
+    logger.error("Error loading cookie policy file:", error); // Updated error message
     source =
       "# Error al cargar el contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
   }
@@ -38,7 +38,7 @@ export default async function PrivacyPolicyPage() {
   });
 
   return (
-    <main className="min-h-screen flex flex-col bg-gray-50">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <div className="container mx-auto px-4 py-12">

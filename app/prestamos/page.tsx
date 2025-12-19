@@ -22,80 +22,80 @@ export default function PrestamosArchivePage() {
 
   const loansContent: PostItem[] = [
     {
-      title: "Préstamo Personal HSBC",
+      title: "HSBC Personal Loan",
       slug: "hsbc-personal-loan",
       description:
-        "Descubra los préstamos personales de HSBC con tasas competitivas, plazos de pago flexibles y un proceso de solicitud rápido.",
+        "Discover HSBC personal loans with competitive rates, flexible repayment terms, and a quick application process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Barclays",
+      title: "Barclays Personal Loan",
       slug: "barclays-personal-loan",
       description:
-        "Explore los préstamos personales de Barclays con tasas competitivas, plazos flexibles y un proceso de solicitud optimizado.",
+        "Explore Barclays personal loans with competitive rates, flexible terms, and a streamlined application process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo para Negocios Funding Circle",
+      title: "Funding Circle Business Loan",
       slug: "funding-circle-personal-loan",
       description:
-        "Funding Circle ofrece préstamos comerciales flexibles con decisiones rápidas y tasas competitivas para pequeñas empresas.",
+        "Funding Circle offers flexible business loans with quick decisions and competitive rates for small businesses.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
     {
-      title: "Préstamo Personal Zopa",
+      title: "Zopa Personal Loan",
       slug: "zopa-personal-loan",
       description:
-        "Explore los préstamos personales de Zopa con tasas personalizadas, sin comisiones ocultas y un proceso rápido en línea.",
+        "Explore Zopa personal loans with personalized rates, no hidden fees, and a quick online process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136611-fotosprestamo-zopa1uk.webp",
       date: "4 April 2025",
       type: "neobank",
     },
     {
-      title: "Préstamo Personal Lloyds Bank",
+      title: "Lloyds Bank Personal Loan",
       slug: "lloyds-bank-personal-loan",
       description:
-        "Explore los préstamos personales de Lloyds Bank con tasas competitivas, opciones de pago flexibles y servicio confiable.",
+        "Explore Lloyds Bank personal loans with competitive rates, flexible repayment options, and reliable service.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal NatWest",
+      title: "NatWest Personal Loan",
       slug: "natwest-personal-loan",
       description:
-        "Explore los préstamos personales de NatWest con tasas competitivas, plazos de pago flexibles y un proceso sencillo.",
+        "Explore NatWest personal loans with competitive rates, flexible repayment terms, and a simple process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Santander UK",
+      title: "Santander UK Personal Loan",
       slug: "santander-uk-personal-loan",
       description:
-        "Explore los préstamos personales de Santander UK con tasas competitivas, plazos de pago flexibles y beneficios exclusivos.",
+        "Explore Santander UK personal loans with competitive rates, flexible repayment terms, and exclusive benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal TSB",
+      title: "TSB Personal Loan",
       slug: "tsb-personal-loan",
       description:
-        "Explore los préstamos personales de TSB con tasas competitivas, opciones de pago flexibles y banca clara y sencilla.",
+        "Explore TSB personal loans with competitive rates, flexible repayment options, and clear, simple banking.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.webp",
       date: "4 April 2025",

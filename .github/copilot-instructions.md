@@ -70,9 +70,9 @@ export default function Step1({ formData, updateFormData }: StepProps) {
 ### Build & Dev Commands
 
 ```bash
-npm run dev      # Development server on port 3030 with Turbo
+npm run dev      # Development server on port 3040 with Turbo
 npm run build    # Production build
-npm run start    # Production server on port 3030
+npm run start    # Production server on port 3040
 ```
 
 ### Git Workflow (Critical)
@@ -187,7 +187,7 @@ export const metadata: Metadata = {
 
 ## Common Gotchas
 
-1. **Port Configuration**: Development runs on port 3030, not 3000
+1. **Port Configuration**: Development runs on port 3040, not 3000
 2. **Analytics Order**: GTM loads before AdZep in layout
 3. **Form Navigation**: Always call `window.scrollTo(0, 0)` on step changes
 4. **Compliance**: Avoid guarantees; use clear disclosures as needed

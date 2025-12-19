@@ -24,8 +24,6 @@ export const metadata: Metadata = {
       "Credit Cards - Types, Benefits, and Keys to Financial Health | TopFinanzas US",
     description:
       "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
-    images: [
-      "https://media.topfinanzas.com/images/placeholder.webp",
-    ], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/placeholder.webp"], // Add if featuredImage is available
   },
 };

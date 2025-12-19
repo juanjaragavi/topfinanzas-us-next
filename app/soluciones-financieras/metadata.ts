@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
         width: 1200, // Adjust if necessary
         height: 630, // Adjust if necessary
-        alt: "Soluciones Financieras de TopFinanzas MX",
+        alt: "Financial Solutions from TopFinanzas US",
       },
     ],
     type: "website",

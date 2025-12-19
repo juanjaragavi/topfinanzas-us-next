@@ -8,26 +8,26 @@ import { useState, useEffect } from "react";
 export default function FinancialSolutionsPage() {
   // Category definitions
   const categories = {
-    creditCards: "Tarjetas",
-    loans: "Préstamos",
+    creditCards: "Credit Cards",
+    loans: "Loans",
   };
 
   // Content type definitions
   const creditCardTypes = {
-    all: "Todas",
-    traditional: "Bancos Tradicionales",
-    neobank: "Neobancos",
-    fintech: "Soluciones Fintech",
+    all: "All",
+    traditional: "Traditional Banks",
+    neobank: "Neobanks",
+    fintech: "Fintech Solutions",
   };
 
   // Loan type definitions
   const loanTypes = {
-    all: "Todos",
-    personal: "Préstamos Personales",
-    sme_fintech: "Fintech para PyMEs",
-    neobank: "Préstamos de Neobancos",
-    marketplace: "Plataformas (Marketplaces)",
-    guide: "Guías",
+    all: "All",
+    personal: "Personal Loans",
+    sme_fintech: "SME Fintech",
+    neobank: "Neobank Loans",
+    marketplace: "Marketplaces",
+    guide: "Guides",
   };
 
   // State for active category and filters with more reliable client-side initialization
@@ -69,90 +69,90 @@ export default function FinancialSolutionsPage() {
   const allLoansContent = [
     // Personal Loans (Traditional Banks)
     {
-      title: "Préstamo Personal HSBC",
+      title: "HSBC Personal Loan",
       slug: "hsbc-personal-loan",
       description:
-        "Descubra los préstamos personales de HSBC con tasas competitivas, plazos de pago flexibles y un proceso de solicitud rápido.",
+        "Discover HSBC personal loans with competitive rates, flexible repayment terms, and a quick application process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Barclays",
+      title: "Barclays Personal Loan",
       slug: "barclays-personal-loan",
       description:
-        "Explore los préstamos personales de Barclays con tasas competitivas, plazos flexibles y un proceso de solicitud optimizado.",
+        "Explore Barclays personal loans with competitive rates, flexible terms, and a streamlined application process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Lloyds Bank",
+      title: "Lloyds Bank Personal Loan",
       slug: "lloyds-bank-personal-loan",
       description:
-        "Explore los préstamos personales de Lloyds Bank con tasas competitivas, opciones de pago flexibles y servicio confiable.",
+        "Explore Lloyds Bank personal loans with competitive rates, flexible repayment options, and reliable service.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal NatWest",
+      title: "NatWest Personal Loan",
       slug: "natwest-personal-loan",
       description:
-        "Explore los préstamos personales de NatWest con tasas competitivas, plazos de pago flexibles y un proceso sencillo.",
+        "Explore NatWest personal loans with competitive rates, flexible repayment terms, and a simple process.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Santander UK",
+      title: "Santander UK Personal Loan",
       slug: "santander-uk-personal-loan",
       description:
-        "Explore los préstamos personales de Santander UK con tasas competitivas, plazos flexibles y beneficios potenciales.",
+        "Explore Santander UK personal loans with competitive rates, flexible repayment terms, and exclusive benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal TSB",
+      title: "TSB Personal Loan",
       slug: "tsb-personal-loan",
       description:
-        "Explore los préstamos personales de TSB con tasas competitivas, opciones de pago flexibles y banca sencilla.",
+        "Explore TSB personal loans with competitive rates, flexible repayment options, and clear, simple banking.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Virgin Money",
+      title: "Virgin Money Personal Loan",
       slug: "virgin-money-personal-loan",
       description:
-        "Explore los préstamos personales de Virgin Money con tasas competitivas, plazos flexibles y beneficios exclusivos.",
+        "Explore Virgin Money personal loans with competitive rates, flexible terms, and exclusive benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Halifax",
+      title: "Halifax Personal Loan",
       slug: "halifax-personal-loan",
       description:
-        "Explore los préstamos personales de Halifax con tasas competitivas, opciones de pago flexibles y servicio confiable.",
+        "Explore Halifax personal loans with competitive rates, flexible repayment options, and reliable service.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136403-fotosprestamo-halifax1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
     {
-      title: "Préstamo Personal Nationwide",
+      title: "Nationwide Personal Loan",
       slug: "nationwide-personal-loan",
       description:
-        "Explore los préstamos personales de Nationwide con tasas competitivas, plazos flexibles y beneficios para miembros.",
+        "Explore Nationwide personal loans with competitive rates, flexible terms, and member benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.webp",
       date: "4 April 2025",
@@ -160,30 +160,30 @@ export default function FinancialSolutionsPage() {
     },
     // Personal Loans (Fintech/Neobank)
     {
-      title: "Préstamo Personal Revolut",
+      title: "Revolut Personal Loan",
       slug: "revolut-personal-loan",
       description:
-        "Explore los préstamos personales de Revolut que ofrecen decisiones rápidas, plazos flexibles y gestión desde la app.",
+        "Explore Revolut personal loans offering quick decisions, flexible terms, and in-app management.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.webp",
       date: "4 April 2025",
       type: "fintech", // Could also be 'personal' depending on desired filter logic
     },
     {
-      title: "Préstamo Personal Monzo",
+      title: "Monzo Personal Loan",
       slug: "monzo-personal-loan",
       description:
-        "Explore los préstamos personales de Monzo que ofrecen decisiones rápidas, términos claros y gestión desde la app.",
+        "Explore Monzo personal loans offering quick decisions, clear terms, and in-app management.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.webp",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
     {
-      title: "Préstamo Personal Starling Bank",
+      title: "Starling Bank Personal Loan",
       slug: "starling-bank-personal-loan",
       description:
-        "Explore los préstamos personales de Starling Bank con tasas competitivas, términos claros y gestión vía app.",
+        "Explore Starling Bank personal loans with competitive rates, clear terms, and app-based management.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.webp",
       date: "4 April 2025",
@@ -191,70 +191,70 @@ export default function FinancialSolutionsPage() {
     },
     // SME Fintech Loans
     {
-      title: "Préstamo para Negocios Funding Circle",
+      title: "Funding Circle Business Loan",
       slug: "funding-circle-personal-loan", // Keep slug as created
       description:
-        "Explore los préstamos para negocios de Funding Circle que ofrecen soluciones de financiamiento rápidas y flexibles.",
+        "Explore Funding Circle business loans offering fast and flexible financing solutions.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
     {
-      title: "Marketplace Funding Options",
+      title: "Funding Options Marketplace",
       slug: "funding-options-personal-loan", // Keep slug as created
       description:
-        "Explore Funding Options, una plataforma líder que conecta a PyMEs con diversas soluciones de financiamiento.",
+        "Explore Funding Options, a leading platform connecting SMEs with diverse financing solutions.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
     {
-      title: "Flexi-Loan de iwoca",
+      title: "iwoca Flexi-Loan",
       slug: "iwoca-personal-loan", // Keep slug as created
       description:
-        "Explore el Flexi-Loan de iwoca, que ofrece soluciones de capital de trabajo rápidas para PyMEs.",
+        "Explore the iwoca Flexi-Loan, offering fast working capital solutions for SMEs.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
     {
-      title: "Crédito para Negocios MarketFinance",
+      title: "MarketFinance Business Credit",
       slug: "marketfinance-personal-loan", // Keep slug as created
       description:
-        "Explore las soluciones de MarketFinance para PyMEs, incluyendo préstamos rápidos y factoraje de facturas.",
+        "Explore MarketFinance solutions for SMEs, including fast loans and invoice factoring.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
     {
-      title: "Plataforma Funding Xchange",
+      title: "Funding Xchange Platform",
       slug: "funding-xchange-personal-loan", // Keep slug as created
       description:
-        "Explore Funding Xchange, una plataforma inteligente que ayuda a PyMEs a comparar opciones de financiamiento.",
+        "Explore Funding Xchange, a smart platform helping SMEs compare financing options.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
     {
-      title: "Financiamiento Capify",
+      title: "Capify Financing",
       slug: "capify-personal-loan", // Keep slug as created
       description:
-        "Explore las soluciones de financiamiento de Capify para PyMEs, incluyendo adelantos de efectivo y préstamos.",
+        "Explore Capify financing solutions for SMEs, including merchant cash advances and loans.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
     {
-      title: "Préstamos Fleximize",
+      title: "Fleximize Loans",
       slug: "fleximize-personal-loan", // Keep slug as created
       description:
-        "Explore los préstamos flexibles de Fleximize que ofrecen opciones de pago personalizadas para PyMEs.",
+        "Explore Fleximize flexible loans offering personalized repayment options for SMEs.",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.webp",
       date: "4 April 2025",
@@ -265,60 +265,60 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
-      title: "Tarjeta RBS Purchase & Balance Transfer",
+      title: "RBS Purchase & Balance Transfer Card",
       slug: "rbs-purchase-balance-transfer-card",
       description:
-        "La tarjeta RBS Purchase & Balance Transfer ofrece 0% de interés en compras hasta por 20 meses y 0% en transferencias de saldo por hasta 18 meses. Sin anualidad.",
+        "The RBS Purchase & Balance Transfer card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjetas de Crédito Bank of Scotland",
+      title: "Bank of Scotland Credit Cards",
       slug: "bank-of-scotland-credit-cards",
       description:
-        "Bank of Scotland ofrece tarjetas para gastos diarios, transferencias de saldo y construcción de crédito. Verifica tu elegibilidad sin afectar tu historial.",
+        "Bank of Scotland offers cards for everyday spending, balance transfers, and credit building. Check your eligibility without affecting your credit score.",
       image:
         "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito First Direct",
+      title: "First Direct Credit Card",
       slug: "first-direct-credit-card",
       description:
-        "La tarjeta First Direct 1st ofrece 0% de interés en compras por 12 meses, tasas competitivas sin anualidad y servicio al cliente galardonado 24/7.",
+        "The First Direct 1st card offers 0% interest on purchases for 12 months, competitive rates with no annual fee, and award-winning 24/7 customer service.",
       image:
         "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito The Co-operative Bank",
+      title: "The Co-operative Bank Credit Card",
       slug: "the-co-operative-bank-credit-card",
       description:
-        "La tarjeta Members de The Co-operative ofrece 0.5% de cashback en tiendas Co-op y 0.3% en todos los demás lugares, sin comisión anual.",
+        "The Co-operative Members card offers 0.5% cashback at Co-op stores and 0.3% everywhere else, with no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito M&S Rewards",
+      title: "M&S Rewards Credit Card",
       slug: "ms-rewards-credit-card",
       description:
-        "La tarjeta M&S Rewards ofrece puntos en todos tus gastos en M&S y más allá, beneficios exclusivos para miembros y tasas competitivas.",
+        "The M&S Rewards card offers points on all your spending at M&S and beyond, exclusive member benefits, and competitive rates.",
       image:
         "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjetas de Crédito Tesco Bank Clubcard",
+      title: "Tesco Bank Clubcard Credit Cards",
       slug: "tesco-bank-clubcard-credit-cards",
       description:
-        "Descubra las tarjetas Tesco Bank Clubcard con tasas del 0%, opciones de CAT bajo y puntos Clubcard en tus gastos diarios.",
+        "Discover Tesco Bank Clubcard cards with 0% rates, low APR options, and Clubcard points on your everyday spending.",
       image:
         "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
       date: "24 October 2025",
@@ -328,161 +328,161 @@ export default function FinancialSolutionsPage() {
       title: "American Express Preferred Rewards Gold",
       slug: "american-express-preferred-rewards-gold-credit-card",
       description:
-        "La tarjeta American Express Gold ofrece puntos Membership Rewards premium, seguro de viaje integral y beneficios de estilo de vida exclusivos.",
+        "The American Express Gold card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Nationwide Building Society",
+      title: "Nationwide Building Society Credit Card",
       slug: "nationwide-building-society-credit-card",
       description:
-        "La tarjeta Member de Nationwide ofrece dos opciones al 0%: hasta 24 meses en transferencias de saldo o 15 meses en compras.",
+        "The Nationwide Member card offers two 0% options: up to 24 months on balance transfers or 15 months on purchases.",
       image:
         "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito HSBC Rewards",
+      title: "HSBC Rewards Credit Card",
       slug: "hsbc-rewards-credit-card",
       description:
-        "La tarjeta HSBC Rewards ofrece puntos en tus gastos diarios, 0% de interés en compras por 6 meses y un bono de bienvenida.",
+        "The HSBC Rewards card offers points on your everyday spending, 0% interest on purchases for 6 months, and a welcome bonus.",
       image:
         "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
       date: "24 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Ocean",
+      title: "Ocean Credit Card",
       slug: "ocean-credit-card",
       description:
-        "La tarjeta Ocean ofrece límites de crédito flexibles sin anualidad. Verifica tu elegibilidad rápido sin afectar tu historial crediticio.",
+        "The Ocean card offers flexible credit limits with no annual fee. Check your eligibility quickly without affecting your credit score.",
       image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Fluid",
+      title: "Fluid Credit Card",
       slug: "fluid-credit-card",
       description:
-        "La tarjeta Fluid ofrece 0% de interés en transferencias de saldo por 9 meses, ayudándote a ahorrar y liquidar deudas más rápido.",
+        "The Fluid card offers 0% interest on balance transfers for 9 months, helping you save and pay off debt faster.",
       image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta John Lewis Partnership",
+      title: "John Lewis Partnership Card",
       slug: "john-lewis-partnership-card",
       description:
-        "La tarjeta John Lewis Partnership te permite ganar puntos valiosos en tus compras diarias en John Lewis, Waitrose y más allá.",
+        "The John Lewis Partnership card lets you earn valuable points on your everyday purchases at John Lewis, Waitrose, and beyond.",
       image:
         "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito 118 118 Money",
+      title: "118 118 Money Credit Card",
       slug: "118-118-money-credit-card",
       description:
-        "La tarjeta 118 118 Money ofrece límites personalizados y términos claros para ayudarte a construir o mejorar tu historial crediticio.",
+        "The 118 118 Money card offers personalized limits and clear terms to help you build or improve your credit history.",
       image:
         "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Vanquis",
+      title: "Vanquis Credit Card",
       slug: "vanquis-credit-card",
       description:
-        "Las tarjetas Vanquis ofrecen límites personalizados y funciones galardonadas para construir crédito, ideales para mejorar tu perfil.",
+        "Vanquis cards offer personalized limits and award-winning features for building credit, ideal for improving your profile.",
       image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta Capital One UK Classic",
+      title: "Capital One UK Classic Card",
       slug: "capital-one-uk-credit-card",
       description:
-        "La tarjeta Capital One Classic te ayuda a mejorar tu crédito con un límite inicial manejable, pagos flexibles y sin comisión anual.",
+        "The Capital One Classic card helps you improve your credit with a manageable initial limit, flexible payments, and no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Marbles",
+      title: "Marbles Credit Card",
       slug: "marbles-credit-card",
       description:
-        "La tarjeta Marbles te ayuda a gestionar tus finanzas con un límite manejable, verificador rápido y herramientas flexibles.",
+        "The Marbles card helps you manage your finances with a manageable limit, fast eligibility checker, and flexible tools.",
       image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Aqua",
+      title: "Aqua Credit Card",
       slug: "aqua-credit-card",
       description:
-        "La tarjeta Aqua ofrece límites personalizados y protección contra fraude 24/7 para ayudarte a construir crédito con total confianza.",
+        "The Aqua card offers personalized limits and 24/7 fraud protection to help you build credit with total confidence.",
       image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Bip",
+      title: "Bip Credit Card",
       slug: "bip-credit-card",
       description:
-        "Descubra la tarjeta Bip: una solución de crédito digital sin tarjeta física, sin comisiones ocultas y con control total desde tu celular.",
+        "Discover the Bip card: a digital credit solution with no physical card, no hidden fees, and total control from your phone.",
       image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Lloyds Bank",
+      title: "Lloyds Bank Credit Card",
       slug: "lloyds-bank-credit-card",
       description:
-        "Explore la tarjeta Lloyds Bank con tasas competitivas, sin anualidad y programa de ofertas diarias de cashback.",
+        "Explore the Lloyds Bank card with competitive rates, no annual fee, and a daily cashback offers program.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito NatWest",
+      title: "NatWest Credit Card",
       slug: "natwest-credit-card",
       description:
-        "Descubra la tarjeta NatWest con programa MyRewards, integración móvil y opciones de pago flexibles para tus gastos.",
+        "Discover the NatWest card with MyRewards program, mobile integration, and flexible payment options for your spending.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Santander UK",
+      title: "Santander UK Credit Card",
       slug: "santander-uk-credit-card",
       description:
-        "Conozca la tarjeta Santander UK con cashback All in One, sin comisiones en el extranjero y opciones de transferencia de saldo.",
+        "Meet the Santander UK card with All in One cashback, no foreign transaction fees, and balance transfer options.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito TSB",
+      title: "TSB Credit Card",
       slug: "tsb-credit-card",
       description:
-        "Explore la tarjeta TSB con valor diario, comisiones bajas e integración total con las plataformas de banca TSB.",
+        "Explore the TSB card with everyday value, low fees, and full integration with TSB banking platforms.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Virgin Money",
+      title: "Virgin Money Credit Card",
       slug: "virgin-money-credit-card",
       description:
-        "Descubra la tarjeta Virgin Money con recompensas exclusivas, puntos Virgin y ofertas en todo el ecosistema Virgin.",
+        "Discover the Virgin Money card with exclusive rewards, Virgin points, and offers across the Virgin ecosystem.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.webp",
       date: "2 April 2025",
@@ -492,76 +492,76 @@ export default function FinancialSolutionsPage() {
       title: "Halifax World Elite MasterCard",
       slug: "halifax-world-elite-mastercard",
       description:
-        "Explore la Halifax World Elite MasterCard, que ofrece beneficios de viaje premium, seguro integral y recompensas exclusivas.",
+        "Explore the Halifax World Elite MasterCard, offering premium travel benefits, comprehensive insurance, and exclusive rewards.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719906760-top_prestamos-y-tarjetas-uk_v1-14.webp",
       date: "4 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Monzo",
+      title: "Monzo Credit Card",
       slug: "monzo-credit-card",
       description:
-        "Conozca la tarjeta Monzo con notificaciones de gasto en tiempo real, herramientas de presupuesto y gestión 100% digital.",
+        "Meet the Monzo card with real-time spending notifications, budgeting tools, and 100% digital management.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.webp",
       date: "2 April 2025",
       type: "neobank",
     },
     {
-      title: "Tarjeta de Crédito Revolut",
+      title: "Revolut Credit Card",
       slug: "revolut-credit-card",
       description:
-        "Explore la tarjeta Revolut con capacidades multimoneda, tasas competitivas y control total para estilos de vida internacionales.",
+        "Explore the Revolut card with multi-currency capabilities, competitive rates, and total control for international lifestyles.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.webp",
       date: "2 April 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Starling Bank",
+      title: "Starling Bank Credit Card",
       slug: "starling-bank-credit-card",
       description:
-        "Descubra la tarjeta Starling Bank con precios transparentes, banca ética y funciones digitales avanzadas para tu dinero.",
+        "Discover the Starling Bank card with transparent pricing, ethical banking, and advanced digital features for your money.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.webp",
       date: "2 April 2025",
       type: "neobank",
     },
     {
-      title: "Tarjeta de Crédito Curve",
+      title: "Curve Credit Card",
       slug: "curve-credit-card",
       description:
-        "Conoce la innovadora tarjeta Curve que consolida todas tus tarjetas en una sola con funciones inteligentes y recompensas.",
+        "Meet the innovative Curve card that consolidates all your cards into one with smart features and rewards.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
       date: "2 April 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta Barclaycard Avios Plus",
+      title: "Barclaycard Avios Plus Card",
       slug: "barclaycard-avios-plus",
       description:
-        "La tarjeta Barclaycard Avios Plus ofrece beneficios de viaje premium y generosos puntos Avios para mejorar tu experiencia.",
+        "The Barclaycard Avios Plus card offers premium travel benefits and generous Avios points to enhance your experience.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Yonder",
+      title: "Yonder Credit Card",
       slug: "yonder-credit-card",
       description:
-        "La tarjeta gratuita Yonder otorga 1 punto por cada £1 gastada sin comisiones en el extranjero y bonos exclusivos por consumo.",
+        "The free Yonder card awards 1 point for every £1 spent with no foreign transaction fees and exclusive dining bonuses.",
       image:
         "https://cdn.prod.website-files.com/6209512878b45f39119ebfb5/6839943447d06a3292522ecd_head-p-800.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Zopa",
+      title: "Zopa Credit Card",
       slug: "zopa-credit-card",
       description:
-        "La tarjeta Zopa te da el control total con una app intuitiva, notificaciones al instante y funciones innovadoras como Credit Cushion.",
+        "The Zopa card gives you total control with an intuitive app, instant notifications, and innovative features like Credit Cushion.",
       image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
@@ -644,13 +644,13 @@ export default function FinancialSolutionsPage() {
   const content = (
     <div>
       <h1 className="text-4xl font-bold mb-6 text-left sm:text-left">
-        Soluciones Financieras
+        Financial Solutions
       </h1>
 
       <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
-        Encuentra información detallada sobre las mejores tarjetas de crédito
-        disponibles, los requisitos para solicitarlas y guías completas para
-        ayudarte a elegir la mejor opción según tus necesidades financieras.
+        Find detailed information on the best credit cards available,
+        application requirements, and comprehensive guides to help you choose
+        the best option for your financial needs.
       </p>
 
       {/* Main category selector */}
@@ -707,7 +707,7 @@ export default function FinancialSolutionsPage() {
                   description={post.description}
                   image={post.image}
                   slug={post.slug}
-                  category="Soluciones Financieras"
+                  category="Financial Solutions"
                   categorySlug="/soluciones-financieras"
                   date={post.date}
                   type={post.type}
@@ -755,7 +755,7 @@ export default function FinancialSolutionsPage() {
                   description={post.description}
                   image={post.image}
                   slug={post.slug}
-                  category="Soluciones Financieras"
+                  category="Financial Solutions"
                   categorySlug="/soluciones-financieras"
                   date={post.date}
                   type={post.type}
@@ -771,18 +771,17 @@ export default function FinancialSolutionsPage() {
       {/* CTA section */}
       <div className="bg-blue-50 p-8 rounded-xl shadow-sm mb-10">
         <h2 className="text-2xl font-bold mb-4 text-left sm:text-left">
-          ¿Buscas la tarjeta ideal para ti?
+          Looking for the perfect card for you?
         </h2>
         <p className="text-gray-700 mb-6 text-left sm:text-left">
-          Utiliza nuestro recomendador de tarjetas de crédito y encuentra la
-          opción que mejor se adapte a tu perfil financiero y necesidades
-          específicas.
+          Use our credit card recommender to find the option that best fits your
+          financial profile and specific needs.
         </p>
         <Link
           href="/recomendador-de-tarjetas-de-credito-p1"
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 inline-block transition-colors rounded-full"
         >
-          Ir al Recomendador
+          Go to Recommender
         </Link>
       </div>
     </div>
@@ -791,9 +790,9 @@ export default function FinancialSolutionsPage() {
   return (
     <BlogLayout
       metadata={{
-        title: "Soluciones Financieras - TopFinanzas MX",
+        title: "Financial Solutions - TopFinanzas US",
         description:
-          "Descubre información sobre las mejores tarjetas de crédito, requisitos y guías completas para elegir la opción adecuada para tus necesidades financieras.",
+          "Discover information on the best credit cards, requirements, and comprehensive guides to choose the right option for your financial needs.",
       }}
     >
       {content}

@@ -100,7 +100,7 @@ npm run dev
 
 ### Option 2: Visual Test Page
 
-Open: `http://localhost:3030/test-overlay-fix.html`
+Open: `http://localhost:3040/test-overlay-fix.html`
 
 Run these tests:
 

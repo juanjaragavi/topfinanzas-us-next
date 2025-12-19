@@ -317,7 +317,7 @@ export default function Step3({
             className="text-[10px] sm:text-sm text-gray-700 leading-tight"
           >
             {step3Strings.checkbox.split(" acá")[0]}{" "}
-            <a href="/politica-privacidad" className="font-bold">
+            <a href="/privacy-policy" className="font-bold">
               acá
             </a>
           </Label>
