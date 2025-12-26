@@ -1,5 +1,7 @@
-fix(ui): restore hero background image visibility
+fix(metadata): localize metadata for US market
 
-- Remove negative z-index from Hero Image component to prevent it from being hidden behind the main background
-- Add relative positioning and positive z-index to Hero content container to ensure text remains visible on top of the image
-- Ensure visual parity with legacy WordPress site for the Hero section
+- Update base URL to us.topfinanzas.com
+- Translate title, description, and keywords to English
+- Update Open Graph and Twitter metadata to English and US locale
+- Update HTML lang attribute to en-us
+- Update JSON-LD schema with US organization details and English logo

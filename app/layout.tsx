@@ -93,26 +93,27 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "TopFinanzas US | Make smarter money decisions",
+  // Updated Title and Description for US focus
+  title: "Top Finance US | Choose wisely, live fully",
   description:
-    "Actionable guidance on credit cards, personal loans, and personal finance for the US market.",
+    "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
   keywords:
-    "credit cards, personal loans, personal finance, financial education, TopFinanzas US",
+    "credit cards us, personal loans, compare cards, financial education, Top Finance US", // Updated keywords
   // Removed generator tag
 
   // Added Open Graph Metadata
   openGraph: {
-    title: "TopFinanzas US | Make smarter money decisions",
+    title: "Top Finance US | Choose wisely, live fully",
     description:
-      "Actionable guidance on credit cards, personal loans, and personal finance for the US market.",
+      "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
     url: baseUrl,
-    siteName: "TopFinanzas US",
+    siteName: "Top Finance US",
     images: [
       {
         url: `https://media.topfinanzas.com/images/placeholder-image.webp`, // Using the provided image URL
         width: 900, // Assuming standard OG image width
         height: 600, // Assuming standard OG image height
-        alt: "TopFinanzas US",
+        alt: "Top Finance US - Financial Guide", // Updated Alt Text
       },
     ],
     locale: "en_US",
@@ -122,9 +123,9 @@ export const metadata: Metadata = {
   // Added Twitter Card Metadata
   twitter: {
     card: "summary_large_image",
-    title: "TopFinanzas US | Make smarter money decisions",
+    title: "Top Finance US | Choose wisely, live fully",
     description:
-      "Actionable guidance on credit cards, personal loans, and personal finance for the US market.",
+      "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
     // siteId: "[Optional Twitter ID]",
     // creator: "[Optional Twitter Handle]",
     // creatorId: "[Optional Twitter ID]",
@@ -148,7 +149,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-US">
+    <html lang="en-us">
       <head>
         {/* Inline critical CSS for faster rendering */}
         <style
@@ -178,11 +179,19 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                name: "TopFinanzas US",
+                name: "Top Finance US",
                 url: baseUrl,
-                logo: "https://media.topfinanzas.com/images/logo-spanish.webp",
+                logo: "https://media.topfinanzas.com/images/logo-english.webp", // Assuming english logo exists or using fallback
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "PANAMA, PANAMA CITY",
+                  addressLocality: "AV. AQUILINO DE LA GUARDIA",
+                  postalCode: "OCEAN BUSINESS PLAZA BUILDING, FLOOR 12",
+                  addressCountry: "PA",
+                },
                 contactPoint: {
                   "@type": "ContactPoint",
+                  telephone: "+1-800-123-4567", // US Example Placeholder
                   contactType: "customer support",
                   email: "info@topfinanzas.com",
                 },
@@ -250,8 +259,7 @@ export default function RootLayout({
                 <UtmLinkInjector />
                 {ENABLE_ADZEP && <AdZepSPABridge />}
                 {ENABLE_ADZEP && <AdZepInterstitialBlocker />}
-                <AdZepAccessibilityFix />{" "}
-                {/* Always run - Google Ads vignette also sets aria-hidden on body */}
+                <AdZepAccessibilityFix /> {/* Always run - Google Ads vignette also sets aria-hidden on body */}
                 {ENABLE_ADZEP && <AdZepBackdropCleaner />}
                 <TopAdsSPAHandler />
                 {process.env.NODE_ENV === "development" && <UtmMonitor />}
