@@ -67,7 +67,7 @@ const poppins = localFont({
 });
 
 // Define base URL for metadata
-const baseUrl = "https://mx.topfinanzas.com";
+const baseUrl = "https://us.topfinanzas.com";
 
 // Temporarily disable AdZep script to isolate TopAds testing
 const ENABLE_ADZEP = false;
@@ -93,39 +93,39 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  // Updated Title and Description for MX focus
-  title: "Top Finanzas México | Decide sabiamente, vive plenamente",
+  // Updated Title and Description for US focus
+  title: "Top Finance US | Choose wisely, live fully",
   description:
-    "Guía financiera líder en México. Consejos expertos sobre tarjetas de crédito, préstamos y finanzas personales.",
+    "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
   keywords:
-    "tarjetas de crédito méxico, préstamos personales, comparar tarjetas, educación financiera, Top Finanzas México", // Updated keywords
+    "credit cards us, personal loans, compare cards, financial education, Top Finance US", // Updated keywords
   // Removed generator tag
 
   // Added Open Graph Metadata
   openGraph: {
-    title: "Top Finanzas México | Decide sabiamente, vive plenamente",
+    title: "Top Finance US | Choose wisely, live fully",
     description:
-      "Guía financiera líder en México. Consejos expertos sobre tarjetas de crédito, préstamos y finanzas personales.",
+      "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
     url: baseUrl,
-    siteName: "Top Finanzas MX",
+    siteName: "Top Finance US",
     images: [
       {
         url: `https://media.topfinanzas.com/images/placeholder-image.webp`, // Using the provided image URL
         width: 900, // Assuming standard OG image width
         height: 600, // Assuming standard OG image height
-        alt: "Top Finanzas MX - Guía Financiera", // Updated Alt Text
+        alt: "Top Finance US - Financial Guide", // Updated Alt Text
       },
     ],
-    locale: "es_MX",
+    locale: "en_US",
     type: "website",
   },
 
   // Added Twitter Card Metadata
   twitter: {
     card: "summary_large_image",
-    title: "Top Finanzas México | Decide sabiamente, vive plenamente",
+    title: "Top Finance US | Choose wisely, live fully",
     description:
-      "Guía financiera líder en México. Consejos expertos sobre tarjetas de crédito, préstamos y finanzas personales.",
+      "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
     // siteId: "[Optional Twitter ID]",
     // creator: "[Optional Twitter Handle]",
     // creatorId: "[Optional Twitter ID]",
@@ -149,7 +149,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-mx">
+    <html lang="en-us">
       <head>
         {/* Inline critical CSS for faster rendering */}
         <style
@@ -179,9 +179,9 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                name: "Top Finanzas MX",
+                name: "Top Finance US",
                 url: baseUrl,
-                logo: "https://media.topfinanzas.com/images/logo-spanish.webp", // Assuming spanish logo exists or using fallback
+                logo: "https://media.topfinanzas.com/images/logo-english.webp", // Assuming english logo exists or using fallback
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "PANAMA, PANAMA CITY",
@@ -191,7 +191,7 @@ export default function RootLayout({
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  telephone: "+52-55-1234-5678", // MX Example Placeholder
+                  telephone: "+1-800-123-4567", // US Example Placeholder
                   contactType: "customer support",
                   email: "info@topfinanzas.com",
                 },
