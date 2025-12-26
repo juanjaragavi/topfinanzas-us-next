@@ -1,0 +1,5 @@
+fix(ui): restore hero background image visibility
+
+- Remove negative z-index from Hero Image component to prevent it from being hidden behind the main background
+- Add relative positioning and positive z-index to Hero content container to ensure text remains visible on top of the image
+- Ensure visual parity with legacy WordPress site for the Hero section
