@@ -226,16 +226,28 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section - Solid Brand Blue */}
-      <section className="bg-[#015ECC] text-white px-6 py-24 md:py-32 lg:py-40">
-        <div className="container mx-auto px-4 text-left">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 drop-shadow-sm leading-tight">
-            Bienvenidos a Top Finanzas
-          </h1>
-          <p className="text-white text-2xl md:text-xl lg:text-2xl max-w-3xl mb-8 md:mb-12 drop-shadow-sm leading-relaxed font-medium">
-            Donde cada decisión financiera amplía tu mundo. <br />
-            Decide sabiamente, vive plenamente.
-          </p>
+      {/* Hero Section - Desktop Parity Refactor */}
+      <section className="relative w-full min-h-[400px] flex items-center py-12 md:py-0">
+        <Image
+          src="https://media.topfinanzas.com/images/bannerppal-1536x400-1.webp"
+          alt="Top Finance Hero"
+          fill
+          className="object-cover object-[75%_center] md:object-center"
+          priority
+          quality={100}
+        />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-[600px] lg:max-w-[700px] pt-8 md:pt-0">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-6 leading-tight drop-shadow-sm">
+              Welcome to <br />
+              Top Finance
+            </h1>
+            <p className="text-white text-lg md:text-xl lg:text-[1.35rem] leading-relaxed font-medium drop-shadow-sm">
+              Where every financial decision expands your world.
+              <br />
+              Choose wisely, live fully.
+            </p>
+          </div>
         </div>
       </section>
 

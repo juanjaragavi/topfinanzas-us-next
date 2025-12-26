@@ -1,9 +1,5 @@
-refactor: localize URL paths and update navigation
+fix(ui): restore hero background image visibility
 
-- Rename 'prestamos' to 'loans'
-- Rename 'tarjetas' to 'cards'
-- Rename 'campana-quiz' to 'campaign-quiz'
-- Update sitemap.xml with new paths
-- Update headerNavigation.ts with new paths
-- Update mobile menu in header.tsx to show only Personal Finance and Financial Solutions
-- Update internal links in various files
+- Remove negative z-index from Hero Image component to prevent it from being hidden behind the main background
+- Add relative positioning and positive z-index to Hero content container to ensure text remains visible on top of the image
+- Ensure visual parity with legacy WordPress site for the Hero section
