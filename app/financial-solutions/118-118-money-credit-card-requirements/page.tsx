@@ -153,8 +153,13 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of identity:</span>{" "}
+<<<<<<< Updated upstream
                       A valid UK passport, driving licence, or national identity
                       card. This confirms your identity and age.
+=======
+                      A valid US passport, driver's license, or state ID card.
+                      This confirms your identity and age.
+>>>>>>> Stashed changes
                     </div>
                   </div>
 
@@ -165,8 +170,14 @@ export default function Money118118CreditCardRequirementsPage() {
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of address:</span>{" "}
                       Recent documents dated within the last 3 months, such as
+<<<<<<< Updated upstream
                       utility bills, council tax statements, or bank statements.
                       This confirms your current UK residential address.
+=======
+                      utility bills, property tax statements, or bank
+                      statements. This confirms your current US residential
+                      address.
+>>>>>>> Stashed changes
                     </div>
                   </div>
 
@@ -176,8 +187,13 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Bank details:</span> Your
+<<<<<<< Updated upstream
                       UK bank account number and sort code for setting up direct
                       debit payments and receiving refunds if applicable.
+=======
+                      US bank account number and routing number for setting up
+                      autopay payments and receiving refunds if applicable.
+>>>>>>> Stashed changes
                     </div>
                   </div>
 
@@ -190,8 +206,13 @@ export default function Money118118CreditCardRequirementsPage() {
                         Employment/income information:
                       </span>{" "}
                       Details of your employment status and income to support
+<<<<<<< Updated upstream
                       the affordability assessment. This may include payslips or
                       benefit statements.
+=======
+                      the affordability assessment. This may include pay stubs
+                      or benefit statements.
+>>>>>>> Stashed changes
                     </div>
                   </div>
                 </div>
@@ -331,9 +352,15 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Credit score improvement:
                       </span>{" "}
+<<<<<<< Updated upstream
                       Responsible use of the card is reported to UK credit
                       reference agencies, helping you build or rebuild your
                       credit history over time.
+=======
+                      Responsible use of the card is reported to credit bureaus,
+                      helping you build or rebuild your credit history over
+                      time.
+>>>>>>> Stashed changes
                     </div>
                   </div>
 
@@ -370,9 +397,15 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Section 75 protection:
                       </span>{" "}
+<<<<<<< Updated upstream
                       Purchases between £100.01 and £30,000 are protected under
                       the Consumer Credit Act 1974, Section 75, providing
                       additional consumer protection.
+=======
+                      Purchases between $100.01 and $30,000 are protected under
+                      federal consumer protection laws, providing additional
+                      consumer protection.
+>>>>>>> Stashed changes
                     </div>
                   </div>
                 </div>
@@ -629,9 +662,14 @@ export default function Money118118CreditCardRequirementsPage() {
                     informational purposes only and does not constitute
                     financial advice. Always carefully review the terms and
                     conditions before applying for any credit product. 118 118
+<<<<<<< Updated upstream
                     Money is the trading name of Madison CF UK Limited, which is
                     authorised and regulated by the Financial Conduct Authority
                     (FRN 741774). Consider seeking independent financial advice
+=======
+                    Money is authorized and regulated by relevant financial
+                    authorities. Consider seeking independent financial advice
+>>>>>>> Stashed changes
                     if you're unsure whether this product is suitable for your
                     circumstances.
                   </p>

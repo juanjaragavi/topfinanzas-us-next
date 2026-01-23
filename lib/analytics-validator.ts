@@ -642,7 +642,7 @@ class AnalyticsValidator {
     } catch (error) {
       logger.warn(
         "[AnalyticsValidator] Error while verifying GAM services",
-        error,
+        { error },
       );
       // Fallback check
       servicesEnabled = typeof googletag.pubads === "function";

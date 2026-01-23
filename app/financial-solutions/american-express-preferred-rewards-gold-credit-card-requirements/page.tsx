@@ -88,12 +88,21 @@ export default function AmexGoldRequirementsPage() {
                     UK Residency Status
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
+<<<<<<< Updated upstream
                     Applicants must be permanent UK residents with a fixed UK
                     address where you've lived for at least three years. Proof
                     of UK residency will be verified through credit checks and
                     may require additional documentation. Temporary residents,
                     students on short-term visas, or those who have recently
                     moved to the UK may find approval challenging.
+=======
+                    Applicants must be permanent US residents with a fixed US
+                    address. Proof of US residency will be verified through
+                    credit checks and may require additional documentation.
+                    Temporary residents, students on short-term visas, or those
+                    who have recently moved to the US may find approval
+                    challenging.
+>>>>>>> Stashed changes
                   </p>
                 </div>
 
@@ -105,10 +114,17 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     You must hold an active UK bank or building society current
                     account in your own name. This account will be used for
+<<<<<<< Updated upstream
                     Direct Debit payments towards your card balance. American
                     Express requires a UK-based banking relationship to
                     facilitate secure payment collection and ensure compliance
                     with UK financial regulations.
+=======
+                    payments towards your card balance. American Express
+                    requires a US-based banking relationship to facilitate
+                    secure payment collection and ensure compliance with US
+                    financial regulations.
+>>>>>>> Stashed changes
                   </p>
                 </div>
 
@@ -119,6 +135,7 @@ export default function AmexGoldRequirementsPage() {
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     American Express will conduct a comprehensive credit check
+<<<<<<< Updated upstream
                     with UK credit reference agencies. A good to excellent
                     credit score significantly improves approval chances. Your
                     credit file should demonstrate responsible credit
@@ -126,6 +143,14 @@ export default function AmexGoldRequirementsPage() {
                     commitments, low credit utilisation, and no recent County
                     Court Judgements (CCJs), Individual Voluntary Arrangements
                     (IVAs), or bankruptcies.
+=======
+                    with major credit bureaus. A good to excellent credit score
+                    significantly improves approval chances. Your credit file
+                    should demonstrate responsible credit management, including
+                    timely payments on existing credit commitments, low credit
+                    utilization, and no recent judgments, liens, or
+                    bankruptcies.
+>>>>>>> Stashed changes
                   </p>
                 </div>
 
@@ -153,10 +178,18 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     You will not be eligible for any Welcome Bonus award if you
                     currently hold or have held any personal American Express
+<<<<<<< Updated upstream
                     Card within the previous 24 months. This restriction applies
                     to all personal Amex cards, not just the Gold Card.
                     Supplementary cardholders on someone else's account are not
                     affected by this restriction if applying for their own card.
+=======
+                    Card within the previous 24 months (terms vary by offer).
+                    This restriction applies to all personal Amex cards, not
+                    just the Gold Card. Supplementary cardholders on someone
+                    else's account are not affected by this restriction if
+                    applying for their own card.
+>>>>>>> Stashed changes
                   </p>
                 </div>
               </div>
@@ -300,8 +333,13 @@ export default function AmexGoldRequirementsPage() {
                   your balance in full each month by the due date, you will not
                   incur any interest charges on purchases. The interest rate is
                   variable, meaning American Express can adjust it in response
+<<<<<<< Updated upstream
                   to changes in the Bank of England base rate or for other
                   commercial reasons, with appropriate notice provided.
+=======
+                  to changes in the Prime Rate or for other commercial reasons,
+                  with appropriate notice provided.
+>>>>>>> Stashed changes
                 </p>
 
                 <h3 className="text-lg font-bold text-gray-800 mb-4 mt-6 text-left">
@@ -327,8 +365,13 @@ export default function AmexGoldRequirementsPage() {
                   £12. Repeated late payments can also result in penalty
                   interest rates and may negatively impact your credit score,
                   making it more difficult to access credit in the future.
+<<<<<<< Updated upstream
                   Setting up a Direct Debit for at least the minimum payment
                   helps avoid late fees and protects your credit rating.
+=======
+                  Setting up AutoPay for at least the minimum payment helps
+                  avoid late fees and protects your credit rating.
+>>>>>>> Stashed changes
                 </p>
 
                 <h3 className="text-lg font-bold text-gray-800 mb-4 mt-6 text-left">
@@ -407,10 +450,16 @@ export default function AmexGoldRequirementsPage() {
                     </h3>
                   </div>
                   <p className="text-gray-700 text-sm text-left">
+<<<<<<< Updated upstream
                     Comprehensive travel insurance covering medical expenses up
                     to £2 million, trip cancellation, baggage delay, and
                     emergency assistance when you pay for your trip with the
                     card.
+=======
+                    Comprehensive travel insurance covering medical expenses,
+                    trip cancellation, baggage delay, and emergency assistance
+                    when you pay for your trip with the card.
+>>>>>>> Stashed changes
                   </p>
                 </div>
 
@@ -513,11 +562,19 @@ export default function AmexGoldRequirementsPage() {
                     </h3>
                     <p className="text-gray-700 text-sm text-left">
                       American Express will verify your identity using
+<<<<<<< Updated upstream
                       electronic checks against databases such as the electoral
                       roll and credit reference agencies. This verification
                       happens automatically during your application. In some
                       cases, you may need to provide additional identification
                       documents if automatic verification isn't possible.
+=======
+                      electronic checks against databases such as public records
+                      and credit bureaus. This verification happens
+                      automatically during your application. In some cases, you
+                      may need to provide additional identification documents if
+                      automatic verification isn't possible.
+>>>>>>> Stashed changes
                     </p>
                   </div>
                 </div>
@@ -531,6 +588,7 @@ export default function AmexGoldRequirementsPage() {
                       Credit Assessment
                     </h3>
                     <p className="text-gray-700 text-sm text-left">
+<<<<<<< Updated upstream
                       American Express will conduct a credit check with UK
                       credit reference agencies including Experian, Equifax, or
                       TransUnion. This hard search will be visible on your
@@ -538,6 +596,15 @@ export default function AmexGoldRequirementsPage() {
                       They'll assess your credit history, existing commitments,
                       and overall creditworthiness to determine if you meet
                       their lending criteria.
+=======
+                      American Express will conduct a credit check with major
+                      credit bureaus including Experian, Equifax, or TransUnion.
+                      This hard search will be visible on your credit file and
+                      may temporarily affect your credit score. They'll assess
+                      your credit history, existing commitments, and overall
+                      creditworthiness to determine if you meet their lending
+                      criteria.
+>>>>>>> Stashed changes
                     </p>
                   </div>
                 </div>
@@ -684,10 +751,17 @@ export default function AmexGoldRequirementsPage() {
                     reasons include insufficient credit history, recent adverse
                     credit events, high existing debt levels, or not meeting
                     residency requirements. You can request a full explanation
+<<<<<<< Updated upstream
                     of the decision and the credit reference agency data used.
                     Before reapplying, address the issues that led to the
                     decline. Wait at least six months before submitting another
                     application to improve your chances of approval.
+=======
+                    of the decision and the credit bureau data used. Before
+                    reapplying, address the issues that led to the decline. Wait
+                    at least six months before submitting another application to
+                    improve your chances of approval.
+>>>>>>> Stashed changes
                   </p>
                 </div>
 

@@ -141,6 +141,16 @@ export const metadata: Metadata = {
 
   // Optional: Define metadataBase for resolving relative image URLs
   metadataBase: new URL(baseUrl),
+
+  // Hreflang alternates
+  alternates: {
+    canonical: "https://us.topfinanzas.com",
+    languages: {
+      "en-US": "https://us.topfinanzas.com",
+      "es-MX": "https://topfinanzas.com",
+      "en-GB": "https://uk.topfinanzas.com",
+    },
+  },
 };
 
 export default function RootLayout({

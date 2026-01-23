@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+<<<<<<< Updated upstream
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -440,9 +439,120 @@ export default function AboutUs() {
               </div>
             </div>
           </section>
+=======
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Top Finanzas US",
+  description:
+    "Top Finanzas: Your guide in the world of personal finance. We believe good financial management is the key to a fuller life.",
+};
+
+export default function AboutUsPage() {
+  return (
+    <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <div className="space-y-12">
+        {/* Hero Section */}
+        <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-lg mb-8">
+          {/* Note: Prompt specified specific URL https://storage.googleapis.com/media-topfinanzas-com/images/NOSOTROS2.jpg */}
+          <Image
+            src="https://storage.googleapis.com/media-topfinanzas-com/images/NOSOTROS2.jpg"
+            alt="About Top Finanzas"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
+              Top Finanzas: Your guide in the world of personal finance
+            </h1>
+          </div>
+>>>>>>> Stashed changes
         </div>
-      </main>
-      <Footer />
-    </>
+
+        {/* Introduction */}
+        <div className="space-y-6 text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+          <p className="font-medium text-xl text-[#2E74B5]">
+            At Top Finanzas, we firmly believe that good financial management is
+            the key to a fuller and more peaceful life.
+          </p>
+          <p>
+            We are convinced that effective and responsible financial management
+            is not only crucial for economic stability but also essential for
+            achieving a more fulfilling and serene life. We understand that
+            financial peace of mind is a critical component of overall
+            well-being, and we strive to provide you with the tools and
+            knowledge necessary to achieve it.
+          </p>
+          <p>
+            Our goal is simple: to provide you with practical and
+            easy-to-understand advice that empowers you financially, no matter
+            where you are in your journey.
+          </p>
+          <p>
+            Our approach focuses on breaking down complex financial concepts
+            into simple, actionable advice tailored to different levels of
+            experience and financial knowledge. From beginners in personal
+            finance to individuals with investment experience, our aim is to
+            offer you a clear and accessible guide that strengthens your
+            financial autonomy.
+          </p>
+        </div>
+
+        {/* Commitments Section */}
+        <div className="grid md:grid-cols-3 gap-8 py-12">
+          <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[#2E74B5] shadow-sm">
+            <div className="text-3xl mb-4">📚</div>
+            <h3 className="text-xl font-bold mb-3 text-[#2E74B5]">
+              Quality Information
+            </h3>
+            <p className="text-gray-600">
+              We are committed to providing up-to-date and relevant content,
+              based on the latest trends and data in the financial sector. Our
+              priority is to ensure you have access to truthful and useful
+              information.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[#2E74B5] shadow-sm">
+            <div className="text-3xl mb-4">🌟</div>
+            <h3 className="text-xl font-bold mb-3 text-[#2E74B5]">
+              Community and Support
+            </h3>
+            <p className="text-gray-600">
+              We are dedicated to building an inclusive and supportive community
+              where you can find help and advice at every step of your financial
+              journey.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-[#2E74B5] shadow-sm">
+            <div className="text-3xl mb-4">📊</div>
+            <h3 className="text-xl font-bold mb-3 text-[#2E74B5]">
+              Tangible Results
+            </h3>
+            <p className="text-gray-600">
+              Our focus is on helping you see concrete, practical improvements
+              in how you manage your money. Whether you’re saving for a specific
+              goal or improving your credit score, we’re here to help.
+            </p>
+          </div>
+        </div>
+
+        {/* Empowering Section */}
+        <div className="bg-[#f0f7ff] p-8 md:p-12 rounded-2xl text-center">
+          <h2 className="text-3xl font-bold text-[#2E74B5] mb-6">
+            Empowering Your Financial Decisions
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            At Top Finanzas, we understand that every step in your financial
+            journey is important. Whether you’re just beginning to organize your
+            personal finances or exploring advanced investment strategies, our
+            content is carefully designed to give you the confidence and
+            knowledge needed to make sound financial decisions. We accompany you
+            at every stage, from choosing the most suitable credit card for your
+            needs to offering strategies for planning your retirement.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }

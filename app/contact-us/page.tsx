@@ -1,70 +1,23 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import type { ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+<<<<<<< Updated upstream
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { BRAND_STATIC_FIELDS, UTM_PARAM_KEYS } from "@/lib/constants";
 import { logger } from "@/lib/logger";
+=======
+import { Metadata } from "next";
+>>>>>>> Stashed changes
 
-interface ContactFormState {
-  name: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-  acceptTerms: boolean;
-  utm_source: string;
-  utm_medium: string;
-  utm_campaign: string;
-  utm_term: string;
-  utm_content: string;
-  source: string;
-  medium: string;
-  campaign: string;
-  term: string;
-  content: string;
-  Pais: string;
-  Marca: string;
-  pais: string;
-  marca: string;
-}
-
-type ContactFormStringKeys = {
-  [K in keyof ContactFormState]: ContactFormState[K] extends string ? K : never;
-}[keyof ContactFormState];
-
-const initialFormState: ContactFormState = {
-  name: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  message: "",
-  acceptTerms: false,
-  utm_source: "",
-  utm_medium: "",
-  utm_campaign: "",
-  utm_term: "",
-  utm_content: "",
-  source: "",
-  medium: "",
-  campaign: "",
-  term: "",
-  content: "",
-  Pais: BRAND_STATIC_FIELDS.Pais,
-  Marca: BRAND_STATIC_FIELDS.Marca,
-  pais: BRAND_STATIC_FIELDS.Pais,
-  marca: BRAND_STATIC_FIELDS.Marca,
+export const metadata: Metadata = {
+  title: "Contact Us | Top Finanzas US",
+  description:
+    "Contact Top Finanzas US for inquiries about personal finance, credit cards, and loans.",
 };
 
+<<<<<<< Updated upstream
 const UTM_TO_PLAIN_FIELD: Record<
   (typeof UTM_PARAM_KEYS)[number],
   ContactFormStringKeys
@@ -668,10 +621,135 @@ export default function ContactUs() {
             >
               <FaInstagram />
             </Link>
+=======
+export default function ContactUsPage() {
+  return (
+    <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="space-y-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#2E74B5]">
+            Contact Us
+          </h1>
+
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Are you wondering how you can make a significant change in your
+            personal finances?
+          </p>
+
+          <p className="text-gray-700 leading-relaxed">
+            If you’re ready to embark on a transformative journey toward
+            financial stability and prosperity, we’re here to support you.
+            Contact us at{" "}
+            <a
+              href="mailto:info@topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              info@topfinanzas.com
+            </a>{" "}
+            or fill out the form below to share your concerns, ideas, or plans.
+            We are committed to responding promptly and being your allies at
+            every stage of this exciting journey that will transform your life.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed font-medium">
+            We look forward to hearing from you soon!
+          </p>
+
+          <form className="space-y-4 mt-8">
+            <div className="grid grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <textarea
+              placeholder="Message"
+              rows={6}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            ></textarea>
+
+            <div className="flex items-start space-x-2">
+              <input type="checkbox" id="terms" className="mt-1" required />
+              <label htmlFor="terms" className="text-sm text-gray-600">
+                I accept{" "}
+                <Link
+                  href="/privacy-policy"
+                  className="text-blue-600 hover:underline"
+                >
+                  the data processing policies
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/terms-conditions"
+                  className="text-blue-600 hover:underline"
+                >
+                  terms and conditions
+                </Link>
+              </label>
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-6 text-lg font-semibold uppercase tracking-wider"
+            >
+              Submit
+            </Button>
+          </form>
+
+          <div className="pt-8">
+            <h3 className="text-xl font-semibold mb-4 text-[#2E74B5]">
+              Follow us on our social media and take control of your finances
+            </h3>
+            <div className="flex space-x-4">
+              {/* Icons would go here, using text for now as per image analysis */}
+              <a
+                href="https://www.facebook.com/TopFinanzasParaTi"
+                className="text-2xl hover:text-blue-600 text-gray-500"
+              >
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a
+                href="https://youtube.com/@top_finanzas_latam"
+                className="text-2xl hover:text-red-600 text-gray-500"
+              >
+                <span className="sr-only">YouTube</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@topfinanzas1"
+                className="text-2xl hover:text-black text-gray-500"
+              >
+                <span className="sr-only">TikTok</span>
+              </a>
+              <a
+                href="https://www.instagram.com/top_finanzas23/"
+                className="text-2xl hover:text-pink-600 text-gray-500"
+              >
+                <span className="sr-only">Instagram</span>
+              </a>
+            </div>
+>>>>>>> Stashed changes
           </div>
         </div>
+
+        <div className="hidden md:block relative h-[600px] w-full rounded-2xl overflow-hidden shadow-xl">
+          <Image
+            src="https://media.topfinanzas.com/images/contacto360x738.png"
+            alt="Contact Top Finanzas"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }

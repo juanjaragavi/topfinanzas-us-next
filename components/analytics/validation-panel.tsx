@@ -105,7 +105,7 @@ export default function AnalyticsValidationPanel() {
                     {result.passed ? "✓" : "✗"}{" "}
                     {result.message.split(": ")[1] || result.message}
                   </div>
-                  {result.data && (
+                  {!!result.data && (
                     <div className="mt-1 text-gray-600 font-mono">
                       {JSON.stringify(result.data, null, 2)}
                     </div>

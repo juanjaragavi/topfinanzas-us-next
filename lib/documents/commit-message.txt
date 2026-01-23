@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 fix(metadata): localize metadata for US market
 
 - Update base URL to us.topfinanzas.com
@@ -5,3 +6,12 @@ fix(metadata): localize metadata for US market
 - Update Open Graph and Twitter metadata to English and US locale
 - Update HTML lang attribute to en-us
 - Update JSON-LD schema with US organization details and English logo
+=======
+fix: Resolve all TypeScript errors and linting issues
+
+- Refactor new landing pages to use Link components instead of mismatched Button usage
+- update Button component to export buttonVariants and handle disabled/onClick props correctly
+- Fix Carousel component types to match custom Button API
+- Fix definitions in Logger usage across analytics and utils
+- Remove invalid imports
+>>>>>>> Stashed changes

@@ -91,8 +91,12 @@ export default function PersonalFinanceArchivePage() {
       category: "guide",
     },
     {
+<<<<<<< Updated upstream
       title:
         "The Hidden Costs of Homeownership That No One Talks About | Top Finance UK",
+=======
+      title: "The Hidden Costs of Homeownership | Top Finanzas US",
+>>>>>>> Stashed changes
       slug: "hidden-costs-of-homeownership",
       description:
         "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home.",

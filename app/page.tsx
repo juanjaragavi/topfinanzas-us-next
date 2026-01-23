@@ -48,6 +48,8 @@ const cleanTitle = (title: string): string => {
 // --- Hardcoded Post Data (Localized for MX) ---
 // Using a subset of posts for the homepage, sorted by date descending
 const allPosts: PostData[] = [
+  // TODO: Replace with US-specific content. Currently commenting out UK legacy content.
+  /*
   {
     slug: "tarjeta-credito-viajes-premium", // Example slug
     frontmatter: {
@@ -96,6 +98,7 @@ const allPosts: PostData[] = [
     category: "Soluciones Financieras",
     categoryPath: "/financial-solutions",
   },
+  */
   {
     slug: "mejores-tarjetas-recompensas",
     frontmatter: {

@@ -32,7 +32,11 @@ export default function TopAds() {
             window.topAds = window.topAds || {};
 
             topAds.config = {
+<<<<<<< Updated upstream
                 domain: 'TOPFIN_UK',
+=======
+                domain: 'TOPFIN_US',
+>>>>>>> Stashed changes
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 pageSetting: {
@@ -52,11 +56,16 @@ export default function TopAds() {
                     },
                     offerwall: {
                         status: 'active',
+<<<<<<< Updated upstream
                         logoUrl: 'https://media.topfinanzas.com/images/logo-english.webp',
                         websiteName: 'TopFinanzas UK',
+=======
+                        logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
+                        websiteName: 'TopFinanzas US',
+>>>>>>> Stashed changes
                         cooldown: '12',
                         exclude: [
-                            '/invit-credit-card-rec-uk'
+                            '/invit-credit-card-rec-us'
                         ],
                     },
                 }

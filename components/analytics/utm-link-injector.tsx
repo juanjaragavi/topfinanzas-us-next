@@ -71,8 +71,7 @@ export default function UtmLinkInjector() {
         // If URL parsing fails, return original href
         analyticsLogger.warn(
           "UTM Link Injector: Error processing URL:",
-          href,
-          error,
+          { href, error },
         );
         return href;
       }
@@ -149,7 +148,7 @@ export default function UtmLinkInjector() {
       if (storedParams.length > 0) {
         analyticsLogger.debug(
           "UTM Link Injector: Active with params:",
-          storedParams.join(", "),
+          { params: storedParams.join(", ") },
         );
       }
     }
