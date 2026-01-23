@@ -117,7 +117,7 @@ export function Footer() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     {/* Note: Original had #55B9FF text color for icons, MX design implies white or matching theme */}
-                    {contact.svgPath.split("|").map((path, idx) => (
+                    {contact.svgPath.split("|").map((path: string, idx: number) => (
                       <path
                         key={idx}
                         strokeLinecap="round"
