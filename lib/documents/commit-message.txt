@@ -1,8 +1,25 @@
-refactor: localize URL paths for US market
+fix: resolve merge conflicts and TypeScript/ESLint errors for US migration
 
-- Rename `app/finanzas-personales` to `app/personal-finance`
-- Rename `app/soluciones-financieras` to `app/financial-solutions`
-- Update all internal links, imports, and redirects to use English paths
-- Update `headerNavigation.ts` with new category URLs
-- Update `sitemap.xml` files (public and app)
-- Update project documentation and instruction files to reflect new structure
+## Merge Conflict Resolution
+- Fixed 118-118-money-credit-card pages (UK→US terminology)
+- Fixed american-express-preferred-rewards-gold-credit-card pages (UK→US terminology)
+- Fixed personal-finance/page.tsx title conflict
+- Removed obsolete invit-credit-card-rec-uk page (US versions exist)
+- Updated topads.tsx with TOPFIN_US domain configuration
+
+## TypeScript Fixes
+- Fixed recommender-lock.ts logger error typing (3 errors)
+
+## ESLint Fixes
+- Removed unused imports (Button, useEffect, motion, AnimatePresence, Search)
+- Fixed unused variables (featuredPostsData, paginatedPosts, index, error)
+- Fixed any type usage with proper PostData typing
+- Fixed unescaped quotes in search-bar.tsx
+- Simplified pagination logic in homepage
+
+## Content Updates
+- UK→US terminology: programme→program, £→$, CCJs→judgments
+- UK→US airlines: British Airways→Delta, Virgin→JetBlue
+- UK→US regulatory: FCA→US authorities, Section 75→federal protections
+
+All checks pass: tsc --noEmit, next lint, npm run build

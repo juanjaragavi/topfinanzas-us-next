@@ -1,83 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import type { ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
-import { FaFacebook, FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { BRAND_STATIC_FIELDS, UTM_PARAM_KEYS } from "@/lib/constants";
-import { logger } from "@/lib/logger";
+import { useState } from "react";
+import { FaFacebook, FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
 
-interface ContactFormState {
-  name: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-  acceptTerms: boolean;
-  utm_source: string;
-  utm_medium: string;
-  utm_campaign: string;
-  utm_term: string;
-  utm_content: string;
-  source: string;
-  medium: string;
-  campaign: string;
-  term: string;
-  content: string;
-  Pais: string;
-  Marca: string;
-  pais: string;
-  marca: string;
-}
-
-type ContactFormStringKeys = {
-  [K in keyof ContactFormState]: ContactFormState[K] extends string ? K : never;
-}[keyof ContactFormState];
-
-const initialFormState: ContactFormState = {
-  name: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  message: "",
-  acceptTerms: false,
-  utm_source: "",
-  utm_medium: "",
-  utm_campaign: "",
-  utm_term: "",
-  utm_content: "",
-  source: "",
-  medium: "",
-  campaign: "",
-  term: "",
-  content: "",
-  Pais: BRAND_STATIC_FIELDS.Pais,
-  Marca: BRAND_STATIC_FIELDS.Marca,
-  pais: BRAND_STATIC_FIELDS.Pais,
-  marca: BRAND_STATIC_FIELDS.Marca,
-};
-
-const UTM_TO_PLAIN_FIELD: Record<
-  (typeof UTM_PARAM_KEYS)[number],
-  ContactFormStringKeys
-> = {
-  utm_source: "source",
-  utm_medium: "medium",
-  utm_campaign: "campaign",
-  utm_term: "term",
-  utm_content: "content",
-};
-
-export default function ContactUs() {
-  const [formData, setFormData] = useState<ContactFormState>(initialFormState);
+export default function ContactUsPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+    acceptPolicy: false,
+  });
 
   const [errors, setErrors] = useState<{
     name: string | null;
@@ -99,40 +35,11 @@ export default function ContactUs() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const utmUpdates: Partial<Record<keyof ContactFormState, string>> = {};
-
-    UTM_PARAM_KEYS.forEach((param) => {
-      const value = sessionStorage.getItem(param);
-      if (typeof value === "string" && value.trim() !== "") {
-        utmUpdates[param as keyof ContactFormState] = value;
-        const mappedKey = UTM_TO_PLAIN_FIELD[param];
-        if (mappedKey) {
-          utmUpdates[mappedKey] = value;
-        }
-      }
-    });
-
-    if (Object.keys(utmUpdates).length > 0) {
-      setFormData(
-        (prev) =>
-          ({
-            ...prev,
-            ...utmUpdates,
-          }) as ContactFormState,
-      );
-    }
-  }, []);
-
   const validateEmail = (email: string): boolean => {
     if (!email) {
       setErrors((prev) => ({
         ...prev,
-        email: "Email is required",
+        email: "Email address is required",
       }));
       return false;
     }
@@ -141,10 +48,11 @@ export default function ContactUs() {
     if (!emailRegex.test(email)) {
       setErrors((prev) => ({
         ...prev,
-        email: "Please enter a valid email",
+        email: "Please enter a valid email address",
       }));
       return false;
     }
+
     setErrors((prev) => ({ ...prev, email: null }));
     return true;
   };
@@ -153,10 +61,19 @@ export default function ContactUs() {
     if (!name.trim()) {
       setErrors((prev) => ({
         ...prev,
-        name: "Name is required",
+        name: "First name is required",
       }));
       return false;
     }
+
+    if (name.trim().length < 2) {
+      setErrors((prev) => ({
+        ...prev,
+        name: "First name must be at least 2 characters",
+      }));
+      return false;
+    }
+
     setErrors((prev) => ({ ...prev, name: null }));
     return true;
   };
@@ -169,6 +86,15 @@ export default function ContactUs() {
       }));
       return false;
     }
+
+    if (lastName.trim().length < 2) {
+      setErrors((prev) => ({
+        ...prev,
+        lastName: "Last name must be at least 2 characters",
+      }));
+      return false;
+    }
+
     setErrors((prev) => ({ ...prev, lastName: null }));
     return true;
   };
@@ -177,87 +103,72 @@ export default function ContactUs() {
     if (!phoneNumber) {
       setErrors((prev) => ({
         ...prev,
-        phone: "Phone is required",
+        phone: "Phone number is required",
       }));
       return false;
     }
-    // Basic validation for MX/General phone
-    if (phoneNumber.length < 10) {
+
+    // US phone numbers validation (10 digits)
+    const usPhoneRegex = /^(\+1)?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    const cleanPhone = phoneNumber.replace(/[\s.-]/g, "");
+
+    if (!usPhoneRegex.test(phoneNumber) && cleanPhone.length !== 10) {
       setErrors((prev) => ({
         ...prev,
-        phone: "Enter a valid number (minimum 10 digits)",
+        phone: "Please enter a valid US phone number (10 digits)",
       }));
       return false;
     }
+
     setErrors((prev) => ({ ...prev, phone: null }));
     return true;
   };
 
-  const validateForm = (): boolean => {
-    const isEmailValid = validateEmail(formData.email);
-    const isNameValid = validateName(formData.name);
-    const isLastNameValid = validateLastName(formData.lastName);
-    const isPhoneValid = validatePhone(formData.phone);
-    const isMessageValid = formData.message.trim().length > 0; // Simple check
-
-    if (!isMessageValid) {
+  const validateMessage = (message: string): boolean => {
+    if (!message.trim()) {
       setErrors((prev) => ({
         ...prev,
-        message: "Please describe your need",
-      }));
-    } else {
-      setErrors((prev) => ({ ...prev, message: null }));
-    }
-
-    if (!formData.acceptTerms) {
-      setErrors((prev) => ({
-        ...prev,
-        general: "You must accept the data policies",
+        message: "Message is required",
       }));
       return false;
-    } else {
-      setErrors((prev) => ({ ...prev, general: null }));
     }
 
-    return (
-      isEmailValid &&
-      isNameValid &&
-      isLastNameValid &&
-      isPhoneValid &&
-      isMessageValid &&
-      formData.acceptTerms
-    );
-  };
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData(
-      (prev) =>
-        ({
-          ...prev,
-          [name]: value,
-        }) as ContactFormState,
-    );
-
-    // Clear errors on change if needed, or implement live validation as before
-    if (errors[name as keyof typeof errors]) {
-      setErrors((prev) => ({ ...prev, [name]: null }));
+    if (message.trim().length < 10) {
+      setErrors((prev) => ({
+        ...prev,
+        message: "Message must be at least 10 characters",
+      }));
+      return false;
     }
+
+    setErrors((prev) => ({ ...prev, message: null }));
+    return true;
   };
 
-  const handleCheckboxChange = (checked: boolean) => {
-    setFormData((prev) => ({ ...prev, acceptTerms: checked }));
-    if (checked) {
-      setErrors((prev) => ({ ...prev, general: null }));
-    }
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!validateForm()) {
+    const isNameValid = validateName(formData.name);
+    const isLastNameValid = validateLastName(formData.lastName);
+    const isEmailValid = validateEmail(formData.email);
+    const isPhoneValid = validatePhone(formData.phone);
+    const isMessageValid = validateMessage(formData.message);
+
+    if (
+      !isNameValid ||
+      !isLastNameValid ||
+      !isEmailValid ||
+      !isPhoneValid ||
+      !isMessageValid
+    ) {
+      return;
+    }
+
+    if (!formData.acceptPolicy) {
+      setErrors((prev) => ({
+        ...prev,
+        general: "Please accept the data processing policies",
+      }));
       return;
     }
 
@@ -265,7 +176,7 @@ export default function ContactUs() {
     setSubmitError(null);
 
     try {
-      // Assuming same API endpoint, just customized frontend
+      // Submit to the API
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -275,18 +186,21 @@ export default function ContactUs() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Error sending message");
+        throw new Error("Failed to submit form");
       }
 
       setSubmitSuccess(true);
-      setFormData(initialFormState); // Reset form
-    } catch (error) {
-      logger.error("Error sending message:", error);
+      setFormData({
+        name: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+        acceptPolicy: false,
+      });
+    } catch {
       setSubmitError(
-        error instanceof Error
-          ? error.message
-          : "An unexpected error occurred. Please try again.",
+        "There was an error submitting your message. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -294,251 +208,275 @@ export default function ContactUs() {
   };
 
   return (
-    <main className="bg-white min-h-screen flex flex-col">
-      <Header />
-      <div className="container mx-auto px-4 py-12 max-w-6xl bg-white">
-        {/* Title */}
-        <h1 className="text-4xl font-bold text-gray-900 mb-12">Contact Us</h1>
+    <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <h1 className="text-4xl font-bold text-[#2E74B5] mb-8 text-center">
+        Contact Us
+      </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-          {/* Left Column: Image & Text */}
-          <div className="md:col-span-5 flex flex-col items-start space-y-8">
-            {/* Image matches screenshot vertical aspect ratio */}
-            <div
-              className="w-full relative overflow-hidden shadow-lg"
-              style={{ aspectRatio: "360/738" }}
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Left side - Text and Image */}
+        <div className="space-y-6">
+          <p className="text-lg text-gray-700">
+            Are you wondering how you can make a significant change in your
+            personal finances?
+          </p>
+          <p className="text-gray-600">
+            If you&apos;re ready to embark on a transformative journey toward
+            financial stability and prosperity, we&apos;re here to support you.
+            Contact us at{" "}
+            <a
+              href="mailto:info@topfinanzas.com"
+              className="text-blue-600 hover:underline"
             >
-              {/* Using style for aspect ratio based on image dimensions provided in URL */}
-              {/* 360x738 is approx 1:2 */}
-              <Image
-                src="https://media.topfinanzas.com/images/contacto360x738.png"
-                alt="Contact Us TopFinanzas"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+              info@topfinanzas.com
+            </a>{" "}
+            or fill out the form below to share your concerns, ideas, or plans.
+            We are committed to responding promptly and being your allies at
+            every stage of this exciting journey that will transform your life.
+          </p>
+          <p className="text-gray-700 font-medium">
+            We look forward to hearing from you soon!
+          </p>
+
+          {/* Contact Image */}
+          <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="https://media.topfinanzas.com/images/contacto360x738.png"
+              alt="Contact Top Finanzas"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
 
-          {/* Right Column: Content & Form */}
-          <div className="md:col-span-7 flex flex-col space-y-6">
-            <div className="space-y-4 text-lg text-gray-700">
-              <p className="font-medium">
-                Are you wondering how you can make a significant change in your
-                personal finances?
-              </p>
-              <p>
-                If you’re ready to embark on a transformative journey toward
-                financial stability and prosperity, we’re here to support you.
-                Contact us at
-              </p>
-              <p className="font-bold text-gray-900">
-                <a
-                  href="mailto:info@topfinanzas.com"
-                  className="hover:text-blue-600 transition-colors"
-                >
-                  info@topfinanzas.com
-                </a>
-                <span className="font-normal">
-                  {" "}
-                  or fill out the form below to share your concerns, ideas, or
-                  plans. We are committed to responding promptly and being your
-                  allies at every stage of this exciting journey that will
-                  transform your life.
-                </span>
-              </p>
-              <p>We look forward to hearing from you soon!</p>
-            </div>
-
-            {/* Form */}
-            <div className="mt-8">
-              {submitSuccess ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-green-50 p-8 rounded-xl border border-green-200 text-center"
-                >
-                  <h3 className="text-2xl font-bold text-green-700 mb-2">
-                    Message Sent!
-                  </h3>
-                  <p className="text-green-600 mb-6">
-                    Thank you for contacting us. We will respond shortly.
-                  </p>
-                  <button
-                    onClick={() => setSubmitSuccess(false)}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    Send another message
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-4">
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Name"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.name ? "border-red-500" : ""}`}
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm pl-4">{errors.name}</p>
-                    )}
-
-                    <Input
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder="Last Name"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.lastName ? "border-red-500" : ""}`}
-                    />
-                    {errors.lastName && (
-                      <p className="text-red-500 text-sm pl-4">
-                        {errors.lastName}
-                      </p>
-                    )}
-
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.email ? "border-red-500" : ""}`}
-                    />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm pl-4">
-                        {errors.email}
-                      </p>
-                    )}
-
-                    <Input
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone"
-                      className={`rounded-full border-gray-300 py-6 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 ${errors.phone ? "border-red-500" : ""}`}
-                    />
-                    {errors.phone && (
-                      <p className="text-red-500 text-sm pl-4">
-                        {errors.phone}
-                      </p>
-                    )}
-
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Discover your need"
-                      className={`rounded-3xl border-gray-300 py-4 px-6 text-gray-700 placeholder:text-gray-400 focus:ring-blue-500 focus:border-blue-500 min-h-[150px] resize-none ${errors.message ? "border-red-500" : ""}`}
-                    />
-                    {errors.message && (
-                      <p className="text-red-500 text-sm pl-4">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="flex items-start gap-3 mt-4 px-2">
-                    <Checkbox
-                      id="terms"
-                      checked={formData.acceptTerms}
-                      onCheckedChange={handleCheckboxChange}
-                      className="mt-1"
-                    />
-                    <div className="text-sm text-gray-600 leading-tight">
-                      <Label htmlFor="terms" className="mr-1">
-                        I accept the
-                      </Label>
-                      <Link
-                        href="/privacy-policy"
-                        className="text-blue-500 hover:underline"
-                      >
-                        data processing policies
-                      </Link>{" "}
-                      and{" "}
-                      <Link
-                        href="/terms-conditions"
-                        className="text-blue-500 hover:underline"
-                      >
-                        terms and conditions
-                      </Link>
-                    </div>
-                  </div>
-                  {errors.general && (
-                    <p className="text-red-500 text-sm pl-4">
-                      {errors.general}
-                    </p>
-                  )}
-
-                  {submitError && (
-                    <div className="text-red-600 text-sm text-center bg-red-50 p-2 rounded">
-                      {submitError}
-                    </div>
-                  )}
-
-                  <div className="flex justify-center mt-8">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="bg-[#2E74B5] text-white px-12 py-3 rounded-full font-bold tracking-wide hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed uppercase text-sm"
-                    >
-                      {isSubmitting ? "Submitting..." : "SUBMIT"}
-                    </button>
-                  </div>
-                </form>
-              )}
-            </div>
-
-            {/* Social Media - Below Form */}
-            <div className="mt-16 text-center">
-              <h3 className="text-xl text-gray-800 mb-6 font-medium">
-                Follow us on our social media and take control of your finances
-              </h3>
-              <div className="flex justify-center space-x-4">
-                <Link
-                  href="https://www.facebook.com/topfinanzas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-[#3b5998] text-white rounded-lg hover:opacity-90 transition-opacity"
-                  aria-label="Facebook"
-                >
-                  <FaFacebook size={24} />
-                </Link>
-                <Link
-                  href="https://www.youtube.com/@topfinanzas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-[#FF0000] text-white rounded-lg hover:opacity-90 transition-opacity"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube size={24} />
-                </Link>
-                <Link
-                  href="https://www.tiktok.com/@topfinanzas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-[#69C9D0] text-white rounded-lg hover:opacity-90 transition-opacity"
-                  aria-label="TikTok"
-                >
-                  <FaTiktok size={24} />
-                </Link>
-                <Link
-                  href="https://www.instagram.com/topfinanzas/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center bg-[#3f729b] text-white rounded-lg hover:opacity-90 transition-opacity"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram size={24} />
-                </Link>
-              </div>
+          {/* Social Media Links */}
+          <div className="pt-6">
+            <p className="text-gray-700 font-medium mb-4">
+              Follow us on our social media and take control of your finances
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.facebook.com/TopFinanzasParaTi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
+                <FaFacebook size={20} />
+              </a>
+              <a
+                href="https://youtube.com/@top_finanzas_latam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-[#FF0000] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
+                <FaYoutube size={20} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@topfinanzas1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
+                <FaTiktok size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/top_finanzas23/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              >
+                <FaInstagram size={20} />
+              </a>
             </div>
           </div>
         </div>
+
+        {/* Right side - Form */}
+        <div className="bg-white p-8 rounded-xl shadow-lg border">
+          {submitSuccess ? (
+            <div className="text-center py-8">
+              <div className="text-green-500 text-5xl mb-4">✓</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Message Sent!
+              </h3>
+              <p className="text-gray-600">
+                Thank you for contacting us. We&apos;ll get back to you soon.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  onBlur={() => validateName(formData.name)}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                    errors.name ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="Enter your first name"
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={formData.lastName}
+                  onChange={(e) =>
+                    setFormData({ ...formData, lastName: e.target.value })
+                  }
+                  onBlur={() => validateLastName(formData.lastName)}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                    errors.lastName ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="Enter your last name"
+                />
+                {errors.lastName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  onBlur={() => validateEmail(formData.email)}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="Enter your email"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Phone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
+                  onBlur={() => validatePhone(formData.phone)}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                    errors.phone ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="(555) 555-5555"
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  onBlur={() => validateMessage(formData.message)}
+                  rows={4}
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                    errors.message ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="How can we help you?"
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                )}
+              </div>
+
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  id="acceptPolicy"
+                  checked={formData.acceptPolicy}
+                  onChange={(e) =>
+                    setFormData({ ...formData, acceptPolicy: e.target.checked })
+                  }
+                  className="mt-1 mr-2"
+                />
+                <label htmlFor="acceptPolicy" className="text-sm text-gray-600">
+                  I accept{" "}
+                  <Link
+                    href="/privacy-policy/"
+                    className="text-blue-600 hover:underline"
+                  >
+                    the data processing policies
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    href="/terms/"
+                    className="text-blue-600 hover:underline"
+                  >
+                    terms and conditions
+                  </Link>
+                </label>
+              </div>
+
+              {errors.general && (
+                <p className="text-red-500 text-sm">{errors.general}</p>
+              )}
+
+              {submitError && (
+                <p className="text-red-500 text-sm">{submitError}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#2E74B5] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1e5a8a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+              </button>
+            </form>
+          )}
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }

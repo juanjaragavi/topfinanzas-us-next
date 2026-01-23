@@ -17,10 +17,10 @@ interface PostItem {
 
 // Define filter categories
 const categories = {
-  all: "All",
+  all: "All Posts",
   creditCards: "Credit Cards",
   loans: "Loans",
-  debt: "Debt",
+  debt: "Debt Management",
   guide: "Guides",
 };
 
@@ -37,10 +37,10 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
-        "How to Track Your Spending for 30 Days and Know Where Your Money Goes | Top Finanzas US",
+        "How to Track Your Spending for 30 Days and Finally Know Where Your Money Goes | Top Finance UK",
       slug: "how-to-track-your-spending-for-30-days",
       description:
-        "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and create lasting habits.",
+        "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and build lasting money management habits.",
       image:
         "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
       date: "2 December 2025",
@@ -48,10 +48,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "The Psychology of Spending: How to Stop Impulse Buying | Top Finanzas US",
+        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
       slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
       description:
-        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start saving mindfully today.",
+        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start mindful saving today with our expert guide.",
       image:
         "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
       date: "25 November 2025",
@@ -59,10 +59,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Automate Your Wealth: 'Set It and Forget It' Finance System | Top Finanzas US",
+        'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
       slug: "automate-your-wealth",
       description:
-        "Learn how to automate your finances with our 'Set it and forget it' system. Save time, reduce stress, and build wealth effortlessly.",
+        'Learn how to automate your finances in the UK with our "Set It and Forget It" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
       image:
         "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
       date: "19 November 2025",
@@ -70,10 +70,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Stop Living Paycheck to Paycheck: 3 Changes to Break the Cycle | Top Finanzas US",
+        "Stop Living Paycheck to Paycheck: 3 Shifts to Break the Cycle Today - Top Finance UK",
       slug: "stop-living-paycheck-to-paycheck",
       description:
-        "Escape the cycle of living paycheck to paycheck with three practical cash flow changes. Learn how families are building breathing room without dramatic sacrifices.",
+        "Escape the paycheck-to-paycheck cycle with three practical cash flow shifts. Learn how UK families are building breathing room without dramatic sacrifices or extreme budgets.",
       image:
         "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
       date: "13 November 2025",
@@ -81,21 +81,20 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Financial Health Check: Where Does Your Money Go? | Top Finanzas US",
+        "The 5-Minute Financial Health Check: Where Does Your Money Go? - Top Finance UK",
       slug: "financial-health-check-where-does-your-money-go",
       description:
-        "Discover where your money really goes with our quick financial health check. Learn simple tracking methods that reveal spending patterns.",
+        "Discover where your money really goes with our quick UK financial health check. Learn simple expense tracking methods that reveal spending patterns and help you take control in just minutes a day.",
       image:
         "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
       date: "5 November 2025",
       category: "guide",
     },
     {
-      title:
-        "The Hidden Costs of Homeownership | Top Finanzas US",
+      title: "The Hidden Costs of Homeownership | Top Finanzas US",
       slug: "hidden-costs-of-homeownership",
       description:
-        "Discover the unexpected expenses that surprise homeowners. From maintenance to insurance, learn how to budget for hidden costs.",
+        "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home.",
       image:
         "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
       date: "28 October 2025",
@@ -103,10 +102,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Protege tu Vida de la Inflación: 7 Movimientos de Dinero Inteligentes | Top Finanzas MX",
+        "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High | Top Finance UK",
       slug: "inflation-proof-your-life",
       description:
-        "Descubra siete estrategias prácticas para proteger su poder adquisitivo durante la alta inflación. Aprenda a eliminar fugas de gastos y construir fondos de emergencia.",
+        "Discover seven practical strategies to protect your purchasing power during high inflation. Learn how to cut invisible spending leaks, lock in fixed rates, build emergency buffers, and keep your personal finance on track when costs are rising.",
       image:
         "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
       date: "15 October 2025",
@@ -114,19 +113,20 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Los Mejores Préstamos Personales: Tu Guía Completa | Top Finanzas MX",
+        "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
       slug: "best-personal-loans",
       description:
-        "Guía completa sobre los mejores préstamos personales, incluyendo tasas, plazos y requisitos de solicitud de los principales prestamistas.",
+        "Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays.",
       image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
       date: "30 March 2025",
       category: "loans",
     },
     {
-      title: "Mejores Tarjetas de Crédito con Recompensas | Top Finanzas MX",
+      title:
+        "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
       slug: "best-rewards-credit-cards",
       description:
-        "Descubra las mejores tarjetas de crédito con recompensas que convierten sus gastos diarios en valiosos beneficios, desde cashback hasta puntos.",
+        "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
       date: "3 April 2025",
@@ -134,51 +134,50 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Mejores Tarjetas con Cashback para Maximizar tus Recompensas | Top Finanzas MX",
+        "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
       slug: "cashback-credit-cards",
       description:
-        "¡Descubra las mejores tarjetas de crédito con cashback! Compare beneficios como recompensas ilimitadas y opciones de canje flexibles.",
+        "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
       image: "https://media.topfinanzas.com/images/uk/download-8-1.webp",
       date: "3 April 2025",
       category: "creditCards",
     },
     {
       title:
-        "Tarjetas de Crédito: Tipos, Beneficios y Claves para la Salud Financiera | Top Finanzas MX",
+        "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
       slug: "credit-card-types-benefits",
       description:
-        "Descubra todo lo que necesita saber sobre las tarjetas de crédito, desde tipos y beneficios hasta consejos para un uso responsable.",
+        "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp",
       date: "3 April 2025",
       category: "creditCards",
     },
     {
-      title: "Guía Práctica para Salir de Deudas | Top Finanzas MX",
+      title: "Practical Guide to Getting Out of Debt | Top Finance UK",
       slug: "getting-out-of-debt",
       description:
-        "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas para salir de deudas, crear un fondo de emergencia y tomar el control de tus finanzas.",
+        "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
       date: "3 April 2025",
       category: "debt",
     },
     {
-      title: "Mejores Tarjetas de Crédito Sin Anualidad | Top Finanzas MX",
+      title: "Top Credit Cards With No Annual Fees | Top Finance UK",
       slug: "no-annual-fee-credit-cards",
       description:
-        "Encuentra las mejores tarjetas de crédito sin anualidad con grandes recompensas y beneficios flexibles. Ideal para gestionar gastos ahorrando en comisiones.",
+        "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp",
       date: "3 April 2025",
       category: "creditCards",
     },
     {
-      title:
-        "Préstamos Personales: Estrategia para Gestionar Deudas | Top Finanzas MX",
+      title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
       slug: "personal-loans-debt-strategy",
       description:
-        "Descubre cómo los préstamos personales pueden ayudarte a consolidar deuda y gestionar tus finanzas de manera eficiente. Aprende a elegir el préstamo adecuado.",
+        "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
       image:
         "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp",
       date: "3 April 2025",
@@ -186,10 +185,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "5 Consejos Esenciales para Elegir un Préstamo en Línea | Top Finanzas MX",
+        "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
       slug: "tips-for-choosing-an-online-loan",
       description:
-        "Navega por el mundo de los préstamos en línea con confianza usando estos consejos esenciales para encontrar las mejores tasas y plazos.",
+        "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
       image:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       date: "30 March 2025",
@@ -197,29 +196,30 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Mejores Tarjetas con 0% de Interés Introductorio | Top Finanzas MX",
+        "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
       slug: "top-credit-cards-0-intro-apr",
       description:
-        "Compara las mejores tarjetas de crédito que ofrecen 0% de interés introductorio en compras y transferencias de saldo. Ahorra en intereses hoy.",
+        "Compare the best credit cards offering 0% introductory APR on purchases and balance transfers in the UK. Save money on interest and manage debt effectively.",
       image: "https://media.topfinanzas.com/images/uk/APR.webp",
       date: "3 April 2025",
       category: "creditCards",
     },
     {
       title:
-        "Entendiendo las Tasas de Interés de Tarjetas de Crédito | Top Finanzas MX",
+        "Understanding Credit Card Interest Rates - A Consumer Guide | Top Finance UK",
       slug: "understanding-credit-card-interest-rates",
       description:
-        "Aprende cómo funcionan las tasas de interés de las tarjetas de crédito, incluyendo cálculos de CAT, y descubre formas de gestionar tu deuda.",
+        "Learn how credit card interest rates work, including APR calculations, and discover ways to manage and minimize your debt effectively.",
       image: "https://media.topfinanzas.com/images/uk/download-5-2.webp",
       date: "3 April 2025",
       category: "creditCards",
     },
     {
-      title: "¿Qué es la Salud Financiera? Una Guía Rápida | Top Finanzas MX",
+      title:
+        "What Is Financial Health? A Quick Guide to Checking Your Vitals | Top Finance UK",
       slug: "what-is-financial-health",
       description:
-        "Una guía sencilla para revisar tus signos vitales de dinero: flujo de caja, ahorros, préstamos y hábitos. Pasos para mejorar tu salud financiera.",
+        "A simple UK-focused guide to checking your money vitals—cash flow, savings, borrowing, and habits—plus quick steps to improve your financial health.",
       image:
         "https://media.topfinanzas.com/images/uk/what-is-financial-health.webp",
       date: "13 August 2025",
@@ -227,10 +227,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Gestión de Dinero para Principiantes: ¿Dónde Empiezo? | Top Finanzas MX",
+        "Money Management for Beginners: Where Do I Even Start? | Top Finance UK",
       slug: "money-management-for-beginners",
       description:
-        "¿Nuevo en finanzas personales? Aprende pasos sencillos para presupuestar, ahorrar, gestionar deudas y crear hábitos de dinero duraderos.",
+        "New to personal finance? Learn simple UK-based steps to budget, save, manage debt, and build steady money habits that stick.",
       image:
         "https://media.topfinanzas.com/images/uk/money-management-for-beginners.webp",
       date: "13 August 2025",
@@ -238,10 +238,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Estableciendo Metas Financieras: Guía para Principiantes | Top Finanzas MX",
+        "Setting Financial Goals: A Beginner's Guide to Personal Finance Planning | Top Finance UK",
       slug: "setting-financial-goals",
       description:
-        "Aprende cómo establecer metas financieras SMART, alinear tu presupuesto y crear hábitos que funcionen. Guía sencilla de finanzas personales.",
+        "Learn how to set SMART financial goals, align your budget, and build habits that stick. A simple UK-focused personal finance guide for beginners.",
       image:
         "https://media.topfinanzas.com/images/uk/setting-financial-goals.webp",
       date: "15 August 2025",
@@ -249,30 +249,30 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "¿Side Hustle o Segundo Trabajo? Cómo Elegir el Impulsor de Ingresos Adecuado",
+        "Side Hustle or Second Job? How to Choose the Right Income Booster",
       slug: "side-hustle-or-second-job",
       description:
-        "Con el aumento del costo de vida, muchos buscan formas de aumentar sus ingresos. Ya sea un segundo trabajo tradicional o un emprendimiento paralelo, elegir correctamente es clave.",
+        "With rising living costs across the UK, many people are seeking ways to boost their income. Whether you're considering a traditional second job or exploring the world of side hustles, making the right choice can significantly impact your personal finance goals and lifestyle.",
       image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
       date: "27 August 2025",
       category: "guide",
     },
     {
       title:
-        "Crea un Presupuesto de Finanzas Personales que Realmente Funcione | Top Finanzas MX",
+        "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | Top Finance UK",
       slug: "creating-a-budget-youll-actually-stick-to",
       description:
-        "Una guía de presupuesto moderna que cubre la regla 50/30/20, presupuesto base cero y herramientas digitales para ayudarte a mantenerlo.",
+        "A modern UK-friendly budgeting guide covering 50/30/20, zero‑based budgeting, digital pots, and a 7‑day quick start — built to help you actually stick to it.",
       image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
       date: "4 September 2025",
       category: "guide",
     },
     {
       title:
-        "¿Qué es la 'Inflación del Estilo de Vida' y Cómo está Drenando tu Cartera en Silencio? | Top Finanzas MX",
+        "What Is 'Lifestyle Creep' and How Is It Silently Draining Your Wallet? | Top Finance UK",
       slug: "what-is-lifestyle-creep",
       description:
-        "Descubra cómo el aumento gradual de sus gastos al ganar más dinero puede sabotear sus metas financieras y aprenda estrategias para evitarlo.",
+        "Discover how lifestyle creep gradually increases your spending as your income grows, and learn practical strategies to prevent this silent wealth-drainer from sabotaging your personal finance goals whilst still enjoying life.",
       image:
         "https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp",
       date: "9 October 2025",
@@ -280,10 +280,10 @@ export default function PersonalFinanceArchivePage() {
     },
     {
       title:
-        "Desvinculación Financiera: Una Guía Compasiva para Separar Finanzas durante una Ruptura | Top Finanzas MX",
+        "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup | Top Finance UK",
       slug: "financial-uncoupling-separating-finances-during-breakup",
       description:
-        "Guía práctica sobre cómo separar cuentas conjuntas, gestionar deudas compartidas y proteger su crédito después de una relación.",
+        "Practical UK guidance on untangling joint accounts, managing shared debts, protecting your credit, and rebuilding financial independence after a relationship ends.",
       image:
         "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
       date: "23 October 2025",
@@ -359,12 +359,11 @@ export default function PersonalFinanceArchivePage() {
   const content = (
     <div data-category="personal-finance">
       <h1 className="text-4xl font-bold mb-6 text-gray-800">
-        Guías de Finanzas Personales
+        Personal Finance Guides
       </h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
-        Explora nuestras guías sobre tarjetas de crédito, préstamos, gestión de
-        deudas y otros temas de finanzas personales para ayudarte a tomar
-        decisiones informadas.
+        Explore our guides on credit cards, loans, debt management, and other
+        personal finance topics to help you make informed decisions.
       </p>
 
       {/* Category filter buttons */}
@@ -430,7 +429,7 @@ export default function PersonalFinanceArchivePage() {
                     href={`/personal-finance/${post.slug}`}
                     className="text-blue-600 hover:text-blue-800 font-medium text-sm"
                   >
-                    Leer más →
+                    Read more →
                   </Link>
                 </div>
               </div>
@@ -438,9 +437,7 @@ export default function PersonalFinanceArchivePage() {
           ))
         ) : (
           <div className="col-span-full text-left py-12">
-            <p className="text-gray-500">
-              No se encontraron artículos en esta categoría.
-            </p>
+            <p className="text-gray-500">No posts found in this category.</p>
           </div>
         )}
       </div>
@@ -449,9 +446,9 @@ export default function PersonalFinanceArchivePage() {
 
   // Metadata for the archive page itself
   const pageMetadata = {
-    title: "Guías de Finanzas Personales | TopFinanzas MX",
+    title: "Personal Finance Guides | Top Finance UK",
     description:
-      "Explora guías sobre tarjetas de crédito, préstamos, gestión de deudas y otros temas de finanzas personales en México.",
+      "Explore guides on credit cards, loans, debt management, and other personal finance topics in the UK.",
   };
 
   return <BlogLayout metadata={pageMetadata}>{content}</BlogLayout>;

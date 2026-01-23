@@ -8,11 +8,11 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 export function generateMetadata() {
   return {
     title:
-      "118 118 Money Credit Card: Build Your Credit Score with Confidence - TopFinanzas US",
+      "118 118 Money Credit Card: Build Your Credit Score with Confidence - Top Finance UK",
     description:
       "The 118 118 Money Credit Card offers guaranteed personalised credit limits and transparent terms to help you build or rebuild your credit score with expert support.",
     keywords:
-      "118 118 Money Credit Card, credit builder card, bad credit credit card, build credit score, US credit cards, credit building, guaranteed credit limit",
+      "118 118 Money Credit Card, credit builder card, bad credit credit card, build credit score, UK credit cards, credit building, guaranteed credit limit",
   };
 }
 
@@ -20,7 +20,7 @@ export default function Money118118CreditCardPage() {
   return (
     <main
       className="bg-white min-h-screen flex flex-col"
-      data-category="tarjetas"
+      data-category="credit-cards"
     >
       <Header />
 
@@ -120,7 +120,7 @@ export default function Money118118CreditCardPage() {
 
               <div className="my-6">
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-                  The 118 118 Money Credit Card is specifically designed for
+                  The 118 118 Money Credit Card is specifically designed for UK
                   consumers who are looking to build or rebuild their credit
                   score. Whether you're new to credit, recovering from financial
                   difficulties, or simply looking to improve your credit rating,
@@ -165,9 +165,9 @@ export default function Money118118CreditCardPage() {
                   tool, helping you establish or rebuild your credit history
                   through responsible use. By making regular payments on time
                   and keeping your balance manageable, you can demonstrate good
-                  repayment behavior to credit bureaus. This positive payment
-                  history is reported to the major credit bureaus, helping to
-                  improve your credit score over time.
+                  repayment behaviour to credit reference agencies. This
+                  positive payment history is reported to the major UK credit
+                  bureaus, helping to improve your credit score over time.
                 </p>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
@@ -176,7 +176,7 @@ export default function Money118118CreditCardPage() {
                   difficulties in the past. It provides an opportunity to show
                   lenders that you can manage credit responsibly, which can open
                   doors to better financial products in the future with lower
-                  interest rates and more favorable terms.
+                  interest rates and more favourable terms.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -188,7 +188,7 @@ export default function Money118118CreditCardPage() {
                   The credit card features a simple flat interest rate with no
                   hidden fees or complicated terms. The representative 49.0% APR
                   (variable) is clearly disclosed, along with all associated
-                  charges. Late or missed payment fees are set at $12, and cash
+                  charges. Late or missed payment fees are set at £12, and cash
                   withdrawal fees are 5% of the transaction amount, ensuring you
                   understand exactly what you'll pay if you use these services.
                 </p>
@@ -226,7 +226,7 @@ export default function Money118118CreditCardPage() {
                   extensive support through its Money Guidance section and
                   Fitness Academy. These resources are designed to help you
                   develop better financial habits and improve your underlying
-                  financial behaviors, not just obsess over your credit score.
+                  financial behaviours, not just obsess over your credit score.
                   The Fitness Academy provides educational content, practical
                   tips, and tools to help you become more financially confident
                   and capable.
@@ -268,11 +268,11 @@ export default function Money118118CreditCardPage() {
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   The 118 118 Money Credit Card is ideal for several groups of
-                  consumers. If you're new to credit and have no credit
-                  history, this card provides an accessible entry point to start
-                  building your credit profile. For those who have experienced
-                  financial difficulties in the past, such as missed payments,
-                  defaults, or judgments, it offers a second chance to demonstrate
+                  consumers. If you're new to credit and have no credit history,
+                  this card provides an accessible entry point to start building
+                  your credit profile. For those who have experienced financial
+                  difficulties in the past, such as missed payments, defaults,
+                  or judgments, it offers a second chance to demonstrate
                   responsible credit management.
                 </p>
 
@@ -293,17 +293,17 @@ export default function Money118118CreditCardPage() {
                   </h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Representative Example:</strong> Representative
-                    49.0% APR (variable). Amount of credit $1,200. Interest
+                    49.0% APR (variable). Amount of credit £1,200. Interest
                     rate: 49.0% pa (variable).
                   </p>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Credit is subject to status</strong>, affordability
-                    and credit checks. You must be a US resident aged 18 or
+                    and credit checks. You must be a UK resident aged 18 or
                     over. Terms and conditions apply.
                   </p>
                   <p className="text-sm text-gray-700">
                     <strong>Warning:</strong> Late or missed payments can damage
-                    your credit score and may incur charges ($12 per late or
+                    your credit score and may incur charges (£12 per late or
                     missed payment). Cash withdrawal fees of 5% apply.
                   </p>
                 </div>
@@ -321,8 +321,8 @@ export default function Money118118CreditCardPage() {
                       <span className="font-semibold">
                         Make payments on time:
                       </span>{" "}
-                      Set up autopay to ensure you never miss a payment,
-                      as payment history is the most important factor in your
+                      Set up autopay to ensure you never miss a payment, as
+                      payment history is the most important factor in your
                       credit score.
                     </div>
                   </div>
@@ -336,7 +336,7 @@ export default function Money118118CreditCardPage() {
                         Keep your balance low:
                       </span>{" "}
                       Try to use no more than 30% of your available credit limit
-                      to maintain a healthy credit utilization ratio.
+                      to maintain a healthy credit utilisation ratio.
                     </div>
                   </div>
 
@@ -406,7 +406,7 @@ export default function Money118118CreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards"
                         className="text-[#ec2028] hover:text-red-800 font-medium text-md"
                       >
-                        Best Rewards Credit Cards →
+                        Best Rewards Credit Cards in the UK →
                       </Link>
                     </li>
                     <li>
@@ -438,7 +438,8 @@ export default function Money118118CreditCardPage() {
                     purposes only and does not constitute financial advice.
                     Always consider your personal circumstances and seek
                     independent financial advice if needed. 118 118 Money is
-                    authorized and regulated by relevant financial authorities.
+                    authorised and regulated by the Financial Conduct Authority
+                    (FRN 741774).
                   </p>
                 </div>
               </div>

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   title:
     "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:
-    "We've discovered a few cards that unlock remarkable boundaries for you. Select the limit option that suits your daily requirements and begin enjoying perks like 0% APR, cashback, points, and more.",
+    "We've discovered a few cards that unlock remarkable boundaries for you. Select the card type that suits you best and begin enjoying perks like 0% APR, cashback, points, and more.",
 };
 
-export default function InvitCreditCardRecUSPage() {
+export default function InvitCreditCardRecUS2Page() {
   return (
     <main className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
       <div className="flex flex-col items-center text-center space-y-8">
@@ -44,19 +44,19 @@ export default function InvitCreditCardRecUSPage() {
               href="/financial-solutions"
               className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
             >
-              $1000 CREDIT CARD
+              Up to 2% Cashback Credit Card
             </Link>
             <Link
               href="/financial-solutions"
               className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
             >
-              $2500 CREDIT CARD
+              No annual fee Credit Card
             </Link>
             <Link
               href="/financial-solutions"
               className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
             >
-              $5000 CREDIT CARD
+              No Credit Check Credit Card
             </Link>
             <Link
               href="/financial-solutions"
@@ -85,9 +85,9 @@ export default function InvitCreditCardRecUSPage() {
               </AccordionTrigger>
               <AccordionContent>
                 A cashback statement credit is a refund applied directly to your
-                credit card account balance, reducing the amount you owe. It's
-                earned by making qualifying purchases with your rewards credit
-                card.
+                credit card account balance, reducing the amount you owe.
+                It&apos;s earned by making qualifying purchases with your
+                rewards credit card.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -107,9 +107,9 @@ export default function InvitCreditCardRecUSPage() {
               </AccordionTrigger>
               <AccordionContent>
                 Generally, you cannot transfer your balance directly to another
-                person's card. However, that person can initiate a balance
+                person&apos;s card. However, that person can initiate a balance
                 transfer from their account to pay off your card, subject to
-                their issuer's policies.
+                their issuer&apos;s policies.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

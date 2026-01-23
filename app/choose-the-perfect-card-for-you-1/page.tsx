@@ -1,321 +1,176 @@
-"use client";
-
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, Suspense } from "react";
-import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
+import { Metadata } from "next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-function CreditCardRecommenderPageContent() {
-  useRecommenderPageGuard();
-  const [openFaq, setOpenFaq] = useState<string | null>("benefits");
+export const metadata: Metadata = {
+  title: "Find Your Ideal Credit Card | Top Finanzas US",
+  description:
+    "Answer a few simple questions and we'll match you with the best card options for your financial profile.",
+};
 
-  const toggleFaq = (id: string) => {
-    if (openFaq === id) {
-      setOpenFaq(null);
-    } else {
-      setOpenFaq(id);
-    }
-  };
-
+export default function FindYourCardPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col">
-      <Header />
+    <main className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+      <div className="flex flex-col items-center text-center space-y-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#2E74B5]">
+          Find Your Ideal Credit Card
+        </h1>
 
-      <article className="text-left bg-white py-8 md:py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight">
-              Discover Your Ideal Credit Card
-            </h1>
+        <div className="space-y-2">
+          <p className="text-gray-600 text-lg">
+            Answer a few simple questions and we&apos;ll match you with the best
+            card options for your financial profile.
+          </p>
+          <p className="text-sm text-gray-400 uppercase tracking-wide">
+            By Top Finance
+          </p>
+        </div>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
+        <div className="bg-[#f0f7ff] p-6 rounded-lg w-full">
+          <p className="text-gray-700 font-medium mb-6 text-xl">
+            What benefits are you primarily looking for in a credit card?
+          </p>
+          <p className="text-gray-600 mb-6">
+            Select the option that best describes your needs:
+          </p>
 
-            <p className="text-left text-sm leading-6 text-gray-800 my-8">
-              At <strong>TopFinanzas</strong>, we help you take control of your
-              finances. We offer the best credit card analysis and
-              recommendations so you can easily find the one that suits you
-              best, maximize your rewards, organize your spending, and enjoy
-              exclusive benefits. Explore our recommendations and find the card
-              that fits you perfectly.
-            </p>
-
-            <div className="mt-8 mb-4">
-              <Link href="/financial-solutions/barclaycard-avios-plus">
-                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <span>Accept Recommendation</span>
-                    <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-sm font-bold">
-                        ➔
-                      </span>
-                    </div>
-                  </div>
-                </Button>
-              </Link>
-            </div>
-
-            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6 mt-12">
-              Why Choose Our Credit Card Recommender?
-            </h2>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
-                </div>
-                <span className="font-bold text-sm sm:text-lg">
-                  Personalized Options
-                </span>
-              </div>
-              <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
-                </div>
-                <span className="font-bold text-sm sm:text-lg">
-                  Completely Free
-                </span>
-              </div>
-              <div className="flex items-center">
-                <div className="flex-shrink-0 rounded-full bg-[#71C96C] w-6 h-6 flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-sm">➔</span>
-                </div>
-                <span className="font-bold text-sm sm:text-lg">
-                  Expert Advice
-                </span>
-              </div>
-            </div>
-
-            <p className="text-left text-sm leading-6 text-gray-800 mb-4">
-              Our recommendations are designed to connect your financial goals
-              with the cards that best suit your needs. From cashback to travel
-              rewards, we give you clear and easy-to-understand options so you
-              can make informed decisions.
-            </p>
-
-            <p className="text-left text-sm leading-6 text-gray-800 mb-10">
-              With our guide, you will transform your credit card into a tool
-              that simplifies your finances and helps you reach your goals
-              without complications.
-            </p>
-
-            <div className="mt-8 mb-4">
-              <Link href="/financial-solutions/barclaycard-avios-plus">
-                <Button className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-3 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <span>Our Top Recommendation</span>
-                    <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-sm font-bold">
-                        ➔
-                      </span>
-                    </div>
-                  </div>
-                </Button>
-              </Link>
-            </div>
-            <p className="text-center text-sm mb-12">
-              <Link
-                className="text-[#2E74B5] font-medium"
-                href="/financial-solutions/barclaycard-avios-plus-requisitos"
-              >
-                Learn How to Apply
-              </Link>
-            </p>
-
-            <div className="mt-8 mb-6 border rounded-lg overflow-hidden">
-              {/* FAQ Item 1: Benefits */}
-              <button
-                type="button"
-                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFaq("benefits")}
-                aria-expanded={openFaq === "benefits"}
-              >
-                <div className="flex items-center">
-                  <span className="text-[#2E74B5] mr-3 font-bold text-xl">
-                    {openFaq === "benefits" ? "−" : "+"}
-                  </span>
-                  <h3
-                    className={`font-bold text-md leading-tight ${openFaq === "benefits" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
-                  >
-                    What are the benefits of a no-annual-fee card?
-                  </h3>
-                </div>
-              </button>
-              {openFaq === "benefits" && (
-                <div
-                  className="p-4 text-gray-700 bg-gray-50"
-                  id="faq-benefits-content"
-                >
-                  <p className="text-left text-sm">
-                    A no-annual-fee card helps you save on recurring costs while
-                    enjoying key benefits like cashback or points on your
-                    purchases.
-                  </p>
-                </div>
-              )}
-
-              {/* FAQ Item 2: Cashback */}
-              <button
-                type="button"
-                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFaq("cashback")}
-                aria-expanded={openFaq === "cashback"}
-              >
-                <div className="flex items-center">
-                  <span className="text-[#2E74B5] mr-3 font-bold text-xl">
-                    {openFaq === "cashback" ? "−" : "+"}
-                  </span>
-                  <h3
-                    className={`font-bold text-md leading-tight ${openFaq === "cashback" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
-                  >
-                    How does cashback work?
-                  </h3>
-                </div>
-              </button>
-              {openFaq === "cashback" && (
-                <div
-                  className="p-4 text-gray-700 bg-gray-50"
-                  id="faq-cashback-content"
-                >
-                  <p className="text-left text-sm">
-                    You receive a percentage of your purchases back as cash that
-                    you can use to reduce balances or spend however you prefer.
-                  </p>
-                </div>
-              )}
-
-              {/* FAQ Item 3: Travelers */}
-              <button
-                type="button"
-                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFaq("travelers")}
-                aria-expanded={openFaq === "travelers"}
-              >
-                <div className="flex items-center">
-                  <span className="text-[#2E74B5] mr-3 font-bold text-xl">
-                    {openFaq === "travelers" ? "−" : "+"}
-                  </span>
-                  <h3
-                    className={`font-bold text-md leading-tight ${openFaq === "travelers" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
-                  >
-                    What is the best option for travelers?
-                  </h3>
-                </div>
-              </button>
-              {openFaq === "travelers" && (
-                <div
-                  className="p-4 text-gray-700 bg-gray-50"
-                  id="faq-travelers-content"
-                >
-                  <p className="text-left text-sm">
-                    Cards that earn miles or offer VIP lounge access are ideal
-                    for frequent travelers, allowing you to save on flights and
-                    enjoy exclusive benefits.
-                  </p>
-                </div>
-              )}
-
-              {/* FAQ Item 4: Online */}
-              <button
-                type="button"
-                className="flex justify-between items-center w-full p-4 text-left cursor-pointer hover:bg-gray-50 transition-colors"
-                onClick={() => toggleFaq("online")}
-                aria-expanded={openFaq === "online"}
-              >
-                <div className="flex items-center">
-                  <span className="text-[#2E74B5] mr-3 font-bold text-xl">
-                    {openFaq === "online" ? "−" : "+"}
-                  </span>
-                  <h3
-                    className={`font-bold text-md leading-tight ${openFaq === "online" ? "text-[#2E74B5]" : "text-[#2E74B5]"}`}
-                  >
-                    Is it safe to use credit cards online?
-                  </h3>
-                </div>
-              </button>
-              {openFaq === "online" && (
-                <div
-                  className="p-4 text-gray-700 bg-gray-50"
-                  id="faq-online-content"
-                >
-                  <p className="text-left text-sm">
-                    Yes, many cards offer advanced technology like dynamic CVV
-                    and instant alerts to protect your transactions.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <p className="text-left text-sm leading-6 text-gray-800 mb-12">
-              Make your credit card an ally in reaching your financial goals.
-              From cashback to travel rewards, choose an option that simplifies
-              your life and maximizes your benefits. Explore our recommendations
-              and find the card that best suits you.
-            </p>
-
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
-              Benefits Within Reach
-            </h2>
-            <div className="grid grid-cols-2 gap-4 mb-10">
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">
-                  Rewards for your purchases:
-                </h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Earn points on every purchase, redeemable for a wide variety
-                  of products and services.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Advanced Security:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Total protection for your online purchases with advanced
-                  security features.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Accessible to All:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Competitive income requirements to enjoy all the benefits.
-                </p>
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm">Environmental Commitment:</h3>
-                <p className="text-xs text-gray-600 leading-tight">
-                  Cards made with recycled materials, helping the planet with
-                  every purchase.
-                </p>
-              </div>
-            </div>
-
-            <div className="my-10">
-              <Link href="/financial-solutions/barclaycard-avios-plus">
-                <div className="relative w-full h-auto rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
-                  <Image
-                    src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
-                    alt="BBVA Tarjeta de Crédito Azul"
-                    width={800}
-                    height={450}
-                    className="w-full h-auto block"
-                    priority
-                  />
-                </div>
-              </Link>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              RECOMMENDED CASHBACK CARDS
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              PREMIUM RECOMMENDATION
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              NO COST CHOICE
+            </Link>
           </div>
         </div>
-      </article>
 
-      <CompactFooter />
+        <div className="w-full text-left max-w-3xl mt-12">
+          <h3 className="text-2xl font-semibold text-[#2E74B5] mb-6">
+            Frequently Asked Questions About Credit Cards
+          </h3>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                What is a credit card cashback program?
+              </AccordionTrigger>
+              <AccordionContent>
+                A cashback program refunds a small percentage of every purchase
+                you make with the card, typically between 1% and 5% depending on
+                the category.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                How do I choose the best credit card for me?
+              </AccordionTrigger>
+              <AccordionContent>
+                Consider your spending habits (travel, groceries, dining) and
+                financial goals (building credit, earning rewards, paying off
+                debt) to match with a card&apos;s benefits.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>
+                Can I get a credit card with bad credit?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes, there are secured credit cards and cards designed
+                specifically for rebuilding credit that may be available to you.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>
+                What should I do if my credit card application is denied?
+              </AccordionTrigger>
+              <AccordionContent>
+                Review your credit report for errors, improve your credit score
+                by paying down debt, and consider applying for a secured card or
+                becoming an authorized user.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        <div className="bg-white border text-left p-6 rounded-xl w-full max-w-3xl shadow-sm mt-8">
+          <h4 className="text-xl font-bold text-[#2E74B5] mb-4">
+            Smart Credit Card Usage Tips
+          </h4>
+          <ul className="space-y-2 text-gray-700 list-disc pl-5">
+            <li>
+              Always pay your full balance before the due date to avoid interest
+              charges.
+            </li>
+            <li>
+              Keep your credit utilization below 30% of your limit to maintain a
+              good credit score.
+            </li>
+            <li>
+              Regularly review your statements to catch any unauthorized
+              charges.
+            </li>
+            <li>
+              Take advantage of specific card benefits like 0% intro periods or
+              cash back offers.
+            </li>
+            <li>
+              Never use your credit card for cash advances, as they typically
+              incur high fees and interest rates.
+            </li>
+          </ul>
+        </div>
+
+        <div className="relative w-full max-w-3xl h-[300px] md:h-[400px] my-8">
+          <Image
+            src="https://media.topfinanzas.com/images/credit-card-varity.png"
+            alt="Credit Card Options"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+
+        <div className="bg-white border-2 border-[#ff9900] rounded-xl p-8 w-full max-w-3xl shadow-lg">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🔔</span>
+              <h3 className="text-xl font-bold text-[#ff9900] uppercase">
+                Exclusive Offer!
+              </h3>
+            </div>
+            <h4 className="text-2xl font-bold text-gray-900 uppercase">
+              NO ANNUAL FEE FOR LIFE
+            </h4>
+            <p className="text-gray-700">
+              No opening or maintenance fees, fast approval, and exclusive
+              benefits
+            </p>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full transition-colors bg-[#ff9900] hover:bg-[#e68a00] text-black font-bold px-8 py-3 text-lg"
+            >
+              APPLY NOW
+            </Link>
+          </div>
+        </div>
+      </div>
     </main>
-  );
-}
-
-export default function CreditCardRecommenderPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <CreditCardRecommenderPageContent />
-    </Suspense>
   );
 }

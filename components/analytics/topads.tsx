@@ -10,7 +10,14 @@ import { logger } from "@/lib/logger";
  * Loads the TopAds advertising script with proper configuration.
  * This component should be included in the root layout.
  *
- * @see /lib/documents/config.js for configuration options
+ * Configuration based on TopAds Guide:
+ * - domain: TOPFIN_US (ad unit prefix for US site)
+ * - networkCode: Google Ad Manager network code
+ * - lazyLoad: 'soft' (300% fetch margin, 150% render margin)
+ * - pageSetting.exclude: Pages that should NOT display ads
+ * - formats: Interstitial and Offerwall configurations
+ *
+ * @see /lib/documents/topAdsGuide.pdf for full configuration options
  */
 export default function TopAds() {
   useEffect(() => {
@@ -32,31 +39,38 @@ export default function TopAds() {
             window.topAds = window.topAds || {};
 
             topAds.config = {
-                domain: 'TOPFIN_MX',
+                domain: 'TOPFIN_US',
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 pageSetting: {
                     exclude: [
-                    '/terms-conditions',
-                    '/privacy-policy',
+                        '/',
+                        '/terms',
+                        '/privacy-policy',
                         '/cookie-policy',
                         '/about-us',
                         '/contact-us',
-                        '/quiz'
+                        '/quiz',
+                        '/quiz-2'
                     ]
                 },
                 formats: {
                     interstitial: {
                         status: 'active',
-                        exclude: [],
+                        exclude: [
+                            '/credit-card-recommender-p3'
+                        ],
                     },
                     offerwall: {
                         status: 'active',
                         logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
-                        websiteName: 'TopFinanzas MX',
+                        websiteName: 'TopFinanzas US',
                         cooldown: '12',
                         exclude: [
-                            '/invit-credit-card-rec-uk'
+                            '/credit-card-recommender-p2',
+                            '/credit-card-recommender-p3',
+                            '/invit-credit-card-rec-us',
+                            '/invit-credit-card-rec-us-2'
                         ],
                     },
                 }
