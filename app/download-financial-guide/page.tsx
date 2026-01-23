@@ -98,8 +98,7 @@ function DownloadGuidePageContent() {
                 Read our Financial Wellness Guide.
               </p>
               <p className="text-center text-gray-600 text-sm mb-6">
-                Download it now and start taking control of your wealth
-                👇
+                Download it now and start taking control of your wealth 👇
               </p>
 
               <Button

@@ -248,7 +248,9 @@ export function refreshGAMads(slotIds?: string[]) {
 
         if (slotsToRefresh.length > 0) {
           pubads.refresh(slotsToRefresh);
-          analyticsLogger.debug("GAM: Refreshed specific ad slots", slotIds);
+          analyticsLogger.debug("GAM: Refreshed specific ad slots", {
+            slotIds,
+          });
         }
       } else {
         // Refresh all slots

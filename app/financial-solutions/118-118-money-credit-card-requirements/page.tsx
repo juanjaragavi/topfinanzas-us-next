@@ -8,11 +8,11 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 export function generateMetadata() {
   return {
     title:
-      "118 118 Money Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+      "118 118 Money Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
       "Understand the eligibility criteria, documentation, and application process for the 118 118 Money Credit Card to start building your credit score today.",
     keywords:
-      "118 118 Money requirements, credit card application, credit builder eligibility, US credit card, bad credit card requirements, 118 118 Money apply",
+      "118 118 Money requirements, credit card application, credit builder eligibility, UK credit card, bad credit card requirements, 118 118 Money apply",
   };
 }
 
@@ -20,7 +20,7 @@ export default function Money118118CreditCardRequirementsPage() {
   return (
     <main
       className="bg-white min-h-screen flex flex-col"
-      data-category="tarjetas"
+      data-category="credit-cards"
     >
       <Header />
 
@@ -76,7 +76,7 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">Age requirement:</span>{" "}
                       You must be at least 18 years old. This is a standard
                       legal requirement for entering into credit agreements in
-                      the US.
+                      the UK.
                     </div>
                   </div>
 
@@ -85,9 +85,9 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">US residency:</span> You
-                      must be a permanent US resident with a valid US address.
-                      This allows 118 118 Money to operate within US regulations
+                      <span className="font-semibold">UK residency:</span> You
+                      must be a permanent UK resident with a valid UK address.
+                      This allows 118 118 Money to operate within UK regulations
                       and verify your identity.
                     </div>
                   </div>
@@ -128,8 +128,8 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Bank account requirement:
                       </span>{" "}
-                      You'll need a valid US bank account to receive payments
-                      and make repayments via autopay.
+                      You'll need a valid UK bank account to receive payments
+                      and make repayments via direct debit.
                     </div>
                   </div>
                 </div>
@@ -153,8 +153,8 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of identity:</span>{" "}
-                      A valid US passport, driver's license, or state ID
-                      card. This confirms your identity and age.
+                      A valid US passport, driver's license, or state ID card.
+                      This confirms your identity and age.
                     </div>
                   </div>
 
@@ -165,8 +165,9 @@ export default function Money118118CreditCardRequirementsPage() {
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of address:</span>{" "}
                       Recent documents dated within the last 3 months, such as
-                      utility bills, property tax statements, or bank statements.
-                      This confirms your current US residential address.
+                      utility bills, property tax statements, or bank
+                      statements. This confirms your current US residential
+                      address.
                     </div>
                   </div>
 
@@ -176,8 +177,8 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Bank details:</span> Your
-                      US bank account number and routing number for setting up autopay
-                      payments and receiving refunds if applicable.
+                      US bank account number and routing number for setting up
+                      autopay payments and receiving refunds if applicable.
                     </div>
                   </div>
 
@@ -190,8 +191,8 @@ export default function Money118118CreditCardRequirementsPage() {
                         Employment/income information:
                       </span>{" "}
                       Details of your employment status and income to support
-                      the affordability assessment. This may include pay stubs or
-                      benefit statements.
+                      the affordability assessment. This may include pay stubs
+                      or benefit statements.
                     </div>
                   </div>
                 </div>
@@ -235,7 +236,7 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">Annual fee:</span> $0.
+                      <span className="font-semibold">Annual fee:</span> £0.
                       There is no annual fee charged for holding this credit
                       card, making it more affordable than many premium cards.
                     </div>
@@ -249,7 +250,7 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Late or missed payment fee:
                       </span>{" "}
-                      $12 per occurrence. This fee is charged if you fail to
+                      £12 per occurrence. This fee is charged if you fail to
                       make at least the minimum payment by the due date.
                     </div>
                   </div>
@@ -275,7 +276,7 @@ export default function Money118118CreditCardRequirementsPage() {
                   </h3>
                   <p className="text-sm text-gray-700 mb-2">
                     Representative 49.0% APR (variable). Amount of credit
-                    $1,200. Interest rate: 49.0% pa (variable).
+                    £1,200. Interest rate: 49.0% pa (variable).
                   </p>
                   <p className="text-sm text-gray-700">
                     This example is for illustrative purposes only. Your actual
@@ -331,9 +332,9 @@ export default function Money118118CreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Credit score improvement:
                       </span>{" "}
-                      Responsible use of the card is reported to credit
-                      bureaus, helping you build or rebuild your
-                      credit history over time.
+                      Responsible use of the card is reported to credit bureaus,
+                      helping you build or rebuild your credit history over
+                      time.
                     </div>
                   </div>
 
@@ -368,11 +369,11 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
-                        Consumer protection:
+                        Section 75 protection:
                       </span>{" "}
                       Purchases between $100.01 and $30,000 are protected under
-                      federal consumer protection laws, providing
-                      additional consumer protection.
+                      federal consumer protection laws, providing additional
+                      consumer protection.
                     </div>
                   </div>
                 </div>
@@ -510,7 +511,7 @@ export default function Money118118CreditCardRequirementsPage() {
                       and affordability assessment. The eligibility checker will
                       show you your guaranteed personalised credit limit before
                       you apply. Representative examples show credit limits of
-                      $1,200, but your limit may be higher or lower.
+                      £1,200, but your limit may be higher or lower.
                     </p>
                   </div>
 
@@ -558,13 +559,13 @@ export default function Money118118CreditCardRequirementsPage() {
                   </h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Credit is subject to status</strong>, affordability
-                    checks, and credit checks. You must be a US resident aged 18
+                    checks, and credit checks. You must be a UK resident aged 18
                     or over to apply.
                   </p>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Late or missed payments</strong> can seriously
                     damage your credit score and may result in additional
-                    charges ($12 per late or missed payment). They can also make
+                    charges (£12 per late or missed payment). They can also make
                     it harder to obtain credit in the future.
                   </p>
                   <p className="text-sm text-gray-700">
@@ -629,8 +630,8 @@ export default function Money118118CreditCardRequirementsPage() {
                     informational purposes only and does not constitute
                     financial advice. Always carefully review the terms and
                     conditions before applying for any credit product. 118 118
-                    Money is authorized and regulated by relevant financial authorities.
-                    Consider seeking independent financial advice
+                    Money is authorized and regulated by relevant financial
+                    authorities. Consider seeking independent financial advice
                     if you're unsure whether this product is suitable for your
                     circumstances.
                   </p>

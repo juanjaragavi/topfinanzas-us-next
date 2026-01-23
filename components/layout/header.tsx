@@ -129,21 +129,21 @@ export function Header() {
   }, [lastScrollY]);
 
   const archiveMonths = [
-    "October 2025",
-    "September 2025",
-    "August 2025",
-    "July 2025",
-    "June 2025",
-    "May 2025",
-    "February 2025",
-    "January 2025",
-    "December 2024",
-    "September 2024",
-    "August 2024",
-    "July 2024",
-    "January 2024",
-    "December 2023",
-    "November 2023",
+    "octubre 2025",
+    "septiembre 2025",
+    "agosto 2025",
+    "julio 2025",
+    "junio 2025",
+    "mayo 2025",
+    "febrero 2025",
+    "enero 2025",
+    "diciembre 2024",
+    "septiembre 2024",
+    "agosto 2024",
+    "julio 2024",
+    "enero 2024",
+    "diciembre 2023",
+    "noviembre 2023",
   ];
 
   return (
@@ -426,7 +426,7 @@ export function Header() {
               {/* Desktop Search Button (Restored) */}
               <button
                 type="button"
-                onClick={() => setIsSearchOpen((prev) => !prev)}
+                onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-black hover:text-primary"
                 aria-label="Search"
               >
@@ -440,7 +440,7 @@ export function Header() {
               {/* Added ml-auto */}
               <button
                 type="button"
-                onClick={() => setIsSearchOpen((prev) => !prev)} // Toggle search
+                onClick={() => setIsSearchOpen(true)} // Toggle search
                 className="p-2 text-black hover:text-primary" // Removed negative margins to clean up alignment
                 aria-label="Search"
               >
@@ -449,11 +449,7 @@ export function Header() {
             </div>
           </div>
 
-          {/* Search Bar Overlay - Moved back inside Header to position relative to it */}
-          <SearchBar
-            isOpen={isSearchOpen}
-            onClose={() => setIsSearchOpen(false)}
-          />
+          {/* Removed Search Bar and Results Section */}
         </div>
       </header>
 
@@ -492,14 +488,14 @@ export function Header() {
 
           {/* Menu Items */}
           <div className="flex-1 py-4">
-            {/* CATEGORIES */}
+            {/* CATEGORÍAS */}
             <div>
               <button
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
                 className="flex items-center justify-between w-full px-6 py-3 text-left"
               >
                 <span className="font-bold text-gray-800 uppercase tracking-wide">
-                  CATEGORIES
+                  CATEGORÍAS
                 </span>
                 <ChevronDown
                   className={`w-5 h-5 text-gray-400 transition-transform ${isCategoriesOpen ? "rotate-180" : ""}`}
@@ -507,50 +503,66 @@ export function Header() {
               </button>
               {isCategoriesOpen && (
                 <div className="bg-gray-50 px-6 py-2 space-y-2">
-                  <Link
-                    href="/personal-finance"
-                    className="flex items-center text-gray-600 py-1 hover:text-blue-600"
-                  >
+                  {/* Mock categories based on reference + existing nav */}
+                  <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Personal Finance</span>
-                  </Link>
-                  <Link
-                    href="/financial-solutions"
-                    className="flex items-center text-gray-600 py-1 hover:text-blue-600"
-                  >
+                    <span>Ahorro inteligente</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Financial Solutions</span>
-                  </Link>
+                    <span>Deuda cero</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
+                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
+                    <span>Elige tu tarjeta</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
+                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
+                    <span>Finanzas para el hogar</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
+                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
+                    <span>Finanzas para estudiantes</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
+                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
+                    <span>Finanzas para pymes</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 py-1">
+                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
+                    <span>Finanzas para todos</span>
+                  </div>
+                  {/* ... others matching list */}
                 </div>
               )}
             </div>
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* LOANS */}
+            {/* PRÉSTAMOS */}
             <Link
-              href="/loans"
+              href="/prestamos"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
-              LOANS
+              PRÉSTAMOS
             </Link>
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* CREDIT CARDS */}
+            {/* TARJETAS DE CRÉDITO */}
             <Link
-              href="/cards"
+              href="/tarjetas"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
             >
-              CREDIT CARDS
+              TARJETAS DE CRÉDITO
             </Link>
 
             <div className="border-t border-gray-100 my-2"></div>
 
-            {/* Archives (Styled with Red Arrow per screenshot? No, looks like regular header) */}
+            {/* Archivos (Styled with Red Arrow per screenshot? No, looks like regular header) */}
             <div className="px-6 py-4">
               <h3 className="font-bold text-gray-700 text-lg mb-4 flex items-center">
-                Archives
+                Archivos
                 {/* Screenshot has a red arrow line under 'Archivos'? Or separating it? 
                     Actually looks like a red arrow graphic separating sections or highlighting. 
                     For now, sticking to clean typography.
@@ -568,6 +580,9 @@ export function Header() {
           </div>
         </div>
       </div>
+
+      {/* Search Bar Overlay */}
+      <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 }

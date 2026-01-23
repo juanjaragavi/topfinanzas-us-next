@@ -1,6 +1,6 @@
 /**
  * Navigation items and content for the footer component
- * Localized for the UK market
+ * Localized for the US market
  * Easily modifiable by LLM agents to update site footer content
  */
 

@@ -1,183 +1,176 @@
-"use client";
-
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Bell } from "lucide-react";
+import { Metadata } from "next";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Suspense } from "react";
-import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
 
-function ChoosePerfectCardPageContent() {
-  useRecommenderPageGuard();
+export const metadata: Metadata = {
+  title: "Find Your Ideal Credit Card | Top Finanzas US",
+  description:
+    "Answer a few simple questions and we'll match you with the best card options for your financial profile.",
+};
 
+export default function FindYourCardPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col font-sans">
-      <Header />
+    <main className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+      <div className="flex flex-col items-center text-center space-y-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#2E74B5]">
+          Find Your Ideal Credit Card
+        </h1>
 
-      <div className="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-3xl">
-        
-        {/* Hero Section */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Find Your Ideal Credit Card
-          </h1>
-          <p className="text-gray-700 text-lg mb-2">
-            Answer a few simple questions and we'll match you with the best card options for your financial profile.
+        <div className="space-y-2">
+          <p className="text-gray-600 text-lg">
+            Answer a few simple questions and we&apos;ll match you with the best
+            card options for your financial profile.
           </p>
-          <p className="text-gray-500 text-sm">By Top Finance</p>
+          <p className="text-sm text-gray-400 uppercase tracking-wide">
+            By Top Finance
+          </p>
         </div>
 
-        {/* Question Section */}
-        <div className="mb-10">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 text-center">
+        <div className="bg-[#f0f7ff] p-6 rounded-lg w-full">
+          <p className="text-gray-700 font-medium mb-6 text-xl">
             What benefits are you primarily looking for in a credit card?
-          </h2>
-          <p className="text-gray-700 mb-6 text-center">
+          </p>
+          <p className="text-gray-600 mb-6">
             Select the option that best describes your needs:
           </p>
 
-          <div className="space-y-4 max-w-md mx-auto">
-            <Link href="/financial-solutions/barclaycard-avios-plus" className="block">
-              <Button className="w-full bg-[#3B7CA8] hover:bg-[#326a90] text-white font-bold py-6 text-lg rounded-lg uppercase shadow-md">
-                RECOMMENDED CASHBACK CARDS
-              </Button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              RECOMMENDED CASHBACK CARDS
             </Link>
-            <Link href="/financial-solutions/barclaycard-avios-plus" className="block">
-              <Button className="w-full bg-[#2C5282] hover:bg-[#23426a] text-white font-bold py-6 text-lg rounded-lg uppercase shadow-md">
-                PREMIUM RECOMMENDATION
-              </Button>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              PREMIUM RECOMMENDATION
             </Link>
-            <Link href="/financial-solutions/barclaycard-avios-plus" className="block">
-              <Button className="w-full bg-[#4A5568] hover:bg-[#3c4554] text-white font-bold py-6 text-lg rounded-lg uppercase shadow-md">
-                NO COST CHOICE
-              </Button>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              NO COST CHOICE
             </Link>
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center md:text-left">
+        <div className="w-full text-left max-w-3xl mt-12">
+          <h3 className="text-2xl font-semibold text-[#2E74B5] mb-6">
             Frequently Asked Questions About Credit Cards
-          </h2>
+          </h3>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-semibold text-gray-900">
+              <AccordionTrigger>
                 What is a credit card cashback program?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                A cashback program is a type of rewards system where you receive a percentage of your purchases back as a statement credit, direct deposit, or other reward form. Typical rates range from 1-5% depending on the card and purchase category. Some cards offer flat-rate cash back on all purchases, while others provide higher percentages in specific categories like groceries, gas, or dining.
+              <AccordionContent>
+                A cashback program refunds a small percentage of every purchase
+                you make with the card, typically between 1% and 5% depending on
+                the category.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-semibold text-gray-900">
+              <AccordionTrigger>
                 How do I choose the best credit card for me?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                To choose the best credit card, consider your financial profile (income and credit score), spending habits (where you spend the most), and which benefits you value (cashback, travel rewards, no annual fee). Compare APRs, fees, included insurance benefits, and promotional offers. For beginners, no-annual-fee cards are typically recommended, while frequent travelers might benefit more from travel rewards cards.
+              <AccordionContent>
+                Consider your spending habits (travel, groceries, dining) and
+                financial goals (building credit, earning rewards, paying off
+                debt) to match with a card&apos;s benefits.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-semibold text-gray-900">
+              <AccordionTrigger>
                 Can I get a credit card with bad credit?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Yes, several credit cards are designed specifically for individuals with limited or damaged credit. Secured credit cards require a security deposit that typically becomes your credit limit. Store credit cards and certain unsecured cards for limited credit also have less stringent approval requirements. Using these responsibly by making on-time payments and keeping balances low can help improve your credit score over time.
+              <AccordionContent>
+                Yes, there are secured credit cards and cards designed
+                specifically for rebuilding credit that may be available to you.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left font-semibold text-gray-900">
+              <AccordionTrigger>
                 What should I do if my credit card application is denied?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                If your application is denied, first request a copy of the credit report used in the decision to identify potential issues. Wait at least 3-6 months before applying for another card, as multiple applications in a short period can negatively impact your credit score. In the meantime, consider secured cards or retail store cards with more flexible approval requirements. You can also improve your profile by paying down existing debts and establishing a history of on-time payments.
+              <AccordionContent>
+                Review your credit report for errors, improve your credit score
+                by paying down debt, and consider applying for a secured card or
+                becoming an authorized user.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
 
-        {/* Tips Section */}
-        <div className="bg-gray-100 rounded-lg p-6 mb-12 border-l-4 border-blue-800">
-          <h3 className="text-xl font-bold text-blue-900 mb-4">
+        <div className="bg-white border text-left p-6 rounded-xl w-full max-w-3xl shadow-sm mt-8">
+          <h4 className="text-xl font-bold text-[#2E74B5] mb-4">
             Smart Credit Card Usage Tips
-          </h3>
-          <ul className="space-y-3 text-gray-800">
-            <li className="flex items-start">
-              <span className="mr-2 mt-1.5 h-1.5 w-1.5 bg-black rounded-full flex-shrink-0"></span>
-              <span>Always pay your full balance before the due date to avoid interest charges.</span>
+          </h4>
+          <ul className="space-y-2 text-gray-700 list-disc pl-5">
+            <li>
+              Always pay your full balance before the due date to avoid interest
+              charges.
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 mt-1.5 h-1.5 w-1.5 bg-black rounded-full flex-shrink-0"></span>
-              <span>Keep your credit utilization below 30% of your limit to maintain a good credit score.</span>
+            <li>
+              Keep your credit utilization below 30% of your limit to maintain a
+              good credit score.
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 mt-1.5 h-1.5 w-1.5 bg-black rounded-full flex-shrink-0"></span>
-              <span>Regularly review your statements to catch any unauthorized charges.</span>
+            <li>
+              Regularly review your statements to catch any unauthorized
+              charges.
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 mt-1.5 h-1.5 w-1.5 bg-black rounded-full flex-shrink-0"></span>
-              <span>Take advantage of specific card benefits like 0% intro periods or cash back offers.</span>
+            <li>
+              Take advantage of specific card benefits like 0% intro periods or
+              cash back offers.
             </li>
-            <li className="flex items-start">
-              <span className="mr-2 mt-1.5 h-1.5 w-1.5 bg-black rounded-full flex-shrink-0"></span>
-              <span>Never use your credit card for cash advances, as they typically incur high fees and interest rates.</span>
+            <li>
+              Never use your credit card for cash advances, as they typically
+              incur high fees and interest rates.
             </li>
           </ul>
         </div>
 
-        {/* Banner Section */}
-        <div className="bg-gradient-to-b from-[#4A6FA5] to-[#3B5C8D] rounded-xl p-6 text-center text-white shadow-lg relative overflow-hidden">
-          <div className="relative z-10 flex flex-col items-center">
-            <div className="w-64 h-40 relative mb-4">
-               <Image
-                src="https://us.topfinanzas.com/wp-content/uploads/2025/04/credit-card-varity.png"
-                alt="Credit Card Variety"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 300px"
-              />
+        <div className="relative w-full max-w-3xl h-[300px] md:h-[400px] my-8">
+          <Image
+            src="https://media.topfinanzas.com/images/credit-card-varity.png"
+            alt="Credit Card Options"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+
+        <div className="bg-white border-2 border-[#ff9900] rounded-xl p-8 w-full max-w-3xl shadow-lg">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl">🔔</span>
+              <h3 className="text-xl font-bold text-[#ff9900] uppercase">
+                Exclusive Offer!
+              </h3>
             </div>
-            
-            <div className="flex items-center justify-center space-x-2 mb-2 text-yellow-400 font-bold text-lg">
-              <Bell className="w-5 h-5 fill-current" />
-              <span>Exclusive Offer!</span>
-            </div>
-            
-            <h3 className="text-2xl md:text-3xl font-extrabold mb-2 uppercase tracking-wide">
+            <h4 className="text-2xl font-bold text-gray-900 uppercase">
               NO ANNUAL FEE FOR LIFE
-            </h3>
-            
-            <p className="text-blue-100 mb-6 max-w-md mx-auto">
-              No opening or maintenance fees, fast approval, and exclusive benefits
+            </h4>
+            <p className="text-gray-700">
+              No opening or maintenance fees, fast approval, and exclusive
+              benefits
             </p>
-            
-            <Link href="/financial-solutions/barclaycard-avios-plus" className="w-full max-w-xs">
-              <Button className="w-full bg-white text-[#3B5C8D] hover:bg-gray-100 font-bold py-6 text-lg rounded-md uppercase">
-                APPLY NOW
-              </Button>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full transition-colors bg-[#ff9900] hover:bg-[#e68a00] text-black font-bold px-8 py-3 text-lg"
+            >
+              APPLY NOW
             </Link>
           </div>
         </div>
-
       </div>
-
-      <CompactFooter />
     </main>
-  );
-}
-
-export default function ChoosePerfectCardPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ChoosePerfectCardPageContent />
-    </Suspense>
   );
 }

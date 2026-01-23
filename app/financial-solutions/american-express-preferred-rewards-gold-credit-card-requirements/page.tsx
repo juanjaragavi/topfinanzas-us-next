@@ -9,11 +9,11 @@ import { Check } from "lucide-react";
 export function generateMetadata() {
   return {
     title:
-      "American Express Preferred Rewards Gold Credit Card Requirements: Everything You Need to Know - Top Finanzas US",
+      "American Express Preferred Rewards Gold Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
       "Discover the eligibility requirements, application process, and documentation needed for the American Express Gold Card. Learn about income requirements, credit checks, and approval criteria.",
     keywords:
-      "Amex Gold requirements, American Express eligibility, credit card application US, Amex approval criteria, Gold Card qualifications, credit check, income requirements",
+      "Amex Gold requirements, American Express eligibility, credit card application UK, Amex approval criteria, Gold Card qualifications, credit check, income requirements",
   };
 }
 
@@ -22,7 +22,7 @@ export default function AmexGoldRequirementsPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="bg-white py-8 md:py-12" data-category="tarjetas">
+      <article className="bg-white py-8 md:py-12" data-category="credit-cards">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
@@ -76,9 +76,9 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     You must be at least 18 years old to apply for the American
                     Express Gold Card. This is a legal requirement for entering
-                    into credit agreements in the US. American Express will
+                    into credit agreements in the UK. American Express will
                     verify your age as part of the application process using
-                    identity documentation and credit bureau data.
+                    identity documentation and credit reference agency data.
                   </p>
                 </div>
 
@@ -89,10 +89,11 @@ export default function AmexGoldRequirementsPage() {
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     Applicants must be permanent US residents with a fixed US
-                    address. Proof of US residency will be verified through credit checks and
-                    may require additional documentation. Temporary residents,
-                    students on short-term visas, or those who have recently
-                    moved to the US may find approval challenging.
+                    address. Proof of US residency will be verified through
+                    credit checks and may require additional documentation.
+                    Temporary residents, students on short-term visas, or those
+                    who have recently moved to the US may find approval
+                    challenging.
                   </p>
                 </div>
 
@@ -102,12 +103,11 @@ export default function AmexGoldRequirementsPage() {
                     US Bank Account
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
-                    You must hold an active US bank or credit union current
-                    account in your own name. This account will be used for
-                    payments towards your card balance. American
-                    Express requires a US-based banking relationship to
-                    facilitate secure payment collection and ensure compliance
-                    with US financial regulations.
+                    You must hold an active US bank account in your own name.
+                    This account will be used for payments towards your card
+                    balance. American Express requires a US-based banking
+                    relationship to facilitate secure payment collection and
+                    ensure compliance with US financial regulations.
                   </p>
                 </div>
 
@@ -118,12 +118,12 @@ export default function AmexGoldRequirementsPage() {
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     American Express will conduct a comprehensive credit check
-                    with major credit bureaus. A good to excellent
-                    credit score significantly improves approval chances. Your
-                    credit file should demonstrate responsible credit
-                    management, including timely payments on existing credit
-                    commitments, low credit utilization, and no recent
-                    judgments, liens, or bankruptcies.
+                    with major credit bureaus. A good to excellent credit score
+                    significantly improves approval chances. Your credit file
+                    should demonstrate responsible credit management, including
+                    timely payments on existing credit commitments, low credit
+                    utilization, and no recent judgments, liens, or
+                    bankruptcies.
                   </p>
                 </div>
 
@@ -133,13 +133,13 @@ export default function AmexGoldRequirementsPage() {
                     Income and Affordability Verification
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
-                    While American Express doesn't publicly specify a minimum
+                    Whilst American Express doesn't publicly specify a minimum
                     income requirement, as a premium card, the Gold Card
                     typically requires evidence of substantial, stable income.
                     American Express will assess your affordability, considering
                     your income, existing credit commitments, household
                     expenses, and financial obligations to ensure you can manage
-                    the card responsibly, including the $250 annual fee.
+                    the card responsibly, including the £140 annual fee.
                   </p>
                 </div>
 
@@ -151,10 +151,11 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm ml-7 text-left">
                     You will not be eligible for any Welcome Bonus award if you
                     currently hold or have held any personal American Express
-                    Card within the previous 24 months (terms vary by offer). This restriction applies
-                    to all personal Amex cards, not just the Gold Card.
-                    Supplementary cardholders on someone else's account are not
-                    affected by this restriction if applying for their own card.
+                    Card within the previous 24 months (terms vary by offer).
+                    This restriction applies to all personal Amex cards, not
+                    just the Gold Card. Supplementary cardholders on someone
+                    else's account are not affected by this restriction if
+                    applying for their own card.
                   </p>
                 </div>
               </div>
@@ -189,7 +190,7 @@ export default function AmexGoldRequirementsPage() {
                     </li>
                     <li className="flex items-start text-left">
                       <span className="text-[#180053] mr-2">•</span>
-                      <span>Current US address</span>
+                      <span>Current UK address (3+ years)</span>
                     </li>
                     <li className="flex items-start text-left">
                       <span className="text-[#180053] mr-2">•</span>
@@ -241,11 +242,11 @@ export default function AmexGoldRequirementsPage() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li className="flex items-start text-left">
                       <span className="text-[#180053] mr-2">•</span>
-                      <span>US bank account number</span>
+                      <span>UK bank account number</span>
                     </li>
                     <li className="flex items-start text-left">
                       <span className="text-[#180053] mr-2">•</span>
-                      <span>Routing number</span>
+                      <span>Sort code</span>
                     </li>
                     <li className="flex items-start text-left">
                       <span className="text-[#180053] mr-2">•</span>
@@ -280,11 +281,11 @@ export default function AmexGoldRequirementsPage() {
                   Annual Fee
                 </h3>
                 <p className="text-gray-700 text-sm mb-4 text-left">
-                  The card carries an annual fee of $250, charged to your
+                  The card carries an annual fee of £140, charged to your
                   account once per year. This fee provides access to all the
                   premium benefits including comprehensive travel insurance,
                   purchase protection, extended warranty, and the Membership
-                  Rewards program. The first annual fee is typically charged
+                  Rewards programme. The first annual fee is typically charged
                   shortly after your account is opened, with subsequent fees
                   charged on your anniversary date.
                 </p>
@@ -298,8 +299,8 @@ export default function AmexGoldRequirementsPage() {
                   your balance in full each month by the due date, you will not
                   incur any interest charges on purchases. The interest rate is
                   variable, meaning American Express can adjust it in response
-                  to changes in the Prime Rate or for other
-                  commercial reasons, with appropriate notice provided.
+                  to changes in the Prime Rate or for other commercial reasons,
+                  with appropriate notice provided.
                 </p>
 
                 <h3 className="text-lg font-bold text-gray-800 mb-4 mt-6 text-left">
@@ -307,7 +308,7 @@ export default function AmexGoldRequirementsPage() {
                 </h3>
                 <p className="text-gray-700 text-sm mb-4 text-left">
                   Cash withdrawals using your Gold Card incur both an immediate
-                  cash advance fee (typically 5% of the amount withdrawn with a
+                  cash advance fee (typically 3% of the amount withdrawn with a
                   minimum fee) and a higher interest rate that begins accruing
                   immediately from the date of the withdrawal. There is no
                   interest-free period on cash advances. For this reason, cash
@@ -322,11 +323,11 @@ export default function AmexGoldRequirementsPage() {
                 <p className="text-gray-700 text-sm mb-4 text-left">
                   If you fail to make at least the minimum payment by the due
                   date, American Express will charge a late payment fee of up to
-                  $40. Repeated late payments can also result in penalty
+                  £12. Repeated late payments can also result in penalty
                   interest rates and may negatively impact your credit score,
                   making it more difficult to access credit in the future.
-                  Setting up AutoPay for at least the minimum payment
-                  helps avoid late fees and protects your credit rating.
+                  Setting up AutoPay for at least the minimum payment helps
+                  avoid late fees and protects your credit rating.
                 </p>
 
                 <h3 className="text-lg font-bold text-gray-800 mb-4 mt-6 text-left">
@@ -338,7 +339,7 @@ export default function AmexGoldRequirementsPage() {
                   purchases made in foreign currencies. This makes the card
                   particularly attractive for international travel, as you'll
                   benefit from American Express's wholesale exchange rates
-                  without additional fees that many other US credit cards
+                  without additional fees that many other UK credit cards
                   impose. Combined with the included travel insurance, this
                   makes the Gold Card an excellent companion for overseas trips.
                 </p>
@@ -392,8 +393,8 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm text-left">
                     Earn valuable points on every purchase that never expire.
                     Redeem for flights, hotels, shopping, statement credits, or
-                    transfer to airline and hotel partners including Delta,
-                    JetBlue, and Hilton.
+                    transfer to airline and hotel partners including British
+                    Airways, Virgin Atlantic, and Hilton.
                   </p>
                 </div>
 
@@ -406,9 +407,8 @@ export default function AmexGoldRequirementsPage() {
                   </div>
                   <p className="text-gray-700 text-sm text-left">
                     Comprehensive travel insurance covering medical expenses,
-                    trip cancellation, baggage delay, and
-                    emergency assistance when you pay for your trip with the
-                    card.
+                    trip cancellation, baggage delay, and emergency assistance
+                    when you pay for your trip with the card.
                   </p>
                 </div>
 
@@ -422,7 +422,7 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm text-left">
                     Up to 90 days of purchase protection covering accidental
                     damage, theft, or loss for items bought with your card, with
-                    cover up to $50,000 per item and $100,000 annually.
+                    cover up to £40,000 per item and £100,000 annually.
                   </p>
                 </div>
 
@@ -450,7 +450,7 @@ export default function AmexGoldRequirementsPage() {
                   <p className="text-gray-700 text-sm text-left">
                     Access to rotating promotions providing statement credits or
                     bonus points when you shop with participating retailers,
-                    potentially saving hundreds of dollars annually.
+                    potentially saving hundreds of pounds annually.
                   </p>
                 </div>
 
@@ -462,7 +462,7 @@ export default function AmexGoldRequirementsPage() {
                     </h3>
                   </div>
                   <p className="text-gray-700 text-sm text-left">
-                    Priority booking for concerts, theater, sporting events, and
+                    Priority booking for concerts, theatre, sporting events, and
                     exclusive dining experiences through the American Express
                     Entertainment portal.
                   </p>
@@ -512,10 +512,10 @@ export default function AmexGoldRequirementsPage() {
                     <p className="text-gray-700 text-sm text-left">
                       American Express will verify your identity using
                       electronic checks against databases such as public records
-                      and credit bureaus. This verification
-                      happens automatically during your application. In some
-                      cases, you may need to provide additional identification
-                      documents if automatic verification isn't possible.
+                      and credit bureaus. This verification happens
+                      automatically during your application. In some cases, you
+                      may need to provide additional identification documents if
+                      automatic verification isn't possible.
                     </p>
                   </div>
                 </div>
@@ -530,12 +530,12 @@ export default function AmexGoldRequirementsPage() {
                     </h3>
                     <p className="text-gray-700 text-sm text-left">
                       American Express will conduct a credit check with major
-                      credit bureaus including Experian, Equifax, or
-                      TransUnion. This hard search will be visible on your
-                      credit file and may temporarily affect your credit score.
-                      They'll assess your credit history, existing commitments,
-                      and overall creditworthiness to determine if you meet
-                      their lending criteria.
+                      credit bureaus including Experian, Equifax, or TransUnion.
+                      This hard search will be visible on your credit file and
+                      may temporarily affect your credit score. They'll assess
+                      your credit history, existing commitments, and overall
+                      creditworthiness to determine if you meet their lending
+                      criteria.
                     </p>
                   </div>
                 </div>
@@ -617,8 +617,8 @@ export default function AmexGoldRequirementsPage() {
                     (generally 670 or higher on the Experian scale). Your
                     approval chances improve significantly with a strong credit
                     history demonstrating responsible credit management, low
-                    credit utilization, and no recent adverse credit events such
-                    as defaults or judgments.
+                    credit utilisation, and no recent adverse credit events such
+                    as defaults or CCJs.
                   </p>
                 </div>
 
@@ -682,10 +682,10 @@ export default function AmexGoldRequirementsPage() {
                     reasons include insufficient credit history, recent adverse
                     credit events, high existing debt levels, or not meeting
                     residency requirements. You can request a full explanation
-                    of the decision and the credit bureau data used.
-                    Before reapplying, address the issues that led to the
-                    decline. Wait at least six months before submitting another
-                    application to improve your chances of approval.
+                    of the decision and the credit bureau data used. Before
+                    reapplying, address the issues that led to the decline. Wait
+                    at least six months before submitting another application to
+                    improve your chances of approval.
                   </p>
                 </div>
 
@@ -694,7 +694,7 @@ export default function AmexGoldRequirementsPage() {
                     Is there an annual fee waiver or discount available?
                   </h3>
                   <p className="text-gray-700 text-sm text-left">
-                    The $250 annual fee is charged to all Gold Cardmembers.
+                    The £140 annual fee is charged to all Gold Cardmembers.
                     American Express occasionally offers promotional periods
                     where the first year's fee may be waived or reduced for new
                     applicants, but these promotions are temporary and not
@@ -702,8 +702,8 @@ export default function AmexGoldRequirementsPage() {
                     cancel may occasionally be offered retention bonuses or fee
                     waivers, though this is at American Express's discretion and
                     not guaranteed. The comprehensive benefits package typically
-                    justifies the annual fee for frequent travelers and those
-                    who maximize the card's features.
+                    justifies the annual fee for frequent travellers and those
+                    who maximise the card's features.
                   </p>
                 </div>
               </div>
@@ -719,7 +719,7 @@ export default function AmexGoldRequirementsPage() {
                     </span>
                     <span>
                       Credit is subject to status and affordability. You must be
-                      aged 18 or over and a US resident.
+                      aged 18 or over and a UK resident.
                     </span>
                   </li>
                   <li className="flex items-start text-left">
@@ -756,7 +756,7 @@ export default function AmexGoldRequirementsPage() {
 
               <div className="text-left my-12">
                 <a
-                  href="https://www.americanexpress.com/en-us/credit-cards/gold-card/"
+                  href="https://www.americanexpress.com/en-gb/credit-cards/gold-credit-card/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -46,7 +46,7 @@ const parseJsonSafe = (raw: string) => {
   try {
     return JSON.parse(raw);
   } catch (error) {
-    logger.warn("[ConvertKit API] Failed to parse JSON response", error);
+    logger.warn("[ConvertKit API] Failed to parse JSON response", { error });
     return raw;
   }
 };
