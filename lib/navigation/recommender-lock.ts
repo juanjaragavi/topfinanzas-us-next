@@ -122,7 +122,7 @@ function safeGetLocalStorage(key: string): string | null {
   try {
     return window.localStorage.getItem(key);
   } catch (error) {
-    logger.warn("Failed to access localStorage", error);
+    logger.warn("Failed to access localStorage", { error: String(error) });
     return null;
   }
 }
@@ -135,7 +135,7 @@ function safeSetLocalStorage(key: string, value: string) {
   try {
     window.localStorage.setItem(key, value);
   } catch (error) {
-    logger.warn("Failed to write to localStorage", error);
+    logger.warn("Failed to write to localStorage", { error: String(error) });
   }
 }
 
@@ -147,7 +147,7 @@ function safeRemoveLocalStorage(key: string) {
   try {
     window.localStorage.removeItem(key);
   } catch (error) {
-    logger.warn("Failed to remove item from localStorage", error);
+    logger.warn("Failed to remove item from localStorage", { error: String(error) });
   }
 }
 

@@ -29,7 +29,6 @@ export function Footer() {
 
         {/* Main Footer Sections - 4 Column Layout for MX */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-
           {/* Col 2: Categories */}
           <div className="order-2">
             <h2 className="footer-h2 mb-4 text-white text-base font-semibold">
@@ -104,12 +103,14 @@ export function Footer() {
               {footerNavigation.contactInfo.map((contact, index) => (
                 <li
                   key={index}
-                  className={`flex ${contact.type === "address" ? "items-start" : "items-center"
-                    }`}
+                  className={`flex ${
+                    contact.type === "address" ? "items-start" : "items-center"
+                  }`}
                 >
                   <svg
-                    className={`w-5 h-5 mr-3 ${contact.type === "address" ? "mt-1 flex-shrink-0" : ""
-                      } text-white`}
+                    className={`w-5 h-5 mr-3 ${
+                      contact.type === "address" ? "mt-1 flex-shrink-0" : ""
+                    } text-white`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -146,7 +147,6 @@ export function Footer() {
 
         {/* Disclaimer with updated styling */}
 
-
         {/* Bottom Copyright */}
         <div className="text-left border-t border-white/20 pt-6">
           <p className="footer-meta text-xs md:text-sm font-light">
@@ -154,7 +154,7 @@ export function Footer() {
               {footerContent.companyInfo.productLabel}
             </span>
             <span className="mx-2">|</span>
-            {footerNavigation.legalLinks.map((link, index) => (
+            {footerNavigation.legalLinks.map((link) => (
               <span key={link.href}>
                 <Link
                   href={link.href}

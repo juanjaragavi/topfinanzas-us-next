@@ -29,7 +29,10 @@ export function generateTinyPlaceholder(
     return `${originalSrc}?w=${width}&q=${quality}`;
   } catch (error) {
     // If the URL is invalid, return the original
-    logger.warn("Invalid URL for placeholder generation:", { originalSrc, error });
+    logger.warn("Invalid URL for placeholder generation:", {
+      originalSrc,
+      error,
+    });
     return originalSrc;
   }
 }

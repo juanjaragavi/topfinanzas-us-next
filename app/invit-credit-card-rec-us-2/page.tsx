@@ -1,21 +1,27 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
-  title: "We’ve discovered a few cards for you | Top Finanzas US",
+  title:
+    "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:
-    "We’ve discovered a few cards that unlock remarkable boundaries for you. Select the limit option that aligns with your daily requirements.",
+    "We've discovered a few cards that unlock remarkable boundaries for you. Select the card type that suits you best and begin enjoying perks like 0% APR, cashback, points, and more.",
 };
 
-export default function CreditCardLandingPage() {
+export default function InvitCreditCardRecUS2Page() {
   return (
     <main className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
       <div className="flex flex-col items-center text-center space-y-8">
         <h1 className="text-3xl md:text-4xl font-bold text-[#2E74B5]">
-          We’ve discovered a few cards that unlock remarkable boundaries for
-          you.
+          We&apos;ve discovered a few cards that unlock remarkable boundaries
+          for you.
         </h1>
 
         <div className="space-y-2">
@@ -33,20 +39,32 @@ export default function CreditCardLandingPage() {
             We have the best credit cards for your selection. Choose the one
             that suits your needs.
           </p>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full">
-               $1000 CREDIT CARD
-             </Link>
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full">
-               $2500 CREDIT CARD
-             </Link>
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full">
-               $5000 CREDIT CARD
-             </Link>
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full border border-[#1e40af] text-[#1e40af] hover:bg-[#f0f7ff] py-2.5 px-6 text-sm font-medium transition-colors w-full">
-               MORE OPTIONS
-             </Link>
-           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
+            >
+              Up to 2% Cashback Credit Card
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
+            >
+              No annual fee Credit Card
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-2.5 px-6 text-sm font-medium transition-colors w-full"
+            >
+              No Credit Check Credit Card
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full border border-[#1e40af] text-[#1e40af] hover:bg-[#f0f7ff] py-2.5 px-6 text-sm font-medium transition-colors w-full"
+            >
+              MORE OPTIONS
+            </Link>
+          </div>
         </div>
 
         <div className="space-y-4 text-left w-full max-w-3xl">
@@ -57,6 +75,44 @@ export default function CreditCardLandingPage() {
             more. If none of these options fits your preferences, we have
             additional alternatives available for your consideration.
           </p>
+        </div>
+
+        <div className="w-full text-left max-w-3xl mt-8">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                What is a credit card cash back statement credit?
+              </AccordionTrigger>
+              <AccordionContent>
+                A cashback statement credit is a refund applied directly to your
+                credit card account balance, reducing the amount you owe.
+                It&apos;s earned by making qualifying purchases with your
+                rewards credit card.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                How do I choose the right credit card for travel?
+              </AccordionTrigger>
+              <AccordionContent>
+                Consider cards that offer travel rewards, no foreign transaction
+                fees, airport lounge access, and travel insurance. Look for
+                sign-up bonuses that can be redeemed for flights or hotel stays.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>
+                Can I transfer my credit card balance to another person&apos;s
+                card?
+              </AccordionTrigger>
+              <AccordionContent>
+                Generally, you cannot transfer your balance directly to another
+                person&apos;s card. However, that person can initiate a balance
+                transfer from their account to pay off your card, subject to
+                their issuer&apos;s policies.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
 
         <div className="space-y-4 text-left w-full max-w-3xl">

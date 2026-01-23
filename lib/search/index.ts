@@ -64,6 +64,6 @@ export function searchContent(query: string): SearchResult[] {
     (item) =>
       item.title.toLowerCase().includes(lowerQuery) ||
       item.description.toLowerCase().includes(lowerQuery) ||
-      item.category.toLowerCase().includes(lowerQuery)
+      item.category.toLowerCase().includes(lowerQuery),
   );
 }

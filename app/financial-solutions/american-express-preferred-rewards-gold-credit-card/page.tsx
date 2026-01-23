@@ -145,33 +145,15 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the heart of the Amex Gold Card is the Membership Rewards
-<<<<<<< Updated upstream
-                  programme, one of the most flexible and valuable points
-                  systems in the UK market. Every pound you spend earns
-                  Membership Rewards points, which accumulate without expiry as
-                  long as your account remains active. Unlike cashback schemes
-                  with fixed values, Membership Rewards points offer variable
-=======
                   program, one of the most flexible and valuable points systems
                   in the US market. Every dollar you spend earns Membership
                   Rewards points, which accumulate without expiry as long as
                   your account remains active. Unlike cashback schemes with
                   fixed values, Membership Rewards points offer variable
->>>>>>> Stashed changes
                   redemption rates depending on how you choose to use them.
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-<<<<<<< Updated upstream
-                  The programme truly shines when transferring points to partner
-                  airlines and hotels. British Airways Executive Club, Virgin
-                  Flying Club, Emirates Skywards, and leading hotel programmes
-                  like Hilton Honours accept Membership Rewards transfers, often
-                  at favourable conversion rates. This flexibility allows
-                  strategic redemptions for business class flights or luxury
-                  hotel stays that would otherwise cost thousands of pounds,
-                  potentially delivering exceptional value per point.
-=======
                   The program truly shines when transferring points to partner
                   airlines and hotels. Delta SkyMiles, JetBlue TrueBlue, Hilton
                   Honors, and leading hotel programs accept Membership Rewards
@@ -180,22 +162,17 @@ export default function AmexGoldCardPage() {
                   flights or luxury hotel stays that would otherwise cost
                   thousands of dollars, potentially delivering exceptional value
                   per point.
->>>>>>> Stashed changes
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   For those preferring immediate value, points can be redeemed
                   for statement credits, shopping vouchers at major retailers,
                   or used directly with the Membership Rewards Shop. The
-                  programme's versatility means you can adapt your redemption
+                  program's versatility means you can adapt your redemption
                   strategy based on your current needs and circumstances,
                   whether that's offsetting a large purchase, booking your next
-<<<<<<< Updated upstream
-                  holiday, or securing an upgrade on an important business trip.
-=======
                   vacation, or securing an upgrade on an important business
                   trip.
->>>>>>> Stashed changes
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -205,20 +182,11 @@ export default function AmexGoldCardPage() {
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Gold Card includes extensive worldwide travel insurance
                   coverage when you use your card to pay for your trip. This
-<<<<<<< Updated upstream
-                  comprehensive protection includes medical expenses up to £2
-                  million, personal liability cover, and trip
-                  cancellation/curtailment insurance. For frequent travellers,
-                  this benefit alone can justify the annual fee, eliminating the
-                  need to purchase separate travel insurance policies throughout
-                  the year.
-=======
                   comprehensive protection includes medical expenses, personal
                   liability cover, and trip cancellation/curtailment insurance.
                   For frequent travelers, this benefit alone can justify the
                   annual fee, eliminating the need to purchase separate travel
                   insurance policies throughout the year.
->>>>>>> Stashed changes
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
@@ -264,15 +232,6 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Gold Card provides robust purchase protection that
-<<<<<<< Updated upstream
-                  safeguards your investments in technology, jewellery, and
-                  other valuable items. Up to 90 days of purchase protection
-                  covers accidental damage, theft, or loss for items bought with
-                  your card, with cover up to £40,000 per item and £100,000 per
-                  year. This insurance provides significant peace of mind when
-                  making major purchases, knowing that your items are protected
-                  beyond standard retailer guarantees.
-=======
                   safeguards your investments in technology, jewelry, and other
                   valuable items. Up to 90 days of purchase protection covers
                   accidental damage, theft, or loss for items bought with your
@@ -280,7 +239,6 @@ export default function AmexGoldCardPage() {
                   This insurance provides significant peace of mind when making
                   major purchases, knowing that your items are protected beyond
                   standard retailer guarantees.
->>>>>>> Stashed changes
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
@@ -290,13 +248,8 @@ export default function AmexGoldCardPage() {
                   warranty benefit applies to electronics, appliances, and other
                   goods, potentially saving substantial repair or replacement
                   costs once the manufacturer's warranty expires. Combined with
-<<<<<<< Updated upstream
-                  Section 75 protection (covering purchases between £100 and
-                  £30,000 for additional legal protections), the Gold Card
-=======
                   federal consumer protections (covering purchases between $100
                   and $30,000 for additional legal protections), the Gold Card
->>>>>>> Stashed changes
                   offers multiple layers of consumer safeguards.
                 </p>
 
@@ -318,15 +271,9 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The American Express Entertainment portal grants cardmembers
-<<<<<<< Updated upstream
-                  priority booking access to concerts, theatre performances,
-                  sporting events, and exclusive dining experiences. From West
-                  End shows to Royal Albert Hall performances, Gold Cardmembers
-=======
                   priority booking access to concerts, theater performances,
                   sporting events, and exclusive dining experiences. From
                   Broadway shows to major sporting events, Gold Cardmembers
->>>>>>> Stashed changes
                   often receive advance notice and preferential booking windows
                   for sought-after events. Some experiences are exclusively
                   available to American Express customers, providing access to
@@ -374,13 +321,8 @@ export default function AmexGoldCardPage() {
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-<<<<<<< Updated upstream
-                  The Pay Your Way feature allows you to split larger purchases
-                  into equal monthly instalments at a fixed interest rate,
-=======
                   The Pay It Plan It® feature allows you to split larger
                   purchases into equal monthly installments at a fixed fee,
->>>>>>> Stashed changes
                   providing payment certainty and budget predictability. This
                   flexibility can be particularly useful for managing cash flow
                   around large purchases whilst still earning Membership Rewards
@@ -399,17 +341,10 @@ export default function AmexGoldCardPage() {
                   carries an annual fee of £140, which is debited to your
                   account once per year. This fee provides access to all the
                   premium benefits, insurance coverage, and rewards earning
-<<<<<<< Updated upstream
-                  potential described above. For frequent travellers or those
-                  who make substantial card purchases, the value delivered
-                  through insurance savings and rewards earnings typically
-                  exceeds the annual fee cost.
-=======
                   potential described above. For frequent travelers or those who
                   make substantial card purchases, the value delivered through
                   insurance savings and rewards earnings typically exceeds the
                   annual fee cost.
->>>>>>> Stashed changes
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
@@ -429,15 +364,9 @@ export default function AmexGoldCardPage() {
                   </h3>
                   <p className="text-sm text-gray-700 mb-3 text-left">
                     Credit is subject to status and affordability. You must be
-<<<<<<< Updated upstream
-                    aged 18 or over and a UK resident. American Express Services
-                    Europe Limited is authorised and regulated by the Financial
-                    Conduct Authority. Terms and conditions apply.
-=======
                     aged 18 or over and a US resident. American Express is
                     authorized and regulated by relevant financial authorities.
                     Terms and conditions apply.
->>>>>>> Stashed changes
                   </p>
                   <p className="text-sm text-gray-700 mb-3 text-left">
                     Missing payments on your credit card could affect your
@@ -474,13 +403,8 @@ export default function AmexGoldCardPage() {
                   opportunities beyond standard credit card offerings.
                   Additionally, if you're building a collection of transferable
                   points for future travel aspirations, the Membership Rewards
-<<<<<<< Updated upstream
-                  programme offers one of the most flexible earning and
-                  redemption ecosystems available in the UK market.
-=======
                   program offers one of the most flexible earning and redemption
                   ecosystems available in the US market.
->>>>>>> Stashed changes
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">

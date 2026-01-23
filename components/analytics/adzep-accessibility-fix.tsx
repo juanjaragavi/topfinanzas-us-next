@@ -6,8 +6,8 @@ import { analyticsLogger } from "@/lib/logger";
 /**
  * AdZep Accessibility Fix
  *
- * Prevents ad scripts (AdZep, Google Ads Vignette, etc.) from setting 
- * aria-hidden="true" on the <body> element, which blocks accessibility 
+ * Prevents ad scripts (AdZep, Google Ads Vignette, etc.) from setting
+ * aria-hidden="true" on the <body> element, which blocks accessibility
  * for screen readers and triggers browser warnings.
  *
  * Chrome DevTools Error:

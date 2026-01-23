@@ -1,44 +1,3 @@
-<<<<<<< Updated upstream:app/terms/page.tsx
-import fs from "fs";
-import path from "path";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { compileMDX } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/mdx-components";
-import { logger } from "@/lib/logger";
-
-export const metadata = {
-  title: "Terms and Conditions - TopFinance UK",
-  description:
-    "Read the Terms and Conditions for the use of TopFinance UK services and website.",
-};
-
-export default async function TermsPage() {
-  // Read the MDX file
-  const filePath = path.join(
-    process.cwd(),
-    "content/legal/terms-conditions.mdx",
-  );
-  let source = "# Terms and Conditions\n\nContent not found.";
-
-  try {
-    if (fs.existsSync(filePath)) {
-      source = fs.readFileSync(filePath, "utf8");
-    }
-  } catch (error) {
-    logger.error("Error loading terms and conditions file:", error);
-    source =
-      "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
-  }
-
-  // Compile MDX content, properly handling frontmatter
-  const { content } = await compileMDX({
-    source,
-    components: useMDXComponents({}),
-    options: { parseFrontmatter: true },
-  });
-
-=======
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,7 +6,6 @@ export const metadata: Metadata = {
 };
 
 export default function TermsConditionsPage() {
->>>>>>> Stashed changes:app/terms-conditions/page.tsx
   return (
     <main className="container mx-auto px-4 py-12 max-w-4xl">
       <h1 className="text-4xl font-bold text-[#2E74B5] mb-8 border-b-2 border-gray-200 pb-4">
@@ -62,20 +20,32 @@ export default function TermsConditionsPage() {
           </p>
           <p>
             The platform{" "}
-            <a href="http://www.topfinanzas.com">www.topfinanzas.com</a> (the
-            “Platform” or “Site”) is owned and operated by Top Networks Inc.
-            (“Top Networks,” “we,” “our,” or “us”), a company incorporated under
+            <a
+              href="http://www.topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              www.topfinanzas.com
+            </a>{" "}
+            (the &quot;Platform&quot; or &quot;Site&quot;) is owned and operated
+            by Top Networks Inc. (&quot;Top Networks,&quot; &quot;we,&quot;
+            &quot;our,&quot; or &quot;us&quot;), a company incorporated under
             the laws of the Republic of Panama. Our Site provides financial
             information and product recommendations, offering informational
             resources and analyses of various financial services and products,
             such as credit cards, loans, and investment opportunities.
           </p>
           <p>
-            These Terms and Conditions of Use (the “Terms”) are available to
-            users at all times and apply alongside our Privacy Policy. By using
-            or accessing the Site, you confirm that you have read, understood,
-            and agree to these Terms. If you do not agree to all Terms, please
-            do not use the Site.
+            These Terms and Conditions of Use (the &quot;Terms&quot;) are
+            available to users at all times and apply alongside our{" "}
+            <a
+              href="/privacy-policy/"
+              className="text-blue-600 hover:underline"
+            >
+              Privacy Policy
+            </a>
+            . By using or accessing the Site, you confirm that you have read,
+            understood, and agree to these Terms. If you do not agree to all
+            Terms, please do not use the Site.
           </p>
         </section>
 
@@ -90,9 +60,18 @@ export default function TermsConditionsPage() {
             financial needs and preferences.
           </p>
           <p>
-            Whenever we use “Top Networks,” “we,” or “our,” we refer to Top
-            Networks Inc.; similarly, when we use “you” or “user,” we refer to
-            the individuals consenting to these Terms and accessing the Site.
+            Whenever we use &quot;Top Networks,&quot; &quot;we,&quot; or
+            &quot;our,&quot; we refer to Top Networks Inc.; similarly, when we
+            use &quot;you&quot; or &quot;user,&quot; we refer to the individuals
+            consenting to these Terms and accessing the Site.
+          </p>
+          <p>
+            The Platform facilitates connections to financial products offered
+            by third-party institutions. Your use of these services or products
+            may require additional registration and will be subject to terms and
+            privacy practices established by those institutions. Top Networks
+            Inc. does not participate in the legal relationship between the user
+            and these partner companies.
           </p>
         </section>
 
@@ -128,13 +107,132 @@ export default function TermsConditionsPage() {
               update it as needed.
             </li>
           </ul>
+          <p>
+            If you provide false, incomplete, or outdated information, Top
+            Networks Inc. reserves the right to suspend or terminate your access
+            to the Site without notice.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            4. Data Collection and Usage
+          </h2>
+          <p>
+            By accepting these Terms, you consent to the collection and
+            processing of data, including but not limited to:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Personal Identification Data:</strong> Name, email, phone
+              number, government ID, address.
+            </li>
+            <li>
+              <strong>Financial Information:</strong> Income details, credit
+              status, and employment information as needed for financial
+              assessments.
+            </li>
+          </ul>
+          <p>
+            For details on our data handling practices, please refer to our{" "}
+            <a
+              href="/privacy-policy/"
+              className="text-blue-600 hover:underline"
+            >
+              Privacy Policy
+            </a>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            5. Accuracy of Information
+          </h2>
+          <p>
+            Top Networks Inc. endeavors to provide accurate and current
+            information on the Site. However, we do not guarantee that the
+            content will be error-free or always available. Access may be
+            affected by factors outside our control, such as internet provider
+            issues or technical maintenance.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            6. Links to Third-Party Websites
+          </h2>
+          <p>
+            Our Platform may contain links to third-party websites. These links
+            are provided solely for user convenience and do not imply
+            endorsement by Top Networks Inc. We are not responsible for the
+            content or terms of use of these third-party websites, and users
+            assume any risks associated with their use.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            7. Prohibited Conduct
+          </h2>
+          <p>Users agree not to:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Violate any laws or regulations.</li>
+            <li>Impersonate another person or entity.</li>
+            <li>
+              Upload or share any content that is illegal, defamatory, or
+              harmful to others.
+            </li>
+            <li>
+              Attempt to reverse engineer, decompile, or tamper with the Site or
+              its components.
+            </li>
+          </ul>
+          <p>
+            Violation of these Terms may result in the suspension or termination
+            of access to the Site.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            8. Intellectual Property Rights
+          </h2>
+          <p>
+            All content on{" "}
+            <a
+              href="http://www.topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              www.topfinanzas.com
+            </a>{" "}
+            (including text, images, graphics, logos, and software) is owned by
+            or licensed to Top Networks Inc. and is protected by intellectual
+            property laws. Users are prohibited from copying, modifying, or
+            commercially using any content without prior authorization from Top
+            Networks Inc.
+          </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold text-[#2E74B5]">
             9. Disclaimer of Warranties
           </h2>
-          <div className="space-y-4">
+          <p className="text-sm uppercase">
+            THE DISCLAIMERS AND LIMITATIONS IN THIS SECTION APPLY TO THE FULLEST
+            EXTENT PERMITTED BY APPLICABLE LAW. THE SERVICES AND INFORMATION
+            PROVIDED ON{" "}
+            <a
+              href="http://www.topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              WWW.TOPFINANZAS.COM
+            </a>{" "}
+            ARE PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;
+            BASIS, WITHOUT WARRANTY OR CONDITION OF ANY KIND, EITHER EXPRESS OR
+            IMPLIED.
+          </p>
+          <div className="space-y-4 mt-4">
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 A) No Warranties
@@ -145,7 +243,10 @@ export default function TermsConditionsPage() {
                 ENJOYMENT, OR NON-INFRINGEMENT, AS WELL AS ANY WARRANTIES
                 ARISING OUT OF USAGE OR TRADE PRACTICE. USERS ASSUME ALL RISK
                 FOR ANY AND ALL DAMAGES THAT MAY RESULT FROM THEIR USE OF OR
-                ACCESS TO THE SITE.
+                ACCESS TO THE SITE. TOP NETWORKS INC. IS NOT RESPONSIBLE FOR THE
+                LOSS, DAMAGE, OR UNAVAILABILITY OF INFORMATION USERS SUBMIT, AND
+                USERS ARE RESPONSIBLE FOR MAINTAINING BACKUPS OF SUCH
+                INFORMATION.
               </p>
             </div>
             <div>
@@ -159,7 +260,59 @@ export default function TermsConditionsPage() {
                 THROUGH THE SITE.
               </p>
             </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                C) Information Provided for Informational Purposes Only
+              </h3>
+              <p className="uppercase text-sm">
+                THE CONTENT ON{" "}
+                <a
+                  href="http://www.topfinanzas.com"
+                  className="text-blue-600 hover:underline"
+                >
+                  WWW.TOPFINANZAS.COM
+                </a>{" "}
+                IS PROVIDED FOR INFORMATIONAL, EDUCATIONAL, OR ENTERTAINMENT
+                PURPOSES ONLY AND DOES NOT CONSTITUTE LEGAL, FINANCIAL, TAX, OR
+                OTHER PROFESSIONAL ADVICE. TOP NETWORKS INC. IS NOT A FINANCIAL
+                INSTITUTION OR INSURANCE PROVIDER. BEFORE MAKING ANY FINANCIAL
+                DECISIONS OR IMPLEMENTING STRATEGIES, WE RECOMMEND CONSULTING
+                PROFESSIONAL ADVISORS WHO UNDERSTAND YOUR UNIQUE CIRCUMSTANCES.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                D) No Warranties Regarding Third-Party Services
+              </h3>
+              <p className="uppercase text-sm">
+                TOP NETWORKS INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+                REGARDING ANY THIRD-PARTY SERVICES OR PRODUCTS ACCESSIBLE
+                THROUGH THE SITE. TOP NETWORKS INC. ACTS SOLELY AS AN
+                INTERMEDIARY BETWEEN USERS AND THIRD-PARTY PROVIDERS AND
+                DISCLAIMS ANY LIABILITY FOR THE CONTENT OR SERVICES PROVIDED BY
+                THIRD-PARTIES.
+              </p>
+            </div>
           </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            10. Limitation of Liability
+          </h2>
+          <p className="uppercase text-sm">
+            TO THE FULLEST EXTENT PERMITTED BY LAW, TOP NETWORKS INC. AND ITS
+            DIRECTORS, EMPLOYEES, AND SERVICE PROVIDERS SHALL NOT BE LIABLE FOR
+            ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+            DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR
+            RELATED TO YOUR USE OR INABILITY TO USE THE SITE, EVEN IF TOP
+            NETWORKS INC. HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+          </p>
+          <p className="uppercase text-sm mt-4">
+            IF, DESPITE THE ABOVE EXCLUSIONS, LIABILITY IS IMPOSED ON TOP
+            NETWORKS INC., IT SHALL BE LIMITED TO THE GREATER OF THE AMOUNT PAID
+            BY YOU FOR SERVICES (IF ANY) AND USD $100.
+          </p>
         </section>
 
         <section>
@@ -177,6 +330,48 @@ export default function TermsConditionsPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-[#2E74B5]">
+            12. Indemnification
+          </h2>
+          <p>
+            You agree to indemnify and hold harmless Top Networks Inc. and its
+            affiliates, directors, agents, and employees from any claims,
+            losses, or liabilities arising from your use of the Site, violation
+            of these Terms, or any unauthorized use of information or content.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            13. Notifications
+          </h2>
+          <p>
+            Notifications or messages to users regarding updates, changes, or
+            other important information may be posted on the Site. For questions
+            or issues, users may contact Top Networks Inc. at:{" "}
+            <a
+              href="mailto:info@topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              info@topfinanzas.com
+            </a>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
+            14. General Provisions
+          </h2>
+          <p>
+            If any provision of these Terms is found to be unenforceable, the
+            remaining provisions will remain in full effect. Top Networks
+            Inc.&apos;s failure to enforce any provision shall not be deemed a
+            waiver of that provision or any other.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-[#2E74B5]">
             15. Contact Information
           </h2>
           <p>
@@ -186,7 +381,12 @@ export default function TermsConditionsPage() {
             <strong>Top Networks Inc.</strong>
             <br />
             Email:{" "}
-            <a href="mailto:info@topfinanzas.com">info@topfinanzas.com</a>
+            <a
+              href="mailto:info@topfinanzas.com"
+              className="text-blue-600 hover:underline"
+            >
+              info@topfinanzas.com
+            </a>
             <br />
             Address: PANAMA, PANAMA CITY, AV. AQUILINO DE LA GUARDIA, OCEAN
             BUSINESS PLAZA BUILDING, FLOOR 12

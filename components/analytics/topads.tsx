@@ -10,7 +10,14 @@ import { logger } from "@/lib/logger";
  * Loads the TopAds advertising script with proper configuration.
  * This component should be included in the root layout.
  *
- * @see /lib/documents/config.js for configuration options
+ * Configuration based on TopAds Guide:
+ * - domain: TOPFIN_US (ad unit prefix for US site)
+ * - networkCode: Google Ad Manager network code
+ * - lazyLoad: 'soft' (300% fetch margin, 150% render margin)
+ * - pageSetting.exclude: Pages that should NOT display ads
+ * - formats: Interstitial and Offerwall configurations
+ *
+ * @see /lib/documents/topAdsGuide.pdf for full configuration options
  */
 export default function TopAds() {
   useEffect(() => {
@@ -32,40 +39,38 @@ export default function TopAds() {
             window.topAds = window.topAds || {};
 
             topAds.config = {
-<<<<<<< Updated upstream
-                domain: 'TOPFIN_UK',
-=======
                 domain: 'TOPFIN_US',
->>>>>>> Stashed changes
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 pageSetting: {
                     exclude: [
+                        '/',
                         '/terms',
                         '/privacy-policy',
                         '/cookie-policy',
                         '/about-us',
                         '/contact-us',
-                        '/quiz'
+                        '/quiz',
+                        '/quiz-2'
                     ]
                 },
                 formats: {
                     interstitial: {
                         status: 'active',
-                        exclude: [],
+                        exclude: [
+                            '/credit-card-recommender-p3'
+                        ],
                     },
                     offerwall: {
                         status: 'active',
-<<<<<<< Updated upstream
-                        logoUrl: 'https://media.topfinanzas.com/images/logo-english.webp',
-                        websiteName: 'TopFinanzas UK',
-=======
                         logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
                         websiteName: 'TopFinanzas US',
->>>>>>> Stashed changes
                         cooldown: '12',
                         exclude: [
-                            '/invit-credit-card-rec-us'
+                            '/credit-card-recommender-p2',
+                            '/credit-card-recommender-p3',
+                            '/invit-credit-card-rec-us',
+                            '/invit-credit-card-rec-us-2'
                         ],
                     },
                 }

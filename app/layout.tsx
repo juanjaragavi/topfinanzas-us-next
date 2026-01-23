@@ -269,7 +269,8 @@ export default function RootLayout({
                 <UtmLinkInjector />
                 {ENABLE_ADZEP && <AdZepSPABridge />}
                 {ENABLE_ADZEP && <AdZepInterstitialBlocker />}
-                <AdZepAccessibilityFix /> {/* Always run - Google Ads vignette also sets aria-hidden on body */}
+                <AdZepAccessibilityFix />{" "}
+                {/* Always run - Google Ads vignette also sets aria-hidden on body */}
                 {ENABLE_ADZEP && <AdZepBackdropCleaner />}
                 <TopAdsSPAHandler />
                 {process.env.NODE_ENV === "development" && <UtmMonitor />}

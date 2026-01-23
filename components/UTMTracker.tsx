@@ -64,7 +64,10 @@ export default function UTMTracker() {
             link.href = url.toString();
           } catch (e) {
             // Handle invalid URLs silently
-            logger.warn("Error processing link:", { href: link.href, error: e });
+            logger.warn("Error processing link:", {
+              href: link.href,
+              error: e,
+            });
           }
         });
       };

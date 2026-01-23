@@ -43,7 +43,8 @@ export function FeaturedPostCard({
   // CSS classes based on orientation and variant
   let containerClasses = "";
   if (variant === "poster") {
-    containerClasses = "group relative w-full overflow-hidden rounded-none shadow-md h-[400px] md:h-[500px]";
+    containerClasses =
+      "group relative w-full overflow-hidden rounded-none shadow-md h-[400px] md:h-[500px]";
   } else {
     containerClasses =
       orientation === "horizontal"
@@ -65,10 +66,13 @@ export function FeaturedPostCard({
   // Content container classes
   let contentClasses = "";
   if (variant === "poster") {
-    contentClasses = "absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white";
+    contentClasses =
+      "absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white";
   } else {
     contentClasses =
-      orientation === "horizontal" ? "p-6 md:p-8" : "p-6 flex flex-col flex-grow";
+      orientation === "horizontal"
+        ? "p-6 md:p-8"
+        : "p-6 flex flex-col flex-grow";
   }
 
   return (
@@ -109,7 +113,9 @@ export function FeaturedPostCard({
             </div>
           )}
           {showBadge && !type && (
-            <div className={`absolute top-4 left-4 z-10 ${variant === 'poster' ? 'top-auto bottom-[120px] md:bottom-[140px]' : ''}`}>
+            <div
+              className={`absolute top-4 left-4 z-10 ${variant === "poster" ? "top-auto bottom-[120px] md:bottom-[140px]" : ""}`}
+            >
               {/* Note: positioning might need tweaking for poster */}
               <Badge
                 className={`
@@ -126,17 +132,20 @@ export function FeaturedPostCard({
 
       <div className={contentClasses}>
         {date && (
-          <p className={`text-sm mb-2 text-left sm:text-left ${variant === 'poster' ? 'text-gray-200' : 'text-gray-500'}`}>
+          <p
+            className={`text-sm mb-2 text-left sm:text-left ${variant === "poster" ? "text-gray-200" : "text-gray-500"}`}
+          >
             {date}
           </p>
         )}
 
         <Link
           href={postUrl}
-          className={`block mt-1 font-bold transition-colors mb-2 line-clamp-2 text-left sm:text-left ${variant === 'poster'
-              ? 'text-2xl md:text-4xl text-white hover:text-blue-200 leading-tight'
-              : 'text-base text-gray-900 hover:text-blue-600'
-            }`}
+          className={`block mt-1 font-bold transition-colors mb-2 line-clamp-2 text-left sm:text-left ${
+            variant === "poster"
+              ? "text-2xl md:text-4xl text-white hover:text-blue-200 leading-tight"
+              : "text-base text-gray-900 hover:text-blue-600"
+          }`}
         >
           {title}
         </Link>
@@ -145,13 +154,13 @@ export function FeaturedPostCard({
             Reference image shows just Title + Date/Author.
             We'll hide description for poster to match "clean" look or keep it short.
         */}
-        {variant !== 'poster' && (
+        {variant !== "poster" && (
           <p className="mt-2 text-gray-600 line-clamp-3 flex-grow text-left sm:text-left">
             {description}
           </p>
         )}
 
-        {variant !== 'poster' && (
+        {variant !== "poster" && (
           <div className="mt-4 text-left sm:text-left">
             <Link
               href={postUrl}

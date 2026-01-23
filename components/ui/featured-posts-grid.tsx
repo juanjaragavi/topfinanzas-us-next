@@ -25,10 +25,10 @@ export function FeaturedPostsGrid({
   // Filter posts if filter is provided
   const filteredPosts = filter
     ? posts.filter(
-      (post) =>
-        post.category.toLowerCase() === filter.toLowerCase() ||
-        post.type?.toLowerCase() === filter.toLowerCase(),
-    )
+        (post) =>
+          post.category.toLowerCase() === filter.toLowerCase() ||
+          post.type?.toLowerCase() === filter.toLowerCase(),
+      )
     : posts;
 
   // Determine the grid columns CSS based on the columns prop
@@ -62,7 +62,7 @@ export function FeaturedPostsGrid({
               {...post}
               orientation="vertical"
               imageHeight="h-48"
-            // Removed priority={index < 3} to avoid competing with LCP hero image
+              // Removed priority={index < 3} to avoid competing with LCP hero image
             />
           </div>
           // Removed the 'else' block as animateItems check is now redundant without motion

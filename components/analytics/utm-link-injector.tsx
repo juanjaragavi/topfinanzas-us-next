@@ -69,10 +69,10 @@ export default function UtmLinkInjector() {
         return href;
       } catch (error) {
         // If URL parsing fails, return original href
-        analyticsLogger.warn(
-          "UTM Link Injector: Error processing URL:",
-          { href, error },
-        );
+        analyticsLogger.warn("UTM Link Injector: Error processing URL:", {
+          href,
+          error,
+        });
         return href;
       }
     };
@@ -146,10 +146,9 @@ export default function UtmLinkInjector() {
         (param) => sessionStorage.getItem(param) !== null,
       );
       if (storedParams.length > 0) {
-        analyticsLogger.debug(
-          "UTM Link Injector: Active with params:",
-          { params: storedParams.join(", ") },
-        );
+        analyticsLogger.debug("UTM Link Injector: Active with params:", {
+          params: storedParams.join(", "),
+        });
       }
     }
 

@@ -2,9 +2,8 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { CategorySection } from "@/components/ui/category-section"; // Import new component
+import { CategorySection } from "@/components/ui/category-section";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
@@ -104,7 +103,8 @@ const allPosts: PostData[] = [
     frontmatter: {
       title:
         "Las Mejores Tarjetas de Crédito con Recompensas | Top Finanzas MX",
-      description: "Descubre las mejores tarjetas de crédito con recompensas para maximizar tus gastos...",
+      description:
+        "Descubre las mejores tarjetas de crédito con recompensas para maximizar tus gastos...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
@@ -117,7 +117,8 @@ const allPosts: PostData[] = [
     slug: "salir-de-deudas",
     frontmatter: {
       title: "Guía Práctica para Salir de Deudas | Top Finanzas MX",
-      description: "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
+      description:
+        "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
@@ -143,9 +144,9 @@ const allPosts: PostData[] = [
   {
     slug: "mejores-prestamos-personales",
     frontmatter: {
-      title:
-        "Mejores Préstamos Personales en México: Tu Guía Completa",
-      description: "Guía completa de los mejores préstamos personales en México...",
+      title: "Mejores Préstamos Personales en México: Tu Guía Completa",
+      description:
+        "Guía completa de los mejores préstamos personales en México...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/best-personal-loans.webp",
@@ -171,9 +172,15 @@ const allPosts: PostData[] = [
 ];
 
 // Reuse posts to populate sections for demo purposes since we have limited hardcoded data
-const savingsPosts = [...allPosts, ...allPosts].slice(0, 4).map(p => ({ ...p, category: "Ahorro inteligente" }));
-const debtPosts = [...allPosts, ...allPosts].slice(2, 6).map(p => ({ ...p, category: "Deuda cero" }));
-const cardPosts = [...allPosts, ...allPosts].slice(4, 8).map(p => ({ ...p, category: "Elige tu tarjeta" }));
+const savingsPosts = [...allPosts, ...allPosts]
+  .slice(0, 4)
+  .map((p) => ({ ...p, category: "Ahorro inteligente" }));
+const debtPosts = [...allPosts, ...allPosts]
+  .slice(2, 6)
+  .map((p) => ({ ...p, category: "Deuda cero" }));
+const cardPosts = [...allPosts, ...allPosts]
+  .slice(4, 8)
+  .map((p) => ({ ...p, category: "Elige tu tarjeta" }));
 
 // --- End of Hardcoded Data ---
 
@@ -181,49 +188,10 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6; // Number of posts per page for homepage
 
-  // Calculate paginated posts using useMemo
-  const { paginatedPosts, totalPages } = useMemo(() => {
-    // Sort posts by date descending (if date exists)
-    const sortedPosts = [...allPosts].sort((a, b) => {
-      const dateA = a.frontmatter.date
-        ? new Date(a.frontmatter.date).getTime()
-        : 0;
-      const dateB = b.frontmatter.date
-        ? new Date(b.frontmatter.date).getTime()
-        : 0;
-      return dateB - dateA; // Descending order
-    });
-
-    const calculatedTotalPages = Math.ceil(sortedPosts.length / postsPerPage);
-    const startIndex = (currentPage - 1) * postsPerPage;
-    const postsToDisplay = sortedPosts.slice(
-      startIndex,
-      startIndex + postsPerPage,
-    );
-    return { paginatedPosts: postsToDisplay, totalPages: calculatedTotalPages };
-  }, [currentPage, postsPerPage]);
-
-  // Convert posts to the format expected by FeaturedPostsGrid
-  const featuredPostsData = useMemo(() => {
-    return paginatedPosts.map((post) => ({
-      title: cleanTitle(post.frontmatter.title),
-      description: post.frontmatter.description,
-      image:
-        post.frontmatter.featuredImage ||
-        "https://media.topfinanzas.com/images/placeholder.webp",
-      slug: post.slug,
-      category: post.category,
-      categorySlug: post.categoryPath,
-      date: post.frontmatter.date
-        ? new Date(post.frontmatter.date).toLocaleDateString("es-MX", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })
-        : undefined,
-      type: post.category === "Soluciones Financieras" ? "financial" : "personal",
-    }));
-  }, [paginatedPosts]);
+  // Calculate total pages using useMemo
+  const totalPages = useMemo(() => {
+    return Math.ceil(allPosts.length / postsPerPage);
+  }, [postsPerPage]);
 
   return (
     <main className="bg-white min-h-screen flex flex-col">
@@ -257,32 +225,45 @@ export default function Home() {
       {/* Blog Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
-
           {/* Latest Articles (Top 3) - Centered/Main */}
           {/* Latest Articles - Custom Layout: Hero (Poster) + 2 Standard Cards */}
           <div className="mb-16">
             {/* We know we have at least 3 posts sorted by date from previous steps */}
             {(() => {
-              const sortedPosts = allPosts.sort((a, b) => {
-                const dateA = a.frontmatter.date ? new Date(a.frontmatter.date).getTime() : 0;
-                const dateB = b.frontmatter.date ? new Date(b.frontmatter.date).getTime() : 0;
-                return dateB - dateA;
-              }).slice(0, 3);
+              const sortedPosts = allPosts
+                .sort((a, b) => {
+                  const dateA = a.frontmatter.date
+                    ? new Date(a.frontmatter.date).getTime()
+                    : 0;
+                  const dateB = b.frontmatter.date
+                    ? new Date(b.frontmatter.date).getTime()
+                    : 0;
+                  return dateB - dateA;
+                })
+                .slice(0, 3);
 
               const heroPost = sortedPosts[0];
               const subPosts = sortedPosts.slice(1, 3);
 
-              const mapPost = (post: any) => ({
+              const mapPost = (post: PostData) => ({
                 title: cleanTitle(post.frontmatter.title),
                 description: post.frontmatter.description,
-                image: post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp",
+                image:
+                  post.frontmatter.featuredImage ||
+                  "https://media.topfinanzas.com/images/placeholder.webp",
                 slug: post.slug,
                 category: post.category,
                 categorySlug: post.categoryPath,
                 date: post.frontmatter.date
-                  ? new Date(post.frontmatter.date).toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" })
+                  ? new Date(post.frontmatter.date).toLocaleDateString(
+                      "es-MX",
+                      { year: "numeric", month: "long", day: "numeric" },
+                    )
                   : undefined,
-                type: post.category === "Soluciones Financieras" ? "financial" : "personal",
+                type:
+                  post.category === "Soluciones Financieras"
+                    ? "financial"
+                    : "personal",
               });
 
               return (
@@ -318,50 +299,72 @@ export default function Home() {
 
           <CategorySection
             title="Ahorro inteligente"
-            posts={savingsPosts.map(p => ({
+            posts={savingsPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
-              image: p.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp",
+              image:
+                p.frontmatter.featuredImage ||
+                "https://media.topfinanzas.com/images/placeholder.webp",
               slug: p.slug,
               category: p.category,
               categorySlug: p.categoryPath,
-              date: p.frontmatter.date ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" }) : undefined,
-              type: "financial"
+              date: p.frontmatter.date
+                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : undefined,
+              type: "financial",
             }))}
             viewAllLink="/ahorro"
           />
 
           <CategorySection
             title="Deuda cero"
-            posts={debtPosts.map(p => ({
+            posts={debtPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
-              image: p.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp",
+              image:
+                p.frontmatter.featuredImage ||
+                "https://media.topfinanzas.com/images/placeholder.webp",
               slug: p.slug,
               category: p.category,
               categorySlug: p.categoryPath,
-              date: p.frontmatter.date ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" }) : undefined,
-              type: "personal"
+              date: p.frontmatter.date
+                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : undefined,
+              type: "personal",
             }))}
             viewAllLink="/deuda"
           />
 
           <CategorySection
             title="Elige tu tarjeta"
-            posts={cardPosts.map(p => ({
+            posts={cardPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
-              image: p.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp",
+              image:
+                p.frontmatter.featuredImage ||
+                "https://media.topfinanzas.com/images/placeholder.webp",
               slug: p.slug,
               category: p.category,
               categorySlug: p.categoryPath,
-              date: p.frontmatter.date ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" }) : undefined,
-              type: "financial"
+              date: p.frontmatter.date
+                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : undefined,
+              type: "financial",
             }))}
             viewAllLink="/tarjetas"
           />
-
-
 
           {/* Pagination Controls */}
           {totalPages > 1 &&

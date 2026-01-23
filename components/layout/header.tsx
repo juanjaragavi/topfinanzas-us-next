@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import { logger } from "@/lib/logger";
 import { Menu, X, ChevronDown, Search, ChevronRight } from "lucide-react";
 import { SearchBar } from "@/components/search/search-bar"; // Import SearchBar
@@ -17,7 +16,8 @@ import { headerContent } from "@/lib/texts/header/content";
 // Removed searchIndex, SearchItem
 
 export function Header() {
-  const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useMobileMenu();
+  const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } =
+    useMobileMenu();
   const [isSearchOpen, setIsSearchOpen] = useState(false); // Add search state
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false); // Mobile accordion state
@@ -106,7 +106,7 @@ export function Header() {
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false); // Hide on scroll down
       } else {
-        setIsVisible(true);  // Show on scroll up
+        setIsVisible(true); // Show on scroll up
       }
 
       setLastScrollY(currentScrollY);
@@ -129,22 +129,33 @@ export function Header() {
   }, [lastScrollY]);
 
   const archiveMonths = [
-    "octubre 2025", "septiembre 2025", "agosto 2025", "julio 2025",
-    "junio 2025", "mayo 2025", "febrero 2025", "enero 2025",
-    "diciembre 2024", "septiembre 2024", "agosto 2024", "julio 2024",
-    "enero 2024", "diciembre 2023", "noviembre 2023"
+    "octubre 2025",
+    "septiembre 2025",
+    "agosto 2025",
+    "julio 2025",
+    "junio 2025",
+    "mayo 2025",
+    "febrero 2025",
+    "enero 2025",
+    "diciembre 2024",
+    "septiembre 2024",
+    "agosto 2024",
+    "julio 2024",
+    "enero 2024",
+    "diciembre 2023",
+    "noviembre 2023",
   ];
 
   return (
     <>
       {/* AdZep activation now handled exclusively by AdZepSPABridge */}
       <header
-        className={`sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-transform duration-300 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"
-          }`}
+        className={`sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-transform duration-300 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center h-16 relative">
-
             {/* Mobile: Hamburger Menu (Left) */}
             <div className="flex md:hidden flex-none w-12 items-center justify-start z-20">
               {/* Only show Hamburger if menu is CLOSED. If Open, the menu itself has the close button. 
@@ -209,8 +220,9 @@ export function Header() {
                 >
                   <span>{headerNavigation.categoryDropdown.text}</span>
                   <ChevronDown
-                    className={`size-4 transition-transform ${activeMegaMenu === "categories" ? "rotate-180" : ""
-                      }`}
+                    className={`size-4 transition-transform ${
+                      activeMegaMenu === "categories" ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
@@ -263,8 +275,9 @@ export function Header() {
                 >
                   <span>{headerNavigation.blogMegaMenu.title}</span>
                   <ChevronDown
-                    className={`size-4 transition-transform ${activeMegaMenu === "blog" ? "rotate-180" : ""
-                      }`}
+                    className={`size-4 transition-transform ${
+                      activeMegaMenu === "blog" ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
@@ -422,7 +435,9 @@ export function Header() {
             </nav>
 
             {/* Mobile: Search Icon (Right) */}
-            <div className="flex md:hidden flex-none items-center justify-end z-20 ml-auto"> {/* Added ml-auto */}
+            <div className="flex md:hidden flex-none items-center justify-end z-20 ml-auto">
+              {" "}
+              {/* Added ml-auto */}
               <button
                 type="button"
                 onClick={() => setIsSearchOpen(true)} // Toggle search
@@ -479,8 +494,12 @@ export function Header() {
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
                 className="flex items-center justify-between w-full px-6 py-3 text-left"
               >
-                <span className="font-bold text-gray-800 uppercase tracking-wide">CATEGORÍAS</span>
-                <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${isCategoriesOpen ? 'rotate-180' : ''}`} />
+                <span className="font-bold text-gray-800 uppercase tracking-wide">
+                  CATEGORÍAS
+                </span>
+                <ChevronDown
+                  className={`w-5 h-5 text-gray-400 transition-transform ${isCategoriesOpen ? "rotate-180" : ""}`}
+                />
               </button>
               {isCategoriesOpen && (
                 <div className="bg-gray-50 px-6 py-2 space-y-2">
@@ -521,14 +540,20 @@ export function Header() {
             <div className="border-t border-gray-100 my-2"></div>
 
             {/* PRÉSTAMOS */}
-            <Link href="/prestamos" className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50">
+            <Link
+              href="/prestamos"
+              className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
+            >
               PRÉSTAMOS
             </Link>
 
             <div className="border-t border-gray-100 my-2"></div>
 
             {/* TARJETAS DE CRÉDITO */}
-            <Link href="/tarjetas" className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50">
+            <Link
+              href="/tarjetas"
+              className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
+            >
               TARJETAS DE CRÉDITO
             </Link>
 

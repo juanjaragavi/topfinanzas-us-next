@@ -268,19 +268,11 @@ export default function Money118118CreditCardPage() {
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   The 118 118 Money Credit Card is ideal for several groups of
-<<<<<<< Updated upstream
-                  UK consumers. If you're new to credit and have no credit
-                  history, this card provides an accessible entry point to start
-                  building your credit profile. For those who have experienced
-                  financial difficulties in the past, such as missed payments,
-                  defaults, or CCJs, it offers a second chance to demonstrate
-=======
                   consumers. If you're new to credit and have no credit history,
                   this card provides an accessible entry point to start building
                   your credit profile. For those who have experienced financial
                   difficulties in the past, such as missed payments, defaults,
                   or judgments, it offers a second chance to demonstrate
->>>>>>> Stashed changes
                   responsible credit management.
                 </p>
 
@@ -329,13 +321,8 @@ export default function Money118118CreditCardPage() {
                       <span className="font-semibold">
                         Make payments on time:
                       </span>{" "}
-<<<<<<< Updated upstream
-                      Set up a direct debit to ensure you never miss a payment,
-                      as payment history is the most important factor in your
-=======
                       Set up autopay to ensure you never miss a payment, as
                       payment history is the most important factor in your
->>>>>>> Stashed changes
                       credit score.
                     </div>
                   </div>

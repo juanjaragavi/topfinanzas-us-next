@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -41,17 +40,26 @@ export default function FindYourCardPage() {
             Select the option that best describes your needs:
           </p>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight">
-               RECOMMENDED CASHBACK CARDS
-             </Link>
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight">
-               PREMIUM RECOMMENDATION
-             </Link>
-             <Link href="/financial-solutions" className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight">
-               NO COST CHOICE
-             </Link>
-           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              RECOMMENDED CASHBACK CARDS
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              PREMIUM RECOMMENDATION
+            </Link>
+            <Link
+              href="/financial-solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-4 px-6 text-sm font-medium transition-colors w-full h-auto whitespace-normal text-center leading-tight"
+            >
+              NO COST CHOICE
+            </Link>
+          </div>
         </div>
 
         <div className="w-full text-left max-w-3xl mt-12">
