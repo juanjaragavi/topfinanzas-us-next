@@ -735,7 +735,7 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
 
                 <p className="text-left text-gray-800 text-sm leading-5 mb-4">
                   Remember that building credit takes time and requires
-                  consistent, responsible behaviour. By making at least your
+                  consistent, responsible behavior. By making at least your
                   minimum payments on time each month, keeping your credit
                   utilisation low, and using the card regularly (but not
                   excessively), you can gradually improve your credit score and

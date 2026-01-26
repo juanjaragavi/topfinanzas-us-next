@@ -156,7 +156,7 @@ export default function VanquisCreditCardPage() {
                   standing. The card works on a simple principle: by staying
                   within your personalized credit limit of £250-£2,500, paying
                   on time, and paying at least the minimum monthly amount, you
-                  can demonstrate positive credit behaviour that's reported to
+                  can demonstrate positive credit behavior that's reported to
                   credit reference agencies, potentially improving your credit
                   score over time.
                 </p>
@@ -287,7 +287,7 @@ export default function VanquisCreditCardPage() {
                   Improving your credit score with a Vanquis Credit Card depends
                   on demonstrating responsible credit management over time.
                   Vanquis reports your account activity to credit reference
-                  agencies, meaning your positive behaviour can help build a
+                  agencies, meaning your positive behavior can help build a
                   stronger credit profile. The three key principles for credit
                   building success are: staying within your credit limit, paying
                   on time every month, and paying at least the minimum monthly

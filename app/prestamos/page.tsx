@@ -197,14 +197,11 @@ export default function PrestamosArchivePage() {
   }
 
   const pageContent = (
-    <div data-category="prestamos">
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">
-        Préstamos Personales
-      </h1>
+    <div data-category="loans">
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">Personal Loans</h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
-        Explora las mejores opciones de préstamos personales y financiamiento.
-        Compara tasas, plazos y requisitos para encontrar la solución que mejor
-        se adapte a tus necesidades.
+        Explore the best personal loan and financing options. Compare rates,
+        terms, and requirements to find the solution that best fits your needs.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -219,7 +216,7 @@ export default function PrestamosArchivePage() {
               description={post.description}
               image={post.image}
               slug={post.slug}
-              category="Préstamos Personales"
+              category="Personal Loans"
               categorySlug="/financial-solutions"
               date={post.date}
               type={post.type}
@@ -234,9 +231,9 @@ export default function PrestamosArchivePage() {
   return (
     <BlogLayout
       metadata={{
-        title: "Préstamos Personales: Guías y Comparativas | TopFinanzas MX",
+        title: "Personal Loans: Guides and Comparisons | TopFinance US",
         description:
-          "Encuentra los mejores préstamos personales en México. Compara opciones de bancos tradicionales, neobancos y plataformas fintech para obtener el mejor financiamiento.",
+          "Find the best personal loans in the US. Compare options from traditional banks, neobanks, and fintech platforms to get the best financing.",
       }}
     >
       {pageContent}

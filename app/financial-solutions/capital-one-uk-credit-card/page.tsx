@@ -141,7 +141,7 @@ export default function CapitalOneUKCreditCardPage() {
                   £1,500, depending on your individual circumstances and
                   creditworthiness assessment. What makes this particularly
                   valuable is the opportunity to demonstrate responsible
-                  financial behaviour and potentially receive up to two credit
+                  financial behavior and potentially receive up to two credit
                   limit increases per year—without having to submit additional
                   applications.
                 </p>
@@ -459,7 +459,7 @@ export default function CapitalOneUKCreditCardPage() {
                   experience, the Capital One UK Classic Card provides a
                   practical pathway to improved creditworthiness. By using the
                   card responsibly and making consistent, timely payments, you
-                  can demonstrate positive financial behaviour and work towards
+                  can demonstrate positive financial behavior and work towards
                   accessing better credit products in the future.
                 </p>
 

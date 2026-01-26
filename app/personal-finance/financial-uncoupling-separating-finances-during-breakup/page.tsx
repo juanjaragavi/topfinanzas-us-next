@@ -195,7 +195,7 @@ export default function FinancialUncouplingPage() {
               </ul>
               <p className="text-gray-800 mb-4 text-sm leading-6 font-light">
                 Document your agreements in writing, even informally. If legal
-                advice is needed, organisations like the Money and Pensions
+                advice is needed, organizations like the Money and Pensions
                 Service (MoneyHelper) offer free impartial guidance for UK
                 residents.
               </p>

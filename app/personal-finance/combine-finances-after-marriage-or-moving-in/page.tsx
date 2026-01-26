@@ -147,7 +147,7 @@ export default function CombineFinancesAfterMarriagePage() {
               <p className="text-gray-800 mb-4 text-sm leading-6 font-light">
                 If you open a joint account or apply for joint credit, your
                 credit files can become financially associated. That means one
-                person’s credit behaviour may affect the other’s. Keep balances
+                person's credit behavior may affect the other's. Keep balances
                 low and pay on time. If you’re managing credit card balances, a{" "}
                 {""}
                 <Link

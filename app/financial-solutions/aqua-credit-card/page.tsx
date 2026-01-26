@@ -147,7 +147,7 @@ export default function AquaCreditCardPage() {
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   The Aqua app provides free credit score updates, allowing you
                   to track your progress as you build your credit. Understanding
-                  your credit score and how your financial behaviour affects it
+                  your credit score and how your financial behavior affects it
                   is crucial for long-term financial success. Aqua empowers you
                   with this information, helping you make informed decisions
                   about your spending and repayment habits.

@@ -165,9 +165,9 @@ export default function Money118118CreditCardPage() {
                   tool, helping you establish or rebuild your credit history
                   through responsible use. By making regular payments on time
                   and keeping your balance manageable, you can demonstrate good
-                  repayment behaviour to credit reference agencies. This
-                  positive payment history is reported to the major UK credit
-                  bureaus, helping to improve your credit score over time.
+                  repayment behavior to credit reference agencies. This positive
+                  payment history is reported to the major UK credit bureaus,
+                  helping to improve your credit score over time.
                 </p>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
@@ -226,7 +226,7 @@ export default function Money118118CreditCardPage() {
                   extensive support through its Money Guidance section and
                   Fitness Academy. These resources are designed to help you
                   develop better financial habits and improve your underlying
-                  financial behaviours, not just obsess over your credit score.
+                  financial behaviors, not just obsess over your credit score.
                   The Fitness Academy provides educational content, practical
                   tips, and tools to help you become more financially confident
                   and capable.

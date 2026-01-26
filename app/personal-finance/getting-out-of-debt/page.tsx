@@ -588,7 +588,7 @@ export default function GettingOutOfDebtPage() {
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
                   <li className="mb-2">
                     <strong>Non-profit debt advice charities:</strong>{" "}
-                    Organisations like StepChange Debt Charity or National
+                    Organizations like StepChange Debt Charity or National
                     Debtline offer free, impartial advice and can help you
                     explore options like Debt Management Plans (DMPs), Debt
                     Relief Orders (DROs), or Individual Voluntary Arrangements
@@ -601,7 +601,7 @@ export default function GettingOutOfDebtPage() {
                     involved).
                   </li>
                   <li className="mb-2">
-                    <strong>Check credentials:</strong> Ensure any organisation
+                    <strong>Check credentials:</strong> Ensure any organization
                     you approach is reputable and authorized by the Financial
                     Conduct Authority (FCA) if they offer regulated debt advice.
                   </li>

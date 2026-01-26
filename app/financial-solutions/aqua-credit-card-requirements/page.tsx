@@ -294,7 +294,7 @@ export default function AquaCreditCardRequirementsPage() {
                       </span>{" "}
                       Track your progress with free credit score updates
                       available through the Aqua app. This transparency helps
-                      you understand how your financial behaviour impacts your
+                      you understand how your financial behavior impacts your
                       credit score.
                     </div>
                   </div>

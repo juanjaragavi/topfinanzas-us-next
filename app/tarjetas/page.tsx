@@ -153,106 +153,106 @@ export default function TarjetasArchivePage() {
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Vanquis",
+      title: "Vanquis Credit Card",
       slug: "vanquis-credit-card",
       description:
-        "Las tarjetas Vanquis ofrecen límites personalizados y funciones galardonadas para construir crédito, ideales para mejorar tu perfil.",
+        "Vanquis cards offer personalized limits and award-winning features for building credit, ideal for improving your profile.",
       image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta Capital One UK Classic",
+      title: "Capital One Classic Credit Card",
       slug: "capital-one-uk-credit-card",
       description:
-        "La tarjeta Capital One Classic te ayuda a mejorar tu crédito con un límite inicial manejable, pagos flexibles y sin comisión anual.",
+        "The Capital One Classic card helps you improve your credit with a manageable initial limit, flexible payments, and no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Marbles",
+      title: "Marbles Credit Card",
       slug: "marbles-credit-card",
       description:
-        "La tarjeta Marbles te ayuda a gestionar tus finanzas con un límite manejable, verificador rápido y herramientas flexibles.",
+        "The Marbles card helps you manage your finances with a manageable limit, quick eligibility checker, and flexible tools.",
       image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Aqua",
+      title: "Aqua Credit Card",
       slug: "aqua-credit-card",
       description:
-        "La tarjeta Aqua ofrece límites personalizados y protección contra fraude 24/7 para ayudarte a construir crédito con total confianza.",
+        "The Aqua card offers personalized limits and 24/7 fraud protection to help you build credit with complete confidence.",
       image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Bip",
+      title: "Bip Credit Card",
       slug: "bip-credit-card",
       description:
-        "Descubra la tarjeta Bip: una solución de crédito digital sin tarjeta física, sin comisiones ocultas y con control total desde tu celular.",
+        "Discover the Bip card: a digital credit solution with no physical card, no hidden fees, and total control from your phone.",
       image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta Barclaycard Avios Plus",
+      title: "Barclaycard Avios Plus Card",
       slug: "barclaycard-avios-plus",
       description:
-        "La tarjeta Barclaycard Avios Plus ofrece beneficios de viaje premium y generosos puntos Avios para mejorar tu experiencia.",
+        "The Barclaycard Avios Plus card offers premium travel benefits and generous Avios points to enhance your experience.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "23 October 2025",
       type: "traditional",
     },
     // Traditional Bank Cards
     {
-      title: "Tarjeta de Crédito Lloyds Bank",
+      title: "Lloyds Bank Credit Card",
       slug: "lloyds-bank-credit-card",
       description:
-        "Explore la tarjeta Lloyds Bank con tasas competitivas, sin anualidad y programa de ofertas diarias de cashback.",
+        "Explore the Lloyds Bank card with competitive rates, no annual fee, and a daily cashback offers program.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito NatWest",
+      title: "NatWest Credit Card",
       slug: "natwest-credit-card",
       description:
-        "Descubra la tarjeta NatWest con programa MyRewards, integración móvil y opciones de pago flexibles para tus gastos.",
+        "Discover the NatWest card with MyRewards program, mobile integration, and flexible payment options for your spending.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Santander UK",
+      title: "Santander UK Credit Card",
       slug: "santander-uk-credit-card",
       description:
-        "Conozca la tarjeta Santander UK con cashback All in One, sin comisiones en el extranjero y opciones de transferencia de saldo.",
+        "Discover the Santander UK card with All in One cashback, no foreign transaction fees, and balance transfer options.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito TSB",
+      title: "TSB Credit Card",
       slug: "tsb-credit-card",
       description:
-        "Explore la tarjeta TSB con valor diario, comisiones bajas e integración total con las plataformas de banca TSB.",
+        "Explore the TSB card with everyday value, low fees, and full integration with TSB banking platforms.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.webp",
       date: "2 April 2025",
       type: "traditional",
     },
     {
-      title: "Tarjeta de Crédito Virgin Money",
+      title: "Virgin Money Credit Card",
       slug: "virgin-money-credit-card",
       description:
-        "Descubra la tarjeta Virgin Money con recompensas exclusivas, puntos Virgin y ofertas en todo el ecosistema Virgin.",
+        "Discover the Virgin Money card with exclusive rewards, Virgin Points, and offers across the Virgin ecosystem.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.webp",
       date: "2 April 2025",
@@ -262,7 +262,7 @@ export default function TarjetasArchivePage() {
       title: "Halifax World Elite MasterCard",
       slug: "halifax-world-elite-mastercard",
       description:
-        "Explore la Halifax World Elite MasterCard, que ofrece beneficios de viaje premium, seguro integral y recompensas exclusivas.",
+        "Explore the Halifax World Elite MasterCard, offering premium travel benefits, comprehensive insurance, and exclusive rewards.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719906760-top_prestamos-y-tarjetas-uk_v1-14.webp",
       date: "4 April 2025",
@@ -270,20 +270,20 @@ export default function TarjetasArchivePage() {
     },
     // Neobank Cards
     {
-      title: "Tarjeta de Crédito Monzo",
+      title: "Monzo Credit Card",
       slug: "monzo-credit-card",
       description:
-        "Conozca la tarjeta Monzo con notificaciones de gasto en tiempo real, herramientas de presupuesto y gestión 100% digital.",
+        "Discover the Monzo card with real-time spending notifications, budgeting tools, and 100% digital management.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.webp",
       date: "2 April 2025",
       type: "neobank",
     },
     {
-      title: "Tarjeta de Crédito Starling Bank",
+      title: "Starling Bank Credit Card",
       slug: "starling-bank-credit-card",
       description:
-        "Descubra la tarjeta Starling Bank con precios transparentes, banca ética y funciones digitales avanzadas para tu dinero.",
+        "Discover the Starling Bank card with transparent pricing, ethical banking, and advanced digital features for your money.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.webp",
       date: "2 April 2025",
@@ -291,20 +291,20 @@ export default function TarjetasArchivePage() {
     },
     // Fintech Cards
     {
-      title: "Tarjeta de Crédito Revolut",
+      title: "Revolut Credit Card",
       slug: "revolut-credit-card",
       description:
-        "Explore la tarjeta Revolut con capacidades multimoneda, tasas competitivas y control total para estilos de vida internacionales.",
+        "Explore the Revolut card with multi-currency capabilities, competitive rates, and total control for international lifestyles.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.webp",
       date: "2 April 2025",
       type: "fintech",
     },
     {
-      title: "Tarjeta de Crédito Curve",
+      title: "Curve Credit Card",
       slug: "curve-credit-card",
       description:
-        "Conoce la innovadora tarjeta Curve que consolida todas tus tarjetas en una sola con funciones inteligentes y recompensas.",
+        "Discover the innovative Curve card that consolidates all your cards into one with smart features and rewards.",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
       date: "2 April 2025",
@@ -391,14 +391,11 @@ export default function TarjetasArchivePage() {
   }
 
   const pageContent = (
-    <div data-category="tarjetas">
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">
-        Tarjetas de Crédito
-      </h1>
+    <div data-category="cards">
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">Credit Cards</h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
-        Explora guías detalladas y reseñas de las mejores tarjetas de crédito
-        disponibles. Encuentra la tarjeta adecuada según las recompensas,
-        tarifas y tus necesidades financieras.
+        Explore detailed guides and reviews of the best credit cards available.
+        Find the right card based on rewards, fees, and your financial needs.
       </p>
 
       {/* Grid of credit card posts */}
@@ -415,7 +412,7 @@ export default function TarjetasArchivePage() {
               image={post.image}
               // Posts are located under /financial-solutions/
               slug={post.slug}
-              category="Tarjetas de Crédito" // Static category for this page
+              category="Credit Cards" // Static category for this page
               categorySlug="/financial-solutions" // Base path for these posts
               date={post.date}
               type={post.type}
@@ -430,9 +427,9 @@ export default function TarjetasArchivePage() {
   return (
     <BlogLayout
       metadata={{
-        title: "Tarjetas de Crédito: Reseñas y Guías | TopFinanzas MX",
+        title: "Credit Cards: Reviews and Guides | TopFinance US",
         description:
-          "Compara las mejores tarjetas de crédito. Encuentra reseñas, guías y comparaciones para recompensas, cashback, viajes y tarjetas de bajo interés.",
+          "Compare the best credit cards. Find reviews, guides, and comparisons for rewards, cashback, travel, and low-interest cards.",
       }}
     >
       {pageContent}

@@ -1,21 +1,25 @@
-feat: Complete sitewide US localization audit
+feat: Complete US English localization and enhanced search system
 
-- Replace all British English spellings with US English across app/ directory:
-  - whilst → while, optimise → optimize, authorise → authorize
-  - personalise → personalize, categorise → categorize, realise → realize
-  - minimise → minimize, maximise → maximize, recognise → recognize
-  - organise → organize, analyse → analyze, programme → program
-  - favourite → favorite, favour → favor, defence → defense
-  - paycheque → paycheck, petrol → gas, neighbourhood → neighborhood
-  - travelling → traveling
+Localization:
+- Translate all Spanish frontend content to US English across pages
+- Convert British English spellings to American English (behaviour→behavior, organisation→organization)
+- Update header navigation, mobile menu, and category labels
+- Translate 46+ blog posts, credit card entries, and loan products
+- Update date locale from es-MX to en-US throughout
 
-- Update configuration files from UK to US branding:
-  - site.webmanifest: TopFinanzas UK → TopFinanzas US
-  - lib/documents/config.js: TOPFIN_UK → TOPFIN_US
-  - lib/search-index.ts: UK references → US references
-  - lib/data/authors.json: /images/uk/ → /images/us/
+Search System:
+- Implement comprehensive search index with 80+ indexed items
+- Add credit cards, personal loans, articles, and pages to search
+- Implement relevance scoring with title, description, and category matching
+- Add search suggestions and category filtering functions
+- Enhance search UI with thumbnails, type labels, and popular searches
 
-- Fix metadata files from Spanish/Mexico to US English
-- Add ACCEPT RECOMMENDATION buttons to recommendation pages
-- Add FAQ accordions to landing pages
-- Fix internal link from /terms/ to /terms-conditions/
+UI/Visual:
+- Update header logo dimensions (h-10 mobile / h-12 desktop)
+- Refine hero section with solid background color (#6366F1)
+- Remove unused Image import from homepage
+
+Fixes:
+- Fix ESLint warning for unused import
+- Update sidebar category labels and section headings
+- Update empty state messages to English

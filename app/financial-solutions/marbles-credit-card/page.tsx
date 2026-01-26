@@ -169,7 +169,7 @@ export default function MarblesCreditCardPage() {
                   credit limit can be reviewed after three months, meaning you
                   could receive an increase on your fourth statement if you've
                   demonstrated responsible usage—rewarding good financial
-                  behaviour while still maintaining sensible limits.
+                  behavior while still maintaining sensible limits.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -319,7 +319,7 @@ export default function MarblesCreditCardPage() {
                       </span>{" "}
                       After demonstrating responsible credit use for three
                       months, you may be eligible for a credit limit increase,
-                      rewarding positive financial behaviour while still
+                      rewarding positive financial behavior while still
                       maintaining manageable limits.
                     </div>
                   </div>

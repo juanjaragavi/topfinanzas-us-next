@@ -368,7 +368,7 @@ export default function MSRewardsCreditCardPage() {
                   purchases and clearing your balance on time each month (or at
                   least making the minimum payment), you demonstrate to credit
                   reference agencies that you can manage credit responsibly.
-                  This positive credit behaviour can improve your credit score
+                  This positive credit behavior can improve your credit score
                   over time, making it easier to access other credit products
                   with favorable terms in the future, from mortgages to personal
                   loans.

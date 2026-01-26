@@ -785,7 +785,7 @@ const SidebarRecentArticles = React.forwardRef<
       className={cn("px-2 my-4", className)}
       {...props}
     >
-      <h3 className="font-semibold text-lg mb-4">Artículos Recientes</h3>
+      <h3 className="font-semibold text-lg mb-4">Recent Articles</h3>
       {/* The content will be passed as children */}
       <div className="space-y-4">{props.children}</div>
     </div>
@@ -805,7 +805,7 @@ const SidebarCategories = React.forwardRef<
       className={cn("px-2 my-4", className)}
       {...props}
     >
-      <h3 className="font-semibold text-lg mb-4">Categorías</h3>
+      <h3 className="font-semibold text-lg mb-4">Categories</h3>
       {/* The content will be passed as children */}
       <div className="space-y-2">{props.children}</div>
     </div>

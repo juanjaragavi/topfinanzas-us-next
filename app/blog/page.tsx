@@ -13,7 +13,7 @@ interface PostItem {
   slug: string;
   description: string;
   image: string;
-  category: "Finanzas Personales" | "Soluciones Financieras";
+  category: "Personal Finance" | "Financial Solutions";
   categoryPath: string;
   date?: string; // Optional date
 }
@@ -30,11 +30,11 @@ export default function BlogArchivePage() {
 
   // Categories for filtering
   const categories = {
-    all: "Todos los artículos",
-    personalFinance: "Finanzas Personales",
-    financialSolutions: "Soluciones Financieras",
-    creditCards: "Tarjetas",
-    loans: "Préstamos",
+    all: "All Articles",
+    personalFinance: "Personal Finance",
+    financialSolutions: "Financial Solutions",
+    creditCards: "Credit Cards",
+    loans: "Loans",
   };
 
   // Combine posts from both categories
@@ -42,535 +42,524 @@ export default function BlogArchivePage() {
     // Personal Finance - Latest Articles
     {
       title:
-        "Cómo Rasterar tus Gastos por 30 Días y Saber a Dónde Va tu Dinero | Top Finanzas MX",
+        "How to Track Your Spending for 30 Days and Know Where Your Money Goes | Top Finance US",
       slug: "how-to-track-your-spending-for-30-days",
       description:
-        "Deja de adivinar sobre tus finanzas. Aprende un método sencillo de seguimiento de gastos de 30 días para descubrir a dónde va realmente tu dinero y crear hábitos duraderos.",
+        "Stop guessing about your finances. Learn a simple 30-day spending tracking method to discover where your money really goes and create lasting habits.",
       image:
         "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "2 December 2025",
     },
     {
       title:
-        "La Psicología del Gasto: Cómo Detener las Compras Impulsivas | Top Finanzas MX",
+        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance US",
       slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
       description:
-        "Descubra por qué compramos por impulso y aprenda estrategias prácticas para dominar su mentalidad de dinero. Empiece a ahorrar de forma consciente hoy mismo.",
+        "Discover why we buy on impulse and learn practical strategies to master your money mindset. Start mindful saving today.",
       image:
         "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "25 November 2025",
     },
     {
       title:
-        'Automatiza tu Riqueza: Sistema de Finanzas "Configúralo y Olvídalo" | Top Finanzas MX',
+        'Automate Your Wealth: "Set It and Forget It" Financial System | Top Finance US',
       slug: "automate-your-wealth",
       description:
-        'Aprenda cómo automatizar sus finanzas con nuestro sistema "Configúralo y olvídalo". Ahorre tiempo, reduzca el estrés y genere riqueza sin esfuerzo con consejos prácticos.',
+        'Learn how to automate your finances with our "Set it and forget it" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
       image:
         "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "19 November 2025",
     },
     {
       title:
-        "Deja de Vivir de Quincena en Quincena: 3 Cambios para Romper el Ciclo | Top Finanzas MX",
+        "Stop Living Paycheck to Paycheck: 3 Changes to Break the Cycle | Top Finance US",
       slug: "stop-living-paycheck-to-paycheck",
       description:
-        "Escapa del ciclo de vivir al día con tres cambios prácticos en el flujo de caja. Aprende cómo las familias están construyendo un respiro sin sacrificios dramáticos.",
+        "Escape the paycheck-to-paycheck cycle with three practical cash flow changes. Learn how families are building financial breathing room without dramatic sacrifices.",
       image:
         "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "13 November 2025",
     },
     {
       title:
-        "Chequeo de Salud Financiera: ¿A Dónde se Va tu Dinero? | Top Finanzas MX",
+        "Financial Health Check: Where Does Your Money Go? | Top Finance US",
       slug: "financial-health-check-where-does-your-money-go",
       description:
-        "Descubra a dónde va realmente su dinero con nuestro rápido chequeo de salud financiera. Aprenda métodos sencillos de seguimiento que revelan patrones de gasto.",
+        "Discover where your money really goes with our quick financial health check. Learn simple tracking methods that reveal spending patterns.",
       image:
         "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "5 November 2025",
     },
     {
       title:
-        "Los Costos Ocultos de Ser Propietario de una Vivienda que Nadie te Cuenta | Top Finanzas MX",
+        "The Hidden Costs of Homeownership That No One Tells You | Top Finance US",
       slug: "hidden-costs-of-homeownership",
       description:
-        "Descubra los gastos inesperados que sorprenden a los propietarios de viviendas. Desde el mantenimiento hasta los seguros, aprenda a presupuestar los costos ocultos.",
+        "Discover the unexpected expenses that surprise homeowners. From maintenance to insurance, learn to budget for hidden costs.",
       image:
         "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "28 October 2025",
     },
     // Financial Solutions - Credit Cards
     {
       title:
-        "Tarjeta RBS Purchase & Balance Transfer: Ahorra en Intereses con Ofertas al 0% | Top Finanzas MX",
+        "RBS Purchase & Balance Transfer Card: Save on Interest with 0% Offers | Top Finance US",
       slug: "rbs-purchase-balance-transfer-card",
       description:
-        "La tarjeta RBS Purchase & Balance Transfer ofrece 0% de interés en compras hasta por 20 meses y 0% en transferencias de saldo por hasta 18 meses. Sin anualidad.",
+        "The RBS Purchase & Balance Transfer Card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjetas de Crédito Bank of Scotland: Opciones Flexibles para cada Necesidad | Top Finanzas MX",
+        "Bank of Scotland Credit Cards: Flexible Options for Every Need | Top Finance US",
       slug: "bank-of-scotland-credit-cards",
       description:
-        "Descubre las tarjetas de crédito de Bank of Scotland con opciones para gastos diarios, transferencias de saldo, compras grandes y construcción de crédito.",
+        "Discover Bank of Scotland credit cards with options for daily spending, balance transfers, large purchases, and credit building.",
       image:
         "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito First Direct: Banca Sencilla con Tasas Competitivas | Top Finanzas MX",
+        "First Direct Credit Card: Simple Banking with Competitive Rates | Top Finance US",
       slug: "first-direct-credit-card",
       description:
-        "Descubre la tarjeta First Direct 1st con 0% de interés en compras por 12 meses, tasas competitivas, sin comisión anual y servicio al cliente 24/7.",
+        "Discover the First Direct 1st card with 0% interest on purchases for 12 months, competitive rates, no annual fee, and 24/7 customer service.",
       image:
         "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito The Co-operative Bank: Banca Ética con Recompensas de Cashback | Top Finanzas MX",
+        "The Co-operative Bank Credit Card: Ethical Banking with Cashback Rewards | Top Finance US",
       slug: "the-co-operative-bank-credit-card",
       description:
-        "Descubre la tarjeta Members de The Co-operative que ofrece 0.5% de cashback en tiendas Co-op y 0.3% en todos los demás lugares, sin anualidad.",
+        "Discover the Co-operative Members card offering 0.5% cashback at Co-op stores and 0.3% everywhere else, with no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito M&S Rewards: Gana Puntos en cada Compra | Top Finanzas MX",
+        "M&S Rewards Credit Card: Earn Points on Every Purchase | Top Finance US",
       slug: "ms-rewards-credit-card",
       description:
-        "Descubre la tarjeta M&S Rewards que ofrece puntos de recompensa en todos tus gastos en M&S y más allá, con beneficios exclusivos para miembros.",
+        "Discover the M&S Rewards card that offers reward points on all your M&S spending and beyond, with exclusive member benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjetas de Crédito Tesco Bank Clubcard: Gana Puntos en cada Compra | Top Finanzas MX",
+        "Tesco Bank Clubcard Credit Cards: Earn Points on Every Purchase | Top Finance US",
       slug: "tesco-bank-clubcard-credit-cards",
       description:
-        "Descubre las tarjetas Tesco Bank Clubcard con tasas de introducción al 0%, opciones de CAT bajo y puntos Clubcard en tus gastos diarios.",
+        "Discover Tesco Bank Clubcard cards with 0% intro rates, low APR options, and Clubcard points on your daily spending.",
       image:
         "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "American Express Preferred Rewards Gold: Beneficios Exclusivos de Viaje y Estilo de Vida | Top Finanzas MX",
+        "American Express Preferred Rewards Gold: Exclusive Travel and Lifestyle Benefits | Top Finance US",
       slug: "american-express-preferred-rewards-gold-credit-card",
       description:
-        "La tarjeta American Express Gold ofrece puntos Membership Rewards premium, seguro de viaje integral y beneficios exclusivos de estilo de vida.",
+        "The American Express Gold card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits.",
       image:
         "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Nationwide Building Society: Beneficios para Miembros y Ofertas al 0% | Top Finanzas MX",
+        "Nationwide Building Society Credit Card: Member Benefits and 0% Offers | Top Finance US",
       slug: "nationwide-building-society-credit-card",
       description:
-        "La tarjeta Member de Nationwide ofrece dos opciones iniciales al 0%: hasta 24 meses en transferencias de saldo o 15 meses en compras.",
+        "The Nationwide Member card offers two 0% intro options: up to 24 months on balance transfers or 15 months on purchases.",
       image:
         "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito HSBC Rewards: Gana Puntos en cada Compra | Top Finanzas MX",
+        "HSBC Rewards Credit Card: Earn Points on Every Purchase | Top Finance US",
       slug: "hsbc-rewards-credit-card",
       description:
-        "La tarjeta HSBC Rewards ofrece puntos en tus gastos diarios, 0% de interés en compras por 6 meses y un bono de bienvenida de £25.",
+        "The HSBC Rewards card offers points on your daily spending, 0% interest on purchases for 6 months, and a $25 welcome bonus.",
       image:
         "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "24 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Ocean: Verifica tu Elegibilidad en 60 Segundos | Top Finanzas MX",
+        "Ocean Credit Card: Check Your Eligibility in 60 Seconds | Top Finance US",
       slug: "ocean-credit-card",
       description:
-        "La tarjeta Ocean ofrece límites de crédito desde £200 hasta £8,000 sin anualidad. Verifica tu elegibilidad con QuickCheck sin afectar tu historial.",
+        "The Ocean card offers credit limits from $200 to $8,000 with no annual fee. Check your eligibility with QuickCheck without affecting your credit history.",
       image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Fluid: Reduce tus Costos con Transferencias de Saldo | Top Finanzas MX",
+        "Fluid Credit Card: Reduce Your Costs with Balance Transfers | Top Finance US",
       slug: "fluid-credit-card",
       description:
-        "La tarjeta Fluid ofrece 0% de interés en transferencias de saldo por 9 meses, ayudándote a ahorrar y liquidar tus deudas más rápido.",
+        "The Fluid card offers 0% interest on balance transfers for 9 months, helping you save and pay off your debts faster.",
       image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta John Lewis Partnership: Gana Recompensas en tus Compras Diarias | Top Finanzas MX",
+        "John Lewis Partnership Card: Earn Rewards on Your Daily Shopping | Top Finance US",
       slug: "john-lewis-partnership-card",
       description:
-        "La tarjeta John Lewis Partnership te permite ganar valiosos puntos en tus compras diarias en John Lewis, Waitrose y más allá.",
+        "The John Lewis Partnership card lets you earn valuable points on your daily shopping at John Lewis, Waitrose, and beyond.",
       image:
         "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito 118 118 Money: Construye tu Crédito con Confianza | Top Finanzas MX",
+        "118 118 Money Credit Card: Build Your Credit with Confidence | Top Finance US",
       slug: "118-118-money-credit-card",
       description:
-        "La tarjeta 118 118 Money ofrece límites de crédito personalizados garantizados y términos transparentes para ayudarte a mejorar tu historial.",
+        "The 118 118 Money card offers guaranteed personalized credit limits and transparent terms to help you improve your credit history.",
       image:
         "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Vanquis: Soluciones Galardonadas para Construir Crédito | Top Finanzas MX",
+        "Vanquis Credit Card: Award-Winning Credit Building Solutions | Top Finance US",
       slug: "vanquis-credit-card",
       description:
-        "Descubre las tarjetas Vanquis con límites personalizados y funciones galardonadas para construir crédito, además de transferencias de saldo al 0%.",
+        "Discover Vanquis cards with personalized limits and award-winning features for building credit, plus 0% balance transfers.",
       image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta Capital One UK Classic: Construye tu Historial Crediticio | Top Finanzas MX",
+        "Capital One Classic Credit Card: Build Your Credit History | Top Finance US",
       slug: "capital-one-uk-credit-card",
       description:
-        "La tarjeta Capital One Classic te ayuda a mejorar tu crédito con un límite inicial de £200-£1,500, pagos flexibles y sin anualidad.",
+        "The Capital One Classic card helps you improve your credit with an initial limit of $200-$1,500, flexible payments, and no annual fee.",
       image:
         "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Aqua: Mejora tu Crédito con Funciones Inteligentes | Top Finanzas MX",
+        "Aqua Credit Card: Improve Your Credit with Smart Features | Top Finance US",
       slug: "aqua-credit-card",
       description:
-        "La tarjeta Aqua ofrece límites personalizados, herramientas de apoyo experto y protección contra fraude 24/7 para construir crédito con seguridad.",
+        "The Aqua card offers personalized limits, expert support tools, and 24/7 fraud protection for building credit safely.",
       image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Bip: Crédito Digital bajo tu Control | Top Finanzas MX",
+        "Bip Credit Card: Digital Credit Under Your Control | Top Finance US",
       slug: "bip-credit-card",
       description:
-        "Descubre Bip: una solución de crédito sin tarjeta física, sin comisiones ocultas y con actualizaciones de saldo al instante.",
+        "Discover Bip: a credit solution with no physical card, no hidden fees, and instant balance updates.",
       image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Yonder: Recompensas Épicas sin Comisiones en el Extranjero | Top Finanzas MX",
+        "Yonder Credit Card: Epic Rewards with No Foreign Transaction Fees | Top Finance US",
       slug: "yonder-credit-card",
       description:
-        "La tarjeta gratuita Yonder otorga 1 punto por cada £1 gastada sin comisiones en el extranjero, además de ofertas de bienvenida exclusivas.",
+        "The free Yonder card gives you 1 point for every $1 spent with no foreign transaction fees, plus exclusive welcome offers.",
       image:
         "https://cdn.prod.website-files.com/6209512878b45f39119ebfb5/6839943447d06a3292522ecd_head-p-800.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
-      title:
-        "Tarjeta de Crédito Zopa: Gestión de Tarjeta Galardonada | Top Finanzas MX",
+      title: "Zopa Credit Card: Award-Winning Card Management | Top Finance US",
       slug: "zopa-credit-card",
       description:
-        "Descubre la tarjeta Zopa con gestión sencilla desde la app, función Credit Cushion, sin comisiones en el extranjero y servicio galardonado.",
+        "Discover the Zopa card with easy app management, Credit Cushion feature, no foreign fees, and award-winning service.",
       image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     {
       title:
-        "Tarjeta de Crédito Marbles: Mantén el Control de tus Finanzas | Top Finanzas MX",
+        "Marbles Credit Card: Stay in Control of Your Finances | Top Finance US",
       slug: "marbles-credit-card",
       description:
-        "La tarjeta Marbles te ayuda a gestionar tus finanzas con un límite manejable, verificador de elegibilidad rápido y sin anualidad.",
+        "The Marbles card helps you manage your finances with a manageable limit, quick eligibility checker, and no annual fee.",
       image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
     },
     // Personal Finance Posts
     {
       title:
-        "Protege tu Vida de la Inflación: 7 Movimientos Inteligentes cuando los Precios suben | Top Finanzas MX",
+        "Inflation-Proof Your Life: 7 Smart Moves When Prices Rise | Top Finance US",
       slug: "inflation-proof-your-life",
       description:
-        "Descubra siete estrategias prácticas para proteger su poder adquisitivo durante la alta inflación. Aprenda a eliminar fugas de gastos y construir fondos de emergencia.",
+        "Discover seven practical strategies to protect your purchasing power during high inflation. Learn to eliminate spending leaks and build emergency funds.",
       image:
         "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "15 October 2025",
     },
     {
-      title:
-        "Los Mejores Préstamos Personales: Tu Guía Completa | Top Finanzas MX",
+      title: "Best Personal Loans: Your Complete Guide | Top Finance US",
       slug: "best-personal-loans",
-      description: "Guía completa sobre los mejores préstamos personales...",
+      description: "Complete guide to the best personal loans...",
       image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "30 March 2025",
     },
     {
       title:
-        "Mejores Tarjetas de Crédito con Recompensas para Maximizar tus Gastos | Top Finanzas MX",
+        "Best Rewards Credit Cards to Maximize Your Spending | Top Finance US",
       slug: "best-rewards-credit-cards",
-      description:
-        "Descubra las mejores tarjetas de crédito con recompensas...",
+      description: "Discover the best rewards credit cards...",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
       title:
-        "Mejores Tarjetas de Crédito con Cashback para Maximizar tus Recompensas | Top Finanzas MX",
+        "Best Cashback Credit Cards to Maximize Your Rewards | Top Finance US",
       slug: "cashback-credit-cards",
-      description: "¡Descubra las mejores tarjetas de crédito con cashback!...",
+      description: "Discover the best cashback credit cards!...",
       image: "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
       title:
-        "Tarjetas de Crédito: Tipos, Beneficios y Claves para la Salud Financiera | Top Finanzas MX",
+        "Credit Cards: Types, Benefits, and Keys to Financial Health | Top Finance US",
       slug: "credit-card-types-benefits",
-      description:
-        "Descubra todo lo que necesita saber sobre las tarjetas de crédito...",
+      description: "Discover everything you need to know about credit cards...",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
-      title: "Guía Práctica para Salir de Deudas | Top Finanzas MX",
+      title: "Practical Guide to Getting Out of Debt | Top Finance US",
       slug: "getting-out-of-debt",
-      description:
-        "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
+      description: "Feeling overwhelmed by debt? Get practical strategies...",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
-      title: "Mejores Tarjetas de Crédito sin Comisión Anual | Top Finanzas MX",
+      title: "Best Credit Cards with No Annual Fee | Top Finance US",
       slug: "no-annual-fee-credit-cards",
-      description: "Encuentra las mejores tarjetas de crédito sin anualidad...",
+      description: "Find the best credit cards without an annual fee...",
       image:
         "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
-      title:
-        "Préstamos Personales: Una Estrategia para Gestionar Deudas | Top Finanzas MX",
+      title: "Personal Loans: A Strategy for Managing Debt | Top Finance US",
       slug: "personal-loans-debt-strategy",
       description:
-        "Descubra cómo los préstamos personales pueden ayudarle a consolidar deudas...",
+        "Discover how personal loans can help you consolidate debt...",
       image:
         "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
       title:
-        "5 Consejos Esenciales para Elegir un Préstamo en Línea: Guía Rápida | Top Finanzas MX",
+        "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance US",
       slug: "tips-for-choosing-an-online-loan",
-      description:
-        "Navega por el mundo de los préstamos en línea con confianza...",
+      description: "Navigate the world of online loans with confidence...",
       image:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "30 March 2025",
     },
     {
-      title:
-        "Mejores Tarjetas de Crédito con Ofertas de 0% de Introducción en el CAT | Top Finanzas MX",
+      title: "Best Credit Cards with 0% Intro APR Offers | Top Finance US",
       slug: "top-credit-cards-0-intro-apr",
-      description:
-        "Compara las mejores tarjetas de crédito que ofrecen tasas del 0%...",
+      description: "Compare the best credit cards offering 0% intro rates...",
       image: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
       title:
-        "Entendiendo las Tasas de Interés de las Tarjetas de Crédito: Guía del Consumidor | Top Finanzas MX",
+        "Understanding Credit Card Interest Rates: Consumer Guide | Top Finance US",
       slug: "understanding-credit-card-interest-rates",
-      description:
-        "Aprenda cómo funcionan las tasas de interés de las tarjetas...",
+      description: "Learn how credit card interest rates work...",
       image: "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
     },
     {
       title:
-        "¿Side Hustle o Segundo Trabajo? Cómo Elegir el Impulsor de Ingresos Adecuado",
+        "Side Hustle or Second Job? How to Choose the Right Income Booster",
       slug: "side-hustle-or-second-job",
       description:
-        "Con el aumento del costo de vida, muchos buscan formas de aumentar sus ingresos. Ya sea un segundo trabajo tradicional o un emprendimiento paralelo, elegir correctamente es clave.",
+        "With the rising cost of living, many are looking for ways to boost their income. Whether it's a traditional second job or a side hustle, choosing correctly is key.",
       image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "27 August 2025",
     },
     {
       title:
-        "Más allá de las Hojas de Cálculo: Crea un Presupuesto que Realmente Sigas | Top Finanzas MX",
+        "Beyond Spreadsheets: Create a Budget You'll Actually Follow | Top Finance US",
       slug: "creating-a-budget-youll-actually-stick-to",
       description:
-        "Una guía de presupuesto moderna que cubre la regla 50/30/20, presupuesto base cero y herramientas digitales.",
+        "A modern budget guide covering the 50/30/20 rule, zero-based budgeting, and digital tools.",
       image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "4 September 2025",
     },
     {
       title:
-        "Cómo Pedir un Aumento con Confianza (con Guiones y Guía de Preparación)",
+        "How to Ask for a Raise with Confidence (with Scripts and Prep Guide)",
       slug: "how-to-ask-for-a-raise",
       description:
-        "Aprenda exactamente qué decir al pedir un aumento. Esta guía incluye pasos de preparación, guiones de conversación y consejos de investigación salarial.",
+        "Learn exactly what to say when asking for a raise. This guide includes preparation steps, conversation scripts, and salary research tips.",
       image:
         "https://media.topfinanzas.com/images/uk/how-to-ask-for-a-raise.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 October 2025",
     },
     {
       title:
-        "¿Qué es la 'Inflación del Estilo de Vida' y Cómo está Drenando tu Cartera en Silencio?",
+        "What is 'Lifestyle Creep' and How is it Silently Draining Your Wallet?",
       slug: "what-is-lifestyle-creep",
       description:
-        "Descubra cómo el aumento gradual de sus gastos al ganar más dinero puede sabotear sus metas financieras y aprenda estrategias para evitarlo.",
+        "Discover how gradually increasing your spending as you earn more can sabotage your financial goals and learn strategies to avoid it.",
       image:
         "https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "9 October 2025",
     },
     {
       title:
-        "Desvinculación Financiera: Una Guía Compasiva para Separar Finanzas durante una Ruptura",
+        "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup",
       slug: "financial-uncoupling-separating-finances-during-breakup",
       description:
-        "Guía práctica sobre cómo separar cuentas conjuntas, gestionar deudas compartidas y proteger su crédito después de una relación.",
+        "Practical guide on how to separate joint accounts, manage shared debts, and protect your credit after a relationship.",
       image:
         "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
-      category: "Finanzas Personales",
+      category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "23 October 2025",
     },
     // Financial Solutions Posts (Add relevant ones)
     // Example: Add a few key ones, more can be added later
     {
-      title: "Tarjeta Barclaycard Avios Plus: Recompensas de Viaje Premium",
+      title: "Barclaycard Avios Plus Card: Premium Travel Rewards",
       slug: "barclaycard-avios-plus",
       description:
-        "La tarjeta Barclaycard Avios Plus ofrece beneficios de viaje premium...",
+        "The Barclaycard Avios Plus card offers premium travel benefits...",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "4 April 2025", // Example date
     },
     {
       title:
-        "Préstamo Personal HSBC: Financiamiento Flexible de un Líder Bancario Global",
+        "HSBC Personal Loan: Flexible Financing from a Global Banking Leader",
       slug: "hsbc-personal-loan",
-      description:
-        "Descubre los préstamos personales de HSBC con tasas competitivas...",
+      description: "Discover HSBC personal loans with competitive rates...",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "4 April 2025",
     },
     {
-      title: "Tarjeta de Crédito Curve",
+      title: "Curve Credit Card",
       slug: "curve-credit-card",
       description:
-        "Conoce la innovadora tarjeta Curve que consolida todas tus tarjetas actuales...",
+        "Discover the innovative Curve card that consolidates all your existing cards...",
       image:
         "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "2 April 2025",
     },
     {
-      title: "Préstamo para Negocios Funding Circle",
+      title: "Funding Circle Business Loan",
       slug: "funding-circle-personal-loan",
       description:
-        "Explora los préstamos para negocios de Funding Circle que ofrecen financiamiento rápido...",
+        "Explore Funding Circle business loans offering quick financing...",
       image:
         "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
-      category: "Soluciones Financieras",
+      category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "4 April 2025",
     },
@@ -625,11 +614,11 @@ export default function BlogArchivePage() {
 
     if (activeCategory === "personalFinance") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Finanzas Personales",
+        (post) => post.category === "Personal Finance",
       );
     } else if (activeCategory === "financialSolutions") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Soluciones Financieras",
+        (post) => post.category === "Financial Solutions",
       );
     } else if (activeCategory === "creditCards") {
       filteredPosts = allPostsSorted.filter(
@@ -669,11 +658,11 @@ export default function BlogArchivePage() {
   const content = (
     <div>
       <h1 className="text-4xl font-bold mb-6 text-gray-800">
-        Blog de TopFinanzas MX
+        TopFinance US Blog
       </h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
-        Tu fuente de información sobre finanzas personales y soluciones
-        financieras en México.
+        Your source for personal finance information and financial solutions in
+        the US.
       </p>
 
       {/* Category Highlights */}
@@ -683,11 +672,11 @@ export default function BlogArchivePage() {
           className="block p-6 bg-blue-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-blue-800 mb-2">
-            Guías de Finanzas Personales
+            Personal Finance Guides
           </h2>
           <p className="text-blue-700">
-            Explora consejos sobre presupuesto, ahorro, gestión de deudas,
-            tarjetas de crédito y más.
+            Explore tips on budgeting, savings, debt management, credit cards,
+            and more.
           </p>
         </Link>
         <Link
@@ -695,11 +684,11 @@ export default function BlogArchivePage() {
           className="block p-6 bg-green-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-green-800 mb-2">
-            Soluciones Financieras
+            Financial Solutions
           </h2>
           <p className="text-green-700">
-            Descubre reseñas detalladas y comparaciones de tarjetas de crédito y
-            préstamos disponibles en México.
+            Discover detailed reviews and comparisons of credit cards and loans
+            available in the US.
           </p>
         </Link>
       </div>
@@ -707,7 +696,7 @@ export default function BlogArchivePage() {
       <h2 className="text-3xl font-bold mb-4">
         {activeCategory
           ? categories[activeCategory as keyof typeof categories]
-          : "Todos los artículos"}
+          : "All Articles"}
       </h2>
 
       {/* Category filter buttons */}
@@ -775,17 +764,17 @@ export default function BlogArchivePage() {
             disabled={currentPage === 1}
             variant="secondary" // Changed from outline
           >
-            Anterior
+            Previous
           </Button>
           <span className="text-sm text-gray-600">
-            Página {currentPage} de {totalPages}
+            Page {currentPage} of {totalPages}
           </span>
           <Button
             onClick={() => paginate(currentPage + 1)}
             disabled={currentPage === totalPages}
             variant="secondary" // Changed from outline
           >
-            Siguiente
+            Next
           </Button>
         </div>
       )}
@@ -798,10 +787,9 @@ export default function BlogArchivePage() {
   return (
     <BlogLayout
       metadata={{
-        title:
-          "Blog: Finanzas Personales y Soluciones Financieras | TopFinanzas MX",
+        title: "Blog: Personal Finance and Financial Solutions | TopFinance US",
         description:
-          "Tu fuente de información confiable sobre finanzas personales, tarjetas de crédito y préstamos en México. Aprende a gestionar tu dinero con nuestros expertos.",
+          "Your trusted source for personal finance, credit cards, and loans in the US. Learn to manage your money with our experts.",
       }}
     >
       {content}

@@ -18,10 +18,7 @@ export function generateMetadata() {
 
 export default function YonderCreditCardPage() {
   return (
-    <main
-      className="bg-white min-h-screen flex flex-col"
-      data-category="tarjetas"
-    >
+    <main className="bg-white min-h-screen flex flex-col" data-category="cards">
       <Header />
 
       <article className="bg-white py-8 md:py-12">
