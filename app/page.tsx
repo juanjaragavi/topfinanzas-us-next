@@ -238,8 +238,8 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section - Solid Background Color Matching Reference */}
-      <section className="relative w-full min-h-[420px] md:min-h-[480px] flex items-center py-16 md:py-20 bg-[#6366F1]">
+      {/* Hero Section - Solid Background Color Matching Legacy US Site */}
+      <section className="relative w-full min-h-[420px] md:min-h-[480px] flex items-center py-16 md:py-20 bg-[#1c5ad8]">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-[650px] lg:max-w-[750px]">
             <h1 className="text-white text-[2.75rem] md:text-[3.25rem] lg:text-[4rem] font-bold mb-8 leading-[1.15] tracking-tight">

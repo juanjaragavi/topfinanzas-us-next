@@ -1,19 +1,5 @@
-feat(homepage): add Latest Posts section with 3 most recent articles
+style(homepage): update Hero section to legacy TopFinance US blue
 
-- Add "Latest Posts" section header with title and "View All" link to /blog
-- Inject section between Hero component and Category sections
-- Add 3 new US-focused recent posts:
-  - Secured credit cards for building credit (Oct 31, 2025)
-  - Best 0% APR balance transfer cards (Oct 29, 2025)
-  - Beat inflation with cashback (Oct 22, 2025)
-- Fix slug names to match actual URL patterns:
-  - how-to-get-out-of-debt → getting-out-of-debt
-  - best-0-apr-credit-cards → top-credit-cards-0-intro-apr
-  - tips-choosing-online-loan → tips-for-choosing-an-online-loan
-- Layout: 1 hero poster card + 2 standard vertical cards
-- Posts auto-sort by date descending for freshest content display
-
-Fixes:
-- Fix ESLint warning for unused import
-- Update sidebar category labels and section headings
-- Update empty state messages to English
+- Change Hero background color from #6366F1 (indigo) to #1c5ad8 (legacy blue)
+- Match brand color used on legacy us.topfinanzas.com WordPress site
+- Update code comment to reflect legacy US site reference
