@@ -1,23 +1,17 @@
-feat: Complete US English localization and enhanced search system
+feat(homepage): add Latest Posts section with 3 most recent articles
 
-Localization:
-- Translate all Spanish frontend content to US English across pages
-- Convert British English spellings to American English (behaviour→behavior, organisation→organization)
-- Update header navigation, mobile menu, and category labels
-- Translate 46+ blog posts, credit card entries, and loan products
-- Update date locale from es-MX to en-US throughout
-
-Search System:
-- Implement comprehensive search index with 80+ indexed items
-- Add credit cards, personal loans, articles, and pages to search
-- Implement relevance scoring with title, description, and category matching
-- Add search suggestions and category filtering functions
-- Enhance search UI with thumbnails, type labels, and popular searches
-
-UI/Visual:
-- Update header logo dimensions (h-10 mobile / h-12 desktop)
-- Refine hero section with solid background color (#6366F1)
-- Remove unused Image import from homepage
+- Add "Latest Posts" section header with title and "View All" link to /blog
+- Inject section between Hero component and Category sections
+- Add 3 new US-focused recent posts:
+  - Secured credit cards for building credit (Oct 31, 2025)
+  - Best 0% APR balance transfer cards (Oct 29, 2025)
+  - Beat inflation with cashback (Oct 22, 2025)
+- Fix slug names to match actual URL patterns:
+  - how-to-get-out-of-debt → getting-out-of-debt
+  - best-0-apr-credit-cards → top-credit-cards-0-intro-apr
+  - tips-choosing-online-loan → tips-for-choosing-an-online-loan
+- Layout: 1 hero poster card + 2 standard vertical cards
+- Posts auto-sort by date descending for freshest content display
 
 Fixes:
 - Fix ESLint warning for unused import
