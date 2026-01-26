@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Aqua Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
-      "Understand the eligibility criteria, documentation requirements, and application process for the Aqua Credit Card to maximise your chances of approval and start building better credit.",
+      "Understand the eligibility criteria, documentation requirements, and application process for the Aqua Credit Card to maximize your chances of approval and start building better credit.",
     keywords:
       "Aqua Credit Card requirements, credit card application UK, Aqua eligibility, credit builder requirements, bad credit card application, UK credit card approval",
   };
@@ -36,7 +36,7 @@ export default function AquaCreditCardRequirementsPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Aqua Credit Card is designed to help you build or rebuild
-                your credit score with personalised features, expert support,
+                your credit score with personalized features, expert support,
                 and comprehensive security. Understanding the requirements helps
                 ensure a smooth application process.
               </p>
@@ -275,7 +275,7 @@ export default function AquaCreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
-                        Personalised Credit Limits:
+                        Personalized Credit Limits:
                       </span>{" "}
                       Your credit limit is tailored to your circumstances and
                       can increase over time as you demonstrate responsible
@@ -439,7 +439,7 @@ export default function AquaCreditCardRequirementsPage() {
                   If you're new to credit, have limited credit history, or are
                   working to rebuild your credit after past financial
                   difficulties, the Aqua Credit Card is designed specifically
-                  for you. With personalised credit limits that can increase
+                  for you. With personalized credit limits that can increase
                   over time and tools to track your progress, Aqua provides a
                   supportive pathway to better credit.
                 </p>
@@ -537,7 +537,7 @@ export default function AquaCreditCardRequirementsPage() {
                       Can my credit limit increase over time?
                     </h3>
                     <p className="text-sm text-gray-700 leading-5 text-left">
-                      Yes, Aqua offers personalised credit limits that can
+                      Yes, Aqua offers personalized credit limits that can
                       increase if you manage your account responsibly. Making
                       regular payments on time and keeping your balance under
                       control can lead to credit limit increases, which also
@@ -597,7 +597,7 @@ export default function AquaCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Aqua Credit Card provides an accessible, supportive
                   pathway to building or rebuilding your credit. With
-                  personalised features, transparent terms, free credit score
+                  personalized features, transparent terms, free credit score
                   tracking, and comprehensive security, you'll have all the
                   tools you need to succeed. Check your eligibility today in as
                   little as 60 seconds with no impact on your credit score, and

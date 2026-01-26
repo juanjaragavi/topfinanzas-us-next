@@ -133,7 +133,7 @@ export default function AmexGoldRequirementsPage() {
                     Income and Affordability Verification
                   </h3>
                   <p className="text-gray-700 text-sm ml-7 text-left">
-                    Whilst American Express doesn't publicly specify a minimum
+                    While American Express doesn't publicly specify a minimum
                     income requirement, as a premium card, the Gold Card
                     typically requires evidence of substantial, stable income.
                     American Express will assess your affordability, considering
@@ -285,7 +285,7 @@ export default function AmexGoldRequirementsPage() {
                   account once per year. This fee provides access to all the
                   premium benefits including comprehensive travel insurance,
                   purchase protection, extended warranty, and the Membership
-                  Rewards programme. The first annual fee is typically charged
+                  Rewards program. The first annual fee is typically charged
                   shortly after your account is opened, with subsequent fees
                   charged on your anniversary date.
                 </p>
@@ -703,7 +703,7 @@ export default function AmexGoldRequirementsPage() {
                     waivers, though this is at American Express's discretion and
                     not guaranteed. The comprehensive benefits package typically
                     justifies the annual fee for frequent travellers and those
-                    who maximise the card's features.
+                    who maximize the card's features.
                   </p>
                 </div>
               </div>

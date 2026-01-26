@@ -92,7 +92,7 @@ export default function StopLivingPaycheckToPaycheckPage() {
                   The first shift is the most important: create a small cash
                   cushion between paydays. Not an emergency fund (that comes
                   later), just £100–£250 sitting in your current account so the
-                  petrol light, school trip payment, or broken phone charger
+                  gas light, school trip payment, or broken phone charger
                   doesn't derail your entire month.
                 </p>
 

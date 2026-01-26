@@ -31,7 +31,7 @@ export default function TermsConditionsPage() {
             &quot;our,&quot; or &quot;us&quot;), a company incorporated under
             the laws of the Republic of Panama. Our Site provides financial
             information and product recommendations, offering informational
-            resources and analyses of various financial services and products,
+            resources and analyzes of various financial services and products,
             such as credit cards, loans, and investment opportunities.
           </p>
           <p>

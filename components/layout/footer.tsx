@@ -117,15 +117,17 @@ export function Footer() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     {/* Note: Original had #55B9FF text color for icons, MX design implies white or matching theme */}
-                    {contact.svgPath.split("|").map((path: string, idx: number) => (
-                      <path
-                        key={idx}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d={path}
-                      />
-                    ))}
+                    {contact.svgPath
+                      .split("|")
+                      .map((path: string, idx: number) => (
+                        <path
+                          key={idx}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d={path}
+                        />
+                      ))}
                   </svg>
                   {contact.type === "email" ? (
                     <a

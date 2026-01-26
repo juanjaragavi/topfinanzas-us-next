@@ -92,7 +92,7 @@ export default function PsychologyOfSpendingPage() {
                 <li>
                   <strong>The 24-Hour Rule:</strong> For any non-essential
                   purchase, force yourself to wait 24 hours. Often, the urge to
-                  buy will fade, and you’ll realise you can live without it.
+                  buy will fade, and you’ll realize you can live without it.
                 </li>
                 <li>
                   <strong>Calculate the "Life Cost":</strong> Work out your

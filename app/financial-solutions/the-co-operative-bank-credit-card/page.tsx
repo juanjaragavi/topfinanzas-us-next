@@ -36,7 +36,7 @@ export default function CooperativeBankCreditCardPage() {
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Co-operative Members Credit Card combines ethical banking
                 principles with practical cashback rewards, offering Co-op
-                Members a responsible way to manage spending whilst earning
+                Members a responsible way to manage spending while earning
                 rewards on everyday purchases.
               </p>
 
@@ -124,10 +124,10 @@ export default function CooperativeBankCreditCardPage() {
                   combination of ethical banking principles and practical
                   financial benefits. As a product from the UK's original
                   ethical bank, established in 1872, this credit card allows you
-                  to align your spending with your values whilst earning
-                  cashback rewards on everyday purchases. Exclusively available
-                  to Co-op Members, this card demonstrates that responsible
-                  banking and attractive rewards can go hand in hand.
+                  to align your spending with your values while earning cashback
+                  rewards on everyday purchases. Exclusively available to Co-op
+                  Members, this card demonstrates that responsible banking and
+                  attractive rewards can go hand in hand.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -209,7 +209,7 @@ export default function CooperativeBankCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li>
@@ -353,7 +353,7 @@ export default function CooperativeBankCreditCardPage() {
                   payment method—it's a statement about how you want to manage
                   your finances. By combining practical cashback rewards with
                   ethical banking principles, this card allows you to earn as
-                  you spend whilst supporting a bank that prioritises people and
+                  you spend while supporting a bank that prioritises people and
                   planet over profit. With no annual fee, competitive interest
                   rates, and the backing of the UK's original ethical bank, this
                   credit card offers a compelling alternative to traditional

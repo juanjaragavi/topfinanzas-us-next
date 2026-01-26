@@ -302,7 +302,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     href="/personal-finance/best-rewards-credit-cards/" // Updated link
                     className="text-blue-600 underline"
                   >
-                    How to maximise your credit card travel benefits
+                    How to maximize your credit card travel benefits
                   </Link>
                 </p>
 

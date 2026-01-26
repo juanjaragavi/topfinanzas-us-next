@@ -200,7 +200,7 @@ export default function PersonalLoansDebtStrategyPage() {
                     >
                       Nationwide Personal Loan:
                     </Link>{" "}
-                    May offer favourable terms, especially for existing members.
+                    May offer favorable terms, especially for existing members.
                   </li>
                   <li className="mb-2">
                     <Link
@@ -364,10 +364,7 @@ export default function PersonalLoansDebtStrategyPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Find a Loan for Your Debt Strategy
                 </Link>
               </div>

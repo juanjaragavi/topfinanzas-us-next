@@ -36,7 +36,7 @@ export default function MSRewardsCreditCardRequirementsPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The M&S Rewards Credit Card offers an excellent opportunity to
-                earn points on your everyday spending whilst enjoying exclusive
+                earn points on your everyday spending while enjoying exclusive
                 benefits from one of Britain's most trusted retailers.
                 Understanding the eligibility criteria and application
                 requirements will help you prepare for a smooth and successful
@@ -105,7 +105,7 @@ export default function MSRewardsCreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span>{" "}
-                      Whilst M&S Bank considers applications from individuals
+                      While M&S Bank considers applications from individuals
                       with varying credit profiles, you'll need to demonstrate a
                       reasonable credit history. A good credit score increases
                       your chances of approval and may result in a higher credit
@@ -622,7 +622,7 @@ export default function MSRewardsCreditCardRequirementsPage() {
                     </h3>
                     <p className="text-gray-700 text-sm leading-5">
                       M&S Bank considers each application individually, taking
-                      into account your overall financial circumstances. Whilst
+                      into account your overall financial circumstances. While
                       having a good credit history improves your chances of
                       approval, M&S Bank may still consider applications from
                       individuals with varied credit profiles. If you're
@@ -663,7 +663,7 @@ export default function MSRewardsCreditCardRequirementsPage() {
                     constitute financial advice. You should consider seeking
                     independent financial advice before applying for credit. M&S
                     Bank is a trading name of Marks & Spencer Financial Services
-                    plc. Authorised by the Prudential Regulation Authority and
+                    plc. Authorized by the Prudential Regulation Authority and
                     regulated by the Financial Conduct Authority and the
                     Prudential Regulation Authority.
                   </p>

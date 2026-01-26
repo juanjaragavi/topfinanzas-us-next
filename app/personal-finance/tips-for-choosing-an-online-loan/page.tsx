@@ -60,7 +60,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">Read the fine print</span>{" "}
-                    to avoid hidden fees and unfavourable terms.
+                    to avoid hidden fees and unfavorable terms.
                   </div>
                 </div>
 
@@ -161,7 +161,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   The digital nature of online lending makes it particularly
                   important to verify that you're dealing with a legitimate
                   financial institution. All legitimate UK lenders must be
-                  authorised and regulated by the Financial Conduct Authority
+                  authorized and regulated by the Financial Conduct Authority
                   (FCA). This regulation provides important protections for
                   borrowers, including fair treatment standards and access to
                   the Financial Ombudsman Service if disputes arise.
@@ -174,7 +174,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
                   <li className="mb-2">
                     Check the FCA Register at register.fca.org.uk to confirm the
-                    lender is properly authorised
+                    lender is properly authorized
                   </li>
                   <li className="mb-2">
                     Look for their FCA registration number on their website,
@@ -312,7 +312,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                     purpose
                   </li>
                   <li className="mb-2">
-                    See personalised rates from various lenders with a single
+                    See personalized rates from various lenders with a single
                     soft credit check
                   </li>
                   <li className="mb-2">
@@ -389,7 +389,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                     such as payment protection
                   </li>
                   <li className="mb-2">
-                    Consider obtaining a personalised quote before submitting a
+                    Consider obtaining a personalized quote before submitting a
                     full application
                   </li>
                 </ul>

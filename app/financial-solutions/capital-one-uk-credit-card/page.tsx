@@ -35,7 +35,7 @@ export default function CapitalOneUKCreditCardPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Capital One UK Classic Card is designed to help you build or
-                rebuild your credit score whilst managing everyday expenses with
+                rebuild your credit score while managing everyday expenses with
                 flexibility and control.
               </p>
 
@@ -207,7 +207,7 @@ export default function CapitalOneUKCreditCardPage() {
                   by the payment due date each month, you won't pay any interest
                   on your purchases—effectively using the card as a free credit
                   building tool. This flexibility allows you to use the card in
-                  a way that suits your financial situation whilst minimising
+                  a way that suits your financial situation while minimizing
                   costs.
                 </p>
 
@@ -277,7 +277,7 @@ export default function CapitalOneUKCreditCardPage() {
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   The app also provides real-time transaction notifications,
                   helping you keep track of your spending and quickly identify
-                  any unauthorised activity. This level of transparency and
+                  any unauthorized activity. This level of transparency and
                   control is invaluable for those working to build better
                   financial habits and maintain awareness of their credit usage.
                   The intuitive interface makes it simple to stay on top of your
@@ -365,7 +365,7 @@ export default function CapitalOneUKCreditCardPage() {
                 </h2>
 
                 <p className="text-left text-gray-800 text-sm leading-5 mb-4">
-                  Whilst the Capital One UK Classic Card offers excellent
+                  While the Capital One UK Classic Card offers excellent
                   opportunities to build your credit score, it's crucial to use
                   it responsibly. Capital One emphasises that not using your
                   card responsibly could hurt your credit rating, making it

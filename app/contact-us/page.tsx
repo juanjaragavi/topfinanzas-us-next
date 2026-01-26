@@ -450,7 +450,7 @@ export default function ContactUsPage() {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/terms/"
+                    href="/terms-conditions/"
                     className="text-blue-600 hover:underline"
                   >
                     terms and conditions

@@ -34,7 +34,7 @@ export default function OceanCreditCardPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Ocean Credit Card from Ocean Finance is designed to help you
-                build or rebuild your credit score whilst offering the
+                build or rebuild your credit score while offering the
                 convenience of a modern credit card. With QuickCheck technology,
                 you can see if you'll be accepted within 60 seconds—without
                 affecting your credit score.
@@ -231,7 +231,7 @@ export default function OceanCreditCardPage() {
               <p className="text-base leading-7 text-gray-700 mb-6 text-left">
                 Using a credit card responsibly is essential, particularly if
                 you're using it to rebuild your credit score. Here are some key
-                tips to help you get the most from your Ocean Credit Card whilst
+                tips to help you get the most from your Ocean Credit Card while
                 protecting your financial health:
               </p>
 
@@ -272,7 +272,7 @@ export default function OceanCreditCardPage() {
                     <span className="font-semibold">
                       Pay more than the minimum:
                     </span>{" "}
-                    Whilst making the minimum payment keeps your account in good
+                    While making the minimum payment keeps your account in good
                     standing, paying more reduces the interest you'll pay and
                     helps you clear debt faster.
                   </div>
@@ -512,7 +512,7 @@ export default function OceanCreditCardPage() {
                 <p>
                   Credit is provided by Capital One, with Ocean Finance acting
                   as a credit broker. Ocean Finance (Intelligent Lending Ltd) is
-                  authorised and regulated by the Financial Conduct Authority
+                  authorized and regulated by the Financial Conduct Authority
                   (FCA).
                 </p>
                 <p>

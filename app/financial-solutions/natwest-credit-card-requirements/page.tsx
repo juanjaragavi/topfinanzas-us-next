@@ -301,9 +301,7 @@ export default function NatWestCreditCardRequirementsPage() {
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">
-                        MyRewards Programme:
-                      </span>{" "}
+                      <span className="font-semibold">MyRewards Program:</span>{" "}
                       Earn rewards points on eligible purchases that can be
                       redeemed for cashback, retail vouchers, or experiences,
                       adding value to your everyday spending.
@@ -374,7 +372,7 @@ export default function NatWestCreditCardRequirementsPage() {
                 </h3>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
-                  The MyRewards programme offers valuable benefits for those who
+                  The MyRewards program offers valuable benefits for those who
                   regularly use their credit card for everyday spending. By
                   accumulating points on eligible purchases and then converting
                   them to cashback, vouchers, or experiences, you can

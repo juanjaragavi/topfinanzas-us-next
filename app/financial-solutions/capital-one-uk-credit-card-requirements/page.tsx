@@ -116,7 +116,7 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Employment and Income:
                       </span>{" "}
-                      Whilst Capital One doesn't specify a minimum income
+                      While Capital One doesn't specify a minimum income
                       requirement for the Classic Card, you'll need to
                       demonstrate that you have sufficient income to manage
                       credit card repayments. This can include employment
@@ -567,7 +567,7 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                     <p className="text-sm text-gray-700 leading-5 text-left">
                       The Capital One UK Classic Card is specifically designed
                       for people with limited or imperfect credit histories.
-                      Whilst Capital One considers various factors in their
+                      While Capital One considers various factors in their
                       lending decision, this card is more accessible than many
                       premium credit cards, making it a popular choice for
                       credit building.
@@ -623,7 +623,7 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                   </h3>
                   <p className="text-sm text-gray-700 leading-5 mb-3">
                     <strong>FCA Regulation:</strong> Capital One (Europe) plc is
-                    authorised by the Central Bank of Ireland and is regulated
+                    authorized by the Central Bank of Ireland and is regulated
                     in the UK by the Financial Conduct Authority (FCA) under
                     reference number 820137.
                   </p>
@@ -712,10 +712,9 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Demonstrate Financial Stability:
                       </span>{" "}
-                      Whilst not always possible, staying at the same address
-                      and in the same job for a reasonable period can improve
-                      your application, as it demonstrates stability to the
-                      lender.
+                      While not always possible, staying at the same address and
+                      in the same job for a reasonable period can improve your
+                      application, as it demonstrates stability to the lender.
                     </div>
                   </div>
                 </div>
@@ -743,7 +742,7 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                   work towards accessing better credit products in the future.
                   The Capital One UK Classic Card is designed to support you on
                   this journey, with regular opportunities for credit limit
-                  increases to recognise your progress.
+                  increases to recognize your progress.
                 </p>
 
                 <div className="text-left my-8">

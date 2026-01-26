@@ -51,7 +51,7 @@ export default function MarblesCreditCardPage() {
                       Manageable Credit Limit:
                     </span>{" "}
                     Start with a credit limit from £250 up to £1,500, designed
-                    to keep your spending under control whilst allowing you to
+                    to keep your spending under control while allowing you to
                     build your credit history responsibly.
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export default function MarblesCreditCardPage() {
                   Marbles takes a responsible approach to credit by offering
                   manageable credit limits starting from £250 up to £1,500. This
                   range is specifically designed to help you maintain control
-                  over your spending whilst still providing useful credit access
+                  over your spending while still providing useful credit access
                   for everyday purchases, emergencies, or building your credit
                   history. Unlike cards with high credit limits that can tempt
                   overspending, Marbles' approach encourages financial
@@ -169,7 +169,7 @@ export default function MarblesCreditCardPage() {
                   credit limit can be reviewed after three months, meaning you
                   could receive an increase on your fourth statement if you've
                   demonstrated responsible usage—rewarding good financial
-                  behaviour whilst still maintaining sensible limits.
+                  behaviour while still maintaining sensible limits.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -258,7 +258,7 @@ export default function MarblesCreditCardPage() {
                   fast and secure purchases online, through apps, or in-store
                   using just your smartphone or smartwatch. This contactless
                   payment method adds convenience to your daily transactions
-                  whilst maintaining robust security features that protect your
+                  while maintaining robust security features that protect your
                   card details from merchants and potential fraudsters.
                 </p>
 
@@ -288,7 +288,7 @@ export default function MarblesCreditCardPage() {
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">eStatements:</span>{" "}
                       Receive electronic statements directly to your online
-                      account, reducing paper clutter whilst ensuring you always
+                      account, reducing paper clutter while ensuring you always
                       have access to your transaction history and spending
                       patterns.
                     </div>
@@ -319,7 +319,7 @@ export default function MarblesCreditCardPage() {
                       </span>{" "}
                       After demonstrating responsible credit use for three
                       months, you may be eligible for a credit limit increase,
-                      rewarding positive financial behaviour whilst still
+                      rewarding positive financial behaviour while still
                       maintaining manageable limits.
                     </div>
                   </div>
@@ -342,7 +342,7 @@ export default function MarblesCreditCardPage() {
                   <span className="font-semibold">Representative Example:</span>{" "}
                   If you borrow £1,200 at a representative APR of 34.9%
                   (variable), and you make the minimum payment each month,
-                  you'll pay interest charges. To minimise interest costs, aim
+                  you'll pay interest charges. To minimize interest costs, aim
                   to pay more than the minimum payment whenever possible or pay
                   your balance in full each month.
                 </p>
@@ -367,7 +367,7 @@ export default function MarblesCreditCardPage() {
                   individuals who want to maintain strict control over their
                   credit usage or who are working to build or rebuild their
                   credit history. The manageable credit limits prevent
-                  overspending whilst still providing useful credit access, and
+                  overspending while still providing useful credit access, and
                   the comprehensive management tools help you stay on top of
                   your account. If you've had credit difficulties in the past,
                   are new to credit, or simply prefer a card with lower limits
@@ -399,7 +399,7 @@ export default function MarblesCreditCardPage() {
                   <p className="text-sm text-gray-700 leading-5">
                     Marbles is provided by NewDay Ltd. NewDay Ltd and NewDay
                     Cards Ltd are companies registered in England and Wales.
-                    NewDay Ltd and NewDay Cards Ltd are authorised and regulated
+                    NewDay Ltd and NewDay Cards Ltd are authorized and regulated
                     by the Financial Conduct Authority. This information is for
                     general guidance only and does not constitute financial
                     advice. You should consider seeking independent financial

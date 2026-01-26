@@ -35,8 +35,8 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                 combines two powerful offers in one: 0% interest on new
                 purchases for up to 20 months and 0% interest on balance
                 transfers for up to 18 months, providing exceptional value for
-                those seeking to manage existing debt whilst making new
-                purchases without interest charges.
+                those seeking to manage existing debt while making new purchases
+                without interest charges.
               </p>
 
               <div id="square01" data-topads data-topads-size="square"></div>
@@ -161,11 +161,10 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                   valuable during life events that require multiple expenses,
                   such as moving house, starting university, or preparing for a
                   major celebration. Rather than depleting your savings all at
-                  once, you can spread costs across the promotional period
-                  whilst maintaining your financial reserves for emergencies.
-                  This approach to managing larger expenses can help maintain
-                  better overall financial stability and preserve your emergency
-                  funds.
+                  once, you can spread costs across the promotional period while
+                  maintaining your financial reserves for emergencies. This
+                  approach to managing larger expenses can help maintain better
+                  overall financial stability and preserve your emergency funds.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -191,7 +190,7 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                   Ulster Bank cards). The minimum transfer amount is £100, and
                   you can transfer up to 95% of your approved credit limit. This
                   ceiling ensures you maintain some available credit on the card
-                  for potential emergencies whilst maximizing the debt you can
+                  for potential emergencies while maximizing the debt you can
                   consolidate at the promotional rate.
                 </p>
 
@@ -208,7 +207,7 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                   individual circumstances. Your purchase and balance transfer
                   rate could be up to 29.9% p.a. (variable) depending on your
                   creditworthiness. Your 0% offer on purchases could be between
-                  12 and 20 months, whilst your 0% offer on balance transfers
+                  12 and 20 months, while your 0% offer on balance transfers
                   could be between 12 and 18 months.
                 </p>
 
@@ -331,7 +330,7 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                       </span>{" "}
                       Your card comes with contactless payment technology,
                       enabling quick and secure transactions for purchases under
-                      £100 without entering your PIN, whilst maintaining full
+                      £100 without entering your PIN, while maintaining full
                       fraud protection.
                     </div>
                   </div>
@@ -357,7 +356,7 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The RBS Purchase & Balance Transfer Card is particularly
                   suitable if you have existing credit card debt you wish to
-                  consolidate whilst also needing flexibility for new purchases.
+                  consolidate while also needing flexibility for new purchases.
                   The combination of both promotional offers provides
                   comprehensive financial management capabilities in a single
                   product. However, this card is most beneficial if you have a

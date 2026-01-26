@@ -116,7 +116,7 @@ export default function RBSPurchaseBalanceTransferCardRequirementsPage() {
                         Credit history considerations:
                       </span>{" "}
                       RBS will conduct a credit check to assess your
-                      creditworthiness. Whilst a good credit score improves your
+                      creditworthiness. While a good credit score improves your
                       approval chances, RBS considers your overall financial
                       situation including existing credit commitments and
                       payment history.

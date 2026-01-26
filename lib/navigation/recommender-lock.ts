@@ -147,7 +147,9 @@ function safeRemoveLocalStorage(key: string) {
   try {
     window.localStorage.removeItem(key);
   } catch (error) {
-    logger.warn("Failed to remove item from localStorage", { error: String(error) });
+    logger.warn("Failed to remove item from localStorage", {
+      error: String(error),
+    });
   }
 }
 

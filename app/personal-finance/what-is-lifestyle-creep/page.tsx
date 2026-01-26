@@ -31,7 +31,7 @@ export default function WhatIsLifestyleCreepPage() {
                 that follows income growth. This silent wealth-drainer affects
                 millions of UK households, often without people realising it's
                 happening. Understanding lifestyle creep is the first step
-                towards protecting your personal finance goals whilst still
+                towards protecting your personal finance goals while still
                 enjoying the rewards of your hard work.
               </p>
 
@@ -68,8 +68,8 @@ export default function WhatIsLifestyleCreepPage() {
                   And you have! The problem emerges when increased spending
                   consumes all of your income growth, leaving nothing for
                   savings, investments, or building financial security. Before
-                  you know it, you're back to living paycheque to paycheque —
-                  just at a higher income level.
+                  you know it, you're back to living paycheck to paycheck — just
+                  at a higher income level.
                 </p>
               </section>
 
@@ -90,7 +90,7 @@ export default function WhatIsLifestyleCreepPage() {
                 <ul className="list-disc pl-6 mb-4 text-sm leading-6 font-light text-gray-800">
                   <li className="mb-2">
                     <strong>Housing upgrades:</strong> Moving to a posher
-                    neighbourhood or bigger property that pushes your rent or
+                    neighborhood or bigger property that pushes your rent or
                     mortgage payment significantly higher
                   </li>
                   <li className="mb-2">
@@ -180,7 +180,7 @@ export default function WhatIsLifestyleCreepPage() {
                   Spotting lifestyle creep in your own spending
                 </h2>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
-                  Self-awareness is your best defence against lifestyle creep.
+                  Self-awareness is your best defense against lifestyle creep.
                   Regular financial check-ins help you notice when your spending
                   patterns are shifting upwards without conscious intention. If
                   you're just starting to track your finances, our guide on{" "}
@@ -245,7 +245,7 @@ export default function WhatIsLifestyleCreepPage() {
                 <ul className="list-disc pl-6 mb-4 text-sm leading-6 font-light text-gray-800">
                   <li className="mb-2">
                     <strong>50% to savings or investments:</strong> This
-                    protects your financial future whilst still allowing
+                    protects your financial future while still allowing
                     lifestyle improvements
                   </li>
                   <li className="mb-2">
@@ -269,7 +269,7 @@ export default function WhatIsLifestyleCreepPage() {
                   </li>
                   <li className="mb-2">
                     <strong>Conduct quarterly spending reviews:</strong> Every
-                    three months, review your bank statements and categorise
+                    three months, review your bank statements and categorize
                     expenses to spot creeping increases
                   </li>
                   <li className="mb-2">
@@ -372,7 +372,7 @@ export default function WhatIsLifestyleCreepPage() {
                   aware of it and take intentional action. By recognising the
                   pattern, implementing simple safeguards like automatic savings
                   increases, and regularly reviewing your spending, you can
-                  enjoy the benefits of earning more whilst still building
+                  enjoy the benefits of earning more while still building
                   long-term wealth. The secret isn't denying yourself
                   improvements — it's ensuring your financial security improves
                   at least as much as your lifestyle does. With conscious effort

@@ -612,7 +612,7 @@ export default function FluidCreditCardRequirementsPage() {
                     </p>
                     <p className="text-xs mt-4">
                       NewDay Ltd provides credit for the Fluid card. NewDay Ltd
-                      (FRN: 690292) is authorised and regulated by the Financial
+                      (FRN: 690292) is authorized and regulated by the Financial
                       Conduct Authority. Fluid is a registered trade mark of
                       NewDay Cards Ltd.
                     </p>

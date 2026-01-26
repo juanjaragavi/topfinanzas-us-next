@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Marbles Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
-      "Discover the eligibility criteria, application process, and requirements for the Marbles Credit Card. Learn how to maximise your chances of approval with FastCheck and responsible credit management.",
+      "Discover the eligibility criteria, application process, and requirements for the Marbles Credit Card. Learn how to maximize your chances of approval with FastCheck and responsible credit management.",
     keywords:
       "Marbles Card requirements, credit card eligibility, FastCheck, UK credit card application, credit building, manageable credit limit, NewDay Ltd",
   };
@@ -104,7 +104,7 @@ export default function MarblesCreditCardRequirementsPage() {
                       <span className="font-semibold">
                         No adverse credit history:
                       </span>{" "}
-                      Whilst Marbles considers applications from people with
+                      While Marbles considers applications from people with
                       varied credit backgrounds, certain recent adverse credit
                       events such as County Court Judgements (CCJs), Individual
                       Voluntary Arrangements (IVAs), or bankruptcy may affect
@@ -496,7 +496,7 @@ export default function MarblesCreditCardRequirementsPage() {
                       Yes, Marbles reviews your account after three months. If
                       you've demonstrated responsible credit use, you may be
                       eligible for a credit limit increase on your fourth
-                      statement, potentially raising your limit whilst still
+                      statement, potentially raising your limit while still
                       keeping it manageable.
                     </p>
                   </div>
@@ -519,7 +519,7 @@ export default function MarblesCreditCardRequirementsPage() {
                     <p className="text-gray-700 text-sm leading-5">
                       To avoid interest charges, pay your statement balance in
                       full by the payment due date each month. This approach
-                      allows you to use credit whilst minimising costs.
+                      allows you to use credit while minimizing costs.
                     </p>
                   </div>
 
@@ -529,7 +529,7 @@ export default function MarblesCreditCardRequirementsPage() {
                     </h3>
                     <p className="text-gray-700 text-sm leading-5">
                       Marbles considers applications from people with varied
-                      credit backgrounds. Whilst recent serious adverse credit
+                      credit backgrounds. While recent serious adverse credit
                       events may affect your application, using FastCheck will
                       give you an indication of your chances before you apply
                       formally.
@@ -619,7 +619,7 @@ export default function MarblesCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If this is your first credit card, Marbles' manageable limits
                   and educational approach to credit help you learn good
-                  financial habits whilst minimising the risk of accumulating
+                  financial habits while minimizing the risk of accumulating
                   unmanageable debt.
                 </p>
 
@@ -656,8 +656,8 @@ export default function MarblesCreditCardRequirementsPage() {
                   its features align with your financial needs and goals. This
                   card works best for individuals who prioritise financial
                   control and responsible credit building over high credit
-                  limits or rewards programmes. If you're seeking to establish
-                  or rebuild your credit, need manageable limits to prevent
+                  limits or rewards programs. If you're seeking to establish or
+                  rebuild your credit, need manageable limits to prevent
                   overspending, or want comprehensive tools to stay on top of
                   your finances, Marbles offers practical benefits tailored to
                   these objectives.
@@ -687,7 +687,7 @@ export default function MarblesCreditCardRequirementsPage() {
                     Marbles is provided by NewDay Ltd. NewDay Ltd and NewDay
                     Cards Ltd are companies registered in England and Wales with
                     registered numbers 7297722 and 4134880 respectively. NewDay
-                    Ltd and NewDay Cards Ltd are authorised and regulated by the
+                    Ltd and NewDay Cards Ltd are authorized and regulated by the
                     Financial Conduct Authority with numbers 690292 and 682417
                     respectively. This information is for general guidance only
                     and does not constitute financial advice. You should

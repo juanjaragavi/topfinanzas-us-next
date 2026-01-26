@@ -119,7 +119,7 @@ export default function YonderCreditCardPage() {
                   credit card rewards in the UK market, designed for those who
                   want to earn meaningful rewards on everyday spending without
                   paying annual fees. With its modern app-based experience and
-                  flexible rewards programme, Yonder has quickly established
+                  flexible rewards program, Yonder has quickly established
                   itself as an attractive alternative to traditional rewards
                   credit cards, particularly appealing to frequent travellers
                   and those who value digital-first banking experiences.
@@ -130,7 +130,7 @@ export default function YonderCreditCardPage() {
                 </h2>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-                  Unlike many traditional credit card rewards programmes, Yonder
+                  Unlike many traditional credit card rewards programs, Yonder
                   offers genuine flexibility in how you redeem your points. With
                   1 point earned for every £1 spent, you can turn your everyday
                   purchases into dining experiences, shopping vouchers,
@@ -147,7 +147,7 @@ export default function YonderCreditCardPage() {
                   in shopping value, £90 in airport lounge access, £70 in
                   entertainment, £25 towards flights, or £15 in cashback
                   annually. Actual value varies by reward type and how you
-                  choose to redeem, giving you control over maximising the value
+                  choose to redeem, giving you control over maximizing the value
                   of your points.
                 </p>
 
@@ -159,14 +159,14 @@ export default function YonderCreditCardPage() {
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   Yonder offers credit limits up to £10,000, giving you
-                  flexibility for larger purchases whilst still earning points
-                  on every transaction. You'll benefit from a 15-day
-                  interest-free period to pay back your balance each month,
-                  helping you manage your finances effectively. The purchase
-                  rate is 31.93% (variable) with a Representative APR of 32.0%
-                  (variable) based on a £1,200 limit. As with all credit cards,
-                  it's important to pay off your balance in full each month to
-                  avoid interest charges and maximise the value of your rewards.
+                  flexibility for larger purchases while still earning points on
+                  every transaction. You'll benefit from a 15-day interest-free
+                  period to pay back your balance each month, helping you manage
+                  your finances effectively. The purchase rate is 31.93%
+                  (variable) with a Representative APR of 32.0% (variable) based
+                  on a £1,200 limit. As with all credit cards, it's important to
+                  pay off your balance in full each month to avoid interest
+                  charges and maximize the value of your rewards.
                 </p>
 
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
@@ -233,7 +233,7 @@ export default function YonderCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li>
@@ -324,7 +324,7 @@ export default function YonderCreditCardPage() {
                       </span>{" "}
                       Stay informed about every transaction with instant
                       notifications, helping you monitor your spending and
-                      detect any unauthorised activity immediately.
+                      detect any unauthorized activity immediately.
                     </div>
                   </div>
                 </div>
@@ -402,14 +402,14 @@ export default function YonderCreditCardPage() {
                 <p className="text-left text-gray-800 text-sm leading-5 mb-4">
                   The Yonder Free Credit Card stands out in the UK credit card
                   market by combining the benefits of traditional rewards
-                  programmes with modern app-based functionality and no annual
+                  programs with modern app-based functionality and no annual
                   fee. Whether you're a frequent traveller benefiting from no
                   foreign transaction fees, a rewards enthusiast earning points
                   on every purchase, or someone building their credit score
                   through responsible card use, Yonder offers a compelling
                   package that adapts to your lifestyle. The card's integration
                   with the Mastercard network ensures acceptance at over 44
-                  million locations worldwide, whilst the app's innovative
+                  million locations worldwide, while the app's innovative
                   features make managing your credit card genuinely convenient.
                 </p>
 
@@ -420,7 +420,7 @@ export default function YonderCreditCardPage() {
                     </span>{" "}
                     Credit is subject to status and affordability. Yonder is a
                     trading name of Yonder Technology Ltd, company number
-                    12739942, authorised and regulated by the Financial Conduct
+                    12739942, authorized and regulated by the Financial Conduct
                     Authority (FCA) under firm reference 946219. The Card is
                     issued by Transact Payments Limited pursuant to licence by
                     Mastercard International. This information is for guidance

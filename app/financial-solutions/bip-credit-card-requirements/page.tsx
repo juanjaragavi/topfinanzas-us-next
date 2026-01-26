@@ -502,9 +502,9 @@ export default function BipCreditCardRequirementsPage() {
                     <strong>Important:</strong> Credit is provided by NewDay
                     Ltd. NewDay Ltd is a company registered in England and Wales
                     with registered number 7297722. The registered office is 7
-                    Handyside Street, London, N1C 4DA. NewDay Ltd is authorised
+                    Handyside Street, London, N1C 4DA. NewDay Ltd is authorized
                     and regulated by the Financial Conduct Authority (FCA) with
-                    number 690292. NewDay Ltd is also authorised by the FCA
+                    number 690292. NewDay Ltd is also authorized by the FCA
                     under the Payment Services Regulations 2017 (ref no: 555318)
                     for the provision of payment services. Bip is a trademark of
                     NewDay Cards Ltd, which is used under licence by NewDay Ltd.

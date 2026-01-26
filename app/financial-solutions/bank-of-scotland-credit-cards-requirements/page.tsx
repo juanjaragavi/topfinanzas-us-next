@@ -86,7 +86,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                       Bank of Scotland assesses your credit history using UK
                       credit reference agencies. Different cards have different
                       credit requirements—Credit Builder cards are designed for
-                      those with limited or poor credit history, whilst Balance
+                      those with limited or poor credit history, while Balance
                       Transfer and Large Purchase cards typically require good
                       to excellent credit scores.
                     </div>
@@ -119,7 +119,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                       Each card type has particular eligibility criteria. Credit
                       Builder cards accept applicants with lower credit scores,
                       Balance Transfer cards require good credit and typically
-                      need existing debt to transfer, whilst Everyday Spending
+                      need existing debt to transfer, while Everyday Spending
                       and Large Purchase cards require moderate to good credit
                       history.
                     </div>
@@ -223,9 +223,8 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                       APR rates vary by card type. Credit Builder cards
                       typically have higher APRs (often 30%+), Everyday Spending
                       cards offer competitive rates (typically 20-25% APR),
-                      whilst Balance Transfer and Large Purchase cards feature
-                      0% introductory periods before reverting to standard
-                      rates.
+                      while Balance Transfer and Large Purchase cards feature 0%
+                      introductory periods before reverting to standard rates.
                     </div>
                   </div>
 
@@ -372,7 +371,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                         Fraud Protection Guarantee:
                       </span>{" "}
                       Comprehensive fraud protection with zero liability for
-                      unauthorised transactions you don't make, plus real-time
+                      unauthorized transactions you don't make, plus real-time
                       transaction monitoring and secure 3D Secure verification
                       for online shopping.
                     </div>
@@ -545,7 +544,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                       Credit score requirements vary by card type. Credit
                       Builder cards accept lower scores and limited credit
                       history, Everyday Spending cards require fair to good
-                      credit, whilst Balance Transfer and Large Purchase cards
+                      credit, while Balance Transfer and Large Purchase cards
                       typically need good to excellent credit scores for the
                       best terms.
                     </p>
@@ -557,10 +556,10 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                     </h3>
                     <p className="text-sm text-gray-700 leading-5 text-left">
                       Promotional periods vary and change regularly. Balance
-                      Transfer cards typically offer 0% for 15-30+ months,
-                      whilst Large Purchase cards often provide 0% for 6-15
-                      months. Check current offers on the Bank of Scotland
-                      website as terms are subject to change.
+                      Transfer cards typically offer 0% for 15-30+ months, while
+                      Large Purchase cards often provide 0% for 6-15 months.
+                      Check current offers on the Bank of Scotland website as
+                      terms are subject to change.
                     </p>
                   </div>
 
@@ -597,7 +596,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
-                  To maximise your chances of approval for a Bank of Scotland
+                  To maximize your chances of approval for a Bank of Scotland
                   credit card:
                 </p>
 
@@ -700,7 +699,7 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                   Promotional rates and offers are subject to change. Terms and
                   conditions apply. Bank of Scotland plc is registered in
                   Scotland (SC327000) with registered office at The Mound,
-                  Edinburgh EH1 1YZ. Authorised by the Prudential Regulation
+                  Edinburgh EH1 1YZ. Authorized by the Prudential Regulation
                   Authority and regulated by the Financial Conduct Authority and
                   the Prudential Regulation Authority under registration number
                   169628.
