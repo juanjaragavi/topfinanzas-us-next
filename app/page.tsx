@@ -97,6 +97,53 @@ const allPosts: PostData[] = [
     categoryPath: "/financial-solutions",
   },
   */
+  // Most recent posts (matching reference site content order)
+  {
+    slug: "what-are-the-best-secured-credit-cards-for-building-credit",
+    frontmatter: {
+      title: "What Are the Best Secured Credit Cards for Building Credit?",
+      description:
+        "Discover the top secured credit cards that help you build or rebuild your credit score with responsible use and low deposits.",
+      date: "2025-10-31T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/us/what-are-the-best-secured-credit-cards.webp",
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
+    },
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
+  {
+    slug: "best-0-apr-balance-transfer-cards",
+    frontmatter: {
+      title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
+      description:
+        "Learn how 0% APR balance transfer cards can help you pay off debt faster and save on interest charges.",
+      date: "2025-10-29T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/us/best-0-apr-balance-transfer-cards.webp",
+      categories: [
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
+    },
+    category: "Financial Solutions",
+    categoryPath: "/financial-solutions",
+  },
+  {
+    slug: "beat-inflation-with-your-cashback",
+    frontmatter: {
+      title: "Beat Inflation with Your Cashback",
+      description:
+        "Smart strategies to maximize your credit card cashback rewards and offset rising costs.",
+      date: "2025-10-22T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/us/beat-inflation-with-cashback.webp",
+      categories: [
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
+    },
+    category: "Financial Solutions",
+    categoryPath: "/financial-solutions",
+  },
   {
     slug: "best-rewards-credit-cards",
     frontmatter: {
@@ -112,7 +159,7 @@ const allPosts: PostData[] = [
     categoryPath: "/personal-finance",
   },
   {
-    slug: "how-to-get-out-of-debt",
+    slug: "getting-out-of-debt",
     frontmatter: {
       title: "Practical Guide to Getting Out of Debt | Top Finance US",
       description: "Feeling overwhelmed by debt? Get practical strategies...",
@@ -125,7 +172,7 @@ const allPosts: PostData[] = [
     categoryPath: "/personal-finance",
   },
   {
-    slug: "best-0-apr-credit-cards",
+    slug: "top-credit-cards-0-intro-apr",
     frontmatter: {
       title: "Best 0% APR Credit Cards | Top Finance US",
       description:
@@ -151,7 +198,7 @@ const allPosts: PostData[] = [
     categoryPath: "/personal-finance",
   },
   {
-    slug: "tips-choosing-online-loan",
+    slug: "tips-for-choosing-an-online-loan",
     frontmatter: {
       title: "5 Essential Tips for Choosing an Online Loan | Top Finance US",
       description: "Navigate the world of online loans with confidence...",
@@ -211,10 +258,34 @@ export default function Home() {
       {/* Blog Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
-          {/* Latest Articles (Top 3) - Centered/Main */}
-          {/* Latest Articles - Custom Layout: Hero (Poster) + 2 Standard Cards */}
+          {/* Latest Posts Section - Primary Content Bridge */}
           <div className="mb-16">
-            {/* We know we have at least 3 posts sorted by date from previous steps */}
+            <div className="flex justify-between items-end mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Latest Posts
+              </h2>
+              <a
+                href="/blog"
+                className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1 transition-colors"
+              >
+                View All
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {/* Latest 3 Posts - Hero (Poster) + 2 Standard Cards */}
             {(() => {
               const sortedPosts = allPosts
                 .sort((a, b) => {
