@@ -1,7 +1,21 @@
-fix(types): resolve TypeScript errors in footer component
+feat: Complete sitewide US localization audit
 
-- Add svgPath property to SocialMediaItem and ContactItem interfaces
-- Add SVG path data for social media icons (Facebook, YouTube, Instagram, TikTok)
-- Add SVG path data for contact icons (email, address)
-- Add explicit type annotations to map callback in footer.tsx
-- Resolves all 18 TypeScript compilation errors
+- Replace all British English spellings with US English across app/ directory:
+  - whilst → while, optimise → optimize, authorise → authorize
+  - personalise → personalize, categorise → categorize, realise → realize
+  - minimise → minimize, maximise → maximize, recognise → recognize
+  - organise → organize, analyse → analyze, programme → program
+  - favourite → favorite, favour → favor, defence → defense
+  - paycheque → paycheck, petrol → gas, neighbourhood → neighborhood
+  - travelling → traveling
+
+- Update configuration files from UK to US branding:
+  - site.webmanifest: TopFinanzas UK → TopFinanzas US
+  - lib/documents/config.js: TOPFIN_UK → TOPFIN_US
+  - lib/search-index.ts: UK references → US references
+  - lib/data/authors.json: /images/uk/ → /images/us/
+
+- Fix metadata files from Spanish/Mexico to US English
+- Add ACCEPT RECOMMENDATION buttons to recommendation pages
+- Add FAQ accordions to landing pages
+- Fix internal link from /terms/ to /terms-conditions/

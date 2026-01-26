@@ -51,7 +51,7 @@ export default function MoneyManagementBeginnersPage() {
                 </h2>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
                   Money management (often called personal finance) is how you
-                  organise your income, spending, saving, and borrowing so your
+                  organize your income, spending, saving, and borrowing so your
                   money supports your life — today and in the future. Think of
                   it as a routine MOT for your finances: your essentials are
                   covered, you can handle the odd surprise, and you’re moving

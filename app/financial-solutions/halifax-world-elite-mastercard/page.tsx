@@ -154,7 +154,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Personalised Concierge Service
+                  Personalized Concierge Service
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
@@ -199,7 +199,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li>
@@ -273,7 +273,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                       </span>{" "}
                       Exclusive access to unique experiences, events, and offers
                       in cities around the world through the Mastercard
-                      Priceless programme.
+                      Priceless program.
                     </div>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                       <span className="font-semibold">
                         Zero Liability Protection:
                       </span>{" "}
-                      You're not held responsible for unauthorised transactions
+                      You're not held responsible for unauthorized transactions
                       if you report them promptly.
                     </div>
                   </div>

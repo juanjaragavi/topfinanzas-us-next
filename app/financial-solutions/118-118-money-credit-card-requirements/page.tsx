@@ -316,7 +316,7 @@ export default function Money118118CreditCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
-                        Guaranteed personalised credit limit:
+                        Guaranteed personalized credit limit:
                       </span>{" "}
                       Check your eligibility and know your exact credit limit
                       before applying, with no impact on your credit score
@@ -509,7 +509,7 @@ export default function Money118118CreditCardRequirementsPage() {
                     <p className="text-sm text-gray-700">
                       Credit limits vary based on your individual circumstances
                       and affordability assessment. The eligibility checker will
-                      show you your guaranteed personalised credit limit before
+                      show you your guaranteed personalized credit limit before
                       you apply. Representative examples show credit limits of
                       £1,200, but your limit may be higher or lower.
                     </p>

@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Tesco Bank Clubcard Credit Cards: Earn Points on Every Purchase - Top Finance UK",
     description:
-      "Discover Tesco Bank Clubcard Credit Cards offering 0% introductory rates, low APR options, and Clubcard points on everyday spending. Representative 24.9% APR (variable). Build credit whilst earning rewards.",
+      "Discover Tesco Bank Clubcard Credit Cards offering 0% introductory rates, low APR options, and Clubcard points on everyday spending. Representative 24.9% APR (variable). Build credit while earning rewards.",
     keywords:
       "Tesco Bank Clubcard credit cards, Tesco credit card, Clubcard points, balance transfer credit card, 0% purchases, UK credit cards, low APR credit card, Foundation credit card",
   };
@@ -34,7 +34,7 @@ export default function TescoBankClubcardCreditCardsPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 Tesco Bank offers a comprehensive range of Clubcard Credit Cards
-                designed to reward your everyday spending whilst providing
+                designed to reward your everyday spending while providing
                 flexible financial solutions, from 0% interest periods to
                 credit-building options.
               </p>
@@ -128,7 +128,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                   history, there's a Clubcard Credit Card tailored to your
                   financial needs. Every eligible purchase earns Clubcard
                   points, which convert into vouchers at a rate of 100 points =
-                  £1, redeemable in-store, at Tesco petrol stations, Esso sites
+                  £1, redeemable in-store, at Tesco gas stations, Esso sites
                   with Tesco Express, and through Tesco Reward Partners for even
                   greater value.
                 </p>
@@ -143,7 +143,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                   20 months on both purchases and balance transfers from account
                   opening. This makes it ideal for those wanting to consolidate
                   existing credit card debt (2.99% balance transfer fee applies)
-                  whilst also having the flexibility to make new purchases
+                  while also having the flexibility to make new purchases
                   without interest charges. After the promotional period, the
                   representative APR of 24.9% (variable) applies on a typical
                   credit limit of £1,200.
@@ -158,7 +158,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                   (3.45% fee), alongside 0% on money transfers for the first 9
                   months (3.99% fee). This extended promotional period allows
                   you to systematically pay down existing debt with a clear
-                  repayment timeline, whilst still collecting Clubcard points on
+                  repayment timeline, while still collecting Clubcard points on
                   all eligible spending.
                 </p>
 
@@ -182,7 +182,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                 </h2>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-                  If you're looking to minimise upfront costs when transferring
+                  If you're looking to minimize upfront costs when transferring
                   balances, the Low Fee Balance Transfer Credit Card offers 0%
                   interest guaranteed for 18 months with a notably low 0.99%
                   transfer fee. This significantly reduces the cost of
@@ -252,7 +252,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                   anticipate carrying a balance beyond introductory 0% periods.
                   This card is particularly suited to existing Tesco Bank
                   customers or those with strong credit histories, offering
-                  long-term value whilst still earning Clubcard points on all
+                  long-term value while still earning Clubcard points on all
                   eligible spending.
                 </p>
 
@@ -274,7 +274,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Maximising Your Clubcard Points
+                  Maximizing Your Clubcard Points
                 </h2>
 
                 <p className="text-left text-gray-800 text-md leading-5 mb-4 font-light">
@@ -301,8 +301,8 @@ export default function TescoBankClubcardCreditCardsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Fuel Savings:</span> Use
-                      points for fuel at Tesco petrol stations and Esso sites
-                      with Tesco Express, reducing your transport costs.
+                      points for fuel at Tesco gas stations and Esso sites with
+                      Tesco Express, reducing your transport costs.
                     </div>
                   </div>
 
@@ -329,7 +329,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                         Digital Wallet Compatibility:
                       </span>{" "}
                       Use your Clubcard Credit Card with Apple Pay and Google
-                      Pay whilst still collecting points on eligible
+                      Pay while still collecting points on eligible
                       transactions.
                     </div>
                   </div>

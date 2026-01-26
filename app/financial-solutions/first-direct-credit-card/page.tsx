@@ -181,7 +181,7 @@ export default function FirstDirectCreditCardPage() {
                   with real-time transaction notifications keeping you informed
                   about every purchase. Security features including fingerprint
                   and face recognition ensure your account remains protected
-                  whilst providing convenient access.
+                  while providing convenient access.
                 </p>
 
                 <div className="my-8 text-left sm:text-left">
@@ -219,7 +219,7 @@ export default function FirstDirectCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Benefits
+                        Maximizing Credit Card Benefits
                       </Link>
                     </li>
                     <li>
@@ -264,7 +264,7 @@ export default function FirstDirectCreditCardPage() {
                       <span className="font-semibold">
                         Fraud Protection Guarantee:
                       </span>{" "}
-                      Comprehensive protection against unauthorised
+                      Comprehensive protection against unauthorized
                       transactions, with zero liability for fraudulent purchases
                       you don't make.
                     </div>
@@ -351,7 +351,7 @@ export default function FirstDirectCreditCardPage() {
                   purchase and want interest-free time to pay it off, or if
                   you're an existing First Direct customer looking to benefit
                   from potentially lower rates. The lack of an annual fee makes
-                  it cost-effective for regular use, whilst the 24/7 customer
+                  it cost-effective for regular use, while the 24/7 customer
                   service provides peace of mind that help is always available
                   when you need it. This card suits customers who appreciate
                   First Direct's digital-first approach and want a reliable,
@@ -367,7 +367,7 @@ export default function FirstDirectCreditCardPage() {
                   Credit is subject to status and affordability. Terms and
                   conditions apply. You must be 18 or over and a UK resident.
                   First Direct is a division of HSBC UK Bank plc. HSBC UK Bank
-                  plc is authorised by the Prudential Regulation Authority and
+                  plc is authorized by the Prudential Regulation Authority and
                   regulated by the Financial Conduct Authority and the
                   Prudential Regulation Authority. This information is for
                   general guidance only and does not constitute financial

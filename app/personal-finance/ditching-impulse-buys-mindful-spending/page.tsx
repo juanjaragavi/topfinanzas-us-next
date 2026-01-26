@@ -29,7 +29,7 @@ export default function DitchingImpulseBuysMindfulSpendingPage() {
                 sabotage even the best-planned budgets. The good news: mindful
                 spending isn't about depriving yourself; it's about making
                 conscious choices that align with your personal finance goals.
-                This practical UK guide shows you how to recognise spending
+                This practical UK guide shows you how to recognize spending
                 triggers, create helpful boundaries, and develop habits that
                 keep your money working for you.
               </p>
@@ -75,8 +75,8 @@ export default function DitchingImpulseBuysMindfulSpendingPage() {
                     chance" emails, and checkout temptations
                   </li>
                   <li className="mb-2">
-                    <strong>Convenience shopping:</strong> Grabbing extras
-                    whilst doing routine shops
+                    <strong>Convenience shopping:</strong> Grabbing extras while
+                    doing routine shops
                   </li>
                   <li className="mb-2">
                     <strong>FOMO:</strong> Fear of missing out on deals or
@@ -228,7 +228,7 @@ export default function DitchingImpulseBuysMindfulSpendingPage() {
                 </h2>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
                   Mindful spending extends to how you approach necessary
-                  purchases. These strategies help you get better value whilst
+                  purchases. These strategies help you get better value while
                   staying conscious of your choices:
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-6 font-light text-gray-800">
@@ -309,7 +309,7 @@ export default function DitchingImpulseBuysMindfulSpendingPage() {
                   and remember that every conscious choice moves you closer to
                   financial confidence. With consistent practice, you'll find
                   that mindful spending becomes second nature, helping you build
-                  wealth whilst still enjoying life's pleasures in a balanced
+                  wealth while still enjoying life's pleasures in a balanced
                   way.
                 </p>
               </section>

@@ -1,7 +1,7 @@
 {
-  "name": "TopFinanzas UK",
+  "name": "TopFinanzas US",
   "short_name": "TopFinanzas",
-  "description": "Your guide to finance in the UK.",
+  "description": "Your guide to finance in the US.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

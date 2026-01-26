@@ -207,7 +207,7 @@ export default function LloydsBankCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li className="text-left">

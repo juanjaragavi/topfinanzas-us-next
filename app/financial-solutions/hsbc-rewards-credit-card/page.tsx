@@ -12,7 +12,7 @@ export function generateMetadata() {
     description:
       "The HSBC Rewards Credit Card offers reward points on everyday spending, 0% interest on purchases for 6 months, and a £25 welcome bonus. Representative 26.9% APR (variable).",
     keywords:
-      "HSBC Rewards Credit Card, credit card rewards, Mastercard rewards, cashback credit card, pay with points, HSBC credit card, balance transfer credit card, rewards programme UK",
+      "HSBC Rewards Credit Card, credit card rewards, Mastercard rewards, cashback credit card, pay with points, HSBC credit card, balance transfer credit card, rewards program UK",
   };
 }
 
@@ -127,16 +127,16 @@ export default function HSBCRewardsCreditCardPage() {
               <div className="my-6">
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The HSBC Rewards Credit Card is designed for everyday spenders
-                  who want to maximise the value of their purchases through a
-                  flexible rewards programme. As one of the UK's largest and
-                  most established banks, HSBC brings its trusted financial
-                  expertise to this rewards credit card, offering a
-                  straightforward way to earn points on everything you buy and
-                  redeem them directly against future purchases.
+                  who want to maximize the value of their purchases through a
+                  flexible rewards program. As one of the UK's largest and most
+                  established banks, HSBC brings its trusted financial expertise
+                  to this rewards credit card, offering a straightforward way to
+                  earn points on everything you buy and redeem them directly
+                  against future purchases.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  How the HSBC Rewards Programme Works
+                  How the HSBC Rewards Program Works
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
@@ -172,7 +172,7 @@ export default function HSBCRewardsCreditCardPage() {
                   interest on balance transfers for 6 months when you transfer
                   existing credit card balances within the first 60 days of
                   account opening. This feature can help you consolidate debt
-                  from higher-interest cards and save money whilst paying down
+                  from higher-interest cards and save money while paying down
                   your balance. Note that a balance transfer fee of 2.99%
                   (minimum £5) applies to each transfer.
                 </p>
@@ -185,10 +185,10 @@ export default function HSBCRewardsCreditCardPage() {
                   As a Mastercard, the HSBC Rewards Credit Card is accepted at
                   millions of locations worldwide, giving you the flexibility to
                   earn and use your card whether you're shopping in the UK or
-                  travelling abroad. You can use your card for purchases online,
+                  traveling abroad. You can use your card for purchases online,
                   in physical stores, for contactless payments, and even for
                   recurring payments like subscriptions or utility bills—all
-                  whilst earning rewards points. The card also offers the
+                  while earning rewards points. The card also offers the
                   convenience of chip-and-PIN technology for secure
                   transactions, as well as contactless payment options for quick
                   and easy purchases under £100. Manage your account easily
@@ -268,7 +268,7 @@ export default function HSBCRewardsCreditCardPage() {
                       allowing you to earn rewards without worrying about yearly
                       charges eating into the value you receive. This makes it a
                       cost-effective option for regular spenders who want to
-                      maximise rewards.
+                      maximize rewards.
                     </div>
                   </div>
 
@@ -299,7 +299,7 @@ export default function HSBCRewardsCreditCardPage() {
                       Benefit from HSBC's comprehensive fraud monitoring systems
                       that watch for suspicious activity 24/7. You're protected
                       by the Mastercard Zero Liability policy, which means you
-                      won't be held responsible for unauthorised transactions
+                      won't be held responsible for unauthorized transactions
                       made with your card, giving you peace of mind when
                       shopping online or abroad.
                     </div>
@@ -365,7 +365,7 @@ export default function HSBCRewardsCreditCardPage() {
                   introductory 0% interest period ends, as well as to cash
                   advances and balance transfers after their promotional
                   periods. If you pay off your balance in full each month, you
-                  won't pay any interest on purchases, maximising the value of
+                  won't pay any interest on purchases, maximizing the value of
                   your rewards. Cash withdrawals and balance transfers carry
                   additional fees, and it's worth noting that using your credit
                   card abroad may incur foreign transaction fees. Always check
@@ -410,7 +410,7 @@ export default function HSBCRewardsCreditCardPage() {
                   it's essential to use the card responsibly—the rewards value
                   can quickly be eroded by interest charges if you carry a
                   balance month to month. For those who can commit to paying in
-                  full and want a straightforward rewards programme backed by a
+                  full and want a straightforward rewards program backed by a
                   major UK bank, the HSBC Rewards Credit Card offers excellent
                   value.
                 </p>

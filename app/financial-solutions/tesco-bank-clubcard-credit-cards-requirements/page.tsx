@@ -38,7 +38,7 @@ export default function TescoBankClubcardCreditCardsRequirementsPage() {
                 Tesco Bank offers a comprehensive range of Clubcard Credit Cards
                 with varying eligibility requirements depending on the specific
                 card type. Understanding these requirements helps you choose the
-                right card and maximise your chances of approval.
+                right card and maximize your chances of approval.
               </p>
 
               <div className="my-8 text-left sm:text-left">
@@ -82,7 +82,7 @@ export default function TescoBankClubcardCreditCardsRequirementsPage() {
                       <span className="font-semibold">
                         Stable Financial Circumstances:
                       </span>{" "}
-                      Whilst specific income requirements vary by card, all
+                      While specific income requirements vary by card, all
                       applicants must demonstrate affordability and the ability
                       to make monthly repayments. Tesco Bank assesses your
                       income, existing credit commitments, and overall financial
@@ -279,7 +279,7 @@ export default function TescoBankClubcardCreditCardsRequirementsPage() {
                       <span className="font-semibold">Representative APR:</span>{" "}
                       24.9% APR (variable) is representative for most cards,
                       based on a £1,200 credit limit. The Low APR Card offers
-                      10.9% APR (variable), whilst the Foundation Card is 34.9%
+                      10.9% APR (variable), while the Foundation Card is 34.9%
                       APR (variable).
                     </div>
                   </div>
@@ -404,8 +404,7 @@ export default function TescoBankClubcardCreditCardsRequirementsPage() {
                         Digital Wallet Support:
                       </span>{" "}
                       Use your card with Apple Pay and Google Pay for convenient
-                      contactless mobile payments whilst earning Clubcard
-                      points.
+                      contactless mobile payments while earning Clubcard points.
                     </div>
                   </div>
 

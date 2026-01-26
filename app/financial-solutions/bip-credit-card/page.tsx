@@ -312,7 +312,7 @@ export default function BipCreditCardPage() {
                   Failure to make payments on time or to stay within your credit
                   limit may make obtaining credit in the future more expensive
                   and difficult. Credit is provided by NewDay Ltd, which is
-                  authorised and regulated by the Financial Conduct Authority
+                  authorized and regulated by the Financial Conduct Authority
                   (FCA) with number 690292.
                 </p>
 

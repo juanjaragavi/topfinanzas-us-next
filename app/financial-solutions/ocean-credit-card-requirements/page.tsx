@@ -110,7 +110,7 @@ export default function OceanCreditCardRequirementsPage() {
                     <span className="font-semibold">
                       Credit History (Some Preferred):
                     </span>{" "}
-                    Whilst Ocean considers all credit histories, you're more
+                    While Ocean considers all credit histories, you're more
                     likely to be accepted if you have some history of managing
                     credit. This doesn't mean you need a perfect record—just
                     that you've used credit before.
@@ -328,7 +328,7 @@ export default function OceanCreditCardRequirementsPage() {
               </div>
 
               <p className="text-base leading-7 text-gray-700 mb-6 text-left">
-                To minimise interest charges, aim to pay off your full balance
+                To minimize interest charges, aim to pay off your full balance
                 each month. If this isn't possible, paying more than the minimum
                 payment will reduce the interest you pay and help you clear your
                 debt faster.
@@ -719,7 +719,7 @@ export default function OceanCreditCardRequirementsPage() {
                 <p>
                   <strong>Credit Provider:</strong> Credit is provided by
                   Capital One. Ocean Finance (Intelligent Lending Ltd) acts as a
-                  credit broker and is authorised and regulated by the Financial
+                  credit broker and is authorized and regulated by the Financial
                   Conduct Authority (FCA).
                 </p>
                 <p>

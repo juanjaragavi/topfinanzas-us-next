@@ -25,12 +25,12 @@ export default function InflationProofYourLifePage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-6">
                 When prices seem to climb every month — groceries, energy bills,
-                petrol, council tax — it's easy to feel your budget slipping
-                away. Inflation doesn't mean you've lost control; it means you
-                need a fresh strategy. This guide walks through seven practical
-                money moves that help you protect your purchasing power, reduce
-                waste, and keep your personal finance on track even when
-                everything costs more.
+                gas, council tax — it's easy to feel your budget slipping away.
+                Inflation doesn't mean you've lost control; it means you need a
+                fresh strategy. This guide walks through seven practical money
+                moves that help you protect your purchasing power, reduce waste,
+                and keep your personal finance on track even when everything
+                costs more.
               </p>
 
               <div className="my-8 text-left sm:text-left">
@@ -56,7 +56,7 @@ export default function InflationProofYourLifePage() {
                   each pound buys a little less. When inflation is high,
                   everyday costs — energy, food, transport — climb faster than
                   usual, squeezing household budgets. For UK households, this
-                  often shows up as rising grocery bills, pricier petrol, and
+                  often shows up as rising grocery bills, pricier gas, and
                   higher mortgage or rent costs. The key to staying afloat is
                   adjusting your spending, protecting your income, and finding
                   ways to keep more of what you earn.
@@ -145,7 +145,7 @@ export default function InflationProofYourLifePage() {
                   3. Build (or rebuild) your emergency buffer
                 </h2>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
-                  An emergency fund is your first line of defence against
+                  An emergency fund is your first line of defense against
                   inflation shocks — boiler repairs, car breakdowns, or
                   unexpected job changes. Aim for £500–£1,000 to start, then
                   build towards three months of essential spending.

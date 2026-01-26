@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Recomendador de Tarjetas de Crédito - TopFinanzas México",
+  title: "Find Your Ideal Credit Card | Top Finanzas US",
   description:
-    "Usa nuestro recomendador de tarjetas de crédito para encontrar tu opción ideal. Maximiza tus recompensas y accede a beneficios exclusivos adaptados a tus necesidades.",
+    "Answer a few simple questions and we'll match you with the best card options for your financial profile. Find cashback cards, premium rewards, and no annual fee options.",
   keywords:
-    "recomendador de tarjetas de crédito, tarjetas de crédito México, comparador de tarjetas, cashback, recompensas, puntos, beneficios de tarjetas, herramientas financieras",
+    "credit card recommender, find best credit card, card comparison USA, cashback cards, rewards cards, no annual fee, 0% APR, credit card quiz",
 };

@@ -607,7 +607,7 @@ export default function ZopaCreditCardRequirementsPage() {
                     you can afford repayments before applying for credit.
                   </p>
                   <p className="text-sm text-gray-700 text-left leading-5">
-                    Zopa Bank Limited is authorised by the Prudential Regulation
+                    Zopa Bank Limited is authorized by the Prudential Regulation
                     Authority and regulated by the Financial Conduct Authority
                     and the Prudential Regulation Authority (Financial Services
                     Register number 800542).

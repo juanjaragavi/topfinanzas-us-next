@@ -54,7 +54,7 @@ export default function AmexGoldCardPage() {
                     Earn valuable points on every purchase that never expire,
                     redeemable for flights, hotel stays, shopping vouchers,
                     statement credits, and partner transfers to leading airline
-                    and hotel programmes.
+                    and hotel programs.
                   </div>
                 </div>
 
@@ -202,7 +202,7 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   It's important to note that the insurance covers both
-                  cardmembers and their immediate family members when travelling
+                  cardmembers and their immediate family members when traveling
                   together, making it particularly valuable for families who
                   travel regularly. However, you must charge the full cost of
                   your trip to the card to activate the insurance benefits, and
@@ -325,10 +325,10 @@ export default function AmexGoldCardPage() {
                   purchases into equal monthly installments at a fixed fee,
                   providing payment certainty and budget predictability. This
                   flexibility can be particularly useful for managing cash flow
-                  around large purchases whilst still earning Membership Rewards
+                  around large purchases while still earning Membership Rewards
                   points on the full transaction value. However, it's worth
                   noting that interest charges apply when balances are carried
-                  forward, so paying in full whenever possible maximises the
+                  forward, so paying in full whenever possible maximizes the
                   card's value proposition.
                 </p>
 
@@ -349,9 +349,9 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The representative APR is 24.9% variable, which applies to any
-                  balance carried beyond the payment due date. To maximise value
+                  balance carried beyond the payment due date. To maximize value
                   from this premium card, it's advisable to pay your balance in
-                  full each month, avoiding interest charges whilst still
+                  full each month, avoiding interest charges while still
                   benefiting from the comprehensive insurance coverage and
                   substantial rewards earning. Cash advances incur both
                   immediate fees and higher interest rates, so should be avoided
@@ -391,7 +391,7 @@ export default function AmexGoldCardPage() {
                   substantial purchases, and can pay their balance in full each
                   month. If you regularly book flights, hotels, and travel
                   arrangements, the comprehensive insurance coverage alone can
-                  justify the annual fee whilst the Membership Rewards points
+                  justify the annual fee while the Membership Rewards points
                   provide additional value on top.
                 </p>
 
@@ -409,7 +409,7 @@ export default function AmexGoldCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   However, it's worth noting that American Express acceptance,
-                  whilst widespread, isn't universal. Some smaller retailers,
+                  while widespread, isn't universal. Some smaller retailers,
                   particularly independent businesses, may not accept Amex due
                   to slightly higher merchant fees. Therefore, many Gold
                   Cardmembers maintain a Visa or Mastercard as a backup option.
@@ -419,13 +419,13 @@ export default function AmexGoldCardPage() {
                 </p>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-                  For those seeking to maximise rewards potential, the American
+                  For those seeking to maximize rewards potential, the American
                   Express Gold Card excels when used as your primary spending
                   card for everyday purchases. The combination of points
                   earning, insurance protection, and exclusive benefits creates
                   a comprehensive value proposition that few competitors can
                   match, particularly when you factor in the flexibility of the
-                  Membership Rewards programme and the quality of the insurance
+                  Membership Rewards program and the quality of the insurance
                   coverage provided.
                 </p>
               </div>

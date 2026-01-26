@@ -34,7 +34,7 @@ export default function MSRewardsCreditCardPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The M&S Rewards Credit Card is designed for shoppers who want to
-                maximise value on their everyday spending whilst earning points
+                maximize value on their everyday spending while earning points
                 at one of Britain's most trusted retailers. Whether you're
                 purchasing clothing, homeware, or food, this card transforms
                 every transaction into rewarding points that can be spent across
@@ -136,7 +136,7 @@ export default function MSRewardsCreditCardPage() {
                   practical financial benefits with the familiarity and
                   reliability of the Marks & Spencer brand. Unlike generic
                   rewards cards, the M&S Rewards Credit Card is specifically
-                  designed to enhance your shopping experience whilst providing
+                  designed to enhance your shopping experience while providing
                   the flexibility and convenience of a Mastercard accepted
                   worldwide.
                 </p>
@@ -147,12 +147,12 @@ export default function MSRewardsCreditCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the heart of the M&S Rewards Credit Card is a
-                  straightforward rewards programme that transforms every
-                  purchase into valuable points. Whether you're buying your
-                  weekly food shop at M&S Food, refreshing your wardrobe with
-                  M&S clothing, or purchasing items from any other retailer that
-                  accepts Mastercard, you'll be earning points that accumulate
-                  towards rewards you can actually use. This universal earning
+                  straightforward rewards program that transforms every purchase
+                  into valuable points. Whether you're buying your weekly food
+                  shop at M&S Food, refreshing your wardrobe with M&S clothing,
+                  or purchasing items from any other retailer that accepts
+                  Mastercard, you'll be earning points that accumulate towards
+                  rewards you can actually use. This universal earning
                   capability means you're not limited to shopping only at M&S to
                   benefit from your card—though spending with M&S typically
                   offers enhanced earning rates that make your loyalty even more
@@ -178,7 +178,7 @@ export default function MSRewardsCreditCardPage() {
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-                  Beyond the core rewards programme, M&S Rewards Credit Card
+                  Beyond the core rewards program, M&S Rewards Credit Card
                   holders enjoy a range of exclusive benefits designed to
                   enhance your shopping experience. These typically include
                   early access to M&S sales, allowing you to browse and purchase
@@ -199,7 +199,7 @@ export default function MSRewardsCreditCardPage() {
                   to providing a modern, convenient banking experience that fits
                   with how customers actually shop and manage their finances in
                   2025. Whether you prefer shopping in-store or online, the M&S
-                  Rewards Credit Card adapts to your preferences whilst ensuring
+                  Rewards Credit Card adapts to your preferences while ensuring
                   you never miss out on earning or redeeming your well-deserved
                   rewards.
                 </p>
@@ -268,9 +268,9 @@ export default function MSRewardsCreditCardPage() {
                   23.9% (variable), which is competitive within the rewards
                   credit card market. This rate applies to both purchases and
                   balance transfers, providing clarity and consistency in how
-                  interest is calculated. Whilst it's always wise to clear your
+                  interest is calculated. While it's always wise to clear your
                   balance in full each month to avoid interest charges and
-                  maximise the value of your rewards, M&S Bank's transparent
+                  maximize the value of your rewards, M&S Bank's transparent
                   approach to fees and charges means you'll always understand
                   exactly what you're paying for if you do need to carry a
                   balance.
@@ -370,14 +370,14 @@ export default function MSRewardsCreditCardPage() {
                   reference agencies that you can manage credit responsibly.
                   This positive credit behaviour can improve your credit score
                   over time, making it easier to access other credit products
-                  with favourable terms in the future, from mortgages to
-                  personal loans.
+                  with favorable terms in the future, from mortgages to personal
+                  loans.
                 </p>
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   M&S Bank, backed by the reputation and stability of Marks &
                   Spencer, offers the reassurance of dealing with an established
-                  British institution. The bank is authorised and regulated by
+                  British institution. The bank is authorized and regulated by
                   the Financial Conduct Authority (FCA), ensuring that your card
                   and account are subject to the same regulatory protections as
                   any other mainstream UK credit card issuer. This combination
@@ -417,10 +417,10 @@ export default function MSRewardsCreditCardPage() {
                   and wants your credit card to work harder for you, the M&S
                   Rewards Credit Card offers a practical and rewarding solution.
                   It's also an excellent choice for those who prefer simplicity
-                  in their rewards programme—rather than navigating complex
-                  tiered earning rates or category restrictions, you earn points
-                  on everything, everywhere, making the card easy to understand
-                  and use.
+                  in their rewards program—rather than navigating complex tiered
+                  earning rates or category restrictions, you earn points on
+                  everything, everywhere, making the card easy to understand and
+                  use.
                 </p>
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
@@ -430,7 +430,7 @@ export default function MSRewardsCreditCardPage() {
                   reliability of an established British institution. By turning
                   your everyday spending into M&S rewards, you're not just
                   making purchases—you're building towards vouchers that can be
-                  used for the things you love at one of Britain's favourite
+                  used for the things you love at one of Britain's favorite
                   retailers.
                 </p>
 
@@ -458,7 +458,7 @@ export default function MSRewardsCreditCardPage() {
                     advice. You should consider seeking independent financial
                     advice before applying for any credit product. M&S Bank is a
                     trading name of Marks & Spencer Financial Services plc.
-                    Authorised by the Prudential Regulation Authority and
+                    Authorized by the Prudential Regulation Authority and
                     regulated by the Financial Conduct Authority and the
                     Prudential Regulation Authority.
                   </p>

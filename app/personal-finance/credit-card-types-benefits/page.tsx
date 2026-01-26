@@ -106,7 +106,7 @@ export default function CreditCardTypesBenefitsPage() {
                       href="/personal-finance/best-rewards-credit-cards"
                       className="text-blue-600 hover:underline"
                     >
-                      Maximising Credit Card Rewards
+                      Maximizing Credit Card Rewards
                     </Link>
                     .
                   </li>

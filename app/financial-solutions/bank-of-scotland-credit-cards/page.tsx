@@ -133,7 +133,7 @@ export default function BankOfScotlandCreditCardsPage() {
                   Scotland offers a card designed specifically for your needs.
                   With competitive rates, flexible features, and comprehensive
                   support, these cards help you take control of your finances
-                  whilst benefiting from the security and reliability of one of
+                  while benefiting from the security and reliability of one of
                   the UK's most established banking institutions.
                 </p>
 
@@ -148,11 +148,11 @@ export default function BankOfScotlandCreditCardsPage() {
                   These cards are ideal for food shopping, fuel, bills, and
                   other routine expenses. By consolidating your everyday
                   spending onto one card, you can better track your expenditure
-                  whilst benefiting from credit card protection and building a
+                  while benefiting from credit card protection and building a
                   positive credit history. The competitive purchase rates mean
                   you can use the card confidently for regular transactions, and
                   by paying off your balance in full each month, you can avoid
-                  interest charges entirely whilst enjoying the convenience and
+                  interest charges entirely while enjoying the convenience and
                   security that comes with credit card payments.
                 </p>
 
@@ -174,7 +174,7 @@ export default function BankOfScotlandCreditCardsPage() {
                   outweigh this cost. This option is particularly valuable if
                   you're paying high interest rates on existing credit card
                   debts, as it provides a clear timeframe to become debt-free
-                  whilst minimising the total amount you'll pay.
+                  while minimizing the total amount you'll pay.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -232,7 +232,7 @@ export default function BankOfScotlandCreditCardsPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Benefits
+                        Maximizing Credit Card Benefits
                       </Link>
                     </li>
                     <li>
@@ -293,7 +293,7 @@ export default function BankOfScotlandCreditCardsPage() {
                       Advanced security features including real-time transaction
                       monitoring, secure 3D Secure verification for online
                       purchases, and comprehensive fraud protection with zero
-                      liability for unauthorised transactions.
+                      liability for unauthorized transactions.
                     </div>
                   </div>
 
@@ -391,7 +391,7 @@ export default function BankOfScotlandCreditCardsPage() {
                   with modern digital capabilities to deliver credit cards that
                   meet diverse financial needs. As part of the Lloyds Banking
                   Group, cardholders benefit from the resources and stability of
-                  one of the UK's largest banking organisations whilst enjoying
+                  one of the UK's largest banking organisations while enjoying
                   the personal service and Scottish heritage that Bank of
                   Scotland is known for. The range of cards ensures there's an
                   option suitable for almost any financial situation, from
@@ -416,7 +416,7 @@ export default function BankOfScotlandCreditCardsPage() {
                   and credit builder cards have standard purchase rates that
                   vary based on creditworthiness. Terms and conditions apply.
                   Bank of Scotland plc is registered in Scotland (SC327000) with
-                  registered office at The Mound, Edinburgh EH1 1YZ. Authorised
+                  registered office at The Mound, Edinburgh EH1 1YZ. Authorized
                   by the Prudential Regulation Authority and regulated by the
                   Financial Conduct Authority and the Prudential Regulation
                   Authority under registration number 169628.

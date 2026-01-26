@@ -349,7 +349,7 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
-                  Optimise Your Experience with the Nationwide Building Society
+                  Optimize Your Experience with the Nationwide Building Society
                   Credit Card
                 </h2>
 
@@ -410,7 +410,7 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Unlike traditional banks, Nationwide is owned by its members,
                   not shareholders. This means the focus is on providing value
-                  to members rather than maximising profits for external
+                  to members rather than maximizing profits for external
                   investors. If this member-focused approach appeals to you, the
                   Nationwide credit card exemplifies this philosophy with
                   competitive rates and transparent terms.

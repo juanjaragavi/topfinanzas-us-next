@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "First Direct Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
-      "Understand the eligibility criteria, documentation, and application process for the First Direct 1st Credit Card to maximise your chances of approval.",
+      "Understand the eligibility criteria, documentation, and application process for the First Direct 1st Credit Card to maximize your chances of approval.",
     keywords:
       "First Direct Credit Card requirements, UK credit card application, First Direct eligibility, credit score requirements, 1st Credit Card application",
   };
@@ -83,7 +83,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                         Credit history assessment:
                       </span>{" "}
                       First Direct will conduct a credit check when you apply.
-                      Whilst there's no published minimum credit score, having a
+                      While there's no published minimum credit score, having a
                       good credit history with a track record of managing credit
                       responsibly will improve your chances of approval and may
                       secure you a better interest rate.
@@ -114,7 +114,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Existing customer benefits:
                       </span>{" "}
-                      Whilst you don't need to be an existing First Direct
+                      While you don't need to be an existing First Direct
                       customer to apply, current customers may benefit from
                       preferential rates and a smoother application process as
                       First Direct already has your banking information and
@@ -177,7 +177,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                       <span className="font-semibold">
                         Credit Check Authorisation:
                       </span>{" "}
-                      You must authorise First Direct to perform a credit check
+                      You must authorize First Direct to perform a credit check
                       with UK credit reference agencies such as Experian,
                       Equifax, and TransUnion. This check will assess your
                       credit history and help determine your credit limit and
@@ -350,7 +350,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                       <span className="font-semibold">Security Features:</span>{" "}
                       Advanced fraud protection with real-time transaction
                       alerts, secure online shopping with 3D Secure
-                      verification, and zero liability for unauthorised
+                      verification, and zero liability for unauthorized
                       transactions.
                     </div>
                   </div>
@@ -551,7 +551,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
-                  To maximise your chances of approval for the First Direct 1st
+                  To maximize your chances of approval for the First Direct 1st
                   Credit Card:
                 </p>
 
@@ -638,7 +638,7 @@ export default function FirstDirectCreditCardRequirementsPage() {
                   more of successful applicants. Your actual rate will depend on
                   your individual circumstances and credit history. First Direct
                   is a division of HSBC UK Bank plc. HSBC UK Bank plc is
-                  authorised by the Prudential Regulation Authority and
+                  authorized by the Prudential Regulation Authority and
                   regulated by the Financial Conduct Authority and the
                   Prudential Regulation Authority.
                 </p>

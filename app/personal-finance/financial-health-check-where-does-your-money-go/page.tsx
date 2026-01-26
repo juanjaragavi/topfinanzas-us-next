@@ -179,7 +179,7 @@ export default function FinancialHealthCheckPage() {
                 </h3>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
                   Most UK banks (Monzo, Starling, Lloyds, NatWest)
-                  auto-categorise transactions. Review weekly to spot trends.
+                  auto-categorize transactions. Review weekly to spot trends.
                   Some let you set category budgets and alert you when you're
                   close to limits.
                 </p>

@@ -126,7 +126,7 @@ export default function BarclayCardAviosPlusPage() {
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Maximise Your Travel Rewards
+                  Maximize Your Travel Rewards
                 </h2>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
@@ -206,7 +206,7 @@ export default function BarclayCardAviosPlusPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li>

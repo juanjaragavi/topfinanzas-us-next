@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Yonder Credit Card Requirements: Everything You Need to Know - Top Finance UK",
     description:
-      "Understand the eligibility criteria, documentation, and application process for the Yonder Free Credit Card to maximise your chances of approval.",
+      "Understand the eligibility criteria, documentation, and application process for the Yonder Free Credit Card to maximize your chances of approval.",
     keywords:
       "Yonder Credit Card requirements, UK credit card application, Yonder eligibility, credit score requirements, free credit card application",
   };
@@ -255,7 +255,7 @@ export default function YonderCreditCardRequirementsPage() {
                     If you maintain a balance on your card, interest will be
                     charged on the outstanding amount. However, by paying your
                     full balance within the 15-day interest-free period each
-                    month, you can avoid all interest charges and maximise the
+                    month, you can avoid all interest charges and maximize the
                     value of your rewards.
                   </p>
                 </div>
@@ -460,7 +460,7 @@ export default function YonderCreditCardRequirementsPage() {
                     href="/personal-finance/best-rewards-credit-cards/"
                     className="text-blue-600 underline"
                   >
-                    Maximising travel rewards with credit cards
+                    Maximizing travel rewards with credit cards
                   </Link>
                 </p>
 
@@ -494,7 +494,7 @@ export default function YonderCreditCardRequirementsPage() {
                   The absence of an annual fee makes this card accessible to
                   those who want to earn rewards without committing to ongoing
                   fees. As long as you pay your balance in full each month, you
-                  can enjoy the benefits of a rewards programme without any
+                  can enjoy the benefits of a rewards program without any
                   additional costs.
                 </p>
 
@@ -548,7 +548,7 @@ export default function YonderCreditCardRequirementsPage() {
                     </h3>
                     <p className="text-sm text-gray-700 text-left leading-5">
                       No, but Yonder is a regulated financial institution
-                      authorised by the Financial Conduct Authority. They
+                      authorized by the Financial Conduct Authority. They
                       partner with a bank so any money you hold with them is
                       FSCS Protected, providing security for your funds.
                     </p>
@@ -573,7 +573,7 @@ export default function YonderCreditCardRequirementsPage() {
                     <span className="font-semibold">Important:</span> Credit is
                     subject to status and affordability. Yonder is a trading
                     name of Yonder Technology Ltd, company number 12739942,
-                    authorised and regulated by the Financial Conduct Authority
+                    authorized and regulated by the Financial Conduct Authority
                     (FCA) under firm reference 946219. The Card is issued by
                     Transact Payments Limited pursuant to licence by Mastercard
                     International. Mastercard is a registered trademark and the

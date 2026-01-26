@@ -98,7 +98,7 @@ export default function CreatingABudgetYoullActuallyStickToPage() {
                 </p>
 
                 <h3 className="text-left sm:text-left text-lg font-semibold text-gray-700 mb-2 mt-4">
-                  50/30/20 (flexible favourite)
+                  50/30/20 (flexible favorite)
                 </h3>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
                   50% needs (rent, utilities, council tax, food, transport), 30%

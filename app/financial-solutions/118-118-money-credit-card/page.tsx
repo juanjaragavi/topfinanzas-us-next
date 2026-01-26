@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "118 118 Money Credit Card: Build Your Credit Score with Confidence - Top Finance UK",
     description:
-      "The 118 118 Money Credit Card offers guaranteed personalised credit limits and transparent terms to help you build or rebuild your credit score with expert support.",
+      "The 118 118 Money Credit Card offers guaranteed personalized credit limits and transparent terms to help you build or rebuild your credit score with expert support.",
     keywords:
       "118 118 Money Credit Card, credit builder card, bad credit credit card, build credit score, UK credit cards, credit building, guaranteed credit limit",
   };
@@ -34,7 +34,7 @@ export default function Money118118CreditCardPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The 118 118 Money Credit Card is designed to help you build or
-                rebuild your credit score with guaranteed personalised credit
+                rebuild your credit score with guaranteed personalized credit
                 limits, transparent terms, and comprehensive financial fitness
                 support.
               </p>
@@ -50,7 +50,7 @@ export default function Money118118CreditCardPage() {
                   </div>
                   <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
-                      Guaranteed Personalised Credit Limit:
+                      Guaranteed Personalized Credit Limit:
                     </span>{" "}
                     Check your eligibility and know your guaranteed credit limit
                     before applying, with no impact on your credit score.
@@ -125,7 +125,7 @@ export default function Money118118CreditCardPage() {
                   score. Whether you're new to credit, recovering from financial
                   difficulties, or simply looking to improve your credit rating,
                   this card provides a straightforward path to better credit
-                  health. With its guaranteed personalised credit limit and
+                  health. With its guaranteed personalized credit limit and
                   transparent terms, you'll know exactly where you stand from
                   the outset.
                 </p>
@@ -140,7 +140,7 @@ export default function Money118118CreditCardPage() {
                   credit limit you'll be offered before completing a full
                   application. This soft search doesn't impact your credit
                   score, giving you complete transparency and confidence before
-                  you commit. The guaranteed personalised credit limit means
+                  you commit. The guaranteed personalized credit limit means
                   there are no surprises—what you're offered is what you'll
                   receive if your application is approved.
                 </p>
@@ -176,7 +176,7 @@ export default function Money118118CreditCardPage() {
                   difficulties in the past. It provides an opportunity to show
                   lenders that you can manage credit responsibly, which can open
                   doors to better financial products in the future with lower
-                  interest rates and more favourable terms.
+                  interest rates and more favorable terms.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -438,7 +438,7 @@ export default function Money118118CreditCardPage() {
                     purposes only and does not constitute financial advice.
                     Always consider your personal circumstances and seek
                     independent financial advice if needed. 118 118 Money is
-                    authorised and regulated by the Financial Conduct Authority
+                    authorized and regulated by the Financial Conduct Authority
                     (FRN 741774).
                   </p>
                 </div>

@@ -52,7 +52,7 @@ export default function CombineFinancesAfterMarriagePage() {
                 What does “combining finances” actually mean?
               </h2>
               <p className="text-gray-800 mb-4 text-sm leading-6 font-light">
-                In simple terms, it’s how two people organise income, bills,
+                In simple terms, it’s how two people organize income, bills,
                 spending, saving, and borrowing together. There’s no one “right
                 way” — good systems are clear, fair, and repeatable. Most
                 couples in the UK use one of three models:

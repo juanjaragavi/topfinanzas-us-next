@@ -366,9 +366,9 @@ export default function BestPersonalLoansPage() {
                   different financial needs and circumstances. By researching
                   thoroughly, comparing offers from multiple lenders, and
                   considering the factors that matter most to your situation,
-                  you can secure a personal loan with favourable terms that
-                  helps you achieve your financial goals. For a comprehensive
-                  list of available products, you can also explore our{" "}
+                  you can secure a personal loan with favorable terms that helps
+                  you achieve your financial goals. For a comprehensive list of
+                  available products, you can also explore our{" "}
                   <a
                     href="/financial-solutions"
                     className="text-blue-600 hover:underline"
@@ -388,10 +388,7 @@ export default function BestPersonalLoansPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Explore Top Personal Loan Options
                 </Link>
               </div>

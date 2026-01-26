@@ -123,10 +123,10 @@ export default function HSBCRewardsCreditCardRequirementsPage() {
                   <div className="text-base leading-7 text-gray-700 text-left">
                     <span className="font-semibold">Income Requirement:</span>{" "}
                     You'll need to declare your employment status and annual
-                    gross income (before tax and deductions). Whilst HSBC
-                    doesn't publish a specific minimum income threshold, you
-                    must demonstrate sufficient regular income to afford the
-                    credit card repayments.
+                    gross income (before tax and deductions). While HSBC doesn't
+                    publish a specific minimum income threshold, you must
+                    demonstrate sufficient regular income to afford the credit
+                    card repayments.
                   </div>
                 </div>
 

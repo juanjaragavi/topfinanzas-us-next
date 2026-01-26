@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Aqua Credit Card: Build Better Credit with Smart Features - Top Finance UK",
     description:
-      "The Aqua Credit Card offers personalised credit limits, expert support tools, and 24/7 fraud protection to help you build better credit with confidence and security.",
+      "The Aqua Credit Card offers personalized credit limits, expert support tools, and 24/7 fraud protection to help you build better credit with confidence and security.",
     keywords:
       "Aqua Credit Card, credit building card, UK credit cards, bad credit card, improve credit score, Aqua Classic, credit builder",
   };
@@ -34,7 +34,7 @@ export default function AquaCreditCardPage() {
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Aqua Credit Card is designed to help hundreds of thousands
-                of people improve their credit score with personalised limits,
+                of people improve their credit score with personalized limits,
                 expert support, and comprehensive security features—all backed
                 by an easy-to-use mobile app.
               </p>
@@ -50,7 +50,7 @@ export default function AquaCreditCardPage() {
                   </div>
                   <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
-                      Personalised Credit Limits:
+                      Personalized Credit Limits:
                     </span>{" "}
                     Your credit limit adjusts as Aqua gets to know you and could
                     increase if you manage your account well.
@@ -124,7 +124,7 @@ export default function AquaCreditCardPage() {
                   recovering from past financial difficulties, or simply seeking
                   to strengthen your credit profile, Aqua provides a supportive
                   pathway to better financial health. With its focus on
-                  accessibility, personalised features, and comprehensive
+                  accessibility, personalized features, and comprehensive
                   security, this card is designed to help you succeed.
                 </p>
 
@@ -135,7 +135,7 @@ export default function AquaCreditCardPage() {
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   One of the standout features of the Aqua Credit Card is its
                   commitment to helping you build credit through intelligent,
-                  personalised features. Unlike traditional cards with fixed
+                  personalized features. Unlike traditional cards with fixed
                   limits, Aqua adjusts your credit limit based on how well you
                   manage your account. This means that responsible use—such as
                   making regular payments and keeping your balance under
@@ -161,12 +161,12 @@ export default function AquaCreditCardPage() {
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   Credit cards work by lending you up to a maximum amount known
-                  as a credit limit. Your credit limit with Aqua is personalised
+                  as a credit limit. Your credit limit with Aqua is personalized
                   to your circumstances and it could grow over time if you
                   manage your account well. Whether you need to make payments
-                  online, at the shops, or in your favourite restaurant, a
-                  credit card offers a flexible way to borrow money as and when
-                  you need it.
+                  online, at the shops, or in your favorite restaurant, a credit
+                  card offers a flexible way to borrow money as and when you
+                  need it.
                 </p>
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
@@ -186,7 +186,7 @@ export default function AquaCreditCardPage() {
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
                   Security is a top priority with the Aqua Credit Card. The card
                   comes with 24/7 fraud protection to help keep your account
-                  safe from unauthorised transactions. Aqua's dedicated security
+                  safe from unauthorized transactions. Aqua's dedicated security
                   team monitors your account for suspicious activity, and if
                   anything unusual is detected, you'll be contacted immediately.
                   This proactive approach to security gives you peace of mind,
@@ -426,7 +426,7 @@ export default function AquaCreditCardPage() {
                   starting your credit journey, rebuilding after financial
                   challenges, or simply looking to improve your credit profile,
                   Aqua provides the resources and flexibility you need to
-                  succeed. With personalised credit limits that grow with you,
+                  succeed. With personalized credit limits that grow with you,
                   free credit score tracking, and responsive customer support,
                   you'll have everything you need to build better credit with
                   confidence.

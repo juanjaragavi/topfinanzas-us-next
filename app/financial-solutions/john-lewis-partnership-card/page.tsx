@@ -125,7 +125,7 @@ export default function JohnLewisPartnershipCardPage() {
                   shoppers at John Lewis and Waitrose who want to maximize the
                   value of their everyday spending. By converting purchases into
                   valuable points that become gift vouchers, this card rewards
-                  your loyalty whilst providing flexible credit facilities for
+                  your loyalty while providing flexible credit facilities for
                   managing your shopping expenses. Whether you're updating your
                   wardrobe, purchasing homeware, or doing your weekly shop,
                   every transaction brings you closer to your next reward.
@@ -257,7 +257,7 @@ export default function JohnLewisPartnershipCardPage() {
                   transaction history, and manage your monthly payments. The app
                   also supports secure mobile payments through Apple Wallet and
                   Google Wallet, allowing you to make contactless payments with
-                  your smartphone whilst still earning points on every
+                  your smartphone while still earning points on every
                   transaction.
                 </p>
 
@@ -289,7 +289,7 @@ export default function JohnLewisPartnershipCardPage() {
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Mobile Payments:</span>{" "}
                       Add your card to Apple Wallet or Google Wallet for secure,
-                      contactless payments wherever you shop, whilst continuing
+                      contactless payments wherever you shop, while continuing
                       to earn points.
                     </div>
                   </div>
@@ -361,7 +361,7 @@ export default function JohnLewisPartnershipCardPage() {
                       John Lewis Finance Limited is a credit broker, not a
                       lender, introducing the Partnership Credit Card under
                       exclusive arrangements with NewDay Ltd. NewDay Ltd is
-                      authorised and regulated by the Financial Conduct
+                      authorized and regulated by the Financial Conduct
                       Authority (FRN: 690292).
                     </p>
                   </div>

@@ -602,7 +602,7 @@ export default function GettingOutOfDebtPage() {
                   </li>
                   <li className="mb-2">
                     <strong>Check credentials:</strong> Ensure any organisation
-                    you approach is reputable and authorised by the Financial
+                    you approach is reputable and authorized by the Financial
                     Conduct Authority (FCA) if they offer regulated debt advice.
                   </li>
                 </ul>
@@ -768,10 +768,7 @@ export default function GettingOutOfDebtPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Explore Debt Management Solutions
                 </Link>
               </div>

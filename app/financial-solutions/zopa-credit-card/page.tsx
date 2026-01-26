@@ -258,7 +258,7 @@ export default function ZopaCreditCardPage() {
                   you notice any suspicious transactions, the ability to
                   instantly freeze your card offers immediate protection. These
                   security features, combined with Zopa's fraud monitoring
-                  systems, help safeguard your finances whilst giving you the
+                  systems, help safeguard your finances while giving you the
                   flexibility and convenience of modern digital banking.
                 </p>
 
@@ -382,7 +382,7 @@ export default function ZopaCreditCardPage() {
                     assessment.
                   </p>
                   <p className="text-sm text-gray-700 text-left leading-5">
-                    Zopa Bank Limited is authorised by the Prudential Regulation
+                    Zopa Bank Limited is authorized by the Prudential Regulation
                     Authority and regulated by the Financial Conduct Authority
                     and the Prudential Regulation Authority (Financial Services
                     Register number 800542).

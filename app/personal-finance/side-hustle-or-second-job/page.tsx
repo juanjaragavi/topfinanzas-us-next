@@ -194,7 +194,7 @@ export default function SideHustleOrSecondJobPage() {
                     debt management strategies
                   </a>{" "}
                   if you're using additional income to tackle existing debts.
-                  For those looking to maximise their earning potential through
+                  For those looking to maximize their earning potential through
                   smart financial products, exploring options like{" "}
                   <a
                     href="/personal-finance/best-rewards-credit-cards"

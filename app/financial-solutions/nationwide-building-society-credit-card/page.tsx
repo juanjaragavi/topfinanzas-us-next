@@ -171,7 +171,7 @@ export default function NationwideBuildingSocietyCreditCardPage() {
                   Unlike traditional banks, Nationwide is a mutual building
                   society owned by its members, not shareholders. This
                   fundamental difference means that Nationwide can focus on
-                  providing value to members rather than maximising profits for
+                  providing value to members rather than maximizing profits for
                   external investors. The Member Credit Card exemplifies this
                   philosophy with competitive introductory rates, transparent
                   terms, and no hidden fees that might surprise you down the
@@ -311,7 +311,7 @@ export default function NationwideBuildingSocietyCreditCardPage() {
                       spending abroad, meaning you won't be charged for using
                       your card internationally for purchases. However, be aware
                       that cash withdrawals may still incur fees, so it's best
-                      to check your specific terms before travelling.
+                      to check your specific terms before traveling.
                     </div>
                   </div>
                 </div>

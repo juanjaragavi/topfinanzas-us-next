@@ -10,7 +10,7 @@ export function generateMetadata() {
     title:
       "Vanquis Credit Card: Build Your Credit Score with Award-Winning Support - Top Finance UK",
     description:
-      "The Vanquis Credit Card offers personalised credit limits from £250-£7,000, award-winning credit building features, and 24/7 account management. Representative 37.9% APR (variable).",
+      "The Vanquis Credit Card offers personalized credit limits from £250-£7,000, award-winning credit building features, and 24/7 account management. Representative 37.9% APR (variable).",
     keywords:
       "Vanquis Credit Card, credit builder card, balance transfer card, UK credit card, build credit score, Vanquis Bank, credit limit increase, bad credit card, 0% balance transfer",
   };
@@ -66,9 +66,9 @@ export default function VanquisCreditCardPage() {
                   </div>
                   <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
-                      Personalised Credit Limits:
+                      Personalized Credit Limits:
                     </span>{" "}
-                    Credit Builder Card offers £250-£2,500 credit limits, whilst
+                    Credit Builder Card offers £250-£2,500 credit limits, while
                     the Balance Transfer Card provides £250-£7,000, all tailored
                     to your individual circumstances and affordability.
                   </div>
@@ -148,13 +148,13 @@ export default function VanquisCreditCardPage() {
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Vanquis Credit Builder Card is specifically designed to
                   help you build or rebuild your credit score through
-                  responsible card usage. Recognised with multiple industry
+                  responsible card usage. Recognized with multiple industry
                   awards including Credit Builder Card Provider of the Year at
                   the prestigious Moneyfacts Awards for three consecutive years
                   (2023, 2024, and 2025), this card demonstrates Vanquis's
                   commitment to helping customers improve their financial
                   standing. The card works on a simple principle: by staying
-                  within your personalised credit limit of £250-£2,500, paying
+                  within your personalized credit limit of £250-£2,500, paying
                   on time, and paying at least the minimum monthly amount, you
                   can demonstrate positive credit behaviour that's reported to
                   credit reference agencies, potentially improving your credit
@@ -184,7 +184,7 @@ export default function VanquisCreditCardPage() {
                   eligibility). This promotional period applies to balance
                   transfers made within 60 days of account opening, allowing you
                   to consolidate higher-interest debt from other cards and
-                  potentially save significantly on interest charges whilst
+                  potentially save significantly on interest charges while
                   paying down your balance. A 3.9% balance transfer fee applies
                   to transferred amounts, so if you transfer £900 (90% of a
                   £1,000 limit), a £35.10 fee would be added to your balance.
@@ -192,7 +192,7 @@ export default function VanquisCreditCardPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Balance Transfer Card offers credit limits ranging from
-                  £250 to £7,000, personalised based on your circumstances. The
+                  £250 to £7,000, personalized based on your circumstances. The
                   Representative APR is 36.9% (variable), though your specific
                   APR, credit limit, and promotional offer may vary based on
                   your individual assessment. The minimum transfer amount is
@@ -212,7 +212,7 @@ export default function VanquisCreditCardPage() {
                   comprehensive Vanquis mobile app, which puts complete account
                   control in your pocket. Available 24/7, the app allows you to
                   check your balance and available credit in real-time, view
-                  detailed transaction history with categorised spending
+                  detailed transaction history with categorized spending
                   insights, make payments at any time, and set up convenient
                   Direct Debit arrangements for automated monthly payments. You
                   can choose a payment date that suits your financial schedule,
@@ -226,7 +226,7 @@ export default function VanquisCreditCardPage() {
                   available credit. Real-time notifications alert you to
                   transactions, payment confirmations, and important account
                   updates, helping you stay on top of your spending and quickly
-                  identify any unauthorised activity. This level of transparency
+                  identify any unauthorized activity. This level of transparency
                   and control makes it easier to manage your finances
                   responsibly and track your progress towards your financial
                   goals.
@@ -273,7 +273,7 @@ export default function VanquisCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                   </ul>
@@ -367,8 +367,8 @@ export default function VanquisCreditCardPage() {
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Spending Analytics:</span>{" "}
                       The Vanquis app provides detailed spending insights with
-                      categorised transactions, helping you understand where
-                      your money goes and identify opportunities to optimise
+                      categorized transactions, helping you understand where
+                      your money goes and identify opportunities to optimize
                       your budget. Real-time notifications keep you informed of
                       all account activity.
                     </div>
@@ -417,7 +417,7 @@ export default function VanquisCreditCardPage() {
                   <strong>Important:</strong> Credit is subject to status,
                   affordability, and credit checks. Credit is only available to
                   UK residents aged 18 and over. Vanquis Bank Limited is
-                  authorised by the Prudential Regulation Authority and
+                  authorized by the Prudential Regulation Authority and
                   regulated by the Financial Conduct Authority and the
                   Prudential Regulation Authority (Financial Services Register
                   number 221156). Terms and conditions apply.

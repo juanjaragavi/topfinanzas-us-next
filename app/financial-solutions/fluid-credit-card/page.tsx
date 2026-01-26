@@ -55,7 +55,7 @@ export default function FluidCreditCardPage() {
                     </span>{" "}
                     Enjoy 0% interest on balance transfers for 9 months from
                     account opening (3% fee applies), helping you save on
-                    interest charges whilst you clear your balance.
+                    interest charges while you clear your balance.
                   </div>
                 </div>
 
@@ -375,7 +375,7 @@ export default function FluidCreditCardPage() {
                     <p className="text-xs mt-4">
                       NewDay Ltd provides credit for the Fluid card. Fluid is a
                       registered trade mark of NewDay Cards Ltd. NewDay Ltd is
-                      authorised and regulated by the Financial Conduct
+                      authorized and regulated by the Financial Conduct
                       Authority (FRN: 690292).
                     </p>
                   </div>

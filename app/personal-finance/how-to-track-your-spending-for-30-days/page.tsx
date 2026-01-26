@@ -113,7 +113,7 @@ export default function TrackSpending30DaysPage() {
                   3. Banking app review
                 </h3>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-6 font-light">
-                  Many UK bank apps now categorise transactions automatically.
+                  Many UK bank apps now categorize transactions automatically.
                   If you pay for most things by card, reviewing your app weekly
                   can work — though cash spending gets missed. Some challenger
                   banks like Monzo and Starling excel at this, making it easy to

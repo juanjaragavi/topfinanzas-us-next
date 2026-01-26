@@ -11,7 +11,7 @@ export function generateMetadata() {
     description:
       "The NatWest Credit Card offers flexible rewards, secure spending, and practical features designed to support your everyday financial needs.",
     keywords:
-      "NatWest Credit Card, UK credit cards, everyday spending, rewards programme, NatWest Bank, secure banking, contactless payments",
+      "NatWest Credit Card, UK credit cards, everyday spending, rewards program, NatWest Bank, secure banking, contactless payments",
   };
 }
 
@@ -47,7 +47,7 @@ export default function NatWestCreditCardPage() {
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5 text-left">
-                    <span className="font-semibold">MyRewards Programme:</span>{" "}
+                    <span className="font-semibold">MyRewards Program:</span>{" "}
                     Earn rewards points on eligible purchases that can be
                     redeemed for cashback, retail vouchers, or experiences.
                   </div>
@@ -127,7 +127,7 @@ export default function NatWestCreditCardPage() {
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
-                  The NatWest MyRewards programme allows cardholders to earn
+                  The NatWest MyRewards program allows cardholders to earn
                   points on eligible purchases, creating value from your
                   everyday spending. These points can be accumulated and
                   redeemed in various ways, giving you the flexibility to choose
@@ -200,7 +200,7 @@ export default function NatWestCreditCardPage() {
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
-                        Maximising Credit Card Rewards
+                        Maximizing Credit Card Rewards
                       </Link>
                     </li>
                     <li className="text-left">

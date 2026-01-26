@@ -248,7 +248,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
-                  Optimise Your Experience with the Barclaycard Avios Plus
+                  Optimize Your Experience with the Barclaycard Avios Plus
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
@@ -276,7 +276,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
-                    Top strategies for maximising travel rewards
+                    Top strategies for maximizing travel rewards
                   </Link>
                 </p>
 
@@ -322,7 +322,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
                     className="text-blue-600 underline"
                   >
-                    Managing your finances while travelling internationally
+                    Managing your finances while traveling internationally
                   </Link>
                 </p>
 

@@ -203,7 +203,7 @@ export default function AutomateYourWealthPage() {
 
               <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-100">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Ready to optimise your finances?
+                  Ready to optimize your finances?
                 </h3>
                 <p className="text-gray-700 mb-4 text-sm">
                   Start by reviewing your current accounts and setting up your

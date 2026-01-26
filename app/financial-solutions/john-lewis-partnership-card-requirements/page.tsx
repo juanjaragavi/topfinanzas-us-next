@@ -122,7 +122,7 @@ export default function JohnLewisPartnershipCardRequirementsPage() {
                     </div>
                     <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit History:</span>{" "}
-                      Whilst not explicitly stated, a reasonable credit history
+                      While not explicitly stated, a reasonable credit history
                       and the ability to manage credit responsibly will be
                       assessed during the application process through a credit
                       check with credit reference agencies.
@@ -462,7 +462,7 @@ export default function JohnLewisPartnershipCardRequirementsPage() {
                       What credit score do I need for this card?
                     </h3>
                     <p className="text-sm text-gray-700 text-left leading-5">
-                      Whilst there's no published minimum credit score
+                      While there's no published minimum credit score
                       requirement, the John Lewis Partnership Card is generally
                       accessible to applicants with fair to good credit
                       histories. Those with excellent credit are more likely to
@@ -538,10 +538,10 @@ export default function JohnLewisPartnershipCardRequirementsPage() {
                       whether this product suits your circumstances.
                     </p>
                     <p className="text-xs mt-4">
-                      John Lewis Finance Limited (FRN: 1018169) is authorised
+                      John Lewis Finance Limited (FRN: 1018169) is authorized
                       and regulated by the Financial Conduct Authority as a
                       credit broker. Credit is provided by NewDay Ltd (FRN:
-                      690292), which is authorised and regulated by the
+                      690292), which is authorized and regulated by the
                       Financial Conduct Authority.
                     </p>
                   </div>

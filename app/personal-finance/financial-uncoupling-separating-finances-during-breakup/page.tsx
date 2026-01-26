@@ -137,7 +137,7 @@ export default function FinancialUncouplingPage() {
                 </li>
                 <li className="mb-2">
                   Credit card statements where either of you is named or an
-                  authorised user.
+                  authorized user.
                 </li>
                 <li className="mb-2">
                   Mortgage or tenancy agreement documents.

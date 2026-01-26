@@ -77,6 +77,13 @@ export default function InvitCreditCardRecUSPage() {
           </p>
         </div>
 
+        <Link
+          href="/financial-solutions"
+          className="inline-flex items-center justify-center rounded-full bg-[#1e40af] hover:bg-[#1e3a8a] text-white py-3 px-8 text-base font-medium transition-colors"
+        >
+          ACCEPT RECOMMENDATION
+        </Link>
+
         <div className="w-full text-left max-w-3xl mt-8">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">

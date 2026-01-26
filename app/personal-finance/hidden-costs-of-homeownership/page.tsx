@@ -101,7 +101,7 @@ export default function HiddenCostsHomeownershipPage() {
                   </li>
                   <li className="mb-2">
                     <strong>Roof repairs:</strong> Minor fixes may cost
-                    £200–£500, whilst major repairs or re-roofing can exceed
+                    £200–£500, while major repairs or re-roofing can exceed
                     £5,000.
                   </li>
                   <li className="mb-2">
@@ -209,7 +209,7 @@ export default function HiddenCostsHomeownershipPage() {
                   Ground rent
                 </h3>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-base leading-7">
-                  This is an annual fee paid to the freeholder. Whilst
+                  This is an annual fee paid to the freeholder. While
                   historically nominal (£50–£250 per year), some leases include
                   escalating ground rent clauses that can dramatically increase
                   costs over time. Recent legislation has restricted ground rent
@@ -294,8 +294,7 @@ export default function HiddenCostsHomeownershipPage() {
                   </li>
                   <li className="mb-2">
                     <strong>Survey fees:</strong> A homebuyer's report costs
-                    £400–£600, whilst a full structural survey can exceed
-                    £1,000.
+                    £400–£600, while a full structural survey can exceed £1,000.
                   </li>
                   <li className="mb-2">
                     <strong>Furniture and appliances:</strong> Even if you're
@@ -420,7 +419,7 @@ export default function HiddenCostsHomeownershipPage() {
                   </h3>
                   <p className="text-gray-800 text-sm leading-6">
                     This article provides general information and should not be
-                    considered personalised financial advice. Property costs
+                    considered personalized financial advice. Property costs
                     vary significantly based on location, property type, and
                     individual circumstances. For tailored guidance on
                     homeownership affordability and mortgage planning, consult

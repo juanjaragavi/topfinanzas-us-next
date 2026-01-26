@@ -366,7 +366,7 @@ export default function CooperativeBankCreditCardRequirementsPage() {
                         Dual Cashback Rates:
                       </span>{" "}
                       Earn 0.5% cashback at Co-op food stores and 0.3% on all
-                      other purchases where Visa is accepted, maximising your
+                      other purchases where Visa is accepted, maximizing your
                       rewards on everyday spending.
                     </div>
                   </div>
