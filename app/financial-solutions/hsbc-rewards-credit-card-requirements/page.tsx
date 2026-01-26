@@ -100,7 +100,7 @@ export default function HSBCRewardsCreditCardRequirementsPage() {
                     recent defaults, County Court Judgements (CCJs), or
                     bankruptcies. HSBC typically looks for applicants who have
                     successfully managed credit in the past and demonstrate
-                    responsible borrowing behaviour.
+                    responsible borrowing behavior.
                   </div>
                 </div>
 

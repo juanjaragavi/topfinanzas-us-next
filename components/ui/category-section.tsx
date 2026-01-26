@@ -85,7 +85,7 @@ export function CategorySection({
           {/* Fallback if only 1 post */}
           {listPosts.length === 0 && (
             <p className="text-gray-500 italic">
-              Pronto más artículos en esta sección.
+              More articles in this section coming soon.
             </p>
           )}
         </div>

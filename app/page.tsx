@@ -7,7 +7,6 @@ import { CategorySection } from "@/components/ui/category-section";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 
 // Dynamically import components that aren't needed for the initial render
 const DynamicPagination = dynamic(
@@ -99,74 +98,69 @@ const allPosts: PostData[] = [
   },
   */
   {
-    slug: "mejores-tarjetas-recompensas",
+    slug: "best-rewards-credit-cards",
     frontmatter: {
-      title:
-        "Las Mejores Tarjetas de Crédito con Recompensas | Top Finanzas MX",
+      title: "The Best Rewards Credit Cards | Top Finance US",
       description:
-        "Descubre las mejores tarjetas de crédito con recompensas para maximizar tus gastos...",
+        "Discover the best rewards credit cards to maximize your spending...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
-      categories: [{ name: "Finanzas Personales", slug: "personal-finance" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/personal-finance",
   },
   {
-    slug: "salir-de-deudas",
+    slug: "how-to-get-out-of-debt",
     frontmatter: {
-      title: "Guía Práctica para Salir de Deudas | Top Finanzas MX",
-      description:
-        "¿Te sientes abrumado por las deudas? Obtén estrategias prácticas...",
+      title: "Practical Guide to Getting Out of Debt | Top Finance US",
+      description: "Feeling overwhelmed by debt? Get practical strategies...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      categories: [{ name: "Finanzas Personales", slug: "personal-finance" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/personal-finance",
   },
   {
-    slug: "tarjetas-meses-sin-intereses",
+    slug: "best-0-apr-credit-cards",
     frontmatter: {
-      title:
-        "Mejores Tarjetas de Crédito con Meses Sin Intereses | Top Finanzas MX",
+      title: "Best 0% APR Credit Cards | Top Finance US",
       description:
-        "Compara las mejores tarjetas de crédito que ofrecen meses sin intereses...",
+        "Compare the best credit cards with 0% APR introductory offers...",
       date: "2025-04-03T00:00:00Z",
       featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp",
-      categories: [{ name: "Finanzas Personales", slug: "personal-finance" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/personal-finance",
   },
   {
-    slug: "mejores-prestamos-personales",
+    slug: "best-personal-loans",
     frontmatter: {
-      title: "Mejores Préstamos Personales en México: Tu Guía Completa",
-      description:
-        "Guía completa de los mejores préstamos personales en México...",
+      title: "Best Personal Loans in the US: Your Complete Guide",
+      description: "Complete guide to the best personal loans in the US...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      categories: [{ name: "Finanzas Personales", slug: "personal-finance" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/personal-finance",
   },
   {
-    slug: "tips-elegir-prestamo-en-linea",
+    slug: "tips-choosing-online-loan",
     frontmatter: {
-      title:
-        "5 Consejos Esenciales para Elegir un Préstamo en Línea | Top Finanzas MX",
-      description: "Navega el mundo de los préstamos en línea con confianza...",
+      title: "5 Essential Tips for Choosing an Online Loan | Top Finance US",
+      description: "Navigate the world of online loans with confidence...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
         "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      categories: [{ name: "Finanzas Personales", slug: "personal-finance" }],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    category: "Finanzas Personales",
+    category: "Personal Finance",
     categoryPath: "/personal-finance",
   },
 ];
@@ -174,13 +168,13 @@ const allPosts: PostData[] = [
 // Reuse posts to populate sections for demo purposes since we have limited hardcoded data
 const savingsPosts = [...allPosts, ...allPosts]
   .slice(0, 4)
-  .map((p) => ({ ...p, category: "Ahorro inteligente" }));
+  .map((p) => ({ ...p, category: "Smart Savings" }));
 const debtPosts = [...allPosts, ...allPosts]
   .slice(2, 6)
-  .map((p) => ({ ...p, category: "Deuda cero" }));
+  .map((p) => ({ ...p, category: "Zero Debt" }));
 const cardPosts = [...allPosts, ...allPosts]
   .slice(4, 8)
-  .map((p) => ({ ...p, category: "Elige tu tarjeta" }));
+  .map((p) => ({ ...p, category: "Choose Your Card" }));
 
 // --- End of Hardcoded Data ---
 
@@ -197,23 +191,15 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section - Desktop Parity Refactor */}
-      <section className="relative w-full min-h-[400px] flex items-center py-12 md:py-0">
-        <Image
-          src="https://media.topfinanzas.com/images/bannerppal-1536x400-1.webp"
-          alt="Top Finance Hero"
-          fill
-          className="object-cover object-[75%_center] md:object-center"
-          priority
-          quality={100}
-        />
+      {/* Hero Section - Solid Background Color Matching Reference */}
+      <section className="relative w-full min-h-[420px] md:min-h-[480px] flex items-center py-16 md:py-20 bg-[#6366F1]">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-[600px] lg:max-w-[700px] pt-8 md:pt-0">
-            <h1 className="text-white text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-6 leading-tight drop-shadow-sm">
+          <div className="max-w-[650px] lg:max-w-[750px]">
+            <h1 className="text-white text-[2.75rem] md:text-[3.25rem] lg:text-[4rem] font-bold mb-8 leading-[1.15] tracking-tight">
               Welcome to <br />
               Top Finance
             </h1>
-            <p className="text-white text-lg md:text-xl lg:text-[1.35rem] leading-relaxed font-medium drop-shadow-sm">
+            <p className="text-white text-xl md:text-2xl lg:text-[1.625rem] leading-[1.5] font-medium">
               Where every financial decision expands your world.
               <br />
               Choose wisely, live fully.
@@ -256,12 +242,12 @@ export default function Home() {
                 categorySlug: post.categoryPath,
                 date: post.frontmatter.date
                   ? new Date(post.frontmatter.date).toLocaleDateString(
-                      "es-MX",
+                      "en-US",
                       { year: "numeric", month: "long", day: "numeric" },
                     )
                   : undefined,
                 type:
-                  post.category === "Soluciones Financieras"
+                  post.category === "Financial Solutions"
                     ? "financial"
                     : "personal",
               });
@@ -298,7 +284,7 @@ export default function Home() {
           {/* Category Sections - Sharp Corners & Hero+List Layout */}
 
           <CategorySection
-            title="Ahorro inteligente"
+            title="Smart Savings"
             posts={savingsPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -309,7 +295,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -317,11 +303,11 @@ export default function Home() {
                 : undefined,
               type: "financial",
             }))}
-            viewAllLink="/ahorro"
+            viewAllLink="/savings"
           />
 
           <CategorySection
-            title="Deuda cero"
+            title="Zero Debt"
             posts={debtPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -332,7 +318,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -340,11 +326,11 @@ export default function Home() {
                 : undefined,
               type: "personal",
             }))}
-            viewAllLink="/deuda"
+            viewAllLink="/debt"
           />
 
           <CategorySection
-            title="Elige tu tarjeta"
+            title="Choose Your Card"
             posts={cardPosts.map((p) => ({
               title: cleanTitle(p.frontmatter.title),
               description: p.frontmatter.description,
@@ -355,7 +341,7 @@ export default function Home() {
               category: p.category,
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("es-MX", {
+                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -363,7 +349,7 @@ export default function Home() {
                 : undefined,
               type: "financial",
             }))}
-            viewAllLink="/tarjetas"
+            viewAllLink="/cards"
           />
 
           {/* Pagination Controls */}
@@ -378,10 +364,10 @@ export default function Home() {
                   variant="secondary"
                   className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  Anterior
+                  Previous
                 </Button>
                 <span className="text-sm text-gray-700">
-                  Página {currentPage} de {totalPages}
+                  Page {currentPage} of {totalPages}
                 </span>
                 <Button
                   onClick={() =>
@@ -391,7 +377,7 @@ export default function Home() {
                   variant="secondary"
                   className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
-                  Siguiente
+                  Next
                 </Button>
               </div>
             ) : (

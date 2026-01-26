@@ -72,7 +72,7 @@ export function FeaturedPostsGrid({
 
       {filteredPosts.length === 0 && (
         <div className="text-left py-12 bg-gray-50 rounded-lg">
-          <p className="text-gray-500">No se encontraron artículos.</p>
+          <p className="text-gray-500">No articles found.</p>
         </div>
       )}
     </div>

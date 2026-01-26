@@ -107,7 +107,7 @@ export default function SidebarExample() {
                   href="/personal-finance"
                   className="text-sm hover:underline"
                 >
-                  Finanzas Personales
+                  Personal Finance
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   12
@@ -116,7 +116,7 @@ export default function SidebarExample() {
 
               <div className="flex items-center justify-between">
                 <Link href="/cards" className="text-sm hover:underline">
-                  Tarjetas
+                  Credit Cards
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   8

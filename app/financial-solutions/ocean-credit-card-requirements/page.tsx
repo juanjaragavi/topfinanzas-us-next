@@ -322,7 +322,7 @@ export default function OceanCreditCardRequirementsPage() {
                   <p className="text-sm italic mt-4">
                     This is a simplified example for illustration purposes. Your
                     actual costs will depend on your individual borrowing,
-                    repayment behaviour, and the rate you're offered.
+                    repayment behavior, and the rate you're offered.
                   </p>
                 </div>
               </div>

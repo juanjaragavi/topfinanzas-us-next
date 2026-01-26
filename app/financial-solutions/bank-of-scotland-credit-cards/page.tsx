@@ -391,7 +391,7 @@ export default function BankOfScotlandCreditCardsPage() {
                   with modern digital capabilities to deliver credit cards that
                   meet diverse financial needs. As part of the Lloyds Banking
                   Group, cardholders benefit from the resources and stability of
-                  one of the UK's largest banking organisations while enjoying
+                  one of the UK's largest banking organizations while enjoying
                   the personal service and Scottish heritage that Bank of
                   Scotland is known for. The range of cards ensures there's an
                   option suitable for almost any financial situation, from

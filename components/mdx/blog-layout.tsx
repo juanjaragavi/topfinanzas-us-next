@@ -205,7 +205,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/best-personal-loans"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Los Mejores Préstamos Personales
+                          Best Personal Loans
                         </Link>
                       </div>
                     </div>
@@ -218,7 +218,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/personal-finance"
                         className="text-sm hover:underline font-medium" // Made font medium
                       >
-                        Finanzas Personales
+                        Personal Finance
                       </Link>
                       {/* Removed count */}
                     </div>
@@ -227,7 +227,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/financial-solutions"
                         className="text-sm hover:underline font-medium" // Made font medium
                       >
-                        Soluciones Financieras
+                        Financial Solutions
                       </Link>
                       {/* Removed count */}
                     </div>

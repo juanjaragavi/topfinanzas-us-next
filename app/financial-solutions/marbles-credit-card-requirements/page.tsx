@@ -553,7 +553,7 @@ export default function MarblesCreditCardRequirementsPage() {
                     </li>
                     <li>
                       Your credit rating may be negatively affected by poor
-                      payment behaviour.
+                      payment behavior.
                     </li>
                     <li>
                       Only borrow what you can afford to repay comfortably
