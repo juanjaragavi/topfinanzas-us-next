@@ -1,5 +1,9 @@
-fix: Localize Recent Articles and related components
+feat(seo): implement hreflang and canonical attributes
 
-- Remove 'UK' specific terminology from Personal Finance metadata
-- Translate legacy Spanish titles in Recent Articles to English
-- Update alt tags and display titles to be region-neutral or US-specific
+- Configure `metadataBase` in root layout for proper URL resolution.
+- Implement `hreflang="en-US"` and self-referencing canonicals for:
+  - Homepage (refactored to Server Component)
+  - About Us & Contact Us (refactored to Server Component)
+  - Legal Pages (Privacy, Terms, Cookie Policy)
+  - Dynamic Article Pages (Financial Solutions, Personal Finance, Uncategorized)
+- Ensure compliance with Google localized versions standards.
