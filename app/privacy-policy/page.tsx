@@ -33,10 +33,10 @@ export default function PrivacyPolicyPage() {
           <p>
             Top Networks Inc. operates{" "}
             <a
-              href="https://topfinanzas.com"
+              href="https://us.topfinanzas.com"
               className="text-blue-600 hover:underline"
             >
-              www.topfinanzas.com
+              us.topfinanzas.com
             </a>{" "}
             (&quot;Platform&quot; or &quot;Site&quot;), a platform for financial
             information and product recommendations. Our mission is to provide

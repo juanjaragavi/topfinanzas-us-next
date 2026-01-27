@@ -37,259 +37,128 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
-        "How to Track Your Spending for 30 Days and Finally Know Where Your Money Goes | Top Finance UK",
-      slug: "how-to-track-your-spending-for-30-days",
+        "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
+      slug: "yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
       description:
-        "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and build lasting money management habits.",
+        "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
       image:
-        "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
-      date: "2 December 2025",
+        "https://media.topfinanzas.com/images/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in.webp",
+      date: "September 17, 2025",
+      category: "guide",
+    },
+    {
+      title: "Good Debt vs. Bad Debt: How to Tell the Difference",
+      slug: "good-debt-vs-bad-debt-how-to-tell-the-difference",
+      description:
+        "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
+      image:
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference.webp",
+      date: "September 3, 2025",
+      category: "guide",
+    },
+    {
+      title: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+      slug: "good-debt-vs-bad-debt-how-to-tell-the-difference-2",
+      description:
+        "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
+      image:
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
+      date: "September 5, 2025",
+      category: "guide",
+    },
+    {
+      title: "Investing for Beginners: A Simple Guide to Getting Started",
+      slug: "investing-for-beginners-a-simple-guide-to-getting-started",
+      description:
+        "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
+      image:
+        "https://media.topfinanzas.com/images/investing-for-beginners-a-simple-guide-to-getting-started.webp",
+      date: "September 10, 2025",
       category: "guide",
     },
     {
       title:
-        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
-      slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
+        "A Savvy Traveler's Guide: Using Credit Card Points for Thanksgiving Travel",
+      slug: "a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel",
       description:
-        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start mindful saving today with our expert guide.",
+        "Master your travel rewards to save on Thanksgiving travel. Learn how to use credit card points strategically to book flights, hotels, and more without breaking your holiday budget.",
       image:
-        "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
-      date: "25 November 2025",
+        "https://media.topfinanzas.com/images/a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel.webp",
+      date: "September 10, 2025",
       category: "guide",
     },
     {
       title:
-        'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
-      slug: "automate-your-wealth",
+        "Guide: How to Use Multiple Credit Cards to Maximize Your FICO Score",
+      slug: "guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score",
       description:
-        'Learn how to automate your finances in the UK with our "Set It and Forget It" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
+        "Discover how to use multiple credit cards strategically to maximize your FICO score. Learn about credit utilization, payment history, and best practices for managing multiple cards.",
       image:
-        "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
-      date: "19 November 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Stop Living Paycheck to Paycheck: 3 Shifts to Break the Cycle Today - Top Finance UK",
-      slug: "stop-living-paycheck-to-paycheck",
-      description:
-        "Escape the paycheck-to-paycheck cycle with three practical cash flow shifts. Learn how UK families are building breathing room without dramatic sacrifices or extreme budgets.",
-      image:
-        "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
-      date: "13 November 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "The 5-Minute Financial Health Check: Where Does Your Money Go? - Top Finance UK",
-      slug: "financial-health-check-where-does-your-money-go",
-      description:
-        "Discover where your money really goes with our quick UK financial health check. Learn simple expense tracking methods that reveal spending patterns and help you take control in just minutes a day.",
-      image:
-        "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
-      date: "5 November 2025",
-      category: "guide",
-    },
-    {
-      title: "The Hidden Costs of Homeownership | Top Finanzas US",
-      slug: "hidden-costs-of-homeownership",
-      description:
-        "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home.",
-      image:
-        "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
-      date: "28 October 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High | Top Finance UK",
-      slug: "inflation-proof-your-life",
-      description:
-        "Discover seven practical strategies to protect your purchasing power during high inflation. Learn how to cut invisible spending leaks, lock in fixed rates, build emergency buffers, and keep your personal finance on track when costs are rising.",
-      image:
-        "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
-      date: "15 October 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
-      slug: "best-personal-loans",
-      description:
-        "Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays.",
-      image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      date: "30 March 2025",
-      category: "loans",
-    },
-    {
-      title:
-        "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
-      slug: "best-rewards-credit-cards",
-      description:
-        "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
-      date: "3 April 2025",
+        "https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp",
+      date: "September 12, 2025",
       category: "creditCards",
     },
     {
-      title:
-        "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
-      slug: "cashback-credit-cards",
+      title: "Top Credit Cards to Maximize Your Black Friday Savings",
+      slug: "top-credit-cards-to-maximize-your-black-friday-savings",
       description:
-        "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
-      image: "https://media.topfinanzas.com/images/uk/download-8-1.webp",
-      date: "3 April 2025",
+        "Using the right plastic can help you earn significant cash back, provide crucial purchase protections, and even give you interest-free time to pay off your haul.",
+      image:
+        "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
+      date: "September 23, 2025",
       category: "creditCards",
     },
     {
-      title:
-        "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
-      slug: "credit-card-types-benefits",
+      title: "Why a 0% Intro APR Card Is Your Best Bet for Black Friday",
+      slug: "why-a-0-intro-apr-card-is-your-best-bet-for-black-friday",
       description:
-        "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
+        "Learn why a 0% intro APR credit card is the smart choice for financing big-ticket Black Friday purchases. Discover the benefits and how to use it responsibly.",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp",
-      date: "3 April 2025",
-      category: "creditCards",
+        "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
+      date: "October 8, 2025",
+      category: "guide",
     },
     {
-      title: "Practical Guide to Getting Out of Debt | Top Finance UK",
-      slug: "getting-out-of-debt",
+      title:
+        "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
+      slug: "flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday",
       description:
-        "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
+        "Learn the key differences between flat-rate and bonus category cashback cards to maximize your Black Friday savings. Discover which strategy works best for your shopping style.",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      date: "3 April 2025",
+        "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
+      date: "October 10, 2025",
+      category: "guide",
+    },
+    {
+      title: "Beat Inflation with Your Cashback",
+      slug: "beat-inflation-with-your-cashback",
+      description:
+        "Learn how to use cashback rewards strategically to fight inflation and keep more money in your pocket. Discover smart strategies to maximize your rewards.",
+      image:
+        "https://media.topfinanzas.com/images/beat-inflation-with-your-cashback.webp",
+      date: "October 31, 2025",
+      category: "guide",
+    },
+    {
+      title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
+      slug: "best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
+      description:
+        "Learn how 0% APR balance transfer cards can help you manage and pay off credit card debt. Understand the pros, cons, and key strategies for success.",
+      image:
+        "https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp",
+      date: "October 31, 2025",
       category: "debt",
     },
     {
-      title: "Top Credit Cards With No Annual Fees | Top Finance UK",
-      slug: "no-annual-fee-credit-cards",
+      title: "What Are the Best Secured Credit Cards for Building Credit?",
+      slug: "what-are-the-best-secured-credit-cards-for-building-credit",
       description:
-        "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
+        "Learn how to find the best secured credit cards for building credit from scratch or repairing damaged credit. Discover what to look for and how to use them wisely.",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp",
-      date: "3 April 2025",
+        "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
+      date: "October 31, 2025",
       category: "creditCards",
     },
-    {
-      title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
-      slug: "personal-loans-debt-strategy",
-      description:
-        "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp",
-      date: "3 April 2025",
-      category: "loans",
-    },
-    {
-      title:
-        "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
-      slug: "tips-for-choosing-an-online-loan",
-      description:
-        "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image:
-        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      date: "30 March 2025",
-      category: "loans",
-    },
-    {
-      title:
-        "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
-      slug: "top-credit-cards-0-intro-apr",
-      description:
-        "Compare the best credit cards offering 0% introductory APR on purchases and balance transfers in the UK. Save money on interest and manage debt effectively.",
-      image: "https://media.topfinanzas.com/images/uk/APR.webp",
-      date: "3 April 2025",
-      category: "creditCards",
-    },
-    {
-      title:
-        "Understanding Credit Card Interest Rates - A Consumer Guide | Top Finance UK",
-      slug: "understanding-credit-card-interest-rates",
-      description:
-        "Learn how credit card interest rates work, including APR calculations, and discover ways to manage and minimize your debt effectively.",
-      image: "https://media.topfinanzas.com/images/uk/download-5-2.webp",
-      date: "3 April 2025",
-      category: "creditCards",
-    },
-    {
-      title:
-        "What Is Financial Health? A Quick Guide to Checking Your Vitals | Top Finance UK",
-      slug: "what-is-financial-health",
-      description:
-        "A simple UK-focused guide to checking your money vitals—cash flow, savings, borrowing, and habits—plus quick steps to improve your financial health.",
-      image:
-        "https://media.topfinanzas.com/images/uk/what-is-financial-health.webp",
-      date: "13 August 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Money Management for Beginners: Where Do I Even Start? | Top Finance UK",
-      slug: "money-management-for-beginners",
-      description:
-        "New to personal finance? Learn simple UK-based steps to budget, save, manage debt, and build steady money habits that stick.",
-      image:
-        "https://media.topfinanzas.com/images/uk/money-management-for-beginners.webp",
-      date: "13 August 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Setting Financial Goals: A Beginner's Guide to Personal Finance Planning | Top Finance UK",
-      slug: "setting-financial-goals",
-      description:
-        "Learn how to set SMART financial goals, align your budget, and build habits that stick. A simple UK-focused personal finance guide for beginners.",
-      image:
-        "https://media.topfinanzas.com/images/uk/setting-financial-goals.webp",
-      date: "15 August 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Side Hustle or Second Job? How to Choose the Right Income Booster",
-      slug: "side-hustle-or-second-job",
-      description:
-        "With rising living costs across the UK, many people are seeking ways to boost their income. Whether you're considering a traditional second job or exploring the world of side hustles, making the right choice can significantly impact your personal finance goals and lifestyle.",
-      image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
-      date: "27 August 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | Top Finance UK",
-      slug: "creating-a-budget-youll-actually-stick-to",
-      description:
-        "A modern UK-friendly budgeting guide covering 50/30/20, zero‑based budgeting, digital pots, and a 7‑day quick start — built to help you actually stick to it.",
-      image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
-      date: "4 September 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "What Is 'Lifestyle Creep' and How Is It Silently Draining Your Wallet? | Top Finance UK",
-      slug: "what-is-lifestyle-creep",
-      description:
-        "Discover how lifestyle creep gradually increases your spending as your income grows, and learn practical strategies to prevent this silent wealth-drainer from sabotaging your personal finance goals while still enjoying life.",
-      image:
-        "https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp",
-      date: "9 October 2025",
-      category: "guide",
-    },
-    {
-      title:
-        "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup | Top Finance UK",
-      slug: "financial-uncoupling-separating-finances-during-breakup",
-      description:
-        "Practical UK guidance on untangling joint accounts, managing shared debts, protecting your credit, and rebuilding financial independence after a relationship ends.",
-      image:
-        "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
-      date: "23 October 2025",
-      category: "guide",
-    },
-    // Add other posts here as needed
   ];
 
   // Date parsing utility function

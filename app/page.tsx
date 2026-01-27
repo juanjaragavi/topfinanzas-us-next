@@ -43,172 +43,217 @@ const cleanTitle = (title: string): string => {
   return title.split("|")[0].split(":")[0].split(" - ")[0].trim();
 };
 
-// --- Hardcoded Post Data (Localized for MX) ---
+// --- Hardcoded Post Data (US Market) ---
 // Using a subset of posts for the homepage, sorted by date descending
 const allPosts: PostData[] = [
-  // TODO: Replace with US-specific content. Currently commenting out UK legacy content.
-  /*
   {
-    slug: "tarjeta-credito-viajes-premium", // Example slug
-    frontmatter: {
-      title: "Tarjeta de Crédito Premium: Recompensas de Viaje Exclusivas",
-      description:
-        "La tarjeta ideal para viajeros frecuentes con beneficios premium...",
-      date: "2025-10-29T00:00:00Z", // Matching legacy date
-      featuredImage:
-        "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp", // Keep image for layout
-      categories: [
-        { name: "Soluciones Financieras", slug: "financial-solutions" },
-      ],
-    },
-    category: "Soluciones Financieras",
-    categoryPath: "/financial-solutions",
-  },
-  {
-    slug: "hsbc-prestamo-personal",
+    slug: "yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
     frontmatter: {
       title:
-        "Préstamo Personal HSBC: Financiamiento Flexible (MX)",
-      description: "Descubre los préstamos personales de HSBC con tasas competitivas...",
-      date: "2025-04-04T00:00:00Z",
+        "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
+      date: "September 17, 2025",
+      description:
+        "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
+        "https://media.topfinanzas.com/images/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in.webp",
       categories: [
-        { name: "Soluciones Financieras", slug: "financial-solutions" },
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Finances for Everyone", slug: "finances-for-everyone" },
       ],
     },
-    category: "Soluciones Financieras",
-    categoryPath: "/financial-solutions",
   },
   {
-    slug: "prestamo-negocio-funding-circle",
-    frontmatter: {
-      title: "Préstamo para Negocios Funding Circle",
-      description:
-        "Explora los préstamos para negocios de Funding Circle con financiamiento rápido y flexible...",
-      date: "2025-04-04T00:00:00Z",
-      featuredImage:
-        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
-      categories: [
-        { name: "Soluciones Financieras", slug: "financial-solutions" },
-      ],
-    },
-    category: "Soluciones Financieras",
-    categoryPath: "/financial-solutions",
-  },
-  */
-  // Most recent posts (matching reference site content order)
-  {
-    slug: "what-are-the-best-secured-credit-cards-for-building-credit",
-    frontmatter: {
-      title: "What Are the Best Secured Credit Cards for Building Credit?",
-      description:
-        "Discover the top secured credit cards that help you build or rebuild your credit score with responsible use and low deposits.",
-      date: "2025-10-31T00:00:00Z",
-      featuredImage:
-        "https://media.topfinanzas.com/images/us/what-are-the-best-secured-credit-cards.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    },
+    slug: "good-debt-vs-bad-debt-how-to-tell-the-difference",
     category: "Personal Finance",
-    categoryPath: "/personal-finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title: "Good Debt vs. Bad Debt: How to Tell the Difference",
+      date: "September 3, 2025",
+      description:
+        "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Finances for Everyone", slug: "finances-for-everyone" },
+      ],
+    },
   },
   {
-    slug: "best-0-apr-balance-transfer-cards",
+    slug: "good-debt-vs-bad-debt-how-to-tell-the-difference-2",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
     frontmatter: {
-      title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
+      title:
+        "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+      date: "September 5, 2025",
       description:
-        "Learn how 0% APR balance transfer cards can help you pay off debt faster and save on interest charges.",
-      date: "2025-10-29T00:00:00Z",
+        "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
       featuredImage:
-        "https://media.topfinanzas.com/images/us/best-0-apr-balance-transfer-cards.webp",
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
       categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Uncategorized", slug: "uncategorized" },
+      ],
+    },
+  },
+  {
+    slug: "investing-for-beginners-a-simple-guide-to-getting-started",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title: "Investing for Beginners: A Simple Guide to Getting Started",
+      date: "September 10, 2025",
+      description:
+        "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/investing-for-beginners-a-simple-guide-to-getting-started.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Finances for Everyone", slug: "finances-for-everyone" },
+      ],
+    },
+  },
+  {
+    slug: "a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title:
+        "A Savvy Traveler's Guide: Using Credit Card Points for Thanksgiving Travel",
+      date: "September 10, 2025",
+      description:
+        "Master your travel rewards to save on Thanksgiving travel. Learn how to use credit card points strategically to book flights, hotels, and more without breaking your holiday budget.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
         { name: "Financial Solutions", slug: "financial-solutions" },
       ],
     },
-    category: "Financial Solutions",
-    categoryPath: "/financial-solutions",
+  },
+  {
+    slug: "guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title:
+        "Guide: How to Use Multiple Credit Cards to Maximize Your FICO Score",
+      date: "September 12, 2025",
+      description:
+        "Discover how to use multiple credit cards strategically to maximize your FICO score. Learn about credit utilization, payment history, and best practices for managing multiple cards.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
+    },
+  },
+  {
+    slug: "top-credit-cards-to-maximize-your-black-friday-savings",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title: "Top Credit Cards to Maximize Your Black Friday Savings",
+      date: "September 23, 2025",
+      description:
+        "Using the right plastic can help you earn significant cash back, provide crucial purchase protections, and even give you interest-free time to pay off your haul.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
+    },
+  },
+  {
+    slug: "why-a-0-intro-apr-card-is-your-best-bet-for-black-friday",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title: "Why a 0% Intro APR Card Is Your Best Bet for Black Friday",
+      date: "October 8, 2025",
+      description:
+        "Learn why a 0% intro APR credit card is the smart choice for financing big-ticket Black Friday purchases. Discover the benefits and how to use it responsibly.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Uncategorized", slug: "uncategorized" },
+      ],
+    },
+  },
+  {
+    slug: "flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
+    frontmatter: {
+      title:
+        "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
+      date: "October 10, 2025",
+      description:
+        "Learn the key differences between flat-rate and bonus category cashback cards to maximize your Black Friday savings. Discover which strategy works best for your shopping style.",
+      featuredImage:
+        "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Uncategorized", slug: "uncategorized" },
+      ],
+    },
   },
   {
     slug: "beat-inflation-with-your-cashback",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
     frontmatter: {
       title: "Beat Inflation with Your Cashback",
+      date: "October 31, 2025",
       description:
-        "Smart strategies to maximize your credit card cashback rewards and offset rising costs.",
-      date: "2025-10-22T00:00:00Z",
+        "Learn how to use cashback rewards strategically to fight inflation and keep more money in your pocket. Discover smart strategies to maximize your rewards.",
       featuredImage:
-        "https://media.topfinanzas.com/images/us/beat-inflation-with-cashback.webp",
+        "https://media.topfinanzas.com/images/beat-inflation-with-your-cashback.webp",
       categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
         { name: "Financial Solutions", slug: "financial-solutions" },
       ],
     },
-    category: "Financial Solutions",
-    categoryPath: "/financial-solutions",
   },
   {
-    slug: "best-rewards-credit-cards",
+    slug: "best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
+    category: "Personal Finance",
+    categoryPath: "personal-finance",
     frontmatter: {
-      title: "The Best Rewards Credit Cards | Top Finance US",
+      title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
+      date: "October 31, 2025",
       description:
-        "Discover the best rewards credit cards to maximize your spending...",
-      date: "2025-04-03T00:00:00Z",
+        "Learn how 0% APR balance transfer cards can help you manage and pay off credit card debt. Understand the pros, cons, and key strategies for success.",
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
+        "https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Finances for Everyone", slug: "finances-for-everyone" },
+      ],
     },
-    category: "Personal Finance",
-    categoryPath: "/personal-finance",
   },
   {
-    slug: "getting-out-of-debt",
-    frontmatter: {
-      title: "Practical Guide to Getting Out of Debt | Top Finance US",
-      description: "Feeling overwhelmed by debt? Get practical strategies...",
-      date: "2025-04-03T00:00:00Z",
-      featuredImage:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    },
+    slug: "what-are-the-best-secured-credit-cards-for-building-credit",
     category: "Personal Finance",
-    categoryPath: "/personal-finance",
-  },
-  {
-    slug: "top-credit-cards-0-intro-apr",
+    categoryPath: "personal-finance",
     frontmatter: {
-      title: "Best 0% APR Credit Cards | Top Finance US",
+      title: "What Are the Best Secured Credit Cards for Building Credit?",
+      date: "October 31, 2025",
       description:
-        "Compare the best credit cards with 0% APR introductory offers...",
-      date: "2025-04-03T00:00:00Z",
-      featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    },
-    category: "Personal Finance",
-    categoryPath: "/personal-finance",
-  },
-  {
-    slug: "best-personal-loans",
-    frontmatter: {
-      title: "Best Personal Loans in the US: Your Complete Guide",
-      description: "Complete guide to the best personal loans in the US...",
-      date: "2025-03-30T00:00:00Z",
+        "Learn how to find the best secured credit cards for building credit from scratch or repairing damaged credit. Discover what to look for and how to use them wisely.",
       featuredImage:
-        "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
+        "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
+      categories: [
+        { name: "Personal Finance", slug: "personal-finance" },
+        { name: "Finances for Everyone", slug: "finances-for-everyone" },
+      ],
     },
-    category: "Personal Finance",
-    categoryPath: "/personal-finance",
-  },
-  {
-    slug: "tips-for-choosing-an-online-loan",
-    frontmatter: {
-      title: "5 Essential Tips for Choosing an Online Loan | Top Finance US",
-      description: "Navigate the world of online loans with confidence...",
-      date: "2025-03-30T00:00:00Z",
-      featuredImage:
-        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    },
-    category: "Personal Finance",
-    categoryPath: "/personal-finance",
   },
 ];
 
@@ -298,6 +343,14 @@ export default function Home() {
                   return dateB - dateA;
                 })
                 .slice(0, 3);
+
+              if (sortedPosts.length === 0) {
+                return (
+                  <div className="text-gray-500 italic py-8">
+                    Content coming soon...
+                  </div>
+                );
+              }
 
               const heroPost = sortedPosts[0];
               const subPosts = sortedPosts.slice(1, 3);

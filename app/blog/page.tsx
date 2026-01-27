@@ -39,531 +39,142 @@ export default function BlogArchivePage() {
 
   // Combine posts from both categories
   const allPosts: PostItem[] = [
-    // Personal Finance - Latest Articles
     {
       title:
-        "How to Track Your Spending for 30 Days and Know Where Your Money Goes | Top Finance US",
-      slug: "how-to-track-your-spending-for-30-days",
+        "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
+      slug: "yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
       description:
-        "Stop guessing about your finances. Learn a simple 30-day spending tracking method to discover where your money really goes and create lasting habits.",
+        "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
       image:
-        "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
+        "https://media.topfinanzas.com/images/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in.webp",
+      date: "September 17, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "2 December 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title:
-        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance US",
-      slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
+      title: "Good Debt vs. Bad Debt: How to Tell the Difference",
+      slug: "good-debt-vs-bad-debt-how-to-tell-the-difference",
       description:
-        "Discover why we buy on impulse and learn practical strategies to master your money mindset. Start mindful saving today.",
+        "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
       image:
-        "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference.webp",
+      date: "September 3, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "25 November 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title:
-        'Automate Your Wealth: "Set It and Forget It" Financial System | Top Finance US',
-      slug: "automate-your-wealth",
+      title: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+      slug: "good-debt-vs-bad-debt-how-to-tell-the-difference-2",
       description:
-        'Learn how to automate your finances with our "Set it and forget it" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
+        "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
       image:
-        "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
+        "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
+      date: "September 5, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "19 November 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title:
-        "Stop Living Paycheck to Paycheck: 3 Changes to Break the Cycle | Top Finance US",
-      slug: "stop-living-paycheck-to-paycheck",
+      title: "Investing for Beginners: A Simple Guide to Getting Started",
+      slug: "investing-for-beginners-a-simple-guide-to-getting-started",
       description:
-        "Escape the paycheck-to-paycheck cycle with three practical cash flow changes. Learn how families are building financial breathing room without dramatic sacrifices.",
+        "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
       image:
-        "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
+        "https://media.topfinanzas.com/images/investing-for-beginners-a-simple-guide-to-getting-started.webp",
+      date: "September 10, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "13 November 2025",
+      categoryPath: "personal-finance",
     },
     {
       title:
-        "Financial Health Check: Where Does Your Money Go? | Top Finance US",
-      slug: "financial-health-check-where-does-your-money-go",
+        "A Savvy Traveler's Guide: Using Credit Card Points for Thanksgiving Travel",
+      slug: "a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel",
       description:
-        "Discover where your money really goes with our quick financial health check. Learn simple tracking methods that reveal spending patterns.",
+        "Master your travel rewards to save on Thanksgiving travel. Learn how to use credit card points strategically to book flights, hotels, and more without breaking your holiday budget.",
       image:
-        "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
+        "https://media.topfinanzas.com/images/a-savvy-travelers-guide-using-credit-card-points-for-thanksgiving-travel.webp",
+      date: "September 10, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "5 November 2025",
+      categoryPath: "personal-finance",
     },
     {
       title:
-        "The Hidden Costs of Homeownership That No One Tells You | Top Finance US",
-      slug: "hidden-costs-of-homeownership",
+        "Guide: How to Use Multiple Credit Cards to Maximize Your FICO Score",
+      slug: "guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score",
       description:
-        "Discover the unexpected expenses that surprise homeowners. From maintenance to insurance, learn to budget for hidden costs.",
+        "Discover how to use multiple credit cards strategically to maximize your FICO score. Learn about credit utilization, payment history, and best practices for managing multiple cards.",
       image:
-        "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
+        "https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp",
+      date: "September 12, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "28 October 2025",
+      categoryPath: "personal-finance",
     },
-    // Financial Solutions - Credit Cards
     {
-      title:
-        "RBS Purchase & Balance Transfer Card: Save on Interest with 0% Offers | Top Finance US",
-      slug: "rbs-purchase-balance-transfer-card",
+      title: "Top Credit Cards to Maximize Your Black Friday Savings",
+      slug: "top-credit-cards-to-maximize-your-black-friday-savings",
       description:
-        "The RBS Purchase & Balance Transfer Card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee.",
+        "Using the right plastic can help you earn significant cash back, provide crucial purchase protections, and even give you interest-free time to pay off your haul.",
       image:
-        "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "Bank of Scotland Credit Cards: Flexible Options for Every Need | Top Finance US",
-      slug: "bank-of-scotland-credit-cards",
-      description:
-        "Discover Bank of Scotland credit cards with options for daily spending, balance transfers, large purchases, and credit building.",
-      image:
-        "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "First Direct Credit Card: Simple Banking with Competitive Rates | Top Finance US",
-      slug: "first-direct-credit-card",
-      description:
-        "Discover the First Direct 1st card with 0% interest on purchases for 12 months, competitive rates, no annual fee, and 24/7 customer service.",
-      image:
-        "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "The Co-operative Bank Credit Card: Ethical Banking with Cashback Rewards | Top Finance US",
-      slug: "the-co-operative-bank-credit-card",
-      description:
-        "Discover the Co-operative Members card offering 0.5% cashback at Co-op stores and 0.3% everywhere else, with no annual fee.",
-      image:
-        "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "M&S Rewards Credit Card: Earn Points on Every Purchase | Top Finance US",
-      slug: "ms-rewards-credit-card",
-      description:
-        "Discover the M&S Rewards card that offers reward points on all your M&S spending and beyond, with exclusive member benefits.",
-      image:
-        "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "Tesco Bank Clubcard Credit Cards: Earn Points on Every Purchase | Top Finance US",
-      slug: "tesco-bank-clubcard-credit-cards",
-      description:
-        "Discover Tesco Bank Clubcard cards with 0% intro rates, low APR options, and Clubcard points on your daily spending.",
-      image:
-        "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "American Express Preferred Rewards Gold: Exclusive Travel and Lifestyle Benefits | Top Finance US",
-      slug: "american-express-preferred-rewards-gold-credit-card",
-      description:
-        "The American Express Gold card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits.",
-      image:
-        "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "Nationwide Building Society Credit Card: Member Benefits and 0% Offers | Top Finance US",
-      slug: "nationwide-building-society-credit-card",
-      description:
-        "The Nationwide Member card offers two 0% intro options: up to 24 months on balance transfers or 15 months on purchases.",
-      image:
-        "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "HSBC Rewards Credit Card: Earn Points on Every Purchase | Top Finance US",
-      slug: "hsbc-rewards-credit-card",
-      description:
-        "The HSBC Rewards card offers points on your daily spending, 0% interest on purchases for 6 months, and a $25 welcome bonus.",
-      image:
-        "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "24 October 2025",
-    },
-    {
-      title:
-        "Ocean Credit Card: Check Your Eligibility in 60 Seconds | Top Finance US",
-      slug: "ocean-credit-card",
-      description:
-        "The Ocean card offers credit limits from $200 to $8,000 with no annual fee. Check your eligibility with QuickCheck without affecting your credit history.",
-      image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Fluid Credit Card: Reduce Your Costs with Balance Transfers | Top Finance US",
-      slug: "fluid-credit-card",
-      description:
-        "The Fluid card offers 0% interest on balance transfers for 9 months, helping you save and pay off your debts faster.",
-      image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "John Lewis Partnership Card: Earn Rewards on Your Daily Shopping | Top Finance US",
-      slug: "john-lewis-partnership-card",
-      description:
-        "The John Lewis Partnership card lets you earn valuable points on your daily shopping at John Lewis, Waitrose, and beyond.",
-      image:
-        "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "118 118 Money Credit Card: Build Your Credit with Confidence | Top Finance US",
-      slug: "118-118-money-credit-card",
-      description:
-        "The 118 118 Money card offers guaranteed personalized credit limits and transparent terms to help you improve your credit history.",
-      image:
-        "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Vanquis Credit Card: Award-Winning Credit Building Solutions | Top Finance US",
-      slug: "vanquis-credit-card",
-      description:
-        "Discover Vanquis cards with personalized limits and award-winning features for building credit, plus 0% balance transfers.",
-      image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Capital One Classic Credit Card: Build Your Credit History | Top Finance US",
-      slug: "capital-one-uk-credit-card",
-      description:
-        "The Capital One Classic card helps you improve your credit with an initial limit of $200-$1,500, flexible payments, and no annual fee.",
-      image:
-        "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Aqua Credit Card: Improve Your Credit with Smart Features | Top Finance US",
-      slug: "aqua-credit-card",
-      description:
-        "The Aqua card offers personalized limits, expert support tools, and 24/7 fraud protection for building credit safely.",
-      image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Bip Credit Card: Digital Credit Under Your Control | Top Finance US",
-      slug: "bip-credit-card",
-      description:
-        "Discover Bip: a credit solution with no physical card, no hidden fees, and instant balance updates.",
-      image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Yonder Credit Card: Epic Rewards with No Foreign Transaction Fees | Top Finance US",
-      slug: "yonder-credit-card",
-      description:
-        "The free Yonder card gives you 1 point for every $1 spent with no foreign transaction fees, plus exclusive welcome offers.",
-      image:
-        "https://cdn.prod.website-files.com/6209512878b45f39119ebfb5/6839943447d06a3292522ecd_head-p-800.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title: "Zopa Credit Card: Award-Winning Card Management | Top Finance US",
-      slug: "zopa-credit-card",
-      description:
-        "Discover the Zopa card with easy app management, Credit Cushion feature, no foreign fees, and award-winning service.",
-      image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    {
-      title:
-        "Marbles Credit Card: Stay in Control of Your Finances | Top Finance US",
-      slug: "marbles-credit-card",
-      description:
-        "The Marbles card helps you manage your finances with a manageable limit, quick eligibility checker, and no annual fee.",
-      image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "23 October 2025",
-    },
-    // Personal Finance Posts
-    {
-      title:
-        "Inflation-Proof Your Life: 7 Smart Moves When Prices Rise | Top Finance US",
-      slug: "inflation-proof-your-life",
-      description:
-        "Discover seven practical strategies to protect your purchasing power during high inflation. Learn to eliminate spending leaks and build emergency funds.",
-      image:
-        "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
+        "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
+      date: "September 23, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "15 October 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title: "Best Personal Loans: Your Complete Guide | Top Finance US",
-      slug: "best-personal-loans",
-      description: "Complete guide to the best personal loans...",
-      image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "30 March 2025",
-    },
-    {
-      title:
-        "Best Rewards Credit Cards to Maximize Your Spending | Top Finance US",
-      slug: "best-rewards-credit-cards",
-      description: "Discover the best rewards credit cards...",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title:
-        "Best Cashback Credit Cards to Maximize Your Rewards | Top Finance US",
-      slug: "cashback-credit-cards",
-      description: "Discover the best cashback credit cards!...",
-      image: "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title:
-        "Credit Cards: Types, Benefits, and Keys to Financial Health | Top Finance US",
-      slug: "credit-card-types-benefits",
-      description: "Discover everything you need to know about credit cards...",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title: "Practical Guide to Getting Out of Debt | Top Finance US",
-      slug: "getting-out-of-debt",
-      description: "Feeling overwhelmed by debt? Get practical strategies...",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title: "Best Credit Cards with No Annual Fee | Top Finance US",
-      slug: "no-annual-fee-credit-cards",
-      description: "Find the best credit cards without an annual fee...",
-      image:
-        "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title: "Personal Loans: A Strategy for Managing Debt | Top Finance US",
-      slug: "personal-loans-debt-strategy",
+      title: "Why a 0% Intro APR Card Is Your Best Bet for Black Friday",
+      slug: "why-a-0-intro-apr-card-is-your-best-bet-for-black-friday",
       description:
-        "Discover how personal loans can help you consolidate debt...",
+        "Learn why a 0% intro APR credit card is the smart choice for financing big-ticket Black Friday purchases. Discover the benefits and how to use it responsibly.",
       image:
-        "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp", // Placeholder
+        "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
+      date: "October 8, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
+      categoryPath: "personal-finance",
     },
     {
       title:
-        "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance US",
-      slug: "tips-for-choosing-an-online-loan",
-      description: "Navigate the world of online loans with confidence...",
+        "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
+      slug: "flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday",
+      description:
+        "Learn the key differences between flat-rate and bonus category cashback cards to maximize your Black Friday savings. Discover which strategy works best for your shopping style.",
       image:
-        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
+        "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
+      date: "October 10, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "30 March 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title: "Best Credit Cards with 0% Intro APR Offers | Top Finance US",
-      slug: "top-credit-cards-0-intro-apr",
-      description: "Compare the best credit cards offering 0% intro rates...",
-      image: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title:
-        "Understanding Credit Card Interest Rates: Consumer Guide | Top Finance US",
-      slug: "understanding-credit-card-interest-rates",
-      description: "Learn how credit card interest rates work...",
-      image: "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 April 2025",
-    },
-    {
-      title:
-        "Side Hustle or Second Job? How to Choose the Right Income Booster",
-      slug: "side-hustle-or-second-job",
+      title: "Beat Inflation with Your Cashback",
+      slug: "beat-inflation-with-your-cashback",
       description:
-        "With the rising cost of living, many are looking for ways to boost their income. Whether it's a traditional second job or a side hustle, choosing correctly is key.",
-      image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "27 August 2025",
-    },
-    {
-      title:
-        "Beyond Spreadsheets: Create a Budget You'll Actually Follow | Top Finance US",
-      slug: "creating-a-budget-youll-actually-stick-to",
-      description:
-        "A modern budget guide covering the 50/30/20 rule, zero-based budgeting, and digital tools.",
-      image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "4 September 2025",
-    },
-    {
-      title:
-        "How to Ask for a Raise with Confidence (with Scripts and Prep Guide)",
-      slug: "how-to-ask-for-a-raise",
-      description:
-        "Learn exactly what to say when asking for a raise. This guide includes preparation steps, conversation scripts, and salary research tips.",
+        "Learn how to use cashback rewards strategically to fight inflation and keep more money in your pocket. Discover smart strategies to maximize your rewards.",
       image:
-        "https://media.topfinanzas.com/images/uk/how-to-ask-for-a-raise.webp",
+        "https://media.topfinanzas.com/images/beat-inflation-with-your-cashback.webp",
+      date: "October 31, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "3 October 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title:
-        "What is 'Lifestyle Creep' and How is it Silently Draining Your Wallet?",
-      slug: "what-is-lifestyle-creep",
+      title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
+      slug: "best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
       description:
-        "Discover how gradually increasing your spending as you earn more can sabotage your financial goals and learn strategies to avoid it.",
+        "Learn how 0% APR balance transfer cards can help you manage and pay off credit card debt. Understand the pros, cons, and key strategies for success.",
       image:
-        "https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp",
+        "https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp",
+      date: "October 31, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "9 October 2025",
+      categoryPath: "personal-finance",
     },
     {
-      title:
-        "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup",
-      slug: "financial-uncoupling-separating-finances-during-breakup",
+      title: "What Are the Best Secured Credit Cards for Building Credit?",
+      slug: "what-are-the-best-secured-credit-cards-for-building-credit",
       description:
-        "Practical guide on how to separate joint accounts, manage shared debts, and protect your credit after a relationship.",
+        "Learn how to find the best secured credit cards for building credit from scratch or repairing damaged credit. Discover what to look for and how to use them wisely.",
       image:
-        "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
+        "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
+      date: "October 31, 2025",
       category: "Personal Finance",
-      categoryPath: "/personal-finance",
-      date: "23 October 2025",
+      categoryPath: "personal-finance",
     },
-    // Financial Solutions Posts (Add relevant ones)
-    // Example: Add a few key ones, more can be added later
-    {
-      title: "Barclaycard Avios Plus Card: Premium Travel Rewards",
-      slug: "barclaycard-avios-plus",
-      description:
-        "The Barclaycard Avios Plus card offers premium travel benefits...",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "4 April 2025", // Example date
-    },
-    {
-      title:
-        "HSBC Personal Loan: Flexible Financing from a Global Banking Leader",
-      slug: "hsbc-personal-loan",
-      description: "Discover HSBC personal loans with competitive rates...",
-      image:
-        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "4 April 2025",
-    },
-    {
-      title: "Curve Credit Card",
-      slug: "curve-credit-card",
-      description:
-        "Discover the innovative Curve card that consolidates all your existing cards...",
-      image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "2 April 2025",
-    },
-    {
-      title: "Funding Circle Business Loan",
-      slug: "funding-circle-personal-loan",
-      description:
-        "Explore Funding Circle business loans offering quick financing...",
-      image:
-        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
-      date: "4 April 2025",
-    },
-    // ... Add more posts from financial-solutions as needed
   ];
 
   // Sort posts by date (newest first). Supports ISO strings and "DD Month YYYY".
