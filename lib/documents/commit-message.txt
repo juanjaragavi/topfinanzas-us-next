@@ -1,5 +1,3 @@
-feat(content): migrate 'Good Debt vs. Bad Debt' article and update listings
+chore(ads): add ads.txt configuration files
 
-- Add new article page at app/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference/page.tsx
-- Update post listings in app/page.tsx, app/blog/page.tsx, and app/personal-finance/page.tsx
-- Ensure correct ad unit placement and metadata.
+- Add ads.txt to root, app/, and public/ directories
