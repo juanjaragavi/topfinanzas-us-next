@@ -40,6 +40,102 @@ export default function BlogArchivePage() {
   // Combine posts from both categories
   const allPosts: PostItem[] = [
     {
+      title: "Discover the Benefits of the American Express® Gold Card",
+      slug: "benefits-of-the-american-express-gold-card",
+      description:
+        "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-american-express-gold-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
+      slug: "requirements-to-qualify-for-the-american-express-gold-card",
+      description:
+        "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+      image:
+        "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-american-express-gold-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
+      slug: "benefits-of-the-citi-diamond-preferred-card",
+      description:
+        "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-citi-diamond-preferred-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
+      slug: "requirements-to-qualify-for-the-citi-diamond-preferred-card",
+      description: "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-citi-diamond-preferred-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
+      slug: "benefits-of-the-wells-fargo-reflect-card",
+      description: "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
+      image: "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
+      slug: "requirements-to-qualify-for-the-wells-fargo-reflect-card",
+      description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements to qualify for the Discover it® Cash Back",
+      slug: "requirements-to-qualify-for-the-discover-it-cash-back",
+      description: "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
+      slug: "benefits-of-the-discover-it-cash-back",
+      description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+      image: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+      slug: "benefits-capital-one-savor-cash-rewards-credit-card",
+      description: "A card designed for life’s tasty moments. Explore the unlimited cash back and travel perks of the Capital One Savor Card.",
+      image: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements for the Capital One Savor Cash Rewards Credit Card",
+      slug: "requirements-for-the-capital-one-savor-cash-rewards-credit-card",
+      description: "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
+      image: "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp",
+      date: "January 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
       title:
         "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
       slug: "benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students",

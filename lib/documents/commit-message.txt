@@ -1,9 +1,10 @@
-feat: Add multiple financial solution pages and update listings
+feat: migrate financial solutions content
 
-- Add Fundbox Benefits and Requirements pages
-- Add National Funding Benefits and Requirements pages
-- Add Bank of America Business Loans Benefits and Requirements pages
-- Add QuickBridge Loans Benefits and Requirements pages
-- Add Bank of America Unlimited Cash Rewards for Students Benefits and Requirements pages
-- Add Bank of America Travel Rewards for Students Benefits and Requirements pages
-- Update blog and financial solutions listings with new content
+- Add Benefits and Requirements pages for:
+  - American Express Gold Card
+  - Citi Diamond Preferred Card
+  - Discover it Cash Back
+  - Wells Fargo Reflect Card
+  - Capital One Savor Cash Rewards Credit Card
+- Update blog index and financial solutions listing with new articles
+- Fix linting issues in Capital One and Discover pages (replace <a> with <Link>, remove unused imports)
