@@ -94,6 +94,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   // Updated Title and Description for US focus
   title: "Top Finance US | Choose wisely, live fully",
   description:

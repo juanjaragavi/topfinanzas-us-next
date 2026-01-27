@@ -3,6 +3,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions | Top Finanzas US",
   description: "Terms and Conditions of Use for Top Finanzas US.",
+  alternates: {
+    canonical: "/terms-conditions",
+    languages: {
+      "en-US": "/terms-conditions",
+    },
+  },
 };
 
 export default function TermsConditionsPage() {

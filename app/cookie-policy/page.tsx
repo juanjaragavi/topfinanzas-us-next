@@ -10,6 +10,12 @@ export const metadata = {
   title: "Cookie Policy | Top Finanzas US",
   description:
     "Learn about how Top Finanzas US uses cookies and similar technologies on our website.",
+  alternates: {
+    canonical: "/cookie-policy",
+    languages: {
+      "en-US": "/cookie-policy",
+    },
+  },
 };
 
 export default async function CookiePolicyPage() {
