@@ -59,9 +59,7 @@ export default function WellsFargoReflectBenefitsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">
-                    0% intro APR{" "}
-                  </span>
+                  <span className="font-bold text-gray-900">0% intro APR </span>
                   for 21 months on purchases and balance transfers.
                 </p>
               </div>
@@ -149,9 +147,9 @@ export default function WellsFargoReflectBenefitsPage() {
               Unmatched 0% Intro APR for 21 months
             </h2>
             <p className="text-gray-700 text-lg mb-4">
-              The most attractive feature of the Wells Fargo Reflect® Card is its
-              extensive introductory 0% APR period, which covers both purchases
-              and balance transfers:
+              The most attractive feature of the Wells Fargo Reflect® Card is
+              its extensive introductory 0% APR period, which covers both
+              purchases and balance transfers:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
               <li>
@@ -246,8 +244,8 @@ export default function WellsFargoReflectBenefitsPage() {
               Roadside Dispatch® Service
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              The card also provides access to the Roadside Dispatch® network, a
-              24/7 referral service for emergency roadside assistance. Whether
+              The card also provides access to the Roadside Dispatch® network,
+              a 24/7 referral service for emergency roadside assistance. Whether
               you need towing, a locksmith, or help with a flat tire, this
               feature can be a lifesaver during unexpected situations.
             </p>
@@ -273,12 +271,16 @@ export default function WellsFargoReflectBenefitsPage() {
                 provides the flexibility to pay it off over time.
               </li>
               <li>
-                <span className="font-bold">Value cost-effective benefits:</span>{" "}
+                <span className="font-bold">
+                  Value cost-effective benefits:
+                </span>{" "}
                 With no annual fee and added perks like cell phone protection,
                 this card delivers significant value without recurring charges.
               </li>
               <li>
-                <span className="font-bold">Prefer simplicity over rewards:</span>{" "}
+                <span className="font-bold">
+                  Prefer simplicity over rewards:
+                </span>{" "}
                 Since this card doesn’t offer points or cash back, it’s ideal
                 for those who prioritize saving on interest rather than earning
                 rewards.

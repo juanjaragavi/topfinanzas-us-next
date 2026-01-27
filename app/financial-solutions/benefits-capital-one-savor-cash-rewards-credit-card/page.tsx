@@ -9,7 +9,8 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+  title:
+    "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
   description:
     "A card designed for life’s tasty moments. Explore the unlimited cash back and travel perks of the Capital One Savor Card.",
 };
@@ -24,7 +25,8 @@ export default function CapitalOneSavorBenefitsPage() {
           <div className="max-w-4xl mx-auto">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards
+              Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your
+              Rewards
             </h1>
 
             {/* Ad Unit: square02 */}
@@ -80,7 +82,8 @@ export default function CapitalOneSavorBenefitsPage() {
                   <span className="font-bold text-gray-900">
                     No foreign transaction fees:
                   </span>{" "}
-                  Enjoy seamless travel and international purchases without extra costs.
+                  Enjoy seamless travel and international purchases without
+                  extra costs.
                 </p>
               </div>
 
@@ -94,21 +97,22 @@ export default function CapitalOneSavorBenefitsPage() {
                   <span className="font-bold text-gray-900">
                     Sign-up bonus:
                   </span>{" "}
-                  Earn a substantial cashback bonus when you meet the spending requirements within the first three months.
+                  Earn a substantial cashback bonus when you meet the spending
+                  requirements within the first three months.
                 </p>
               </div>
             </div>
 
             {/* CTA 1 (Internal Link to Requirements) */}
             <div className="flex justify-center mb-8">
-                <Link
-                    href="/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card"
-                    className="w-full"
-                >
-                    <Button className="w-full px-10 py-6 text-xl bg-[#AB5033] hover:bg-[#8f432b] text-white font-bold rounded-full shadow-md transition-all duration-200">
-                        How it works
-                    </Button>
-                </Link>
+              <Link
+                href="/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card"
+                className="w-full"
+              >
+                <Button className="w-full px-10 py-6 text-xl bg-[#AB5033] hover:bg-[#8f432b] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                  How it works
+                </Button>
+              </Link>
             </div>
 
             {/* Split Section (Image on Left in source, but Template has Image Right. Following Template structure for consistency, or source?
@@ -128,8 +132,8 @@ export default function CapitalOneSavorBenefitsPage() {
                The Requirements page just implemented used a split block.
                Let's use a full width image for the "Hero Image" as provided in the asset list, as it looks like a banner.
             */}
-            
-             <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+
+            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp"
                 alt="Capital One Savor Cash Rewards Credit Card Benefits"
@@ -140,27 +144,34 @@ export default function CapitalOneSavorBenefitsPage() {
             </div>
 
             {/* Main Content Sections */}
-            
+
             {/* 1. Rewards tailored to your lifestyle */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Rewards tailored to your lifestyle
             </h2>
             <p className="text-gray-700 text-lg mb-6">
-              For foodies and entertainment enthusiasts, the Savor Card is a perfect match. Whether dining out with friends, streaming your favorite shows, or attending live events, this card ensures every dollar spent adds value to your lifestyle.
+              For foodies and entertainment enthusiasts, the Savor Card is a
+              perfect match. Whether dining out with friends, streaming your
+              favorite shows, or attending live events, this card ensures every
+              dollar spent adds value to your lifestyle.
             </p>
 
             <h3 className="text-xl font-bold text-gray-800 mb-2">
               Dining out has never been more rewarding
             </h3>
             <p className="text-gray-700 text-lg mb-6">
-              The 4% cashback on dining is one of the most competitive rates available. It covers everything from fine dining to casual meals, allowing you to indulge while earning.
+              The 4% cashback on dining is one of the most competitive rates
+              available. It covers everything from fine dining to casual meals,
+              allowing you to indulge while earning.
             </p>
-            
+
             <h3 className="text-xl font-bold text-gray-800 mb-2">
               Entertainment perks
             </h3>
             <p className="text-gray-700 text-lg mb-8">
-              From concerts to sporting events, your purchases on tickets and related entertainment expenses earn 4% cashback. Make unforgettable memories while accumulating rewards.
+              From concerts to sporting events, your purchases on tickets and
+              related entertainment expenses earn 4% cashback. Make
+              unforgettable memories while accumulating rewards.
             </p>
 
             {/* 2. Everyday savings with grocery purchases */}
@@ -168,7 +179,9 @@ export default function CapitalOneSavorBenefitsPage() {
               Everyday savings with grocery purchases
             </h2>
             <p className="text-gray-700 text-lg mb-8">
-              Your weekly grocery run contributes to your rewards. The 2% cashback rate ensures that household essentials earn as much as your indulgent treats.
+              Your weekly grocery run contributes to your rewards. The 2%
+              cashback rate ensures that household essentials earn as much as
+              your indulgent treats.
             </p>
 
             {/* 3. Travel-friendly features */}
@@ -176,45 +189,55 @@ export default function CapitalOneSavorBenefitsPage() {
               Travel-friendly features
             </h2>
             <p className="text-gray-700 text-lg mb-8">
-              The Savor Card is a global companion. Its lack of foreign transaction fees and worldwide acceptance make it ideal for international trips. Whether you’re sampling street food in Bangkok or enjoying a café in Paris, your purchases are hassle-free.
+              The Savor Card is a global companion. Its lack of foreign
+              transaction fees and worldwide acceptance make it ideal for
+              international trips. Whether you’re sampling street food in
+              Bangkok or enjoying a café in Paris, your purchases are
+              hassle-free.
             </p>
 
-             {/* 4. Additional benefits */}
+            {/* 4. Additional benefits */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Additional benefits
             </h2>
             <ul className="list-disc pl-5 space-y-2 mb-8 text-gray-700 text-lg marker:text-[#AB5033] marker:font-bold">
-                <li>
-                    <strong>Sign-up bonus:</strong> Kickstart your rewards journey with an attractive bonus offer.
-                </li>
-                 <li>
-                    <strong>Flexible redemption:</strong> Use your rewards as cash back, statement credits, or towards experiences.
-                </li>
-                 <li>
-                    <strong>No annual fee (first year):</strong> Experience premium benefits without upfront costs.
-                </li>
+              <li>
+                <strong>Sign-up bonus:</strong> Kickstart your rewards journey
+                with an attractive bonus offer.
+              </li>
+              <li>
+                <strong>Flexible redemption:</strong> Use your rewards as cash
+                back, statement credits, or towards experiences.
+              </li>
+              <li>
+                <strong>No annual fee (first year):</strong> Experience premium
+                benefits without upfront costs.
+              </li>
             </ul>
 
             {/* 5. Closing thoughts / Your best option */}
             <div className="bg-gray-50 rounded-xl p-8 mb-10 border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Your best option
-                </h2>
-                <p className="text-gray-700 text-lg mb-6">
-                    The Capital One Savor Cash Rewards Credit Card is more than just a credit card; it’s a lifestyle upgrade. With top-tier cashback rates and versatile benefits, it’s a must-have for anyone looking to maximize their spending power.
-                </p>
-                
-                {/* CTA 2 (Internal Link to Requirements) */}
-                <div className="flex justify-center">
-                    <Link
-                        href="/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card"
-                        className="w-full md:w-auto"
-                    >
-                        <Button className="w-full md:w-auto px-8 py-4 text-xl bg-[#AB5033] hover:bg-[#8f432b] text-white font-bold rounded-full shadow-lg transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
-                            How it works
-                        </Button>
-                    </Link>
-                </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Your best option
+              </h2>
+              <p className="text-gray-700 text-lg mb-6">
+                The Capital One Savor Cash Rewards Credit Card is more than just
+                a credit card; it’s a lifestyle upgrade. With top-tier cashback
+                rates and versatile benefits, it’s a must-have for anyone
+                looking to maximize their spending power.
+              </p>
+
+              {/* CTA 2 (Internal Link to Requirements) */}
+              <div className="flex justify-center">
+                <Link
+                  href="/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card"
+                  className="w-full md:w-auto"
+                >
+                  <Button className="w-full md:w-auto px-8 py-4 text-xl bg-[#AB5033] hover:bg-[#8f432b] text-white font-bold rounded-full shadow-lg transition-all duration-200 inline-flex items-center justify-center transform hover:scale-105">
+                    How it works
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             <AIContentDisclaimer />

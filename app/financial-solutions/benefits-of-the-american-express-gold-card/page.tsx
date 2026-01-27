@@ -145,9 +145,9 @@ export default function AmexGoldBenefitsPage() {
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>4X points at restaurants worldwide,</strong> including
-                    takeout and delivery services, on up to $50,000 in purchases
-                    per year. After that, you earn 1X point.
+                    <strong>4X points at restaurants worldwide,</strong>{" "}
+                    including takeout and delivery services, on up to $50,000 in
+                    purchases per year. After that, you earn 1X point.
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -229,7 +229,8 @@ export default function AmexGoldBenefitsPage() {
               </ul>
               <p className="mb-6">
                 Altogether, these perks add up to over $500 in annual credits,
-                which can easily offset the $325 annual fee if used strategically.
+                which can easily offset the $325 annual fee if used
+                strategically.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-6">
@@ -243,8 +244,8 @@ export default function AmexGoldBenefitsPage() {
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>No foreign transaction fees,</strong> helping you save
-                    on international purchases.
+                    <strong>No foreign transaction fees,</strong> helping you
+                    save on international purchases.
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -274,15 +275,17 @@ export default function AmexGoldBenefitsPage() {
                 </li>
               </ul>
               <p className="mb-6">
-                You’ll also gain access to tools like the Global Assist® Hotline,
-                offering 24/7 emergency assistance when you’re more than 100
-                miles from home.
+                You’ll also gain access to tools like the Global Assist®
+                Hotline, offering 24/7 emergency assistance when you’re more
+                than 100 miles from home.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-6">
                 Flexible payment options with Plan It® and pay over time
               </h2>
-              <p className="mb-4">The card offers flexible payment solutions:</p>
+              <p className="mb-4">
+                The card offers flexible payment solutions:
+              </p>
               <ol className="space-y-4 mb-8 list-none pl-0 counter-reset-list">
                 <li className="flex items-start">
                   <div
@@ -292,8 +295,8 @@ export default function AmexGoldBenefitsPage() {
                     1
                   </div>
                   <p>
-                    <strong>Pay Over Time:</strong> Allows you to carry a balance
-                    with interest on selected purchases.
+                    <strong>Pay Over Time:</strong> Allows you to carry a
+                    balance with interest on selected purchases.
                   </p>
                 </li>
                 <li className="flex items-start">

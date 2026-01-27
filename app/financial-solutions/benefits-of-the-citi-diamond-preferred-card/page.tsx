@@ -25,8 +25,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
           <div className="max-w-4xl mx-auto">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              Benefits of the Citi® Diamond Preferred® Card: The best choice for
-              balance transfers
+              Benefits of the Citi® Diamond Preferred® Card: The best choice
+              for balance transfers
             </h1>
 
             {/* Ad Unit: square02 */}
@@ -39,8 +39,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
 
             {/* Intro */}
             <p className="text-lg text-gray-800 mb-6">
-              Save big with 0% APR for 21 months on balance transfers. The Citi®
-              Diamond Preferred® Card is your go-to tool to manage debt
+              Save big with 0% APR for 21 months on balance transfers. The
+              Citi® Diamond Preferred® Card is your go-to tool to manage debt
               smarter—no annual fee!
             </p>
 
@@ -81,7 +81,9 @@ export default function CitiDiamondPreferredBenefitsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">No annual fee </span>
+                  <span className="font-bold text-gray-900">
+                    No annual fee{" "}
+                  </span>
                   —save money while managing debt.
                 </p>
               </div>
@@ -126,12 +128,12 @@ export default function CitiDiamondPreferredBenefitsPage() {
             <div className="prose max-w-none text-gray-700">
               <p className="text-lg text-gray-800 mb-6">
                 If you’re looking for a straightforward credit card to help you
-                manage existing debt or finance large purchases, the Citi® Diamond
-                Preferred® Card could be the ideal option. With one of the longest
-                0% APR periods available for balance transfers, a 0% APR on
-                purchases, and no annual fee, this card is tailored for
-                individuals with excellent credit who want to save on interest and
-                take control of their finances. Let’s explore the card’s top
+                manage existing debt or finance large purchases, the Citi®
+                Diamond Preferred® Card could be the ideal option. With one of
+                the longest 0% APR periods available for balance transfers, a 0%
+                APR on purchases, and no annual fee, this card is tailored for
+                individuals with excellent credit who want to save on interest
+                and take control of their finances. Let’s explore the card’s top
                 benefits and why it stands out in the market.
               </p>
 
@@ -208,7 +210,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
               <p className="mb-8">
                 Once the introductory 12-month period ends, the standard
                 variable APR of 17.49% to 28.24% will apply, so it’s important
-                to have a payment plan in place to make the most of this feature.
+                to have a payment plan in place to make the most of this
+                feature.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-6">
@@ -244,8 +247,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 Citi’s exclusive tools and cardholder perks
               </h2>
               <p className="mb-4">
-                Beyond its powerful APR offers, the Citi® Diamond Preferred® Card
-                includes several features that add long-term value:
+                Beyond its powerful APR offers, the Citi® Diamond Preferred®
+                Card includes several features that add long-term value:
               </p>
               <ul className="space-y-4 mb-6 list-none pl-0">
                 <li className="flex items-start">
@@ -260,8 +263,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>Citi Entertainment®:</strong> Enjoy exclusive access
-                    to presale tickets and VIP experiences for concerts,
+                    <strong>Citi Entertainment®:</strong> Enjoy exclusive
+                    access to presale tickets and VIP experiences for concerts,
                     sporting events, and more. Whether you’re a music lover or a
                     sports fan, this perk adds extra value for cardholders.
                   </p>
@@ -290,8 +293,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 Flexible payment options
               </h2>
               <p className="mb-4">
-                The Citi® Diamond Preferred® Card also offers payment flexibility
-                to help you manage your finances:
+                The Citi® Diamond Preferred® Card also offers payment
+                flexibility to help you manage your finances:
               </p>
               <ol className="space-y-4 mb-8 list-none pl-0 counter-reset-list">
                 <li className="flex items-start">
