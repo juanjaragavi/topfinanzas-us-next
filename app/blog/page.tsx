@@ -41,6 +41,142 @@ export default function BlogArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
+      slug: "benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+      description:
+        "The Bank of America® Travel Rewards Credit Card for Students is designed for young adventurers looking to make the most of their travel experiences.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title:
+        "Requirements for the Bank of America® Travel Rewards Credit Card for Students",
+      slug: "requirements-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+      description:
+        "Essential steps to qualify for the perfect student credit card. Learn about the requirements and application process for the Bank of America® Travel Rewards Credit Card for Students.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-travel-rewards-credit-card-for-students.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title:
+        "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+      slug: "benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+      description:
+        "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title:
+        "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+      slug: "requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+      description:
+        "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits QuickBridge Loans",
+      slug: "benefits-quickbridge-loans",
+      description:
+        "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "QuickBridge Loans Requirements",
+      slug: "quickbridge-loans-requirements",
+      description:
+        "A straightforward guide to securing your next business loan. Learn about QuickBridge Loans eligibility requirements and application process.",
+      image:
+        "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Bank of America Business Loans Requirements: Your Best Option",
+      slug: "bank-of-america-business-loans-requirements",
+      description:
+        "Unlock the financing you need for your business with simple requirements. Learn about Bank of America's business loan eligibility and application process.",
+      image:
+        "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
+      date: "October 24, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Bank of America Business Loan Benefits",
+      slug: "bank-of-america-business-loans-benefits",
+      description:
+        "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+      image:
+        "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "National Funding Benefits",
+      slug: "national-funding-benefits",
+      description:
+        "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+      image:
+        "https://media.topfinanzas.com/images/national-funding-benefits.webp",
+      date: "October 24, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements for National Funding Loans",
+      slug: "requirements-for-national-funding-loans",
+      description:
+        "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
+      date: "October 24, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Smarter financing for your business: Fundbox benefits",
+      slug: "smarter-financing-for-your-business-fundbox-benefits",
+      description:
+        "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+      image:
+        "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
+      date: "October 24, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Fundbox Loan Requirements",
+      slug: "fundbox-loan-requirements",
+      description:
+        "Fundbox offers small business owners an easy way to manage cash flow. Learn about the requirements, eligibility factors, and how to apply.",
+      image:
+        "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp",
+      date: "October 24, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title:
         "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
       slug: "yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
       description:
@@ -63,7 +199,8 @@ export default function BlogArchivePage() {
       categoryPath: "personal-finance",
     },
     {
-      title: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+      title:
+        "The Magic of Compound Interest: How Your Money Can Grow Over Time",
       slug: "good-debt-vs-bad-debt-how-to-tell-the-difference-2",
       description:
         "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",

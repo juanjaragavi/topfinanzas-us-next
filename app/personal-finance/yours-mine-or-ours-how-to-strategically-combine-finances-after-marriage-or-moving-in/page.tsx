@@ -1,5 +1,4 @@
 import { BlogPost } from "@/components/mdx/blog-post";
-import Link from "next/link";
 
 export const metadata = {
   title:
@@ -127,10 +126,10 @@ export default function PostPage() {
         to a joint account for shared expenses like rent, utilities, and
         groceries. This approach offers a great balance of teamwork and
         autonomy. You can contribute to the joint account equally or
-        proportionally based on your incomes. This method allows you to
-        maintain your financial independence while still working together on
-        your shared financial goals. It’s a flexible personal finance strategy
-        for modern couples.
+        proportionally based on your incomes. This method allows you to maintain
+        your financial independence while still working together on your shared
+        financial goals. It’s a flexible personal finance strategy for modern
+        couples.
       </p>
 
       <h3>3. Keeping it Separate: The Independent Route</h3>
