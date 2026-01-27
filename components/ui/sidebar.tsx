@@ -828,17 +828,16 @@ const SidebarNewsletter = React.forwardRef<
       {...props}
     >
       <h3 className="font-semibold text-lg mb-2">
-        Suscríbete a nuestro boletín
+        Subscribe to our Newsletter
       </h3>
       <p className="text-sm mb-4">
-        Recibe los mejores consejos financieros directamente en tu bandeja de
-        entrada.
+        Get the best financial advice directly in your inbox.
       </p>
 
       <form onSubmit={onSubmit} className="space-y-2">
         <input
           type="email"
-          placeholder="Tu dirección de correo electrónico"
+          placeholder="Your email address"
           className="w-full px-3 py-2 border rounded-xl text-sm"
           required
         />
@@ -846,7 +845,7 @@ const SidebarNewsletter = React.forwardRef<
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full"
         >
-          Suscribirme
+          Subscribe
         </button>
       </form>
     </div>

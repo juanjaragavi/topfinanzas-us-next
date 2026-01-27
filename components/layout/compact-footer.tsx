@@ -26,10 +26,9 @@ export function CompactFooter() {
         {/* Copyright Text Block */}
         <div className="text-left mb-4">
           <p className="text-xs uppercase tracking-wide text-white">
-            TODOS LOS DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. LA
-            REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA SIN LA
-            AUTORIZACIÓN POR ESCRITO Y EXPRESA DEL TITULAR DE LOS DERECHOS DE
-            AUTOR ESTÁ PROHIBIDA.
+            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL
+            REPRODUCTION BY ANY MEANS OR FORM WITHOUT THE WRITTEN AND EXPRESS
+            AUTHORIZATION OF THE COPYRIGHT HOLDER IS PROHIBITED.
           </p>
         </div>
 

@@ -26,47 +26,47 @@ export const BRAND_STATIC_FIELDS_LOWER = {
 export const commonStrings = {
   copyright: "© Top Networks Inc. 2024",
   important: {
-    prefix: "Importante:",
+    prefix: "Important:",
     emailVerification:
-      "por favor verifica que tu correo sea el correcto para poder enviarte la información que necesitas",
+      "please verify your email is correct to receive the information you need",
   },
 };
 
 export const formStrings = {
   progressBar: {
-    complete: "% completado",
-    keepItUp: ", ¡sigue así!",
+    complete: "% completed",
+    keepItUp: ", keep it up!",
     completed: "!",
   },
   footer: {
     termsText:
-      "Al registrarme, acepto recibir mensajes de texto al número de teléfono y correo electrónico proporcionados y acepto que puedo darme de baja de la lista de SMS y correo electrónico en cualquier momento. Pueden aplicarse cargos por mensajes SMS. También confirmo que tengo más de 18 años y acepto los términos establecidos en los",
-    termsLink: "Términos de uso",
-    and: "y",
-    privacyLink: "Política de privacidad",
+      "By signing up, I agree to receive text messages to the provided phone number and email and agree that I can unsubscribe from the SMS and email list at any time. SMS charges may apply. I also confirm that I am over 18 years old and accept the terms set forth in the",
+    termsLink: "Terms of Use",
+    and: "and",
+    privacyLink: "Privacy Policy",
     disclaimer:
-      ". Importante: por favor verifica que tu correo sea el correcto para poder enviarte la información que necesitas",
+      ". Important: please verify your email is correct to receive the information you need",
   },
   submission: {
-    success: "¡Formulario enviado con éxito!",
+    success: "Form submitted successfully!",
   },
 };
 
 export const step3Strings = {
-  title: "¡Excelente!",
+  title: "Excellent!",
   fields: {
     email: "Email",
-    name: "Nombre",
-    lastName: "Apellido",
-    phone: "Número de teléfono",
+    name: "First Name",
+    lastName: "Last Name",
+    phone: "Phone Number",
   },
-  checkbox: "Acepto políticas de datos y términos y condiciones acá",
-  button: "VER OPCIONES DE TARJETA",
+  checkbox: "I accept the privacy policy and terms and conditions here",
+  button: "SEE CARD OPTIONS",
   placeholders: {
     email: "Email",
-    name: "Nombre",
-    lastName: "Apellido",
-    phone: "Número de teléfono",
+    name: "First Name",
+    lastName: "Last Name",
+    phone: "Phone Number",
   },
 };
 
