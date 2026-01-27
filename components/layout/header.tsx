@@ -503,35 +503,39 @@ export function Header() {
               </button>
               {isCategoriesOpen && (
                 <div className="bg-gray-50 px-6 py-2 space-y-2">
-                  {/* Categories based on reference + existing nav */}
-                  <div className="flex items-center text-gray-600 py-1">
+                  {/* Categories based on reference localized for US */}
+                  <Link
+                    href="/financial-solutions"
+                    className="flex items-center text-gray-600 py-1 hover:text-primary transition-colors"
+                    onClick={closeMobileMenu}
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Smart Savings</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
+                    <span>Financial Solutions</span>
+                  </Link>
+                  <Link
+                    href="/personal-finance"
+                    className="flex items-center text-gray-600 py-1 hover:text-primary transition-colors"
+                    onClick={closeMobileMenu}
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Zero Debt</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
+                    <span>Personal Finance</span>
+                  </Link>
+                  <Link
+                    href="/credit-cards"
+                    className="flex items-center text-gray-600 py-1 hover:text-primary transition-colors"
+                    onClick={closeMobileMenu}
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Choose Your Card</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
+                    <span>Cards</span>
+                  </Link>
+                  <Link
+                    href="/loans"
+                    className="flex items-center text-gray-600 py-1 hover:text-primary transition-colors"
+                    onClick={closeMobileMenu}
+                  >
                     <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Home Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Student Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Small Business Finance</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 py-1">
-                    <ChevronRight className="w-4 h-4 mr-2 text-gray-300" />
-                    <span>Finance for Everyone</span>
-                  </div>
+                    <span>Loans</span>
+                  </Link>
                 </div>
               )}
             </div>
@@ -542,6 +546,7 @@ export function Header() {
             <Link
               href="/loans"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
+              onClick={closeMobileMenu}
             >
               LOANS
             </Link>
@@ -550,8 +555,9 @@ export function Header() {
 
             {/* CREDIT CARDS */}
             <Link
-              href="/cards"
+              href="/credit-cards"
               className="block px-6 py-3 font-bold text-gray-800 uppercase tracking-wide hover:bg-gray-50"
+              onClick={closeMobileMenu}
             >
               CREDIT CARDS
             </Link>

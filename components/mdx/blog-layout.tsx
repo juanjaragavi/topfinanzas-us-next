@@ -107,8 +107,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/automate-your-wealth"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Automatiza tu Riqueza: Sistema de Finanzas
-                          "Configúralo y Olvídalo"
+                          Automate Your Wealth: "Set It and Forget It" Finance System
                         </Link>
                       </div>
                     </div>
@@ -132,8 +131,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/inflation-proof-your-life"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Protege tu Vida de la Inflación: 7 Movimientos
-                          Inteligentes
+                          Inflation-Proof Your Life: 7 Smart Money Moves
                         </Link>
                       </div>
                     </div>
@@ -157,7 +155,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/what-is-lifestyle-creep"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          ¿Qué es la "Inflación del Estilo de Vida"?
+                          What Is "Lifestyle Creep"?
                         </Link>
                       </div>
                     </div>
@@ -181,7 +179,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/creating-a-budget-youll-actually-stick-to"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Crea un Presupuesto que Realmente Funcione
+                          Create a Budget That Actually Works
                         </Link>
                       </div>
                     </div>
