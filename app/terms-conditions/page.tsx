@@ -21,10 +21,10 @@ export default function TermsConditionsPage() {
           <p>
             The platform{" "}
             <a
-              href="http://www.topfinanzas.com"
+              href="https://us.topfinanzas.com"
               className="text-blue-600 hover:underline"
             >
-              www.topfinanzas.com
+              us.topfinanzas.com
             </a>{" "}
             (the &quot;Platform&quot; or &quot;Site&quot;) is owned and operated
             by Top Networks Inc. (&quot;Top Networks,&quot; &quot;we,&quot;
@@ -51,12 +51,12 @@ export default function TermsConditionsPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-[#2E74B5]">
-            1. About www.topfinanzas.com
+            1. About us.topfinanzas.com
           </h2>
           <p>
-            Topfinanzas.com is a website created to inform users about financial
-            products and services offered by partner companies. It aims to
-            assist users in selecting products that meet their specific
+            us.topfinanzas.com is a website created to inform users about
+            financial products and services offered by partner companies. It
+            aims to assist users in selecting products that meet their specific
             financial needs and preferences.
           </p>
           <p>

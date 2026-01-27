@@ -7,9 +7,9 @@ import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
 
 export const metadata = {
-  title: "Política de Cookies - TopFinanzas MX",
+  title: "Cookie Policy | Top Finanzas US",
   description:
-    "Obtén más información sobre cómo TopFinanzas MX utiliza cookies y tecnologías similares en nuestro sitio web.",
+    "Learn about how Top Finanzas US uses cookies and similar technologies on our website.",
 };
 
 export default async function CookiePolicyPage() {
@@ -18,7 +18,7 @@ export default async function CookiePolicyPage() {
     process.cwd(),
     "content/legal/cookie-policy.mdx", // Updated path
   );
-  let source = "# Política de Cookies\n\nContenido no encontrado.";
+  let source = "# Cookie Policy\n\nContent not found.";
 
   try {
     if (fs.existsSync(filePath)) {
@@ -27,7 +27,7 @@ export default async function CookiePolicyPage() {
   } catch (error) {
     logger.error("Error loading cookie policy file:", error); // Updated error message
     source =
-      "# Error al cargar el contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
+      "# Error loading content\n\nSorry, there was an error loading this content.";
   }
 
   // Compile MDX content, properly handling frontmatter

@@ -3,10 +3,9 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ReactNode } from "react"; // Added ReactNode import
+import { ReactNode } from "react";
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -91,7 +90,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           </div>
 
           {/* Title */}
-          <h1 className="text-h1 mb-4">{title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">{title}</h1>
 
           {/* Author and date */}
           <div className="flex items-center mb-8">
@@ -100,7 +99,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               alt={author}
               width={48}
               height={48}
-              className="rounded-xl mr-4"
+              className="rounded-full mr-4"
+              onError={(e) => {
+                e.currentTarget.src = "https://media.topfinanzas.com/images/favicon.webp";
+              }}
             />
             <div>
               <div className="font-medium text-gray-900">{author}</div>
@@ -112,40 +114,31 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           </div>
 
           {/* Share buttons */}
-          <div className="flex mb-8">
-            <Button
-              variant="secondary"
-              className="mr-2 bg-blue-600 hover:bg-blue-700 text-white"
-            >
+          <div className="flex gap-3 mb-8">
+            <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors">
               <svg
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                className="h-4 w-4 mr-2"
+                className="h-4 w-4"
               >
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
               Share
-            </Button>
-            <Button
-              variant="secondary"
-              className="mr-2 bg-blue-400 hover:bg-blue-500 text-white"
-            >
+            </button>
+            <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-400 hover:bg-blue-500 text-white text-sm font-medium transition-colors">
               <svg
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                className="h-4 w-4 mr-2"
+                className="h-4 w-4"
               >
                 <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
               </svg>
               Tweet
-            </Button>
-            <Button
-              variant="secondary"
-              className="bg-gray-800 hover:bg-gray-900 text-white"
-            >
+            </button>
+            <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-800 hover:bg-gray-900 text-white text-sm font-medium transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 mr-2"
+                className="h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -158,7 +151,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 />
               </svg>
               Share
-            </Button>
+            </button>
           </div>
 
           {featuredImage && (
@@ -168,7 +161,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 alt={title}
                 width={1200}
                 height={675}
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto"
                 priority
               />
             </div>
@@ -275,7 +268,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     alt={author}
                     width={60}
                     height={60}
-                    className="rounded-xl mb-4 sm:mb-0 sm:mr-4"
+                    className="rounded-full mb-4 sm:mb-0 sm:mr-4"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://media.topfinanzas.com/images/favicon.webp";
+                    }}
                   />
                   <div className="text-left sm:text-left">
                     <h3 className="text-h3 mb-1">{author}</h3>
@@ -324,9 +320,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <p className="text-body mb-3">
                     Be the first to share your thoughts on this article.
                   </p>
-                  <Button className="text-[10px] py-1.5">
+                  <button className="text-[10px] py-1.5 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors">
                     Leave a Comment
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
@@ -449,9 +445,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     placeholder="Your email address"
                     className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
-                  <Button className="w-full text-[10px] py-1.5 rounded-full">
+                  <button className="w-full text-[10px] py-1.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors">
                     Subscribe
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>

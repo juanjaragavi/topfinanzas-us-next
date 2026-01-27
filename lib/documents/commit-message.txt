@@ -1,5 +1,5 @@
-style(homepage): update Hero section to legacy TopFinance US blue
+feat(content): migrate 'Good Debt vs. Bad Debt' article and update listings
 
-- Change Hero background color from #6366F1 (indigo) to #1c5ad8 (legacy blue)
-- Match brand color used on legacy us.topfinanzas.com WordPress site
-- Update code comment to reflect legacy US site reference
+- Add new article page at app/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference/page.tsx
+- Update post listings in app/page.tsx, app/blog/page.tsx, and app/personal-finance/page.tsx
+- Ensure correct ad unit placement and metadata.

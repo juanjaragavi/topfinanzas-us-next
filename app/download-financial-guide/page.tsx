@@ -25,7 +25,7 @@ function DownloadGuidePageContent() {
         <div className="absolute inset-0">
           <Image
             src="https://media.topfinanzas.com/images/banner-home-mobile.webp"
-            alt="Pareja trabajando en sus finanzas"
+            alt="Couple working on their finances"
             fill
             className="object-cover object-center"
             priority
