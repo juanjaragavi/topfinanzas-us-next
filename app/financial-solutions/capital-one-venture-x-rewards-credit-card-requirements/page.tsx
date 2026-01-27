@@ -7,12 +7,12 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "American Express Platinum Card Requirements",
+  title: "Capital One Venture X Rewards Credit Card Requirements",
   description:
-    "The Platinum Card from American Express offers outstanding perks. Check credit score, income, and residency requirements to qualify.",
+    "Elevate your travel experience with Venture X. Check credit score, income, and residency requirements to qualify for premium rewards.",
 };
 
-export default function AmexPlatinumRequirementsPage() {
+export default function CapitalOneVentureXRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
       <Header />
@@ -22,7 +22,7 @@ export default function AmexPlatinumRequirementsPage() {
           <div className="max-w-4xl mx-auto">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              American Express Platinum Card Requirements
+              Capital One Venture X Rewards Credit Card Requirements
             </h1>
 
             {/* Ad Unit: square03 */}
@@ -35,22 +35,41 @@ export default function AmexPlatinumRequirementsPage() {
 
             {/* Intro */}
             <p className="text-lg text-gray-800 mb-6">
-              The Platinum Card from American Express offers outstanding perks
-              and exclusive benefits, but acquiring this prestigious card
-              requires meeting specific qualifications and following certain
-              steps.
+              Elevate your travel experience with the Capital One Venture X
+              Rewards Credit Card. Designed for avid travelers, this card
+              unlocks exclusive perks and opportunities to make every journey
+              memorable.
+            </p>
+
+            <p className="text-lg text-gray-700 mb-6">
+              However, accessing these premium benefits requires meeting
+              specific eligibility criteria. Understanding these requirements is
+              the first step toward securing your Venture X card.
             </p>
 
             {/* Featured Image */}
             <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
-                src="https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp"
-                alt="American Express Platinum Card Requirements"
+                src="https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp"
+                alt="Capital One Venture X Rewards Credit Card Requirements"
                 width={1200}
                 height={675}
                 priority
               />
             </div>
+
+            <p className="text-lg text-gray-700 mb-6">
+              Before you apply, review the key qualifications needed to increase
+              your chances of approval for this premium travel card.
+            </p>
+
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
 
             {/* Banner 1 */}
             <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
@@ -62,66 +81,62 @@ export default function AmexPlatinumRequirementsPage() {
               />
             </div>
 
-            {/* Ad Unit: square04 (Placed after visuals/intro flow) */}
-            <div
-              id="square04"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Requirements
             </h2>
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#D8D9DD] p-1">
-                    <ArrowRight className="h-4 w-4 text-black" />
+                  <div className="rounded-full bg-[#0A496C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">Age:</span> Must be
-                  at least 18 years old.
+                  <span className="font-bold text-gray-900">Age:</span> You must
+                  be at least 18 years old (19 in Alabama and Nebraska).
                 </p>
               </div>
 
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#D8D9DD] p-1">
-                    <ArrowRight className="h-4 w-4 text-black" />
+                  <div className="rounded-full bg-[#0A496C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
                   <span className="font-bold text-gray-900">Residency:</span>{" "}
-                  Must be a U.S. citizen or legal resident (Green Card holder).
+                  Must be a U.S. citizen or permanent resident with a valid
+                  Social Security Number (SSN) or Individual Taxpayer
+                  Identification Number (ITIN).
                 </p>
               </div>
 
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#D8D9DD] p-1">
-                    <ArrowRight className="h-4 w-4 text-black" />
+                  <div className="rounded-full bg-[#0A496C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">Credit Score:</span>{" "}
-                  Excellent score required, typically{" "}
-                  <span className="font-bold">700 or higher</span>.
+                  <span className="font-bold text-gray-900">
+                    Excellent Credit:
+                  </span>{" "}
+                  Capital One typically requires excellent credit for this card.
+                  A score of <span className="font-bold">740 or higher</span> is
+                  recommended.
                 </p>
               </div>
 
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#D8D9DD] p-1">
-                    <ArrowRight className="h-4 w-4 text-black" />
+                  <div className="rounded-full bg-[#0A496C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">Income:</span> While
-                  not officially specified, applicants typically need an income
-                  of <span className="font-bold">$50,000 to $100,000+</span> per
-                  year to qualify.
+                  <span className="font-bold text-gray-900"> Income:</span>{" "}
+                  Proof of stable income may be required to ensure you can
+                  manage credit obligations effectively.
                 </p>
               </div>
             </div>
@@ -137,38 +152,37 @@ export default function AmexPlatinumRequirementsPage() {
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              How to apply for the Platinum Card from American Express
+              How to apply for the Capital One Venture X Rewards Credit Card
             </h2>
             <div className="space-y-4 mb-8">
               <p className="text-gray-700 text-lg">
-                Applying for the Platinum Card is a straightforward process that
-                can be done online in just a few minutes.
+                The application process is straightforward and secure:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-[#D8D9DD] mr-3 mt-1 flex-shrink-0 fill-current" />
+                  <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
                   <p className="text-gray-700 text-lg">
-                    Visit the secure American Express website.
+                    <span className="font-bold">
+                      Navigate to the Official Site:
+                    </span>{" "}
+                    Click the link below to visit the secure Capital One Venture
+                    X page.
                   </p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-[#D8D9DD] mr-3 mt-1 flex-shrink-0 fill-current" />
+                  <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
                   <p className="text-gray-700 text-lg">
-                    Fill out the application form with your personal and
-                    financial information.
+                    <span className="font-bold">Complete the Application:</span>{" "}
+                    Provide your personal information, financial details, and
+                    contact info.
                   </p>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-[#D8D9DD] mr-3 mt-1 flex-shrink-0 fill-current" />
+                  <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
                   <p className="text-gray-700 text-lg">
-                    Review the terms and conditions carefully.
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-[#D8D9DD] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
-                    Submit your application and wait for a decision, which is
-                    often instant.
+                    <span className="font-bold">Submit for Review:</span> Submit
+                    your application to receive an instant decision in most
+                    cases.
                   </p>
                 </div>
               </div>
@@ -185,33 +199,22 @@ export default function AmexPlatinumRequirementsPage() {
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              What to do after applying
-            </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Once approved, you will receive your card in the mail. Activate it
-              immediately and set up your online account to start managing your
-              spending and rewards. Don&apos;t forget to explore the travel
-              benefits andenroll in the various credits available to you.
-            </p>
-
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Your best option
+              Start your journey
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              The Platinum Card is a valuable financial tool that requires
-              applicants to meet high standards. Prospective cardholders can
-              improve their approval odds by verifying their credit score and
-              ensuring they meet income and residency criteria before applying.
+              Don&apos;t miss out on the premium travel benefits that await you.
+              Verify your eligibility and apply today to start earning miles on
+              every purchase.
             </p>
 
             <div className="flex justify-center mb-8">
               <a
-                href="https://www.americanexpress.com/us/credit-cards/card/platinum/"
+                href="https://www.capitalone.com/credit-cards/venture-x/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#D8D9DD] hover:bg-gray-300 text-gray-900 font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-[#0A496C] hover:bg-[#073650] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
               >
-                Apply Now at American Express
+                Apply Now at Capital One
               </a>
             </div>
 
