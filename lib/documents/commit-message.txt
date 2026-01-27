@@ -1,7 +1,5 @@
-fix: Refactor mobile menu positioning
+fix: Localize Recent Articles and related components
 
-- Extract MobileMenu to standalone component
-- Move MobileMenu to render outside SiteWrapper in root layout
-- Apply fixed positioning to MobileMenu relative to viewport
-- Remove legacy mobile menu code from Header
-- Ensure menu persists on scroll
+- Remove 'UK' specific terminology from Personal Finance metadata
+- Translate legacy Spanish titles in Recent Articles to English
+- Update alt tags and display titles to be region-neutral or US-specific

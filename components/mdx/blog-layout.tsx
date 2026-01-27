@@ -82,8 +82,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          La Psicología del Gasto: Cómo Detener las Compras
-                          Impulsivas
+                          The Psychology of Spending: How to Stop Impulse Buys
                         </Link>
                       </div>
                     </div>
@@ -187,7 +186,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/best-personal-loans.webp"
-                        alt="Best Personal Loans in the UK"
+                        alt="Best Personal Loans"
                         width={50}
                         height={50}
                         loading="lazy"

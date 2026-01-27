@@ -342,14 +342,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
                         src="https://media.topfinanzas.com/images/best-personal-loans.webp" // Updated Image
-                        alt="Best Personal Loans in the UK" // Updated Alt
+                        alt="Best Personal Loans" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          Best Personal Loans in the UK {/* Updated Title */}
+                          Best Personal Loans {/* Updated Title */}
                         </h4>
                         {/* Removed date for consistency */}
                       </div>
@@ -385,7 +385,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
                         src="https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp" // Updated Image
-                        alt="5 Tips for Choosing an Online Loan: Quick Guide" // Updated Alt
+                        alt="5 Tips for Choosing an Online Loan" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
