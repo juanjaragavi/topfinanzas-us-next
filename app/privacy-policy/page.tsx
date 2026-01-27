@@ -4,6 +4,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Top Finanzas US",
   description:
     "Privacy Policy for Top Finanzas US. Learn how we collect, use, and share your personal information.",
+  alternates: {
+    canonical: "/privacy-policy",
+    languages: {
+      "en-US": "/privacy-policy",
+    },
+  },
 };
 
 export default function PrivacyPolicyPage() {

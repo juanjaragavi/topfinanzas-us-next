@@ -42,6 +42,9 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://us.topfinanzas.com/${CATEGORY}/${slug}`,
+      languages: {
+        "en-US": `https://us.topfinanzas.com/${CATEGORY}/${slug}`,
+      },
     },
   };
 }
