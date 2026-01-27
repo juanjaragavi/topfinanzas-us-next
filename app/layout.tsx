@@ -27,6 +27,7 @@ import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import { MobileMenuProvider } from "@/components/providers/mobile-menu-context";
 import SiteWrapper from "@/components/layout/site-wrapper";
+import { MobileMenu } from "@/components/layout/mobile-menu";
 {
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
@@ -263,6 +264,7 @@ export default function RootLayout({
             showOnNavigation={true}
           >*/}
           <NavigationProvider>
+            <MobileMenu />
             <SiteWrapper>
               <Suspense fallback={null}>
                 <UtmPersister />

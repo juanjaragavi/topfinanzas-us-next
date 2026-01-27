@@ -1,6 +1,7 @@
-feat: Refactor mobile navigation menu
+fix: Refactor mobile menu positioning
 
-- Update mobile menu structure to match specific hierarchy (Categories, Loans, Credit Cards)
-- Localize menu items to US English
-- Update routing to correct US paths
-- Consolidate Categories into accordion with Financial Solutions, Personal Finance, Cards, Loans
+- Extract MobileMenu to standalone component
+- Move MobileMenu to render outside SiteWrapper in root layout
+- Apply fixed positioning to MobileMenu relative to viewport
+- Remove legacy mobile menu code from Header
+- Ensure menu persists on scroll
