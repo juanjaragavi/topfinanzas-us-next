@@ -106,7 +106,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/automate-your-wealth"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Automate Your Wealth: "Set It and Forget It" Finance System
+                          Automate Your Wealth: "Set It and Forget It" Finance
+                          System
                         </Link>
                       </div>
                     </div>

@@ -6,6 +6,7 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 
 export interface Post {
   slug: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   frontmatter: Record<string, any>;
   content: string;
 }

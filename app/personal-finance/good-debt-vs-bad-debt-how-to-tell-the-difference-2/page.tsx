@@ -21,7 +21,8 @@ export default function PostPage() {
   return (
     <BlogPost
       metadata={{
-        title: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+        title:
+          "The Magic of Compound Interest: How Your Money Can Grow Over Time",
         date: "September 5, 2025",
         author: "Diana Berrio",
         authorImage: "https://media.topfinanzas.com/images/authors.webp",

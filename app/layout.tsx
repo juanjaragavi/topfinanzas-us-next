@@ -141,9 +141,6 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest", // Use relative path for local manifest
 
-  // Optional: Define metadataBase for resolving relative image URLs
-  metadataBase: new URL(baseUrl),
-
   // Hreflang alternates
   alternates: {
     canonical: "https://us.topfinanzas.com",

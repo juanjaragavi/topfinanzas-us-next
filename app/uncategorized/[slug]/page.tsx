@@ -2,7 +2,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { BlogPost } from "@/components/mdx/blog-post";
-import { useMDXComponents } from "@/mdx-components";
+import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { Metadata } from "next";
 
 const CATEGORY = "uncategorized";
@@ -62,9 +62,10 @@ export default async function UncategorizedPost({
   }
 
   // Get shared components
-  const components = useMDXComponents({});
+  const components = getMDXComponents({});
 
   return (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <BlogPost metadata={post.frontmatter as any}>
       <MDXRemote source={post.content} components={components} />
     </BlogPost>

@@ -57,7 +57,8 @@ export default function PersonalFinanceArchivePage() {
       category: "guide",
     },
     {
-      title: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+      title:
+        "The Magic of Compound Interest: How Your Money Can Grow Over Time",
       slug: "good-debt-vs-bad-debt-how-to-tell-the-difference-2",
       description:
         "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
