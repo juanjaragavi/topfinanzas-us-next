@@ -69,6 +69,39 @@ export default function FinancialSolutionsPage() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const allLoansContent: any[] = [
     {
+      title: "American Express Platinum Card Requirements",
+      slug: "american-express-platinum-card-requirements",
+      description:
+        "The Platinum Card from American Express offers outstanding perks. Check credit score, income, and residency requirements to qualify.",
+      image:
+        "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp",
+      date: "October 31, 2025",
+      type: "traditional",
+      category: "Credit Cards",
+    },
+    {
+      title: "Ink Business Unlimited Credit Card Benefits",
+      slug: "ink-business-unlimited-credit-card-benefits",
+      description:
+        "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
+      image:
+        "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-benefits.webp",
+      date: "January 28, 2026",
+      type: "traditional",
+      category: "Credit Cards",
+    },
+    {
+      title: "Ink Business Unlimited® Credit Card Requirements",
+      slug: "ink-business-unlimited-credit-card-requirements",
+      description:
+        "Need to qualify for Ink Business Unlimited? Check credit score needs, business proof, and income requirements to unlock unlimited cash back.",
+      image:
+        "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp",
+      date: "January 27, 2026",
+      type: "traditional",
+      category: "Credit Cards",
+    },
+    {
       title: "Discover the Benefits of the American Express® Gold Card",
       slug: "benefits-of-the-american-express-gold-card",
       description:
@@ -80,7 +113,8 @@ export default function FinancialSolutionsPage() {
       category: "Credit Cards",
     },
     {
-      title: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
+      title:
+        "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
       slug: "requirements-to-qualify-for-the-american-express-gold-card",
       description:
         "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
@@ -91,7 +125,8 @@ export default function FinancialSolutionsPage() {
       category: "Credit Cards",
     },
     {
-      title: "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
+      title:
+        "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
       slug: "benefits-of-the-citi-diamond-preferred-card",
       description:
         "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
@@ -104,17 +139,22 @@ export default function FinancialSolutionsPage() {
     {
       title: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
       slug: "requirements-to-qualify-for-the-citi-diamond-preferred-card",
-      description: "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
-      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-citi-diamond-preferred-card.webp",
+      description:
+        "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-citi-diamond-preferred-card.webp",
       date: "January 27, 2026",
       type: "traditional",
       category: "Credit Cards",
     },
     {
-      title: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
+      title:
+        "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
       slug: "benefits-of-the-wells-fargo-reflect-card",
-      description: "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
-      image: "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
+      description:
+        "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
       date: "January 27, 2026",
       type: "tips",
       category: "Credit Cards",
@@ -122,8 +162,10 @@ export default function FinancialSolutionsPage() {
     {
       title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
       slug: "requirements-to-qualify-for-the-wells-fargo-reflect-card",
-      description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
-      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
+      description:
+        "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+      image:
+        "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
       date: "January 27, 2026",
       type: "traditional",
       category: "Credit Cards",
@@ -131,26 +173,34 @@ export default function FinancialSolutionsPage() {
     {
       title: "Requirements to qualify for the Discover it® Cash Back",
       slug: "requirements-to-qualify-for-the-discover-it-cash-back",
-      description: "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
-      image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp",
+      description:
+        "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp",
       date: "January 27, 2026",
       type: "traditional",
       category: "Credit Cards",
     },
     {
-      title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
+      title:
+        "Benefits of the Discover it® Cash Back: Smart rewards and savings",
       slug: "benefits-of-the-discover-it-cash-back",
-      description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
-      image: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
+      description:
+        "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
       date: "January 27, 2026",
       type: "tips",
       category: "Credit Cards",
     },
     {
-      title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+      title:
+        "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
       slug: "benefits-capital-one-savor-cash-rewards-credit-card",
-      description: "A card designed for life’s tasty moments. Explore the unlimited cash back and travel perks of the Capital One Savor Card.",
-      image: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
+      description:
+        "A card designed for life’s tasty moments. Explore the unlimited cash back and travel perks of the Capital One Savor Card.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
       date: "January 27, 2026",
       type: "tips",
       category: "Credit Cards",
@@ -158,8 +208,10 @@ export default function FinancialSolutionsPage() {
     {
       title: "Requirements for the Capital One Savor Cash Rewards Credit Card",
       slug: "requirements-for-the-capital-one-savor-cash-rewards-credit-card",
-      description: "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
-      image: "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp",
+      description:
+        "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp",
       date: "January 27, 2026",
       type: "traditional",
       category: "Credit Cards",

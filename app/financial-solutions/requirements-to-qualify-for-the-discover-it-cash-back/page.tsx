@@ -37,7 +37,7 @@ export default function DiscoverItCashBackRequirementsPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Requirements
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
               <div className="w-full">
                 <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
@@ -61,78 +61,101 @@ export default function DiscoverItCashBackRequirementsPage() {
 
             <div className="space-y-4 mb-10">
               <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-3">
-                    <div className="rounded-full bg-[#A0465C] p-1">
-                      <ArrowRight className="h-4 w-4 text-white" />
-                    </div>
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A0465C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-gray-700 text-lg">
-                    <span className="font-bold text-gray-900">Age:</span> Be at least 18 years old (or 21 in Puerto Rico).
-                  </p>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">Age:</span> Be at
+                  least 18 years old (or 21 in Puerto Rico).
+                </p>
               </div>
               <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-3">
-                    <div className="rounded-full bg-[#A0465C] p-1">
-                      <ArrowRight className="h-4 w-4 text-white" />
-                    </div>
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A0465C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-gray-700 text-lg">
-                    <span className="font-bold text-gray-900">Residency:</span> Be a U.S. resident with a valid address.
-                  </p>
-              </div>
-               <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-3">
-                    <div className="rounded-full bg-[#A0465C] p-1">
-                      <ArrowRight className="h-4 w-4 text-white" />
-                    </div>
-                  </div>
-                  <p className="text-gray-700 text-lg">
-                    <span className="font-bold text-gray-900">Social Security Number (SSN) or ITIN:</span> Required to verify your identity.
-                  </p>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">Residency:</span> Be
+                  a U.S. resident with a valid address.
+                </p>
               </div>
               <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 mr-3">
-                    <div className="rounded-full bg-[#A0465C] p-1">
-                      <ArrowRight className="h-4 w-4 text-white" />
-                    </div>
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A0465C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-gray-700 text-lg">
-                    <span className="font-bold text-gray-900">Low credit utilization:</span> Keeping your usage below 30% of your credit limit signals responsible credit behavior.
-                  </p>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">
+                    Social Security Number (SSN) or ITIN:
+                  </span>{" "}
+                  Required to verify your identity.
+                </p>
+              </div>
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A0465C] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">
+                    Low credit utilization:
+                  </span>{" "}
+                  Keeping your usage below 30% of your credit limit signals
+                  responsible credit behavior.
+                </p>
               </div>
             </div>
 
             {/* Detailed Requirements Sections */}
-            
+
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Recommended credit score: Good to excellent
             </h3>
             <p className="text-gray-700 text-lg mb-4">
-              To qualify for the Discover it® Cash Back, you’ll generally need a credit score in the range of <strong>670 to 850</strong>.
+              To qualify for the Discover it® Cash Back, you’ll generally need
+              a credit score in the range of <strong>670 to 850</strong>.
             </p>
-             <p className="text-gray-700 text-lg mb-4">
+            <p className="text-gray-700 text-lg mb-4">
               <strong>Why does your credit score matter?</strong>
             </p>
             <ul className="list-decimal pl-5 space-y-2 mb-6 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
-              <li>A good score demonstrates responsible credit management and makes you a lower risk for lenders.</li>
-              <li>Applicants with higher credit scores are more likely to secure the lower end of the card’s variable APR.</li>
+              <li>
+                A good score demonstrates responsible credit management and
+                makes you a lower risk for lenders.
+              </li>
+              <li>
+                Applicants with higher credit scores are more likely to secure
+                the lower end of the card’s variable APR.
+              </li>
             </ul>
 
             <p className="text-gray-700 text-lg mb-4">
-             <strong>Pro tip:</strong> If your credit score is below 670, work on improving it by:
+              <strong>Pro tip:</strong> If your credit score is below 670, work
+              on improving it by:
             </p>
             <ul className="list-none space-y-2 mb-6">
-               <li className="flex items-start">
+              <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#A0465C] mr-2 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">Making all payments on time.</span>
+                <span className="text-gray-700 text-lg">
+                  Making all payments on time.
+                </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#A0465C] mr-2 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">Keeping your credit utilization below 30%.</span>
+                <span className="text-gray-700 text-lg">
+                  Keeping your credit utilization below 30%.
+                </span>
               </li>
-               <li className="flex items-start">
+              <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#A0465C] mr-2 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">Avoiding new credit applications until your score improves.</span>
+                <span className="text-gray-700 text-lg">
+                  Avoiding new credit applications until your score improves.
+                </span>
               </li>
             </ul>
 
@@ -148,29 +171,48 @@ export default function DiscoverItCashBackRequirementsPage() {
               Stable income and financial stability
             </h3>
             <p className="text-gray-700 text-lg mb-4">
-              While Discover does not require a minimum income, you must show that you can handle a new credit line. This involves reporting:
+              While Discover does not require a minimum income, you must show
+              that you can handle a new credit line. This involves reporting:
             </p>
             <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
-              <li>Your annual or monthly income, including all reliable sources.</li>
-              <li>Your current financial obligations, such as rent, loans, or other credit cards.</li>
+              <li>
+                Your annual or monthly income, including all reliable sources.
+              </li>
+              <li>
+                Your current financial obligations, such as rent, loans, or
+                other credit cards.
+              </li>
             </ul>
-             <p className="text-gray-700 text-lg mb-8">
-              Discover assesses your <strong>debt-to-income (DTI) ratio</strong>, which compares your total monthly debt payments to your income. A DTI below 36% is generally favorable for approval.
+            <p className="text-gray-700 text-lg mb-8">
+              Discover assesses your <strong>debt-to-income (DTI) ratio</strong>
+              , which compares your total monthly debt payments to your income.
+              A DTI below 36% is generally favorable for approval.
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Clean and consistent credit history
             </h3>
             <p className="text-gray-700 text-lg mb-4">
-              In addition to your score, Discover evaluates your credit history for signs of financial responsibility. This includes:
+              In addition to your score, Discover evaluates your credit history
+              for signs of financial responsibility. This includes:
             </p>
-             <ul className="list-disc pl-5 space-y-2 mb-8 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
-              <li><strong>On-time payments:</strong> A strong track record of punctual payments boosts your chances.</li>
-              <li><strong>Length of credit history:</strong> Older accounts show stability, which can be a positive factor.</li>
-              <li><strong>Low credit utilization:</strong> Keeping your usage below 30% of your credit limit signals responsible credit behavior.</li>
+            <ul className="list-disc pl-5 space-y-2 mb-8 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
+              <li>
+                <strong>On-time payments:</strong> A strong track record of
+                punctual payments boosts your chances.
+              </li>
+              <li>
+                <strong>Length of credit history:</strong> Older accounts show
+                stability, which can be a positive factor.
+              </li>
+              <li>
+                <strong>Low credit utilization:</strong> Keeping your usage
+                below 30% of your credit limit signals responsible credit
+                behavior.
+              </li>
             </ul>
 
-             {/* Banner 1 */}
+            {/* Banner 1 */}
             <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
@@ -181,17 +223,25 @@ export default function DiscoverItCashBackRequirementsPage() {
             </div>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
-             Key considerations for approval
+              Key considerations for approval
             </h3>
             <p className="text-gray-700 text-lg mb-4">
               Here are some important points to keep in mind:
             </p>
-             <ol className="list-decimal pl-5 space-y-2 mb-6 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
-              <li>If you have opened a Discover card recently, you may not be eligible to apply for another card right away.</li>
-              <li>Providing accurate and verifiable information during the application process is crucial.</li>
+            <ol className="list-decimal pl-5 space-y-2 mb-6 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
+              <li>
+                If you have opened a Discover card recently, you may not be
+                eligible to apply for another card right away.
+              </li>
+              <li>
+                Providing accurate and verifiable information during the
+                application process is crucial.
+              </li>
             </ol>
-             <p className="text-gray-700 text-lg italic mb-10">
-              Discover may also perform a hard inquiry on your credit report as part of the approval process, which can temporarily impact your credit score.
+            <p className="text-gray-700 text-lg italic mb-10">
+              Discover may also perform a hard inquiry on your credit report as
+              part of the approval process, which can temporarily impact your
+              credit score.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -200,11 +250,23 @@ export default function DiscoverItCashBackRequirementsPage() {
             <p className="text-gray-700 text-lg mb-4">
               The <strong>Discover it® Cash Back</strong> card is perfect for:
             </p>
-             <ul className="list-disc pl-5 space-y-2 mb-8 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
-              <li>Shoppers with good credit who want to earn significant cash back.</li>
-              <li>Budget-conscious individuals who prefer a card with no annual fee.</li>
-              <li>Those looking for an intro APR period to finance purchases or consolidate debt.</li>
-              <li>Strategic spenders who can adjust their habits to align with the card’s rotating cash back categories.</li>
+            <ul className="list-disc pl-5 space-y-2 mb-8 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
+              <li>
+                Shoppers with good credit who want to earn significant cash
+                back.
+              </li>
+              <li>
+                Budget-conscious individuals who prefer a card with no annual
+                fee.
+              </li>
+              <li>
+                Those looking for an intro APR period to finance purchases or
+                consolidate debt.
+              </li>
+              <li>
+                Strategic spenders who can adjust their habits to align with the
+                card’s rotating cash back categories.
+              </li>
             </ul>
 
             {/* Banner 2 */}
@@ -221,49 +283,62 @@ export default function DiscoverItCashBackRequirementsPage() {
               How to apply successfully
             </h2>
             <p className="text-gray-700 text-lg mb-4">
-              If you meet the above criteria, applying for the Discover it® Cash Back card is simple:
+              If you meet the above criteria, applying for the Discover it®
+              Cash Back card is simple:
             </p>
             <ol className="list-decimal pl-5 space-y-2 mb-6 text-gray-700 text-lg marker:text-[#A0465C] marker:font-bold">
               <li>Visit the official Discover it® Cash Back website.</li>
-              <li>Fill out the application with your personal, financial, and contact information.</li>
-              <li>Submit your application and receive a decision, often in less than a minute.</li>
+              <li>
+                Fill out the application with your personal, financial, and
+                contact information.
+              </li>
+              <li>
+                Submit your application and receive a decision, often in less
+                than a minute.
+              </li>
             </ol>
             <p className="text-gray-700 text-lg mb-8">
-              If approved, you can start using your digital card immediately and enjoy its benefits.
+              If approved, you can start using your digital card immediately and
+              enjoy its benefits.
             </p>
 
             {/* Banner 3 */}
             <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
-                <ResponsiveImage
+              <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
                 width={1200}
                 height={400}
-                />
+              />
             </div>
 
             {/* Is the Discover it® Cash Back right for you? / CTA */}
             <div className="bg-gray-50 rounded-xl p-8 mb-10 border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Is the Discover it® Cash Back right for you?
-                </h2>
-                <p className="text-gray-700 text-lg mb-6">
-                    Qualifying for the Discover it® Cash Back card requires good credit, stable finances, and a solid credit history. Meeting these requirements not only increases your chances of approval but also ensures you can fully enjoy the card’s benefits, including cash back rewards, intro APR, and no annual fee.
-                </p>
-                <p className="text-gray-700 text-lg mb-8">
-                    If you’re ready to shop smart, earn rewards, and save money, this card could be the perfect fit for your financial goals.
-                </p>
-                
-                <div className="flex justify-center">
-                    <a 
-                        href="https://www.discover.com/credit-cards/cash-back/it-card.html" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-[#A0465C] hover:bg-[#853a4d] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
-                    >
-                        Apply Now at Discover
-                    </a>
-                </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Is the Discover it® Cash Back right for you?
+              </h2>
+              <p className="text-gray-700 text-lg mb-6">
+                Qualifying for the Discover it® Cash Back card requires good
+                credit, stable finances, and a solid credit history. Meeting
+                these requirements not only increases your chances of approval
+                but also ensures you can fully enjoy the card’s benefits,
+                including cash back rewards, intro APR, and no annual fee.
+              </p>
+              <p className="text-gray-700 text-lg mb-8">
+                If you’re ready to shop smart, earn rewards, and save money,
+                this card could be the perfect fit for your financial goals.
+              </p>
+
+              <div className="flex justify-center">
+                <a
+                  href="https://www.discover.com/credit-cards/cash-back/it-card.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#A0465C] hover:bg-[#853a4d] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                >
+                  Apply Now at Discover
+                </a>
+              </div>
             </div>
 
             <AIContentDisclaimer />

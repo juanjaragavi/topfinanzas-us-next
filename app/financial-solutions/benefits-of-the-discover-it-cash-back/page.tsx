@@ -56,9 +56,7 @@ export default function DiscoverItCashBackBenefitsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">
-                    5% cash back{" "}
-                  </span>
+                  <span className="font-bold text-gray-900">5% cash back </span>
                   in rotating categories (up to $1,500 quarterly).
                 </p>
               </div>
@@ -84,9 +82,7 @@ export default function DiscoverItCashBackBenefitsPage() {
                   </div>
                 </div>
                 <p className="text-gray-700 text-lg">
-                  <span className="font-bold text-gray-900">
-                    0% intro APR{" "}
-                  </span>
+                  <span className="font-bold text-gray-900">0% intro APR </span>
                   for 15 months.
                 </p>
               </div>
@@ -197,7 +193,9 @@ export default function DiscoverItCashBackBenefitsPage() {
             </p>
             <ol className="list-decimal pl-5 space-y-2 text-gray-700 text-lg mb-6">
               <li>Purchases made from the account opening date.</li>
-              <li>Balance transfers initiated during the promotional period.</li>
+              <li>
+                Balance transfers initiated during the promotional period.
+              </li>
             </ol>
             <p className="text-gray-700 text-lg mb-6">
               After the introductory period ends, a variable APR of 18.49% to

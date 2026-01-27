@@ -42,9 +42,9 @@ export default function AmexGoldRequirementsPage() {
             </p>
 
             <p className="text-lg text-gray-700 mb-6">
-              If you’re considering applying for the American Express® Gold Card,
-              it’s important to ensure you meet the necessary requirements to
-              obtain it. This card is designed for individuals with a strong
+              If you’re considering applying for the American Express® Gold
+              Card, it’s important to ensure you meet the necessary requirements
+              to obtain it. This card is designed for individuals with a strong
               credit history and offers ideal benefits for those looking to
               maximize their everyday purchases and enjoy dining and travel
               experiences.
@@ -167,13 +167,14 @@ export default function AmexGoldRequirementsPage() {
               Ability to cover the annual fee
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              The American Express® Gold Card comes with a $325 annual fee, which
-              may seem high at first glance. However, if you take full advantage
-              of the credits and rewards, the benefits can easily offset the cost.
+              The American Express® Gold Card comes with a $325 annual fee,
+              which may seem high at first glance. However, if you take full
+              advantage of the credits and rewards, the benefits can easily
+              offset the cost.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              It’s essential to assess whether your spending habits and financial
-              capacity will allow you to maximize:
+              It’s essential to assess whether your spending habits and
+              financial capacity will allow you to maximize:
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
@@ -298,15 +299,15 @@ export default function AmexGoldRequirementsPage() {
               <p className="text-lg text-gray-700 mb-6">
                 If you have a strong credit score, stable income, and are ready
                 to take advantage of the card’s unique benefits, the American
-                Express® Gold Card is an excellent choice for earning rewards on
-                restaurants and grocery purchases, saving with credits for Uber
-                and Resy, and enjoying travel benefits.
+                Express® Gold Card is an excellent choice for earning rewards
+                on restaurants and grocery purchases, saving with credits for
+                Uber and Resy, and enjoying travel benefits.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Applying for the American Express® Gold Card is a simple process
-                if you meet the key criteria. Before applying, evaluate your
-                financial situation and ensure this card aligns with your needs
-                and spending habits.
+                Applying for the American Express® Gold Card is a simple
+                process if you meet the key criteria. Before applying, evaluate
+                your financial situation and ensure this card aligns with your
+                needs and spending habits.
               </p>
 
               {/* Final CTA to External Application */}

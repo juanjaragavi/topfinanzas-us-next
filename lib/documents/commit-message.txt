@@ -1,10 +1,8 @@
-feat: migrate financial solutions content
+feat: migrate Ink Business Unlimited and Amex Platinum Requirements
 
-- Add Benefits and Requirements pages for:
-  - American Express Gold Card
-  - Citi Diamond Preferred Card
-  - Discover it Cash Back
-  - Wells Fargo Reflect Card
-  - Capital One Savor Cash Rewards Credit Card
-- Update blog index and financial solutions listing with new articles
-- Fix linting issues in Capital One and Discover pages (replace <a> with <Link>, remove unused imports)
+- Add Ink Business Unlimited Credit Card Benefits page
+- Add Ink Business Unlimited Credit Card Requirements page
+- Add American Express Platinum Card Requirements page
+- Update blog and financial solutions listing pages
+- Update sitemap
+- Refactor ad placements on existing pages

@@ -303,7 +303,9 @@ export default function CitiDiamondPreferredRequirementsPage() {
                 Want to consolidate high-interest debt with a 0% APR for 21
                 months.
               </li>
-              <li>Need a card for a large purchase with 0% APR for 12 months.</li>
+              <li>
+                Need a card for a large purchase with 0% APR for 12 months.
+              </li>
               <li>Have a steady income and a low debt-to-income ratio.</li>
             </ul>
             <p className="text-gray-700 text-lg mb-6">
@@ -326,12 +328,12 @@ export default function CitiDiamondPreferredRequirementsPage() {
               Bottom line
             </h2>
             <p className="text-gray-700 text-lg mb-4">
-              The Citi® Diamond Preferred® Card is perfect for individuals with
-              a strong credit profile who want to take advantage of one of the
-              longest 0% APR periods on the market. By meeting the eligibility
-              requirements—such as having good credit, stable income, and a
-              clean credit history—you can unlock a powerful tool for managing
-              debt and saving money.
+              The Citi® Diamond Preferred® Card is perfect for individuals
+              with a strong credit profile who want to take advantage of one of
+              the longest 0% APR periods on the market. By meeting the
+              eligibility requirements—such as having good credit, stable
+              income, and a clean credit history—you can unlock a powerful tool
+              for managing debt and saving money.
             </p>
             <p className="text-gray-700 text-lg mb-6">
               If you’re ready to simplify your finances and take the next step,
