@@ -315,9 +315,9 @@ export default function PersonalFinanceArchivePage() {
 
   // Metadata for the archive page itself
   const pageMetadata = {
-    title: "Personal Finance Guides | Top Finance UK",
+    title: "Personal Finance Guides | Top Finance US",
     description:
-      "Explore guides on credit cards, loans, debt management, and other personal finance topics in the UK.",
+      "Explore guides on credit cards, loans, debt management, and other personal finance topics in the US.",
   };
 
   return <BlogLayout metadata={pageMetadata}>{content}</BlogLayout>;
