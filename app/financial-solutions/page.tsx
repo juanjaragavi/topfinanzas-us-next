@@ -65,9 +65,102 @@ export default function FinancialSolutionsPage() {
     );
   }
 
-  // List of all loan content with types
+  // List of loan content with types
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const allLoansContent: any[] = [
+  const loansContent: any[] = [
+    {
+      title: "Benefits QuickBridge Loans",
+      slug: "benefits-quickbridge-loans",
+      description:
+        "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
+      date: "October 31, 2025",
+      type: "traditional",
+      category: "Loans",
+    },
+    {
+      title: "QuickBridge Loans Requirements",
+      slug: "quickbridge-loans-requirements",
+      description:
+        "A straightforward guide to securing your next business loan. Learn about QuickBridge Loans eligibility requirements and application process.",
+      image:
+        "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp",
+      date: "October 31, 2025",
+      type: "traditional",
+      category: "Loans",
+    },
+    {
+      title: "Bank of America Business Loans Requirements: Your Best Option",
+      slug: "bank-of-america-business-loans-requirements",
+      description:
+        "Unlock the financing you need for your business with simple requirements. Learn about Bank of America's business loan eligibility and application process.",
+      image:
+        "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
+      date: "October 24, 2025",
+      type: "traditional",
+      category: "Loans",
+    },
+    {
+      title: "Bank of America Business Loan Benefits",
+      slug: "bank-of-america-business-loans-benefits",
+      description:
+        "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+      image:
+        "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
+      date: "October 31, 2025",
+      type: "traditional",
+      category: "Loans",
+    },
+    {
+      title: "National Funding Benefits",
+      slug: "national-funding-benefits",
+      description:
+        "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+      image:
+        "https://media.topfinanzas.com/images/national-funding-benefits.webp",
+      date: "October 24, 2025",
+      type: "sme_fintech",
+      category: "Loans",
+    },
+    {
+      title: "Requirements for National Funding Loans",
+      slug: "requirements-for-national-funding-loans",
+      description:
+        "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
+      date: "October 24, 2025",
+      type: "sme_fintech",
+      category: "Loans",
+    },
+    {
+      title: "Smarter financing for your business: Fundbox benefits",
+      slug: "smarter-financing-for-your-business-fundbox-benefits",
+      description:
+        "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+      image:
+        "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
+      date: "October 24, 2025",
+      type: "sme_fintech",
+      category: "Loans",
+    },
+    {
+      title: "Fundbox Loan Requirements",
+      slug: "fundbox-loan-requirements",
+      description:
+        "Fundbox offers small business owners an easy way to manage cash flow. Learn about the requirements, eligibility factors, and how to apply.",
+      image:
+        "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp",
+      date: "October 24, 2025",
+      type: "sme_fintech",
+      category: "Loans",
+    },
+  ];
+
+  // List of credit card content with types
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const creditCardsContent: any[] = [
     {
       title: "Chase Sapphire Preferred Credit Card Benefits",
       slug: "chase-sapphire-preferred-credit-card-benefits",
@@ -460,101 +553,9 @@ export default function FinancialSolutionsPage() {
         "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
       date: "October 31, 2025",
       type: "traditional",
-      category: "Loans",
-    },
-    {
-      title: "Benefits QuickBridge Loans",
-      slug: "benefits-quickbridge-loans",
-      description:
-        "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
-      image:
-        "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
-      date: "October 31, 2025",
-      type: "traditional",
-      category: "Loans",
-    },
-    {
-      title: "QuickBridge Loans Requirements",
-      slug: "quickbridge-loans-requirements",
-      description:
-        "A straightforward guide to securing your next business loan. Learn about QuickBridge Loans eligibility requirements and application process.",
-      image:
-        "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp",
-      date: "October 31, 2025",
-      type: "traditional",
-      category: "Loans",
-    },
-    {
-      title: "Bank of America Business Loans Requirements: Your Best Option",
-      slug: "bank-of-america-business-loans-requirements",
-      description:
-        "Unlock the financing you need for your business with simple requirements. Learn about Bank of America's business loan eligibility and application process.",
-      image:
-        "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
-      date: "October 24, 2025",
-      type: "traditional",
-      category: "Loans",
-    },
-    {
-      title: "Bank of America Business Loan Benefits",
-      slug: "bank-of-america-business-loans-benefits",
-      description:
-        "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
-      image:
-        "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
-      date: "October 31, 2025",
-      type: "traditional",
-      category: "Loans",
-    },
-    {
-      title: "National Funding Benefits",
-      slug: "national-funding-benefits",
-      description:
-        "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
-      image:
-        "https://media.topfinanzas.com/images/national-funding-benefits.webp",
-      date: "October 24, 2025",
-      type: "sme_fintech",
-      category: "Loans",
-    },
-    {
-      title: "Requirements for National Funding Loans",
-      slug: "requirements-for-national-funding-loans",
-      description:
-        "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
-      image:
-        "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
-      date: "October 24, 2025",
-      type: "sme_fintech",
-      category: "Loans",
-    },
-    {
-      title: "Smarter financing for your business: Fundbox benefits",
-      slug: "smarter-financing-for-your-business-fundbox-benefits",
-      description:
-        "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
-      image:
-        "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
-      date: "October 24, 2025",
-      type: "sme_fintech",
-      category: "Loans",
-    },
-    {
-      title: "Fundbox Loan Requirements",
-      slug: "fundbox-loan-requirements",
-      description:
-        "Fundbox offers small business owners an easy way to manage cash flow. Learn about the requirements, eligibility factors, and how to apply.",
-      image:
-        "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp",
-      date: "October 24, 2025",
-      type: "sme_fintech",
-      category: "Loans",
+      category: "Credit Cards",
     },
   ];
-
-  // List of credit card content with types
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const creditCardsContent: any[] = [];
 
   // Date parsing utility function
   const parseDate = (dateString: string): number => {
@@ -614,7 +615,7 @@ export default function FinancialSolutionsPage() {
     (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
   );
 
-  const sortedLoans = [...allLoansContent].sort(
+  const sortedLoans = [...loansContent].sort(
     (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
   );
 
@@ -695,7 +696,7 @@ export default function FinancialSolutionsPage() {
                   description={post.description}
                   image={post.image}
                   slug={post.slug}
-                  category="Financial Solutions"
+                  category={post.category}
                   categorySlug="/financial-solutions"
                   date={post.date}
                   type={post.type}
@@ -743,7 +744,7 @@ export default function FinancialSolutionsPage() {
                   description={post.description}
                   image={post.image}
                   slug={post.slug}
-                  category="Financial Solutions"
+                  category={post.category}
                   categorySlug="/financial-solutions"
                   date={post.date}
                   type={post.type}

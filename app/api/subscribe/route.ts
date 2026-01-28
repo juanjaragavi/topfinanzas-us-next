@@ -47,7 +47,7 @@ const buildBrevoAttributes = (
 ) => {
   const attributes: Record<string, string | number> = {
     FIRSTNAME: firstName,
-    COUNTRIES: "United Kingdom",
+    COUNTRIES: "United States",
   };
 
   assignIfString(attributes, "LASTNAME", lastName);
@@ -237,7 +237,7 @@ export async function POST(request: Request) {
   }
 
   const timestamp = Math.floor(Date.now() / 1000);
-  const extId = `topfinanzas-uk-${timestamp}`;
+  const extId = `topfinanzas-us-${timestamp}`;
   const lastName = kitFields.last_name ?? "";
 
   const brevoAttributes = buildBrevoAttributes(

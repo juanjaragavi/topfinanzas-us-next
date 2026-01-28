@@ -332,66 +332,84 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 </h3>
                 <div className="space-y-4">
                   <Link
-                    href="/personal-finance/best-personal-loans" // Updated Recent Article Link 1
+                    href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt"
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/best-personal-loans.webp" // Updated Image
-                        alt="Best Personal Loans" // Updated Alt
+                        src="https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp"
+                        alt="Best 0% APR Balance Transfer Cards"
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          Best Personal Loans {/* Updated Title */}
+                          Best 0% APR Balance Transfer Cards: A Guide to
+                          Managing Debt
                         </h4>
-                        {/* Removed date for consistency */}
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/personal-finance/getting-out-of-debt" // Updated Recent Article Link 2
+                    href="/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit"
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.webp" // Updated Image
-                        alt="Practical Guide to Getting Out of Debt" // Updated Alt
+                        src="https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp"
+                        alt="Best Secured Credit Cards"
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          Practical Guide to Getting Out of Debt{" "}
-                          {/* Updated Title */}
+                          What Are the Best Secured Credit Cards for Building
+                          Credit?
                         </h4>
-                        {/* Removed date */}
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/personal-finance/tips-for-choosing-an-online-loan" // Updated Recent Article Link 3
+                    href="/personal-finance/beat-inflation-with-your-cashback"
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp" // Updated Image
-                        alt="5 Tips for Choosing an Online Loan" // Updated Alt
+                        src="https://media.topfinanzas.com/images/beat-inflation-with-your-cashback.webp"
+                        alt="Beat Inflation with Your Cashback"
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          5 Tips for Choosing an Online Loan{" "}
-                          {/* Updated Title */}
+                          Beat Inflation with Your Cashback
                         </h4>
-                        {/* Removed date */}
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/personal-finance/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score"
+                    className="block"
+                  >
+                    <div className="relative h-32 rounded-xl overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp"
+                        alt="Guide to Maximize FICO Score"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="brightness-75"
+                      />
+                      <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
+                        <h4 className="font-medium text-[10px] leading-tight mb-1">
+                          Guide: How to Use Multiple Credit Cards to Maximize
+                          Your FICO Score
+                        </h4>
                       </div>
                     </div>
                   </Link>

@@ -62,148 +62,93 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
-                    {/* Psychology of Spending Article - NEW */}
+                    {/* Best 0% APR Balance Transfer Cards */}
                     <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp"
-                        alt="The Psychology of Spending: How to Stop Impulse Buys"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp"
+                          alt="Best 0% APR Balance Transfer Cards: A Guide to Managing Debt"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
                       <div>
                         <Link
-                          href="/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving"
+                          href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          The Psychology of Spending: How to Stop Impulse Buys
+                          Best 0% APR Balance Transfer Cards: A Guide to
+                          Managing Debt
                         </Link>
                       </div>
                     </div>
-                    {/* Automate Your Wealth Article - NEW */}
+
+                    {/* Best Secured Credit Cards */}
                     <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/uk/automate-your-wealth.webp"
-                        alt='Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System'
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp"
+                          alt="What Are the Best Secured Credit Cards for Building Credit?"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
                       <div>
                         <Link
-                          href="/personal-finance/automate-your-wealth"
+                          href="/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Automate Your Wealth: "Set It and Forget It" Finance
-                          System
+                          What Are the Best Secured Credit Cards for Building
+                          Credit?
                         </Link>
                       </div>
                     </div>
-                    {/* Inflation-Proof Article - NEW */}
+
+                    {/* Beat Inflation */}
                     <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp"
-                        alt="Inflation-Proof Your Life: 7 Smart Money Moves"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/beat-inflation-with-your-cashback.webp"
+                          alt="Beat Inflation with Your Cashback"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
                       <div>
                         <Link
-                          href="/personal-finance/inflation-proof-your-life"
+                          href="/personal-finance/beat-inflation-with-your-cashback"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Inflation-Proof Your Life: 7 Smart Money Moves
+                          Beat Inflation with Your Cashback
                         </Link>
                       </div>
                     </div>
-                    {/* Lifestyle Creep Article */}
+
+                    {/* FICO Score Guide */}
                     <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp"
-                        alt="What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
-                      <div>
-                        <Link
-                          href="/personal-finance/what-is-lifestyle-creep"
-                          className="text-sm font-medium hover:underline line-clamp-2"
-                        >
-                          What Is "Lifestyle Creep"?
-                        </Link>
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp"
+                          alt="Guide: How to Use Multiple Credit Cards to Maximize Your FICO Score"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
                       </div>
-                    </div>
-                    {/* Budget Article */}
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/uk/modern-budget-guide.webp"
-                        alt="Create a Personal Finance Budget You'll Actually Stick To"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
                       <div>
                         <Link
-                          href="/personal-finance/creating-a-budget-youll-actually-stick-to"
+                          href="/personal-finance/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Create a Budget That Actually Works
-                        </Link>
-                      </div>
-                    </div>
-                    {/* Article 1 */}
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/best-personal-loans.webp"
-                        alt="Best Personal Loans"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
-                      <div>
-                        <Link
-                          href="/personal-finance/best-personal-loans"
-                          className="text-sm font-medium hover:underline line-clamp-2"
-                        >
-                          Best Personal Loans
+                          Guide: How to Use Multiple Credit Cards to Maximize
+                          Your FICO Score
                         </Link>
                       </div>
                     </div>

@@ -1,12 +1,8 @@
-feat(content): migrate multiple credit card financial solution pages
+feat: refactor integration and content for US migration
 
-- Migrate Chase Sapphire Preferred (Benefits & Requirements)
-- Migrate Citi Simplicity Card (Benefits & Requirements)
-- Migrate Wells Fargo Autograph (Benefits & Requirements)
-- Migrate Capital One VentureOne, Venture X, and Platinum Secured
-- Migrate Discover it Student Cash Back
-- Migrate Titanium Rewards Visa Signature
-- Migrate Capital One Spark Cash Plus
-- Update blog index and category pages with new entries
-- Update sitemap with new routes
-- Ensure US-specific branding and compliance in new templates
+- Update Google Sheets API route to use "us-topfinanzas-com" sheet and new schema (Name, Last Name, Email, Phone, Timestamp).
+- Update Brevo subscription API to use "United States" country and "topfinanzas-us-" external ID prefix.
+- Refactor `app/financial-solutions` content list and sorting.
+- Update sidebar recent articles in `blog-layout.tsx` (layout and MDX components).
+- Simplify mobile menu navigation to primary US categories.
+- Add `test-sheets-integration-us.js` script for validating US Sheets integration.

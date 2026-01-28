@@ -83,7 +83,7 @@ export async function POST(req: Request) {
     const sheets = google.sheets({ version: "v4", auth });
 
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-    const sheetName = "uk-topfinanzas-com";
+    const sheetName = "us-topfinanzas-com";
 
     // Ensure the sheet exists, create it if it doesn't
     const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
@@ -101,13 +101,15 @@ export async function POST(req: Request) {
     }
 
     const headers = [
+      "Name",
+      "Last Name",
+      "Email",
+      "Phone",
       "Timestamp",
       "Preference",
       "Income",
-      "Email",
-      "First Name",
-      "Pais",
-      "Marca",
+      "Country",
+      "Brand",
       "Source",
       "Medium",
       "Campaign",
@@ -120,7 +122,7 @@ export async function POST(req: Request) {
       "UTM Content",
     ];
 
-    const sheetRange = `${sheetName}!A:Q`;
+    const sheetRange = `${sheetName}!A:S`;
     const existingValuesResponse = await sheets.spreadsheets.values.get({
       spreadsheetId,
       range: sheetRange,
@@ -166,12 +168,23 @@ export async function POST(req: Request) {
     const termValue = pickString(body.term, body.utm_term);
     const contentValue = pickString(body.content, body.utm_content);
 
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, "0");
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+    const timestampValue = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+
     const rowValues = [
-      new Date().toISOString(),
+      body.firstName ?? "",
+      body.lastName ?? "",
+      body.email ?? "",
+      body.phone ?? "",
+      timestampValue,
       preferenceValue,
       incomeValue,
-      body.email ?? "",
-      body.firstName ?? "",
       paisValue,
       marcaValue,
       sourceValue,
