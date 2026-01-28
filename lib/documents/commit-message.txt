@@ -1,8 +1,12 @@
-feat: migrate Ink Business Unlimited and Amex Platinum Requirements
+feat(content): migrate multiple credit card financial solution pages
 
-- Add Ink Business Unlimited Credit Card Benefits page
-- Add Ink Business Unlimited Credit Card Requirements page
-- Add American Express Platinum Card Requirements page
-- Update blog and financial solutions listing pages
-- Update sitemap
-- Refactor ad placements on existing pages
+- Migrate Chase Sapphire Preferred (Benefits & Requirements)
+- Migrate Citi Simplicity Card (Benefits & Requirements)
+- Migrate Wells Fargo Autograph (Benefits & Requirements)
+- Migrate Capital One VentureOne, Venture X, and Platinum Secured
+- Migrate Discover it Student Cash Back
+- Migrate Titanium Rewards Visa Signature
+- Migrate Capital One Spark Cash Plus
+- Update blog index and category pages with new entries
+- Update sitemap with new routes
+- Ensure US-specific branding and compliance in new templates

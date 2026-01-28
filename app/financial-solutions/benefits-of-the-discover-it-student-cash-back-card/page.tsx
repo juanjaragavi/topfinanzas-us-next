@@ -1,0 +1,224 @@
+import React from "react";
+import { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import ResponsiveImage from "@/components/ui/responsive-image";
+import { Header } from "@/components/layout/header";
+import { CompactFooter } from "@/components/layout/compact-footer";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Benefits of the Discover it Student Cash Back Card",
+  description:
+    "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it’s the ideal companion for college life.",
+};
+
+export default function BenefitsDiscoverItStudentCashBackPage() {
+  return (
+    <main className="bg-white min-h-screen flex flex-col font-sans">
+      <Header />
+
+      <article className="bg-white py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Title */}
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              Benefits of the Discover it Student Cash Back Card
+            </h1>
+
+            {/* Ad Unit: square02 */}
+            <div
+              id="square02"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            {/* Intro */}
+            <p className="text-lg text-gray-800 mb-6">
+              The Discover it Student Cash Back Card is tailor-made for students
+              who want to build credit and earn rewards simultaneously. Packed
+              with features, it’s the ideal companion for college life.
+            </p>
+
+            {/* Key Benefits List */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A8B0D7] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">5% Cash Back:</span>{" "}
+                  Earn on rotating categories like gas, groceries, and Amazon.
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A8B0D7] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">
+                    Unlimited cashback match:
+                  </span>{" "}
+                  Double your rewards in the first year.
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A8B0D7] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">
+                    No annual fee:
+                  </span>{" "}
+                  Keep more money in your pocket.
+                </p>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1 mr-3">
+                  <div className="rounded-full bg-[#A8B0D7] p-1">
+                    <ArrowRight className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-bold text-gray-900">
+                    Free credit monitoring:
+                  </span>{" "}
+                  Stay informed about your credit score.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA 1 */}
+            <div className="flex justify-center mb-8">
+              <Link
+                href="/financial-solutions/requirements-for-the-discover-it-student-cash-back-card"
+                className="w-full"
+              >
+                <Button className="w-full px-10 py-6 text-xl bg-[#A8B0D7] hover:bg-[#8e96bf] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                  How it works
+                </Button>
+              </Link>
+            </div>
+
+            {/* Featured Image */}
+            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+              <ResponsiveImage
+                src="https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp"
+                alt="Benefits of the Discover it Student Cash Back Card"
+                width={1200}
+                height={675}
+                priority
+              />
+            </div>
+
+            {/* Maximize rewards with 5% Cash Back */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Maximize rewards with 5% Cash Back
+            </h2>
+
+            <p className="text-gray-700 text-lg mb-6">
+              Students can enjoy 5% cash back on everyday purchases in quarterly
+              rotating categories. From dining to online shopping, you’ll save
+              on the things that matter most.
+            </p>
+
+            <p className="text-gray-700 text-lg mb-6">
+              <span className="font-bold">Simplicity and savings:</span>{" "}
+              Activate categories with ease and start earning rewards
+              immediately. Every dollar spent takes you closer to a financial
+              cushion.
+            </p>
+
+            <p className="text-gray-700 text-lg mb-6">
+              <span className="font-bold">Practical examples of savings:</span>{" "}
+              Imagine earning rewards on your textbook purchases or during
+              holiday shopping. These perks add up, making a noticeable
+              difference over time.
+            </p>
+
+            {/* First-year bonus: Unlimited cashback match */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              First-year bonus: Unlimited cashback match
+            </h2>
+
+            <p className="text-gray-700 text-lg mb-6">
+              Discover doubles all the cash back you’ve earned at the end of
+              your first year, making it one of the most rewarding student cards
+              on the market.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Maximizing rewards for students
+            </h3>
+            <p className="text-gray-700 text-lg mb-6">
+              By pairing everyday spending with cash-back bonuses, students can
+              enjoy savings on everything from essentials to entertainment.
+            </p>
+
+            {/* A fee-free experience */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              A fee-free experience
+            </h2>
+
+            <p className="text-gray-700 text-lg mb-6">
+              No annual fee means you can focus on building credit without the
+              burden of additional costs. It’s a student-friendly option for
+              anyone looking to start their financial journey.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Focus on growth, not fees
+            </h3>
+            <p className="text-gray-700 text-lg mb-6">
+              With no hidden charges, students can concentrate on developing
+              responsible financial habits.
+            </p>
+
+            {/* Free access to credit insights */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Free access to credit insights
+            </h2>
+
+            <p className="text-gray-700 text-lg mb-6">
+              With free FICO credit score monitoring, you can track your
+              progress and make informed financial decisions. Knowledge is
+              power, and this feature ensures you’re always in the know.
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Staying ahead in credit building
+            </h3>
+            <p className="text-gray-700 text-lg mb-6">
+              The insights provided equip students to proactively manage their
+              credit, avoiding pitfalls that could hinder future opportunities.
+            </p>
+
+            {/* The perfect partner for students */}
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              The perfect partner for students
+            </h2>
+            <p className="text-gray-700 text-lg mb-6">
+              The Discover it Student Cash Back Card combines rewards, savings,
+              and tools to help students succeed financially.
+            </p>
+
+            <AIContentDisclaimer />
+          </div>
+        </div>
+      </article>
+
+      <CompactFooter />
+    </main>
+  );
+}

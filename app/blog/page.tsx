@@ -40,6 +40,204 @@ export default function BlogArchivePage() {
   // Combine posts from both categories
   const allPosts: PostItem[] = [
     {
+      title: "Chase Sapphire Preferred Credit Card Benefits",
+      slug: "chase-sapphire-preferred-credit-card-benefits",
+      description:
+        "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+      image:
+        "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp",
+      date: "February 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Chase Sapphire Preferred Credit Card Requirements",
+      slug: "chase-sapphire-preferred-credit-card-requirements",
+      description:
+        "Discover the Chase Sapphire Preferred Credit Card requirements and application tips. Learn how to meet eligibility criteria.",
+      image:
+        "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-requirements.webp",
+      date: "February 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Citi Simplicity Card Benefits",
+      slug: "citi-simplicity-card-benefits",
+      description:
+        "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+      image:
+        "https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp",
+      date: "February 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Citi Simplicity Card Requirements",
+      slug: "citi-simplicity-card-requirements",
+      description:
+        "Zero fees, zero hassle—here’s how to qualify. The Citi Simplicity Card is an excellent choice for those seeking convenience and cost-saving benefits.",
+      image:
+        "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp",
+      date: "February 27, 2026",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits of the Discover it Student Cash Back Card",
+      slug: "benefits-of-the-discover-it-student-cash-back-card",
+      description:
+        "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it’s the ideal companion for college life.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements for the Discover it Student Cash Back Card",
+      slug: "requirements-for-the-discover-it-student-cash-back-card",
+      description:
+        "A student’s gateway to credit benefits: The Discover it Student Cash Back Card offers unmatched rewards for students looking to establish credit.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Benefits: VentureOne Rewards from Capital One",
+      slug: "benefits-capital-one-ventureone-rewards",
+      description:
+        "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+      image:
+        "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements for Capital One VentureOne Rewards Credit Card",
+      slug: "requirements-for-capital-one-ventureone-rewards-credit-card",
+      description:
+        "Embark on a journey of rewards: Your path to simplicity and savings. Check credit score and documentation requirements for the Capital One VentureOne.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Capital One Venture X Rewards Credit Card Benefits",
+      slug: "capital-one-venture-x-rewards-credit-card-benefits",
+      description:
+        "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+      image:
+        "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-benefits.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Capital One Venture X Rewards Credit Card Requirements",
+      slug: "capital-one-venture-x-rewards-credit-card-requirements",
+      description:
+        "Elevate your travel experience with Venture X. Check credit score, income, and residency requirements to qualify for premium rewards.",
+      image:
+        "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Capital One Spark Cash Plus Benefits",
+      slug: "capital-one-spark-cash-plus-benefits",
+      description:
+        "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
+      image:
+        "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Wells Fargo Autograph Card benefits: Maximize your rewards",
+      slug: "wells-fargo-autograph-card-benefits",
+      description:
+        "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
+      image:
+        "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Wells Fargo Autograph Card Requirements",
+      slug: "wells-fargo-autograph-card-requirements",
+      description:
+        "The Wells Fargo Autograph Card offers versatile rewards for everyday spending. Understanding the qualifications is the first step.",
+      image:
+        "https://media.topfinanzas.com/images/wells-fargo-autograph-card-requirements.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Titanium Rewards Visa Signature credit card benefits",
+      slug: "titanium-rewards-visa-signature-credit-card-benefits",
+      description:
+        "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+      image:
+        "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Titanium Rewards Visa Signature credit card requirements",
+      slug: "titanium-rewards-visa-signature-credit-card-requirements",
+      description:
+        "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
+      image:
+        "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "The benefits of the Capital One Platinum Secured Credit Card",
+      slug: "benefits-of-the-capital-one-platinum-secured-credit-card",
+      description:
+        "If you’re building or rebuilding your credit, the Capital One Platinum Secured Credit Card is your perfect ally.",
+      image:
+        "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Requirements of the Capital One Platinum Secured Credit Card",
+      slug: "requirements-of-the-capital-one-platinum-secured-credit-card",
+      description:
+        "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
+      image:
+        "https://media.topfinanzas.com/images/requirements-of-the-capital-one-platinum-secured-credit-card.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
+      title: "Capital One Spark Cash Plus Requirements",
+      slug: "capital-one-spark-cash-plus-requirements",
+      description:
+        "Power your business with unlimited cash back. Check credit score, business revenue, and entity requirements for the Spark Cash Plus.",
+      image:
+        "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-requirements.webp",
+      date: "October 31, 2025",
+      category: "Financial Solutions",
+      categoryPath: "financial-solutions",
+    },
+    {
       title: "American Express Platinum Card Requirements",
       slug: "american-express-platinum-card-requirements",
       description:
