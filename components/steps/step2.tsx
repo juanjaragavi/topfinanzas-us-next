@@ -30,7 +30,7 @@ export default function Step2({ formData, updateFormData }: Step2Props) {
 
       <div className="text-center mt-2 sm:mt-8">
         <h1 className="text-xl sm:text-3xl font-bold text-gray-800 leading-tight">
-          ¿Cuál es tu <span className="text-[#2E74B5]">ingreso mensual?</span>
+          {step2Strings.question}
         </h1>
       </div>
 
