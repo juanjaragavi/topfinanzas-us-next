@@ -1,8 +1,14 @@
-fix: Map credit card recommendation CTAs to specific product pages
+feat: implement shortened quiz variant with reduced form fields
 
-- Updated /weve-discovered-a-few-cards-for-you CTA buttons to link to actual credit card products
-- $1000 credit limit → Capital One Platinum Secured Credit Card (starter/secured)
-- $2500 credit limit → Discover it Cash Back (mid-tier cashback)
-- $5000 credit limit → Chase Sapphire Preferred (premium travel rewards)
-- "MORE OPTIONS" → Financial Solutions listing page
-- Improved user journey from quiz completion to specific product details
+- Created new quiz page at /campaign-quiz-credit-card-recommender-short
+- Implemented Step3Short component with only Name and Email fields (vs 4 fields)
+- Added dedicated API endpoint /api/sheets/short-version for data segregation
+- Configured Google Sheets integration to write to "short-version" sheet
+- Implemented intelligent name parsing for ActiveCampaign (splits full name)
+- Preserved identical UX design, progress indicators, and user flow
+- Added comprehensive documentation in docs/SHORT_QUIZ_IMPLEMENTATION.md
+- Added quick reference guide in docs/SHORT_QUIZ_QUICK_REFERENCE.md
+- All code passes ESLint and TypeScript strict checks
+- Zero impact on existing full quiz functionality
+- Maintains same conversion tracking and redirect behavior
+- Production ready with error handling and logging ([QUIZ-SHORT] prefix)
