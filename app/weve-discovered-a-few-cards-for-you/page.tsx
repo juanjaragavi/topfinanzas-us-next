@@ -41,19 +41,19 @@ export default function CreditCardLandingPage() {
             </p>
             <div className="space-y-3 max-w-2xl mx-auto">
               <Link
-                href="/financial-solutions"
+                href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
                 className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
               >
                 $1000 CREDIT CARD
               </Link>
               <Link
-                href="/financial-solutions"
+                href="/financial-solutions/benefits-of-the-discover-it-cash-back"
                 className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
               >
                 $2500 CREDIT CARD
               </Link>
               <Link
-                href="/financial-solutions"
+                href="/financial-solutions/chase-sapphire-preferred-credit-card-benefits"
                 className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
               >
                 $5000 CREDIT CARD
