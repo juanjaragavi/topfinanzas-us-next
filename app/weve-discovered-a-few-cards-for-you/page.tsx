@@ -91,37 +91,47 @@ export default function CreditCardLandingPage() {
               ¿Tienes dudas? Aquí respondemos algunas comunes:
             </h4>
             <Accordion type="single" collapsible className="w-full space-y-2">
-              <AccordionItem value="item-1" className="bg-white rounded-lg px-4 border-0">
+              <AccordionItem
+                value="item-1"
+                className="bg-white rounded-lg px-4 border-0"
+              >
                 <AccordionTrigger className="text-left hover:no-underline py-4 text-sm md:text-base font-medium">
                   What is a credit card cash back statement credit?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700 pb-4 text-sm md:text-base">
-                  A cashback statement credit is a refund applied directly to your
-                  credit card account balance, reducing the amount you owe.
+                  A cashback statement credit is a refund applied directly to
+                  your credit card account balance, reducing the amount you owe.
                   It&apos;s earned by making qualifying purchases with your
                   rewards credit card.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2" className="bg-white rounded-lg px-4 border-0">
+              <AccordionItem
+                value="item-2"
+                className="bg-white rounded-lg px-4 border-0"
+              >
                 <AccordionTrigger className="text-left hover:no-underline py-4 text-sm md:text-base font-medium">
                   How do I choose the right credit card for travel?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700 pb-4 text-sm md:text-base">
-                  Consider cards that offer travel rewards, no foreign transaction
-                  fees, airport lounge access, and travel insurance. Look for
-                  sign-up bonuses that can be redeemed for flights or hotel stays.
+                  Consider cards that offer travel rewards, no foreign
+                  transaction fees, airport lounge access, and travel insurance.
+                  Look for sign-up bonuses that can be redeemed for flights or
+                  hotel stays.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-3" className="bg-white rounded-lg px-4 border-0">
+              <AccordionItem
+                value="item-3"
+                className="bg-white rounded-lg px-4 border-0"
+              >
                 <AccordionTrigger className="text-left hover:no-underline py-4 text-sm md:text-base font-medium">
                   Can I transfer my credit card balance to another person&apos;s
                   card?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700 pb-4 text-sm md:text-base">
-                  Generally, you cannot transfer your balance directly to another
-                  person&apos;s card. However, that person can initiate a balance
-                  transfer from their account to pay off your card, subject to
-                  their issuer&apos;s policies.
+                  Generally, you cannot transfer your balance directly to
+                  another person&apos;s card. However, that person can initiate
+                  a balance transfer from their account to pay off your card,
+                  subject to their issuer&apos;s policies.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
