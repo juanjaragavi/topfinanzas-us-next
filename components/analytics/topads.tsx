@@ -51,14 +51,16 @@ export default function TopAds() {
                         '/about-us',
                         '/contact-us',
                         '/quiz',
-                        '/quiz-2'
+                        '/quiz-2',
+                        '/campaign-quiz-credit-card-recommender'
                     ]
                 },
                 formats: {
                     interstitial: {
                         status: 'active',
                         exclude: [
-                            '/credit-card-recommender-p3'
+                            '/credit-card-recommender-p3',
+                            '/campaign-quiz-credit-card-recommender'
                         ],
                     },
                     offerwall: {
@@ -70,7 +72,8 @@ export default function TopAds() {
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
                             '/invit-credit-card-rec-us',
-                            '/invit-credit-card-rec-us-2'
+                            '/invit-credit-card-rec-us-2',
+                            '/campaign-quiz-credit-card-recommender'
                         ],
                     },
                 }

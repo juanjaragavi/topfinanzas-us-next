@@ -33,17 +33,14 @@ export default function Step1({ formData, updateFormData }: Step1Props) {
           {step1Strings.title}
         </h1>
         <p className="text-gray-700 font-bold text-sm sm:text-lg leading-tight">
-          Responde para que nuestra tecnología escoja{" "}
-          <span className="text-[#2E74B5]">
-            la mejor tarjeta de crédito para ti
-          </span>
+          Answer so our technology can choose{" "}
+          <span className="text-[#2E74B5]">the best credit card for you</span>
         </p>
       </div>
 
       <div className="text-center">
         <h2 className="text-base sm:text-2xl font-bold text-gray-800 leading-tight">
-          ¿Qué es <span className="text-[#2E74B5]">lo más importante</span> en
-          una tarjeta de crédito para ti?
+          {step1Strings.question}
         </h2>
       </div>
 

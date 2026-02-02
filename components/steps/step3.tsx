@@ -189,18 +189,16 @@ export default function Step3({
 
   return (
     <div className="space-y-3 sm:space-y-6">
-      <ProgressIndicator step={2} />
+      <ProgressIndicator step={3} />
 
       <div className="text-center space-y-1 sm:space-y-4">
-        <h1 className="text-2xl sm:text-4xl font-bold text-[#2E74B5] leading-tight">
+        <div className="inline-block bg-pink-100 text-pink-600 px-6 py-2 rounded-full text-sm font-bold mb-2">
           {step3Strings.title}
-        </h1>
-        <p className="text-gray-800 font-bold text-sm sm:text-xl leading-tight px-4">
+        </div>
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 leading-tight">
           {step3Texts.subtitle.firstPart}{" "}
-          <span className="text-[#2E74B5]">
-            {step3Texts.subtitle.highlight}
-          </span>
-        </p>
+          <span className="text-gray-800">{step3Texts.subtitle.highlight}</span>
+        </h1>
       </div>
 
       <motion.div
@@ -316,9 +314,12 @@ export default function Step3({
             htmlFor="receiveMessages"
             className="text-[10px] sm:text-sm text-gray-700 leading-tight"
           >
-            {step3Strings.checkbox.split(" acá")[0]}{" "}
-            <a href="/privacy-policy" className="font-bold">
-              acá
+            {step3Strings.checkbox.split(" here")[0]}{" "}
+            <a
+              href="/privacy-policy"
+              className="text-[#2E74B5] font-bold underline"
+            >
+              here
             </a>
           </Label>
         </div>
@@ -331,19 +332,31 @@ export default function Step3({
             className={`w-full py-3 sm:py-4 text-lg sm:text-xl font-black rounded-full transition-all shadow-lg ${
               isSubmitting
                 ? "bg-gray-400 text-white cursor-not-allowed"
-                : "bg-[#457cb3] hover:bg-[#2E74B5] text-white active:scale-95"
+                : "bg-[#1E3A8A] hover:bg-[#1E40AF] text-white active:scale-95"
             }`}
           >
-            {isSubmitting ? "ENVIANDO..." : step3Strings.button}
+            {isSubmitting ? "SENDING..." : step3Strings.button}
           </button>
         </div>
 
-        {submissionMessage && (
-          <p
-            className={`text-center text-xs sm:text-sm font-bold ${
-              submissionStatus === "error" ? "text-red-500" : "text-[#2E74B5]"
-            }`}
-          >
+        <div className="text-center text-xs sm:text-sm px-4">
+          <p className="text-gray-700">
+            <span className="font-bold text-orange-500">Important:</span>{" "}
+            <span className="font-normal">
+              check that your email is written correctly so we can send you the
+              information you want
+            </span>
+          </p>
+        </div>
+
+        {submissionStatus === "success" && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded text-center text-sm">
+            {submissionMessage}
+          </div>
+        )}
+
+        {submissionStatus === "error" && submissionMessage && (
+          <p className="text-center text-xs sm:text-sm font-bold text-red-500">
             {submissionMessage}
           </p>
         )}

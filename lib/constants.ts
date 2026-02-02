@@ -53,18 +53,18 @@ export const formStrings = {
 };
 
 export const step3Strings = {
-  title: "Excellent!",
+  title: "You're almost there!",
   fields: {
     email: "Email",
     name: "First Name",
     lastName: "Last Name",
     phone: "Phone Number",
   },
-  checkbox: "I accept the privacy policy and terms and conditions here",
-  button: "SEE CARD OPTIONS",
+  checkbox: "I accept data policies and terms and conditions here",
+  button: "FIND RESULTS",
   placeholders: {
-    email: "Email",
-    name: "First Name",
+    email: "Enter your email",
+    name: "Enter your name",
     lastName: "Last Name",
     phone: "Phone Number",
   },
