@@ -18,7 +18,11 @@ async function testUSIntegration() {
   console.log("🇺🇸 US Google Sheets Integration Test");
   console.log("==============================================\n");
 
-  if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY || !SHEET_ID) {
+  if (
+    !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL ||
+    !process.env.GOOGLE_PRIVATE_KEY ||
+    !SHEET_ID
+  ) {
     console.error("❌ Missing required environment variables!");
     process.exit(1);
   }
@@ -36,7 +40,9 @@ async function testUSIntegration() {
 
   console.log("Step 1: Verifying Sheet Access...");
   try {
-    const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId: SHEET_ID });
+    const spreadsheet = await sheets.spreadsheets.get({
+      spreadsheetId: SHEET_ID,
+    });
     console.log(`  ✅ Connected to: ${spreadsheet.data.properties.title}`);
   } catch (error) {
     console.error(`  ❌ Failed to connect: ${error.message}`);
@@ -47,16 +53,18 @@ async function testUSIntegration() {
   // Check if sheet exists and has headers, if not create them (mimics route.ts logic)
   const sheetRange = `${SHEET_NAME}!A:S`;
   let sheetValues = [];
-  
+
   try {
     const response = await sheets.spreadsheets.values.get({
-        spreadsheetId: SHEET_ID,
-        range: sheetRange,
-        majorDimension: "ROWS"
+      spreadsheetId: SHEET_ID,
+      range: sheetRange,
+      majorDimension: "ROWS",
     });
     sheetValues = response.data.values || [];
   } catch (error) {
-    console.log(`  ℹ️  Sheet might not exist yet, will attempt to write headers.`);
+    console.log(
+      `  ℹ️  Sheet might not exist yet, will attempt to write headers.`,
+    );
   }
 
   const newHeaders = [
@@ -78,28 +86,30 @@ async function testUSIntegration() {
     "UTM Medium",
     "UTM Campaign",
     "UTM Term",
-    "UTM Content"
+    "UTM Content",
   ];
 
   if (sheetValues.length === 0) {
-      console.log("  ℹ️  Sheet empty or missing. Writing headers...");
-      await sheets.spreadsheets.values.update({
-        spreadsheetId: SHEET_ID,
-        range: `${SHEET_NAME}!A1`,
-        valueInputOption: "USER_ENTERED",
-        requestBody: { values: [newHeaders] },
-      });
-      console.log("  ✅ Headers written.");
+    console.log("  ℹ️  Sheet empty or missing. Writing headers...");
+    await sheets.spreadsheets.values.update({
+      spreadsheetId: SHEET_ID,
+      range: `${SHEET_NAME}!A1`,
+      valueInputOption: "USER_ENTERED",
+      requestBody: { values: [newHeaders] },
+    });
+    console.log("  ✅ Headers written.");
   } else {
-      console.log("  ✅ Sheet exists with data/headers.");
-      // Verify first header matches "Name"
-      if (sheetValues[0][0] !== "Name") {
-          console.warn(`  ⚠️  WARNING: First column header is "${sheetValues[0][0]}", expected "Name".`);
-      }
+    console.log("  ✅ Sheet exists with data/headers.");
+    // Verify first header matches "Name"
+    if (sheetValues[0][0] !== "Name") {
+      console.warn(
+        `  ⚠️  WARNING: First column header is "${sheetValues[0][0]}", expected "Name".`,
+      );
+    }
   }
 
   console.log("\nStep 3: Appending Test Row...");
-  
+
   // Generate timestamp dd/mm/yyyy hh:mm:ss
   const now = new Date();
   const day = String(now.getDate()).padStart(2, "0");
@@ -111,34 +121,34 @@ async function testUSIntegration() {
   const timestampStr = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
   const testRow = [
-    "TestFirstName",       // Name
-    "TestLastName",        // Last Name
+    "TestFirstName", // Name
+    "TestLastName", // Last Name
     "test.us.migration@example.com", // Email
-    "555-0199",           // Phone
-    timestampStr,         // Timestamp
-    "Cashback",           // Preference
-    "$50,000+",           // Income
-    "United States",      // Country
-    "TopFinanzas",        // Brand
-    "test_script",        // Source
-    "console",            // Medium
-    "us_migration_test",  // Campaign
-    "term_test",          // Term
-    "content_test",       // Content
-    "test_script",        // UTM Source
-    "console",            // UTM Medium
-    "us_migration_test",  // UTM Campaign
-    "term_test",          // UTM Term
-    "content_test"        // UTM Content
+    "555-0199", // Phone
+    timestampStr, // Timestamp
+    "Cashback", // Preference
+    "$50,000+", // Income
+    "United States", // Country
+    "TopFinanzas", // Brand
+    "test_script", // Source
+    "console", // Medium
+    "us_migration_test", // Campaign
+    "term_test", // Term
+    "content_test", // Content
+    "test_script", // UTM Source
+    "console", // UTM Medium
+    "us_migration_test", // UTM Campaign
+    "term_test", // UTM Term
+    "content_test", // UTM Content
   ];
 
   try {
     await sheets.spreadsheets.values.append({
-        spreadsheetId: SHEET_ID,
-        range: SHEET_NAME,
-        valueInputOption: "USER_ENTERED",
-        insertDataOption: "INSERT_ROWS",
-        requestBody: { values: [testRow] },
+      spreadsheetId: SHEET_ID,
+      range: SHEET_NAME,
+      valueInputOption: "USER_ENTERED",
+      insertDataOption: "INSERT_ROWS",
+      requestBody: { values: [testRow] },
     });
     console.log("  ✅ Test row appended successfully.");
     console.log(`  Time: ${timestampStr}`);
