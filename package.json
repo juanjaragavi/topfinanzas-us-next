@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "test:brevo": "node scripts/test-brevo-new-contact.js",
     "test:brevo-direct": "node scripts/test-brevo-direct.js",
-    "test:brevo-api": "node scripts/test-brevo-integration.js"
+    "test:brevo-api": "node scripts/test-brevo-integration.js",
+    "test:activecampaign": "npx tsx scripts/test-activecampaign.ts"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

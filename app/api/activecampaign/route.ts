@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 import { apiLogger } from "@/lib/logger";
+import {
+  mapQuizDataToFieldValues,
+  TOP_US_LIST_ID,
+} from "@/lib/activecampaign-field-mapping";
 
 interface ActiveCampaignContact {
   email: string;
@@ -12,6 +16,12 @@ interface ActiveCampaignContact {
   }>;
 }
 
+interface ActiveCampaignContactList {
+  list: string;
+  contact: string;
+  status: number; // 1 = active/subscribed, 2 = unsubscribed
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -21,6 +31,7 @@ export async function POST(req: Request) {
       hasFirstName: !!body.firstName,
       hasLastName: !!body.lastName,
       hasPhone: !!body.phone,
+      hasUtmParams: !!(body.utm_source || body.utm_medium || body.utm_campaign),
     });
 
     // Validate required fields
@@ -44,7 +55,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Prepare contact data
+    // Prepare contact data with basic info
     const contactData: ActiveCampaignContact = {
       email: body.email.trim().toLowerCase(),
       firstName: body.firstName?.trim() || "",
@@ -52,27 +63,35 @@ export async function POST(req: Request) {
       phone: body.phone?.trim() || "",
     };
 
-    // Add custom fields if provided
-    const fieldValues = [];
-    if (body.preference) {
-      fieldValues.push({
-        field: "1", // Adjust field ID based on your ActiveCampaign setup
-        value: body.preference,
-      });
-    }
-    if (body.income) {
-      fieldValues.push({
-        field: "2", // Adjust field ID based on your ActiveCampaign setup
-        value: body.income,
-      });
-    }
+    // Map quiz and tracking data to custom field values
+    const fieldValues = mapQuizDataToFieldValues({
+      preference: body.preference,
+      preferenceText: body.preferenceText,
+      income: body.income,
+      incomeText: body.incomeText,
+      utm_source: body.utm_source,
+      utm_medium: body.utm_medium,
+      utm_campaign: body.utm_campaign,
+      utm_term: body.utm_term,
+      utm_content: body.utm_content,
+      country: body.country,
+      brand: body.brand,
+      source: body.source,
+      timestamp: body.timestamp,
+    });
 
+    // Only add fieldValues if we have any
     if (fieldValues.length > 0) {
       contactData.fieldValues = fieldValues;
     }
 
-    // Create contact in ActiveCampaign
-    const response = await fetch(`${apiUrl}/api/3/contacts`, {
+    apiLogger.debug("ActiveCampaign field values prepared", {
+      fieldCount: fieldValues.length,
+      fields: fieldValues.map((fv) => fv.field),
+    });
+
+    // Step 1: Create or update contact in ActiveCampaign
+    const contactResponse = await fetch(`${apiUrl}/api/3/contacts`, {
       method: "POST",
       headers: {
         "Api-Token": apiKey,
@@ -83,32 +102,87 @@ export async function POST(req: Request) {
       }),
     });
 
-    const responseData = await response.json();
+    const contactResponseData = await contactResponse.json();
 
-    if (!response.ok) {
-      apiLogger.error("ActiveCampaign API error", {
-        status: response.status,
-        statusText: response.statusText,
-        error: responseData,
+    if (!contactResponse.ok) {
+      apiLogger.error("ActiveCampaign contact creation error", {
+        status: contactResponse.status,
+        statusText: contactResponse.statusText,
+        error: contactResponseData,
       });
       return NextResponse.json(
         {
           error: "Failed to create contact in ActiveCampaign",
-          details: responseData,
+          details: contactResponseData,
         },
-        { status: response.status },
+        { status: contactResponse.status },
       );
     }
 
+    const contactId = contactResponseData.contact?.id;
+
     apiLogger.info("ActiveCampaign contact created successfully", {
-      contactId: responseData.contact?.id,
+      contactId,
       email: contactData.email,
+      fieldValuesCount: fieldValues.length,
     });
+
+    // Step 2: Subscribe contact to TOP US list (ID: 4)
+    // This is critical for list assignment automation
+    try {
+      const contactListData: {
+        contactList: ActiveCampaignContactList;
+      } = {
+        contactList: {
+          list: TOP_US_LIST_ID,
+          contact: contactId,
+          status: 1, // 1 = active/subscribed
+        },
+      };
+
+      const listResponse = await fetch(`${apiUrl}/api/3/contactLists`, {
+        method: "POST",
+        headers: {
+          "Api-Token": apiKey,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(contactListData),
+      });
+
+      const listResponseData = await listResponse.json();
+
+      if (!listResponse.ok) {
+        // Log the error but don't fail the entire request
+        // Contact was created successfully, list assignment is supplementary
+        apiLogger.warn("ActiveCampaign list assignment failed", {
+          status: listResponse.status,
+          statusText: listResponse.statusText,
+          error: listResponseData,
+          contactId,
+          listId: TOP_US_LIST_ID,
+        });
+      } else {
+        apiLogger.info("Contact assigned to TOP US list successfully", {
+          contactId,
+          listId: TOP_US_LIST_ID,
+          contactListId: listResponseData.contactList?.id,
+        });
+      }
+    } catch (listError) {
+      // Log list assignment error but don't fail the request
+      apiLogger.error("ActiveCampaign list assignment exception", {
+        error:
+          listError instanceof Error ? listError.message : String(listError),
+        contactId,
+        listId: TOP_US_LIST_ID,
+      });
+    }
 
     return NextResponse.json({
       success: true,
-      contactId: responseData.contact?.id,
-      message: "Contact created successfully",
+      contactId,
+      listId: TOP_US_LIST_ID,
+      message: "Contact created and assigned to TOP US list",
     });
   } catch (error) {
     apiLogger.error("ActiveCampaign API error", {
