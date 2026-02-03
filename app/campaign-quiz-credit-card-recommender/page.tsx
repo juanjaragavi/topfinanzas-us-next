@@ -14,6 +14,7 @@ import { step1Strings, step2Strings } from "@/lib/strings";
 import { pushGTMConversion } from "@/components/analytics/gtm";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 import { redirectWithUtmParams } from "@/lib/utils/url-builder";
+import { formatTimestampForSheets } from "@/lib/utils";
 
 type SubmissionStatus = "idle" | "success" | "duplicate" | "error";
 
@@ -204,7 +205,7 @@ export default function CampaignQuizPage() {
       });
 
       const utmParams = getUTMParams();
-      const timestamp = new Date().toISOString();
+      const timestamp = formatTimestampForSheets();
 
       // Prepare data for both APIs
       const submissionData = {

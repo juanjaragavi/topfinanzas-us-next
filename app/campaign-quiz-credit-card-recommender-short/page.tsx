@@ -14,6 +14,7 @@ import { step1Strings, step2Strings } from "@/lib/strings";
 import { pushGTMConversion } from "@/components/analytics/gtm";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 import { redirectWithUtmParams } from "@/lib/utils/url-builder";
+import { formatTimestampForSheets } from "@/lib/utils";
 
 type SubmissionStatus = "idle" | "success" | "duplicate" | "error";
 
@@ -198,7 +199,7 @@ export default function CampaignQuizShortPage() {
       });
 
       const utmParams = getUTMParams();
-      const timestamp = new Date().toISOString();
+      const timestamp = formatTimestampForSheets();
 
       // Split name into first and last name for ActiveCampaign
       const nameParts = formData.name.trim().split(/\s+/);
