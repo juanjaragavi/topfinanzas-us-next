@@ -19,7 +19,7 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
       if (typeof window !== "undefined" && window.dataLayer) {
         window.dataLayer.push({
           event: "gtm_loaded",
-          site_section: "uk_topfinanzas",
+          site_section: "us_topfinanzas",
           page_type: "general",
         });
         analyticsLogger.debug("GTM: Enhanced configuration loaded");
@@ -129,7 +129,7 @@ export function pushGTMEvent(
 export function pushGTMConversion(
   conversionName: string,
   value?: number,
-  currency = "GBP",
+  currency = "USD",
 ) {
   if (typeof window !== "undefined" && window.dataLayer) {
     const conversionData: Record<string, unknown> = {

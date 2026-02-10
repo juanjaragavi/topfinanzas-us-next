@@ -332,17 +332,19 @@ export default function Home() {
 
             {/* Latest 3 Posts - Hero (Poster) + 2 Standard Cards */}
             {(() => {
-              const sortedPosts = allPosts
-                .sort((a, b) => {
-                  const dateA = a.frontmatter.date
-                    ? new Date(a.frontmatter.date).getTime()
-                    : 0;
-                  const dateB = b.frontmatter.date
-                    ? new Date(b.frontmatter.date).getTime()
-                    : 0;
-                  return dateB - dateA;
-                })
-                .slice(0, 3);
+              const sortedPosts = useMemo(() => {
+                return [...allPosts]
+                  .sort((a, b) => {
+                    const dateA = a.frontmatter.date
+                      ? new Date(a.frontmatter.date).getTime()
+                      : 0;
+                    const dateB = b.frontmatter.date
+                      ? new Date(b.frontmatter.date).getTime()
+                      : 0;
+                    return dateB - dateA;
+                  })
+                  .slice(0, 3);
+              }, []);
 
               if (sortedPosts.length === 0) {
                 return (

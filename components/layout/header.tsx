@@ -4,8 +4,13 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { logger } from "@/lib/logger";
-import { Menu, ChevronDown, Search } from "lucide-react";
-import { SearchBar } from "@/components/search/search-bar"; // Import SearchBar
+import { ChevronDown, Search, Menu } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const SearchBar = dynamic(
+  () => import("@/components/search/search-bar").then((mod) => mod.SearchBar),
+  { ssr: false },
+);
 // Removed Input, SearchResults, useDebouncedCallback
 import { useMobileMenu } from "@/components/providers/mobile-menu-context";
 // Import content from lib directory

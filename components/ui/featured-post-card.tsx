@@ -22,7 +22,7 @@ export interface FeaturedPostCardProps {
 /**
  * A reusable component for displaying featured blog posts throughout the site
  */
-export function FeaturedPostCard({
+export const FeaturedPostCard = React.memo(function FeaturedPostCard({
   title,
   description,
   image,
@@ -173,4 +173,4 @@ export function FeaturedPostCard({
       </div>
     </div>
   );
-}
+});
