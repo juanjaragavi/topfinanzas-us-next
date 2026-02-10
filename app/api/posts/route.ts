@@ -69,12 +69,11 @@ export async function GET() {
       "API route /api/posts called (DEBUGGING - Checking Metadata Existence)",
     );
 
-    // Run checks but don't collect posts for now
-    await checkMetadataExistence("app/personal-finance", "Personal Finance");
-    await checkMetadataExistence(
-      "app/financial-solutions",
-      "Financial Solutions",
-    );
+    // Run checks in parallel
+    await Promise.all([
+      checkMetadataExistence("app/personal-finance", "Personal Finance"),
+      checkMetadataExistence("app/financial-solutions", "Financial Solutions"),
+    ]);
 
     // Return an empty array for now to prevent frontend errors,
     // focus is on checking the server logs for the existence messages.

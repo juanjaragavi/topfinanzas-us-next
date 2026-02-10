@@ -3,7 +3,7 @@
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export default function FinancialSolutionsPage() {
   // Category definitions
@@ -65,9 +65,19 @@ export default function FinancialSolutionsPage() {
     );
   }
 
+  // Content interfaces
+  interface FinancialContent {
+    title: string;
+    slug: string;
+    description: string;
+    image: string;
+    date: string;
+    type: string;
+    category: string;
+  }
+
   // List of loan content with types
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const loansContent: any[] = [
+  const loansContent: FinancialContent[] = [
     {
       title: "Benefits QuickBridge Loans",
       slug: "benefits-quickbridge-loans",
@@ -159,8 +169,7 @@ export default function FinancialSolutionsPage() {
   ];
 
   // List of credit card content with types
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const creditCardsContent: any[] = [
+  const creditCardsContent: FinancialContent[] = [
     {
       title: "Chase Sapphire Preferred Credit Card Benefits",
       slug: "chase-sapphire-preferred-credit-card-benefits",
@@ -611,23 +620,33 @@ export default function FinancialSolutionsPage() {
   };
 
   // Sort and filter content based on selected category and type
-  const sortedCreditCards = [...creditCardsContent].sort(
-    (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
-  );
+  const sortedCreditCards = useMemo(() => {
+    return [...creditCardsContent].sort(
+      (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
+    );
+  }, []);
 
-  const sortedLoans = [...loansContent].sort(
-    (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
-  );
+  const sortedLoans = useMemo(() => {
+    return [...loansContent].sort(
+      (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
+    );
+  }, []);
 
-  const filteredCreditCards =
-    activeCreditCardType === "all"
+  const filteredCreditCards = useMemo(() => {
+    return activeCreditCardType === "all"
       ? sortedCreditCards
-      : sortedCreditCards.filter((card) => card.type === activeCreditCardType);
+      : sortedCreditCards.filter(
+          (card: FinancialContent) => card.type === activeCreditCardType,
+        );
+  }, [activeCreditCardType, sortedCreditCards]);
 
-  const filteredLoans =
-    activeLoanType === "all"
+  const filteredLoans = useMemo(() => {
+    return activeLoanType === "all"
       ? sortedLoans
-      : sortedLoans.filter((loan) => loan.type === activeLoanType);
+      : sortedLoans.filter(
+          (loan: FinancialContent) => loan.type === activeLoanType,
+        );
+  }, [activeLoanType, sortedLoans]);
 
   // Custom content for this category page
   const content = (
@@ -685,7 +704,7 @@ export default function FinancialSolutionsPage() {
 
           {/* Credit cards grid with fixed positioning to accommodate Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filteredCreditCards.map((post) => (
+            {filteredCreditCards.map((post: FinancialContent) => (
               <div
                 key={post.slug}
                 className="relative"
@@ -733,7 +752,7 @@ export default function FinancialSolutionsPage() {
 
           {/* Loans grid with fixed positioning for Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filteredLoans.map((post) => (
+            {filteredLoans.map((post: FinancialContent) => (
               <div
                 key={post.slug}
                 className="relative"
