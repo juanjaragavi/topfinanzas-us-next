@@ -71,6 +71,7 @@ export default function TopAds() {
                         websiteName: 'TopFinanzas US',
                         cooldown: '12',
                         exclude: [
+                            '/credit-card-recommender-p1/',
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
                             '/invit-credit-card-rec-us',
