@@ -1,7 +1,3 @@
-feat: update card finder UI and add image fallbacks
+fix(analytics): exclude credit-card-recommender-p1 from TopAds
 
-- Overhaul UI for 'choose-the-perfect-card-for-you-1' page with improved layout, typography, and specific offer links
-- Add Header and Footer to card finder page
-- Implement fallback images for posts in Home page client component
-- Adjust logo dimensions in Header for better visibility
-- Apply code formatting and linting fixes across financial solutions and navigation files
+Add /credit-card-recommender-p1/ to the exclude list in TopAds configuration to prevent the ad overlay from appearing on the first step of the credit card recommender quiz.
