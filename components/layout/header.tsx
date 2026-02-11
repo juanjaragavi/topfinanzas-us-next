@@ -33,6 +33,22 @@ export function Header() {
   const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>(
     {},
   );
+  const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Mega menu hover handlers with delay
+  const handleMegaMenuEnter = (menuId: string) => {
+    if (megaMenuTimeoutRef.current) {
+      clearTimeout(megaMenuTimeoutRef.current);
+      megaMenuTimeoutRef.current = null;
+    }
+    setActiveMegaMenu(menuId);
+  };
+
+  const handleMegaMenuLeave = () => {
+    megaMenuTimeoutRef.current = setTimeout(() => {
+      setActiveMegaMenu(null);
+    }, 150); // 150ms delay before closing
+  };
 
   // Removed Search State and Refs
   // Removed Debounced search function
@@ -180,19 +196,17 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6 ml-6 flex-1 justify-end">
-              {/* Categories Dropdown */}
-              <div className="relative">
+              {/* Categories Mega Menu - Matching WordPress US Layout */}
+              <div 
+                className="relative"
+                onMouseEnter={() => handleMegaMenuEnter("categories")}
+                onMouseLeave={handleMegaMenuLeave}
+              >
                 <button
                   ref={(el) => {
                     setMenuButtonRef(el, "categories");
                   }}
-                  className="text-link hover:text-primary flex items-center space-x-1 text-sm"
-                  onClick={(e) => {
-                    // Prevent default browser action but DON'T stop propagation
-                    e.preventDefault();
-                    toggleMegaMenu("categories");
-                  }}
-                  // Keep onKeyDown for accessibility
+                  className="text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-1 text-sm uppercase tracking-wide"
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
@@ -217,178 +231,54 @@ export function Header() {
                     ref={(el) => {
                       setMegaMenuRef(el, "categories");
                     }}
-                    className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+                    className="fixed left-0 right-0 mx-auto mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                    style={{ width: "950px", maxWidth: "95vw", top: "64px" }}
+                    onMouseEnter={() => handleMegaMenuEnter("categories")}
+                    onMouseLeave={handleMegaMenuLeave}
                   >
-                    <div className="py-1">
-                      {headerNavigation.categoryDropdown.items.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="block px-2 text-body hover:bg-gray-100"
-                          onClick={() => setActiveMegaMenu(null)}
-                        >
-                          {item.text}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                    <div className="p-6 flex gap-8">
+                      {/* Categories List - Left Side */}
+                      <div className="w-48 flex-shrink-0">
+                        <ul className="space-y-3">
+                          {headerNavigation.categoryDropdown.items.map((item) => (
+                            <li key={item.href}>
+                              <Link
+                                href={item.href}
+                                className="text-blue-600 hover:text-blue-800 font-medium text-sm uppercase tracking-wide"
+                                onClick={() => setActiveMegaMenu(null)}
+                              >
+                                {item.text}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-              {/* Blog Menu Item with Mega Menu */}
-              <div className="relative">
-                <button
-                  ref={(el) => {
-                    setMenuButtonRef(el, "blog");
-                  }}
-                  className="text-link hover:text-primary flex items-center space-x-1 text-sm"
-                  onClick={(e) => {
-                    // Prevent default browser action but DON'T stop propagation
-                    e.preventDefault();
-                    toggleMegaMenu("blog");
-                  }}
-                  // Keep onKeyDown for accessibility
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      toggleMegaMenu("blog");
-                    }
-                  }}
-                  aria-expanded={activeMegaMenu === "blog"}
-                  aria-haspopup="true"
-                  role="button"
-                  tabIndex={0}
-                >
-                  <span>{headerNavigation.blogMegaMenu.title}</span>
-                  <ChevronDown
-                    className={`size-4 transition-transform ${
-                      activeMegaMenu === "blog" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {activeMegaMenu === "blog" && (
-                  <div
-                    ref={(el) => {
-                      setMegaMenuRef(el, "blog");
-                    }}
-                    className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-auto max-w-4xl rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10" // Centered
-                    style={{
-                      width: "calc(min(90vw, 900px))", // Kept width constraint
-                      maxHeight: "calc(100vh - 100px)",
-                      overflowY: "auto",
-                    }}
-                  >
-                    {/* Refactored grid to 4 columns: 3 for links, 1 for featured */}
-                    <div className="p-4 grid grid-cols-4 gap-4">
-                      {" "}
-                      {/* Changed to grid-cols-4 */}
-                      {/* Map link columns directly into the grid */}
-                      {headerNavigation.blogMegaMenu.columns.map(
-                        (column, idx) => (
-                          // Each link column gets its own grid space (col-span-1 implicitly)
-                          <div key={idx} className="col-span-1">
-                            {" "}
-                            {/* Explicitly col-span-1 */}
-                            <h3 className="text-h3 uppercase tracking-wide mb-3">
-                              {column.title}
-                            </h3>
-                            <ul className="space-y-1">
-                              {" "}
-                              {/* Reduced space-y */}
-                              {column.items.map((item, itemIdx) => (
-                                <li key={itemIdx}>
-                                  <Link
-                                    href={item.href}
-                                    className={
-                                      item.isEmphasis
-                                        ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
-                                        : "text-body hover:text-primary block py-1" // Original style
-                                    }
-                                    onClick={() => setActiveMegaMenu(null)}
-                                  >
-                                    {item.text}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ),
-                      )}
-                      {/* Featured Posts Column */}
-                      {headerNavigation.blogMegaMenu.featuredPosts && (
-                        // Ensure this is also col-span-1 in the 4-col grid
-                        <div className="col-span-1">
-                          <h3 className="text-h3 uppercase tracking-wide mb-3">
-                            {headerNavigation.blogMegaMenu.featuredPosts.title}
-                          </h3>
-                          {/* Changed internal grid to single column */}
-                          <div className="grid grid-cols-1 gapx-2 relative">
-                            {" "}
-                            {/* Reduced gap */}
-                            {headerNavigation.blogMegaMenu.featuredPosts.posts.map(
-                              (post, idx) => (
-                                <Link
-                                  key={idx}
-                                  href={post.href}
-                                  className="group flex space-x-4 items-center" // Use flexbox for row layout
-                                  onClick={() => setActiveMegaMenu(null)}
-                                >
-                                  {/* Text Content Div */}
-                                  <div className="flex-grow">
-                                    <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-meta mb-1">
-                                      {post.category}
-                                    </span>
-                                    <h4 className="text-h3 group-hover:text-primary transition-colors line-clampx-2">
-                                      {" "}
-                                      {/* Limit title lines */}
-                                      {post.title}
-                                    </h4>
-                                  </div>
-                                  {/* Image Content Div */}
-                                  <div className="flex-shrink-0 w-24 h-16 relative text-blue-700 underline underline-offset-2 rounded-md overflow-hidden">
-                                    {" "}
-                                    {/* Fixed size image container */}
-                                    <Image
-                                      src={post.image}
-                                      alt={post.title}
-                                      fill
-                                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                      sizes="96px" // Match width
-                                      priority={false}
-                                      loading="lazy"
-                                      quality={75}
-                                      placeholder="blur"
-                                      blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
-                                    />
-                                  </div>
-                                </Link>
-                              ),
-                            )}
-                          </div>
-                          <div className="mt-4 text-right">
+                      {/* Featured Articles Grid - Right Side */}
+                      {headerNavigation.categoryDropdown.featuredArticles && (
+                        <div className="flex-1 grid grid-cols-4 gap-4">
+                          {headerNavigation.categoryDropdown.featuredArticles.map((article, idx) => (
                             <Link
-                              href="/blog"
-                              className="text-link font-medium inline-flex items-center text-blue-700 underline underline-offset-2"
+                              key={idx}
+                              href={article.href}
+                              className="group block"
                               onClick={() => setActiveMegaMenu(null)}
                             >
-                              {headerContent.blogMegaMenu.viewAllText}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4 ml-1"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
+                              <div className="relative aspect-[4/3] rounded overflow-hidden mb-2">
+                                <Image
+                                  src={article.image}
+                                  alt={article.title}
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                  sizes="140px"
+                                  loading="lazy"
                                 />
-                              </svg>
+                              </div>
+                              <h4 className="text-xs font-medium text-gray-700 group-hover:text-blue-600 line-clamp-2 text-center leading-tight">
+                                {article.title}
+                              </h4>
                             </Link>
-                          </div>
+                          ))}
                         </div>
                       )}
                     </div>
@@ -396,20 +286,18 @@ export function Header() {
                 )}
               </div>
 
-              {/* Other Nav Items */}
-              {headerNavigation.mainNavItems
-                .filter((item) => item.text !== "BLOG")
-                .map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-link hover:text-primary text-sm" // text-sm already applied here, confirming
-                  >
-                    {item.text}
-                  </Link>
-                ))}
+              {/* Main Nav Items (LOANS, CREDIT CARDS) */}
+              {headerNavigation.mainNavItems.map((item) => (
+                <Link
+                  key={item.href + item.text}
+                  href={item.href}
+                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide"
+                >
+                  {item.text}
+                </Link>
+              ))}
 
-              {/* Desktop Search Button (Restored) */}
+              {/* Desktop Search Button */}
               <button
                 type="button"
                 onClick={() => setIsSearchOpen(true)}

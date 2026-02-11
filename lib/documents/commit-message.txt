@@ -1,9 +1,8 @@
-feat: Localize financial products and fix lint errors
+feat(header): improve navigation UX and mega menu behavior
 
-- Replace UK search index data with US financial products from `lib/data/us-financial-products.ts`.
-- Refactor `app/financial-solutions/page.tsx` and `app/page-client.tsx` to fix React Hooks violations (move `useMemo` to top level).
-- Update `lib/search/index.ts` to export `searchContent` and use US data.
-- Update test scripts (`scripts/test-*.js`) to use USD currency.
-- Update `components/README.md` to reflect US data and compliance standards.
-- Remove legacy UK string constants.
-- Fix build error in `components/search/search-bar.tsx` by adding missing export.
+- Remove static search bar from homepage; now toggled via nav icon
+- Add hover activation for mega menu instead of click
+- Add 150ms delay on mouse-leave to prevent accidental menu closure
+- Update nav styles to blue bold text matching WordPress original
+- Increase mega menu width to 950px for better content display
+- Center mega menu horizontally on the page

@@ -2,20 +2,9 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { CategorySection } from "@/components/ui/category-section";
-import { useState, useMemo } from "react";
-import { Button } from "@/components/ui/button";
-import dynamic from "next/dynamic";
-
-// Dynamically import components that aren't needed for the initial render
-const DynamicPagination = dynamic(
-  () => import("@/components/ui/pagination").then((mod) => mod.Pagination),
-  {
-    ssr: false,
-    loading: () => <div className="flex justify-center mt-8 h-10"></div>,
-  },
-);
+import { useMemo } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 // Interface for post frontmatter
 interface PostFrontmatter {
@@ -271,14 +260,6 @@ const cardPosts = [...allPosts, ...allPosts]
 // --- End of Hardcoded Data ---
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6; // Number of posts per page for homepage
-
-  // Calculate total pages using useMemo
-  const totalPages = useMemo(() => {
-    return Math.ceil(allPosts.length / postsPerPage);
-  }, [postsPerPage]);
-
   const homepagePosts = useMemo(() => {
     return [...allPosts]
       .sort((a, b) => {
@@ -297,15 +278,27 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section - Solid Background Color Matching Legacy US Site */}
-      <section className="relative w-full min-h-[420px] md:min-h-[480px] flex items-center py-16 md:py-20 bg-[#1c5ad8]">
+      {/* Hero Section - WordPress US Layout with Background Image */}
+      <section className="relative w-full min-h-[400px] md:min-h-[450px] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://media.topfinanzas.com/images/bannerppal-1536x400-1.webp"
+            alt="Top Finance Hero"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-[650px] lg:max-w-[750px]">
-            <h1 className="text-white text-[2.75rem] md:text-[3.25rem] lg:text-[4rem] font-bold mb-8 leading-[1.15] tracking-tight">
+          <div className="max-w-[500px]">
+            <h1 className="text-white text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold mb-4 leading-[1.1] tracking-tight">
               Welcome to <br />
               Top Finance
             </h1>
-            <p className="text-white text-xl md:text-2xl lg:text-[1.625rem] leading-[1.5] font-medium">
+            <p className="text-white text-lg md:text-xl leading-[1.5]">
               Where every financial decision expands your world.
               <br />
               Choose wisely, live fully.
@@ -314,205 +307,246 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
+      {/* Featured Posts Section - Matching WordPress 3-Column Layout */}
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          {/* Latest Posts Section - Primary Content Bridge */}
-          <div className="mb-16">
-            <div className="flex justify-between items-end mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Latest Posts
-              </h2>
-              <a
-                href="/blog"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1 transition-colors"
+          {/* 3 Featured Cards Grid - WordPress Style */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {homepagePosts.slice(0, 3).map((post, idx) => (
+              <Link
+                key={post.slug}
+                href={`/${post.categoryPath}/${post.slug}`}
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-[350px] md:h-[400px]"
               >
-                View All
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Latest 3 Posts - Hero (Poster) + 2 Standard Cards */}
-            {(() => {
-              if (homepagePosts.length === 0) {
-                return (
-                  <div className="text-gray-500 italic py-8">
-                    Content coming soon...
-                  </div>
-                );
-              }
-
-              const heroPost = homepagePosts[0];
-              const subPosts = homepagePosts.slice(1, 3);
-
-              const mapPost = (post: PostData) => ({
-                title: cleanTitle(post.frontmatter.title),
-                description: post.frontmatter.description,
-                image:
-                  post.frontmatter.featuredImage ||
-                  "https://media.topfinanzas.com/images/placeholder.webp",
-                slug: post.slug,
-                category: post.category,
-                categorySlug: post.categoryPath,
-                date: post.frontmatter.date
-                  ? new Date(post.frontmatter.date).toLocaleDateString(
-                    "en-US",
-                    { year: "numeric", month: "long", day: "numeric" },
-                  )
-                  : undefined,
-                type:
-                  post.category === "Financial Solutions"
-                    ? "financial"
-                    : "personal",
-              });
-
-              return (
-                <div className="flex flex-col gap-6">
-                  {/* Hero Post */}
-                  <div className="w-full">
-                    <FeaturedPostCard
-                      {...mapPost(heroPost)}
-                      variant="poster"
-                      orientation="vertical"
-                      priority={true} // LCP candidate
-                    />
-                  </div>
-
-                  {/* Sub Posts - 2 Columns */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {subPosts.map((post) => (
-                      <FeaturedPostCard
-                        key={post.slug}
-                        {...mapPost(post)}
-                        variant="default"
-                        orientation="vertical" // Stacked cards for sub posts
-                        imageHeight="h-56"
-                      />
-                    ))}
-                  </div>
+                <Image
+                  src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  alt={post.frontmatter.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  priority={idx === 0}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white text-xl md:text-2xl font-bold leading-tight line-clamp-3">
+                    {cleanTitle(post.frontmatter.title)}
+                  </h3>
                 </div>
-              );
-            })()}
+              </Link>
+            ))}
           </div>
 
-          {/* Category Sections - Sharp Corners & Hero+List Layout */}
-
-          <CategorySection
-            title="Smart Savings"
-            posts={savingsPosts.map((p) => ({
-              title: cleanTitle(p.frontmatter.title),
-              description: p.frontmatter.description,
-              image:
-                p.frontmatter.featuredImage ||
-                "https://media.topfinanzas.com/images/placeholder.webp",
-              slug: p.slug,
-              category: p.category,
-              categorySlug: p.categoryPath,
-              date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })
-                : undefined,
-              type: "financial",
-            }))}
-            viewAllLink="/savings"
-          />
-
-          <CategorySection
-            title="Zero Debt"
-            posts={debtPosts.map((p) => ({
-              title: cleanTitle(p.frontmatter.title),
-              description: p.frontmatter.description,
-              image:
-                p.frontmatter.featuredImage ||
-                "https://media.topfinanzas.com/images/placeholder.webp",
-              slug: p.slug,
-              category: p.category,
-              categorySlug: p.categoryPath,
-              date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })
-                : undefined,
-              type: "personal",
-            }))}
-            viewAllLink="/debt"
-          />
-
-          <CategorySection
-            title="Choose Your Card"
-            posts={cardPosts.map((p) => ({
-              title: cleanTitle(p.frontmatter.title),
-              description: p.frontmatter.description,
-              image:
-                p.frontmatter.featuredImage ||
-                "https://media.topfinanzas.com/images/placeholder.webp",
-              slug: p.slug,
-              category: p.category,
-              categorySlug: p.categoryPath,
-              date: p.frontmatter.date
-                ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })
-                : undefined,
-              type: "financial",
-            }))}
-            viewAllLink="/cards"
-          />
-
-          {/* Pagination Controls */}
-          {totalPages > 1 &&
-            (totalPages <= 3 ? (
-              <div className="flex justify-center items-center space-x-4 mt-8">
-                <Button
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.max(prev - 1, 1))
-                  }
-                  disabled={currentPage === 1}
-                  variant="secondary"
-                  className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          {/* Row of 3 Cards with descriptions - Secondary Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {allPosts.slice(3, 6).map((post) => (
+              <div key={post.slug} className="bg-white">
+                <Link
+                  href={`/${post.categoryPath}/${post.slug}`}
+                  className="block"
                 >
-                  Previous
-                </Button>
-                <span className="text-sm text-gray-700">
-                  Page {currentPage} of {totalPages}
-                </span>
-                <Button
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                  }
-                  disabled={currentPage === totalPages}
-                  variant="secondary"
-                  className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  Next
-                </Button>
+                  <div className="relative h-48 overflow-hidden rounded-lg mb-4">
+                    <Image
+                      src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                      alt={post.frontmatter.title}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                </Link>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                  <Link
+                    href={`/${post.categoryPath}/${post.slug}`}
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    {cleanTitle(post.frontmatter.title)}
+                  </Link>
+                </h3>
+                <div className="flex items-center text-sm text-gray-500 mb-2">
+                  <span className="font-medium">DIANA BERRIO</span>
+                  <span className="mx-2">—</span>
+                  <span>{post.frontmatter.date}</span>
+                </div>
+                <p className="text-gray-600 text-sm line-clamp-2">
+                  {post.frontmatter.description}
+                </p>
               </div>
-            ) : (
-              <DynamicPagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-              />
             ))}
+          </div>
+
+          {/* Category Sections - WordPress 3-Column Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Choose Your Card Column */}
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Choose Your Card</h2>
+                <span className="text-sm text-gray-500">78 posts</span>
+              </div>
+              <Link
+                href={`/${cardPosts[0]?.categoryPath}/${cardPosts[0]?.slug}`}
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+              >
+                <Image
+                  src={cardPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  alt={cardPosts[0]?.frontmatter.title || ""}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center text-xs text-gray-200 mb-2">
+                    <span className="font-medium">DIANA BERRIO</span>
+                    <span className="mx-2">—</span>
+                    <span>{cardPosts[0]?.frontmatter.date}</span>
+                  </div>
+                  <h3 className="text-white text-lg font-bold leading-tight line-clamp-2">
+                    {cleanTitle(cardPosts[0]?.frontmatter.title || "")}
+                  </h3>
+                </div>
+              </Link>
+              {/* Article List */}
+              <div className="space-y-3">
+                {cardPosts.slice(1, 5).map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/${post.categoryPath}/${post.slug}`}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                      <Image
+                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        alt={post.frontmatter.title}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
+                        {cleanTitle(post.frontmatter.title)}
+                      </h4>
+                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Finances for Everyone Column */}
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Finances for Everyone</h2>
+                <span className="text-sm text-gray-500">50 posts</span>
+              </div>
+              <Link
+                href={`/${savingsPosts[0]?.categoryPath}/${savingsPosts[0]?.slug}`}
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+              >
+                <Image
+                  src={savingsPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  alt={savingsPosts[0]?.frontmatter.title || ""}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center text-xs text-gray-200 mb-2">
+                    <span className="font-medium">DIANA BERRIO</span>
+                    <span className="mx-2">—</span>
+                    <span>{savingsPosts[0]?.frontmatter.date}</span>
+                  </div>
+                  <h3 className="text-white text-lg font-bold leading-tight line-clamp-2">
+                    {cleanTitle(savingsPosts[0]?.frontmatter.title || "")}
+                  </h3>
+                </div>
+              </Link>
+              {/* Article List */}
+              <div className="space-y-3">
+                {savingsPosts.slice(1, 5).map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/${post.categoryPath}/${post.slug}`}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                      <Image
+                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        alt={post.frontmatter.title}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
+                        {cleanTitle(post.frontmatter.title)}
+                      </h4>
+                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Financial Solutions Column */}
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold text-gray-900">Financial Solutions</h2>
+                <span className="text-sm text-gray-500">132 posts</span>
+              </div>
+              <Link
+                href={`/${debtPosts[0]?.categoryPath}/${debtPosts[0]?.slug}`}
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+              >
+                <Image
+                  src={debtPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  alt={debtPosts[0]?.frontmatter.title || ""}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center text-xs text-gray-200 mb-2">
+                    <span className="font-medium">DIANA BERRIO</span>
+                    <span className="mx-2">—</span>
+                    <span>{debtPosts[0]?.frontmatter.date}</span>
+                  </div>
+                  <h3 className="text-white text-lg font-bold leading-tight line-clamp-2">
+                    {cleanTitle(debtPosts[0]?.frontmatter.title || "")}
+                  </h3>
+                </div>
+              </Link>
+              {/* Article List */}
+              <div className="space-y-3">
+                {debtPosts.slice(1, 5).map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/${post.categoryPath}/${post.slug}`}
+                    className="group flex items-start gap-3"
+                  >
+                    <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                      <Image
+                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        alt={post.frontmatter.title}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
+                        {cleanTitle(post.frontmatter.title)}
+                      </h4>
+                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
