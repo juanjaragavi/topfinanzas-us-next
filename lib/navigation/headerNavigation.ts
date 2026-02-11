@@ -1,6 +1,6 @@
 /**
  * Navigation items for the header component
- * Localized for the UK market
+ * Localized for the US market
  * Easily modifiable by LLM agents to update site navigation
  */
 
@@ -8,6 +8,18 @@ export interface NavigationItem {
   text: string;
   href: string;
   isEmphasis?: boolean; // Optional flag for "Show more..."
+}
+
+export interface FeaturedArticle {
+  title: string;
+  href: string;
+  image: string;
+}
+
+export interface CategoryDropdown {
+  text: string;
+  items: NavigationItem[];
+  featuredArticles?: FeaturedArticle[];
 }
 
 export interface DropdownItem {
@@ -41,37 +53,63 @@ const cleanTitle = (title: string): string => {
 };
 
 export const headerNavigation = {
-  /** Main navigation items */
+  /** Main navigation items - Matching WordPress US structure */
   mainNavItems: [
     {
-      text: "CARD FINDER",
-      href: "/choose-the-perfect-card-for-you-1",
+      text: "LOANS",
+      href: "/financial-solutions",
     },
     {
-      text: "BLOG",
-      href: "/blog",
-    },
-    {
-      text: "ABOUT US",
-      href: "/about-us",
-    },
-    {
-      text: "CONTACT US",
-      href: "/contact-us",
+      text: "CREDIT CARDS",
+      href: "/financial-solutions",
     },
   ],
 
-  /** Categories dropdown */
+  /** Categories mega menu - Matching WordPress US structure */
   categoryDropdown: {
     text: "CATEGORIES",
     items: [
       {
-        text: "Personal Finance", // TOFU category
+        text: "Personal Finance",
         href: "/personal-finance",
       },
       {
-        text: "Financial Solutions", // Main MOFU category
+        text: "Financial Solutions",
         href: "/financial-solutions",
+      },
+      {
+        text: "Student Finances",
+        href: "/personal-finance",
+      },
+      {
+        text: "Choose Your Card",
+        href: "/choose-the-perfect-card-for-you-1",
+      },
+      {
+        text: "Loans and Credits",
+        href: "/financial-solutions",
+      },
+    ],
+    featuredArticles: [
+      {
+        title: "What Are the Best Secured Credit Cards for Building Credit?",
+        href: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
+        image: "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
+      },
+      {
+        title: "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
+        href: "/personal-finance/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday",
+        image: "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
+      },
+      {
+        title: "Why a 0% Intro APR Card Is Your Best Bet for Black Friday",
+        href: "/personal-finance/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday",
+        image: "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
+      },
+      {
+        title: "Top Credit Cards to Maximize Your Black Friday Savings",
+        href: "/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings",
+        image: "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
       },
     ],
   },
