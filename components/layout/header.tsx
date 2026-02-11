@@ -183,12 +183,12 @@ export function Header() {
                 <Image
                   src={logos.colorLogo.url}
                   alt={logos.colorLogo.alt}
-                  width={240}
-                  height={65}
-                  className="h-10 md:h-12 w-auto object-contain" // Refined to h-10 mobile / h-12 desktop matching reference
+                  width={276}
+                  height={75}
+                  className="h-12 md:h-14 w-auto object-contain"
                   priority={true}
                   loading="eager"
-                  sizes="(max-width: 768px) 180px, 220px"
+                  sizes="(max-width: 768px) 210px, 255px"
                   quality={95}
                 />
               </Link>
@@ -197,7 +197,7 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6 ml-6 flex-1 justify-end">
               {/* Categories Mega Menu - Matching WordPress US Layout */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => handleMegaMenuEnter("categories")}
                 onMouseLeave={handleMegaMenuLeave}
@@ -240,45 +240,49 @@ export function Header() {
                       {/* Categories List - Left Side */}
                       <div className="w-48 flex-shrink-0">
                         <ul className="space-y-3">
-                          {headerNavigation.categoryDropdown.items.map((item) => (
-                            <li key={item.href}>
-                              <Link
-                                href={item.href}
-                                className="text-blue-600 hover:text-blue-800 font-medium text-sm uppercase tracking-wide"
-                                onClick={() => setActiveMegaMenu(null)}
-                              >
-                                {item.text}
-                              </Link>
-                            </li>
-                          ))}
+                          {headerNavigation.categoryDropdown.items.map(
+                            (item) => (
+                              <li key={item.href}>
+                                <Link
+                                  href={item.href}
+                                  className="text-blue-600 hover:text-blue-800 font-medium text-sm uppercase tracking-wide"
+                                  onClick={() => setActiveMegaMenu(null)}
+                                >
+                                  {item.text}
+                                </Link>
+                              </li>
+                            ),
+                          )}
                         </ul>
                       </div>
 
                       {/* Featured Articles Grid - Right Side */}
                       {headerNavigation.categoryDropdown.featuredArticles && (
                         <div className="flex-1 grid grid-cols-4 gap-4">
-                          {headerNavigation.categoryDropdown.featuredArticles.map((article, idx) => (
-                            <Link
-                              key={idx}
-                              href={article.href}
-                              className="group block"
-                              onClick={() => setActiveMegaMenu(null)}
-                            >
-                              <div className="relative aspect-[4/3] rounded overflow-hidden mb-2">
-                                <Image
-                                  src={article.image}
-                                  alt={article.title}
-                                  fill
-                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                  sizes="140px"
-                                  loading="lazy"
-                                />
-                              </div>
-                              <h4 className="text-xs font-medium text-gray-700 group-hover:text-blue-600 line-clamp-2 text-center leading-tight">
-                                {article.title}
-                              </h4>
-                            </Link>
-                          ))}
+                          {headerNavigation.categoryDropdown.featuredArticles.map(
+                            (article, idx) => (
+                              <Link
+                                key={idx}
+                                href={article.href}
+                                className="group block"
+                                onClick={() => setActiveMegaMenu(null)}
+                              >
+                                <div className="relative aspect-[4/3] rounded overflow-hidden mb-2">
+                                  <Image
+                                    src={article.image}
+                                    alt={article.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                    sizes="140px"
+                                    loading="lazy"
+                                  />
+                                </div>
+                                <h4 className="text-xs font-medium text-gray-700 group-hover:text-blue-600 line-clamp-2 text-center leading-tight">
+                                  {article.title}
+                                </h4>
+                              </Link>
+                            ),
+                          )}
                         </div>
                       )}
                     </div>

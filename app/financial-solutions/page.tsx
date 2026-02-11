@@ -20,8 +20,18 @@ const parseDate = (dateString: string): number => {
     /^(\d{4})-(\d{2})-(\d{2})$/,
   ];
   const monthNames = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   for (const pattern of patterns) {
     const match = value.match(pattern);
@@ -102,8 +112,8 @@ export default function FinancialSolutionsPage() {
     return activeCreditCardType === "all"
       ? sortedCreditCards
       : sortedCreditCards.filter(
-        (card: FinancialContent) => card.type === activeCreditCardType,
-      );
+          (card: FinancialContent) => card.type === activeCreditCardType,
+        );
   }, [activeCategory, activeCreditCardType, sortedCreditCards]);
 
   const filteredLoans = useMemo(() => {
@@ -111,8 +121,8 @@ export default function FinancialSolutionsPage() {
     return activeLoanType === "all"
       ? sortedLoans
       : sortedLoans.filter(
-        (loan: FinancialContent) => loan.type === activeLoanType,
-      );
+          (loan: FinancialContent) => loan.type === activeLoanType,
+        );
   }, [activeCategory, activeLoanType, sortedLoans]);
 
   // Force client-side state initialization to ensure React hydration
@@ -170,10 +180,11 @@ export default function FinancialSolutionsPage() {
               setActiveCreditCardType("all");
               setActiveLoanType("all");
             }}
-            className={`px-6 py-3 font-medium text-md transition-colors focus:outline-none ${activeCategory === key
-              ? "text-blue-600 border-b-2 border-blue-600"
-              : "text-gray-500 hover:text-gray-800"
-              }`}
+            className={`px-6 py-3 font-medium text-md transition-colors focus:outline-none ${
+              activeCategory === key
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-500 hover:text-gray-800"
+            }`}
           >
             {value}
           </button>
@@ -188,10 +199,11 @@ export default function FinancialSolutionsPage() {
               <button
                 key={key}
                 onClick={() => setActiveCreditCardType(key)}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${activeCreditCardType === key
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+                  activeCreditCardType === key
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
               >
                 {value}
               </button>
@@ -235,10 +247,11 @@ export default function FinancialSolutionsPage() {
               <button
                 key={key}
                 onClick={() => setActiveLoanType(key)}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${activeLoanType === key
-                  ? "bg-green-600 text-white" // Use a different color for loan filters
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+                  activeLoanType === key
+                    ? "bg-green-600 text-white" // Use a different color for loan filters
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
               >
                 {value}
               </button>

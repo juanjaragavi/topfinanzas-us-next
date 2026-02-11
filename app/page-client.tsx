@@ -319,7 +319,10 @@ export default function Home() {
                 className="group relative block overflow-hidden rounded-lg shadow-lg h-[350px] md:h-[400px]"
               >
                 <Image
-                  src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  src={
+                    post.frontmatter.featuredImage ||
+                    "https://media.topfinanzas.com/images/placeholder.webp"
+                  }
                   alt={post.frontmatter.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -346,7 +349,10 @@ export default function Home() {
                 >
                   <div className="relative h-48 overflow-hidden rounded-lg mb-4">
                     <Image
-                      src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                      src={
+                        post.frontmatter.featuredImage ||
+                        "https://media.topfinanzas.com/images/placeholder.webp"
+                      }
                       alt={post.frontmatter.title}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
@@ -379,7 +385,9 @@ export default function Home() {
             {/* Choose Your Card Column */}
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-gray-900">Choose Your Card</h2>
+                <h2 className="text-xl font-bold text-gray-900">
+                  Choose Your Card
+                </h2>
                 <span className="text-sm text-gray-500">78 posts</span>
               </div>
               <Link
@@ -387,7 +395,10 @@ export default function Home() {
                 className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
               >
                 <Image
-                  src={cardPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  src={
+                    cardPosts[0]?.frontmatter.featuredImage ||
+                    "https://media.topfinanzas.com/images/placeholder.webp"
+                  }
                   alt={cardPosts[0]?.frontmatter.title || ""}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -415,7 +426,10 @@ export default function Home() {
                   >
                     <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                       <Image
-                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        src={
+                          post.frontmatter.featuredImage ||
+                          "https://media.topfinanzas.com/images/placeholder.webp"
+                        }
                         alt={post.frontmatter.title}
                         fill
                         className="object-cover"
@@ -426,7 +440,9 @@ export default function Home() {
                       <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
                         {cleanTitle(post.frontmatter.title)}
                       </h4>
-                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {post.frontmatter.date}
+                      </p>
                     </div>
                   </Link>
                 ))}
@@ -436,7 +452,9 @@ export default function Home() {
             {/* Finances for Everyone Column */}
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-gray-900">Finances for Everyone</h2>
+                <h2 className="text-xl font-bold text-gray-900">
+                  Finances for Everyone
+                </h2>
                 <span className="text-sm text-gray-500">50 posts</span>
               </div>
               <Link
@@ -444,7 +462,10 @@ export default function Home() {
                 className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
               >
                 <Image
-                  src={savingsPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  src={
+                    savingsPosts[0]?.frontmatter.featuredImage ||
+                    "https://media.topfinanzas.com/images/placeholder.webp"
+                  }
                   alt={savingsPosts[0]?.frontmatter.title || ""}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -472,7 +493,10 @@ export default function Home() {
                   >
                     <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                       <Image
-                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        src={
+                          post.frontmatter.featuredImage ||
+                          "https://media.topfinanzas.com/images/placeholder.webp"
+                        }
                         alt={post.frontmatter.title}
                         fill
                         className="object-cover"
@@ -483,7 +507,9 @@ export default function Home() {
                       <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
                         {cleanTitle(post.frontmatter.title)}
                       </h4>
-                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {post.frontmatter.date}
+                      </p>
                     </div>
                   </Link>
                 ))}
@@ -493,7 +519,9 @@ export default function Home() {
             {/* Financial Solutions Column */}
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-gray-900">Financial Solutions</h2>
+                <h2 className="text-xl font-bold text-gray-900">
+                  Financial Solutions
+                </h2>
                 <span className="text-sm text-gray-500">132 posts</span>
               </div>
               <Link
@@ -501,7 +529,10 @@ export default function Home() {
                 className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
               >
                 <Image
-                  src={debtPosts[0]?.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                  src={
+                    debtPosts[0]?.frontmatter.featuredImage ||
+                    "https://media.topfinanzas.com/images/placeholder.webp"
+                  }
                   alt={debtPosts[0]?.frontmatter.title || ""}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -529,7 +560,10 @@ export default function Home() {
                   >
                     <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                       <Image
-                        src={post.frontmatter.featuredImage || "https://media.topfinanzas.com/images/placeholder.webp"}
+                        src={
+                          post.frontmatter.featuredImage ||
+                          "https://media.topfinanzas.com/images/placeholder.webp"
+                        }
                         alt={post.frontmatter.title}
                         fill
                         className="object-cover"
@@ -540,7 +574,9 @@ export default function Home() {
                       <h4 className="text-sm font-medium text-gray-800 group-hover:text-blue-600 line-clamp-2 transition-colors">
                         {cleanTitle(post.frontmatter.title)}
                       </h4>
-                      <p className="text-xs text-gray-400 mt-1">{post.frontmatter.date}</p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {post.frontmatter.date}
+                      </p>
                     </div>
                   </Link>
                 ))}
