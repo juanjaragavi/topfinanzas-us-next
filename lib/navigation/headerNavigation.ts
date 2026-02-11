@@ -94,22 +94,27 @@ export const headerNavigation = {
       {
         title: "What Are the Best Secured Credit Cards for Building Credit?",
         href: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
-        image: "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
+        image:
+          "https://media.topfinanzas.com/images/what-are-the-best-secured-credit-cards-for-building-credit.webp",
       },
       {
-        title: "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
+        title:
+          "Flat-Rate vs. Bonus Categories: The Best Cashback Strategy for Black Friday",
         href: "/personal-finance/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday",
-        image: "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
+        image:
+          "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
       },
       {
         title: "Why a 0% Intro APR Card Is Your Best Bet for Black Friday",
         href: "/personal-finance/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday",
-        image: "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
+        image:
+          "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
       },
       {
         title: "Top Credit Cards to Maximize Your Black Friday Savings",
         href: "/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings",
-        image: "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
+        image:
+          "https://media.topfinanzas.com/images/top-credit-cards-to-maximize-your-black-friday-savings.webp",
       },
     ],
   },
