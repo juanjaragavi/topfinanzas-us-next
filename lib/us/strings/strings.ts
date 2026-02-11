@@ -15,12 +15,12 @@ export const step2Strings = {
   title: "Find Your Ideal Credit Card",
   question: "What is your monthly income?",
   options: [
-    { id: "A", label: "Between £0 and £1,500" },
-    { id: "B", label: "Between £1,500 and £3,000" },
-    { id: "C", label: "Between £3,000 and £6,000" },
-    { id: "D", label: "Between £6,000 and £9,000" },
-    { id: "E", label: "Between £9,000 and £12,000" },
-    { id: "F", label: "Over £12,000" },
+    { id: "A", label: "Between $0 and $2,000" },
+    { id: "B", label: "Between $2,000 and $4,000" },
+    { id: "C", label: "Between $4,000 and $8,000" },
+    { id: "D", label: "Between $8,000 and $12,000" },
+    { id: "E", label: "Between $12,000 and $16,000" },
+    { id: "F", label: "Over $16,000" },
   ],
 };
 
@@ -38,8 +38,8 @@ export const step3Texts = {
     lastNameRequired: "Last name is required",
     lastNameLength: "Last name must be at least 2 characters",
     phoneRequired: "Phone number is required",
-    phoneFormat: "Please enter a valid UK mobile number (11 digits)",
-    phoneLada: "The area code doesn't appear to be valid for the UK",
+    phoneFormat: "Please enter a valid US mobile number (10 digits)",
+    phoneLada: "The area code doesn't appear to be valid for the US",
     acceptTerms: "You must agree to receive information to continue",
   },
 };
