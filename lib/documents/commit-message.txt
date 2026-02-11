@@ -1,8 +1,9 @@
-perf: optimize app performance and localize for US market
+feat: Localize financial products and fix lint errors
 
-- Localize GTM analytics for US region and currency
-- Implement React.memo for FeaturedPostCard to reduce re-renders
-- Use useMemo for list sorting/filtering in key pages
-- Optimize initial bundle size by dynamically importing SearchBar
-- Parallelize API route checks to eliminate waterfalls
-- Fix lint errors and improve type safety
+- Replace UK search index data with US financial products from `lib/data/us-financial-products.ts`.
+- Refactor `app/financial-solutions/page.tsx` and `app/page-client.tsx` to fix React Hooks violations (move `useMemo` to top level).
+- Update `lib/search/index.ts` to export `searchContent` and use US data.
+- Update test scripts (`scripts/test-*.js`) to use USD currency.
+- Update `components/README.md` to reflect US data and compliance standards.
+- Remove legacy UK string constants.
+- Fix build error in `components/search/search-bar.tsx` by adding missing export.

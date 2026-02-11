@@ -279,6 +279,20 @@ export default function Home() {
     return Math.ceil(allPosts.length / postsPerPage);
   }, [postsPerPage]);
 
+  const homepagePosts = useMemo(() => {
+    return [...allPosts]
+      .sort((a, b) => {
+        const dateA = a.frontmatter.date
+          ? new Date(a.frontmatter.date).getTime()
+          : 0;
+        const dateB = b.frontmatter.date
+          ? new Date(b.frontmatter.date).getTime()
+          : 0;
+        return dateB - dateA;
+      })
+      .slice(0, 3);
+  }, []);
+
   return (
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
@@ -332,21 +346,7 @@ export default function Home() {
 
             {/* Latest 3 Posts - Hero (Poster) + 2 Standard Cards */}
             {(() => {
-              const sortedPosts = useMemo(() => {
-                return [...allPosts]
-                  .sort((a, b) => {
-                    const dateA = a.frontmatter.date
-                      ? new Date(a.frontmatter.date).getTime()
-                      : 0;
-                    const dateB = b.frontmatter.date
-                      ? new Date(b.frontmatter.date).getTime()
-                      : 0;
-                    return dateB - dateA;
-                  })
-                  .slice(0, 3);
-              }, []);
-
-              if (sortedPosts.length === 0) {
+              if (homepagePosts.length === 0) {
                 return (
                   <div className="text-gray-500 italic py-8">
                     Content coming soon...
@@ -354,8 +354,8 @@ export default function Home() {
                 );
               }
 
-              const heroPost = sortedPosts[0];
-              const subPosts = sortedPosts.slice(1, 3);
+              const heroPost = homepagePosts[0];
+              const subPosts = homepagePosts.slice(1, 3);
 
               const mapPost = (post: PostData) => ({
                 title: cleanTitle(post.frontmatter.title),
@@ -368,9 +368,9 @@ export default function Home() {
                 categorySlug: post.categoryPath,
                 date: post.frontmatter.date
                   ? new Date(post.frontmatter.date).toLocaleDateString(
-                      "en-US",
-                      { year: "numeric", month: "long", day: "numeric" },
-                    )
+                    "en-US",
+                    { year: "numeric", month: "long", day: "numeric" },
+                  )
                   : undefined,
                 type:
                   post.category === "Financial Solutions"
@@ -422,10 +422,10 @@ export default function Home() {
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
                 ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
                 : undefined,
               type: "financial",
             }))}
@@ -445,10 +445,10 @@ export default function Home() {
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
                 ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
                 : undefined,
               type: "personal",
             }))}
@@ -468,10 +468,10 @@ export default function Home() {
               categorySlug: p.categoryPath,
               date: p.frontmatter.date
                 ? new Date(p.frontmatter.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
                 : undefined,
               type: "financial",
             }))}

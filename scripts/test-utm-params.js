@@ -16,7 +16,7 @@ const testWithUTM = {
     email: "utm.test@example.com",
     firstName: "UTM Test User",
     preferenceText: "Credit Cards",
-    incomeText: "£25,000 - £35,000",
+    incomeText: "$25,000 - $35,000",
     preference: "credit-cards",
     income: "25-35k",
     receiveMessages: true,
@@ -33,7 +33,7 @@ const testWithUTM = {
     state: "active",
     fields: {
       preference: "Credit Cards",
-      income: "£25,000 - £35,000",
+      income: "$25,000 - $35,000",
       utm_source: "adwords",
       utm_medium: "cpc",
       utm_campaign: "22524445886",
@@ -49,7 +49,7 @@ const testWithoutUTM = {
     email: "no-utm.test@example.com",
     firstName: "No UTM Test User",
     preferenceText: "Credit Cards",
-    incomeText: "£25,000 - £35,000",
+    incomeText: "$25,000 - $35,000",
     preference: "credit-cards",
     income: "25-35k",
     receiveMessages: true,
@@ -61,7 +61,7 @@ const testWithoutUTM = {
     state: "active",
     fields: {
       preference: "Credit Cards",
-      income: "£25,000 - £35,000",
+      income: "$25,000 - $35,000",
     },
   },
 };

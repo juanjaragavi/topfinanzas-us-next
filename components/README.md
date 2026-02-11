@@ -57,9 +57,9 @@ The `/ui` directory contains reusable UI components for the site. These follow a
 - **Button** (`/ui/button.tsx`) - Reusable button component
 - **Card** (`/ui/card.tsx`) - Card component for displaying content in a container
 - **Image-related components** - Components for displaying images with rounded corners and animations
-- **CurrencyDisplay** - Properly formats GBP (£) currency values
+- **CurrencyDisplay** - Properly formats USD ($) currency values
 
-## Modifying Components for UK Market
+## Modifying Components for US Market
 
 When modifying components, consider the following UK-specific guidelines:
 
@@ -67,17 +67,17 @@ When modifying components, consider the following UK-specific guidelines:
 2. **Preserve functionality**: Ensure that components continue to work as expected with UK content.
 3. **Use Tailwind classes**: The project uses Tailwind CSS for styling.
 4. **Responsive design**: Ensure components work well on all screen sizes.
-5. **UK Currency**: Use the proper GBP (£) currency symbol and formatting.
-6. **UK Date Format**: Display dates in the UK format (day-month-year).
-7. **UK Compliance**: Ensure components displaying financial information comply with UK regulations and terminology.
+5. **UK Currency**: Use the proper USD ($) currency symbol and formatting.
+6. **US Date Format**: Display dates in the US format (month-day-year).
+7. **US Compliance**: Ensure components displaying financial information comply with US regulations and terminology.
 
 ### Financial Components
 
 Components that display financial information should use:
 
-- GBP currency format: `£1,234.56`
-- APR displayed according to UK standards: `24.9% APR (variable)`
-- UK-specific terms like "representative example" where required by regulations
+- USD currency format: `$1,234.56`
+- APR displayed according to US standards
+- US-specific terms and disclosures
 
 ### Image Components
 

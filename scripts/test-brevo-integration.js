@@ -15,7 +15,7 @@ const testData = {
   state: "active",
   fields: {
     last_name: "Miguel",
-    cual_es_tu_ingreso_mensual: "£2,000 - £3,000",
+    cual_es_tu_ingreso_mensual: "$2,000 - $3,000",
     que_es_lo_que_mas_importante_en_una_tarjeta_de_credito: "Cashback",
     pais: "Reino Unido",
     marca: "Top Finanzas",

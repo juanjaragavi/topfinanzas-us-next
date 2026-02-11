@@ -26,7 +26,7 @@ const testData = {
     FIRSTNAME: "Juan",
     LASTNAME: "Miguel",
     COUNTRIES: "United Kingdom",
-    INCOME: "£2,000 - £3,000",
+    INCOME: "$2,000 - $3,000",
     CARD_PREFERENCE: "Cashback",
     PAIS: "Reino Unido",
     MARCA: "Top Finanzas",

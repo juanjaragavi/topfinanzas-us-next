@@ -19,7 +19,7 @@ const testData = {
     email: "test.fullflow@example.com",
     firstName: "Test User",
     preferenceText: "Credit Cards",
-    incomeText: "£25,000 - £35,000",
+    incomeText: "$25,000 - $35,000",
     utm_source: "test",
     utm_medium: "automated",
     utm_campaign: "full-flow-test",
@@ -33,7 +33,7 @@ const testData = {
     first_name: "Test User",
     fields: {
       preference: "Credit Cards",
-      income: "£25,000 - £35,000",
+      income: "$25,000 - $35,000",
       utm_source: "test",
       utm_medium: "automated",
       utm_campaign: "full-flow-test",
