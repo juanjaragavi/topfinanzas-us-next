@@ -1,31 +1,37 @@
-import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
-import ResponsiveImage from "@/components/ui/responsive-image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ink Business Unlimited Credit Card Requirements",
+  title:
+    "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
   description:
     "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
+  keywords:
+    "Ink Business Unlimited requirements, Chase business card, eligibility, application, credit score",
 };
 
 export default function InkBusinessUnlimitedRequirementsPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col font-sans">
+    <main
+      className="bg-white min-h-screen flex flex-col"
+      data-category="credit-cards"
+    >
       <Header />
 
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Title */}
-            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
+            {/* ELEMENT 3: H1 TITLE */}
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Ink Business Unlimited Credit Card Requirements
             </h1>
 
-            {/* Ad Unit: square03 */}
+            {/* ELEMENT 4: FIRST AD UNIT */}
             <div
               id="square03"
               className="w-full flex justify-center my-6"
@@ -33,228 +39,300 @@ export default function InkBusinessUnlimitedRequirementsPage() {
               data-topads-size="square"
             ></div>
 
-            {/* Intro */}
-            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
-              Unlock generous cash-back rewards with the Ink Business Unlimited
-              Card. The Ink Business Unlimited Credit Card from Chase is a
-              powerful tool for business owners, offering generous cash-back
-              rewards and benefits. However, to get approved, there are specific
-              requirements and steps involved.
-            </p>
+            <div className="my-8 text-left sm:text-left">
+              {/* ELEMENT 5: OPENING PARAGRAPH */}
+              <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                Powerful cash-back rewards for business owners
+              </h2>
 
-            {/* Featured Image */}
-            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp"
-                alt="Ink Business Unlimited Credit Card Requirements"
-                width={1200}
-                height={675}
-                priority
-              />
-            </div>
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
+                Unlock generous cash-back rewards with the Ink Business
+                Unlimited Card. The Ink Business Unlimited Credit Card from
+                Chase is a powerful tool for business owners, offering generous
+                cash-back rewards and benefits. However, to get approved, there
+                are specific requirements and steps involved.
+              </p>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* Ad Unit: square04 (After ~3rd paragraph block in flow) */}
-            <div
-              id="square04"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
-
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Requirements
-            </h2>
-            <div className="space-y-2 my-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#3F444B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">Credit score:</span>{" "}
-                  A credit score of 690 or higher is recommended.
-                </p>
+              {/* ELEMENT 6: HERO IMAGE */}
+              <div className="my-8 text-left sm:text-left">
+                <Image
+                  src="https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp"
+                  alt="Ink Business Unlimited Credit Card Requirements"
+                  width={900}
+                  height={507}
+                  className="w-full h-auto rounded-xl"
+                  priority={false}
+                  fetchPriority="high"
+                  quality={85}
+                  loading="eager"
+                />
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#3F444B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
+              <section className="my-6">
+                {/* ELEMENT 7: REQUIREMENTS SECTION */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Requirements
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Credit score:</span> A
+                      credit score of 690 or higher is recommended.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Business type:</span> You
+                      can apply if your business is a sole proprietorship, LLC,
+                      corporation, or partnership.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Minimum annual business revenue:
+                      </span>{" "}
+                      While there&apos;s no specific income requirement,
+                      businesses with a consistent revenue stream are preferred.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        U.S. Citizenship or Legal Residency:
+                      </span>{" "}
+                      U.S. citizens or permanent residents (Green Card holders).
+                    </div>
                   </div>
                 </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Business type:
-                  </span>{" "}
-                  You can apply if your business is a sole proprietorship, LLC,
-                  corporation, or partnership.
-                </p>
-              </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#3F444B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Minimum annual business revenue:
-                  </span>{" "}
-                  While there's no specific income requirement, businesses with
-                  a consistent revenue stream are preferred.
-                </p>
-              </div>
+                {/* ELEMENT 8: SECOND AD UNIT */}
+                <div
+                  id="square04"
+                  className="w-full flex justify-center my-6"
+                  data-topads
+                  data-topads-size="square"
+                ></div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#3F444B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    U.S. Citizenship or Legal Residency:
-                  </span>{" "}
-                  U.S. citizens or permanent residents (Green Card holders).
-                </p>
-              </div>
-            </div>
+                {/* ELEMENT 9: WHY THESE REQUIREMENTS ARE IMPORTANT */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Why these requirements are important
+                </h2>
 
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              How to Apply
-            </h2>
-            <ol className="space-y-2 my-8 list-none pl-0">
-              <li className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
-                  1
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <strong>Verify your credit score:</strong> Check your credit
-                  score before applying to ensure it meets the required minimum
-                  of 690.
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Credit score threshold
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  A credit score of 690 or higher demonstrates responsible
+                  credit use and on-time payment history. Chase uses this as a
+                  key indicator of your ability to manage credit obligations
+                  effectively.
                 </p>
-              </li>
-              <li className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
-                  2
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Business structure verification
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Chase requires verification of your business entity type and
+                  EIN (or SSN for sole proprietors) to ensure legitimacy and
+                  proper tax reporting compliance.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Revenue and financial stability
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  While Chase doesn&apos;t specify exact revenue thresholds,
+                  consistent business income demonstrates your ability to manage
+                  credit responsibly and make timely payments.
+                </p>
+
+                {/* ELEMENT 10: FIRST PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                      alt="Practical Guide to Getting Out of Debt"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
                 </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <strong>Prepare your business financial information:</strong>{" "}
+
+                {/* ELEMENT 12: APPLICATION PROCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  How to Apply
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Applying for the Ink Business Unlimited Credit Card is
+                  straightforward when you&apos;re well-prepared.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 1: Verify your credit score
+                  </span>
+                  <br />
+                  Check your credit score before applying to ensure it meets the
+                  required minimum of 690.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 2: Prepare your business financial information
+                  </span>
+                  <br />
                   Gather documents such as tax returns, financial statements,
                   and proof of business income.
                 </p>
-              </li>
-              <li className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
-                  3
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <strong>Complete the online application:</strong> Go to the
-                  Chase website and complete the application using your business
-                  details and EIN (or SSN for sole proprietors).
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 3: Complete the online application
+                  </span>
+                  <br />
+                  Go to the Chase website and complete the application using
+                  your business details and EIN (or SSN for sole proprietors).
                 </p>
-              </li>
-              <li className="flex items-start">
-                <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
-                  4
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <strong>Submit your application for review:</strong> Chase
-                  typically provides an answer within minutes.
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">Step 4: Submit for review</span>
+                  <br />
+                  Chase typically provides an answer within minutes. In some
+                  cases, additional review may take 7–10 business days.
                 </p>
-              </li>
-            </ol>
 
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              What to do after applying
-            </h2>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-left text-gray-800 text-md leading-5">
-                  <strong>Understand the card's features:</strong> Enjoy
-                  unlimited 1.5% cash back on all purchases and free employee
-                  cards.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-left text-gray-800 text-md leading-5">
-                  <strong>Know the fees:</strong> The card charges no annual
-                  fee.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-left text-gray-800 text-md leading-5">
-                  <strong>Maximize your rewards:</strong> Use the card regularly
-                  for business purchases.
-                </span>
-              </li>
-            </ul>
+                {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                      alt="Personal Loans - Your Smart Strategy for Financial Control"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
 
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
+                {/* ELEMENT 13: TIPS FOR SUCCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  What to do after applying
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Understand the card&apos;s features:
+                      </span>{" "}
+                      Enjoy unlimited 1.5% cash back on all purchases and free
+                      employee cards.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Know the fees:</span> The
+                      card charges no annual fee.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#3F444B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Maximize your rewards:
+                      </span>{" "}
+                      Use the card regularly for business purchases to earn
+                      maximum cash back.
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELEMENT 14: THIRD PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                      alt="Looking for the Perfect Credit Card?"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 15: YOUR BEST OPTION */}
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Your best option
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  The Ink Business Unlimited Credit Card is an excellent option
+                  for business owners looking to earn cash back on all
+                  purchases. By meeting the credit score, business type, and
+                  income requirements, you can apply confidently and unlock the
+                  card&apos;s valuable features.
+                </p>
+
+                {/* ELEMENT 16: FINAL EXTERNAL CTA */}
+                <div className="text-left my-8">
+                  <Link
+                    href="https://creditcards.chase.com/business-credit-cards/ink/unlimited"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#3F444B] hover:bg-[#2c2f34] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      See on official site*
+                    </Button>
+                  </Link>
+                  <p className="text-sm text-gray-500 mt-3 text-center">
+                    *By clicking you will be redirected to an external site.
+                  </p>
+                </div>
+              </section>
+
+              {/* ELEMENT 17: AI CONTENT DISCLAIMER */}
+              <AIContentDisclaimer />
             </div>
-
-            <div className="my-8">
-              <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                Conclusion
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                The Ink Business Unlimited Credit Card is an excellent option
-                for business owners looking to earn cash back on all purchases.
-                By meeting the credit score, business type, and income
-                requirements, you can apply confidently and unlock the card's
-                valuable features.
-              </p>
-
-              {/* Final CTA to External Application */}
-              <div className="flex justify-center">
-                <a
-                  href="https://creditcards.chase.com/business-credit-cards/ink/unlimited"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#3F444B] hover:bg-[#2c2f34] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
-                >
-                  Apply Now at Chase
-                </a>
-              </div>
-            </div>
-
-            <AIContentDisclaimer />
           </div>
         </div>
       </article>
 
+      {/* ELEMENT 18: FOOTER */}
       <CompactFooter />
     </main>
   );

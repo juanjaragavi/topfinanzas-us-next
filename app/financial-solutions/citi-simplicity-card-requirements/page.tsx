@@ -177,21 +177,6 @@ export default function CitiSimplicityCardRequirementsPage() {
                   </Link>
                 </div>
 
-                {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
-                <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
-                    <Image
-                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                      alt="Personal Loans - Your Smart Strategy for Financial Control"
-                      width={1000}
-                      height={563}
-                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      loading="lazy"
-                      quality={80}
-                    />
-                  </Link>
-                </div>
-
                 {/* ELEMENT 12: APPLICATION PROCESS */}
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
@@ -227,6 +212,21 @@ export default function CitiSimplicityCardRequirementsPage() {
                   receiving instant decisions. If further review is needed,
                   you&apos;ll receive a response within 7–10 business days.
                 </p>
+
+                {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                      alt="Personal Loans - Your Smart Strategy for Financial Control"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
 
                 {/* ELEMENT 13: TIPS FOR SUCCESS */}
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
