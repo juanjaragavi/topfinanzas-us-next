@@ -101,25 +101,19 @@ export default function NationalFundingBenefitsPage() {
               </Link>
             </div>
 
-            {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
-              {/* Left: National Funding (Visual Placeholder) */}
-              <div className="flex items-center justify-center p-8 min-h-[300px]">
-                <p className="text-4xl font-bold text-gray-900 tracking-tight text-center">
-                  National Funding
-                </p>
-              </div>
-              {/* Right: Image */}
-              <div className="relative min-h-[300px]">
-                <ResponsiveImage
-                  src="https://media.topfinanzas.com/images/national-funding-benefits.webp"
-                  alt="National Funding Benefits"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+            {/* Hero Image */}
+            <div className="my-8">
+              <ResponsiveImage
+                src="https://media.topfinanzas.com/images/national-funding-benefits.webp"
+                alt="National Funding Benefits"
+                width={900}
+                height={507}
+                className="w-full rounded-xl"
+                priority={false}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 900px"
+                containerClassName="w-full"
+              />
             </div>
 
             {/* Why National Funding is a top choice for small businesses */}

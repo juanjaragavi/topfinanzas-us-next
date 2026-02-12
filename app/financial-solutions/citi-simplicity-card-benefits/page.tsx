@@ -111,25 +111,19 @@ export default function CitiSimplicityCardBenefitsPage() {
               </Link>
             </div>
 
-            {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
-              {/* Left: Branding */}
-              <div className="bg-[#07296B] flex items-center justify-center p-8 min-h-[300px]">
-                <p className="text-4xl font-bold text-white tracking-tight text-center">
-                  Citi Simplicity <br /> Card
-                </p>
-              </div>
-              {/* Right: Image */}
-              <div className="relative min-h-[300px]">
-                <ResponsiveImage
-                  src="https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp"
-                  alt="Citi Simplicity Card Benefits"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+            {/* Hero Image */}
+            <div className="my-8">
+              <ResponsiveImage
+                src="https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp"
+                alt="Citi Simplicity Card Benefits"
+                width={900}
+                height={507}
+                className="w-full rounded-xl"
+                priority={false}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 900px"
+                containerClassName="w-full"
+              />
             </div>
 
             {/* Why the Citi Simplicity Card stands out */}
