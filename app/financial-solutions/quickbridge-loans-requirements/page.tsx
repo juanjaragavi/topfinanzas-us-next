@@ -23,7 +23,7 @@ export default function QuickBridgeRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               QuickBridge Loans Requirements
             </h1>
 
@@ -46,13 +46,13 @@ export default function QuickBridgeRequirementsPage() {
             </p>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full">
-                <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
+                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-gray-800 tracking-tight text-center">
                     QuickBridge
                   </p>
@@ -71,14 +71,14 @@ export default function QuickBridgeRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#F6303E] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Minimum annual revenue:
                   </span>{" "}
@@ -93,7 +93,7 @@ export default function QuickBridgeRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Time in business:
                   </span>{" "}
@@ -107,7 +107,7 @@ export default function QuickBridgeRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Credit history:
                   </span>{" "}
@@ -121,7 +121,7 @@ export default function QuickBridgeRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Bank statements:
                   </span>{" "}
@@ -131,7 +131,7 @@ export default function QuickBridgeRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Ready to tackle your debt?"
@@ -141,12 +141,12 @@ export default function QuickBridgeRequirementsPage() {
             </div>
 
             {/* Understanding QuickBridge Loans */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Understanding QuickBridge Loans
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               QuickBridge Loans specializes in short-term funding designed to
-              meet immediate business needs. Whether it’s purchasing inventory
+              meet immediate business needs. Whether it's purchasing inventory
               or upgrading equipment, QuickBridge ensures a fast and efficient
               lending process.
             </p>
@@ -162,11 +162,11 @@ export default function QuickBridgeRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Types of loans offered
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               QuickBridge Loans caters to various business needs:
             </p>
 
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#F6303E] p-1">
@@ -216,13 +216,13 @@ export default function QuickBridgeRequirementsPage() {
             </div>
 
             {/* Steps to apply */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Steps to apply for a QuickBridge loan
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The application process is designed to be quick and hassle-free:
             </p>
-            <div className="space-y-3 mb-8 text-gray-700 text-lg">
+            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-2 mr-3">
                   <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
@@ -263,7 +263,7 @@ export default function QuickBridgeRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-md">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Unlock your path to debt freedom"
@@ -276,7 +276,7 @@ export default function QuickBridgeRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Things to consider
             </h3>
-            <div className="space-y-3 mb-8 text-gray-700 text-lg">
+            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-2 mr-3">
                   <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
@@ -308,18 +308,18 @@ export default function QuickBridgeRequirementsPage() {
             </div>
 
             {/* Why choose QuickBridge Loans? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why choose QuickBridge Loans?
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               QuickBridge Loans stands out for its speed and simplicity. With a
-              streamlined application process and quick funding, it’s an
+              streamlined application process and quick funding, it's an
               excellent choice for small businesses needing immediate financial
               assistance.
             </p>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Looking for the Perfect Credit Card?"
@@ -328,14 +328,14 @@ export default function QuickBridgeRequirementsPage() {
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.quickbridge.com/apply/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-[#F6303E] hover:bg-[#d6202e] text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#F6303E] hover:bg-[#d6202e] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>
@@ -344,7 +344,7 @@ export default function QuickBridgeRequirementsPage() {
               </p>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

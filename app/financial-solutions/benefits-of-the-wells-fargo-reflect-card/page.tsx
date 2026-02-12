@@ -24,7 +24,7 @@ export default function WellsFargoReflectBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Benefits of the Wells Fargo Reflect® Card:
               <br />
               Maximize your savings on interest
@@ -39,8 +39,8 @@ export default function WellsFargoReflectBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
-              If you’re looking for a credit card that helps you avoid interest
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
+              If you're looking for a credit card that helps you avoid interest
               charges while paying off existing debt or financing major
               purchases, the Wells Fargo Reflect® Card stands out as an
               excellent choice. With its 0% APR introductory offer for 21 months
@@ -51,14 +51,14 @@ export default function WellsFargoReflectBenefitsPage() {
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#A1212B] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">0% intro APR </span>
                   for 21 months on purchases and balance transfers.
                 </p>
@@ -70,7 +70,7 @@ export default function WellsFargoReflectBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No annual fee,{" "}
                   </span>
@@ -84,7 +84,7 @@ export default function WellsFargoReflectBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Up to $600 cell phone protection{" "}
                   </span>
@@ -98,7 +98,7 @@ export default function WellsFargoReflectBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Access to tools{" "}
                   </span>
@@ -108,19 +108,19 @@ export default function WellsFargoReflectBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#A1212B] hover:bg-[#851b23] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#A1212B] hover:bg-[#851b23] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
             {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-10 items-stretch h-full">
+            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
               {/* Left: Text Placeholder */}
               <div className="bg-[#FAEBEB] flex items-center justify-center p-8 min-h-[300px]">
                 <p className="text-4xl font-bold text-gray-900 tracking-tight text-center">
@@ -143,15 +143,15 @@ export default function WellsFargoReflectBenefitsPage() {
             </div>
 
             {/* Detailed Content */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unmatched 0% Intro APR for 21 months
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The most attractive feature of the Wells Fargo Reflect® Card is
               its extensive introductory 0% APR period, which covers both
               purchases and balance transfers:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 21 months of 0% APR on purchases from the date of account
                 opening.
@@ -161,14 +161,14 @@ export default function WellsFargoReflectBenefitsPage() {
                 120 days of account opening.
               </li>
             </ul>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               After the promotional period ends, a variable APR of 17.49% to
               29.24% applies, based on your creditworthiness.
             </p>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This long interest-free period makes the card ideal for:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 Consolidating and paying off higher-interest credit card debt.
               </li>
@@ -178,16 +178,16 @@ export default function WellsFargoReflectBenefitsPage() {
                 interest charges.
               </li>
             </ul>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <span className="font-bold">Important Note:</span> Balance
               transfers are subject to a fee of 5% or $5, whichever is greater,
-              so it’s important to calculate your savings against this cost.
+              so it's important to calculate your savings against this cost.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               No annual fee
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Wells Fargo Reflect® Card has no annual fee, which means you
               can take full advantage of its benefits without worrying about
               additional costs. This makes it an attractive option for
@@ -195,32 +195,32 @@ export default function WellsFargoReflectBenefitsPage() {
               their finances.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Cell phone protection
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               One of the standout perks of this card is its cell phone
               protection benefit. By paying your monthly cell phone bill with
-              the Wells Fargo Reflect® Card, you’ll receive:
+              the Wells Fargo Reflect® Card, you'll receive:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>Coverage of up to $600 per claim against damage or theft.</li>
               <li>A $25 deductible per claim.</li>
             </ul>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This benefit is especially valuable if you want peace of mind
               knowing your device is protected without needing to purchase
               additional insurance.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Built-in financial tools
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Wells Fargo Reflect® Card includes tools and resources that
               make managing your finances more accessible and effective:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 <span className="font-bold">Credit Close-Up®:</span> Provides
                 monthly updates on your FICO® Score, along with personalized
@@ -235,28 +235,28 @@ export default function WellsFargoReflectBenefitsPage() {
               </li>
               <li>
                 <span className="font-bold">Zero Liability Protection:</span>{" "}
-                Ensures you won’t be held responsible for unauthorized
-                transactions, as long as they’re reported promptly
+                Ensures you won't be held responsible for unauthorized
+                transactions, as long as they're reported promptly
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Roadside Dispatch® Service
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The card also provides access to the Roadside Dispatch® network,
               a 24/7 referral service for emergency roadside assistance. Whether
               you need towing, a locksmith, or help with a flat tire, this
               feature can be a lifesaver during unexpected situations.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Who is the Wells Fargo Reflect® Card ideal for?
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This card is particularly well-suited for individuals who:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 <span className="font-bold">
                   Want to pay down high-interest debt:
@@ -266,7 +266,7 @@ export default function WellsFargoReflectBenefitsPage() {
               </li>
               <li>
                 <span className="font-bold">Plan significant purchases:</span>{" "}
-                If you’re preparing for a large expense, such as a wedding,
+                If you're preparing for a large expense, such as a wedding,
                 moving costs, or furniture, the 21-month interest-free period
                 provides the flexibility to pay it off over time.
               </li>
@@ -281,19 +281,19 @@ export default function WellsFargoReflectBenefitsPage() {
                 <span className="font-bold">
                   Prefer simplicity over rewards:
                 </span>{" "}
-                Since this card doesn’t offer points or cash back, it’s ideal
+                Since this card doesn't offer points or cash back, it's ideal
                 for those who prioritize saving on interest rather than earning
                 rewards.
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to maximize the benefits
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               To get the most out of the Wells Fargo Reflect® Card:
             </p>
-            <ol className="list-decimal pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ol className="list-decimal pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 <span className="font-bold">
                   Plan your balance transfers carefully:
@@ -320,18 +320,18 @@ export default function WellsFargoReflectBenefitsPage() {
               </li>
             </ol>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why choose the Wells Fargo Reflect® Card?
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Wells Fargo Reflect® Card is a standout choice for anyone
               seeking an unparalleled introductory APR offer and cost-effective
-              financial flexibility. Whether you’re managing debt, planning a
+              financial flexibility. Whether you're managing debt, planning a
               major purchase, or simply looking for a reliable card with
               essential benefits, this card delivers substantial value without
               additional fees.
             </p>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               If your goal is to save on interest and take control of your
               financial future, the Wells Fargo Reflect® Card is worth
               considering.

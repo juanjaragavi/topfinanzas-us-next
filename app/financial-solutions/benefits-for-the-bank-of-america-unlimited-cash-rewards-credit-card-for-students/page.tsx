@@ -24,7 +24,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Benefits for the Bank of America® Unlimited Cash Rewards Credit
               Card for Students
             </h1>
@@ -38,21 +38,21 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               The Bank of America® Unlimited Cash Rewards Credit Card for
               Students is the ultimate tool for those looking to earn while they
               spend.
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Unlimited 1.5% cash back on all purchases:
                   </span>{" "}
@@ -66,7 +66,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No annual fee:
                   </span>{" "}
@@ -80,7 +80,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Introductory APR offer:
                   </span>{" "}
@@ -94,7 +94,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Enhanced rewards for preferred members:
                   </span>{" "}
@@ -104,21 +104,21 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#96979A] hover:bg-[#7d7e81] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#96979A] hover:bg-[#7d7e81] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
             {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-10 items-stretch h-full">
+            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
               {/* Left: Brand Name */}
-              <div className="bg-gray-100 flex items-center justify-center p-8 min-h-[300px]">
+              <div className="flex items-center justify-center p-8 min-h-[300px]">
                 <p className="text-2xl font-bold text-gray-900 tracking-tight text-center">
                   Bank of America
                 </p>
@@ -137,7 +137,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </div>
 
             {/* Uncomplicated cash back */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Uncomplicated cash back
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -145,7 +145,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
               earns 1.5% cashback, making it easy to maximize your rewards.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Everyday spending made rewarding
             </h3>
             <p className="text-lg text-gray-700 mb-6">
@@ -153,7 +153,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
               contribute to your growing cashback balance.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Flexible redemption options
             </h3>
             <p className="text-lg text-gray-700 mb-6">
@@ -162,19 +162,19 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </p>
 
             {/* Cost-effective for students */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Cost-effective for students
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               No annual fee
             </h3>
             <p className="text-lg text-gray-700 mb-6">
-              This card’s fee-free structure makes it a budget-friendly option
+              This card's fee-free structure makes it a budget-friendly option
               for students.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Introductory APR
             </h3>
             <p className="text-lg text-gray-700 mb-6">
@@ -183,17 +183,17 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </p>
 
             {/* Additional benefits */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Additional benefits
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Preferred rewards program:
                   </span>{" "}
@@ -207,7 +207,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Financial education tools:
                   </span>{" "}
@@ -222,7 +222,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Security features:
                   </span>{" "}
@@ -233,7 +233,7 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </div>
 
             {/* Building credit responsibly */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Building credit responsibly
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -243,17 +243,17 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
             </p>
 
             {/* Who is this card ideal for? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Who is this card ideal for?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
               This card is best suited for students who want simplicity and
-              consistent rewards. It’s perfect for those who value flexibility
+              consistent rewards. It's perfect for those who value flexibility
               and want a straightforward way to earn cashback on all purchases.
             </p>
 
             {/* Closing thoughts */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Closing thoughts
             </h2>
             <p className="text-lg text-gray-700 mb-8">
@@ -262,18 +262,18 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
               to earn cash back on their everyday purchases.
             </p>
 
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-[#96979A] hover:bg-[#7d7e81] text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#96979A] hover:bg-[#7d7e81] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

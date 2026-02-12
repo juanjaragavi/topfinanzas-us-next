@@ -23,7 +23,7 @@ export default function CitiSimplicityCardBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Citi Simplicity Card Benefits
             </h1>
 
@@ -36,19 +36,19 @@ export default function CitiSimplicityCardBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Say goodbye to late fees and hello to financial freedom.
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#07296B] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No late fees, ever:
                   </span>{" "}
@@ -62,7 +62,7 @@ export default function CitiSimplicityCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Lengthy 0% intro APR period:
                   </span>{" "}
@@ -76,7 +76,7 @@ export default function CitiSimplicityCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No annual fee:
                   </span>{" "}
@@ -90,7 +90,7 @@ export default function CitiSimplicityCardBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Simple, transparent terms:
                   </span>{" "}
@@ -100,19 +100,19 @@ export default function CitiSimplicityCardBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/citi-simplicity-card-requirements"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#07296B] hover:bg-[#051e4d] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#07296B] hover:bg-[#051e4d] text-white font-medium rounded-full">
                   How it Works
                 </Button>
               </Link>
             </div>
 
             {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-10 items-stretch h-full">
+            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
               {/* Left: Branding */}
               <div className="bg-[#07296B] flex items-center justify-center p-8 min-h-[300px]">
                 <p className="text-4xl font-bold text-white tracking-tight text-center">
@@ -120,7 +120,7 @@ export default function CitiSimplicityCardBenefitsPage() {
                 </p>
               </div>
               {/* Right: Image */}
-              <div className="relative min-h-[300px] bg-gray-100">
+              <div className="relative min-h-[300px]">
                 <ResponsiveImage
                   src="https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp"
                   alt="Citi Simplicity Card Benefits"
@@ -133,95 +133,95 @@ export default function CitiSimplicityCardBenefitsPage() {
             </div>
 
             {/* Why the Citi Simplicity Card stands out */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why the Citi Simplicity Card stands out
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Perfect for balance transfers
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
-              If you’re managing credit card debt, the Citi Simplicity Card
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              If you're managing credit card debt, the Citi Simplicity Card
               offers one of the longest 0% intro APR periods in the industry.
               This feature provides breathing room to pay off your balance
               without accumulating interest.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Stress-Free payments
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Late payments can be costly and stressful. The Citi Simplicity
               Card eliminates late fees entirely, giving you peace of mind.
             </p>
 
             {/* How this card helps you save */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How this card helps you save
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Zero annual fee
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Unlike many competitors, Citi Simplicity comes with no annual fee,
               maximizing your savings year after year.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               No penalty APR
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
-              Even if you miss a payment, your APR won’t skyrocket—a rare
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              Even if you miss a payment, your APR won't skyrocket—a rare
               feature among credit cards.
             </p>
 
             {/* When to consider the Citi Simplicity Card */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               When to consider the Citi Simplicity Card
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Ideal for debt consolidation
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This card is a powerful tool for consolidating high-interest debt.
               Use its 0% intro APR period strategically to pay down balances and
               regain control of your finances.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Great for avoiding fees
             </h3>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               If you prioritize simplicity and predictability, the lack of fees
               and penalties makes this card an excellent choice.
             </p>
 
             {/* The best option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               The best option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Citi Simplicity Card lives up to its name, offering
               transparent terms and valuable features like a lengthy 0% intro
-              APR period and no late fees. It’s perfect for anyone looking to
+              APR period and no late fees. It's perfect for anyone looking to
               manage debt or streamline their financial journey.
             </p>
 
             {/* CTA 2 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/citi-simplicity-card-requirements"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#07296B] hover:bg-[#051e4d] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#07296B] hover:bg-[#051e4d] text-white font-medium rounded-full">
                   How it Works
                 </Button>
               </Link>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

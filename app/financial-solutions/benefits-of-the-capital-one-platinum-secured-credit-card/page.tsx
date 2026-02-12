@@ -11,7 +11,7 @@ import { CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "The benefits of the Capital One Platinum Secured Credit Card",
   description:
-    "If you’re building or rebuilding your credit, the Capital One Platinum Secured Credit Card is your perfect ally.",
+    "If you're building or rebuilding your credit, the Capital One Platinum Secured Credit Card is your perfect ally.",
 };
 
 export default function BenefitsCapitalOnePlatinumSecuredPage() {
@@ -23,7 +23,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               The benefits of the Capital One Platinum Secured Credit Card
             </h1>
 
@@ -37,16 +37,16 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
 
             {/* Intro */}
             <h4 className="text-xl font-bold text-gray-800 mb-4">
-              If you’re building or rebuilding your credit, the Capital One
+              If you're building or rebuilding your credit, the Capital One
               Platinum Secured Credit Card is your perfect ally.
             </h4>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Low security deposit:
                   </span>{" "}
@@ -58,7 +58,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Credit line increases:
                   </span>{" "}
@@ -70,7 +70,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Credit-building opportunities:
                   </span>{" "}
@@ -82,27 +82,27 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Online tools:</span>{" "}
-                  Stay in control with Capital One’s intuitive platform.
+                  Stay in control with Capital One's intuitive platform.
                 </p>
               </div>
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center mb-8">
               <Link
                 href="/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#19263A] hover:bg-[#111a28] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#19263A] hover:bg-[#111a28] text-white font-medium rounded-full">
                   How It Works
                 </Button>
               </Link>
             </div>
 
             {/* Main Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-lg">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-lg">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp"
                 alt="benefits of the Capital One Platinum Secured Credit Card"
@@ -113,7 +113,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </div>
 
             {/* Affordable entry with low security deposits */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Affordable entry with low security deposits
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -140,7 +140,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </p>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -150,7 +150,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </div>
 
             {/* Unlock higher credit lines over time */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unlock higher credit lines over time
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -168,7 +168,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -178,21 +178,21 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </div>
 
             {/* Build credit with confidence */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Build credit with confidence
             </h2>
             <p className="text-lg text-gray-700 mb-6">
               With reports sent to all three major credit bureaus, this card
-              ensures your good payment history works in your favor. It’s a
+              ensures your good payment history works in your favor. It's a
               reliable way to strengthen your credit profile.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Positive impact on creditworthiness:
                   </span>{" "}
@@ -206,7 +206,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Simplified financial management online:
                   </span>{" "}
@@ -221,7 +221,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#19263A]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Empowering financial literacy:
                   </span>{" "}
@@ -232,7 +232,7 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </div>
 
             {/* A path to better credit */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               A path to better credit
             </h2>
             <p className="text-lg text-gray-700 mb-8">
@@ -242,12 +242,12 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
             </p>
 
             {/* Final CTA */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#19263A] hover:bg-[#111a28] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#19263A] hover:bg-[#111a28] text-white font-medium rounded-full">
                   How It Works
                 </Button>
               </Link>

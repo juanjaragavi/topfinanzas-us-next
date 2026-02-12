@@ -23,7 +23,7 @@ export default function RequirementsTitaniumRewardsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Titanium Rewards Visa Signature credit card requirements
             </h1>
 
@@ -36,13 +36,13 @@ export default function RequirementsTitaniumRewardsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               The requirements for superior rewards
             </h2>
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               The Titanium Rewards Visa Signature Card by Andrews Federal Credit
               Union offers exceptional rewards on everyday spending categories.
-              Before applying, it’s crucial to understand the qualifications and
+              Before applying, it's crucial to understand the qualifications and
               steps to secure this powerful rewards card.
             </p>
 
@@ -55,11 +55,11 @@ export default function RequirementsTitaniumRewardsPage() {
             ></div>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full h-full">
                 <div className="bg-[#303A4D] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
@@ -81,14 +81,14 @@ export default function RequirementsTitaniumRewardsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#303A4D] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Credit score:</span>{" "}
                   A score of 700 or higher is recommended for best approval
                   odds.
@@ -101,7 +101,7 @@ export default function RequirementsTitaniumRewardsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Membership eligibility:
                   </span>{" "}
@@ -117,7 +117,7 @@ export default function RequirementsTitaniumRewardsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Proof of income:
                   </span>{" "}
@@ -131,7 +131,7 @@ export default function RequirementsTitaniumRewardsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Age and residency requirements:
                   </span>{" "}
@@ -141,7 +141,7 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -151,39 +151,39 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* Key insights on requirements */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Key insights on requirements
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Importance of credit score
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Titanium Rewards card is designed for individuals with
               excellent credit. A score above 700 ensures access to its premium
               benefits and competitive interest rates.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Andrews Federal membership
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Membership is a prerequisite for application. Eligibility can be
               established through military affiliation, employer ties, or by
               joining certain partner organizations.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Income proof and financial stability
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Applicants need to demonstrate consistent income to qualify.
               Providing evidence of employment or other income sources
               strengthens your case.
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -193,38 +193,38 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* How to apply */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#303A4D]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 1: Become a Member of Andrews Federal Credit Union
                 </h3>
-                <p className="text-gray-700 text-lg">
-                  Visit the Andrews Federal website to join. If you’re not
+                <p className="text-left text-gray-800 text-md leading-5">
+                  Visit the Andrews Federal website to join. If you're not
                   affiliated with a qualifying organization, you may join by
                   contributing to a partnered association.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#303A4D]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 2: Submit Your Application
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Once a member, apply for the Titanium Rewards Visa Signature
                   Card. Include your SSN, income details, and proof of
                   identification.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#303A4D]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 3: Review and Decision
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Approval timelines vary but are generally completed within a
                   week. Prepare for potential follow-ups if additional
                   documentation is required.
@@ -233,16 +233,16 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* Optimizing your application */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Optimizing your application
             </h2>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#303A4D]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Increase your credit score:
                   </span>{" "}
@@ -254,7 +254,7 @@ export default function RequirementsTitaniumRewardsPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#303A4D]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Verify membership requirements:
                   </span>{" "}
@@ -266,7 +266,7 @@ export default function RequirementsTitaniumRewardsPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#303A4D]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Provide comprehensive documentation:
                   </span>{" "}
@@ -276,7 +276,7 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -286,10 +286,10 @@ export default function RequirementsTitaniumRewardsPage() {
             </div>
 
             {/* Advantages of membership-based cards */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Advantages of membership-based cards
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Exclusive to credit union members, the Titanium Rewards card
               offers perks that often outshine traditional credit cards. Enjoy
               lower fees, personalized customer service, and higher reward
@@ -297,13 +297,13 @@ export default function RequirementsTitaniumRewardsPage() {
             </p>
 
             {/* Your best option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Titanium Rewards Visa Signature Card is your ticket to
               unmatched rewards and credit union benefits. By preparing
-              thoroughly and meeting the outlined requirements, you’ll maximize
+              thoroughly and meeting the outlined requirements, you'll maximize
               your chances of approval and enjoy its exceptional rewards.
             </p>
 
@@ -315,7 +315,7 @@ export default function RequirementsTitaniumRewardsPage() {
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#303A4D] hover:bg-[#252d3a] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#303A4D] hover:bg-[#252d3a] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>

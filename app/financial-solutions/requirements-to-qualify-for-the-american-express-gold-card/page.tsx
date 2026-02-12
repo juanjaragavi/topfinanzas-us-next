@@ -22,7 +22,7 @@ export default function AmexGoldRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Requirements to Qualify for the American Express® Gold Card: What
               You Need to Know
             </h1>
@@ -36,14 +36,14 @@ export default function AmexGoldRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Unlock the Gold Standard: Great credit, steady income, and endless
               rewards await. See if the Amex Gold Card is for you!
             </p>
 
             <p className="text-lg text-gray-700 mb-6">
-              If you’re considering applying for the American Express® Gold
-              Card, it’s important to ensure you meet the necessary requirements
+              If you're considering applying for the American Express® Gold
+              Card, it's important to ensure you meet the necessary requirements
               to obtain it. This card is designed for individuals with a strong
               credit history and offers ideal benefits for those looking to
               maximize their everyday purchases and enjoy dining and travel
@@ -51,7 +51,7 @@ export default function AmexGoldRequirementsPage() {
             </p>
 
             {/* Featured Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/requirements-to-qualify-for-the-american-express-gold-card.webp"
                 alt="Requirements to Qualify for the American Express® Gold Card"
@@ -64,17 +64,17 @@ export default function AmexGoldRequirementsPage() {
             {/* Ad Unit: square04 (Inserted after 3rd paragraph block - roughly here or inside next section) */}
             {/* We have 2 paragraphs above. Let's put one more before the ad or put the ad inside the next section's flow */}
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#C8B56A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Age of your credit accounts:{" "}
                   </span>
@@ -97,7 +97,7 @@ export default function AmexGoldRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     On-time payments:{" "}
                   </span>
@@ -112,12 +112,12 @@ export default function AmexGoldRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Low credit utilization:{" "}
                   </span>
                   Keep your credit utilization (the percentage of available
-                  credit you’re using) below 30%.
+                  credit you're using) below 30%.
                 </p>
               </div>
 
@@ -127,7 +127,7 @@ export default function AmexGoldRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Financial history:{" "}
                   </span>
@@ -138,7 +138,7 @@ export default function AmexGoldRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -147,14 +147,14 @@ export default function AmexGoldRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               No initial impact on your credit score
             </h2>
             <p className="text-lg text-gray-700 mb-6">
               One major benefit of applying for the American Express® Gold Card
               is that you can check if you qualify without affecting your credit
               score. During pre-approval, American Express conducts a soft pull
-              on your credit, meaning there’s no negative impact when checking
+              on your credit, meaning there's no negative impact when checking
               your eligibility.
             </p>
             <p className="text-lg text-gray-700 mb-6">
@@ -163,7 +163,7 @@ export default function AmexGoldRequirementsPage() {
               score.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Ability to cover the annual fee
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -173,26 +173,26 @@ export default function AmexGoldRequirementsPage() {
               offset the cost.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              It’s essential to assess whether your spending habits and
+              It's essential to assess whether your spending habits and
               financial capacity will allow you to maximize:
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   The $120 in annual Uber Cash credits.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   The $120 in dining credits at select restaurants.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
-                  Additional perks like the Resy Credit and Dunkin’ Credit.
+                <span className="text-left text-gray-800 text-md leading-5">
+                  Additional perks like the Resy Credit and Dunkin' Credit.
                 </span>
               </li>
             </ul>
@@ -202,7 +202,7 @@ export default function AmexGoldRequirementsPage() {
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -211,7 +211,7 @@ export default function AmexGoldRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Age and residency requirements
             </h2>
             <p className="text-lg text-gray-700 mb-4">
@@ -221,37 +221,37 @@ export default function AmexGoldRequirementsPage() {
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   Be 18 years or older.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   Reside in the United States.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#C8B56A] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   Have a valid Social Security Number (SSN) or ITIN.
                 </span>
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply successfully
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               If you meet the above requirements, the application process is
               straightforward:
             </p>
-            <ol className="space-y-4 mb-8 list-none pl-0">
+            <ol className="space-y-2 my-8 list-none pl-0">
               <li className="flex items-start">
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3">
                   1
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Visit the official American Express website.
                 </p>
               </li>
@@ -259,7 +259,7 @@ export default function AmexGoldRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3">
                   2
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Complete the application with your personal and financial
                   information.
                 </p>
@@ -268,7 +268,7 @@ export default function AmexGoldRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3">
                   3
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Check your eligibility without impacting your credit score.
                 </p>
               </li>
@@ -276,14 +276,14 @@ export default function AmexGoldRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3">
                   4
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   If approved, accept the card and enjoy its welcome benefits.
                 </p>
               </li>
             </ol>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -292,13 +292,13 @@ export default function AmexGoldRequirementsPage() {
               />
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8 mb-10 border border-gray-100">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="my-8">
+              <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                 Is the American Express® Gold Card right for you?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 If you have a strong credit score, stable income, and are ready
-                to take advantage of the card’s unique benefits, the American
+                to take advantage of the card's unique benefits, the American
                 Express® Gold Card is an excellent choice for earning rewards
                 on restaurants and grocery purchases, saving with credits for
                 Uber and Resy, and enjoying travel benefits.
@@ -316,7 +316,7 @@ export default function AmexGoldRequirementsPage() {
                   href="https://www.americanexpress.com/us/credit-cards/card/gold-card/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                  className="bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
                 >
                   Apply Now at American Express
                 </a>

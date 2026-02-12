@@ -21,7 +21,7 @@ export default function CapitalOneVentureXRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Capital One Venture X Rewards Credit Card Requirements
             </h1>
 
@@ -34,7 +34,7 @@ export default function CapitalOneVentureXRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Elevate your travel experience with the Capital One Venture X
               Rewards Credit Card. Designed for avid travelers, this card
               unlocks exclusive perks and opportunities to make every journey
@@ -48,7 +48,7 @@ export default function CapitalOneVentureXRequirementsPage() {
             </p>
 
             {/* Featured Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp"
                 alt="Capital One Venture X Rewards Credit Card Requirements"
@@ -72,7 +72,7 @@ export default function CapitalOneVentureXRequirementsPage() {
             ></div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -81,17 +81,17 @@ export default function CapitalOneVentureXRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#0A496C] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Age:</span> You must
                   be at least 18 years old (19 in Alabama and Nebraska).
                 </p>
@@ -103,7 +103,7 @@ export default function CapitalOneVentureXRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Residency:</span>{" "}
                   Must be a U.S. citizen or permanent resident with a valid
                   Social Security Number (SSN) or Individual Taxpayer
@@ -117,7 +117,7 @@ export default function CapitalOneVentureXRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Excellent Credit:
                   </span>{" "}
@@ -133,7 +133,7 @@ export default function CapitalOneVentureXRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900"> Income:</span>{" "}
                   Proof of stable income may be required to ensure you can
                   manage credit obligations effectively.
@@ -142,7 +142,7 @@ export default function CapitalOneVentureXRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -151,17 +151,17 @@ export default function CapitalOneVentureXRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply for the Capital One Venture X Rewards Credit Card
             </h2>
-            <div className="space-y-4 mb-8">
-              <p className="text-gray-700 text-lg">
+            <div className="space-y-2 my-8">
+              <p className="text-left text-gray-800 text-md leading-5">
                 The application process is straightforward and secure:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">
                       Navigate to the Official Site:
                     </span>{" "}
@@ -171,7 +171,7 @@ export default function CapitalOneVentureXRequirementsPage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">Complete the Application:</span>{" "}
                     Provide your personal information, financial details, and
                     contact info.
@@ -179,7 +179,7 @@ export default function CapitalOneVentureXRequirementsPage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#0A496C] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">Submit for Review:</span> Submit
                     your application to receive an instant decision in most
                     cases.
@@ -189,7 +189,7 @@ export default function CapitalOneVentureXRequirementsPage() {
             </div>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -198,7 +198,7 @@ export default function CapitalOneVentureXRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Start your journey
             </h2>
             <p className="text-lg text-gray-700 mb-8">
@@ -207,12 +207,12 @@ export default function CapitalOneVentureXRequirementsPage() {
               every purchase.
             </p>
 
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <a
                 href="https://www.capitalone.com/credit-cards/venture-x/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#0A496C] hover:bg-[#073650] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-[#0A496C] hover:bg-[#073650] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
               >
                 Apply Now at Capital One
               </a>
