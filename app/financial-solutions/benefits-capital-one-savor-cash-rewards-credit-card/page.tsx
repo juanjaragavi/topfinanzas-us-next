@@ -174,6 +174,16 @@ export default function CapitalOneSavorBenefitsPage() {
               unforgettable memories while accumulating rewards.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* 2. Everyday savings with grocery purchases */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Everyday savings with grocery purchases

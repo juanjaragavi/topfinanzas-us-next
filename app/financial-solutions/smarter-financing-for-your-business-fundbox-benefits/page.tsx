@@ -163,6 +163,16 @@ export default function FundboxBenefitsPage() {
               making it easy to manage your finances and access funding.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* How to use Fundbox */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to use Fundbox
