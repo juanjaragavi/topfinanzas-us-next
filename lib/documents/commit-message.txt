@@ -1,6 +1,7 @@
-refactor(financial-solutions): clean up and standardize 16 benefits pages
+feat: add invit-credit-card-rec-us-2 landing page + UI refinements
 
-- Remove redundant code and unused imports across financial solutions benefits pages
-- Standardize component structure and formatting for consistency
-- Apply code formatting improvements (Prettier compliance)
-- No functional or content changes; layout and behavior preserved
+- Create /invit-credit-card-rec-us-2/ landing page migrated from WordPress production
+- Match original design with teal color scheme, CTA buttons, FAQ accordion, and limited offer card
+- Include TopAds square01 ad placement and metadata for SEO
+- Update header logo sizing for better visual consistency across breakpoints
+- Update TopAds page exclude list with corrected route paths
