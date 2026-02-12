@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { analyticsLogger } from "@/lib/logger";
 
 /**
- * AdZep Accessibility Fix
+ * Ad Accessibility Fix
  *
- * Prevents ad scripts (AdZep, Google Ads Vignette, etc.) from setting
+ * Prevents ad scripts (TopAds, Google Ads Vignette, etc.) from setting
  * aria-hidden="true" on the <body> element, which blocks accessibility
  * for screen readers and triggers browser warnings.
  *
@@ -19,7 +19,7 @@ import { analyticsLogger } from "@/lib/logger";
  * This component monitors the body element and removes the aria-hidden attribute
  * if any ad script tries to set it, ensuring the page remains accessible.
  */
-export default function AdZepAccessibilityFix() {
+export default function AdAccessibilityFix() {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined") {
       return;
@@ -32,7 +32,7 @@ export default function AdZepAccessibilityFix() {
 
         if (process.env.NODE_ENV === "development") {
           analyticsLogger.info(
-            "[AdZep Accessibility Fix] Removed aria-hidden from body element",
+            "[Ad Accessibility Fix] Removed aria-hidden from body element",
           );
         }
       }

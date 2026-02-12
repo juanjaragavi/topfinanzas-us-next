@@ -15,7 +15,7 @@ const glob = require("glob");
 const LOGGER_IMPORTS = {
   analytics: 'import { analyticsLogger } from "@/lib/logger";',
   api: 'import { apiLogger } from "@/lib/logger";',
-  adzep: 'import { adzepLogger } from "@/lib/logger";',
+  topads: 'import { topadsLogger } from "@/lib/logger";',
   utm: 'import { utmLogger } from "@/lib/logger";',
   form: 'import { formLogger } from "@/lib/logger";',
   validation: 'import { validationLogger } from "@/lib/logger";',
@@ -25,12 +25,12 @@ const LOGGER_IMPORTS = {
 // Patterns to detect and their suggested loggers
 const LOGGER_PATTERNS = [
   {
-    pattern: /analytics|utm|gtm|gam|adzep/i,
+    pattern: /analytics|utm|gtm|gam|topads/i,
     logger: "analytics",
     namespace: "analyticsLogger",
   },
   { pattern: /api|route/i, logger: "api", namespace: "apiLogger" },
-  { pattern: /adzep/i, logger: "adzep", namespace: "adzepLogger" },
+  { pattern: /topads/i, logger: "topads", namespace: "topadsLogger" },
   { pattern: /utm/i, logger: "utm", namespace: "utmLogger" },
   {
     pattern: /form|quiz|registration/i,
@@ -155,9 +155,9 @@ function generateMigrationGuide(analysis) {
   console.log("📋 MIGRATION PRIORITY:\n");
   console.log("1. ✅ COMPLETED:");
   console.log("   - lib/logger.ts");
-  console.log("   - components/analytics/adzep.tsx");
-  console.log("   - components/analytics/adzep-spa-bridge.tsx");
-  console.log("   - lib/ads/activate-adzep.ts");
+  console.log("   - components/analytics/topads.tsx");
+  console.log("   - components/analytics/topads-spa-handler.tsx");
+  console.log("   - lib/ads/config.ts");
   console.log("   - app/api/sheets/route.ts");
 
   console.log("\n2. 🔴 HIGH PRIORITY (API Routes):");

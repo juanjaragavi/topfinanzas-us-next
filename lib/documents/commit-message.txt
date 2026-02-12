@@ -1,11 +1,30 @@
-fix(landing): restyle invit-credit-card-rec-us-2 to match reference design
+refactor: Replace AdZep with TopAds proprietary ad system
 
-- Add Header and Footer components for consistent site-wide navigation
-- Add gradient background (white → gray-50 → white) with flex column layout
-- Update color scheme from #2D7D6F to #17A2A2 teal across all CTAs and headings
-- Change button shape from rounded-full to rounded-lg
-- Remove extra italic intro text not present in reference design
-- Lighten Well Done and Stay Tuned sections to bg-gray-50 with rounded border
-- Consolidate credit card image into compact Limited Offer banner (max-w-xs)
-- Scale down Limited Offer card typography and spacing to match reference
-- Add shadow-md to Limited Offer card for subtle elevation
+BREAKING CHANGE: Complete removal of AdZep integration in favor of TopAds
+
+Migrated from legacy AdZep ad system to TopAds proprietary ad network.
+Removed 8 AdZep components, simplified architecture, and updated all
+documentation and configuration files.
+
+Components Deleted: 8 AdZep component files
+Components Created: ad-accessibility-fix.tsx (generic, ad-provider agnostic)
+
+Core Files Updated:
+- app/layout.tsx: Removed AdZep imports and ENABLE_ADZEP flag
+- lib/ads/config.ts: AdZepConfig → TopAdsConfig
+- lib/logger.ts: adzepLogger → topadsLogger
+- types/window.d.ts: Removed AdZepActivateAds declaration
+- app/globals.css: Updated all AdZep references
+
+Documentation Updated: 6 files including copilot-instructions, CLAUDE.md, GEMINI.md
+Deleted Documentation: ADZEP_IMPLEMENTATION.md, ADZEP_SUMMARY.md (4 files)
+
+Architecture Change:
+  AdZep: window.AdZepActivateAds() with complex activation
+  TopAds: window.topAds.spa() with simple SPA handler
+
+Ad container IDs unchanged: square02, square03, square04
+
+Testing: Zero TypeScript errors, no broken imports, clean build
+
+Created migration guide: docs/ADZEP_TO_TOPADS_MIGRATION.md

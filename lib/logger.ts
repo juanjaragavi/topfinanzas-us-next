@@ -202,7 +202,7 @@ export const logger = createScopedLogger("App");
  */
 export const analyticsLogger = createScopedLogger("Analytics");
 export const apiLogger = createScopedLogger("API");
-export const adzepLogger = createScopedLogger("AdZep");
+export const topadsLogger = createScopedLogger("TopAds");
 export const utmLogger = createScopedLogger("UTM");
 export const formLogger = createScopedLogger("Form");
 export const validationLogger = createScopedLogger("Validation");

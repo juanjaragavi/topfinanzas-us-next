@@ -6,7 +6,7 @@ This is a **Next.js 15+ App Router** financial comparison site for the US market
 
 ### Key System Components
 
-- **Analytics Layer**: Dual analytics with GTM + AdZep integration at `/components/analytics/`
+- **Analytics Layer**: GTM + TopAds (proprietary) integration at `/components/analytics/`
 - **UI System**: Shadcn/UI + Radix primitives with custom variants in `/components/ui/`
 - **Form Architecture**: Multi-step forms using React Hook Form + Zod in `/components/forms/` and `/components/steps/`
 - **Content System**: MDX support for blog content in `/content/` with custom components
@@ -30,16 +30,16 @@ export default function ComponentName({ prop }: ComponentProps) {
 
 #### 2. Analytics Integration
 
-The project has sophisticated analytics with **automatic AdZep activation**:
+The project uses **TopAds** as the proprietary ad system:
 
-- Script loads in `app/layout.tsx` with `AdZep` component
-- Auto-activates on navigation via `AdZepNavigationHandler`
-- Manual triggers available via `useAdZep()` hook
-- Development testing panel with `AdZepTest` component
+- Script loads in `app/layout.tsx` with `TopAds` component
+- Auto-activates on SPA navigation via `TopAdsSPAHandler`
+- Manual triggers available via `useTopAds()` hook
+- Configuration: domain `TOPFIN_US`, networkCode `23062212598`
 
-**Navigation Tracking**: AdZep integrates with Next.js navigation system properly:
+**Navigation Tracking**: TopAds integrates with Next.js navigation system:
 
-- Router changes trigger AdZep activation using `usePathname()` hook
+- Route changes trigger `window.topAds.spa()` using `usePathname()` hook
 - Back/forward navigation is handled via `popstate` events
 - Client-side navigation is properly tracked on every route change
 - Initial page load activation is handled separately
@@ -94,7 +94,7 @@ bash ./scripts/git-workflow.sh
 - Copy `.env.example` to `.env.production`
 - Production environment files stored in `/opt/app/` with strict permissions
 - Google Sheets API requires `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_PRIVATE_KEY`
-- AdZep integration requires the environment-appropriate script URL for the US deployment
+- TopAds integration is handled by the proprietary `topads.tsx` component
 - Kit.com API integration for newsletter subscriptions
 - Multiple environment files in use: `.env`, `.env.production`, `.env.local`
 
@@ -153,11 +153,12 @@ export async function POST(req: Request) {
 
 ## Analytics & Performance
 
-### AdZep Integration (Critical)
+### TopAds Integration (Critical)
 
-- **Never manually call** `window.AdZepActivateAds()` - handled automatically
-- Use `useAdZep()` hook for programmatic activation only when needed
-- Development mode includes comprehensive logging and test panel
+- TopAds uses proprietary script from `https://topads.topnetworks.co/topAds.min.js`
+- SPA navigation handled automatically via `TopAdsSPAHandler` calling `window.topAds.spa()`
+- Use `useTopAds()` hook for programmatic SPA activation only when needed
+- Configuration: domain `TOPFIN_US`, networkCode `23062212598`, lazyLoad `soft`
 - Script loads with `strategy="afterInteractive"` for performance
 
 ### Performance Monitoring
@@ -188,7 +189,7 @@ export const metadata: Metadata = {
 ## Common Gotchas
 
 1. **Port Configuration**: Development runs on port 3040, not 3000
-2. **Analytics Order**: GTM loads before AdZep in layout
+2. **Analytics Order**: GTM loads before TopAds in layout
 3. **Form Navigation**: Always call `window.scrollTo(0, 0)` on step changes
 4. **Compliance**: Avoid guarantees; use clear disclosures as needed
 5. **Git Workflow**: NEVER bypass the automated script for commits
@@ -207,7 +208,6 @@ This project prioritizes performance optimization and comprehensive analytics tr
 The project uses a comprehensive instruction system at `.github/instructions/` with specific rules for different scenarios:
 
 - **`project-rules.instructions.md`**: Core project architecture and development standards
-- **`ADZEP_IMPLEMENTATION.instructions.md`**: Complete AdZep analytics integration guide
 - **`BLOG_POST_INTEGRATION.instructions.md`**: Blog content integration workflow
 - **`PUSH-AND-COMMIT.instructions.md`**: Automated git workflow procedures
 

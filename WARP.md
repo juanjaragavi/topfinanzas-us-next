@@ -56,7 +56,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 - **Styling**: Tailwind CSS with mobile-first approach
 - **UI Components**: Shadcn/UI + Radix UI primitives
 - **Forms**: React Hook Form + Zod validation
-- **Analytics**: GTM + AdZep dual tracking system
+- **Analytics**: GTM + TopAds proprietary tracking system
 - **Content**: MDX support for blog posts
 
 ### Directory Structure
@@ -67,7 +67,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 /blog # Blog pages and categories
 /credit-card-recommender-p[1-3] # Multi-step form pages
 /components
-/analytics # AdZep and GTM tracking components
+/analytics # TopAds and GTM tracking components
 /forms # Form components with validation
 /steps # Multi-step form step components (step1, step2, step3)
 /ui # Shadcn/UI components
@@ -87,10 +87,10 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 
 #### Analytics Layer (`/components/analytics/`)
 
-- **AdZep Integration**: Automatically activates on navigation
-- **GTM**: Loads before AdZep in layout
-- **Development Tools**: AdZepTest component for testing
-- **Usage**: `useAdZep()` hook for programmatic activation
+- **TopAds Integration**: Automatically activates on SPA navigation
+- **GTM**: Loads before TopAds in layout
+- **Configuration**: Domain `TOPFIN_US`, networkCode `23062212598`
+- **Usage**: `useTopAds()` hook for programmatic SPA activation
 
 #### Multi-Step Forms (`/components/steps/`)
 
@@ -174,12 +174,12 @@ Component.displayName = "Component";
 ### Analytics Tracking
 
 ```tsx
-// DO NOT manually call window.AdZepActivateAds()
-// AdZep auto-activates via AdZepNavigationHandler
+// TopAds SPA navigation handled automatically via TopAdsSPAHandler
+// Uses window.topAds.spa() on route changes
 
 // For programmatic activation only when needed:
-import { useAdZep } from "@/components/analytics/adzep-trigger";
-const { activateAds } = useAdZep();
+import { useTopAds } from "@/components/analytics/topads-spa-handler";
+const { triggerSPA } = useTopAds();
 ```
 
 ## Performance Optimizations
@@ -207,7 +207,7 @@ const { activateAds } = useAdZep();
 # Development mode includes comprehensive logging
 # Check browser console for:
 # - '[QUIZ] Cookie validation: [enabled/disabled]'
-# - AdZep activation logs
+# - TopAds activation logs
 # - GTM event tracking
 ```
 
@@ -221,7 +221,7 @@ const { activateAds } = useAdZep();
 
 1. **Port 3040 in use**: Kill existing process or use different port
 2. **Git merge conflicts**: Script automatically resolves by keeping current changes
-3. **AdZep not loading**: Check script order in layout.tsx (GTM must load first)
+3. **TopAds not loading**: Check script order in layout.tsx (GTM must load first)
 4. **Form submission failing**: Verify Google Sheets API credentials
 5. **Cookie validation issues**: Use cookie-validation-control.sh to debug
 

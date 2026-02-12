@@ -1,33 +1,37 @@
-import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Citi Simplicity Card Requirements",
+  title:
+    "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
   description:
-    "Zero fees, zero hassle—here's how to qualify. The Citi Simplicity Card is an excellent choice for those seeking convenience and cost-saving benefits.",
+    "Zero fees, zero hassle—here's how to qualify for the Citi Simplicity Card. Learn about eligibility, application process, and tips for approval.",
+  keywords:
+    "Citi Simplicity Card requirements, eligibility, application, credit score, no late fees",
 };
 
 export default function CitiSimplicityCardRequirementsPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col font-sans">
+    <main
+      className="bg-white min-h-screen flex flex-col"
+      data-category="credit-cards"
+    >
       <Header />
 
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Title */}
-            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
+            {/* ELEMENT 3: H1 TITLE */}
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Citi Simplicity Card Requirements
             </h1>
 
-            {/* Ad Unit: square03 */}
+            {/* ELEMENT 4: FIRST AD UNIT */}
             <div
               id="square03"
               className="w-full flex justify-center my-6"
@@ -35,299 +39,292 @@ export default function CitiSimplicityCardRequirementsPage() {
               data-topads-size="square"
             ></div>
 
-            {/* Intro */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Zero fees, zero hassle—here's how to qualify.
-            </h2>
-            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
-              The Citi Simplicity Card is an excellent choice for those seeking
-              convenience and cost-saving benefits. With its standout feature of
-              no late fees or penalty rates, this card is ideal for simplifying
-              credit management.
-            </p>
+            <div className="my-8 text-left sm:text-left">
+              {/* ELEMENT 5: OPENING PARAGRAPH */}
+              <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                Zero fees, zero hassle—here&apos;s how to qualify
+              </h2>
 
-            {/* Ad Unit: square04 */}
-            <div
-              id="square04"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
+                The Citi Simplicity Card is an excellent choice for those
+                seeking convenience and cost-saving benefits. With its standout
+                feature of no late fees or penalty rates, this card is ideal for
+                simplifying credit management. To get started, understanding the
+                requirements and application process is key.
+              </p>
 
-            {/* Requirements Section */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Requirements
-            </h2>
+              {/* ELEMENT 6: HERO IMAGE */}
+              <div className="my-8 text-left sm:text-left">
+                <Image
+                  src="https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp"
+                  alt="Citi Simplicity Card Requirements"
+                  width={900}
+                  height={507}
+                  className="w-full h-auto rounded-xl"
+                  priority={false}
+                  fetchPriority="high"
+                  quality={85}
+                  loading="eager"
+                />
+              </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
-              <div className="w-full h-full">
-                <div className="bg-[#07296B] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
-                  <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
-                    Citi Simplicity <br /> Card
+              <section className="my-6">
+                {/* ELEMENT 7: REQUIREMENTS SECTION */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Requirements
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Minimum credit score:
+                      </span>{" "}
+                      670 or higher, considered good credit.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Proof of U.S. residency:
+                      </span>{" "}
+                      A valid address and Social Security Number are required.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Minimum age:</span>{" "}
+                      Applicants must be at least 18 years old.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Debt-to-income ratio (DTI):
+                      </span>{" "}
+                      A manageable ratio is essential for approval.
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELEMENT 8: SECOND AD UNIT */}
+                <div
+                  id="square04"
+                  className="w-full flex justify-center my-6"
+                  data-topads
+                  data-topads-size="square"
+                ></div>
+
+                {/* ELEMENT 9: FIRST PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                      alt="Practical Guide to Getting Out of Debt"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 10: WHY THESE REQUIREMENTS ARE IMPORTANT */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Why these requirements are important
+                </h2>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Credit score threshold
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  A credit score of 670 or higher demonstrates a track record of
+                  on-time payments and responsible credit use. Lower scores
+                  might result in rejection or require a higher interest rate.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Residency and identification verification
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Citi relies on your address and SSN for credit checks and
+                  identity validation. Ensure these details are accurate and
+                  up-to-date.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Financial stability via DTI
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Citi evaluates your income against your existing debts to
+                  gauge your repayment capacity. Keeping your DTI ratio below
+                  36% increases your likelihood of approval.
+                </p>
+
+                {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                      alt="Personal Loans - Your Smart Strategy for Financial Control"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 12: APPLICATION PROCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Application Process
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  The Citi Simplicity application process is quick and
+                  user-friendly when you&apos;re well-prepared.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 1: Gather Your Documentation
+                  </span>
+                  <br />
+                  Before applying, ensure you have your SSN, proof of income,
+                  and identification documents at hand. Citi might request
+                  additional information if your application is under review.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">Step 2: Apply Online</span>
+                  <br />
+                  Visit the Citi website and complete the online application
+                  form. Provide personal information, including your name,
+                  address, income details, and contact information.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">Step 3: Wait for Approval</span>
+                  <br />
+                  Citi typically processes applications quickly, with many
+                  receiving instant decisions. If further review is needed,
+                  you&apos;ll receive a response within 7–10 business days.
+                </p>
+
+                {/* ELEMENT 13: TIPS FOR SUCCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Tips for Success
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Check your credit report:
+                      </span>{" "}
+                      Resolve any discrepancies before applying.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Avoid excessive debt:
+                      </span>{" "}
+                      Pay down outstanding balances to improve your DTI.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#07296B] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Maintain consistent income:
+                      </span>{" "}
+                      Steady income reassures lenders of your financial
+                      stability.
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELEMENT 14: THIRD PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                      alt="Looking for the Perfect Credit Card?"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 15: YOUR BEST OPTION */}
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Your best option
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  The Citi Simplicity Card offers exceptional benefits for
+                  managing your finances without worrying about fees or
+                  penalties. By meeting the requirements and carefully following
+                  the application process, you&apos;ll be on your way to
+                  enjoying the simplicity this card provides.
+                </p>
+
+                {/* ELEMENT 16: FINAL EXTERNAL CTA */}
+                <div className="text-left my-8">
+                  <Link
+                    href="https://www.citi.com/credit-cards/citi-simplicity-credit-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#07296B] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      See on official site*
+                    </Button>
+                  </Link>
+                  <p className="text-sm text-gray-500 mt-3 text-center">
+                    *By clicking you will be redirected to an external site.
                   </p>
                 </div>
-              </div>
-              <div className="w-full h-full">
-                <div className="rounded-lg overflow-hidden h-full">
-                  <ResponsiveImage
-                    src="https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp"
-                    alt="Citi Simplicity Card Requirements"
-                    width={800}
-                    height={600}
-                    className="object-cover h-full w-full"
-                    priority
-                  />
-                </div>
-              </div>
+              </section>
+
+              {/* ELEMENT 17: AI CONTENT DISCLAIMER */}
+              <AIContentDisclaimer />
             </div>
-
-            <div className="space-y-2 mb-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#07296B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Minimum credit score:
-                  </span>{" "}
-                  670 or higher, considered good credit.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#07296B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Proof of U.S. residency:
-                  </span>{" "}
-                  A valid address and Social Security Number are required.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#07296B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">Minimum age:</span>{" "}
-                  Applicants must be at least 18 years old.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#07296B] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Debt-to-income ratio (DTI):
-                  </span>{" "}
-                  A manageable ratio is essential for approval.
-                </p>
-              </div>
-            </div>
-
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* Understanding the qualifications */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Understanding the qualifications
-            </h2>
-
-            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
-              Why credit score matters
-            </h3>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              A score of 670 shows lenders that you manage credit responsibly,
-              increasing your chances of approval and favorable terms.
-            </p>
-
-            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
-              Income verification
-            </h3>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              You must demonstrate a steady income to ensure you can meet
-              monthly payment obligations.
-            </p>
-
-            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
-              Identity checks
-            </h3>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              Providing a valid SSN and U.S. address helps verify your identity
-              and prevents fraud.
-            </p>
-
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* Step-by-step application */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Step-by-step application
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="my-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Step 1: Check your credit score
-                </h3>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  Ensure your score meets the minimum requirement before
-                  applying.
-                </p>
-              </div>
-
-              <div className="my-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Step 2: Gather documents
-                </h3>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  Prepare your ID, SSN, and proof of income.
-                </p>
-              </div>
-
-              <div className="my-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Step 3: Fill out the application
-                </h3>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  Provide accurate personal and financial details on the Citi
-                  website.
-                </p>
-              </div>
-
-              <div className="my-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Step 4: Wait for a decision
-                </h3>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  Approvals are often instant, but some cases may take a few
-                  days.
-                </p>
-              </div>
-            </div>
-
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* Tips for success */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Tips for success
-            </h2>
-
-            <div className="space-y-2 my-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <CheckCircle className="h-6 w-6 text-[#07296B]" />
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Pay down existing debt:
-                  </span>{" "}
-                  Lowering your credit utilization can boost your score.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <CheckCircle className="h-6 w-6 text-[#07296B]" />
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Review your credit report:
-                  </span>{" "}
-                  Dispute any errors that might negatively impact your
-                  application.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <CheckCircle className="h-6 w-6 text-[#07296B]" />
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Consider prequalification:
-                  </span>{" "}
-                  Check for offers that don&apos;t affect your credit score.
-                </p>
-              </div>
-            </div>
-
-            {/* Why choose Citi Simplicity? */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Why choose Citi Simplicity?
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              This card stands out for its simplicity and lack of hidden fees.
-              It&apos;s perfect for those who want a straightforward credit card
-              experience without worrying about late payment penalties.
-            </p>
-
-            {/* Your best option */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Your best option
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The Citi Simplicity Card is a reliable tool for building credit
-              and managing expenses. By meeting the requirements and applying
-              wisely, you can enjoy all the benefits it has to offer.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-col items-center justify-center mb-8">
-              <Link
-                href="https://www.citi.com/credit-cards/citi-simplicity-credit-card"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto"
-              >
-                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#07296B] hover:bg-[#051e4d] text-white font-medium rounded-full">
-                  See on official site*
-                </Button>
-              </Link>
-              <p className="text-sm text-gray-500 mt-3 text-center">
-                *By clicking you will be redirected to an external site.
-              </p>
-            </div>
-
-            <AIContentDisclaimer />
           </div>
         </div>
       </article>
 
+      {/* ELEMENT 18: FOOTER */}
       <CompactFooter />
     </main>
   );

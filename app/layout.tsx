@@ -14,12 +14,7 @@ import GoogleAdManager from "@/components/analytics/gam";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmLinkInjector from "@/components/analytics/utm-link-injector";
 import UtmMonitor from "@/components/analytics/utm-monitor";
-import AdZep from "@/components/analytics/adzep";
-import AdZepTest from "@/components/analytics/adzep-test";
-import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
-import AdZepInterstitialBlocker from "@/components/analytics/adzep-interstitial-blocker";
-import AdZepAccessibilityFix from "@/components/analytics/adzep-accessibility-fix";
-import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner";
+import AdAccessibilityFix from "@/components/analytics/ad-accessibility-fix";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
 import TopAds from "@/components/analytics/topads";
 import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
@@ -69,9 +64,6 @@ const poppins = localFont({
 
 // Define base URL for metadata
 const baseUrl = "https://us.topfinanzas.com";
-
-// Temporarily disable AdZep script to isolate TopAds testing
-const ENABLE_ADZEP = false;
 
 // Read critical CSS at build time to inline it
 let criticalCSS = "";
@@ -219,7 +211,6 @@ export default function RootLayout({
           <GoogleTagManager />
           <GoogleAds />
           <GoogleAdManager />
-          {ENABLE_ADZEP && <AdZep />}
           <TopAds />
         </ClientOnly>
 
@@ -267,16 +258,10 @@ export default function RootLayout({
               <Suspense fallback={null}>
                 <UtmPersister />
                 <UtmLinkInjector />
-                {ENABLE_ADZEP && <AdZepSPABridge />}
-                {ENABLE_ADZEP && <AdZepInterstitialBlocker />}
-                <AdZepAccessibilityFix />{" "}
-                {/* Always run - Google Ads vignette also sets aria-hidden on body */}
-                {ENABLE_ADZEP && <AdZepBackdropCleaner />}
+                <AdAccessibilityFix />{" "}
+                {/* Prevents ad scripts from setting aria-hidden on body */}
                 <TopAdsSPAHandler />
                 {process.env.NODE_ENV === "development" && <UtmMonitor />}
-                {process.env.NODE_ENV === "development" && ENABLE_ADZEP && (
-                  <AdZepTest />
-                )}
                 {process.env.NODE_ENV === "development" && (
                   <AnalyticsValidationPanel />
                 )}

@@ -242,19 +242,16 @@ body {
   }
 }
 
-/* ⚠️ AdZep Overlay/Ad Blocking CSS Rules COMPLETELY REMOVED ⚠️
+/* ⚠️ Ad Overlay/Blocking CSS Rules COMPLETELY REMOVED ⚠️
  * 
- * Previously, this CSS file contained multiple aggressive rules that blocked ALL AdZep elements:
+ * Previously, this CSS file contained aggressive rules that blocked ad elements:
  * 
  * REMOVED RULES:
- * - #adzep-article-overlay, [id*="adzep-overlay"] - Blocked our own overlay utilities
- * - [id*="interstitial"], [class*="interstitial"] - Blocked interstitial ads
- * - [id*="rewardful"], [class*="rewardful"] - Blocked offerwall/rewardful ads  
- * - [id*="overlay"], [class*="overlay"] - Blocked generic overlays
- * - Various data attributes and specific classes
+ * - Various overlay, interstitial, and rewardful selectors
+ * - Broad pattern matching with display:none !important
  * 
  * These rules used display:none !important and pointer-events:none !important,
- * which completely prevented AdZep ads from displaying or being interactive.
+ * which completely prevented ads from displaying or being interactive.
  * 
  * CRITICAL PRODUCTION BUG CAUSED:
  * 1. Interstitial ads would load but be completely non-clickable
@@ -264,16 +261,14 @@ body {
  * 5. Issue persisted even after JavaScript component fixes
  * 
  * ROOT CAUSE: CSS !important rules override all JavaScript
- * Even though we disabled AdZepInterstitialBlocker component, these CSS rules
- * were still active and blocking all ad interactions globally.
  * 
  * SOLUTION: ALL blocking CSS rules have been PERMANENTLY REMOVED
- * AdZep's own ad units include proper close buttons and controls.
+ * TopAds ad units include proper close buttons and controls.
  * They should be allowed to display and function normally.
  * 
  * If problematic overlays appear in the future, implement a targeted solution:
  * 1. Use specific data attributes to identify malicious elements
- * 2. Whitelist legitimate ad network domains (AdZep)
+ * 2. Whitelist legitimate ad network domains (TopAds)
  * 3. Don't use broad pattern matching like [id*="interstitial"]
  * 4. Never use !important on blocking rules
  * 5. Test thoroughly before deploying
@@ -297,7 +292,7 @@ html[style*="overflow: hidden"] {
  * They do NOT block the ad units themselves - only cleanup leftover backdrops
  */
 
-/* Target AdZep backdrop elements that commonly remain after ad dismissal */
+/* Target orphaned backdrop elements that commonly remain after ad dismissal */
 body
   > div[style*="position: fixed"][style*="inset: 0"]:not(
     [id*="uk_topfinanzas"]
@@ -336,7 +331,7 @@ body
 
 /* Remove backdrop-filter blur effects from body when no active ads */
 body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])),
-body:not(:has([data-adzep-active])) {
+body:not(:has([data-topads-active])) {
   backdrop-filter: none !important;
   filter: none !important;
 }

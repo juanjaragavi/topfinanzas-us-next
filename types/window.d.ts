@@ -8,7 +8,6 @@ export type DataLayerEntry = Record<string, unknown> | unknown[];
 
 declare global {
   interface Window {
-    AdZepActivateAds?: () => void;
     analyticsValidator?: AnalyticsValidator;
     google_tag_manager?: Record<string, unknown>;
     dataLayer?: DataLayerEntry[];
