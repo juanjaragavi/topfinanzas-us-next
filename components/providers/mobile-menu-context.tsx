@@ -26,15 +26,39 @@ export function MobileMenuProvider({
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  // Prevent scrolling when menu is open
+  // Prevent scrolling when menu is open (iOS-safe approach)
   useEffect(() => {
     if (isMobileMenuOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
       document.body.style.overflow = "hidden";
+      document.body.dataset.scrollY = String(scrollY);
     } else {
+      const savedScrollY = document.body.dataset.scrollY;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
       document.body.style.overflow = "";
+      if (savedScrollY) {
+        window.scrollTo(0, parseInt(savedScrollY, 10));
+        delete document.body.dataset.scrollY;
+      }
     }
     return () => {
+      const savedScrollY = document.body.dataset.scrollY;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
       document.body.style.overflow = "";
+      if (savedScrollY) {
+        window.scrollTo(0, parseInt(savedScrollY, 10));
+        delete document.body.dataset.scrollY;
+      }
     };
   }, [isMobileMenuOpen]);
 
