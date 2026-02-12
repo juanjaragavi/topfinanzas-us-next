@@ -27,10 +27,7 @@ export default function PostPage() {
         author: "Diana Berrio",
         authorImage: "https://media.topfinanzas.com/images/authors.webp",
         readingTime: "4 minute read",
-        categories: [
-          { name: "Personal Finance", slug: "personal-finance" },
-          { name: "Uncategorized", slug: "uncategorized" },
-        ],
+        categories: [{ name: "Personal Finance", slug: "personal-finance" }],
         featuredImage:
           "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
         excerpt:
@@ -120,7 +117,7 @@ export default function PostPage() {
           <strong>Start Now, No Matter How Small:</strong> As our example
           showed, the amount you start with is less important than when you
           start. Even if you can only spare $50 a month, start today. Building{" "}
-          <Link href="/personal-finance/how-to-save-money-fast-10-hacks-that-actually-work/">
+          <Link href="/personal-finance/beat-inflation-with-your-cashback">
             easy saving habits
           </Link>{" "}
           now is the key to unlocking future growth.
@@ -131,7 +128,7 @@ export default function PostPage() {
           months. Set up automatic contributions to your investment accounts so
           you’re consistently adding to your principal. This requires patience
           and a clear vision for your future, which is why{" "}
-          <Link href="/financial-solutions/best-personal-loans/">
+          <Link href="/financial-solutions/chase-sapphire-preferred-credit-card-benefits">
             setting financial goals
           </Link>{" "}
           is such a crucial first step.

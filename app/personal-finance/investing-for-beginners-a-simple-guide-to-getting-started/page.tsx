@@ -67,7 +67,7 @@ export default function PostPage() {
           repair or a medical bill. Without it, you might be forced to sell your
           investments at the worst possible time. Before you start investing,
           your top priority should be to{" "}
-          <Link href="/personal-finance/10-practical-money-saving-tips-for-everyday-life/">
+          <Link href="/personal-finance/beat-inflation-with-your-cashback">
             build a solid emergency fund first
           </Link>
           , ideally with 3-6 months of essential living expenses.

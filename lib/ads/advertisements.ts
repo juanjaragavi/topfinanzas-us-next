@@ -29,7 +29,7 @@ export const advertisements: Advertisement[] = [
       width: 350,
       height: 300,
     },
-    link: "/personal-finance/best-personal-loans", // Updated link
+    link: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
     format: "square",
     active: true,
   },
@@ -42,7 +42,7 @@ export const advertisements: Advertisement[] = [
       width: 320,
       height: 620,
     },
-    link: "/personal-finance/credit-card-types-benefits", // Updated link
+    link: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
     format: "portrait",
     active: true,
   },

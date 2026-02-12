@@ -34,7 +34,6 @@ export function MobileMenu() {
     { text: "Loans and Credits", href: "/financial-solutions" },
     { text: "Personal Finance", href: "/personal-finance" },
     { text: "Student Finances", href: "/personal-finance" },
-    { text: "Uncategorized", href: "/uncategorized" },
   ];
 
   return (

@@ -50,19 +50,19 @@ export default function InvitCreditCardRecUS2Page() {
           </p>
           <div className="flex flex-col gap-3 max-w-md mx-auto">
             <Link
-              href="/financial-solutions"
+              href="/financial-solutions/benefits-of-the-discover-it-cash-back"
               className="block w-full rounded-full bg-[#2D7D6F] hover:bg-[#246960] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
             >
               Up to 2% Cashback Credit Card
             </Link>
             <Link
-              href="/financial-solutions"
+              href="/financial-solutions/citi-simplicity-card-benefits"
               className="block w-full rounded-full bg-[#2D7D6F] hover:bg-[#246960] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
             >
               No annual fee Credit Card
             </Link>
             <Link
-              href="/financial-solutions"
+              href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
               className="block w-full rounded-full bg-[#2D7D6F] hover:bg-[#246960] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
             >
               No Credit Check Credit Card
@@ -91,7 +91,7 @@ export default function InvitCreditCardRecUS2Page() {
 
         {/* Accept Recommendation CTA */}
         <Link
-          href="/financial-solutions"
+          href="/financial-solutions/wells-fargo-autograph-card-benefits"
           className="inline-flex items-center justify-center rounded-full bg-[#2D7D6F] hover:bg-[#246960] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors"
         >
           ACCEPT RECOMMENDATION
@@ -172,7 +172,7 @@ export default function InvitCreditCardRecUS2Page() {
               The most requested among our readers! Check it out today...
             </p>
             <Link
-              href="/financial-solutions"
+              href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
               className="inline-flex items-center justify-center rounded-full transition-colors bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold px-8 py-3 text-lg uppercase"
             >
               SEE HOW TO APPLY

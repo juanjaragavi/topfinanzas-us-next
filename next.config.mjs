@@ -17,6 +17,26 @@ const nextConfig = {
   // Asset prefix and base path for Vercel deployment
   assetPrefix: undefined,
   basePath: "",
+  // Redirects for legacy/broken routes to prevent 404s and preserve SEO signals
+  async redirects() {
+    return [
+      {
+        source: "/uncategorized",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/tarjetas",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/recomendador-de-tarjetas-de-credito-p1",
+        destination: "/choose-the-perfect-card-for-you-1",
+        permanent: true,
+      },
+    ];
+  },
   // Add rewrites for static files - using simpler approach
   async rewrites() {
     return [
