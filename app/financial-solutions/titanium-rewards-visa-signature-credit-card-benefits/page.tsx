@@ -178,16 +178,6 @@ export default function BenefitsTitaniumRewardsPage() {
               consistent rewards throughout the year.
             </p>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
-            </div>
-
             {/* Redeem points your way */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Redeem points your way
@@ -255,16 +245,6 @@ export default function BenefitsTitaniumRewardsPage() {
               especially beneficial for frequent travelers who want to earn
               rewards on international spending.
             </p>
-
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
-            </div>
 
             {/* Exclusive Visa Signature benefits */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -342,16 +322,6 @@ export default function BenefitsTitaniumRewardsPage() {
               card is perfect for anyone who frequently travels abroad or plans
               their dream vacation.
             </p>
-
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
-            </div>
 
             {/* Your best option */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">

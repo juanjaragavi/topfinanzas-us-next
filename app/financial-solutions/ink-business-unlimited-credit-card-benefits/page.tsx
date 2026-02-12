@@ -147,16 +147,6 @@ export default function InkBusinessUnlimitedBenefitsPage() {
               It's a great way to boost your budget.
             </p>
 
-            {/* Banner 1 (Placeholder) */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
-            </div>
-
             {/* Business tools for seamless operations */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Business tools for seamless operations

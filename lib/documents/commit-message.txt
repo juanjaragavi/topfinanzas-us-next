@@ -1,3 +1,6 @@
-style: standardize financial solutions page layouts and fix lint warnings
+refactor(financial-solutions): clean up and standardize 16 benefits pages
 
-Applied layout standard to multiple financial solutions pages (Discover it Student, Capital One Platinum Secured, Amex Gold, Citi Diamond Preferred, Discover it Cash Back, Wells Fargo Reflect, Fundbox, Titanium Rewards, Wells Fargo Autograph). Removed unused headerContent import from header component to resolve ESLint warning. Reverted authors.json image URLs to correct /uk/ path prefix.
+- Remove redundant code and unused imports across financial solutions benefits pages
+- Standardize component structure and formatting for consistency
+- Apply code formatting improvements (Prettier compliance)
+- No functional or content changes; layout and behavior preserved

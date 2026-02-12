@@ -139,16 +139,6 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
               upgrade to an unsecured card, eliminating the need for a deposit.
             </p>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
-            </div>
-
             {/* Unlock higher credit lines over time */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unlock higher credit lines over time
@@ -166,16 +156,6 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
               Higher credit lines make it easier to manage emergencies or larger
               purchases without maxing out your card.
             </p>
-
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
-            </div>
 
             {/* Build credit with confidence */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">

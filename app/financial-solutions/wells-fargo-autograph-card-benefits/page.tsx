@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
+import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
@@ -113,25 +114,19 @@ export default function WellsFargoAutographBenefitsPage() {
               </Link>
             </div>
 
-            {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
-              {/* Left: Product Name */}
-              <div className="bg-[#6C2156] flex items-center justify-center p-8 min-h-[300px]">
-                <p className="text-4xl font-bold text-white tracking-tight text-center">
-                  Wells Fargo Autograph Card
-                </p>
-              </div>
-              {/* Right: Image */}
-              <div className="relative min-h-[300px]">
-                <ResponsiveImage
-                  src="https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp" // Assuming naming convention
-                  alt="Wells Fargo Autograph Card Benefits"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+            {/* Hero Image */}
+            <div className="my-8">
+              <ResponsiveImage
+                src="https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp"
+                alt="Wells Fargo Autograph Card Benefits"
+                width={900}
+                height={507}
+                className="w-full rounded-xl"
+                priority={false}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 900px"
+                containerClassName="w-full"
+              />
             </div>
 
             {/* Key Section 1 */}
@@ -305,6 +300,8 @@ export default function WellsFargoAutographBenefitsPage() {
           </div>
         </div>
       </article>
+
+      <CompactFooter />
     </main>
   );
 }

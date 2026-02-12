@@ -115,25 +115,19 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
               </Link>
             </div>
 
-            {/* Split Section */}
-            <div className="grid md:grid-cols-2 gap-0 mb-8 items-stretch h-full">
-              {/* Left: Brand Name */}
-              <div className="flex items-center justify-center p-8 min-h-[300px]">
-                <p className="text-2xl font-bold text-gray-900 tracking-tight text-center">
-                  Bank of America
-                </p>
-              </div>
-              {/* Right: Image */}
-              <div className="relative min-h-[300px]">
-                <ResponsiveImage
-                  src="https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp"
-                  alt="Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+            {/* Hero Image */}
+            <div className="my-8">
+              <ResponsiveImage
+                src="https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp"
+                alt="Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students"
+                width={900}
+                height={507}
+                className="w-full rounded-xl"
+                priority={false}
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 900px"
+                containerClassName="w-full"
+              />
             </div>
 
             {/* Uncomplicated cash back */}
