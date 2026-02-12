@@ -116,15 +116,17 @@ export function Header() {
     megaMenuRefs.current[key] = el;
   };
 
-  // Scroll Handler Effect
+  // Scroll Handler Effect — only hide on scroll down for desktop
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const isMobile = window.innerWidth < 768;
 
-      // Enhance user experience by only hiding after a threshold
-      // and checking scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false); // Hide on scroll down
+      // On mobile, always keep header visible (sticky behavior)
+      if (isMobile) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false); // Hide on scroll down (desktop only)
       } else {
         setIsVisible(true); // Show on scroll up
       }

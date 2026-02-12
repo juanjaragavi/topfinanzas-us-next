@@ -1,3 +1,9 @@
-fix(analytics): exclude credit-card-recommender-p1 from TopAds
+feat: mobile nav WordPress parity, sticky header, hero background fix
 
-Add /credit-card-recommender-p1/ to the exclude list in TopAds configuration to prevent the ad overlay from appearing on the first step of the credit card recommender quiz.
+- Rewrite mobile-menu.tsx to match WordPress US nav structure exactly
+  (Categories accordion, Loans, Credit Cards, Archive, Categories list)
+- Add Financial Solutions and Personal Finance to mobile nav categories
+- Add backdrop overlay and iOS-safe scroll lock (position:fixed approach)
+- Keep mobile header always visible on scroll (hide-on-scroll desktop only)
+- Hide hero background image on mobile, use solid #3E73C4 to match WordPress
+- Verify all navigation links resolve without 404s

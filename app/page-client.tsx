@@ -279,9 +279,9 @@ export default function Home() {
       <Header />
 
       {/* Hero Section - WordPress US Layout with Background Image */}
-      <section className="relative w-full min-h-[400px] md:min-h-[450px] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      <section className="relative w-full min-h-[400px] md:min-h-[450px] flex items-center overflow-hidden bg-[#3E73C4] md:bg-transparent">
+        {/* Background Image - hidden on mobile to match WordPress */}
+        <div className="absolute inset-0 hidden md:block">
           <Image
             src="https://media.topfinanzas.com/images/bannerppal-1536x400-1.webp"
             alt="Top Finance Hero"
