@@ -16,7 +16,7 @@ import { useMobileMenu } from "@/components/providers/mobile-menu-context";
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
 import { headerNavigation } from "@/lib/navigation/headerNavigation";
-// Removed AdZepCentralizedHandler - activation now handled by AdZepSPABridge
+// TopAds SPA activation handled by TopAdsSPAHandler in layout.tsx
 // Removed searchIndex, SearchItem
 
 export function Header() {
@@ -151,7 +151,7 @@ export function Header() {
 
   return (
     <>
-      {/* AdZep activation now handled exclusively by AdZepSPABridge */}
+      {/* TopAds SPA activation handled by TopAdsSPAHandler in layout.tsx */}
       <header
         className={`sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-transform duration-300 ease-in-out ${
           isVisible ? "translate-y-0" : "-translate-y-full"

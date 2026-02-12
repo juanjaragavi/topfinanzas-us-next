@@ -21,7 +21,7 @@ This Next.js project is the target for migrating the legacy WordPress site `http
 - **UI Components**: Shadcn/UI with Radix UI primitives
 - **State Management**: React hooks and context
 - **MDX Support**: Next.js MDX for blog content
-- **Analytics**: Google Tag Manager + AdZep integration
+- **Analytics**: Google Tag Manager + TopAds integration
 
 ### Key Dependencies
 
@@ -180,12 +180,13 @@ import { CustomComponent } from "./custom-component";
 - **Event Tracking**: US user interactions
 - **Conversion Tracking**: US-specific goals
 
-### 2. AdZep Integration
+### 2. TopAds Integration
 
-- **Script Loading**: Optimized loading strategy
-- **Function Calls**: Automatic activation
-- **Performance**: Minimal impact
-- **Debugging**: Development tools available
+- **Script Loading**: Proprietary TopAds script loaded via `topads.tsx` component
+- **SPA Navigation**: Automatic activation via `topads-spa-handler.tsx`
+- **Configuration**: Domain `TOPFIN_US`, networkCode `23062212598`
+- **Performance**: Lazy loading with `soft` strategy
+- **Debugging**: Development logging available
 
 ## Security Guidelines
 

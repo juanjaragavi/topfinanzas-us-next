@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Identity
 
-**TopFinanzas US Next** - A Next.js 15+ financial comparison platform for the US market, migrating from the legacy WordPress site (https://us.topfinanzas.com). The project focuses on credit cards, personal loans, and financial guidance with comprehensive analytics tracking and multi-step user flows.
+**TopFinanzas US Next** - A Next.js 15+ financial comparison platform for the US market, migrating from the legacy WordPress site (<https://us.topfinanzas.com>). The project focuses on credit cards, personal loans, and financial guidance with comprehensive analytics tracking and multi-step user flows.
 
 ## Development Commands
 
@@ -79,16 +79,15 @@ Heavy multi-layer analytics implementation:
 
 - **Google Tag Manager** - Core analytics
 - **Google Ads** - Conversion tracking
-- **AdZep** - Ad provider with automatic activation on navigation
-- **TopAds** - Custom ad network
+- **TopAds** - Proprietary ad network with SPA navigation support
 - **UTM Tracking** - Captured and persisted throughout user journey
 - All analytics components in `/components/analytics/`
 
-**AdZep Critical Pattern**:
+**TopAds Critical Pattern**:
 
-- Never manually call `window.AdZepActivateAds()` - handled automatically
-- Auto-activates on route changes via `AdZepNavigationHandler`
-- Uses `usePathname()` hook and `popstate` events for SPA navigation
+- SPA navigation handled automatically via `TopAdsSPAHandler` calling `window.topAds.spa()`
+- Use `useTopAds()` hook for programmatic SPA activation only when needed
+- Configuration: domain `TOPFIN_US`, networkCode `23062212598`, lazyLoad `soft`
 - See `.github/copilot-instructions.md` for full implementation details
 
 ### API Routes
@@ -170,7 +169,6 @@ Located in `/components/steps/` and `/components/forms/`:
    - `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_PRIVATE_KEY` for Sheets API
    - Brevo API credentials for contact/newsletter forms
    - Kit.com API for newsletter integration
-   - AdZep script URL for US deployment
 3. Production env files stored in `/opt/app/` with restricted permissions
 4. Never commit secrets to repository
 
@@ -233,7 +231,7 @@ logger.info({ userData }, "User data retrieved");
 
 /components/
   /ui/                              # Shadcn/Radix base components
-  /analytics/                       # GTM, Google Ads, AdZep, TopAds
+  /analytics/                       # GTM, Google Ads, TopAds
   /layout/                          # Header, footer, site wrapper
   /forms/                           # Contact, subscription forms
 
@@ -250,7 +248,6 @@ logger.info({ userData }, "User data retrieved");
 /.github/
   copilot-instructions.md           # Full project documentation
   /instructions/                    # Detailed implementation guides
-    - ADZEP_IMPLEMENTATION.instructions.md
     - BLOG_POST_INTEGRATION.instructions.md
     - PUSH-AND-COMMIT.instructions.md
     - project-rules.instructions.md
@@ -272,11 +269,8 @@ logger.info({ userData }, "User data retrieved");
 
 ### Implementation Guides
 
-- **`ADZEP_IMPLEMENTATION.instructions.md`**: Complete AdZep integration guide
-  - Script loading and activation patterns
-  - Navigation handler implementation
-  - Performance optimization
-  - Development debugging tools
+- **`ADZEP_IMPLEMENTATION.instructions.md`**: ~~Removed~~ (AdZep replaced by TopAds)
+  - TopAds integration now handled via `topads.tsx` and `topads-spa-handler.tsx`
 
 - **`BLOG_POST_INTEGRATION.instructions.md`**: Blog content workflow
   - Multi-location sync requirements
@@ -288,9 +282,9 @@ logger.info({ userData }, "User data retrieved");
   - Benefits and Requirements page separation
   - Exact element ordering (validated against GA/Google Ads)
   - Image component specifications (`ResponsiveImage` vs `Image`)
-  - Ad unit placement (`uk_topfinanzas_3`, `uk_topfinanzas_4`)
+  - Ad unit placement (`square03`, `square04`)
   - NO colored background boxes, grid layouts, or bullet lists
-  - Template reference: `/app/financial-solutions/barclaycard-avios-plus/`
+  - Template reference: `/app/financial-solutions/citi-simplicity-card/`
   - **ANY deviation negatively impacts SEO and conversion rates**
 
 - **`PUSH-AND-COMMIT.instructions.md`**: Git workflow procedures
@@ -307,10 +301,10 @@ logger.info({ userData }, "User data retrieved");
 
 1. **Port 3040** - Not standard 3000
 2. **Git Workflow** - Never bypass `git-workflow.sh` script; reads commit from `/lib/documents/commit-message.txt`
-3. **Analytics Order** - GTM must load before AdZep in layout
+3. **Analytics Order** - GTM must load before TopAds in layout
 4. **Form Navigation** - Always scroll to top on step changes (`window.scrollTo(0, 0)`)
 5. **MDX Support** - Configured but unused; content is hardcoded
-6. **AdZep Activation** - Never call manually; handled automatically via `AdZepNavigationHandler`
+6. **TopAds Activation** - SPA navigation handled automatically via `TopAdsSPAHandler`
 7. **Search Index** - Requires rebuild/redeploy for content changes (~400 items in memory)
 8. **Image Sources** - Multiple CDN patterns configured in next.config.mjs
 9. **Console Logging** - NEVER use `console.log()`; always use `logger` from `@/lib/logger`
@@ -330,7 +324,7 @@ logger.info({ userData }, "User data retrieved");
   - `npm run test:brevo` - New contact integration test
   - `npm run test:brevo-direct` - Direct API test
   - `npm run test:brevo-api` - Full integration test
-- Development testing panel for AdZep via `AdZepTest` component
+- Development testing panel for TopAds via browser DevTools
 - Analytics tracking verification through browser DevTools
 
 ## Deployment
@@ -404,7 +398,7 @@ README.md                       # Project overview and setup
 ### Key Reference Files
 
 - **Architecture**: `.github/instructions/project-rules.instructions.md`
-- **Analytics**: `.github/instructions/ADZEP_IMPLEMENTATION.instructions.md`
+- **Analytics**: TopAds integration via `topads.tsx` and `topads-spa-handler.tsx`
 - **Content**: `.github/instructions/BLOG_POST_INTEGRATION.instructions.md`
 - **Product Pages**: `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`
 - **Git**: `.github/instructions/PUSH-AND-COMMIT.instructions.md`

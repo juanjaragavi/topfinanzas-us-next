@@ -25,13 +25,11 @@ const FILES_TO_MIGRATE = [
   "components/analytics/gam.tsx",
   "components/analytics/gtm.tsx",
   "components/analytics/google-ads.tsx",
-  "components/analytics/adzep-trigger.tsx",
-  "components/analytics/adzep-trackers.tsx",
+  "components/analytics/topads.tsx",
+  "components/analytics/topads-spa-handler.tsx",
   "components/analytics/utm-link-injector.tsx",
   "components/analytics/validation-panel.tsx",
-  "components/analytics/adzep-backdrop-cleaner.tsx",
-  "components/analytics/adzep-accessibility-fix.tsx",
-  "components/analytics/adzep-interstitial-blocker.tsx",
+  "components/analytics/ad-accessibility-fix.tsx",
 
   // Form components
   "components/credit-card-form.tsx",
@@ -60,7 +58,7 @@ const FILES_TO_MIGRATE = [
 const getLoggerImport = (filePath) => {
   if (filePath.includes("/analytics/")) return "analyticsLogger";
   if (filePath.includes("/api/")) return "apiLogger";
-  if (filePath.includes("adzep")) return "adzepLogger";
+  if (filePath.includes("topads")) return "topadsLogger";
   if (filePath.includes("utm")) return "utmLogger";
   if (filePath.includes("form") || filePath.includes("quiz"))
     return "formLogger";
