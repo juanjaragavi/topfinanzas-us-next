@@ -159,6 +159,16 @@ export default function BankOfAmericaStudentTravelCardBenefitsPage() {
               ensures you can plan your adventures your way.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* Affordable travel for students */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Affordable travel for students

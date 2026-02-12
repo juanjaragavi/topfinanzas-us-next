@@ -146,6 +146,16 @@ export default function NationalFundingBenefitsPage() {
               business.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* Additional resources that set National Funding apart */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Additional resources that set National Funding apart

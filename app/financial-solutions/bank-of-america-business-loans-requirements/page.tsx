@@ -1,33 +1,34 @@
-import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bank of America Business Loans Requirements | TopFinanzas US",
+  title:
+    "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Unlock the financing you need for your business with simple requirements. Learn about Bank of America's business loan eligibility and application process.",
+    "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+  keywords:
+    "Bank of America business loans requirements, eligibility, application, business financing, credit line",
 };
 
-export default function BankOfAmericaLoansRequirementsPage() {
+export default function RequirementsBofABusinessLoansPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col font-sans">
+    <main className="bg-white min-h-screen flex flex-col" data-category="loans">
       <Header />
 
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Title */}
-            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
-              Bank of America Business Loans Requirements: Your Best Option
+            {/* ELEMENT 3: H1 TITLE */}
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+              Bank of America Business Loans Requirements
             </h1>
 
-            {/* Ad Unit: square03 */}
+            {/* ELEMENT 4: FIRST AD UNIT */}
             <div
               id="square03"
               className="w-full flex justify-center my-6"
@@ -35,325 +36,306 @@ export default function BankOfAmericaLoansRequirementsPage() {
               data-topads-size="square"
             ></div>
 
-            {/* Intro */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Unlock the Financing You Need for Your Business with Simple
-              Requirements
-            </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Starting or expanding your business often requires financial
-              support. Bank of America offers various business loans and credit
-              lines with clear, achievable qualifications. Whether you're
-              looking for an unsecured line of credit or a secured business
-              loan, understanding the requirements is essential to get started.
-            </p>
+            <div className="my-8 text-left sm:text-left">
+              {/* ELEMENT 5: OPENING PARAGRAPH */}
+              <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                Is your business ready for financing?
+              </h2>
 
-            {/* Key Requirements Section */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Key Requirements:
-            </h2>
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
+                Bank of America provides a range of business financing options
+                for small to mid-sized businesses. Whether you need a credit
+                line, term loan, or cash-secured option, understanding the
+                requirements upfront will help you prepare a strong application.
+              </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
-              <div className="w-full">
-                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
-                  <p className="text-4xl font-bold text-gray-800 tracking-tight text-center">
-                    Bank of America
+              {/* ELEMENT 6: HERO IMAGE */}
+              <div className="my-8 text-left sm:text-left">
+                <Image
+                  src="https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp"
+                  alt="Bank of America Business Loans Requirements"
+                  width={900}
+                  height={507}
+                  className="w-full h-auto rounded-xl"
+                  priority={false}
+                  fetchPriority="high"
+                  quality={85}
+                  loading="eager"
+                />
+              </div>
+
+              <section className="my-6">
+                {/* ELEMENT 7: REQUIREMENTS SECTION */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Requirements
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Credit score (FICO 700+):
+                      </span>{" "}
+                      A strong personal and business credit score is crucial for
+                      approval.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Time in business (2+ years):
+                      </span>{" "}
+                      Established businesses with at least two years of
+                      operation demonstrate stability.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Revenue ($100K+ annually):
+                      </span>{" "}
+                      Minimum annual revenue shows that your business generates
+                      consistent income.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Collateral:</span> Some
+                      loan products may require business or personal assets as
+                      collateral.
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELEMENT 8: SECOND AD UNIT */}
+                <div
+                  id="square04"
+                  className="w-full flex justify-center my-6"
+                  data-topads
+                  data-topads-size="square"
+                ></div>
+
+                {/* ELEMENT 9: WHY REQUIREMENTS MATTER */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Understanding loan products
+                </h2>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Business Advantage Credit Line
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  A flexible revolving credit line from $10,000 to $100,000.
+                  Draw funds as needed and only pay interest on what you use.
+                  Ideal for managing cash flow fluctuations and short-term
+                  operational expenses.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Business Advantage Term Loan
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  A lump-sum loan from $10,000 to $100,000 with fixed monthly
+                  payments over a set term. Best for planned investments such as
+                  equipment purchases, expansion, or other specific business
+                  needs.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Cash-Secured Business Credit Line
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Secured by a Bank of America CD or savings account, this
+                  option is ideal for businesses building credit or those that
+                  may not qualify for unsecured financing. It helps establish
+                  business credit while providing access to needed funds.
+                </p>
+
+                {/* ELEMENT 10: FIRST PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                      alt="Practical Guide to Getting Out of Debt"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 12: APPLICATION PROCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  How to apply
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 1: Assess your eligibility
+                  </span>
+                  <br />
+                  Review your credit score, time in business, and annual revenue
+                  to determine which loan product best suits your needs.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 2: Gather documentation
+                  </span>
+                  <br />
+                  Prepare business tax returns, financial statements, bank
+                  statements, and a business plan or description of how the
+                  funds will be used.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">
+                    Step 3: Apply online or in branch
+                  </span>
+                  <br />
+                  Start your application on the Bank of America website or visit
+                  a local branch for personalized assistance from a business
+                  lending specialist.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">Step 4: Review and funding</span>
+                  <br />
+                  Once approved, review your loan terms carefully. Funding
+                  timelines vary by product, but you can typically expect
+                  disbursement within a few business days of approval.
+                </p>
+
+                {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                      alt="Personal Loans - Your Smart Strategy for Financial Control"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 13: TIPS FOR SUCCESS */}
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Tips for a stronger application
+                </h2>
+
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Maintain clean credit:
+                      </span>{" "}
+                      Pay down existing debts and resolve any inaccuracies on
+                      your credit reports before applying.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Open a business checking account:
+                      </span>{" "}
+                      Having an existing relationship with Bank of America can
+                      strengthen your application and may provide rate benefits.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#012169] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Prepare thorough documentation:
+                      </span>{" "}
+                      Complete and organized financial records demonstrate
+                      professionalism and accelerate the review process.
+                    </div>
+                  </div>
+                </div>
+
+                {/* ELEMENT 14: THIRD PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                      alt="Looking for the Perfect Credit Card?"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                {/* ELEMENT 15: YOUR BEST OPTION */}
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Your best option
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  Bank of America business loans offer competitive rates and
+                  flexible terms for established businesses. Whether you need
+                  revolving credit for day-to-day operations or a term loan for
+                  specific investments, their range of products can be tailored
+                  to your business needs.
+                </p>
+
+                {/* ELEMENT 16: FINAL EXTERNAL CTA */}
+                <div className="text-left my-8">
+                  <Link
+                    href="https://www.bankofamerica.com/smallbusiness/business-financing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#012169] hover:bg-[#001545] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      See on official site*
+                    </Button>
+                  </Link>
+                  <p className="text-sm text-gray-500 mt-3 text-center">
+                    *By clicking you will be redirected to an external site.
                   </p>
                 </div>
-              </div>
-              <div>
-                <div className="rounded-lg overflow-hidden mb-0">
-                  <ResponsiveImage
-                    src="https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp"
-                    alt="Bank of America Business Loans Requirements"
-                    width={800}
-                    height={450}
-                    priority
-                  />
-                </div>
-              </div>
+              </section>
+
+              {/* ELEMENT 17: AI CONTENT DISCLAIMER */}
+              <AIContentDisclaimer />
             </div>
-
-            <div className="space-y-2 mb-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Minimum Personal Credit Score:
-                  </span>{" "}
-                  A FICO score above 700 is typically required.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Years in Business:
-                  </span>{" "}
-                  Most loan options require at least two years in business for
-                  eligibility.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Annual Revenue:
-                  </span>{" "}
-                  A minimum of $100,000 in annual revenue is generally necessary
-                  for approval.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Collateral or Security:
-                  </span>{" "}
-                  Some loan products, like the cash-secured credit line, require
-                  a refundable security deposit.
-                </p>
-              </div>
-            </div>
-
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Ready to tackle your debt?"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* What is the Business Advantage Credit Line? */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              What is the Business Advantage Credit Line?
-            </h2>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Eligibility Requirements:
-            </h3>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              For the unsecured Business Advantage Credit Line, the following
-              are essential:
-            </p>
-
-            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>At least two years in business.</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>A FICO score of 700 or higher.</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>A minimum annual revenue of $100,000.</p>
-              </div>
-            </div>
-
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The Business Advantage Credit Line offers flexibility with
-              competitive interest rates, allowing businesses to borrow funds
-              whenever necessary. This makes it a great option for covering
-              operational expenses or unexpected costs.
-            </p>
-
-            {/* Ad Unit: square04 */}
-            <div
-              id="square04"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
-
-            {/* How to Qualify for the Business Advantage Term Loan? */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              How to Qualify for the Business Advantage Term Loan?
-            </h2>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Required Documentation & Eligibility:
-            </h3>
-
-            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>
-                  <span className="font-bold text-gray-900">
-                    Business Experience:
-                  </span>{" "}
-                  Must be in business for at least two years.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>
-                  <span className="font-bold text-gray-900">
-                    Personal Credit:
-                  </span>{" "}
-                  A 700 or higher FICO score is typically required.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>
-                  <span className="font-bold text-gray-900">
-                    Revenue Threshold:
-                  </span>{" "}
-                  A yearly revenue of $100,000.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The Business Advantage Term Loan provides lump-sum funding that is
-              ideal for large purchases or business expansions. With fixed
-              monthly payments, it is suitable for businesses that need a
-              predictable repayment structure.
-            </p>
-
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Unlock your path to debt freedom"
-                width={600}
-                height={600}
-              />
-            </div>
-
-            {/* Cash-Secured Business Credit Line */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Cash-Secured Business Credit Line: A Flexible Financing Option
-            </h2>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              What You Need to Apply:
-            </h3>
-
-            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>Six months in business.</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>Annual revenue of at least $50,000.</p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#012169] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p>$1,000 refundable deposit.</p>
-              </div>
-            </div>
-
-            <p className="text-left text-gray-800 text-md leading-5 mb-8">
-              This secured credit line allows businesses to start building their
-              credit with a refundable deposit while enjoying the flexibility of
-              using the line of credit whenever needed.
-            </p>
-
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Looking for the Perfect Credit Card?"
-                width={600}
-                height={600}
-              />
-            </div>
-
-            {/* Your best option */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Your best option
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              Bank of America's business loans and financing options offer
-              flexible terms tailored to different needs. By meeting the basic
-              eligibility requirements, businesses can gain access to essential
-              funds. The next step is evaluating your business's needs to choose
-              the right financing option. Ready to move forward? Start your
-              application today!
-            </p>
-
-            <div className="flex flex-col items-center justify-center space-y-2">
-              <Link
-                href="https://www.bankofamerica.com/smallbusiness/business-financing/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto"
-              >
-                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#012169] hover:bg-[#1a3a70] text-white font-medium rounded-full">
-                  See on official site*
-                </Button>
-              </Link>
-              <p className="text-xs text-gray-500">
-                *By clicking you will be redirected to an external site.
-              </p>
-            </div>
-
-            <hr className="my-8" />
-            <AIContentDisclaimer />
           </div>
         </div>
       </article>
 
+      {/* ELEMENT 18: FOOTER */}
       <CompactFooter />
     </main>
   );

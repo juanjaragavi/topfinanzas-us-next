@@ -1,30 +1,36 @@
-refactor: Replace AdZep with TopAds proprietary ad system
+refactor: Standardize all Financial Solutions requirements pages to canonical layout
 
-BREAKING CHANGE: Complete removal of AdZep integration in favor of TopAds
+Refactored 10 requirements pages in app/financial-solutions/ to match
+the Citi Simplicity Card canonical layout template per the Financial
+Solutions Layout Standard.
 
-Migrated from legacy AdZep ad system to TopAds proprietary ad network.
-Removed 8 AdZep components, simplified architecture, and updated all
-documentation and configuration files.
+Pages refactored:
+- chase-sapphire-preferred-credit-card-requirements
+- american-express-platinum-card-requirements
+- capital-one-venture-x-rewards-credit-card-requirements
+- wells-fargo-autograph-card-requirements
+- ink-business-unlimited-credit-card-requirements
+- titanium-rewards-visa-signature-credit-card-requirements
+- capital-one-spark-cash-plus-requirements
+- bank-of-america-business-loans-requirements
+- fundbox-loan-requirements
+- quickbridge-loans-requirements
 
-Components Deleted: 8 AdZep component files
-Components Created: ad-accessibility-fix.tsx (generic, ad-provider agnostic)
+Changes applied to each page:
+- Replaced ResponsiveImage with next/image Image component
+- Removed lucide-react icon imports (ArrowRight, CheckCircle)
+- Replaced grid layouts with single-column flow
+- Added circular badge bullet point format (➔)
+- Standardized element ordering per layout standard
+- Added data-category attributes (credit-cards/loans)
+- Added branded CTA buttons with correct external links
+- Added three promotional banner images with internal links
+- Added dual ad units (square03, square04)
+- Included AI Content Disclaimer before footer
+- Updated metadata with keywords and improved descriptions
+- Used named imports for Header, CompactFooter, AIContentDisclaimer
 
-Core Files Updated:
-- app/layout.tsx: Removed AdZep imports and ENABLE_ADZEP flag
-- lib/ads/config.ts: AdZepConfig → TopAdsConfig
-- lib/logger.ts: adzepLogger → topadsLogger
-- types/window.d.ts: Removed AdZepActivateAds declaration
-- app/globals.css: Updated all AdZep references
+Also reordered promotional image placement in citi-simplicity-card-requirements
 
-Documentation Updated: 6 files including copilot-instructions, CLAUDE.md, GEMINI.md
-Deleted Documentation: ADZEP_IMPLEMENTATION.md, ADZEP_SUMMARY.md (4 files)
-
-Architecture Change:
-  AdZep: window.AdZepActivateAds() with complex activation
-  TopAds: window.topAds.spa() with simple SPA handler
-
-Ad container IDs unchanged: square02, square03, square04
-
-Testing: Zero TypeScript errors, no broken imports, clean build
-
-Created migration guide: docs/ADZEP_TO_TOPADS_MIGRATION.md
+Build: zero errors, all pages prerendered as static content
+Lint: zero warnings, zero errors

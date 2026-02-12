@@ -1,355 +1,310 @@
-import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "QuickBridge Loans Requirements | TopFinanzas US",
+  title:
+    "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
   description:
-    "A straightforward guide to securing your next business loan. Learn about QuickBridge Loans eligibility requirements and application process.",
+    "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
 };
 
-export default function QuickBridgeRequirementsPage() {
+export default function RequirementsQuickBridgeLoansPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col font-sans">
+    <main className="bg-white min-h-screen flex flex-col" data-category="loans">
       <Header />
-
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Title */}
-            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
-              QuickBridge Loans Requirements
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+              QuickBridge Loans Requirements: Fast Business Financing Guide
             </h1>
 
-            {/* Ad Unit: square03 */}
             <div
+              className="w-full flex justify-center my-6"
+              data-topads=""
+              data-topads-size="square"
               id="square03"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
-            {/* Intro */}
-            <p className="text-xl font-bold text-gray-900 mb-4">
-              A straightforward guide to securing your next business loan.
-            </p>
-            <p className="text-lg text-gray-700 mb-6">
-              Starting a new business or expanding your current operations often
-              requires financial support. QuickBridge Loans provides a fast and
-              accessible solution for small businesses seeking funding.
-            </p>
-
-            {/* Requirements Section */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Requirements
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
-              <div className="w-full">
-                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
-                  <p className="text-4xl font-bold text-gray-800 tracking-tight text-center">
-                    QuickBridge
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="rounded-lg overflow-hidden mb-0">
-                  <ResponsiveImage
-                    src="https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp"
-                    alt="QuickBridge Loans Requirements"
-                    width={800}
-                    height={450}
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-2 mb-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Minimum annual revenue:
-                  </span>{" "}
-                  Ensure your business has a stable cash flow (typically
-                  $250,000+).
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Time in business:
-                  </span>{" "}
-                  Operate for at least 6 months.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Credit history:
-                  </span>{" "}
-                  A soft credit pull is required to evaluate risk.
-                </p>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-left text-gray-800 text-md leading-5">
-                  <span className="font-bold text-gray-900">
-                    Bank statements:
-                  </span>{" "}
-                  Provide your last three months of business bank statements.
-                </p>
-              </div>
-            </div>
-
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Ready to tackle your debt?"
-                width={1200}
-                height={400}
-              />
-            </div>
-
-            {/* Understanding QuickBridge Loans */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Understanding QuickBridge Loans
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              QuickBridge Loans specializes in short-term funding designed to
-              meet immediate business needs. Whether it's purchasing inventory
-              or upgrading equipment, QuickBridge ensures a fast and efficient
-              lending process.
-            </p>
-
-            {/* Ad Unit: square04 */}
-            <div
-              id="square04"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Types of loans offered
-            </h3>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              QuickBridge Loans caters to various business needs:
-            </p>
-
-            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">
-                    Short-term business loans
-                  </p>
-                  <p>
-                    These loans are ideal for businesses that need quick funding
-                    to cover immediate expenses, such as payroll or inventory.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">Equipment financing</p>
-                  <p>
-                    Upgrade or purchase new equipment with a loan specifically
-                    designed for such investments.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1 mr-3">
-                  <div className="rounded-full bg-[#F6303E] p-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900">
-                    Working capital loans
-                  </p>
-                  <p>
-                    Keep your operations running smoothly with loans designed to
-                    provide working capital support.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Steps to apply */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Steps to apply for a QuickBridge loan
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The application process is designed to be quick and hassle-free:
-            </p>
-            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Submit your application:</span>{" "}
-                  Fill out the online form with basic business details.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Provide documentation:</span>{" "}
-                  Submit necessary documents like bank statements and proof of
-                  revenue.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Receive approval:</span> Get a
-                  decision within 24 hours.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Access funds:</span> Funds are
-                  deposited into your account within 1-2 business days.
-                </p>
-              </div>
-            </div>
-
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Unlock your path to debt freedom"
-                width={600}
-                height={600}
-              />
-            </div>
-
-            {/* Things to consider */}
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Things to consider
-            </h3>
-            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Loan amounts:</span> QuickBridge
-                  loans typically range from $5,000 to $500,000.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Repayment terms:</span> Most loans
-                  have short repayment periods, ranging from 6 to 24 months.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-2 mr-3">
-                  <div className="h-2 w-2 rounded-full bg-[#F6303E]"></div>
-                </div>
-                <p>
-                  <span className="font-bold">Fees and rates:</span> Interest
-                  rates vary depending on your credit history and business
-                  revenue.
-                </p>
-              </div>
-            </div>
-
-            {/* Why choose QuickBridge Loans? */}
-            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-              Why choose QuickBridge Loans?
-            </h2>
-            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              QuickBridge Loans stands out for its speed and simplicity. With a
-              streamlined application process and quick funding, it's an
-              excellent choice for small businesses needing immediate financial
-              assistance.
-            </p>
-
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Looking for the Perfect Credit Card?"
-                width={600}
-                height={600}
-              />
-            </div>
-
-            <div className="flex flex-col items-center justify-center space-y-2">
-              <Link
-                href="https://www.quickbridge.com/apply/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto"
-              >
-                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#F6303E] hover:bg-[#d6202e] text-white font-medium rounded-full">
-                  See on official site*
-                </Button>
-              </Link>
-              <p className="text-xs text-gray-500">
-                *By clicking you will be redirected to an external site.
+            <div className="my-8 text-left sm:text-left">
+              <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                Get fast business financing tailored to your needs
+              </h2>
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
+                QuickBridge offers short-term business loans with fast approval
+                and flexible terms. Here&apos;s everything you need to know
+                about qualifying.
               </p>
-            </div>
 
-            <hr className="my-8" />
-            <AIContentDisclaimer />
+              <div className="my-8 text-left sm:text-left">
+                <Image
+                  src="https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp"
+                  alt="QuickBridge Loans Requirements"
+                  width={900}
+                  height={507}
+                  className="w-full h-auto rounded-xl"
+                  fetchPriority="high"
+                  loading="eager"
+                  priority={false}
+                  quality={85}
+                />
+              </div>
+
+              <section className="my-6">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Requirements for QuickBridge Loans
+                </h2>
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Annual revenue ($250K+):
+                      </span>{" "}
+                      Your business should generate a minimum of $250,000 in
+                      annual revenue.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Time in business (6+ months):
+                      </span>{" "}
+                      At least six months of operational history is required.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Credit history:</span> A
+                      reasonable credit history is evaluated, though QuickBridge
+                      may be more flexible than traditional lenders.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">Bank statements:</span>{" "}
+                      Recent business bank statements are required to verify
+                      cash flow and financial health.
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="w-full flex justify-center my-6"
+                  data-topads=""
+                  data-topads-size="square"
+                  id="square04"
+                ></div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Understanding QuickBridge financing
+                </h2>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Types of loans available
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  QuickBridge offers short-term business loans ranging from
+                  $10,000 to $500,000. These loans are designed for various
+                  business needs including working capital, equipment purchases,
+                  inventory, expansion, and emergency funding. Repayment terms
+                  are flexible and tailored to your cash flow.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Speed of funding
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  One of QuickBridge&apos;s key advantages is speed. Once
+                  approved, funding can be received in as little as one business
+                  day. This makes QuickBridge ideal for businesses that need
+                  immediate access to capital for time-sensitive opportunities
+                  or urgent expenses.
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
+                  Flexible qualification criteria
+                </h3>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  QuickBridge takes a holistic approach to evaluating
+                  applications. While credit score is a factor, they place
+                  significant emphasis on business revenue, cash flow, and
+                  overall business health. This means businesses that may not
+                  qualify with traditional lenders could find success here.
+                </p>
+
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                      alt="Practical Guide to Getting Out of Debt"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Steps to apply
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">1. Check your eligibility</span>
+                  <br />
+                  Verify that your business meets the minimum revenue and time
+                  in business requirements before starting the application.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">2. Complete the application</span>
+                  <br />
+                  Fill out the online application with your business details,
+                  including revenue, industry, and how you plan to use the
+                  funds.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">3. Submit documentation</span>
+                  <br />
+                  Provide the last three months of business bank statements and
+                  any additional documentation requested during the review.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
+                  <span className="font-bold">4. Receive funding</span>
+                  <br />
+                  Once approved, review your loan terms and accept. Funds can be
+                  deposited to your business bank account as soon as the next
+                  business day.
+                </p>
+
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                      alt="Personal Loans - Your Smart Strategy for Financial Control"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Things to consider
+                </h2>
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Understand the costs:
+                      </span>{" "}
+                      Short-term business loans typically have higher factor
+                      rates than traditional bank loans. Review all terms and
+                      fees before accepting.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Repayment structure:
+                      </span>{" "}
+                      QuickBridge typically uses daily or weekly automatic
+                      repayments. Ensure your cash flow can accommodate the
+                      payment schedule.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#F6303E] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5 text-left">
+                      <span className="font-semibold">
+                        Use funds strategically:
+                      </span>{" "}
+                      Short-term loans work best for revenue-generating
+                      activities like inventory purchases, marketing campaigns,
+                      or capturing time-sensitive business opportunities.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                      alt="Looking for the Perfect Credit Card?"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
+
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Your best option
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
+                  QuickBridge is an excellent choice for established businesses
+                  that need fast access to capital without the lengthy approval
+                  process of traditional banks. With loans up to $500,000 and
+                  funding in as little as one business day, it&apos;s
+                  particularly well suited for businesses with strong revenue
+                  that need to act quickly on growth opportunities.
+                </p>
+
+                <div className="text-left my-8">
+                  <Link
+                    href="https://www.quickbridge.com/apply/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-[#F6303E] hover:bg-[#d42833] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      See on official site*
+                    </Button>
+                  </Link>
+                  <p className="text-sm text-gray-500 mt-3 text-center">
+                    *When you click &quot;See on official site&quot;, you will
+                    be directed to the official product page. This is an
+                    informational page and we may receive compensation.
+                  </p>
+                </div>
+              </section>
+
+              <AIContentDisclaimer />
+            </div>
           </div>
         </div>
       </article>
-
       <CompactFooter />
     </main>
   );

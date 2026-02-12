@@ -187,6 +187,16 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 greater.
               </p>
 
+              {/* Ad Unit: square04 */}
+              <div
+                id="square04"
+                className="w-full flex justify-center my-6"
+                data-topads
+                data-topads-size="square"
+              ></div>
+
+              <hr className="my-8" />
+
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-6">
                 0% Intro APR for 12 months on purchases
               </h2>
