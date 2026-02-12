@@ -34,9 +34,7 @@ export function CompactFooter() {
 
         {/* Bottom Links */}
         <div className="mt-20 text-left text-xs text-white">
-          <span className="text-white">
-            Un producto de TOP NETWORKS INC. |{" "}
-          </span>
+          <span className="text-white">A product of TOP NETWORKS INC. | </span>
           <span className="text-white">
             {footerNavigation.legalLinks.map((link, index) => (
               <span className="text-white" key={link.href}>
@@ -49,7 +47,7 @@ export function CompactFooter() {
           </span>
           <span className="text-white">
             {" "}
-            | Derechos de autor Top Networks Inc. 2025
+            | Copyright Top Networks Inc. 2025
           </span>
         </div>
       </div>

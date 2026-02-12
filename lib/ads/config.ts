@@ -39,12 +39,7 @@ export const adZepConfig: AdZepConfig = {
     "#sidebar-ads",
     ".in-article-ad",
   ],
-  articlePathPrefixes: [
-    "/blog",
-    "/financial-solutions",
-    "/personal-finance",
-    "/tarjetas",
-  ],
+  articlePathPrefixes: ["/blog", "/financial-solutions", "/personal-finance"],
   // Pages where ads should NEVER be activated
   excludedPaths: ["/quiz", "/quiz-2"],
   // Increased timeout for initial load to ensure AdZep script is ready

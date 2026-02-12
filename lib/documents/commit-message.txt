@@ -1,7 +1,13 @@
-feat: add invit-credit-card-rec-us-2 landing page + UI refinements
+fix: update dead links, remove legacy UK/MX references, improve navigation
 
-- Create /invit-credit-card-rec-us-2/ landing page migrated from WordPress production
-- Match original design with teal color scheme, CTA buttons, FAQ accordion, and limited offer card
-- Include TopAds square01 ad placement and metadata for SEO
-- Update header logo sizing for better visual consistency across breakpoints
-- Update TopAds page exclude list with corrected route paths
+- Replace generic /financial-solutions links on invit-credit-card-rec-us-2 landing page with specific product pages matching button context (cashback, no annual fee, secured card)
+- Update header navigation mega menu to reference existing US product pages instead of legacy UK products (Barclaycard, Lloyds, HSBC, etc.)
+- Fix broken internal links in blog articles to point to real US blog posts
+- Replace legacy Spanish footer text with English (compact-footer)
+- Remove /tarjetas path from AdZep config and add redirect in next.config.mjs
+- Add redirects for /uncategorized -> /blog and /recomendador-de-tarjetas-de-credito-p1 -> /choose-the-perfect-card-for-you-1
+- Update search index and advertisement links to existing US content
+- Remove stale /tarjetas entry from sitemap_new.xml
+- Remove Uncategorized category from mobile menu and blog post metadata
+- Update financial-solutions metadata OG images from UK to US products
+- Fix recommender link on financial-solutions page to US route

@@ -13,8 +13,7 @@ export const metadata: Metadata = {
       "Your guide to credit cards and personal loans in the United States. Compare options and find the best fit for you.",
     images: [
       {
-        // Using a relevant UK product image
-        url: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+        url: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp",
         width: 1200, // Adjust if necessary
         height: 630, // Adjust if necessary
         alt: "Financial Solutions from TopFinanzas US",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "Your guide to credit cards and personal loans in the United States. Compare options and find the best fit for you.",
     images: [
-      "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp",
     ],
   },
 };

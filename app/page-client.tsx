@@ -82,10 +82,7 @@ const allPosts: PostData[] = [
         "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
       featuredImage:
         "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
-      categories: [
-        { name: "Personal Finance", slug: "personal-finance" },
-        { name: "Uncategorized", slug: "uncategorized" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
   },
   {
@@ -169,10 +166,7 @@ const allPosts: PostData[] = [
         "Learn why a 0% intro APR credit card is the smart choice for financing big-ticket Black Friday purchases. Discover the benefits and how to use it responsibly.",
       featuredImage:
         "https://media.topfinanzas.com/images/why-a-0-intro-apr-card-is-your-best-bet-for-black-friday.webp",
-      categories: [
-        { name: "Personal Finance", slug: "personal-finance" },
-        { name: "Uncategorized", slug: "uncategorized" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
   },
   {
@@ -187,10 +181,7 @@ const allPosts: PostData[] = [
         "Learn the key differences between flat-rate and bonus category cashback cards to maximize your Black Friday savings. Discover which strategy works best for your shopping style.",
       featuredImage:
         "https://media.topfinanzas.com/images/flat-rate-vs-bonus-categories-the-best-cashback-strategy-for-black-friday.webp",
-      categories: [
-        { name: "Personal Finance", slug: "personal-finance" },
-        { name: "Uncategorized", slug: "uncategorized" },
-      ],
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
   },
   {

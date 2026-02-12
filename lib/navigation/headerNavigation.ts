@@ -128,24 +128,24 @@ export const headerNavigation = {
         title: "Personal Finance",
         items: [
           {
-            text: cleanTitle("Best Personal Loans"),
-            href: "/personal-finance/best-personal-loans",
+            text: cleanTitle("Best 0% APR Balance Transfer Cards"),
+            href: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
           },
           {
-            text: cleanTitle("Rewards Credit Cards"),
-            href: "/personal-finance/best-rewards-credit-cards",
+            text: cleanTitle("Best Secured Credit Cards for Building Credit"),
+            href: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
           },
           {
-            text: cleanTitle("Best Cashback Cards"),
-            href: "/personal-finance/cashback-credit-cards",
+            text: cleanTitle("Beat Inflation with Your Cashback"),
+            href: "/personal-finance/beat-inflation-with-your-cashback",
           },
           {
-            text: cleanTitle("Credit Cards: Types and Benefits"),
-            href: "/personal-finance/credit-card-types-benefits",
+            text: cleanTitle("Maximize Your FICO Score with Multiple Cards"),
+            href: "/personal-finance/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score",
           },
           {
-            text: cleanTitle("Practical Guide to Getting Out of Debt"),
-            href: "/personal-finance/getting-out-of-debt",
+            text: cleanTitle("Investing for Beginners"),
+            href: "/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started",
           },
           {
             text: "View more...",
@@ -159,24 +159,24 @@ export const headerNavigation = {
         title: "Cards",
         items: [
           {
-            text: cleanTitle("Barclaycard Avios Plus"),
-            href: "/financial-solutions/barclaycard-avios-plus",
+            text: cleanTitle("Chase Sapphire Preferred"),
+            href: "/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
           },
           {
-            text: cleanTitle("Curve Credit Card"),
-            href: "/financial-solutions/curve-credit-card",
+            text: cleanTitle("Capital One Venture X Rewards"),
+            href: "/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",
           },
           {
-            text: cleanTitle("Halifax World Elite Mastercard"),
-            href: "/financial-solutions/halifax-world-elite-mastercard",
+            text: cleanTitle("Discover it Cash Back"),
+            href: "/financial-solutions/benefits-of-the-discover-it-cash-back",
           },
           {
-            text: cleanTitle("Lloyds Bank Credit Card"),
-            href: "/financial-solutions/lloyds-bank-credit-card",
+            text: cleanTitle("Wells Fargo Autograph"),
+            href: "/financial-solutions/wells-fargo-autograph-card-benefits",
           },
           {
-            text: cleanTitle("Monzo Credit Card"),
-            href: "/financial-solutions/monzo-credit-card",
+            text: cleanTitle("American Express Gold Card"),
+            href: "/financial-solutions/benefits-of-the-american-express-gold-card",
           },
           {
             text: "View more...",
@@ -185,29 +185,25 @@ export const headerNavigation = {
           }, // Link to category archive
         ],
       },
-      // Column 3: Financial Solutions - Loans (Top 5 + Show more)
+      // Column 3: Financial Solutions - Loans (Top 4 + Show more)
       {
         title: "Loans",
         items: [
           {
-            text: cleanTitle("Barclays Personal Loan"),
-            href: "/financial-solutions/barclays-personal-loan",
+            text: cleanTitle("QuickBridge Business Loans"),
+            href: "/financial-solutions/benefits-quickbridge-loans",
           },
           {
-            text: cleanTitle("Capify Business Finance"),
-            href: "/financial-solutions/capify-personal-loan",
+            text: cleanTitle("Bank of America Business Loans"),
+            href: "/financial-solutions/bank-of-america-business-loans-benefits",
           },
           {
-            text: cleanTitle("Fleximize Business Loans"),
-            href: "/financial-solutions/fleximize-personal-loan",
+            text: cleanTitle("National Funding Loans"),
+            href: "/financial-solutions/national-funding-benefits",
           },
           {
-            text: cleanTitle("Funding Circle Business Loan"),
-            href: "/financial-solutions/funding-circle-personal-loan",
-          },
-          {
-            text: cleanTitle("Funding Options Marketplace"),
-            href: "/financial-solutions/funding-options-personal-loan",
+            text: cleanTitle("Fundbox Business Financing"),
+            href: "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
           },
           {
             text: "View more...",
@@ -222,34 +218,34 @@ export const headerNavigation = {
       title: "Featured Articles",
       posts: [
         {
-          title: cleanTitle("Best Personal Loans"),
-          href: "/personal-finance/best-personal-loans",
+          title: cleanTitle("Chase Sapphire Preferred Credit Card"),
+          href: "/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
           image:
-            "https://media.topfinanzas.com/images/best-personal-loans.webp",
-          category: "Personal Finance",
-          categoryHref: "/personal-finance",
-        },
-        {
-          title: cleanTitle("Practical Guide to Getting Out of Debt"),
-          href: "/personal-finance/getting-out-of-debt",
-          image:
-            "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
-          category: "Personal Finance",
-          categoryHref: "/personal-finance",
-        },
-        {
-          title: cleanTitle("Barclaycard Avios Plus Card"),
-          href: "/financial-solutions/barclaycard-avios-plus",
-          image:
-            "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+            "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp",
           category: "Cards",
           categoryHref: "/financial-solutions",
         },
         {
-          title: cleanTitle("HSBC Personal Loan"),
-          href: "/financial-solutions/hsbc-personal-loan",
+          title: cleanTitle("Best 0% APR Balance Transfer Cards"),
+          href: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
           image:
-            "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
+            "https://media.topfinanzas.com/images/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt.webp",
+          category: "Personal Finance",
+          categoryHref: "/personal-finance",
+        },
+        {
+          title: cleanTitle("Capital One Venture X Rewards Card"),
+          href: "/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",
+          image:
+            "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-benefits.webp",
+          category: "Cards",
+          categoryHref: "/financial-solutions",
+        },
+        {
+          title: cleanTitle("QuickBridge Business Loans"),
+          href: "/financial-solutions/benefits-quickbridge-loans",
+          image:
+            "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
           category: "Loans",
           categoryHref: "/financial-solutions",
         },

@@ -10,26 +10,25 @@ export interface SearchItem {
 // In a real application, this might be generated at build time
 export const searchIndex: SearchItem[] = [
   {
-    id: "/personal-finance/best-personal-loans",
-    href: "/personal-finance/best-personal-loans",
-    title: "Best Personal Loans in the US: Your Complete Guide",
+    id: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
+    href: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
+    title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",
     description:
-      "Comprehensive guide to the top personal loans in the US, including rates, terms, and application requirements from leading lenders.",
-    // image: "/path/to/image.jpg", // Add image later if available
+      "Comprehensive guide to the top 0% APR balance transfer credit cards in the US, including rates, terms, and how to use them to manage debt effectively.",
   },
   {
-    id: "/personal-finance/best-rewards-credit-cards",
-    href: "/personal-finance/best-rewards-credit-cards",
-    title: "Best Rewards Credit Cards in the US (Updated)",
+    id: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
+    href: "/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit",
+    title: "What Are the Best Secured Credit Cards for Building Credit?",
     description:
-      "Discover the top rewards credit cards in the US offering points, miles, and cashback for your spending habits.",
+      "Discover the best secured credit cards in the US for building or rebuilding your credit score.",
   },
   {
-    id: "/personal-finance/cashback-credit-cards",
-    href: "/personal-finance/cashback-credit-cards",
-    title: "Top Cashback Credit Cards US",
+    id: "/personal-finance/beat-inflation-with-your-cashback",
+    href: "/personal-finance/beat-inflation-with-your-cashback",
+    title: "Beat Inflation with Your Cashback",
     description:
-      "Find the best cashback credit cards in the US. Compare offers and earn money back on your everyday purchases.",
+      "Learn how to use cashback credit cards to offset the impact of inflation on your everyday spending.",
   },
   {
     id: "/about-us",

@@ -132,7 +132,7 @@ export default function PostPage() {
         debt can turn bad if you borrow more than you can afford. The key is to
         be intentional and ask yourself the right questions before signing any
         loan agreement. Understanding{" "}
-        <Link href="/personal-finance/personal-finance-your-ultimate-guide-to-financial-freedom/">
+        <Link href="/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started">
           how setting financial goals
         </Link>{" "}
         can guide these decisions is crucial. A loan should always align with
@@ -160,7 +160,7 @@ export default function PostPage() {
         <li>
           <strong>How will this affect my financial health?</strong> Every loan
           you take on and how you manage the payments{" "}
-          <Link href="/personal-finance/understanding-credit-card-interest-rates/">
+          <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
             impacts your credit score
           </Link>
           . Be sure you are ready for that responsibility.

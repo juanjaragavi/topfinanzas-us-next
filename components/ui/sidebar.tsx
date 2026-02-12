@@ -753,7 +753,7 @@ const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
         className={cn("px-2 my-4", className)}
         {...props}
       >
-        <Link href="/personal-finance/credit-card-types-benefits/">
+        <Link href="/personal-finance/what-are-the-best-secured-credit-cards-for-building-credit">
           <div className="overflow-hidden rounded-xl border shadow hover:shadow-md transition-shadow">
             <Image
               src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
