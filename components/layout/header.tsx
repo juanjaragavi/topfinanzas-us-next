@@ -186,10 +186,10 @@ export function Header() {
                   alt={logos.colorLogo.alt}
                   width={276}
                   height={75}
-                  className="h-12 md:h-14 w-auto object-contain"
+                  className="h-[58px] md:h-[67px] w-auto object-contain"
                   priority={true}
                   loading="eager"
-                  sizes="(max-width: 768px) 210px, 255px"
+                  sizes="(max-width: 768px) 252px, 306px"
                   quality={95}
                 />
               </Link>

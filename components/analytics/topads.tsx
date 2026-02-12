@@ -44,15 +44,11 @@ export default function TopAds() {
                 lazyLoad: 'soft',
                 pageSetting: {
                     exclude: [
-                        '/',
-                        '/terms',
-                        '/privacy-policy',
-                        '/cookie-policy',
-                        '/about-us',
-                        '/contact-us',
-                        '/quiz',
-                        '/quiz-2',
-                        '/campaign-quiz-credit-card-recommender',
+                        '/about-us/',
+                        '/contact-us/',
+                        '/privacy-policy/',
+                        '/terms-conditions/',
+                        '/campaign-quiz-credit-card-recomender/',
                         '/campaign-quiz-credit-card-recommender-short',
                     ]
                 },
@@ -60,6 +56,7 @@ export default function TopAds() {
                     interstitial: {
                         status: 'active',
                         exclude: [
+                            '/invit-credit-card-rec-us-2/',
                             '/credit-card-recommender-p3',
                             '/campaign-quiz-credit-card-recommender',
                             '/campaign-quiz-credit-card-recommender-short',
