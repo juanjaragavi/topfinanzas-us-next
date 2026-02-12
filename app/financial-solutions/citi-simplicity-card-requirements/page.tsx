@@ -130,22 +130,7 @@ export default function CitiSimplicityCardRequirementsPage() {
                   data-topads-size="square"
                 ></div>
 
-                {/* ELEMENT 9: FIRST PROMOTIONAL IMAGE */}
-                <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
-                    <Image
-                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                      alt="Practical Guide to Getting Out of Debt"
-                      width={1000}
-                      height={563}
-                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      loading="lazy"
-                      quality={80}
-                    />
-                  </Link>
-                </div>
-
-                {/* ELEMENT 10: WHY THESE REQUIREMENTS ARE IMPORTANT */}
+                {/* ELEMENT 9: WHY THESE REQUIREMENTS ARE IMPORTANT */}
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Why these requirements are important
                 </h2>
@@ -176,6 +161,21 @@ export default function CitiSimplicityCardRequirementsPage() {
                   gauge your repayment capacity. Keeping your DTI ratio below
                   36% increases your likelihood of approval.
                 </p>
+
+                {/* ELEMENT 10: FIRST PROMOTIONAL IMAGE */}
+                <div className="my-8 text-left sm:text-left">
+                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                      alt="Practical Guide to Getting Out of Debt"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
 
                 {/* ELEMENT 11: SECOND PROMOTIONAL IMAGE */}
                 <div className="my-8 text-left sm:text-left">

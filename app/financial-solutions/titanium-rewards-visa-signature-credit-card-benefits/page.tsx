@@ -126,6 +126,16 @@ export default function BenefitsTitaniumRewardsPage() {
               for you.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* Unbeatable rewards on everyday spending */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unbeatable rewards on everyday spending

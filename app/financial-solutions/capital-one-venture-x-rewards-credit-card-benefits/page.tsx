@@ -156,6 +156,16 @@ export default function CapitalOneVentureXBenefitsPage() {
               trip feel first-class.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* Designed for the adventurous */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Designed for the adventurous

@@ -139,6 +139,16 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
               upgrade to an unsecured card, eliminating the need for a deposit.
             </p>
 
+            {/* Ad Unit: square04 */}
+            <div
+              id="square04"
+              className="w-full flex justify-center my-6"
+              data-topads
+              data-topads-size="square"
+            ></div>
+
+            <hr className="my-8" />
+
             {/* Unlock higher credit lines over time */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unlock higher credit lines over time
