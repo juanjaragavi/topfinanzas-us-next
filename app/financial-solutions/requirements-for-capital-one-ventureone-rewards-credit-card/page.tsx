@@ -23,7 +23,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Requirements for Capital One VentureOne Rewards Credit Card
             </h1>
 
@@ -36,11 +36,11 @@ export default function CapitalOneVentureOneRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Embark on a journey of rewards: Your path to simplicity and
               savings
             </h2>
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Looking for a credit card that offers exceptional rewards without
               annual fees? The Capital One VentureOne Rewards Credit Card could
               be your ideal match.
@@ -55,11 +55,11 @@ export default function CapitalOneVentureOneRequirementsPage() {
             ></div>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full h-full">
                 <div className="bg-[#19263A] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
@@ -81,14 +81,14 @@ export default function CapitalOneVentureOneRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#19263A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Age requirement:
                   </span>{" "}
@@ -103,7 +103,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Citizenship or residency:
                   </span>{" "}
@@ -119,7 +119,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Credit score guidelines:
                   </span>{" "}
@@ -134,7 +134,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Proof of income:
                   </span>{" "}
@@ -144,7 +144,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -154,12 +154,12 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* Gathering the necessary documentation */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Gathering the necessary documentation
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#19263A]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Proof of identity
                 </h3>
@@ -167,7 +167,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-[#19263A] mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">
-                      Valid government-issued ID (e.g., driver’s license,
+                      Valid government-issued ID (e.g., driver's license,
                       passport).
                     </span>
                   </li>
@@ -178,7 +178,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#19263A]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Proof of income
                 </h3>
@@ -199,7 +199,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#19263A] md:col-span-2">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Address verification
                 </h3>
@@ -216,7 +216,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -226,14 +226,14 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* The application process made simple */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               The application process made simple
             </h2>
 
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               Online application steps
             </h3>
-            <ol className="list-decimal pl-5 space-y-3 mb-6 text-gray-700 text-lg">
+            <ol className="list-decimal pl-5 space-y-3 mb-6 text-left text-gray-800 text-md leading-5">
               <li className="pl-2">
                 Visit the Capital One VentureOne Rewards Credit Card page.
               </li>
@@ -256,7 +256,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-[#19263A]" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Approval notification typically arrives within seconds.
                 </p>
               </li>
@@ -266,7 +266,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-[#19263A]" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   If additional documents are required, you will be contacted.
                 </p>
               </li>
@@ -276,14 +276,14 @@ export default function CapitalOneVentureOneRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-[#19263A]" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Receive your card within 7-10 business days if approved.
                 </p>
               </li>
             </ul>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -293,7 +293,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* Tips for successful approval */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Tips for successful approval
             </h2>
 
@@ -302,7 +302,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-1">
                   Maintain a healthy credit score
                 </h4>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Pay bills on time and keep credit utilization low.
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-1">
                   Provide accurate information
                 </h4>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Double-check all details before submitting your application to
                   avoid delays.
                 </p>
@@ -321,7 +321,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-1">
                   Stay within your credit limits
                 </h4>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Ensure that existing credit usage does not exceed recommended
                   thresholds.
                 </p>
@@ -329,10 +329,10 @@ export default function CapitalOneVentureOneRequirementsPage() {
             </div>
 
             {/* Your best credit card option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best credit card option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Securing the Capital One VentureOne Rewards Credit Card is a
               straightforward process as long as you meet the requirements and
               prepare necessary documentation. Take the next step toward earning
@@ -347,7 +347,7 @@ export default function CapitalOneVentureOneRequirementsPage() {
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#19263A] hover:bg-[#111a28] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#19263A] hover:bg-[#111a28] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>

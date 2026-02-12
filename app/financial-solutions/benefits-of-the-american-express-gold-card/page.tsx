@@ -23,7 +23,7 @@ export default function AmexGoldBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Discover the Benefits of the American Express® Gold Card
             </h1>
 
@@ -36,21 +36,21 @@ export default function AmexGoldBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Maximize rewards on dining, travel, and daily spending. Turn
               expenses into experiences with the Amex Gold Card. Unlock its
               benefits today!
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#C8B56A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     4X points on restaurants worldwide
                   </span>{" "}
@@ -64,7 +64,7 @@ export default function AmexGoldBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     $120 in Uber Cash
                   </span>{" "}
@@ -78,7 +78,7 @@ export default function AmexGoldBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     $120 dining credits
                   </span>{" "}
@@ -92,7 +92,7 @@ export default function AmexGoldBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No foreign transaction fees
                   </span>{" "}
@@ -102,18 +102,18 @@ export default function AmexGoldBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
-            <div className="mb-10 w-full relative h-[300px] sm:h-[400px]">
+            <div className="mb-8 w-full relative h-[300px] sm:h-[400px]">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/benefits-of-the-american-express-gold-card.webp"
                 alt="Discover the Benefits of the American Express® Gold Card"
@@ -124,7 +124,7 @@ export default function AmexGoldBenefitsPage() {
             </div>
 
             <div className="prose max-w-none text-gray-700">
-              <p className="text-lg text-gray-800 mb-6">
+              <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The American Express® Gold Card stands out as a premium credit
                 card in the personal finance world for offering generous
                 rewards, especially designed for food lovers and frequent
@@ -141,7 +141,7 @@ export default function AmexGoldBenefitsPage() {
                 The American Express® Gold Card excels with its Membership
                 Rewards® program, allowing you to earn points generously:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
@@ -191,12 +191,12 @@ export default function AmexGoldBenefitsPage() {
                 If you consider yourself a foodie, this card offers unique
                 credits and perks that can easily cover the annual fee:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
                     <strong>$120 Uber Cash:</strong> By adding your card to your
-                    Uber account, you’ll receive $10 monthly for Uber Eats
+                    Uber account, you'll receive $10 monthly for Uber Eats
                     orders or rides within the U.S.
                   </p>
                 </li>
@@ -221,8 +221,8 @@ export default function AmexGoldBenefitsPage() {
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>$84 Dunkin’ Credit:</strong> Save up to $7 monthly
-                    when using the card at Dunkin’ locations in the U.S. after
+                    <strong>$84 Dunkin' Credit:</strong> Save up to $7 monthly
+                    when using the card at Dunkin' locations in the U.S. after
                     enrollment.
                   </p>
                 </li>
@@ -240,7 +240,7 @@ export default function AmexGoldBenefitsPage() {
                 The American Express® Gold Card is also a reliable travel
                 companion:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#C8B56A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
@@ -275,8 +275,8 @@ export default function AmexGoldBenefitsPage() {
                 </li>
               </ul>
               <p className="mb-6">
-                You’ll also gain access to tools like the Global Assist®
-                Hotline, offering 24/7 emergency assistance when you’re more
+                You'll also gain access to tools like the Global Assist®
+                Hotline, offering 24/7 emergency assistance when you're more
                 than 100 miles from home.
               </p>
 
@@ -286,7 +286,7 @@ export default function AmexGoldBenefitsPage() {
               <p className="mb-4">
                 The card offers flexible payment solutions:
               </p>
-              <ol className="space-y-4 mb-8 list-none pl-0 counter-reset-list">
+              <ol className="space-y-2 my-8 list-none pl-0 counter-reset-list">
                 <li className="flex items-start">
                   <div
                     className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3"
@@ -318,7 +318,7 @@ export default function AmexGoldBenefitsPage() {
                 Why the American Express® Gold Card stands out
               </h2>
               <p className="mb-4">This card is ideal for:</p>
-              <ol className="space-y-4 mb-8 list-none pl-0">
+              <ol className="space-y-2 my-8 list-none pl-0">
                 <li className="flex items-start">
                   <div
                     className="flex-shrink-0 h-6 w-6 rounded-full bg-[#C8B56A] text-white flex items-center justify-center font-bold text-sm mr-3"
@@ -370,7 +370,7 @@ export default function AmexGoldBenefitsPage() {
                 to your wallet.
               </p>
               <p className="mb-8">
-                If you’re ready to maximize your purchases and enjoy exceptional
+                If you're ready to maximize your purchases and enjoy exceptional
                 culinary and travel experiences, consider the American Express®
                 Gold Card as your next financial tool.
               </p>
@@ -382,7 +382,7 @@ export default function AmexGoldBenefitsPage() {
                 href="/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>

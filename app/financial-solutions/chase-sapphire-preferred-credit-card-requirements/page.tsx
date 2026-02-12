@@ -23,7 +23,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Chase Sapphire Preferred Credit Card Requirements
             </h1>
 
@@ -36,12 +36,12 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Simple steps to enjoy premium perks
             </h2>
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               The Chase Sapphire Preferred Credit Card is a gateway to premium
-              travel and dining rewards. With its extensive benefits, it’s no
+              travel and dining rewards. With its extensive benefits, it's no
               surprise that many aspire to own this card.
             </p>
 
@@ -54,11 +54,11 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             ></div>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full h-full">
                 <div className="bg-[#056CA8] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
@@ -80,14 +80,14 @@ export default function ChaseSapphirePreferredRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#056CA8] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Minimum credit score:
                   </span>{" "}
@@ -101,7 +101,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     U.S. residency or valid Social Security Number (SSN):
                   </span>{" "}
@@ -115,7 +115,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Age requirement:
                   </span>{" "}
@@ -129,7 +129,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Stable and sufficient income:
                   </span>{" "}
@@ -141,7 +141,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -151,14 +151,14 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* What do these requirements mean? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               What do these requirements mean?
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Why your credit score matters
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Your credit score reflects your reliability as a borrower. With a
               score of 690 or higher, you show that you&apos;re likely to pay
               off debts on time and avoid excessive credit utilization. For
@@ -166,19 +166,19 @@ export default function ChaseSapphirePreferredRequirementsPage() {
               applying.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Importance of residency and identification
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               U.S. residency and a valid SSN or ITIN prove your legal status and
               help Chase verify your identity. Without these, your application
               cannot proceed.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               The role of income stability
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Income isn&apos;t just about earning a high salary—it&apos;s about
               consistency. Applicants should ensure their debt-to-income ratio
               is reasonable. This metric compares your monthly debt obligations
@@ -187,7 +187,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -197,31 +197,31 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* Application process */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Application process
             </h2>
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Applying for the Chase Sapphire Preferred Card is straightforward
               if you&apos;re prepared. Here&apos;s a breakdown of the steps:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#056CA8]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 1: Prepare Your Documents
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Gather essential documents like your SSN, proof of income (pay
                   stubs or tax returns), and a government-issued ID. These
                   ensure a smooth application process.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#056CA8]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 2: Apply Online or In-Person
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Visit the Chase website to fill out the application form.
                   Alternatively, you can apply in person at a Chase branch. The
                   application requires personal details (name, address, SSN) and
@@ -229,11 +229,11 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#056CA8]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 3: Understand the Decision Process
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   While Chase often provides instant approval, some applications
                   require additional review. This may involve verifying your
                   credit history or income. Expect a decision within 7–10
@@ -243,7 +243,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -253,16 +253,16 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* Tips for a successful application */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Tips for a successful application
             </h2>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#056CA8]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Review your credit report:
                   </span>{" "}
@@ -274,7 +274,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#056CA8]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Limit new credit inquiries:
                   </span>{" "}
@@ -287,7 +287,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#056CA8]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Maintain low credit utilization:
                   </span>{" "}
@@ -297,10 +297,10 @@ export default function ChaseSapphirePreferredRequirementsPage() {
             </div>
 
             {/* Your best option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Chase Sapphire Preferred Credit Card is a valuable tool for
               frequent travelers and diners. By understanding the requirements
               and following the application steps carefully, you can increase
@@ -316,7 +316,7 @@ export default function ChaseSapphirePreferredRequirementsPage() {
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#056CA8] hover:bg-[#034d7a] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#056CA8] hover:bg-[#034d7a] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>

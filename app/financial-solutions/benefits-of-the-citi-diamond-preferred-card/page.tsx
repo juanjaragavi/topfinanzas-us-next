@@ -24,7 +24,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Benefits of the Citi® Diamond Preferred® Card: The best choice
               for balance transfers
             </h1>
@@ -38,21 +38,21 @@ export default function CitiDiamondPreferredBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Save big with 0% APR for 21 months on balance transfers. The
               Citi® Diamond Preferred® Card is your go-to tool to manage debt
               smarter—no annual fee!
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#191B1A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     0% intro APR for 21 months{" "}
                   </span>
@@ -66,7 +66,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     0% intro APR for 12 months{" "}
                   </span>
@@ -80,7 +80,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No annual fee{" "}
                   </span>
@@ -94,7 +94,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Free access to your FICO® Score{" "}
                   </span>
@@ -104,18 +104,18 @@ export default function CitiDiamondPreferredBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#191B1A] hover:bg-[#2d302f] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#191B1A] hover:bg-[#2d302f] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
-            <div className="mb-10 w-full relative h-[300px] sm:h-[400px]">
+            <div className="mb-8 w-full relative h-[300px] sm:h-[400px]">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/benefits-of-the-citi-diamond-preferred-card.webp"
                 alt="Benefits of the Citi® Diamond Preferred® Card"
@@ -126,14 +126,14 @@ export default function CitiDiamondPreferredBenefitsPage() {
             </div>
 
             <div className="prose max-w-none text-gray-700">
-              <p className="text-lg text-gray-800 mb-6">
-                If you’re looking for a straightforward credit card to help you
+              <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
+                If you're looking for a straightforward credit card to help you
                 manage existing debt or finance large purchases, the Citi®
                 Diamond Preferred® Card could be the ideal option. With one of
                 the longest 0% APR periods available for balance transfers, a 0%
                 APR on purchases, and no annual fee, this card is tailored for
                 individuals with excellent credit who want to save on interest
-                and take control of their finances. Let’s explore the card’s top
+                and take control of their finances. Let's explore the card's top
                 benefits and why it stands out in the market.
               </p>
 
@@ -144,7 +144,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 The Citi® Diamond Preferred® Card offers one of the most
                 competitive introductory APR offers for balance transfers:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
@@ -164,7 +164,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 This extended period of nearly two years gives you significant
                 breathing room to:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>Consolidate high-interest credit card debt.</p>
@@ -178,10 +178,10 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 </li>
               </ul>
               <p className="mb-6">
-                It’s one of the longest 0% APR offers available, making it an
+                It's one of the longest 0% APR offers available, making it an
                 exceptional tool for individuals serious about debt reduction.
               </p>
-              <p className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#191B1A] italic mb-8">
+              <p className="my-4 italic mb-8">
                 <strong>Important Note:</strong> A balance transfer fee
                 applies—either $5 or 5% of the amount transferred, whichever is
                 greater.
@@ -194,7 +194,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 In addition to its long balance transfer period, the card also
                 offers:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
@@ -203,13 +203,13 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 </li>
               </ul>
               <p className="mb-4">
-                This feature is especially valuable if you’re planning a large
+                This feature is especially valuable if you're planning a large
                 purchase—like home renovations, travel, or a major appliance—and
                 want the flexibility to pay it off interest-free over a year.
               </p>
               <p className="mb-8">
                 Once the introductory 12-month period ends, the standard
-                variable APR of 17.49% to 28.24% will apply, so it’s important
+                variable APR of 17.49% to 28.24% will apply, so it's important
                 to have a payment plan in place to make the most of this
                 feature.
               </p>
@@ -218,11 +218,11 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 No annual fee
               </h2>
               <p className="mb-4">
-                With the Citi® Diamond Preferred® Card, you’ll enjoy all its
+                With the Citi® Diamond Preferred® Card, you'll enjoy all its
                 benefits without the burden of an annual fee. This makes it a
                 cost-effective choice for individuals who:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
@@ -244,19 +244,19 @@ export default function CitiDiamondPreferredBenefitsPage() {
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-6">
-                Citi’s exclusive tools and cardholder perks
+                Citi's exclusive tools and cardholder perks
               </h2>
               <p className="mb-4">
                 Beyond its powerful APR offers, the Citi® Diamond Preferred®
                 Card includes several features that add long-term value:
               </p>
-              <ul className="space-y-4 mb-6 list-none pl-0">
+              <ul className="space-y-2 mb-6 list-none pl-0">
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
                     <strong>Citi flex loan:</strong> Convert part of your credit
                     line into a fixed-rate loan with predictable monthly
-                    payments. It’s a great way to manage unexpected expenses or
+                    payments. It's a great way to manage unexpected expenses or
                     consolidate debt further.
                   </p>
                 </li>
@@ -265,16 +265,16 @@ export default function CitiDiamondPreferredBenefitsPage() {
                   <p>
                     <strong>Citi Entertainment®:</strong> Enjoy exclusive
                     access to presale tickets and VIP experiences for concerts,
-                    sporting events, and more. Whether you’re a music lover or a
+                    sporting events, and more. Whether you're a music lover or a
                     sports fan, this perk adds extra value for cardholders.
                   </p>
                 </li>
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>$0 Fraud liability:</strong> You’re protected
+                    <strong>$0 Fraud liability:</strong> You're protected
                     against unauthorized charges, so you can shop confidently
-                    knowing you won’t be held responsible for fraudulent
+                    knowing you won't be held responsible for fraudulent
                     transactions.
                   </p>
                 </li>
@@ -296,7 +296,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 The Citi® Diamond Preferred® Card also offers payment
                 flexibility to help you manage your finances:
               </p>
-              <ol className="space-y-4 mb-8 list-none pl-0 counter-reset-list">
+              <ol className="space-y-2 my-8 list-none pl-0 counter-reset-list">
                 <li className="flex items-start">
                   <div
                     className="flex-shrink-0 h-6 w-6 rounded-full bg-[#191B1A] text-white flex items-center justify-center font-bold text-sm mr-3"
@@ -306,7 +306,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                   </div>
                   <p>
                     <strong>Choose Your Payment Due Date:</strong> You can
-                    select a due date that works for your schedule—whether it’s
+                    select a due date that works for your schedule—whether it's
                     at the beginning, middle, or end of the month. This
                     flexibility makes it easier to plan your monthly budget.
                   </p>
@@ -346,7 +346,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 This card is ideal for individuals with good to excellent credit
                 (FICO score of 670 or higher) who:
               </p>
-              <ol className="space-y-4 mb-8 list-none pl-0">
+              <ol className="space-y-2 my-8 list-none pl-0">
                 <li className="flex items-start">
                   <div
                     className="flex-shrink-0 h-6 w-6 rounded-full bg-[#191B1A] text-white flex items-center justify-center font-bold text-sm mr-3"
@@ -402,7 +402,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 those with excellent credit.
               </p>
               <p className="mb-8">
-                If you’re ready to take control of your finances and save on
+                If you're ready to take control of your finances and save on
                 interest, the Citi® Diamond Preferred® Card is a smart choice
                 that delivers flexibility and financial peace of mind.
               </p>
@@ -414,7 +414,7 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 href="/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#191B1A] hover:bg-[#2d302f] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#191B1A] hover:bg-[#2d302f] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>

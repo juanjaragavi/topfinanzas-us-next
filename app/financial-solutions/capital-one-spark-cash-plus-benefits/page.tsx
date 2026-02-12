@@ -23,7 +23,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Capital One Spark Cash Plus Benefits
             </h1>
 
@@ -36,19 +36,19 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Unleash unlimited rewards for your business.
             </p>
 
             {/* Key Benefits List */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#005B34] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Unlimited 2% cash back on all purchase:
                   </span>{" "}
@@ -63,7 +63,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     $1,000 cash bonus:
                   </span>{" "}
@@ -78,7 +78,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No pre-set spending limit:
                   </span>{" "}
@@ -93,7 +93,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     No Annual fee for employee cards:
                   </span>{" "}
@@ -104,19 +104,19 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </div>
 
             {/* CTA 1 */}
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <Link
                 href="/financial-solutions/capital-one-spark-cash-plus-requirements"
                 className="w-full"
               >
-                <Button className="w-full px-10 py-6 text-xl bg-[#005B34] hover:bg-[#004729] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full px-8 py-2 text-md bg-[#005B34] hover:bg-[#004729] text-white font-medium rounded-full">
                   How it works
                 </Button>
               </Link>
             </div>
 
             {/* Featured Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp"
                 alt="Capital One Spark Cash Plus Benefits"
@@ -127,14 +127,14 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </div>
 
             {/* Why the Spark Cash Plus Card stands out */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why the Spark Cash Plus Card stands out
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Unlimited rewards without the guesswork
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Most cards offer perks, but their limitations can feel like a
               trap. The Spark Cash Plus eliminates guesswork with its
               straightforward 2% cash back on every dollar spent. This means you
@@ -143,10 +143,10 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
               travel expenses, every transaction adds up to meaningful rewards.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               A bonus built for big spenders
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Unlike cards that offer modest sign-up bonuses, the Spark Cash
               Plus caters to businesses with substantial expenses. By spending
               $50,000 within the first six months, you unlock a $1,000 cash
@@ -155,7 +155,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </p>
 
             {/* Banner 1 (Placeholder) */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -165,25 +165,25 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </div>
 
             {/* Flexible spending for growing businesses */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Flexible spending for growing businesses
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               No pre-set spending limit: Empowering large purchases
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
-              Whether you’re investing in bulk inventory, upgrading office
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              Whether you're investing in bulk inventory, upgrading office
               equipment, or covering unexpected costs, the Spark Cash Plus
               offers flexibility unmatched by traditional credit cards. Without
               a pre-set spending limit, you have the freedom to make necessary
               purchases while maintaining your business momentum.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Pay in full monthly for financial discipline
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This card operates as a charge card, requiring full monthly
               payments. While this ensures you avoid interest charges, it also
               promotes healthy financial discipline, helping businesses stay on
@@ -191,24 +191,24 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </p>
 
             {/* Seamless expense management */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Seamless expense management
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Free employee cards with consolidated rewards
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Managing employee spending can be a headache, but with the Spark
               Cash Plus, you can issue cards to your team at no additional cost.
               Better yet, all purchases contribute to your central rewards
               balance, maximizing the benefits for the business.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Customizable spending controls
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               With employee cards come customizable spending limits, allowing
               you to set boundaries and monitor expenses in real time. This
               added layer of control ensures responsible spending while
@@ -216,13 +216,13 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </p>
 
             {/* Is the Spark Cash Plus right for your business? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Is the Spark Cash Plus right for your business?
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Capital One Spark Cash Plus card is ideal for businesses that:
             </p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>
                 Spend heavily across diverse categories, such as marketing,
                 travel, and equipment.
@@ -239,12 +239,12 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
             </ul>
 
             {/* Conclusion */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best option
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Capital One Spark Cash Plus is more than just a credit
-              card—it’s a strategic financial tool for modern businesses. With
+              card—it's a strategic financial tool for modern businesses. With
               its simple yet powerful rewards structure, flexible spending
               options, and seamless management features, it offers unparalleled
               value for business owners looking to scale efficiently.

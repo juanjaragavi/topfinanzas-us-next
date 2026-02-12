@@ -16,7 +16,6 @@ import { useMobileMenu } from "@/components/providers/mobile-menu-context";
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
 import { headerNavigation } from "@/lib/navigation/headerNavigation";
-import { headerContent } from "@/lib/texts/header/content";
 // Removed AdZepCentralizedHandler - activation now handled by AdZepSPABridge
 // Removed searchIndex, SearchItem
 

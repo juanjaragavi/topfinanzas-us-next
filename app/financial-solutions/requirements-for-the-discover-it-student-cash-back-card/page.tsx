@@ -11,7 +11,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Requirements for the Discover it Student Cash Back Card",
   description:
-    "A student’s gateway to credit benefits: The Discover it Student Cash Back Card offers unmatched rewards for students looking to establish credit.",
+    "A student's gateway to credit benefits: The Discover it Student Cash Back Card offers unmatched rewards for students looking to establish credit.",
 };
 
 export default function RequirementsDiscoverItStudentCashBackPage() {
@@ -23,7 +23,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Requirements for the Discover it Student Cash Back Card
             </h1>
 
@@ -36,10 +36,10 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              A student’s gateway to credit benefits
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+              A student's gateway to credit benefits
             </h2>
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               The Discover it Student Cash Back Card offers unmatched rewards
               for students looking to establish credit.
             </p>
@@ -53,11 +53,11 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             ></div>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full h-full">
                 <div className="bg-[#A8B0D7] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
@@ -79,14 +79,14 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#A8B0D7] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Activity:</span>{" "}
                   Enrollment in an accredited college or university.
                 </p>
@@ -98,7 +98,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Financial income:
                   </span>{" "}
@@ -112,7 +112,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Age:</span> Minimum
                   age of 18 years.
                 </p>
@@ -124,7 +124,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Personal identification:
                   </span>{" "}
@@ -134,7 +134,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -144,16 +144,16 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Perks of the Discover it Student Cash Back Card */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Perks of the Discover it Student Cash Back Card
             </h2>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#A8B0D7]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Generous cashback:
                   </span>{" "}
@@ -166,7 +166,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#A8B0D7]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Introductory offers:
                   </span>{" "}
@@ -179,7 +179,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <CheckCircle className="h-6 w-6 text-[#A8B0D7]" />
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Credit monitoring tools:
                   </span>{" "}
@@ -190,18 +190,18 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Eligibility requirements in depth */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Eligibility requirements in depth
             </h2>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#A8B0D7] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Enrollment verification:
                   </span>{" "}
@@ -216,9 +216,9 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Income proof:</span>{" "}
-                  Demonstrate financial independence or a co-signer’s backing to
+                  Demonstrate financial independence or a co-signer's backing to
                   qualify.
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Minimum age:</span>{" "}
                   Applicants must meet the legal age of majority in their state
                 </p>
@@ -241,7 +241,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Identity documents:
                   </span>{" "}
@@ -252,7 +252,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -262,71 +262,71 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Steps to apply */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Steps to apply
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#A8B0D7]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 1 – Verify enrollment
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Have your school information and enrollment proof ready.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#A8B0D7]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 2 – Prepare income details
                 </h3>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   Provide documentation such as pay stubs, scholarships, or
                   parental support.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#A8B0D7]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 3 – Fill out the application
                 </h3>
-                <p className="text-gray-700 text-lg">
-                  Submit your application through Discover’s official website.
+                <p className="text-left text-gray-800 text-md leading-5">
+                  Submit your application through Discover's official website.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#A8B0D7]">
+              <div className="my-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Step 4 – Wait for approval
                 </h3>
-                <p className="text-gray-700 text-lg">
-                  Once processed, you’ll receive a decision within a few days.
+                <p className="text-left text-gray-800 text-md leading-5">
+                  Once processed, you'll receive a decision within a few days.
                 </p>
               </div>
             </div>
 
             {/* How students can use credit wisely */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How students can use credit wisely
             </h2>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Build a budget
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Track expenses to avoid overspending and maintain healthy credit
               habits.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
               Pay the full balance
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Avoid interest charges by paying your bill in full each month.
             </p>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -336,22 +336,22 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             </div>
 
             {/* Why choose this card? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why choose this card?
             </h2>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               This card is ideal for students who want to build credit while
               enjoying significant cashback rewards and financial tools.
             </p>
 
             {/* Conclusion */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Conclusion
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Discover it Student Cash Back Card is a fantastic option for
               students eager to establish credit. By meeting the requirements
-              and managing it responsibly, you’ll set yourself up for future
+              and managing it responsibly, you'll set yourself up for future
               financial success.
             </p>
 
@@ -363,7 +363,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-12 py-6 text-xl bg-[#A8B0D7] hover:bg-[#8e96bf] text-white font-bold rounded-full shadow-md transition-all duration-200">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#A8B0D7] hover:bg-[#8e96bf] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>

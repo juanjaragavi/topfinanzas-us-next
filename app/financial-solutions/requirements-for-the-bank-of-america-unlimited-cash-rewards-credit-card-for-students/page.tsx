@@ -24,7 +24,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Requirements for the Bank of America® Unlimited Cash Rewards
               Credit Card for Students
             </h1>
@@ -38,7 +38,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               A complete guide to meeting application requirements for
               U.S.-based students
             </h2>
@@ -50,13 +50,13 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </p>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full">
-                <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
+                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-2xl font-bold text-gray-800 tracking-tight text-center">
                     Bank of America
                   </p>
@@ -75,14 +75,14 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Proof of enrollment:
                   </span>{" "}
@@ -96,7 +96,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Social Security Number:
                   </span>{" "}
@@ -110,7 +110,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Steady Income or financial support:
                   </span>{" "}
@@ -124,7 +124,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">U.S. Address:</span>{" "}
                   A permanent address within the United States.
                 </p>
@@ -132,7 +132,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Ready to tackle your debt?"
@@ -142,7 +142,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* What you need to apply */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               What you need to apply
             </h2>
 
@@ -157,14 +157,14 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               1. Proof of enrollment in an accredited Institution
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Bank of America® Unlimited Cash Rewards credit card for
               Students is specifically designed for students. To qualify, you
               must provide documentation proving your enrollment in a recognized
               educational institution. Acceptable forms of proof include:
             </p>
 
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
@@ -188,7 +188,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                   </div>
                 </div>
                 <p>
-                  A letter of acceptance (if you’re a new student) along with a
+                  A letter of acceptance (if you're a new student) along with a
                   tuition payment receipt.
                 </p>
               </div>
@@ -197,11 +197,11 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               2. Social Security Number (SSN)
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               A valid Social Security Number is non-negotiable when applying for
               any U.S. credit card. This number allows Bank of America to:
             </p>
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
@@ -233,13 +233,13 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               3. Evidence of income or financial support
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Even as a student, you must prove you can manage debt responsibly.
-              While you don’t need a high income, having a steady source of
+              While you don't need a high income, having a steady source of
               funds is critical. Acceptable forms of income or financial support
               include:
             </p>
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
@@ -269,11 +269,11 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               4. A U.S. Mailing address
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Having a permanent U.S. address is a standard requirement for
               credit card applications. This address will be used for:
             </p>
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#96979A] p-1">
@@ -301,7 +301,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-md">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Unlock your path to debt freedom"
@@ -311,14 +311,14 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* How to apply for the card */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply for the card
             </h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Step-by-step guide
             </h3>
-            <div className="space-y-3 mb-8 text-gray-700 text-lg">
+            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-2 mr-3">
                   <div className="h-2 w-2 rounded-full bg-[#96979A]"></div>
@@ -334,8 +334,8 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                   <div className="h-2 w-2 rounded-full bg-[#96979A]"></div>
                 </div>
                 <p>
-                  <span className="font-bold">Visit the Bank’s Website:</span>{" "}
-                  Go to Bank of America’s official site.
+                  <span className="font-bold">Visit the Bank's Website:</span>{" "}
+                  Go to Bank of America's official site.
                 </p>
               </div>
               <div className="flex items-start">
@@ -375,7 +375,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Common pitfalls to avoid
             </h3>
-            <div className="space-y-3 mb-8 text-gray-700 text-lg">
+            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-2 mr-3">
                   <div className="h-2 w-2 rounded-full bg-[#96979A]"></div>
@@ -393,7 +393,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
                 </div>
                 <p>
                   <span className="font-bold">Ignoring Credit Checks:</span>{" "}
-                  Even as a student, avoid applying if you’ve missed payments on
+                  Even as a student, avoid applying if you've missed payments on
                   any existing loans or bills.
                 </p>
               </div>
@@ -412,7 +412,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Looking for the Perfect Credit Card?"
@@ -422,10 +422,10 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
             </div>
 
             {/* Closing thoughts */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Closing thoughts
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Bank of America® Unlimited Cash Rewards credit card for
               Students is an excellent option for those ready to begin their
               credit journey. Meeting the outlined requirements is your first
@@ -433,14 +433,14 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               documentation and verify your eligibility before applying.
             </p>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.bankofamerica.com/credit-cards/student-credit-cards/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-[#96979A] hover:bg-[#7d7e81] text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#96979A] hover:bg-[#7d7e81] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>
@@ -449,7 +449,7 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               </p>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

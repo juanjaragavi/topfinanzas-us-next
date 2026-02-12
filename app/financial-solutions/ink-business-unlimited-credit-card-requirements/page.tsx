@@ -21,7 +21,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Ink Business Unlimited Credit Card Requirements
             </h1>
 
@@ -34,7 +34,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Unlock generous cash-back rewards with the Ink Business Unlimited
               Card. The Ink Business Unlimited Credit Card from Chase is a
               powerful tool for business owners, offering generous cash-back
@@ -43,7 +43,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
             </p>
 
             {/* Featured Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp"
                 alt="Ink Business Unlimited Credit Card Requirements"
@@ -54,7 +54,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -71,17 +71,17 @@ export default function InkBusinessUnlimitedRequirementsPage() {
               data-topads-size="square"
             ></div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#3F444B] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Credit score:</span>{" "}
                   A credit score of 690 or higher is recommended.
                 </p>
@@ -93,7 +93,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Business type:
                   </span>{" "}
@@ -108,11 +108,11 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Minimum annual business revenue:
                   </span>{" "}
-                  While there’s no specific income requirement, businesses with
+                  While there's no specific income requirement, businesses with
                   a consistent revenue stream are preferred.
                 </p>
               </div>
@@ -123,7 +123,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     U.S. Citizenship or Legal Residency:
                   </span>{" "}
@@ -133,7 +133,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -142,15 +142,15 @@ export default function InkBusinessUnlimitedRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to Apply
             </h2>
-            <ol className="space-y-4 mb-8 list-none pl-0">
+            <ol className="space-y-2 my-8 list-none pl-0">
               <li className="flex items-start">
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
                   1
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <strong>Verify your credit score:</strong> Check your credit
                   score before applying to ensure it meets the required minimum
                   of 690.
@@ -160,7 +160,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
                   2
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <strong>Prepare your business financial information:</strong>{" "}
                   Gather documents such as tax returns, financial statements,
                   and proof of business income.
@@ -170,7 +170,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
                   3
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <strong>Complete the online application:</strong> Go to the
                   Chase website and complete the application using your business
                   details and EIN (or SSN for sole proprietors).
@@ -180,35 +180,35 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#3F444B] text-white flex items-center justify-center font-bold text-sm mr-3">
                   4
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <strong>Submit your application for review:</strong> Chase
                   typically provides an answer within minutes.
                 </p>
               </li>
             </ol>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               What to do after applying
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
-                  <strong>Understand the card’s features:</strong> Enjoy
+                <span className="text-left text-gray-800 text-md leading-5">
+                  <strong>Understand the card's features:</strong> Enjoy
                   unlimited 1.5% cash back on all purchases and free employee
                   cards.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   <strong>Know the fees:</strong> The card charges no annual
                   fee.
                 </span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-[#3F444B] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-lg">
+                <span className="text-left text-gray-800 text-md leading-5">
                   <strong>Maximize your rewards:</strong> Use the card regularly
                   for business purchases.
                 </span>
@@ -216,7 +216,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
             </ul>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -225,15 +225,15 @@ export default function InkBusinessUnlimitedRequirementsPage() {
               />
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8 mb-10 border border-gray-100">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="my-8">
+              <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                 Conclusion
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 The Ink Business Unlimited Credit Card is an excellent option
                 for business owners looking to earn cash back on all purchases.
                 By meeting the credit score, business type, and income
-                requirements, you can apply confidently and unlock the card’s
+                requirements, you can apply confidently and unlock the card's
                 valuable features.
               </p>
 
@@ -243,7 +243,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
                   href="https://creditcards.chase.com/business-credit-cards/ink/unlimited"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#3F444B] hover:bg-[#2c2f34] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                  className="bg-[#3F444B] hover:bg-[#2c2f34] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
                 >
                   Apply Now at Chase
                 </a>

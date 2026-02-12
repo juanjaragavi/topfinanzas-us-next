@@ -1,3 +1,3 @@
-fix: update next-mdx-remote from v5 to v6 to resolve Vercel security vulnerability
+style: standardize financial solutions page layouts and fix lint warnings
 
-Vercel flagged next-mdx-remote 5.0.0 as vulnerable. Updated to 6.0.0 which introduces blockJS and blockDangerousJS security defaults. No code changes required as the project uses only MDXRemote and compileMDX from the RSC entrypoint with no JS expressions in MDX content.
+Applied layout standard to multiple financial solutions pages (Discover it Student, Capital One Platinum Secured, Amex Gold, Citi Diamond Preferred, Discover it Cash Back, Wells Fargo Reflect, Fundbox, Titanium Rewards, Wells Fargo Autograph). Removed unused headerContent import from header component to resolve ESLint warning. Reverted authors.json image URLs to correct /uk/ path prefix.

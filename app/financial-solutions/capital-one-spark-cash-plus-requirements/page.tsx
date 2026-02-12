@@ -21,7 +21,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Capital One Spark Cash Plus Requirements
             </h1>
 
@@ -34,7 +34,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <p className="text-lg text-gray-800 mb-6">
+            <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
               Small business owners, meet your perfect financial ally. The
               Capital One Spark Cash Plus Card is designed to maximize your
               business&apos;s earning potential.
@@ -48,7 +48,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
             </p>
 
             {/* Featured Image */}
-            <div className="mb-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="mb-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/capital-one-spark-cash-plus-requirements.webp"
                 alt="Capital One Spark Cash Plus Requirements"
@@ -72,7 +72,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
             ></div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Debt Management"
@@ -81,17 +81,17 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
-            <div className="space-y-4 mb-8">
+            <div className="space-y-2 my-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#005B34] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Strong personal and business credit score:
                   </span>{" "}
@@ -108,7 +108,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Established business with revenue:
                   </span>{" "}
@@ -124,7 +124,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Legal business entity:
                   </span>{" "}
@@ -141,7 +141,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Ability to pay in full each month:
                   </span>{" "}
@@ -154,7 +154,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Personal Loans"
@@ -163,18 +163,18 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
               />
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply for the Capital One Spark Cash Plus Card
             </h2>
-            <div className="space-y-4 mb-8">
-              <p className="text-gray-700 text-lg">
+            <div className="space-y-2 my-8">
+              <p className="text-left text-gray-800 text-md leading-5">
                 Applying for the Capital One Spark Cash Plus is a
                 straightforward process that involves a few key steps:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#005B34] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">
                       Gather Necessary Information:
                     </span>{" "}
@@ -184,7 +184,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#005B34] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">
                       Visit the Capital One Website:
                     </span>{" "}
@@ -194,7 +194,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#005B34] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">
                       Fill Out the Application Form:
                     </span>{" "}
@@ -204,7 +204,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle2 className="h-6 w-6 text-[#005B34] mr-3 mt-1 flex-shrink-0 fill-current" />
-                  <p className="text-gray-700 text-lg">
+                  <p className="text-left text-gray-800 text-md leading-5">
                     <span className="font-bold">Submit Your Application:</span>{" "}
                     Review your details and submit for processing to receive
                     your decision.
@@ -213,10 +213,10 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Considerations before applying
             </h2>
-            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg mb-6">
+            <ul className="list-disc pl-5 space-y-2 text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <li>The annual fee is $150.</li>
               <li>Late payments can result in penalties.</li>
               <li>
@@ -226,7 +226,7 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
             </ul>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Credit Cards"
@@ -235,12 +235,12 @@ export default function CapitalOneSparkCashPlusRequirementsPage() {
               />
             </div>
 
-            <div className="flex justify-center mb-8">
+            <div className="text-left my-8">
               <a
                 href="https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#005B34] hover:bg-[#004729] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-[#005B34] hover:bg-[#004729] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
               >
                 Apply Now at Capital One
               </a>

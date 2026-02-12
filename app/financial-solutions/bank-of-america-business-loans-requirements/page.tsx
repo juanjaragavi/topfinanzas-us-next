@@ -23,7 +23,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Bank of America Business Loans Requirements: Your Best Option
             </h1>
 
@@ -36,26 +36,26 @@ export default function BankOfAmericaLoansRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Unlock the Financing You Need for Your Business with Simple
               Requirements
             </h2>
             <p className="text-lg text-gray-700 mb-6">
               Starting or expanding your business often requires financial
               support. Bank of America offers various business loans and credit
-              lines with clear, achievable qualifications. Whether you’re
+              lines with clear, achievable qualifications. Whether you're
               looking for an unsecured line of credit or a secured business
               loan, understanding the requirements is essential to get started.
             </p>
 
             {/* Key Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Key Requirements:
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full">
-                <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
+                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-gray-800 tracking-tight text-center">
                     Bank of America
                   </p>
@@ -74,14 +74,14 @@ export default function BankOfAmericaLoansRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#012169] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Minimum Personal Credit Score:
                   </span>{" "}
@@ -95,7 +95,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Years in Business:
                   </span>{" "}
@@ -110,7 +110,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Annual Revenue:
                   </span>{" "}
@@ -125,7 +125,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Collateral or Security:
                   </span>{" "}
@@ -136,7 +136,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Ready to tackle your debt?"
@@ -146,19 +146,19 @@ export default function BankOfAmericaLoansRequirementsPage() {
             </div>
 
             {/* What is the Business Advantage Credit Line? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               What is the Business Advantage Credit Line?
             </h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Eligibility Requirements:
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               For the unsecured Business Advantage Credit Line, the following
               are essential:
             </p>
 
-            <div className="space-y-4 mb-4 text-gray-700 text-lg">
+            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#012169] p-1">
@@ -185,7 +185,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
               </div>
             </div>
 
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Business Advantage Credit Line offers flexibility with
               competitive interest rates, allowing businesses to borrow funds
               whenever necessary. This makes it a great option for covering
@@ -201,14 +201,14 @@ export default function BankOfAmericaLoansRequirementsPage() {
             ></div>
 
             {/* How to Qualify for the Business Advantage Term Loan? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to Qualify for the Business Advantage Term Loan?
             </h2>
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Required Documentation & Eligibility:
             </h3>
 
-            <div className="space-y-4 mb-4 text-gray-700 text-lg">
+            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#012169] p-1">
@@ -250,7 +250,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
               </div>
             </div>
 
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               The Business Advantage Term Loan provides lump-sum funding that is
               ideal for large purchases or business expansions. With fixed
               monthly payments, it is suitable for businesses that need a
@@ -258,7 +258,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-md">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Unlock your path to debt freedom"
@@ -268,7 +268,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
             </div>
 
             {/* Cash-Secured Business Credit Line */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Cash-Secured Business Credit Line: A Flexible Financing Option
             </h2>
 
@@ -276,7 +276,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
               What You Need to Apply:
             </h3>
 
-            <div className="space-y-4 mb-4 text-gray-700 text-lg">
+            <div className="space-y-2 mb-4 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#012169] p-1">
@@ -303,14 +303,14 @@ export default function BankOfAmericaLoansRequirementsPage() {
               </div>
             </div>
 
-            <p className="text-gray-700 text-lg mb-10">
+            <p className="text-left text-gray-800 text-md leading-5 mb-8">
               This secured credit line allows businesses to start building their
               credit with a refundable deposit while enjoying the flexibility of
               using the line of credit whenever needed.
             </p>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Looking for the Perfect Credit Card?"
@@ -320,26 +320,26 @@ export default function BankOfAmericaLoansRequirementsPage() {
             </div>
 
             {/* Your best option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
-              Bank of America’s business loans and financing options offer
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              Bank of America's business loans and financing options offer
               flexible terms tailored to different needs. By meeting the basic
               eligibility requirements, businesses can gain access to essential
-              funds. The next step is evaluating your business’s needs to choose
+              funds. The next step is evaluating your business's needs to choose
               the right financing option. Ready to move forward? Start your
               application today!
             </p>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.bankofamerica.com/smallbusiness/business-financing/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-[#012169] hover:bg-[#1a3a70] text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#012169] hover:bg-[#1a3a70] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>
@@ -348,7 +348,7 @@ export default function BankOfAmericaLoansRequirementsPage() {
               </p>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

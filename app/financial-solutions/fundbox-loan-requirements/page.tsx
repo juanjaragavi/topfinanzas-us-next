@@ -23,7 +23,7 @@ export default function FundboxLoanRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Fundbox Loan Requirements
             </h1>
 
@@ -36,7 +36,7 @@ export default function FundboxLoanRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Quick and flexible funding for small businesses
             </h2>
             <p className="text-lg text-gray-700 mb-6">
@@ -45,13 +45,13 @@ export default function FundboxLoanRequirementsPage() {
             </p>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full">
-                <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
+                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-4xl font-bold text-gray-800 tracking-tight">
                     Fundbox
                   </p>
@@ -70,14 +70,14 @@ export default function FundboxLoanRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-sky-300 p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Business Age:</span>{" "}
                   At least 6 months in operation.
                 </p>
@@ -89,7 +89,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Annual Revenue:
                   </span>{" "}
@@ -103,7 +103,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Business Account Connection:
                   </span>{" "}
@@ -117,7 +117,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Personal Credit Check:
                   </span>{" "}
@@ -127,7 +127,7 @@ export default function FundboxLoanRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Ready to tackle your debt?"
@@ -137,10 +137,10 @@ export default function FundboxLoanRequirementsPage() {
             </div>
 
             {/* Why fundbox? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Why fundbox?
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Fundbox provides flexible credit options tailored to small
               businesses. Their platform is user-friendly and transparent.
             </p>
@@ -154,11 +154,13 @@ export default function FundboxLoanRequirementsPage() {
             ></div>
 
             {/* Eligibility factors */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Eligibility factors
             </h2>
-            <p className="text-gray-700 text-lg mb-4">To qualify, you must:</p>
-            <ol className="list-decimal pl-5 space-y-3 mb-8 text-gray-700 text-lg marker:font-bold marker:text-gray-900">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              To qualify, you must:
+            </p>
+            <ol className="list-decimal pl-5 space-y-3 mb-8 text-left text-gray-800 text-md leading-5 marker:font-bold marker:text-gray-900">
               <li className="pl-2">Operate within the U.S.</li>
               <li className="pl-2">
                 Have consistent financial transactions in your account.
@@ -168,31 +170,31 @@ export default function FundboxLoanRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Income and revenue proof
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
-              Fundbox evaluates your business’s cash flow to determine
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              Fundbox evaluates your business's cash flow to determine
               eligibility.
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Personal credit considerations
             </h3>
-            <p className="text-gray-700 text-lg mb-10">
+            <p className="text-left text-gray-800 text-md leading-5 mb-8">
               While not the sole factor, your credit score impacts your approval
               chances and terms.
             </p>
 
             {/* How to apply */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply
             </h2>
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-sky-300 p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Sign Up Online:
                   </span>{" "}
@@ -206,7 +208,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Provide Documentation:
                   </span>{" "}
@@ -220,7 +222,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Approval Process:
                   </span>{" "}
@@ -234,7 +236,7 @@ export default function FundboxLoanRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">Access Funds:</span>{" "}
                   Once approved, draw funds as needed.
                 </p>
@@ -242,7 +244,7 @@ export default function FundboxLoanRequirementsPage() {
             </div>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-md">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Unlock your path to debt freedom"
@@ -252,8 +254,10 @@ export default function FundboxLoanRequirementsPage() {
             </div>
 
             {/* Pro tips */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Pro tips</h2>
-            <ol className="list-decimal pl-5 space-y-3 mb-10 text-gray-700 text-lg marker:font-bold marker:text-gray-900">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+              Pro tips
+            </h2>
+            <ol className="list-decimal pl-5 space-y-3 mb-8 text-left text-gray-800 text-md leading-5 marker:font-bold marker:text-gray-900">
               <li className="pl-2">
                 <span className="font-bold text-gray-900">
                   Maintain Cash Flow:
@@ -275,20 +279,20 @@ export default function FundboxLoanRequirementsPage() {
             </ol>
 
             {/* Who benefits from Fundbox? */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Who benefits from Fundbox?
             </h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Fundbox is ideal for small businesses needing:
             </p>
-            <ol className="list-decimal pl-5 space-y-3 mb-10 text-gray-700 text-lg marker:font-bold marker:text-gray-900">
+            <ol className="list-decimal pl-5 space-y-3 mb-8 text-left text-gray-800 text-md leading-5 marker:font-bold marker:text-gray-900">
               <li className="pl-2">Working capital</li>
               <li className="pl-2">Seasonal expense management</li>
               <li className="pl-2">Invoice financing</li>
             </ol>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Looking for the Perfect Credit Card?"
@@ -298,22 +302,22 @@ export default function FundboxLoanRequirementsPage() {
             </div>
 
             {/* Your best option */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best option
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Fundbox simplifies small business funding. Meet their requirements
               and access the financial support your business needs.
             </p>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://app.fundbox.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-sky-300 hover:bg-sky-400 text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-sky-300 hover:bg-sky-400 text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>
@@ -322,7 +326,7 @@ export default function FundboxLoanRequirementsPage() {
               </p>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>

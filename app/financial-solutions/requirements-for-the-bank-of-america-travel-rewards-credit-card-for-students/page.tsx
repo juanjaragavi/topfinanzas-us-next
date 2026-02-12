@@ -24,7 +24,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Requirements for the Bank of America® Travel Rewards Credit Card
               for Students
             </h1>
@@ -38,25 +38,25 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             ></div>
 
             {/* Intro */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Essential steps to qualify for the perfect student credit card
             </h2>
             <p className="text-lg text-gray-700 mb-6">
               Are you a student looking to build your credit and gain financial
               independence? The Bank of America® Travel Rewards Credit Card for
-              Students is a great starting point. But before applying, it’s
+              Students is a great starting point. But before applying, it's
               crucial to understand the specific requirements to ensure a smooth
               application process.
             </p>
 
             {/* Requirements Section */}
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
               <div className="w-full">
-                <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
+                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
                   <p className="text-2xl font-bold text-gray-800 tracking-tight text-center">
                     Bank of America
                   </p>
@@ -75,14 +75,14 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-2 mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#14377D] p-1">
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Proof of student enrollment:
                   </span>{" "}
@@ -97,7 +97,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Age requirement:
                   </span>{" "}
@@ -112,7 +112,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     U.S. Citizenship or Residency:
                   </span>{" "}
@@ -127,7 +127,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                     <ArrowRight className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-left text-gray-800 text-md leading-5">
                   <span className="font-bold text-gray-900">
                     Stable income source:
                   </span>{" "}
@@ -138,7 +138,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             </div>
 
             {/* Banner 1 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                 alt="Ready to tackle your debt?"
@@ -148,7 +148,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             </div>
 
             {/* The application process */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               The application process
             </h2>
 
@@ -163,12 +163,12 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Step 1: Gather your documentation
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
-              Having your documents ready can streamline the process. Here’s
-              what you’ll need:
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
+              Having your documents ready can streamline the process. Here's
+              what you'll need:
             </p>
 
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#14377D] p-1">
@@ -179,7 +179,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                   <span className="font-bold text-gray-900">
                     Government-issued ID:
                   </span>{" "}
-                  A driver’s license, state ID, or passport.
+                  A driver's license, state ID, or passport.
                 </p>
               </div>
               <div className="flex items-start">
@@ -213,11 +213,11 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Step 2: Apply online or in-branch
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Bank of America makes it easy to apply through their website or at
               a local branch. Follow these steps:
             </p>
-            <div className="space-y-4 mb-8 text-gray-700 text-lg">
+            <div className="space-y-2 my-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1 mr-3">
                   <div className="rounded-full bg-[#14377D] p-1">
@@ -250,14 +250,14 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               Step 3: Wait for approval
             </h3>
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Once submitted, the approval process may take a few minutes to a
-              few days. If additional verification is needed, you’ll be
+              few days. If additional verification is needed, you'll be
               contacted.
             </p>
 
             {/* Banner 2 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-md">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                 alt="Unlock your path to debt freedom"
@@ -267,11 +267,11 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             </div>
 
             {/* Considerations before applying */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Considerations before applying
             </h2>
 
-            <div className="space-y-3 mb-8 text-gray-700 text-lg">
+            <div className="space-y-3 mb-8 text-left text-gray-800 text-md leading-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-2 mr-3">
                   <div className="h-2 w-2 rounded-full bg-[#14377D]"></div>
@@ -280,7 +280,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                   <span className="font-bold">
                     Understanding credit responsibility:
                   </span>{" "}
-                  While applying for a credit card is exciting, it’s crucial to
+                  While applying for a credit card is exciting, it's crucial to
                   use it wisely. Avoid overspending and always pay your balance
                   on time to avoid interest charges.
                 </p>
@@ -307,7 +307,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
                   <span className="font-bold">
                     Eligibility for international students:
                   </span>{" "}
-                  If you’re an international student, you’ll need an ITIN and
+                  If you're an international student, you'll need an ITIN and
                   possibly a co-signer. Check with Bank of America for specific
                   requirements.
                 </p>
@@ -315,7 +315,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             </div>
 
             {/* Banner 3 */}
-            <div className="my-10 w-full rounded-xl overflow-hidden shadow-sm">
+            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
               <ResponsiveImage
                 src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                 alt="Looking for the Perfect Credit Card?"
@@ -325,10 +325,10 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             </div>
 
             {/* Your best credit card */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               Your best credit card
             </h2>
-            <p className="text-gray-700 text-lg mb-8">
+            <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               Meeting the requirements for the Bank of America® Travel Rewards
               Credit Card for Students is the first step toward establishing
               your financial independence. By preparing the necessary
@@ -336,14 +336,14 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
               set yourself up for a successful application.
             </p>
 
-            <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.bankofamerica.com/credit-cards/products/student-rewards-credit-card/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
-                <Button className="w-full md:w-auto px-10 py-6 text-xl bg-[#14377D] hover:bg-[#0f2c68] text-white font-bold rounded-full shadow-lg transition-all duration-200 transform hover:scale-105">
+                <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#14377D] hover:bg-[#0f2c68] text-white font-medium rounded-full">
                   See on official site*
                 </Button>
               </Link>
@@ -352,7 +352,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
               </p>
             </div>
 
-            <hr className="my-12 border-gray-200" />
+            <hr className="my-8" />
             <AIContentDisclaimer />
           </div>
         </div>
