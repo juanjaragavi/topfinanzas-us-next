@@ -53,7 +53,7 @@ export default function TopAds() {
                         '/quiz',
                         '/quiz-2',
                         '/campaign-quiz-credit-card-recommender',
-                        '/campaign-quiz-credit-card-recommender-short'
+                        '/campaign-quiz-credit-card-recommender-short',
                     ]
                 },
                 formats: {
@@ -62,7 +62,7 @@ export default function TopAds() {
                         exclude: [
                             '/credit-card-recommender-p3',
                             '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short'
+                            '/campaign-quiz-credit-card-recommender-short',
                         ],
                     },
                     offerwall: {
@@ -77,7 +77,7 @@ export default function TopAds() {
                             '/invit-credit-card-rec-us',
                             '/invit-credit-card-rec-us-2',
                             '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short'
+                            '/campaign-quiz-credit-card-recommender-short',
                         ],
                     },
                 }

@@ -1,9 +1,3 @@
-feat: mobile nav WordPress parity, sticky header, hero background fix
+style: fix trailing commas in TopAds config arrays
 
-- Rewrite mobile-menu.tsx to match WordPress US nav structure exactly
-  (Categories accordion, Loans, Credit Cards, Archive, Categories list)
-- Add Financial Solutions and Personal Finance to mobile nav categories
-- Add backdrop overlay and iOS-safe scroll lock (position:fixed approach)
-- Keep mobile header always visible on scroll (hide-on-scroll desktop only)
-- Hide hero background image on mobile, use solid #3E73C4 to match WordPress
-- Verify all navigation links resolve without 404s
+Add missing trailing commas to array elements in topads.tsx configuration for consistent code formatting compliance.
