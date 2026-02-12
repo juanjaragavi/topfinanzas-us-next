@@ -1,13 +1,11 @@
-fix: update dead links, remove legacy UK/MX references, improve navigation
+fix(landing): restyle invit-credit-card-rec-us-2 to match reference design
 
-- Replace generic /financial-solutions links on invit-credit-card-rec-us-2 landing page with specific product pages matching button context (cashback, no annual fee, secured card)
-- Update header navigation mega menu to reference existing US product pages instead of legacy UK products (Barclaycard, Lloyds, HSBC, etc.)
-- Fix broken internal links in blog articles to point to real US blog posts
-- Replace legacy Spanish footer text with English (compact-footer)
-- Remove /tarjetas path from AdZep config and add redirect in next.config.mjs
-- Add redirects for /uncategorized -> /blog and /recomendador-de-tarjetas-de-credito-p1 -> /choose-the-perfect-card-for-you-1
-- Update search index and advertisement links to existing US content
-- Remove stale /tarjetas entry from sitemap_new.xml
-- Remove Uncategorized category from mobile menu and blog post metadata
-- Update financial-solutions metadata OG images from UK to US products
-- Fix recommender link on financial-solutions page to US route
+- Add Header and Footer components for consistent site-wide navigation
+- Add gradient background (white → gray-50 → white) with flex column layout
+- Update color scheme from #2D7D6F to #17A2A2 teal across all CTAs and headings
+- Change button shape from rounded-full to rounded-lg
+- Remove extra italic intro text not present in reference design
+- Lighten Well Done and Stay Tuned sections to bg-gray-50 with rounded border
+- Consolidate credit card image into compact Limited Offer banner (max-w-xs)
+- Scale down Limited Offer card typography and spacing to match reference
+- Add shadow-md to Limited Offer card for subtle elevation
