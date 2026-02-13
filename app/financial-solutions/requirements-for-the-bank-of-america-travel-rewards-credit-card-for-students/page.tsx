@@ -339,8 +339,6 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
             <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.bankofamerica.com/credit-cards/products/student-rewards-credit-card/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
                 <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#14377D] hover:bg-[#0f2c68] text-white font-medium rounded-full">

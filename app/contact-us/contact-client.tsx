@@ -257,32 +257,24 @@ export default function ContactUsPage() {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/TopFinanzasParaTi"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
                 <FaFacebook size={20} />
               </a>
               <a
                 href="https://youtube.com/@top_finanzas_latam"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-10 h-10 bg-[#FF0000] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
                 <FaYoutube size={20} />
               </a>
               <a
                 href="https://www.tiktok.com/@topfinanzas1"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
                 <FaTiktok size={20} />
               </a>
               <a
                 href="https://www.instagram.com/top_finanzas23/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               >
                 <FaInstagram size={20} />

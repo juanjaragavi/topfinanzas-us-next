@@ -308,11 +308,7 @@ export default function RequirementsChaseSapphirePreferredPage() {
 
                 {/* ELEMENT 18: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred">
                     <Button className="bg-[#056CA8] hover:bg-[#045a8d] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

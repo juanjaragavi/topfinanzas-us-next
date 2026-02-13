@@ -369,8 +369,6 @@ export default function CapitalOneSavorRequirementsPage() {
               <div className="flex justify-center">
                 <a
                   href="https://www.capitalone.com/credit-cards/savor/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-[#AB5033] hover:bg-[#8f432b] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
                 >
                   Apply Now at Capital One

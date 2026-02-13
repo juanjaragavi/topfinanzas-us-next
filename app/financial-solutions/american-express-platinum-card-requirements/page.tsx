@@ -314,11 +314,7 @@ export default function RequirementsAmexPlatinumPage() {
 
                 {/* ELEMENT 18: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.americanexpress.com/us/credit-cards/card/platinum/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.americanexpress.com/us/credit-cards/card/platinum/">
                     <Button className="bg-[#1A1F71] hover:bg-[#141960] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

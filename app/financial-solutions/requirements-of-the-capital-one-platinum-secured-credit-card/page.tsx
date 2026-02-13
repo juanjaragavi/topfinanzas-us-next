@@ -342,8 +342,6 @@ export default function RequirementsCapitalOnePlatinumSecuredPage() {
             <div className="flex flex-col items-center justify-center mb-8">
               <Link
                 href="https://www.capitalone.com/credit-cards/platinum-secured/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
                 <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#19263A] hover:bg-[#111a28] text-white font-medium rounded-full">

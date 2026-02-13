@@ -287,11 +287,7 @@ export default function RequirementsFundboxLoanPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://app.fundbox.com/signup"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://app.fundbox.com/signup">
                     <Button className="bg-[#38BDF8] hover:bg-[#22a5e0] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

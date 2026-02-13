@@ -305,11 +305,7 @@ export default function RequirementsWellsFargoAutographPage() {
 
                 {/* ELEMENT 18: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://creditcards.wellsfargo.com/cards/autograph-visa-credit-card/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://creditcards.wellsfargo.com/cards/autograph-visa-credit-card/">
                     <Button className="bg-[#6C2156] hover:bg-[#571a46] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

@@ -314,8 +314,6 @@ export default function AmexGoldRequirementsPage() {
               <div className="flex justify-center">
                 <a
                   href="https://www.americanexpress.com/us/credit-cards/card/gold-card/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-[#C8B56A] hover:bg-[#b09e5a] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
                 >
                   Apply Now at American Express

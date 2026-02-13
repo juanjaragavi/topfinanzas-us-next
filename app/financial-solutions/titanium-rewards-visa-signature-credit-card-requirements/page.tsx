@@ -272,11 +272,7 @@ export default function RequirementsTitaniumRewardsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.andrewsfcu.org/Cards/Personal-Credit-Cards/Rewards-Cards/Titanium-Rewards-Visa-Signature-Credit-Card"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.andrewsfcu.org/Cards/Personal-Credit-Cards/Rewards-Cards/Titanium-Rewards-Visa-Signature-Credit-Card">
                     <Button className="bg-[#303A4D] hover:bg-[#252d3a] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>
