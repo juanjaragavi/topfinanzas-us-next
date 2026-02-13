@@ -269,8 +269,6 @@ export default function NationalFundingRequirementsPage() {
             <div className="flex flex-col items-center justify-center space-y-2">
               <Link
                 href="https://www.nationalfunding.com/application/apply-now/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
                 <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#223657] hover:bg-[#2c456b] text-white font-medium rounded-full">

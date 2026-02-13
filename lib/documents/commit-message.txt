@@ -1,36 +1,7 @@
-refactor: Standardize all Financial Solutions requirements pages to canonical layout
+fix: remove target="_blank" from all links to prevent new tab opening
 
-Refactored 10 requirements pages in app/financial-solutions/ to match
-the Citi Simplicity Card canonical layout template per the Financial
-Solutions Layout Standard.
-
-Pages refactored:
-- chase-sapphire-preferred-credit-card-requirements
-- american-express-platinum-card-requirements
-- capital-one-venture-x-rewards-credit-card-requirements
-- wells-fargo-autograph-card-requirements
-- ink-business-unlimited-credit-card-requirements
-- titanium-rewards-visa-signature-credit-card-requirements
-- capital-one-spark-cash-plus-requirements
-- bank-of-america-business-loans-requirements
-- fundbox-loan-requirements
-- quickbridge-loans-requirements
-
-Changes applied to each page:
-- Replaced ResponsiveImage with next/image Image component
-- Removed lucide-react icon imports (ArrowRight, CheckCircle)
-- Replaced grid layouts with single-column flow
-- Added circular badge bullet point format (➔)
-- Standardized element ordering per layout standard
-- Added data-category attributes (credit-cards/loans)
-- Added branded CTA buttons with correct external links
-- Added three promotional banner images with internal links
-- Added dual ad units (square03, square04)
-- Included AI Content Disclaimer before footer
-- Updated metadata with keywords and improved descriptions
-- Used named imports for Header, CompactFooter, AIContentDisclaimer
-
-Also reordered promotional image placement in citi-simplicity-card-requirements
-
-Build: zero errors, all pages prerendered as static content
-Lint: zero warnings, zero errors
+- Removed target="_blank" and rel="noopener noreferrer" from 26 link instances across 23 files
+- Cleaned social media links in contact-us page (4 instances)
+- Cleaned external CTA links in 22 financial-solutions requirements pages
+- Removed orphaned rel="noopener noreferrer" from footer component
+- All links now navigate within the same browser tab

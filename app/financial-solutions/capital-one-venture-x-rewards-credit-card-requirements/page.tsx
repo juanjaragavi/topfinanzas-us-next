@@ -309,11 +309,7 @@ export default function RequirementsCapitalOneVentureXPage() {
 
                 {/* ELEMENT 18: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.capitalone.com/credit-cards/venture-x/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.capitalone.com/credit-cards/venture-x/">
                     <Button className="bg-[#0A496C] hover:bg-[#083a57] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

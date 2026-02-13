@@ -332,8 +332,6 @@ export default function DiscoverItCashBackRequirementsPage() {
               <div className="flex justify-center">
                 <a
                   href="https://www.discover.com/credit-cards/cash-back/it-card.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-[#A0465C] hover:bg-[#853a4d] text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-transform"
                 >
                   Apply Now at Discover

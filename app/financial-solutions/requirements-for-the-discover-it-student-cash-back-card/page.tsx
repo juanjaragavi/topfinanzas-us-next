@@ -359,8 +359,6 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
             <div className="flex flex-col items-center justify-center mb-8">
               <Link
                 href="https://www.discover.com/credit-cards/student-credit-card/it-card.html"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full md:w-auto"
               >
                 <Button className="w-full md:w-auto px-8 py-2 text-md bg-[#A8B0D7] hover:bg-[#8e96bf] text-white font-medium rounded-full">

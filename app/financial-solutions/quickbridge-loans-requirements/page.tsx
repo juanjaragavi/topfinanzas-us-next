@@ -283,11 +283,7 @@ export default function RequirementsQuickBridgeLoansPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.quickbridge.com/apply/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.quickbridge.com/apply/">
                     <Button className="bg-[#F6303E] hover:bg-[#d42833] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

@@ -364,8 +364,6 @@ export default function CitiDiamondPreferredRequirementsPage() {
               <Link
                 href="https://www.citi.com/credit-cards/citi-diamond-preferred-credit-card"
                 className="w-full"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Button className="w-full px-8 py-2 text-md bg-[#98c5e9] hover:bg-[#8bb4d4] text-white font-medium rounded-full">
                   See on official site*

@@ -288,11 +288,7 @@ export default function RequirementsSparkCashPlusPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/">
                     <Button className="bg-[#005B34] hover:bg-[#004428] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

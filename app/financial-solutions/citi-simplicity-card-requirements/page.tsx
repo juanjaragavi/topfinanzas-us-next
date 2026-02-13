@@ -302,11 +302,7 @@ export default function CitiSimplicityCardRequirementsPage() {
 
                 {/* ELEMENT 16: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.citi.com/credit-cards/citi-simplicity-credit-card"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://www.citi.com/credit-cards/citi-simplicity-credit-card">
                     <Button className="bg-[#07296B] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>

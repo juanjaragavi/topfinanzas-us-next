@@ -310,11 +310,7 @@ export default function InkBusinessUnlimitedRequirementsPage() {
 
                 {/* ELEMENT 16: FINAL EXTERNAL CTA */}
                 <div className="text-left my-8">
-                  <Link
-                    href="https://creditcards.chase.com/business-credit-cards/ink/unlimited"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href="https://creditcards.chase.com/business-credit-cards/ink/unlimited">
                     <Button className="bg-[#3F444B] hover:bg-[#2c2f34] text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       See on official site*
                     </Button>
