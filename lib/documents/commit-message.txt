@@ -1,7 +1,6 @@
-fix: remove target="_blank" from all links to prevent new tab opening
+refactor(analytics): update TopAds interstitial and push notification exclude lists
 
-- Removed target="_blank" and rel="noopener noreferrer" from 26 link instances across 23 files
-- Cleaned social media links in contact-us page (4 instances)
-- Cleaned external CTA links in 22 financial-solutions requirements pages
-- Removed orphaned rel="noopener noreferrer" from footer component
-- All links now navigate within the same browser tab
+- Remove trailing slashes from exclude paths for consistency
+- Remove /credit-card-recommender-p3 from interstitial exclusions
+- Remove /invit-credit-card-rec-us-2 from push notification exclusions
+- Add /financial-solutions/citi-simplicity-card-benefits to push notification exclusions
