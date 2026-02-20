@@ -17,17 +17,22 @@ npm run start    # Start production server on port 3040
 npm run lint     # Run ESLint
 ```
 
-### Git Workflow (CRITICAL)
+## Git Workflow
 
-**NEVER commit directly** - always use the automated workflow script:
+When a user requests to push, commit, sync, or publish local changes to the repository, execute the following command:
 
 ```bash
-bash ./scripts/git-workflow.sh  # Handles commits, merges to main/backup branches
+bash scripts/git-workflow.sh "<commit message>"
 ```
 
-- Reads commit message from `/lib/documents/commit-message.txt`
-- Automatically handles merge conflicts
-- Synchronizes dev/main/backup branches
+Do not run raw `git add`, `git commit`, or `git push` commands directly. All repository operations must go through `scripts/git-workflow.sh`. The script enforces branch protection, pre-push validation (TypeScript type-check, ESLint), rebase conflict detection, and conventional commit format. Bypassing it risks pushing type errors, lint failures, or conflicting history to the remote.
+
+Available flags:
+
+- `--branch <name>` — target a specific branch
+- `--force` — enable force-push on non-protected branches
+- `--verify-build` — run `next build` before pushing
+- `--dry-run` — execute all steps except the final push
 
 ### Branch Synchronization
 
