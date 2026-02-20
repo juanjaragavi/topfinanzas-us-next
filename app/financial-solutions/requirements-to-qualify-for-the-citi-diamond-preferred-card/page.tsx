@@ -328,12 +328,12 @@ export default function CitiDiamondPreferredRequirementsPage() {
               Bottom line
             </h2>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The Citi® Diamond Preferred® Card is perfect for individuals
-              with a strong credit profile who want to take advantage of one of
-              the longest 0% APR periods on the market. By meeting the
-              eligibility requirements—such as having good credit, stable
-              income, and a clean credit history—you can unlock a powerful tool
-              for managing debt and saving money.
+              The Citi® Diamond Preferred® Card is perfect for individuals with
+              a strong credit profile who want to take advantage of one of the
+              longest 0% APR periods on the market. By meeting the eligibility
+              requirements—such as having good credit, stable income, and a
+              clean credit history—you can unlock a powerful tool for managing
+              debt and saving money.
             </p>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               If you're ready to simplify your finances and take the next step,

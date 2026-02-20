@@ -25,8 +25,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
           <div className="max-w-4xl mx-auto">
             {/* Title */}
             <h1 className="text-3xl text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
-              Benefits of the Citi® Diamond Preferred® Card: The best choice
-              for balance transfers
+              Benefits of the Citi® Diamond Preferred® Card: The best choice for
+              balance transfers
             </h1>
 
             {/* Ad Unit: square02 */}
@@ -39,8 +39,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
 
             {/* Intro */}
             <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
-              Save big with 0% APR for 21 months on balance transfers. The
-              Citi® Diamond Preferred® Card is your go-to tool to manage debt
+              Save big with 0% APR for 21 months on balance transfers. The Citi®
+              Diamond Preferred® Card is your go-to tool to manage debt
               smarter—no annual fee!
             </p>
 
@@ -273,8 +273,8 @@ export default function CitiDiamondPreferredBenefitsPage() {
                 <li className="flex items-start">
                   <div className="h-2 w-2 rounded-full bg-[#191B1A] mt-2.5 mr-3 flex-shrink-0"></div>
                   <p>
-                    <strong>Citi Entertainment®:</strong> Enjoy exclusive
-                    access to presale tickets and VIP experiences for concerts,
+                    <strong>Citi Entertainment®:</strong> Enjoy exclusive access
+                    to presale tickets and VIP experiences for concerts,
                     sporting events, and more. Whether you're a music lover or a
                     sports fan, this perk adds extra value for cardholders.
                   </p>
