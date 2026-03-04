@@ -234,9 +234,9 @@ const nextConfig = {
     // Remove deprecated domains configuration (already covered by remotePatterns)
   },
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
+    webpackBuildWorker: false,
+    parallelServerBuildTraces: false,
+    parallelServerCompiles: false,
     optimizeCss: true,
     optimizePackageImports: ["next/font", "framer-motion", "lucide-react"],
   },
