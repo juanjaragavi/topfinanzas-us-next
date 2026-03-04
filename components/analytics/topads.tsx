@@ -49,7 +49,7 @@ export default function TopAds() {
                         '/privacy-policy/',
                         '/terms-conditions/',
                         '/campaign-quiz-credit-card-recomender/',
-                        '/campaign-quiz-credit-card-recommender-short',
+                        '/campaign-quiz-credit-card-recomender-short',
                     ]
                 },
                 formats: {
@@ -57,8 +57,8 @@ export default function TopAds() {
                         status: 'active',
                         exclude: [
                             '/invit-credit-card-rec-us-2',
-                            '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short',
+                            '/campaign-quiz-credit-card-recomender',
+                            '/campaign-quiz-credit-card-recomender-short',
                         ],
                     },
                     offerwall: {
@@ -71,8 +71,8 @@ export default function TopAds() {
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
                             '/invit-credit-card-rec-us',
-                            '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short',
+                            '/campaign-quiz-credit-card-recomender',
+                            '/campaign-quiz-credit-card-recomender-short',
                             '/financial-solutions/citi-simplicity-card-benefits',
                         ],
                     },

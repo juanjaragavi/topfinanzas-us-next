@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       "Answer a few quick questions to discover the best credit card for your needs.",
     type: "website",
-    url: "https://us.topfinanzas.com/campaign-quiz-credit-card-recommender",
+    url: "https://us.topfinanzas.com/campaign-quiz-credit-card-recomender-short",
   },
   twitter: {
     card: "summary_large_image",
@@ -21,6 +21,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://us.topfinanzas.com/campaign-quiz-credit-card-recommender",
+      "https://us.topfinanzas.com/campaign-quiz-credit-card-recomender-short",
   },
 };
