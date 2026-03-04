@@ -48,7 +48,7 @@ export default function TopAds() {
                         '/contact-us/',
                         '/privacy-policy/',
                         '/terms-conditions/',
-                        '/campaign-quiz-credit-card-recomender/',
+                        '/campaign-quiz-credit-card-recomender',
                         '/campaign-quiz-credit-card-recomender-short',
                     ]
                 },

@@ -1,6 +1,3 @@
-refactor(routes): rename campaign quiz routes from recommender to recomender
+fix(analytics): remove trailing slash from campaign quiz exclude path in TopAds
 
-- Rename campaign-quiz-credit-card-recommender to campaign-quiz-credit-card-recomender
-- Rename campaign-quiz-credit-card-recommender-short to campaign-quiz-credit-card-recomender-short
-- Update TopAds exclude paths to match new route names
-- Update related documentation references
+- Normalize campaign-quiz-credit-card-recomender path for consistency with other exclude entries
