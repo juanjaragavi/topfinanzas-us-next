@@ -23,16 +23,19 @@ dotenv.config({ path: path.join(__dirname, "../.env.production") });
 dotenv.config({ path: path.join(__dirname, "../.env.local") });
 dotenv.config({ path: path.join(__dirname, "../.env") });
 
-const API_KEY = process.env.ACTIVECAMPAIGN_API_KEY;
-const API_URL = process.env.ACTIVECAMPAIGN_API_URL;
+const _API_KEY = process.env.ACTIVECAMPAIGN_API_KEY;
+const _API_URL = process.env.ACTIVECAMPAIGN_API_URL;
 
-if (!API_KEY || !API_URL) {
+if (!_API_KEY || !_API_URL) {
   console.error("❌ Error: Missing ActiveCampaign credentials");
   console.error("Required environment variables:");
   console.error("  - ACTIVECAMPAIGN_API_KEY");
   console.error("  - ACTIVECAMPAIGN_API_URL");
   process.exit(1);
 }
+
+const API_KEY: string = _API_KEY;
+const API_URL: string = _API_URL;
 
 interface TestResult {
   step: string;

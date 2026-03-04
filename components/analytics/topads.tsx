@@ -63,7 +63,7 @@ export default function TopAds() {
                     },
                     offerwall: {
                         status: 'active',
-                        logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
+                        logoUrl: 'https://media.topfinanzas.com/images/LOGO-EnglishUS-COLOR.png',
                         websiteName: 'TopFinanzas US',
                         cooldown: '12',
                         exclude: [
