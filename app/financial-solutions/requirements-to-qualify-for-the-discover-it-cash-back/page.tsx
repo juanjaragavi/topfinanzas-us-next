@@ -117,8 +117,8 @@ export default function DiscoverItCashBackRequirementsPage() {
               Recommended credit score: Good to excellent
             </h3>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              To qualify for the Discover it® Cash Back, you'll generally need
-              a credit score in the range of <strong>670 to 850</strong>.
+              To qualify for the Discover it® Cash Back, you'll generally need a
+              credit score in the range of <strong>670 to 850</strong>.
             </p>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <strong>Why does your credit score matter?</strong>
@@ -283,8 +283,8 @@ export default function DiscoverItCashBackRequirementsPage() {
               How to apply successfully
             </h2>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              If you meet the above criteria, applying for the Discover it®
-              Cash Back card is simple:
+              If you meet the above criteria, applying for the Discover it® Cash
+              Back card is simple:
             </p>
             <ol className="list-decimal pl-5 space-y-2 mb-6 text-left text-gray-800 text-md leading-5 marker:text-[#A0465C] marker:font-bold">
               <li>Visit the official Discover it® Cash Back website.</li>

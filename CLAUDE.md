@@ -26,20 +26,22 @@ npm run test:brevo-direct # Direct Brevo API test
 npm run test:brevo-api    # Full Brevo integration test
 ```
 
-### Git Workflow
+## Git Workflow
 
-**CRITICAL**: Use the automated workflow script instead of manual git commands:
+When a user requests to push, commit, sync, or publish local changes to the repository, execute the following command:
 
 ```bash
-bash ./scripts/git-workflow.sh
+bash scripts/git-workflow.sh "<commit message>"
 ```
 
-This script:
+Do not run raw `git add`, `git commit`, or `git push` commands directly. All repository operations must go through `scripts/git-workflow.sh`. The script enforces branch protection, pre-push validation (TypeScript type-check, ESLint), rebase conflict detection, and conventional commit format. Bypassing it risks pushing type errors, lint failures, or conflicting history to the remote.
 
-- Reads commit message from `/lib/documents/commit-message.txt`
-- Auto-commits to dev/main/backup branches
-- Handles merge conflicts automatically
-- Never bypass this script for commits/deployments
+Available flags:
+
+- `--branch <name>` — target a specific branch
+- `--force` — enable force-push on non-protected branches
+- `--verify-build` — run `next build` before pushing
+- `--dry-run` — execute all steps except the final push
 
 ## High-Level Architecture
 
@@ -223,7 +225,7 @@ logger.info({ userData }, "User data retrieved");
 
 ## Important Files & Directories
 
-```
+```bash
 /app/                               # App Router pages and layouts
   /api/                             # API endpoints (Brevo, search, sheets)
   /financial-solutions/             # 80+ credit card/loan pages
@@ -361,7 +363,7 @@ logger.info({ userData }, "User data retrieved");
 3. **Search index** - Update `search-index.ts` for new discoverable content
 4. **Analytics tracking** - Ensure GTM events are properly configured
 
-### Git Workflow
+### Git Automation
 
 1. **Use the automated script** - `bash ./scripts/git-workflow.sh`
 2. **Write commit message** - Update `/lib/documents/commit-message.txt` first
@@ -385,7 +387,7 @@ logger.info({ userData }, "User data retrieved");
 
 ### Documentation Structure
 
-```
+```bash
 /docs/                          # Implementation guides and summaries
 /.github/instructions/          # Project-specific rules (YAML frontmatter)
 /.github/agents/                # Pre-configured Claude Code agents

@@ -299,15 +299,15 @@ export default function AmexGoldRequirementsPage() {
               <p className="text-lg text-gray-700 mb-6">
                 If you have a strong credit score, stable income, and are ready
                 to take advantage of the card's unique benefits, the American
-                Express® Gold Card is an excellent choice for earning rewards
-                on restaurants and grocery purchases, saving with credits for
-                Uber and Resy, and enjoying travel benefits.
+                Express® Gold Card is an excellent choice for earning rewards on
+                restaurants and grocery purchases, saving with credits for Uber
+                and Resy, and enjoying travel benefits.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Applying for the American Express® Gold Card is a simple
-                process if you meet the key criteria. Before applying, evaluate
-                your financial situation and ensure this card aligns with your
-                needs and spending habits.
+                Applying for the American Express® Gold Card is a simple process
+                if you meet the key criteria. Before applying, evaluate your
+                financial situation and ensure this card aligns with your needs
+                and spending habits.
               </p>
 
               {/* Final CTA to External Application */}

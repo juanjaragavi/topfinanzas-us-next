@@ -242,8 +242,8 @@ export default function WellsFargoReflectRequirementsPage() {
               General eligibility and restrictions
             </h2>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              To apply for the Wells Fargo Reflect® Card, you need to meet
-              basic criteria:
+              To apply for the Wells Fargo Reflect® Card, you need to meet basic
+              criteria:
             </p>
             <ol className="list-decimal pl-5 space-y-3 mb-8 text-left text-gray-800 text-md leading-5 marker:font-bold marker:text-gray-900">
               <li className="pl-2">

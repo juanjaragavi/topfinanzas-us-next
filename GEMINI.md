@@ -274,28 +274,6 @@ import { CustomComponent } from "./custom-component";
 - **Open Graph**: Social media optimization
 - **Sitemap**: Dynamic sitemap generation
 
-## Git Workflow
-
-### 1. Branch Strategy
-
-- **Main Branch**: Production-ready code
-- **Dev Branch**: Development integration
-- **Feature Branches**: Individual features
-- **Backup Branch**: Automated backups
-
-### 2. Commit Guidelines
-
-- **Conventional Commits**: Structured commit messages
-- **Small Commits**: Atomic changes
-- **Documentation**: Update docs with changes
-- **Testing**: Test before committing
-
-### 3. Automated Workflows
-
-- **Git Script**: Automated multi-branch deployment
-- **Pre-commit**: Code quality checks
-- **CI/CD**: Automated testing and deployment
-
 ## Monitoring and Maintenance
 
 ### 1. Performance Monitoring
@@ -344,32 +322,19 @@ import { CustomComponent } from "./custom-component";
 
 This configuration ensures the Next.js project maintains high code quality, performance, and US-market relevance while providing an excellent user experience for US financial service seekers.
 
-## Push and Commit Guidelines
+## Git Workflow
 
-### Trigger
+When a user requests to push, commit, sync, or publish local changes to the repository, execute the following command:
 
-This procedure is initiated when the user issues the prompt "Push and commit our latest changes." following a successful development cycle.
+```bash
+bash scripts/git-workflow.sh "<commit message>"
+```
 
-#### Steps
+Do not run raw `git add`, `git commit`, or `git push` commands directly. All repository operations must go through `scripts/git-workflow.sh`. The script enforces branch protection, pre-push validation (TypeScript type-check, ESLint), rebase conflict detection, and conventional commit format. Bypassing it risks pushing type errors, lint failures, or conflicting history to the remote.
 
-1. **Initialize Commit Message File**:
-   Clear the contents of the @/lib/documents/commit-message.txt file.
+Available flags:
 
-2. **Verify Codebase Status**:
-   Query the current status of the codebase using your `git_status` MCP server with the following request body:
-
-   ```json
-   {
-     "repo_path": "/Users/macbookpro/GitHub/topfinanzas-us-next"
-   }
-   ```
-
-3. **Formulate Commit Message**:
-   Populate the @/lib/documents/commit-message.txt file with a message that accurately describes the latest modifications.
-
-4. **Execute Workflow Script**:
-   Run the `git workflow` automation script using the command:
-
-   ```bash
-   bash ./scripts/git-workflow.sh
-   ```
+- `--branch <name>` — target a specific branch
+- `--force` — enable force-push on non-protected branches
+- `--verify-build` — run `next build` before pushing
+- `--dry-run` — execute all steps except the final push

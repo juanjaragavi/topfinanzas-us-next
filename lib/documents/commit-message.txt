@@ -1,6 +1,3 @@
-refactor(analytics): update TopAds interstitial and push notification exclude lists
+fix(analytics): update TopAds offerwall logo to US color variant
 
-- Remove trailing slashes from exclude paths for consistency
-- Remove /credit-card-recommender-p3 from interstitial exclusions
-- Remove /invit-credit-card-rec-us-2 from push notification exclusions
-- Add /financial-solutions/citi-simplicity-card-benefits to push notification exclusions
+- Replace white logo with US English color logo (LOGO-EnglishUS-COLOR.png) in TopAds offerwall configuration for better brand visibility

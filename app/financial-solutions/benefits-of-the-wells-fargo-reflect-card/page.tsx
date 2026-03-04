@@ -246,8 +246,8 @@ export default function WellsFargoReflectBenefitsPage() {
               Roadside Dispatch® Service
             </h2>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              The card also provides access to the Roadside Dispatch® network,
-              a 24/7 referral service for emergency roadside assistance. Whether
+              The card also provides access to the Roadside Dispatch® network, a
+              24/7 referral service for emergency roadside assistance. Whether
               you need towing, a locksmith, or help with a flat tire, this
               feature can be a lifesaver during unexpected situations.
             </p>
