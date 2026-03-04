@@ -205,7 +205,7 @@ For automatic list assignment based on field values:
 
    ```bash
    # Navigate to quiz page
-   https://us.topfinanzas.com/campaign-quiz-credit-card-recommender
+   https://us.topfinanzas.com/campaign-quiz-credit-card-recomender
    ```
 
 2. **Fill out all steps**:
@@ -368,8 +368,8 @@ ACTIVECAMPAIGN_API_URL=https://YOUR_ACCOUNT.api-us1.com
 
 - `/app/api/activecampaign/route.ts` - API route handler
 - `/lib/activecampaign-field-mapping.ts` - Field mapping configuration
-- `/app/campaign-quiz-credit-card-recommender/page.tsx` - Long quiz form
-- `/app/campaign-quiz-credit-card-recommender-short/page.tsx` - Short quiz form
+- `/app/campaign-quiz-credit-card-recomender/page.tsx` - Long quiz form
+- `/app/campaign-quiz-credit-card-recomender-short/page.tsx` - Short quiz form
 
 ## Additional Resources
 

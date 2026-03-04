@@ -158,7 +158,7 @@ export const AC_FIELD_IDS = {
   ```
 
 - [ ] **Manual Form Testing**
-  - Submit quiz at: `/campaign-quiz-credit-card-recommender`
+  - Submit quiz at: `/campaign-quiz-credit-card-recomender`
   - Check contact appears in ActiveCampaign
   - Verify all fields are populated
   - Confirm contact is in TOP US list
@@ -244,7 +244,7 @@ npm run test:activecampaign
 ### Manual Testing
 
 1. **Submit Quiz Form**:
-   - Navigate to: `/campaign-quiz-credit-card-recommender`
+   - Navigate to: `/campaign-quiz-credit-card-recomender`
    - Complete all three steps
    - Submit with test email
 

@@ -3,7 +3,7 @@
 ## Test URL
 
 ```
-http://localhost:3040/campaign-quiz-credit-card-recommender
+http://localhost:3040/campaign-quiz-credit-card-recomender
 ```
 
 ## Test Data
@@ -96,5 +96,5 @@ Expected logs:
 
 ## Production URLs
 
-**Quiz**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recommender`  
+**Quiz**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recomender`  
 **Results**: `https://us.topfinanzas.com/weve-discovered-a-few-cards-for-you`

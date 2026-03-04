@@ -1,3 +1,6 @@
-fix(analytics): update TopAds offerwall logo to US color variant
+refactor(routes): rename campaign quiz routes from recommender to recomender
 
-- Replace white logo with US English color logo (LOGO-EnglishUS-COLOR.png) in TopAds offerwall configuration for better brand visibility
+- Rename campaign-quiz-credit-card-recommender to campaign-quiz-credit-card-recomender
+- Rename campaign-quiz-credit-card-recommender-short to campaign-quiz-credit-card-recomender-short
+- Update TopAds exclude paths to match new route names
+- Update related documentation references

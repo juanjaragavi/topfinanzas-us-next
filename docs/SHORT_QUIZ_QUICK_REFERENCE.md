@@ -5,19 +5,19 @@
 ### Development
 
 ```
-http://localhost:3040/campaign-quiz-credit-card-recommender-short
+http://localhost:3040/campaign-quiz-credit-card-recomender-short
 ```
 
 ### Production
 
 ```
-https://us.topfinanzas.com/campaign-quiz-credit-card-recommender-short
+https://us.topfinanzas.com/campaign-quiz-credit-card-recomender-short
 ```
 
 ## Testing URL with UTM Parameters
 
 ```
-https://us.topfinanzas.com/campaign-quiz-credit-card-recommender-short?utm_source=email&utm_medium=newsletter&utm_campaign=short_quiz_test
+https://us.topfinanzas.com/campaign-quiz-credit-card-recomender-short?utm_source=email&utm_medium=newsletter&utm_campaign=short_quiz_test
 ```
 
 ## Google Sheets
@@ -93,14 +93,14 @@ The short quiz automatically parses the full name for ActiveCampaign:
 
 ## Comparison: Full vs Short Quiz
 
-| Feature          | Full Quiz                              | Short Quiz                                   |
-| ---------------- | -------------------------------------- | -------------------------------------------- |
-| **Fields**       | 4 (First, Last, Email, Phone)          | 2 (Name, Email)                              |
-| **Google Sheet** | us-topfinanzas-com                     | short-version                                |
-| **API Endpoint** | /api/sheets                            | /api/sheets/short-version                    |
-| **Log Prefix**   | [QUIZ]                                 | [QUIZ-SHORT]                                 |
-| **Source Tag**   | quiz_campaign                          | quiz_campaign_short                          |
-| **URL Path**     | /campaign-quiz-credit-card-recommender | /campaign-quiz-credit-card-recommender-short |
+| Feature          | Full Quiz                             | Short Quiz                                  |
+| ---------------- | ------------------------------------- | ------------------------------------------- |
+| **Fields**       | 4 (First, Last, Email, Phone)         | 2 (Name, Email)                             |
+| **Google Sheet** | us-topfinanzas-com                    | short-version                               |
+| **API Endpoint** | /api/sheets                           | /api/sheets/short-version                   |
+| **Log Prefix**   | [QUIZ]                                | [QUIZ-SHORT]                                |
+| **Source Tag**   | quiz_campaign                         | quiz_campaign_short                         |
+| **URL Path**     | /campaign-quiz-credit-card-recomender | /campaign-quiz-credit-card-recomender-short |
 
 ## Validation Rules
 
@@ -260,6 +260,6 @@ const firstName = nameParts[0] || formData.name;
 const lastName = nameParts.slice(1).join(" ") || "";
 
 // To customize, modify in:
-// app/campaign-quiz-credit-card-recommender-short/page.tsx
+// app/campaign-quiz-credit-card-recomender-short/page.tsx
 // Lines ~208-210
 ```
