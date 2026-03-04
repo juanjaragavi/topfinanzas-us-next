@@ -20,6 +20,7 @@ const nextConfig = {
   // Redirects for legacy/broken routes to prevent 404s and preserve SEO signals
   async redirects() {
     return [
+      // === Original redirects ===
       {
         source: "/uncategorized",
         destination: "/blog",
@@ -33,6 +34,99 @@ const nextConfig = {
       {
         source: "/recomendador-de-tarjetas-de-credito-p1",
         destination: "/choose-the-perfect-card-for-you-1",
+        permanent: true,
+      },
+      // === WordPress migration redirects ===
+      {
+        source: "/wp-content/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-json/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-admin/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-includes/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-login.php",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/sitemap_index.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      // === Old quiz route redirects ===
+      {
+        source: "/credit-card-recommender-p1",
+        destination: "/choose-the-perfect-card-for-you-1",
+        permanent: true,
+      },
+      {
+        source: "/campaign-quiz-credit-card-recommender",
+        destination: "/campaign-quiz-credit-card-recomender",
+        permanent: true,
+      },
+      {
+        source: "/campaign-quiz-credit-card-recommender-short",
+        destination: "/campaign-quiz-credit-card-recomender-short",
+        permanent: true,
+      },
+      // === Old financial solutions pages (from ConvertKit campaigns) ===
+      {
+        source: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/tomo-credit-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/td-flexpay-credit-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/indigo-mastercard-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/doordash-rewards-mastercard-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/citi-double-cash-credit-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/capital-one-savor-rewards-credit-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/upstart-personal-loans-requirements",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/personal-loans/:path*",
+        destination: "/financial-solutions",
         permanent: true,
       },
     ];
