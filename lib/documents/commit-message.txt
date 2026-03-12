@@ -1,4 +1,7 @@
-fix: optimize site wrapper transition and add translate package config
+feat(ads): exclude jobs quiz/chat pages from TopAds and promise pages from offerwall
 
-- Remove unnecessary translate-x-0 class from SiteWrapper when mobile menu is closed
-- Add @google-cloud/translate to serverExternalPackages in next.config.mjs
+- Add jobs quiz and chat routes to all three TopAds exclusion lists
+  (pageSetting, interstitial, offerwall) to suppress ads on user journey pages
+- Exclude all 6 jobs promise pages from the offerwall to prevent conflict
+  with the rewarded ad unit rendered on those pages
+- Fix jobs layout to use static import for next/headers and force-dynamic export

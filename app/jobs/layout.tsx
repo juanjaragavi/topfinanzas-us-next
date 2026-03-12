@@ -1,8 +1,12 @@
 import type { ReactNode } from "react";
 
 import { TranslationProvider } from "@/components/jobs/translation-provider";
+import { headers } from "next/headers";
 import { logger } from "@/lib/logger";
 import { jobsStrings } from "@/lib/translation/jobs-strings";
+
+// This layout reads Accept-Language headers for translation, so it must be dynamic.
+export const dynamic = "force-dynamic";
 
 export default async function JobsLayout({
   children,
@@ -12,9 +16,8 @@ export default async function JobsLayout({
   let translations: Record<string, string> = { ...jobsStrings };
 
   try {
-    // Dynamic imports keep the heavy @google-cloud/translate (gRPC) out of the
+    // Dynamic import keeps the heavy @google-cloud/translate (gRPC) out of the
     // module-evaluation path, preventing listener leaks during HMR in dev.
-    const { headers } = await import("next/headers");
     const { parseAcceptLanguage, translateText } = await import(
       "@/lib/translation/translate"
     );
