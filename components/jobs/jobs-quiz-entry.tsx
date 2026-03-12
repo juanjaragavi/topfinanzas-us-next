@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+import { useTranslation } from "@/components/jobs/translation-provider";
 
 export interface JobsQuizQuestion {
   id: string;
@@ -150,6 +151,7 @@ export default function JobsQuizEntry({
   redirectTo,
 }: JobsQuizEntryProps) {
   const router = useRouter();
+  const t = useTranslation();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [phase, setPhase] = useState<Phase>("quiz");
 
@@ -217,7 +219,9 @@ export default function JobsQuizEntry({
             <div className="mb-6">
               <div className="flex justify-between text-xs text-gray-500 mb-1.5 font-medium">
                 <span>
-                  Question {currentQuestion + 1} of {questions.length}
+                  {t("quizEntry.questionOf", "Question {n} of {total}")
+                    .replace("{n}", String(currentQuestion + 1))
+                    .replace("{total}", String(questions.length))}
                 </span>
                 <span>{Math.round(progress)}%</span>
               </div>

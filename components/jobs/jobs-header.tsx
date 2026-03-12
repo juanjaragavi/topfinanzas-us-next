@@ -1,22 +1,12 @@
+"use client";
+
 import Image from "next/image";
 
-interface JobsHeaderProps {
-  /**
-   * Optional translation hook slot — pass a function to enable Google Translate
-   * integration in a future iteration. When omitted, falls back to the default
-   * English string. No implementation is required now.
-   *
-   * @example
-   * // Future usage with Google Translate API:
-   * translateText={(key) => googleTranslate(key, userLocale)}
-   */
-  translateText?: (key: string) => string;
-}
+import { useTranslation } from "@/components/jobs/translation-provider";
 
-export default function JobsHeader({ translateText }: JobsHeaderProps) {
-  const brandLabel = translateText
-    ? translateText("opportunities")
-    : "Opportunities";
+export default function JobsHeader() {
+  const t = useTranslation();
+  const brandLabel = t("header.brand", "Opportunities");
 
   return (
     <header

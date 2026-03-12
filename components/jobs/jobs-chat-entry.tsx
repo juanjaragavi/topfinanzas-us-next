@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
+import { useTranslation } from "@/components/jobs/translation-provider";
 
 export interface JobsChatQuestion {
   id: string;
@@ -41,6 +42,7 @@ export default function JobsChatEntry({
   redirectTo,
 }: JobsChatEntryProps) {
   const router = useRouter();
+  const t = useTranslation();
   const [messages, setMessages] = useState<ChatBubble[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState(-1);
   const [isTyping, setIsTyping] = useState(false);
@@ -120,14 +122,13 @@ export default function JobsChatEntry({
       >
         <div className="container mx-auto px-4 text-center">
           <div className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 bg-white/20">
-            JOBS
+            {t("chatEntry.badge", "JOBS")}
           </div>
           <h1 className="text-2xl md:text-3xl font-bold">
-            Find Your Next Job Opportunity
+            {t("chatEntry.heroTitle", "Find Your Next Job Opportunity")}
           </h1>
           <p className="mt-2 text-white/80 text-sm md:text-base">
-            Answer a few quick questions to see the best openings matched for
-            you
+            {t("chatEntry.heroSubtitle", "Answer a few quick questions to see the best openings matched for you")}
           </p>
         </div>
       </section>

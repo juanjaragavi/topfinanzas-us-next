@@ -1,11 +1,20 @@
-feat(jobs): add minimal jobs layout system with route group overrides
+feat(jobs): integrate GCP Cloud Translation API for all /app/jobs routes
 
-- Add JobsHeader component (logo + "Opportunities" brand text, no nav links, translateText hook slot for future Google Translate integration)
-- Add JobsFooter component (bg-gray-100, favicon lockup, full legal/disclosure content, zero nav links)
-- Add JobsFloatingCta component ("use client", fires at ≥50% scroll depth, fixed bottom-right, sessionStorage-scoped dismissal, ARIA-labeled)
-- Migrate all 16 jobs pages into Next.js route groups: (promise), (reward), (quiz), (chat)
-- Add per-route-group layout.tsx overrides: promise/reward get JobsHeader + JobsFloatingCta + JobsFooter; quiz/chat get JobsHeader + copyright line only
-- Remove global Header and CompactFooter from jobs-promise-template, jobs-reward-template, jobs-quiz-entry, jobs-chat-entry
-- media.topfinanzas.com already whitelisted in remotePatterns (no config change needed)
-- Zero TypeScript errors, zero ESLint violations, no console.log statements
-- Refactor .github/copilot-instructions.md for conciseness
+- Add @google-cloud/translate v3 dependency for Cloud Translation API
+- Create lib/translation/translate.ts with lazy-loaded gRPC client,
+  in-memory SHA-256 caching, Accept-Language parsing, and batch support
+- Create lib/translation/jobs-strings.ts with typed inventory of 90+
+  translatable string literals across all jobs UI components
+- Create components/jobs/translation-provider.tsx with React context
+  and useTranslation() hook for client-side string consumption
+- Create app/jobs/layout.tsx as top-level async Server Component that
+  detects locale from Accept-Language header and pre-translates strings
+- Create components/jobs/jobs-copyright.tsx for translated copyright line
+- Update jobs-header, jobs-footer, jobs-floating-cta, jobs-chat-entry,
+  jobs-quiz-entry to consume translations via useTranslation() hook
+- Update chat-01, chat-02, quiz-01, quiz-02 pages to use t() calls
+  for all user-facing strings with English fallbacks
+- Update chat and quiz sub-layouts to use JobsCopyright component
+- Store GCP TranslationServiceClient on globalThis to survive HMR
+- Use dynamic imports for @google-cloud/translate to prevent gRPC
+  listener leaks during Turbopack dev hot-reloads
