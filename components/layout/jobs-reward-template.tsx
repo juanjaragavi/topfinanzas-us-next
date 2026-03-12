@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
+
 import JobMethodCard, {
   type JobMethodCardProps,
 } from "@/components/jobs/jobs-method-card";
@@ -41,7 +40,6 @@ export default function JobsRewardTemplate({
 }: JobsRewardTemplateProps) {
   return (
     <main className="flex min-h-screen flex-col bg-white">
-      <Header />
 
       {/* Hero */}
       <section
@@ -58,7 +56,7 @@ export default function JobsRewardTemplate({
             >
               {badge}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
               {title}
             </h1>
           </div>
@@ -89,6 +87,7 @@ export default function JobsRewardTemplate({
                   alt={heroImage.alt}
                   width={900}
                   height={507}
+                  sizes="(max-width: 900px) 100vw, 900px"
                   className="w-full h-auto"
                   priority
                 />
@@ -219,8 +218,6 @@ export default function JobsRewardTemplate({
           </div>
         </div>
       </article>
-
-      <CompactFooter />
     </main>
   );
 }

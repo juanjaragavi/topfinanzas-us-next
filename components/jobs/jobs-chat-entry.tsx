@@ -2,8 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
+
 
 export interface JobsChatQuestion {
   id: string;
@@ -111,7 +110,6 @@ export default function JobsChatEntry({
       className="flex min-h-screen flex-col bg-white"
       data-journey={journeyId}
     >
-      <Header />
 
       {/* Hero */}
       <section
@@ -245,7 +243,6 @@ export default function JobsChatEntry({
         </div>
       </div>
 
-      <CompactFooter />
     </main>
   );
 }

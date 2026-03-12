@@ -285,10 +285,7 @@ const nextConfig = {
   // Image optimization settings with improved caching
   images: {
     unoptimized: false,
-    dangerouslyAllowSVG: true,
-    // Using a permissive CSP instead of null (which is invalid)
-    contentSecurityPolicy:
-      "default-src 'self'; script-src 'none'; sandbox; img-src 'self' https: data:;",
+    contentDispositionType: "inline",
     remotePatterns: [
       {
         protocol: "https",

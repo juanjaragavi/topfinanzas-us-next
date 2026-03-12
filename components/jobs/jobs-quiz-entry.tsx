@@ -2,8 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
+
 
 export interface JobsQuizQuestion {
   id: string;
@@ -125,7 +124,9 @@ function JobsLoadingState({
           style={{ width: `${progress}%`, backgroundColor: themeColor }}
         />
       </div>
-      <p className="text-sm text-gray-500 mt-3">{Math.round(progress)}% complete</p>
+      <p className="text-sm text-gray-500 mt-3">
+        {Math.round(progress)}% complete
+      </p>
     </div>
   );
 }
@@ -153,9 +154,7 @@ export default function JobsQuizEntry({
   const [phase, setPhase] = useState<Phase>("quiz");
 
   const progress =
-    phase === "quiz"
-      ? ((currentQuestion + 1) / questions.length) * 100
-      : 100;
+    phase === "quiz" ? ((currentQuestion + 1) / questions.length) * 100 : 100;
 
   const handleAnswer = useCallback(() => {
     const nextIndex = currentQuestion + 1;
@@ -181,8 +180,10 @@ export default function JobsQuizEntry({
   const q = questions[currentQuestion];
 
   return (
-    <main className="flex min-h-screen flex-col bg-gray-50" data-journey={journeyId}>
-      <Header />
+    <main
+      className="flex min-h-screen flex-col bg-gray-50"
+      data-journey={journeyId}
+    >
 
       {/* Hero banner */}
       <section
@@ -211,12 +212,13 @@ export default function JobsQuizEntry({
       {/* Quiz area */}
       <div className="flex-1 flex items-start justify-center px-4 py-8">
         <div className="w-full max-w-lg">
-
           {/* Progress bar — visible during quiz phase */}
           {phase === "quiz" && (
             <div className="mb-6">
               <div className="flex justify-between text-xs text-gray-500 mb-1.5 font-medium">
-                <span>Question {currentQuestion + 1} of {questions.length}</span>
+                <span>
+                  Question {currentQuestion + 1} of {questions.length}
+                </span>
                 <span>{Math.round(progress)}%</span>
               </div>
               <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -254,7 +256,9 @@ export default function JobsQuizEntry({
                     }
                   >
                     {option.emoji && (
-                      <span className="text-xl flex-shrink-0">{option.emoji}</span>
+                      <span className="text-xl flex-shrink-0">
+                        {option.emoji}
+                      </span>
                     )}
                     <span>{option.label}</span>
                   </button>
@@ -318,11 +322,9 @@ export default function JobsQuizEntry({
               <p className="text-xs text-gray-400 mt-2">{ctaSecondaryText}</p>
             </div>
           )}
-
         </div>
       </div>
 
-      <CompactFooter />
     </main>
   );
 }

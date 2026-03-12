@@ -9,8 +9,16 @@ const QUESTIONS = [
     question: "Which type of employer appeals to you most?",
     options: [
       { emoji: "🛒", label: "Large retail (Target, Walmart)", value: "retail" },
-      { emoji: "📦", label: "E-commerce & warehouses (Amazon, UPS)", value: "ecommerce" },
-      { emoji: "🏥", label: "Healthcare & pharmacy (CVS, hospitals)", value: "healthcare" },
+      {
+        emoji: "📦",
+        label: "E-commerce & warehouses (Amazon, UPS)",
+        value: "ecommerce",
+      },
+      {
+        emoji: "🏥",
+        label: "Healthcare & pharmacy (CVS, hospitals)",
+        value: "healthcare",
+      },
       { emoji: "🏛️", label: "Government / public sector", value: "government" },
     ],
   },
@@ -18,7 +26,11 @@ const QUESTIONS = [
     id: "experience",
     question: "How much work experience do you have?",
     options: [
-      { emoji: "🌱", label: "No experience — this is my first job", value: "none" },
+      {
+        emoji: "🌱",
+        label: "No experience — this is my first job",
+        value: "none",
+      },
       { emoji: "📋", label: "Less than 1 year", value: "under-1" },
       { emoji: "🔧", label: "1 – 3 years", value: "1-3" },
       { emoji: "⭐", label: "More than 3 years", value: "3plus" },

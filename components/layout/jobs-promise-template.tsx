@@ -1,8 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
+
 import JobsFaqAccordion, {
   type JobsFaqItem,
 } from "@/components/jobs/jobs-faq-accordion";
@@ -63,8 +62,6 @@ export default function JobsPromiseTemplate({
         />
       )}
 
-      <Header />
-
       {/* Hero */}
       <section
         className="relative text-white py-12 md:py-16"
@@ -80,7 +77,7 @@ export default function JobsPromiseTemplate({
             >
               {badge}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
               {title}
             </h1>
           </div>
@@ -111,6 +108,7 @@ export default function JobsPromiseTemplate({
                   alt={heroImage.alt}
                   width={900}
                   height={507}
+                  sizes="(max-width: 900px) 100vw, 900px"
                   className="w-full h-auto"
                   priority
                 />
@@ -199,6 +197,7 @@ export default function JobsPromiseTemplate({
                           alt={section.image.alt}
                           width={600}
                           height={400}
+                          sizes="(max-width: 600px) 100vw, 600px"
                           className="w-full h-auto"
                         />
                       </div>
@@ -300,8 +299,6 @@ export default function JobsPromiseTemplate({
           </div>
         </div>
       </article>
-
-      <CompactFooter />
     </main>
   );
 }
