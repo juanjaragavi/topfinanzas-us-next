@@ -1,1 +1,0 @@
-chore: rename legacy uk-topfinanzas-com references to topfinanzas-us-next across docs and scripts

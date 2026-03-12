@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { logger } from "@/lib/logger";
 
@@ -12,28 +12,32 @@ const SPA_READY_TIMEOUT = 3000;
 const SPA_POLL_INTERVAL = 150;
 
 /**
+ * Module-level pathname tracker.
+ *
+ * Unlike `useRef`, this survives React Suspense unmount/remount cycles.
+ * `TopAdsSPAHandler` uses `useSearchParams()` inside a `<Suspense>` boundary,
+ * which may re-suspend during client-side navigation — unmounting and
+ * remounting the component.  A `useRef` would re-initialise to the *new*
+ * pathname on remount, causing the "same pathname" guard to skip and
+ * `spa()` to never fire.  A module-level variable retains the *previous*
+ * pathname across the full lifecycle.
+ *
+ * Initialised to `null` so the first effect execution records the pathname
+ * and skips, letting TopAds' bootstrap script handle initial ad fill.
+ */
+let lastSPAPathname: string | null = null;
+
+/**
  * TopAds SPA Navigation Handler
  *
  * Triggers TopAds SPA function on route changes in Next.js.
  * This ensures ads are properly loaded when navigating between pages.
- *
- * The handler uses a **previous-pathname comparison** instead of a boolean
- * mount guard.  This is Suspense-safe: React may unmount/remount this
- * component when useSearchParams() suspends, which would reset a boolean
- * ref and cause a false-positive spa() call on the initial load.  By
- * comparing the stored pathname to the current one, the handler only fires
- * when the route has genuinely changed.
  *
  * Usage: Include this component in the root layout within NavigationProvider
  */
 export default function TopAdsSPAHandler() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
-  // Store the pathname that TopAds is currently showing ads for.
-  // Initialised to the pathname at mount time so the first effect
-  // execution sees prev === current and correctly skips.
-  const prevPathname = useRef(pathname);
 
   const waitForTopAdsSPA = useCallback((): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -65,22 +69,39 @@ export default function TopAdsSPAHandler() {
   }, []);
 
   useEffect(() => {
-    // ── Guard: only fire when the pathname has actually changed ──
-    // On initial mount (or Suspense re-mount) prevPathname.current
-    // equals pathname, so this branch is skipped — primary ads load
-    // undisturbed.
-    if (prevPathname.current === pathname) {
+    // ── First-ever load: record pathname, let TopAds bootstrap handle ads ──
+    if (lastSPAPathname === null) {
+      lastSPAPathname = pathname;
       return;
     }
 
-    // Record the new pathname *before* the async wait so that rapid
+    // ── Same pathname: skip (handles Suspense remounts gracefully) ──
+    if (lastSPAPathname === pathname) {
+      return;
+    }
+
+    // Record the new pathname *before* the async operations so that rapid
     // navigations don't queue duplicate spa() calls.
-    prevPathname.current = pathname;
+    lastSPAPathname = pathname;
 
     let cancelled = false;
 
     logger.info("[TopAds] Route change detected", {
       to: pathname,
+    });
+
+    // Clear stale ad content from recycled DOM slots.
+    // TopAds injects content via direct DOM manipulation that React doesn't
+    // track.  When React reconciles pages that share the same template (e.g.
+    // reward-p1 → reward-p2), the [data-topads] divs are at the same tree
+    // position with the same IDs, so React reuses the DOM nodes — leaving
+    // old ad content in place.  Clearing them ensures TopAds sees fresh
+    // empty slots on the new page.
+    document.querySelectorAll("[data-topads]").forEach((el) => {
+      el.innerHTML = "";
+    });
+    document.querySelectorAll("[data-topads-rewarded]").forEach((el) => {
+      el.innerHTML = "";
     });
 
     // Wait for TopAds to be ready rather than using a fixed timeout.
