@@ -1,20 +1,4 @@
-feat(jobs): integrate GCP Cloud Translation API for all /app/jobs routes
+fix: optimize site wrapper transition and add translate package config
 
-- Add @google-cloud/translate v3 dependency for Cloud Translation API
-- Create lib/translation/translate.ts with lazy-loaded gRPC client,
-  in-memory SHA-256 caching, Accept-Language parsing, and batch support
-- Create lib/translation/jobs-strings.ts with typed inventory of 90+
-  translatable string literals across all jobs UI components
-- Create components/jobs/translation-provider.tsx with React context
-  and useTranslation() hook for client-side string consumption
-- Create app/jobs/layout.tsx as top-level async Server Component that
-  detects locale from Accept-Language header and pre-translates strings
-- Create components/jobs/jobs-copyright.tsx for translated copyright line
-- Update jobs-header, jobs-footer, jobs-floating-cta, jobs-chat-entry,
-  jobs-quiz-entry to consume translations via useTranslation() hook
-- Update chat-01, chat-02, quiz-01, quiz-02 pages to use t() calls
-  for all user-facing strings with English fallbacks
-- Update chat and quiz sub-layouts to use JobsCopyright component
-- Store GCP TranslationServiceClient on globalThis to survive HMR
-- Use dynamic imports for @google-cloud/translate to prevent gRPC
-  listener leaks during Turbopack dev hot-reloads
+- Remove unnecessary translate-x-0 class from SiteWrapper when mobile menu is closed
+- Add @google-cloud/translate to serverExternalPackages in next.config.mjs
