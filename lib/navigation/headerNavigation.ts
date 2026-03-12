@@ -89,6 +89,10 @@ export const headerNavigation = {
         text: "Loans and Credits",
         href: "/financial-solutions",
       },
+      {
+        text: "Jobs & Careers",
+        href: "/jobs/jobs-chat-01",
+      },
     ],
     featuredArticles: [
       {

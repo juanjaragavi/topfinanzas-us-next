@@ -85,7 +85,8 @@ const nextConfig = {
       },
       // === Old financial solutions pages (from ConvertKit campaigns) ===
       {
-        source: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
+        source:
+          "/financial-solutions/visa-signature-us-current-credit-card-benefits",
         destination: "/financial-solutions",
         permanent: true,
       },
@@ -115,7 +116,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/financial-solutions/capital-one-savor-rewards-credit-card-benefits",
+        source:
+          "/financial-solutions/capital-one-savor-rewards-credit-card-benefits",
         destination: "/financial-solutions",
         permanent: true,
       },

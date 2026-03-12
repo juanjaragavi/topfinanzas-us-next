@@ -1,3 +1,11 @@
-fix(analytics): remove trailing slash from campaign quiz exclude path in TopAds
+feat(jobs): add Jobs funnel section with quiz, promise, reward, and chat flows
 
-- Normalize campaign-quiz-credit-card-recomender path for consistency with other exclude entries
+- Add app/jobs/ with 14 multi-step funnel pages (quiz-01/02, promise-p1–p6, reward-p1–p6, chat-01/02)
+- Add components/jobs/ with reusable components: jobs-method-card, jobs-cta-banner, jobs-faq-accordion, jobs-chat-entry, jobs-quiz-entry
+- Add components/layout/jobs-promise-template.tsx and jobs-reward-template.tsx layout templates
+- Add lib/jobs-config.ts with centralized themes, images, method cards, FAQ content, and CTA config
+- Update lib/navigation/headerNavigation.ts to include Jobs section link
+- Update next.config.mjs with remote image patterns for jobs media assets
+- Update public/sw.js service worker cache strategy
+- Update .gitignore to exclude firebase-debug.log and related artifacts
+- Refactor .github/copilot-instructions.md for conciseness

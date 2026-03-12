@@ -45,3 +45,6 @@ public/images/**/*.webp
 
 # Ignore file for testing the formatting of Strict markdown documents
 lib/documents/document.md
+
+# Ignore images for the new user journey, as they are stored in the CDN and not needed in the local repository
+lib/new-user-journey/images
