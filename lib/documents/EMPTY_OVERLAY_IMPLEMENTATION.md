@@ -85,7 +85,7 @@ import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner"
 ### Option 1: Development Server
 
 ```bash
-cd /Users/macbookpro/GitHub/uk-topfinanzas-com
+cd /Users/macbookpro/GitHub/topfinanzas-us-next
 npm run dev
 ```
 

@@ -3,7 +3,7 @@
 ## UK TopFinanzas Next.js Application
 
 **Report Date:** October 20, 2025  
-**Application:** uk-topfinanzas-com  
+**Application:** topfinanzas-us-next  
 **Framework:** Next.js 15.4.3  
 **Image Source:** GCP Bucket via CDN (media.topfinanzas.com)
 

@@ -200,7 +200,7 @@ const { triggerSPA } = useTopAds();
 ### Critical Performance Settings
 
 - Port 3040 for both development and production
-- PM2 process manager for production (`uk-topfinanzas-com` process name)
+- PM2 process manager for production (`topfinanzas-us-next` process name)
 - Webpack build workers and parallel compilation enabled
 - CSS optimization and package import optimization
 
@@ -237,7 +237,7 @@ const { triggerSPA } = useTopAds();
 3. Verify environment variables in `.env.production`
 4. On server: `sudo bash ./scripts/deploy_update.sh`
 5. PM2 will automatically restart the application
-6. Monitor logs: `pm2 logs uk-topfinanzas-com`
+6. Monitor logs: `pm2 logs topfinanzas-us-next`
 
 ## Additional Resources
 

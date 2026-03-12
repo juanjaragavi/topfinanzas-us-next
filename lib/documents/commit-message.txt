@@ -1,10 +1,1 @@
-fix(analytics): replace Suspense-unsafe boolean mount guard with pathname comparison in TopAds SPA handler
-
-- Replace isInitialMount useRef(true) guard with prevPathname comparison
-  to prevent false-positive spa() calls on Suspense re-mounts
-- Add polling-based readiness check (waitForTopAdsSPA) instead of fixed
-  100ms setTimeout for reliable TopAds script synchronization
-- Add cancellation token to prevent stale spa() calls during rapid
-  navigation between jobs promise/reward pages
-- Fixes race condition where spa() fired on initial load disrupting
-  primary ad rendering while failing to trigger on subsequent navigations
+chore: rename legacy uk-topfinanzas-com references to topfinanzas-us-next across docs and scripts
