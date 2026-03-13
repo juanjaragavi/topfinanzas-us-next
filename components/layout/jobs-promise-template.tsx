@@ -5,6 +5,7 @@ import Image from "next/image";
 import JobsFaqAccordion, {
   type JobsFaqItem,
 } from "@/components/jobs/jobs-faq-accordion";
+import JobsDeferredAd from "@/components/jobs/jobs-deferred-ad";
 
 export interface JobsContentSection {
   heading: string;
@@ -35,6 +36,8 @@ export interface JobsPromiseTemplateProps {
   closingParagraph?: string;
   /** Hides the rewarded ad overlay */
   hideRewardedAd?: boolean;
+  /** Whether to defer ad rendering until a quiz completes */
+  deferAdsUntilUserInteraction?: boolean;
 }
 
 export default function JobsPromiseTemplate({
@@ -51,14 +54,16 @@ export default function JobsPromiseTemplate({
   relatedArticles,
   closingParagraph,
   hideRewardedAd = false,
+  deferAdsUntilUserInteraction = false,
 }: JobsPromiseTemplateProps) {
   return (
     <main className="flex min-h-screen flex-col bg-white">
       {/* ─── Ad Unit: Rewarded (full-screen overlay, highest-value) ─── */}
       {!hideRewardedAd && (
-        <div
-          data-topads-rewarded
-          data-topads-texts='{"title":"Find Your Next Job","description":"Discover the best job opportunities available near you","CTA":"See Available Jobs","disclaimer":"To continue, it will be necessary to watch an ad."}'
+        <JobsDeferredAd
+          type="rewarded"
+          defer={deferAdsUntilUserInteraction}
+          texts='{"title":"Find Your Next Job","description":"Discover the best job opportunities available near you","CTA":"See Available Jobs","disclaimer":"To continue, it will be necessary to watch an ad."}'
         />
       )}
 
@@ -89,11 +94,10 @@ export default function JobsPromiseTemplate({
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* ─── Ad Unit: square02 — Very top of content, before subtitle ─── */}
-            <div
+            <JobsDeferredAd
+              type="square"
               id="square02"
-              data-topads
-              data-topads-size="square"
-              className="items-center justify-center flex w-full my-8"
+              defer={deferAdsUntilUserInteraction}
             />
 
             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
@@ -212,11 +216,10 @@ export default function JobsPromiseTemplate({
                     </p>
                   )}
                   {i === 1 && (
-                    <div
+                    <JobsDeferredAd
+                      type="square"
                       id="square03"
-                      data-topads
-                      data-topads-size="square"
-                      className="items-center justify-center flex w-full my-8"
+                      defer={deferAdsUntilUserInteraction}
                     />
                   )}
                 </Fragment>
@@ -233,6 +236,7 @@ export default function JobsPromiseTemplate({
                   items={faqItems}
                   themeColor={themeColor}
                   defaultOpenId={faqItems[0]?.id}
+                  deferAds={deferAdsUntilUserInteraction}
                 />
               </section>
             )}
@@ -260,11 +264,10 @@ export default function JobsPromiseTemplate({
             </p>
 
             {/* ─── Ad Unit: square04 — Before related content ─── */}
-            <div
+            <JobsDeferredAd
+              type="square"
               id="square04"
-              data-topads
-              data-topads-size="square"
-              className="items-center justify-center flex w-full my-8"
+              defer={deferAdsUntilUserInteraction}
             />
 
             <p className="text-gray-600 mb-4 text-sm leading-relaxed">

@@ -21,6 +21,7 @@ export default function JobsPromiseP2() {
     <>
       <JobsQuiz02Overlay />
       <JobsPromiseTemplate
+      deferAdsUntilUserInteraction={true}
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
       badge="AMAZON JOBS"

@@ -50,8 +50,6 @@ export default function TopAds() {
                         '/terms-conditions/',
                         '/campaign-quiz-credit-card-recomender',
                         '/campaign-quiz-credit-card-recomender-short',
-                        '/jobs/jobs-chat-01',
-                        '/jobs/jobs-chat-02',
                     ]
                 },
                 formats: {
@@ -61,8 +59,6 @@ export default function TopAds() {
                             '/invit-credit-card-rec-us-2',
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
-                            '/jobs/jobs-chat-01',
-                            '/jobs/jobs-chat-02',
                         ],
                     },
                     offerwall: {
@@ -78,14 +74,6 @@ export default function TopAds() {
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
                             '/financial-solutions/citi-simplicity-card-benefits',
-                            '/jobs/jobs-chat-01',
-                            '/jobs/jobs-chat-02',
-                            '/jobs/jobs-promise-p1',
-                            '/jobs/jobs-promise-p2',
-                            '/jobs/jobs-promise-p3',
-                            '/jobs/jobs-promise-p4',
-                            '/jobs/jobs-promise-p5',
-                            '/jobs/jobs-promise-p6',
                         ],
                     },
                 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import JobsDeferredAd from "@/components/jobs/jobs-deferred-ad";
 
 export interface JobsFaqItem {
   id: string;
@@ -15,12 +16,14 @@ interface JobsFaqAccordionProps {
   items: JobsFaqItem[];
   themeColor: string;
   defaultOpenId?: string;
+  deferAds?: boolean;
 }
 
 export default function JobsFaqAccordion({
   items,
   themeColor,
   defaultOpenId,
+  deferAds = false,
 }: JobsFaqAccordionProps) {
   const [openId, setOpenId] = useState<string | null>(defaultOpenId ?? null);
 
@@ -71,10 +74,10 @@ export default function JobsFaqAccordion({
                   {item.answer}
                 </p>
                 {item.showAdOnOpen && item.adSlotId && (
-                  <div
+                  <JobsDeferredAd
+                    type="square"
                     id={item.adSlotId}
-                    data-topads
-                    data-topads-size="square"
+                    defer={deferAds}
                     className="items-center justify-center flex w-full mt-4"
                   />
                 )}

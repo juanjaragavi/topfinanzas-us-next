@@ -146,8 +146,23 @@ export default function JobsQuizModal({
     >
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-[380px] overflow-hidden flex flex-col max-h-[90vh]">
         {phase === "quiz" && (
-          <div className="p-8 py-10 overflow-y-auto">
-            {/* Question Text */}
+          <>
+            {/* Progress Bar Container */}
+            <div 
+              className="h-1.5 w-full shrink-0"
+              style={{ backgroundColor: themeColorLight || "#f3f4f6" }}
+            >
+              <div 
+                className="h-full transition-all duration-300 ease-out" 
+                style={{ 
+                  width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+                  backgroundColor: themeColor
+                }} 
+              />
+            </div>
+
+            <div className="p-8 py-10 overflow-y-auto flex-1">
+              {/* Question Text */}
             <h2 
               id="jobs-quiz-question-title"
               className="text-lg font-medium text-gray-700 text-center mb-8 leading-snug"
@@ -186,6 +201,7 @@ export default function JobsQuizModal({
               })}
             </div>
           </div>
+          </>
         )}
 
         {phase === "loading" && (
@@ -193,7 +209,15 @@ export default function JobsQuizModal({
             messages={loadingMessages}
             themeColor={themeColor}
             duration={loadingDuration}
-            onComplete={() => setPhase("done")}
+            onComplete={() => {
+              setPhase("done");
+              window.dispatchEvent(new CustomEvent("jobsQuizDone"));
+              setTimeout(() => {
+                if (window.topAds?.spa) {
+                  window.topAds.spa();
+                }
+              }, 100);
+            }}
           />
         )}
       </div>

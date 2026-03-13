@@ -22,6 +22,7 @@ export default function JobsPromiseP1() {
     <>
       <JobsQuiz01Overlay />
       <JobsPromiseTemplate
+      deferAdsUntilUserInteraction={true}
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
       badge="US JOB OPPORTUNITIES"
