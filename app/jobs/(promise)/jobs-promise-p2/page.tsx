@@ -1,4 +1,5 @@
 import JobsPromiseTemplate from "@/components/layout/jobs-promise-template";
+import JobsQuiz02Overlay from "@/components/jobs/quiz-overlays/jobs-quiz-02-overlay";
 import {
   JOBS_THEME,
   JOBS_IMAGES,
@@ -17,7 +18,9 @@ export function generateMetadata() {
 
 export default function JobsPromiseP2() {
   return (
-    <JobsPromiseTemplate
+    <>
+      <JobsQuiz02Overlay />
+      <JobsPromiseTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
       badge="AMAZON JOBS"
@@ -133,5 +136,6 @@ export default function JobsPromiseP2() {
       relatedArticles={JOBS_RELATED_ARTICLES}
       closingParagraph="Amazon is not for everyone, but for those who fit the role, it's one of the most reliable employers in America. Use the verified job search tools below to apply directly to Amazon and other top employers today."
     />
+    </>
   );
 }

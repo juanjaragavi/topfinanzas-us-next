@@ -20,6 +20,16 @@ const nextConfig = {
   // Redirects for legacy/broken routes to prevent 404s and preserve SEO signals
   async redirects() {
     return [
+      {
+        source: "/jobs/jobs-quiz-01",
+        destination: "/jobs/jobs-promise-p1",
+        permanent: false,
+      },
+      {
+        source: "/jobs/jobs-quiz-02",
+        destination: "/jobs/jobs-promise-p2",
+        permanent: false,
+      },
       // === Original redirects ===
       {
         source: "/uncategorized",
