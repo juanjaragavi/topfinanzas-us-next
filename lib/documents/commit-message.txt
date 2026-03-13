@@ -1,0 +1,1 @@
+refactor(jobs): remove floating CTA component from promise and reward layouts

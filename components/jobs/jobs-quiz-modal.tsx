@@ -146,27 +146,11 @@ export default function JobsQuizModal({
     >
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-[380px] overflow-hidden flex flex-col max-h-[90vh]">
         {phase === "quiz" && (
-          <div className="p-6 overflow-y-auto">
-            {/* Embedded Progress Indicator */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full transition-all duration-300 ease-out"
-                  style={{
-                    width: `${((currentQuestion + 1) / questions.length) * 100}%`,
-                    backgroundColor: themeColor,
-                  }}
-                />
-              </div>
-              <span className="text-xs font-semibold text-gray-500 whitespace-nowrap">
-                {currentQuestion + 1} of {questions.length}
-              </span>
-            </div>
-
+          <div className="p-8 py-10 overflow-y-auto">
             {/* Question Text */}
             <h2 
               id="jobs-quiz-question-title"
-              className="text-xl font-bold text-gray-900 mb-6 leading-snug"
+              className="text-lg font-medium text-gray-700 text-center mb-8 leading-snug"
             >
               {questions[currentQuestion].question}
             </h2>
@@ -187,18 +171,14 @@ export default function JobsQuizModal({
                     onMouseLeave={() => setHoveredOptionIndex(null)}
                     onFocus={() => setHoveredOptionIndex(idx)}
                     onBlur={() => setHoveredOptionIndex(null)}
-                    className="group flex items-center w-full p-4 border-2 rounded-xl text-left transition-all duration-200 hover:shadow-md active:scale-[0.98]"
+                    className="w-full py-3.5 px-4 rounded-[10px] text-center transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow"
                     style={{
-                      backgroundColor: isHovered ? themeColorLight : "white",
-                      borderColor: isHovered ? themeColor : "#f3f4f6", // border-gray-100 fallback
+                      backgroundColor: themeColor,
+                      color: "white",
+                      opacity: isHovered ? 0.9 : 1,
                     }}
                   >
-                    {option.emoji && (
-                      <span className="text-2xl mr-4 shrink-0 transition-transform group-hover:scale-110">
-                        {option.emoji}
-                      </span>
-                    )}
-                    <span className="font-semibold text-gray-800 flex-1 leading-tight group-hover:text-gray-900">
+                    <span className="font-medium text-base tracking-wide leading-tight">
                       {option.label}
                     </span>
                   </button>
