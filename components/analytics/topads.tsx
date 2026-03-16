@@ -43,6 +43,11 @@ export default function TopAds() {
                 domain: 'TOPFIN_US',
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
+                refresh: {
+                  time: 999,
+                  status: 'inactive',
+                  anchor: 'inactive',
+                },
                 pageSetting: {
                   exclude: ${JSON.stringify(TOPADS_EXCLUDED_PATHS)}
                 },
