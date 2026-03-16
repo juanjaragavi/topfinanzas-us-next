@@ -3,13 +3,25 @@
 import { useEffect, useCallback } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { logger } from "@/lib/logger";
+import {
+  JOBS_DELAYED_ADS_EVENT,
+  TOPADS_EXCLUDED_PATHS,
+  isJobsDelayedAdPath,
+  isTopAdsExcludedPath,
+  removePathFromTopAdsExclusions,
+  type DelayedJobsAdsEventDetail,
+} from "@/lib/jobs-delayed-ads";
 
 type TopAdsConfig = Record<string, unknown>;
+type TopAdsPageSetting = {
+  exclude?: string[];
+};
 
 /** Maximum ms to wait for window.topAds.spa to become available. */
 const SPA_READY_TIMEOUT = 3000;
 /** Interval between readiness checks. */
 const SPA_POLL_INTERVAL = 150;
+const TOPADS_SCRIPT_URL = "https://topads.topnetworks.co/topAds.min.js";
 
 /**
  * Module-level pathname tracker.
@@ -26,6 +38,83 @@ const SPA_POLL_INTERVAL = 150;
  * and skips, letting TopAds' bootstrap script handle initial ad fill.
  */
 let lastSPAPathname: string | null = null;
+
+function reinjectTopAdsScript(): void {
+  try {
+    const existingScripts = document.querySelectorAll(
+      'script[src*="topAds.min.js"]',
+    );
+    existingScripts.forEach((script) => script.remove());
+
+    const script = document.createElement("script");
+    script.src = TOPADS_SCRIPT_URL;
+    script.type = "text/javascript";
+    script.async = true;
+    script.defer = true;
+    script.setAttribute("data-cfasync", "false");
+
+    (document.head || document.getElementsByTagName("head")[0]).appendChild(
+      script,
+    );
+    logger.info("[TopAds] Re-injected external script for delayed Jobs flow");
+  } catch (error) {
+    logger.error("[TopAds] Failed to re-inject external script:", error);
+  }
+}
+
+function removePathFromCurrentExclusions(path: string): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.topAds = window.topAds || {};
+
+  const currentConfig = window.topAds.config ?? {};
+  const currentPageSetting =
+    (currentConfig as { pageSetting?: TopAdsPageSetting }).pageSetting ?? {};
+  const currentExclude = Array.isArray(currentPageSetting.exclude)
+    ? currentPageSetting.exclude
+    : TOPADS_EXCLUDED_PATHS;
+
+  window.topAds.config = {
+    ...currentConfig,
+    pageSetting: {
+      ...currentPageSetting,
+      exclude: removePathFromTopAdsExclusions(currentExclude, path),
+    },
+  } as TopAdsConfig;
+}
+
+function activateDelayedJobsAds(path: string): void {
+  removePathFromCurrentExclusions(path);
+
+  document
+    .querySelectorAll("[data-topads], [data-topads-rewarded]")
+    .forEach((el) => {
+      el.innerHTML = "";
+    });
+
+  let attempt = 0;
+  const maxAttempts = 20;
+  const pollInterval = 150;
+
+  const pollForVisibleContainers = () => {
+    attempt += 1;
+
+    const containers = document.querySelectorAll(
+      '[data-topads]:not([aria-hidden="true"]), [data-topads-rewarded]:not([aria-hidden="true"])',
+    );
+
+    if (containers.length > 0 || attempt >= maxAttempts) {
+      reinjectTopAdsScript();
+      return;
+    }
+
+    window.setTimeout(pollForVisibleContainers, pollInterval);
+  };
+
+  window.setTimeout(pollForVisibleContainers, pollInterval);
+}
 
 /**
  * TopAds SPA Navigation Handler
@@ -84,6 +173,13 @@ export default function TopAdsSPAHandler() {
     // navigations don't queue duplicate spa() calls.
     lastSPAPathname = pathname;
 
+    if (isTopAdsExcludedPath(pathname)) {
+      logger.info("[TopAds] Skipping excluded route", {
+        to: pathname,
+      });
+      return;
+    }
+
     let cancelled = false;
 
     logger.info("[TopAds] Route change detected", {
@@ -126,6 +222,40 @@ export default function TopAdsSPAHandler() {
       cancelled = true;
     };
   }, [pathname, searchParams, waitForTopAdsSPA]);
+
+  useEffect(() => {
+    const handleDelayedJobsActivation = (event: Event) => {
+      const customEvent = event as CustomEvent<DelayedJobsAdsEventDetail>;
+      const requestedPath = customEvent.detail?.path;
+
+      if (!requestedPath || requestedPath !== pathname) {
+        return;
+      }
+
+      if (!isJobsDelayedAdPath(requestedPath)) {
+        return;
+      }
+
+      logger.info("[TopAds] Activating delayed Jobs ads", {
+        path: requestedPath,
+        journeyId: customEvent.detail?.journeyId,
+      });
+
+      activateDelayedJobsAds(requestedPath);
+    };
+
+    window.addEventListener(
+      JOBS_DELAYED_ADS_EVENT,
+      handleDelayedJobsActivation as EventListener,
+    );
+
+    return () => {
+      window.removeEventListener(
+        JOBS_DELAYED_ADS_EVENT,
+        handleDelayedJobsActivation as EventListener,
+      );
+    };
+  }, [pathname]);
 
   return null; // This component doesn't render anything
 }

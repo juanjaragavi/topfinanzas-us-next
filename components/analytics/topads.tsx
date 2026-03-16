@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { logger } from "@/lib/logger";
+import { TOPADS_EXCLUDED_PATHS } from "@/lib/jobs-delayed-ads";
 
 /**
  * TopAds Integration Component
@@ -43,14 +44,7 @@ export default function TopAds() {
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 pageSetting: {
-                    exclude: [
-                        '/about-us/',
-                        '/contact-us/',
-                        '/privacy-policy/',
-                        '/terms-conditions/',
-                        '/campaign-quiz-credit-card-recomender',
-                        '/campaign-quiz-credit-card-recomender-short',
-                    ]
+                  exclude: ${JSON.stringify(TOPADS_EXCLUDED_PATHS)}
                 },
                 formats: {
                     interstitial: {

@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { logger } from "@/lib/logger";
+import { useEffect, useState } from "react";
 
 interface JobsDeferredAdProps {
   type: "rewarded" | "square";
@@ -16,8 +15,9 @@ interface JobsDeferredAdProps {
  *
  * Renders ad slots that are always present in the DOM.
  * When `defer={true}`, slots are hidden (zero height, overflow hidden) until
- * the "jobsQuizDone" event fires. After the event, slots are revealed and
- * `window.topAds.spa()` is called so TopAds fills the now-visible containers.
+ * the "jobsQuizDone" event fires. TopAds activation is handled separately by
+ * the global SPA handler once the quiz completion event removes the page-level
+ * exclusion and re-injects the vendor script.
  *
  * IMPORTANT: The slot div must exist in the DOM before topAds.spa() runs.
  * Conditional mounting (returning null until the event) causes TopAds to
@@ -32,42 +32,12 @@ export default function JobsDeferredAd({
   className,
 }: JobsDeferredAdProps) {
   const [revealed, setRevealed] = useState(!defer);
-  const spaFiredRef = useRef(false);
 
   useEffect(() => {
     if (!defer) return;
 
     const handler = () => {
       setRevealed(true);
-
-      // Fire topAds.spa() after React has flushed the reveal state change.
-      // rAF + setTimeout ensures the DOM is painted with the now-visible
-      // slots before TopAds scans for [data-topads] containers.
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          if (spaFiredRef.current) return;
-          spaFiredRef.current = true;
-
-          if (
-            typeof window !== "undefined" &&
-            window.topAds &&
-            typeof window.topAds.spa === "function"
-          ) {
-            try {
-              logger.info(
-                "[TopAds] Triggering spa() after jobsQuizDone reveal",
-              );
-              window.topAds.spa();
-            } catch (err) {
-              logger.error("[TopAds] spa() call failed after quiz reveal", err);
-            }
-          } else {
-            logger.warn(
-              "[TopAds] topAds.spa() not available after quiz reveal",
-            );
-          }
-        }, 100);
-      });
     };
 
     window.addEventListener("jobsQuizDone", handler);
