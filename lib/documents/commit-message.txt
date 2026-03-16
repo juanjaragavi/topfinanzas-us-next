@@ -1,6 +1,7 @@
-feat(jobs): defer ad initialization until quiz completion
+feat(jobs): defer TopAds fill until quiz completion
 
-- Created JobsDeferredAd component to conditionally render ad units.
-- Updated JobsQuizModal to dispatch custom event `jobsQuizDone` upon quiz completion.
-- Replaced hardcoded data-topads units with JobsDeferredAd in jobs promise templates.
-- Applied optional deferral logic exclusively for p1 and p2 promise pages.
+- keep deferred ad slots mounted and reveal them after jobsQuizDone
+- trigger topAds.spa() only after revealed slots are painted
+- update jobs quiz flows and related jobs pages/components for the new ad timing
+- include supporting formatting and translation string cleanup in touched jobs files
+

@@ -18,9 +18,8 @@ export default async function JobsLayout({
   try {
     // Dynamic import keeps the heavy @google-cloud/translate (gRPC) out of the
     // module-evaluation path, preventing listener leaks during HMR in dev.
-    const { parseAcceptLanguage, translateText } = await import(
-      "@/lib/translation/translate"
-    );
+    const { parseAcceptLanguage, translateText } =
+      await import("@/lib/translation/translate");
 
     const headersList = await headers();
     const acceptLanguage = headersList.get("accept-language");

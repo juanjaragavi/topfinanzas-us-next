@@ -111,8 +111,10 @@ export default function JobsQuizModal({
 }: JobsQuizModalProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [phase, setPhase] = useState<Phase>("quiz");
-  const [hoveredOptionIndex, setHoveredOptionIndex] = useState<number | null>(null);
-  
+  const [hoveredOptionIndex, setHoveredOptionIndex] = useState<number | null>(
+    null,
+  );
+
   // Disable body scroll when modal is open
   useEffect(() => {
     if (phase !== "done") {
@@ -138,7 +140,7 @@ export default function JobsQuizModal({
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/60 backdrop-blur-sm p-4"
       role="dialog"
       aria-modal="true"
@@ -148,59 +150,59 @@ export default function JobsQuizModal({
         {phase === "quiz" && (
           <>
             {/* Progress Bar Container */}
-            <div 
+            <div
               className="h-1.5 w-full shrink-0"
               style={{ backgroundColor: themeColorLight || "#f3f4f6" }}
             >
-              <div 
-                className="h-full transition-all duration-300 ease-out" 
-                style={{ 
+              <div
+                className="h-full transition-all duration-300 ease-out"
+                style={{
                   width: `${((currentQuestion + 1) / questions.length) * 100}%`,
-                  backgroundColor: themeColor
-                }} 
+                  backgroundColor: themeColor,
+                }}
               />
             </div>
 
             <div className="p-8 py-10 overflow-y-auto flex-1">
               {/* Question Text */}
-            <h2 
-              id="jobs-quiz-question-title"
-              className="text-lg font-medium text-gray-700 text-center mb-8 leading-snug"
-            >
-              {questions[currentQuestion].question}
-            </h2>
+              <h2
+                id="jobs-quiz-question-title"
+                className="text-lg font-medium text-gray-700 text-center mb-8 leading-snug"
+              >
+                {questions[currentQuestion].question}
+              </h2>
 
-            {/* Options */}
-            <div 
-              className="flex flex-col gap-3" 
-              id={`paso-${currentQuestion + 1}-${journeyId}`}
-            >
-              {questions[currentQuestion].options.map((option, idx) => {
-                const isHovered = hoveredOptionIndex === idx;
-                
-                return (
-                  <button
-                    key={`${option.value}-${idx}`}
-                    onClick={handleOptionClick}
-                    onMouseEnter={() => setHoveredOptionIndex(idx)}
-                    onMouseLeave={() => setHoveredOptionIndex(null)}
-                    onFocus={() => setHoveredOptionIndex(idx)}
-                    onBlur={() => setHoveredOptionIndex(null)}
-                    className="w-full py-3.5 px-4 rounded-[10px] text-center transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow"
-                    style={{
-                      backgroundColor: themeColor,
-                      color: "white",
-                      opacity: isHovered ? 0.9 : 1,
-                    }}
-                  >
-                    <span className="font-medium text-base tracking-wide leading-tight">
-                      {option.label}
-                    </span>
-                  </button>
-                );
-              })}
+              {/* Options */}
+              <div
+                className="flex flex-col gap-3"
+                id={`paso-${currentQuestion + 1}-${journeyId}`}
+              >
+                {questions[currentQuestion].options.map((option, idx) => {
+                  const isHovered = hoveredOptionIndex === idx;
+
+                  return (
+                    <button
+                      key={`${option.value}-${idx}`}
+                      onClick={handleOptionClick}
+                      onMouseEnter={() => setHoveredOptionIndex(idx)}
+                      onMouseLeave={() => setHoveredOptionIndex(null)}
+                      onFocus={() => setHoveredOptionIndex(idx)}
+                      onBlur={() => setHoveredOptionIndex(null)}
+                      className="w-full py-3.5 px-4 rounded-[10px] text-center transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow"
+                      style={{
+                        backgroundColor: themeColor,
+                        color: "white",
+                        opacity: isHovered ? 0.9 : 1,
+                      }}
+                    >
+                      <span className="font-medium text-base tracking-wide leading-tight">
+                        {option.label}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
           </>
         )}
 
@@ -211,12 +213,11 @@ export default function JobsQuizModal({
             duration={loadingDuration}
             onComplete={() => {
               setPhase("done");
+              // Dispatch the event that JobsDeferredAd listens for.
+              // JobsDeferredAd handles the topAds.spa() call after it
+              // reveals the ad slots — do not call spa() here to avoid
+              // a race condition where spa() runs before divs are mounted.
               window.dispatchEvent(new CustomEvent("jobsQuizDone"));
-              setTimeout(() => {
-                if (window.topAds?.spa) {
-                  window.topAds.spa();
-                }
-              }, 100);
             }}
           />
         )}

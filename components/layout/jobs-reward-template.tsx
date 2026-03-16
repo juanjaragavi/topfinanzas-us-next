@@ -40,7 +40,6 @@ export default function JobsRewardTemplate({
 }: JobsRewardTemplateProps) {
   return (
     <main className="flex min-h-screen flex-col bg-white">
-
       {/* Hero */}
       <section
         className="relative text-white py-12 md:py-16"

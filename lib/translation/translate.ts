@@ -16,9 +16,8 @@ async function getClient() {
   if (!_global._translateClient) {
     // Lazy-load @google-cloud/translate so gRPC is only imported when
     // translation is actually requested (non-English locale).
-    const { TranslationServiceClient } = await import(
-      "@google-cloud/translate"
-    );
+    const { TranslationServiceClient } =
+      await import("@google-cloud/translate");
     // ADC (Application Default Credentials) picked up automatically from
     // `gcloud auth application-default login` locally and from the SA in prod.
     _global._translateClient = new TranslationServiceClient();
@@ -80,7 +79,9 @@ export async function translateText(
 
   const projectId = process.env.GOOGLE_CLOUD_PROJECT;
   if (!projectId) {
-    logger.warn("GOOGLE_CLOUD_PROJECT env var is missing — skipping translation");
+    logger.warn(
+      "GOOGLE_CLOUD_PROJECT env var is missing — skipping translation",
+    );
     return texts;
   }
 
@@ -141,10 +142,9 @@ export async function translateText(
     }
   } catch (err: unknown) {
     // Degrade silently — fill in the original English text for any missing slots.
-    logger.warn(
-      "GCP Translation API call failed — falling back to English",
-      { error: err instanceof Error ? err.message : String(err) },
-    );
+    logger.warn("GCP Translation API call failed — falling back to English", {
+      error: err instanceof Error ? err.message : String(err),
+    });
     for (const idx of uncachedIndices) {
       if (results[idx] === undefined) {
         results[idx] = texts[idx];

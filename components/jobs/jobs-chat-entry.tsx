@@ -112,7 +112,6 @@ export default function JobsChatEntry({
       className="flex min-h-screen flex-col bg-white"
       data-journey={journeyId}
     >
-
       {/* Hero */}
       <section
         className="py-6 md:py-10 text-white"
@@ -128,7 +127,10 @@ export default function JobsChatEntry({
             {t("chatEntry.heroTitle", "Find Your Next Job Opportunity")}
           </h1>
           <p className="mt-2 text-white/80 text-sm md:text-base">
-            {t("chatEntry.heroSubtitle", "Answer a few quick questions to see the best openings matched for you")}
+            {t(
+              "chatEntry.heroSubtitle",
+              "Answer a few quick questions to see the best openings matched for you",
+            )}
           </p>
         </div>
       </section>
@@ -243,7 +245,6 @@ export default function JobsChatEntry({
           <div ref={chatEndRef} />
         </div>
       </div>
-
     </main>
   );
 }

@@ -10,9 +10,16 @@ export default function JobsQuiz02Overlay() {
   const QUESTIONS = [
     {
       id: "employer",
-      question: t("quiz02.q1.question", "Which type of employer appeals to you most?"),
+      question: t(
+        "quiz02.q1.question",
+        "Which type of employer appeals to you most?",
+      ),
       options: [
-        { emoji: "🛒", label: t("quiz02.q1.opt1", "Large retail (Target, Walmart)"), value: "retail" },
+        {
+          emoji: "🛒",
+          label: t("quiz02.q1.opt1", "Large retail (Target, Walmart)"),
+          value: "retail",
+        },
         {
           emoji: "📦",
           label: t("quiz02.q1.opt2", "E-commerce & warehouses (Amazon, UPS)"),
@@ -23,21 +30,40 @@ export default function JobsQuiz02Overlay() {
           label: t("quiz02.q1.opt3", "Healthcare & pharmacy (CVS, hospitals)"),
           value: "healthcare",
         },
-        { emoji: "🏛️", label: t("quiz02.q1.opt4", "Government / public sector"), value: "government" },
+        {
+          emoji: "🏛️",
+          label: t("quiz02.q1.opt4", "Government / public sector"),
+          value: "government",
+        },
       ],
     },
     {
       id: "experience",
-      question: t("quiz02.q2.question", "How much work experience do you have?"),
+      question: t(
+        "quiz02.q2.question",
+        "How much work experience do you have?",
+      ),
       options: [
         {
           emoji: "🌱",
           label: t("quiz02.q2.opt1", "No experience — this is my first job"),
           value: "none",
         },
-        { emoji: "📋", label: t("quiz02.q2.opt2", "Less than 1 year"), value: "under-1" },
-        { emoji: "🔧", label: t("quiz02.q2.opt3", "1 – 3 years"), value: "1-3" },
-        { emoji: "⭐", label: t("quiz02.q2.opt4", "More than 3 years"), value: "3plus" },
+        {
+          emoji: "📋",
+          label: t("quiz02.q2.opt2", "Less than 1 year"),
+          value: "under-1",
+        },
+        {
+          emoji: "🔧",
+          label: t("quiz02.q2.opt3", "1 – 3 years"),
+          value: "1-3",
+        },
+        {
+          emoji: "⭐",
+          label: t("quiz02.q2.opt4", "More than 3 years"),
+          value: "3plus",
+        },
       ],
     },
   ];

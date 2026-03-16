@@ -12,20 +12,52 @@ export default function JobsQuiz01Overlay() {
       id: "availability",
       question: t("quiz01.q1.question", "What’s your ideal work schedule?"),
       options: [
-        { emoji: "🕗", label: t("quiz01.q1.opt1", "Full-time (40+ hrs/week)"), value: "full-time" },
-        { emoji: "⏰", label: t("quiz01.q1.opt2", "Part-time (15–30 hrs/week)"), value: "part-time" },
-        { emoji: "🏠", label: t("quiz01.q1.opt3", "Remote / work from home"), value: "remote" },
-        { emoji: "📦", label: t("quiz01.q1.opt4", "Flexible / gig shifts"), value: "gig" },
+        {
+          emoji: "🕗",
+          label: t("quiz01.q1.opt1", "Full-time (40+ hrs/week)"),
+          value: "full-time",
+        },
+        {
+          emoji: "⏰",
+          label: t("quiz01.q1.opt2", "Part-time (15–30 hrs/week)"),
+          value: "part-time",
+        },
+        {
+          emoji: "🏠",
+          label: t("quiz01.q1.opt3", "Remote / work from home"),
+          value: "remote",
+        },
+        {
+          emoji: "📦",
+          label: t("quiz01.q1.opt4", "Flexible / gig shifts"),
+          value: "gig",
+        },
       ],
     },
     {
       id: "priorities",
       question: t("quiz01.q2.question", "What matters most to you in a job?"),
       options: [
-        { emoji: "🛡️", label: t("quiz01.q2.opt1", "Job stability & security"), value: "stability" },
-        { emoji: "📈", label: t("quiz01.q2.opt2", "Pay growth & advancement"), value: "growth" },
-        { emoji: "🗓️", label: t("quiz01.q2.opt3", "Schedule flexibility"), value: "flexibility" },
-        { emoji: "🏥", label: t("quiz01.q2.opt4", "Benefits & health insurance"), value: "benefits" },
+        {
+          emoji: "🛡️",
+          label: t("quiz01.q2.opt1", "Job stability & security"),
+          value: "stability",
+        },
+        {
+          emoji: "📈",
+          label: t("quiz01.q2.opt2", "Pay growth & advancement"),
+          value: "growth",
+        },
+        {
+          emoji: "🗓️",
+          label: t("quiz01.q2.opt3", "Schedule flexibility"),
+          value: "flexibility",
+        },
+        {
+          emoji: "🏥",
+          label: t("quiz01.q2.opt4", "Benefits & health insurance"),
+          value: "benefits",
+        },
       ],
     },
   ];

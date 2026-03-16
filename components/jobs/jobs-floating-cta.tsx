@@ -23,11 +23,21 @@ export default function JobsFloatingCta({
   thumbnailAlt,
 }: JobsFloatingCtaProps) {
   const t = useTranslation();
-  const resolvedHeadline = headline ?? t("floatingCta.headline", "Great benefits & flexibility!");
-  const resolvedCtaLabel = ctaLabel ?? t("floatingCta.ctaLabel", "See Jobs Now \u2192");
-  const resolvedAlt = thumbnailAlt ?? t("floatingCta.thumbnailAlt", "Job opportunities at top US companies");
-  const dismissLabel = t("floatingCta.dismiss", "Dismiss job opportunities widget");
-  const redirectText = t("floatingCta.redirect", "You will be redirected to another site");
+  const resolvedHeadline =
+    headline ?? t("floatingCta.headline", "Great benefits & flexibility!");
+  const resolvedCtaLabel =
+    ctaLabel ?? t("floatingCta.ctaLabel", "See Jobs Now \u2192");
+  const resolvedAlt =
+    thumbnailAlt ??
+    t("floatingCta.thumbnailAlt", "Job opportunities at top US companies");
+  const dismissLabel = t(
+    "floatingCta.dismiss",
+    "Dismiss job opportunities widget",
+  );
+  const redirectText = t(
+    "floatingCta.redirect",
+    "You will be redirected to another site",
+  );
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -97,9 +107,7 @@ export default function JobsFloatingCta({
         >
           {resolvedCtaLabel}
         </a>
-        <p className="text-xs text-gray-400 mt-1">
-          {redirectText}
-        </p>
+        <p className="text-xs text-gray-400 mt-1">{redirectText}</p>
       </div>
     </div>
   );
