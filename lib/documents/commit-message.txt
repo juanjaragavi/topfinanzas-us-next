@@ -1,5 +1,1 @@
-
-fix(analytics): disable TopAds refresh config
-
-
-
+fix: update robots.txt to allow Mediapartners-Google and remove AI crawler blocks
