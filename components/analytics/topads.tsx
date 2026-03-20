@@ -56,6 +56,7 @@ export default function TopAds() {
                         exclude: [
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
+                            '/credit-card-recommender-p1',
                         ],
                     },
                     offerwall: {

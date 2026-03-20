@@ -1,8 +1,5 @@
-refactor: unify credit card landing pages with reference architecture
+feat: add credit-card-recommender-p1 landing page
 
-- Refactor invit-credit-card-rec-us to match invit-credit-card-rec-us-2 pattern
-- Refactor choose-the-perfect-card-for-you-1 with same architecture
-- Add FinanceOfferwallRuntime quiz wrapper and TopAdsSquare ad slots
-- Add quiz configs (creditCardRecommender, chooseThePerfectCard)
-- Update TopAds interstitial and offerwall exclude lists for quiz pages
-- Unified UI: Header/Footer, gradient bg, Royal Blue CTAs, orange CTA
+- Create 1:1 copy of choose-the-perfect-card-for-you-1 at new route
+- Add creditCardRecommenderP1 quiz config to finance-quiz-config.ts
+- Add /credit-card-recommender-p1 to interstitial.exclude in TopAds config
