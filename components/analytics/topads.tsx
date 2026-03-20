@@ -44,7 +44,6 @@ export default function TopAds() {
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
                 refresh: {
-                  time: 999,
                   status: 'inactive',
                   anchor: 'inactive',
                 },
@@ -61,7 +60,7 @@ export default function TopAds() {
                         ],
                     },
                     offerwall: {
-                        status: 'active',
+                        status: 'inactive',
                         logoUrl: 'https://media.topfinanzas.com/images/LOGO-EnglishUS-COLOR.png',
                         websiteName: 'TopFinanzas US',
                         cooldown: '12',
