@@ -17,8 +17,8 @@ interface FinanceOfferwallProps {
 export default function FinanceOfferwall({ config }: FinanceOfferwallProps) {
   const texts = JSON.stringify({
     loading: config.loadingMessage,
-    ctaTitle: "Exclusive benefits are waiting for you!",
-    ctaButton: "Get Credit Card",
+    ctaTitle: "Found the best credit cards\u2026",
+    ctaButton: "See Cards Now",
     ctaDisclaimer: "To continue, it will be necessary to watch a short ad.",
   });
 

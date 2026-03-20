@@ -1,10 +1,1 @@
-fix: resolve TopAds quiz double-processing and script URL issues
-
-- Strip FinanceOfferwallRuntime to simple pass-through matching budgetbee
-  GamingOfferwallRuntime pattern (no useEffect script re-injection)
-- Fix TopAds script URL from topads.topnetworks.co to ads.gamadx.com
-- Remove DELAYED_FINANCE_AD_PATHS from TOPADS_EXCLUDED_PATHS spread
-- Add chase-sapphire-preferred path to offerwall.exclude for quiz takeover
-- Simplify offerwall-for-finance to pure data-topads-quiz container
-- Add TopAdsQuizIdStamper for paso-N journey tracking
-- Clean up unused delayed finance ads logic from SPA handler
+fix: update quiz offerwall text strings for credit card flow

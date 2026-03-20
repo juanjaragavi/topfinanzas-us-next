@@ -66,20 +66,21 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     questions: [
       {
         id: "credit-limit",
-        question: "Do you need more limit on your Credit Card?",
+        question: "Confirm Desired Credit Card Limit:",
         options: [
-          { label: "Yes", value: "yes" },
-          { label: "No", value: "no" },
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
         ],
       },
       {
         id: "preferred-benefit",
-        question: "Which benefit you prefer with your Credit Card?",
+        question: "I would also like:",
         options: [
           { label: "Cashback", value: "cashback" },
-          { label: "Travel Miles", value: "travel-miles" },
-          { label: "No handling fee", value: "no-fee" },
-          { label: "Other", value: "other" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
         ],
       },
     ],
