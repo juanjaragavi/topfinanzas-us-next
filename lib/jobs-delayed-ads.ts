@@ -1,3 +1,5 @@
+import { DELAYED_FINANCE_AD_PATHS } from "@/lib/finance-quiz-config";
+
 export const DELAYED_JOBS_AD_PATHS = [
   "/jobs/jobs-promise-p1",
   "/jobs/jobs-promise-p2",
@@ -15,6 +17,7 @@ const BASE_TOPADS_EXCLUDED_PATHS = [
 export const TOPADS_EXCLUDED_PATHS = [
   ...BASE_TOPADS_EXCLUDED_PATHS,
   ...DELAYED_JOBS_AD_PATHS,
+  ...DELAYED_FINANCE_AD_PATHS,
 ];
 
 export const JOBS_DELAYED_ADS_EVENT = "jobs:activate-delayed-ads";

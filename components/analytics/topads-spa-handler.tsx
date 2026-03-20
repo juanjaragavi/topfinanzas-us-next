@@ -11,6 +11,11 @@ import {
   removePathFromTopAdsExclusions,
   type DelayedJobsAdsEventDetail,
 } from "@/lib/jobs-delayed-ads";
+import {
+  FINANCE_DELAYED_ADS_EVENT,
+  DELAYED_FINANCE_AD_PATHS,
+  type DelayedFinanceAdsEventDetail,
+} from "@/lib/finance-quiz-config";
 
 type TopAdsConfig = Record<string, unknown>;
 type TopAdsPageSetting = {
@@ -85,7 +90,7 @@ function removePathFromCurrentExclusions(path: string): void {
   } as TopAdsConfig;
 }
 
-function activateDelayedJobsAds(path: string): void {
+function activateDelayedAds(path: string): void {
   removePathFromCurrentExclusions(path);
 
   document
@@ -114,6 +119,13 @@ function activateDelayedJobsAds(path: string): void {
   };
 
   window.setTimeout(pollForVisibleContainers, pollInterval);
+}
+
+function isFinanceDelayedAdPath(path: string): boolean {
+  const normalized = path.replace(/\/+$/, "");
+  return DELAYED_FINANCE_AD_PATHS.some(
+    (delayedPath) => delayedPath === normalized,
+  );
 }
 
 /**
@@ -241,18 +253,46 @@ export default function TopAdsSPAHandler() {
         journeyId: customEvent.detail?.journeyId,
       });
 
-      activateDelayedJobsAds(requestedPath);
+      activateDelayedAds(requestedPath);
+    };
+
+    const handleDelayedFinanceActivation = (event: Event) => {
+      const customEvent = event as CustomEvent<DelayedFinanceAdsEventDetail>;
+      const requestedPath = customEvent.detail?.path;
+
+      if (!requestedPath || requestedPath !== pathname) {
+        return;
+      }
+
+      if (!isFinanceDelayedAdPath(requestedPath)) {
+        return;
+      }
+
+      logger.info("[TopAds] Activating delayed Finance ads", {
+        path: requestedPath,
+        journeyId: customEvent.detail?.journeyId,
+      });
+
+      activateDelayedAds(requestedPath);
     };
 
     window.addEventListener(
       JOBS_DELAYED_ADS_EVENT,
       handleDelayedJobsActivation as EventListener,
     );
+    window.addEventListener(
+      FINANCE_DELAYED_ADS_EVENT,
+      handleDelayedFinanceActivation as EventListener,
+    );
 
     return () => {
       window.removeEventListener(
         JOBS_DELAYED_ADS_EVENT,
         handleDelayedJobsActivation as EventListener,
+      );
+      window.removeEventListener(
+        FINANCE_DELAYED_ADS_EVENT,
+        handleDelayedFinanceActivation as EventListener,
       );
     };
   }, [pathname]);

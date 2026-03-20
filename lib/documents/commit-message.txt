@@ -1,1 +1,12 @@
-fix: update robots.txt to allow Mediapartners-Google and remove AI crawler blocks
+feat: add finance quiz overlay and delayed ads for Chase Sapphire Preferred
+
+- Add finance quiz overlay component with offerwall flow
+  (components/finance/finance-quiz-overlay.tsx, lib/offerwall-for-finance.tsx)
+- Add finance quiz configuration with theme, questions, and CTA
+  (lib/finance-quiz-config.ts)
+- Integrate delayed finance ads into TopAds SPA handler with
+  new FINANCE_DELAYED_ADS_EVENT listener
+- Add Chase Sapphire Preferred benefits path to TopAds exclusions
+  and delayed ad activation flow
+- Update Chase Sapphire Preferred benefits page layout
+- Add finance user journey documentation

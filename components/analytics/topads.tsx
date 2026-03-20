@@ -73,6 +73,7 @@ export default function TopAds() {
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
                             '/financial-solutions/citi-simplicity-card-benefits',
+                            '/financial-solutions/chase-sapphire-preferred-credit-card-benefits',
                         ],
                     },
                 }
