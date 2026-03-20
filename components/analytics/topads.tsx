@@ -68,6 +68,8 @@ export default function TopAds() {
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
                             '/invit-credit-card-rec-us',
+                            '/invit-credit-card-rec-us-2',
+                            '/choose-the-perfect-card-for-you-1',
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
                             '/financial-solutions/citi-simplicity-card-benefits',
