@@ -1,1 +1,11 @@
-fix: update quiz offerwall text strings for credit card flow
+feat: add finance offerwall quiz journey to credit card recommender page
+
+- Wrap invit-credit-card-rec-us-2 page with FinanceOfferwallRuntime to
+  enable the two-step quiz offerwall and rewarded ad flow
+- Add creditCardRecommender2 quiz config in finance-quiz-config.ts with
+  dedicated journeyId and parentPath
+- Remove /invit-credit-card-rec-us-2 from TopAds interstitial exclude
+  list to allow quiz overlay activation
+- Apply design document color palette: Deep Navy headings, Royal Blue
+  survey buttons, Orange CTA with shadow for high conversion contrast
+- Preserve all existing text strings, metadata, and route URL

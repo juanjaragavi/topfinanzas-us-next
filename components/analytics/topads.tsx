@@ -54,7 +54,6 @@ export default function TopAds() {
                     interstitial: {
                         status: 'active',
                         exclude: [
-                            '/invit-credit-card-rec-us-2',
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
                         ],
