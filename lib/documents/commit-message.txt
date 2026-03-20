@@ -1,5 +1,6 @@
-feat: add credit-card-recommender-p1 landing page
+refactor(financial-solutions): standardize requirements pages and fix 404 links
 
-- Create 1:1 copy of choose-the-perfect-card-for-you-1 at new route
-- Add creditCardRecommenderP1 quiz config to finance-quiz-config.ts
-- Add /credit-card-recommender-p1 to interstitial.exclude in TopAds config
+- Standardized DOM structure of all 22 requirements pages to match the golden template
+- Replaced dead URLs in promotional hero banners with valid, active .mdx routes to improve SEO
+- Removed oversized non-standard heading tags
+- Cleaned up unused React and ResponsiveImage imports
