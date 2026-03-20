@@ -1,12 +1,10 @@
-feat: add finance quiz overlay and delayed ads for Chase Sapphire Preferred
+fix: resolve TopAds quiz double-processing and script URL issues
 
-- Add finance quiz overlay component with offerwall flow
-  (components/finance/finance-quiz-overlay.tsx, lib/offerwall-for-finance.tsx)
-- Add finance quiz configuration with theme, questions, and CTA
-  (lib/finance-quiz-config.ts)
-- Integrate delayed finance ads into TopAds SPA handler with
-  new FINANCE_DELAYED_ADS_EVENT listener
-- Add Chase Sapphire Preferred benefits path to TopAds exclusions
-  and delayed ad activation flow
-- Update Chase Sapphire Preferred benefits page layout
-- Add finance user journey documentation
+- Strip FinanceOfferwallRuntime to simple pass-through matching budgetbee
+  GamingOfferwallRuntime pattern (no useEffect script re-injection)
+- Fix TopAds script URL from topads.topnetworks.co to ads.gamadx.com
+- Remove DELAYED_FINANCE_AD_PATHS from TOPADS_EXCLUDED_PATHS spread
+- Add chase-sapphire-preferred path to offerwall.exclude for quiz takeover
+- Simplify offerwall-for-finance to pure data-topads-quiz container
+- Add TopAdsQuizIdStamper for paso-N journey tracking
+- Clean up unused delayed finance ads logic from SPA handler

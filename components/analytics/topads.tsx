@@ -81,7 +81,7 @@ export default function TopAds() {
             (function () {
                 var w = window.top, d = w.document, h = d.head || d.getElementsByTagName("head")[0];
                 var s = d.createElement("script");
-                s.src = "https://topads.topnetworks.co/topAds.min.js";
+                s.src = "https://ads.gamadx.com/topAds.min.js";
                 s.type = "text/javascript";
                 s.defer = true;
                 s.async = true;

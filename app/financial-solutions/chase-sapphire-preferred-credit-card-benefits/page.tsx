@@ -7,7 +7,8 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
-import FinanceQuizOverlay from "@/components/finance/finance-quiz-overlay";
+import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
+import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
   title: "Chase Sapphire Preferred Credit Card Benefits",
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function ChaseSapphirePreferredBenefitsPage() {
-  return (
-    <>
-      <FinanceQuizOverlay />
+  const offerwallQuiz = FINANCE_QUIZ_CONFIGS.chaseSapphirePreferred;
 
+  return (
+    <FinanceOfferwallRuntime quiz={offerwallQuiz}>
       <main className="bg-white min-h-screen flex flex-col font-sans">
         <Header />
 
@@ -241,6 +242,6 @@ export default function ChaseSapphirePreferredBenefitsPage() {
 
         <CompactFooter />
       </main>
-    </>
+    </FinanceOfferwallRuntime>
   );
 }
