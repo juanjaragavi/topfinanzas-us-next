@@ -175,6 +175,9 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
   creditCardRecommenderP1: {
     journeyId: "quiz-finance-cc-recommender-p1",
     parentPath: "/credit-card-recommender-p1",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options\u2026",
     questions: [
       {
         id: "credit-limit",
