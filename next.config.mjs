@@ -79,11 +79,6 @@ const nextConfig = {
       },
       // === Old quiz route redirects ===
       {
-        source: "/credit-card-recommender-p1",
-        destination: "/choose-the-perfect-card-for-you-1",
-        permanent: true,
-      },
-      {
         source: "/campaign-quiz-credit-card-recommender",
         destination: "/campaign-quiz-credit-card-recomender",
         permanent: true,

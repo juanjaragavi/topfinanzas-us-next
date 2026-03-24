@@ -1,6 +1,4 @@
-feat: add skipAds property to FinanceQuizConfig and wire data-quiz-skip-ads attribute
+fix: remove stale 301 redirect from /credit-card-recommender-p1 to /choose-the-perfect-card-for-you-1
 
-- Add optional `skipAds` boolean to `FinanceQuizConfig` interface
-- Set `skipAds: true` on `creditCardRecommenderP1` config (/credit-card-recommender-p1)
-- Set `skipAds: false` on `creditCardRecommender` config (/invit-credit-card-rec-us)
-- Inject `data-quiz-skip-ads` attribute on the offerwall hidden div for TopAds script consumption
+- Removed legacy permanent redirect in next.config.mjs that prevented the App Router page from being served
+- The redirect predated the actual app/credit-card-recommender-p1/page.tsx route
