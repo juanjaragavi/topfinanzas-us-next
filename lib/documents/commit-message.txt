@@ -1,4 +1,3 @@
-fix: remove stale 301 redirect from /credit-card-recommender-p1 to /choose-the-perfect-card-for-you-1
+fix: rename data-quiz-skip-ads to data-quiz-skip-ad in offerwall component
 
-- Removed legacy permanent redirect in next.config.mjs that prevented the App Router page from being served
-- The redirect predated the actual app/credit-card-recommender-p1/page.tsx route
+- Corrected the data attribute name to match the expected TopAds script convention

@@ -27,7 +27,7 @@ export default function FinanceOfferwall({ config }: FinanceOfferwallProps) {
       data-topads-quiz=""
       data-quiz-accent={config.themeColor}
       data-topads-texts={texts}
-      data-quiz-skip-ads={config.skipAds ? "true" : "false"}
+      data-quiz-skip-ad={config.skipAds ? "true" : "false"}
       aria-hidden="true"
       style={{
         position: "fixed",
