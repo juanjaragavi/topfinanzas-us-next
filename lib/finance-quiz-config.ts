@@ -40,6 +40,8 @@ export interface FinanceQuizConfig {
   questions: FinanceQuizQuestion[];
   /** When true, suppress ad activation on quiz completion */
   hideAds?: boolean;
+  /** When true, the TopAds script skips ads during the quiz flow */
+  skipAds?: boolean;
 }
 
 /* ─── Delayed-ad paths (financial-solutions benefits pages with quiz) ─── */
@@ -92,6 +94,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
     loadingMessage: "Fetching Credit Card Options\u2026",
+    skipAds: false,
     questions: [
       {
         id: "credit-limit",
@@ -178,6 +181,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
     loadingMessage: "Fetching Credit Card Options\u2026",
+    skipAds: true,
     questions: [
       {
         id: "credit-limit",

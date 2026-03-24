@@ -1,6 +1,6 @@
-refactor(financial-solutions): standardize requirements pages and fix 404 links
+feat: add skipAds property to FinanceQuizConfig and wire data-quiz-skip-ads attribute
 
-- Standardized DOM structure of all 22 requirements pages to match the golden template
-- Replaced dead URLs in promotional hero banners with valid, active .mdx routes to improve SEO
-- Removed oversized non-standard heading tags
-- Cleaned up unused React and ResponsiveImage imports
+- Add optional `skipAds` boolean to `FinanceQuizConfig` interface
+- Set `skipAds: true` on `creditCardRecommenderP1` config (/credit-card-recommender-p1)
+- Set `skipAds: false` on `creditCardRecommender` config (/invit-credit-card-rec-us)
+- Inject `data-quiz-skip-ads` attribute on the offerwall hidden div for TopAds script consumption
