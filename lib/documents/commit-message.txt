@@ -1,3 +1,3 @@
-fix: rename data-quiz-skip-ads to data-quiz-skip-ad in offerwall component
+fix: remove /credit-card-recommender-p1 from TopAds pageSetting exclusion list
 
-- Corrected the data attribute name to match the expected TopAds script convention
+- The route was incorrectly excluded from TopAds page settings, preventing normal ad initialization
