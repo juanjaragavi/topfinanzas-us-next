@@ -1,3 +1,8 @@
-fix: remove /credit-card-recommender-p1 from TopAds pageSetting exclusion list
+feat: add finance quiz recommender landing page
 
-- The route was incorrectly excluded from TopAds page settings, preventing normal ad initialization
+- Create app/finance-quiz-recommender-p1/page.tsx with two-step credit card quiz overlay
+- Step 1: credit card limit selection, Step 2: feature preference selection
+- Fixed full-screen overlay with blur background and dark tint covering header
+- Orange-themed buttons matching FINANCE_QUIZ_THEME design system
+- Redirects to external affiliate URL on Step 2 completion
+- Body scroll lock while overlay is active
