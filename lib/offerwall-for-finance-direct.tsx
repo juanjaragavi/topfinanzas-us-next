@@ -1,30 +1,21 @@
 /**
- * Single-question Finance offerwall container.
+ * Question-less Finance offerwall container.
  *
- * Renders the `data-topads-quiz` scaffold with exactly one question so
- * TopAds shows a minimal quiz step before the preloader and CTA button.
- * Designed for pages that need a lightweight offerwall interaction.
+ * Renders just the `data-topads-quiz` scaffold with NO question children
+ * so TopAds skips directly to the preloader and CTA button.
+ * Designed for pages that need the offerwall without any quiz interaction.
  */
 
 interface FinanceOfferwallDirectProps {
   themeColor: string;
   loadingMessage: string;
   skipAds?: boolean;
-  question?: string;
-  options?: { label: string; value: string }[];
 }
 
 export default function FinanceOfferwallDirect({
   themeColor,
   loadingMessage,
   skipAds = false,
-  question = "Confirm Desired Credit Card Limit:",
-  options = [
-    { label: "$2500", value: "2500" },
-    { label: "$5000", value: "5000" },
-    { label: "$10000", value: "10000" },
-    { label: "I need more", value: "more" },
-  ],
 }: FinanceOfferwallDirectProps) {
   const texts = JSON.stringify({
     loading: loadingMessage,
@@ -52,25 +43,6 @@ export default function FinanceOfferwallDirect({
         whiteSpace: "nowrap",
         clipPath: "inset(50%)",
       }}
-    >
-      <div data-quiz-question="">
-        <span
-          data-question-text=""
-          style={{ all: "unset", display: "block" }}
-        >
-          {question}
-        </span>
-        {options.map((opt) => (
-          <button
-            key={opt.value}
-            type="button"
-            data-answer=""
-            style={{ all: "unset", display: "block" }}
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
-    </div>
+    />
   );
 }

@@ -1,5 +1,6 @@
-fix: temporarily disable FinanceOfferwallRuntime on recommender pages
+fix: whitelist quiz-overlay from orphan-cleanup CSS and revert offerwall to question-less scaffold
 
-Remove FinanceOfferwallRuntime wrapper from invit-credit-card-rec-us and
-credit-card-recommender-p1 pages to allow clean page loads with ad units
-enabled. Imports are commented out with TODO markers for easy re-enablement.
+- Exempt #quiz-overlay from aggressive orphan overlay cleanup rules in globals.css
+- Add immediate backdrop-filter blur(8px) and dark semi-transparent background to #quiz-overlay
+- Condition main content blur-stripping rules to only apply when quiz-overlay is absent
+- Revert offerwall-for-finance-direct.tsx to self-closing div with no quiz question children
