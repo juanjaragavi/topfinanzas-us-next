@@ -19,10 +19,10 @@ echo "[3/5] Building the application..."
 sudo npm run build
 
 echo "[4/5] Restarting PM2 process 'topfinanzas-us-next'..."
-sudo -u juanjaramillo pm2 restart topfinanzas-us-next
+sudo pm2 restart topfinanzas-us-next
 
 echo "[5/5] Saving current PM2 process list..."
-sudo -u juanjaramillo pm2 save
+sudo pm2 save
 
 # Note: 'sudo pm2 startup' is typically a one-time setup command
 # to ensure pm2 resurrects processes on server reboot.
