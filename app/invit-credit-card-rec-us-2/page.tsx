@@ -10,9 +10,8 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TopAdsSquare } from "@/components/ads/topads-placement";
-import FinanceOfferwall from "@/lib/offerwall-for-finance";
+import FinanceOfferwallDirect from "@/lib/offerwall-for-finance-direct";
 import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
-import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
   title:
@@ -24,11 +23,6 @@ export const metadata: Metadata = {
 };
 
 export default function InvitCreditCardRecUS2Page() {
-  const offerwallQuiz = {
-    ...FINANCE_QUIZ_CONFIGS.creditCardRecommender2,
-    skipAds: false,
-  };
-
   return (
     <>
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
@@ -188,8 +182,12 @@ export default function InvitCreditCardRecUS2Page() {
         </main>
         <Footer />
       </div>
-      <FinanceOfferwall config={offerwallQuiz} />
-      <TopAdsQuizIdStamper journeyId={offerwallQuiz.journeyId} />
+      <FinanceOfferwallDirect
+        themeColor="#e7b739"
+        loadingMessage="Fetching Credit Card Options\u2026"
+        skipAds={false}
+      />
+      <TopAdsQuizIdStamper journeyId="quiz-finance-cc-recommender-02" />
     </>
   );
 }
