@@ -10,8 +10,9 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TopAdsSquare } from "@/components/ads/topads-placement";
-import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
-import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
+// TODO: Temporarily disabled FinanceOfferwallRuntime – re-enable when ready
+// import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
+// import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
   title:
@@ -23,10 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function FindYourCardPage() {
-  const offerwallQuiz = FINANCE_QUIZ_CONFIGS.chooseThePerfectCard;
-
   return (
-    <FinanceOfferwallRuntime quiz={offerwallQuiz}>
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-4xl">
@@ -184,6 +182,5 @@ export default function FindYourCardPage() {
         </main>
         <Footer />
       </div>
-    </FinanceOfferwallRuntime>
   );
 }
