@@ -184,7 +184,7 @@ export default function InvitCreditCardRecUS2Page() {
       </div>
       <FinanceOfferwallDirect
         themeColor="#e7b739"
-        loadingMessage="Fetching Credit Card Options\u2026"
+        loadingMessage="Fetching Credit Card Options 2026"
         skipAds={false}
       />
       <TopAdsQuizIdStamper journeyId="quiz-finance-cc-recommender-02" />

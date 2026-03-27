@@ -64,7 +64,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
       "/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
-    loadingMessage: "Fetching Credit Card Options\u2026",
+    loadingMessage: "Fetching Credit Card Options 2026",
     questions: [
       {
         id: "credit-limit",
@@ -93,7 +93,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     parentPath: "/invit-credit-card-rec-us",
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
-    loadingMessage: "Fetching Credit Card Options\u2026",
+    loadingMessage: "Fetching Credit Card Options 2026",
     skipAds: false,
     questions: [
       {
@@ -123,7 +123,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     parentPath: "/invit-credit-card-rec-us-2",
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
-    loadingMessage: "Fetching Credit Card Options\u2026",
+    loadingMessage: "Fetching Credit Card Options 2026",
     questions: [
       {
         id: "credit-limit",
@@ -152,7 +152,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     parentPath: "/choose-the-perfect-card-for-you-1",
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
-    loadingMessage: "Fetching Credit Card Options\u2026",
+    loadingMessage: "Fetching Credit Card Options 2026",
     questions: [
       {
         id: "credit-limit",
@@ -180,7 +180,7 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
     parentPath: "/credit-card-recommender-p1",
     themeColor: FINANCE_QUIZ_THEME.color,
     themeColorLight: FINANCE_QUIZ_THEME.colorLight,
-    loadingMessage: "Fetching Credit Card Options\u2026",
+    loadingMessage: "Fetching Credit Card Options 2026",
     skipAds: true,
     questions: [
       {

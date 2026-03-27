@@ -1,9 +1,13 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 /**
  * Question-less Finance offerwall container.
  *
  * Renders just the `data-topads-quiz` scaffold with NO question children
  * so TopAds skips directly to the preloader and CTA button.
- * Designed for pages that need the offerwall without any quiz interaction.
+ * Deferred to client-side mount so the page content paints first.
  */
 
 interface FinanceOfferwallDirectProps {
@@ -17,6 +21,15 @@ export default function FinanceOfferwallDirect({
   loadingMessage,
   skipAds = false,
 }: FinanceOfferwallDirectProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Defer scaffold until after first paint so page content is visible
+    // before TopAds creates its overlay
+    requestAnimationFrame(() => setMounted(true));
+  }, []);
+
+  if (!mounted) return null;
   const texts = JSON.stringify({
     loading: loadingMessage,
     ctaTitle: "Found the best credit cards\u2026",

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import type { FinanceQuizConfig } from "@/lib/finance-quiz-config";
 
 /**
@@ -7,7 +10,8 @@ import type { FinanceQuizConfig } from "@/lib/finance-quiz-config";
  * The TopAds external script discovers this DOM node via the
  * `data-topads-quiz` attribute, parses the question/answer markup,
  * and renders its own quiz modal overlay with the supplied accent
- * colour and copy strings. React never renders visible UI here.
+ * colour and copy strings. Deferred to client-side mount so the page
+ * content paints first.
  */
 
 interface FinanceOfferwallProps {
@@ -15,6 +19,15 @@ interface FinanceOfferwallProps {
 }
 
 export default function FinanceOfferwall({ config }: FinanceOfferwallProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Defer scaffold until after first paint so page content is visible
+    // before TopAds creates its overlay
+    requestAnimationFrame(() => setMounted(true));
+  }, []);
+
+  if (!mounted) return null;
   const texts = JSON.stringify({
     loading: config.loadingMessage,
     ctaTitle: "Found the best credit cards\u2026",

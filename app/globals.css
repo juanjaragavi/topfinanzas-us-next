@@ -303,9 +303,7 @@ body
   ):not(#quiz-overlay):empty,
 body > div[class*="backdrop"]:empty:not(#quiz-overlay),
 body
-  > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]):not(
-    #quiz-overlay
-  ) {
+  > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]):not(#quiz-overlay) {
   display: none !important;
   pointer-events: none !important;
 }
