@@ -32,7 +32,7 @@ export default function FinanceOfferwallDirect({
   if (!mounted) return null;
   const texts = JSON.stringify({
     loading: loadingMessage,
-    ctaTitle: "Found the best credit cards\u2026",
+    ctaTitle: "Found the best credit cards 2026",
     ctaButton: "See Cards Now",
     ctaDisclaimer: "To continue, it will be necessary to watch a short ad.",
   });

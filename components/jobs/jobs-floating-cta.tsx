@@ -26,7 +26,7 @@ export default function JobsFloatingCta({
   const resolvedHeadline =
     headline ?? t("floatingCta.headline", "Great benefits & flexibility!");
   const resolvedCtaLabel =
-    ctaLabel ?? t("floatingCta.ctaLabel", "See Jobs Now \u2192");
+    ctaLabel ?? t("floatingCta.ctaLabel", "See Jobs Now  2192");
   const resolvedAlt =
     thumbnailAlt ??
     t("floatingCta.thumbnailAlt", "Job opportunities at top US companies");

@@ -72,7 +72,7 @@ export default function JobsFooter() {
           <p className="text-xs text-gray-500 pt-2 border-t border-gray-200">
             {t(
               "footer.copyright",
-              "A TOP NETWORKS INC. Product | \u00A9 Copyright Top Networks Inc. 2025",
+              "A TOP NETWORKS INC. Product |  00A9 Copyright Top Networks Inc. 2025",
             )}
           </p>
         </div>

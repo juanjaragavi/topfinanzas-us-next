@@ -44,8 +44,8 @@ export default function JobsChat02Page() {
           label: t("chat02.q2.opt1", "No experience yet"),
           value: "no-experience",
         },
-        { label: t("chat02.q2.opt2", "1\u20132 years"), value: "entry-level" },
-        { label: t("chat02.q2.opt3", "3\u20135 years"), value: "mid-level" },
+        { label: t("chat02.q2.opt2", "1 20132 years"), value: "entry-level" },
+        { label: t("chat02.q2.opt3", "3 20135 years"), value: "mid-level" },
         { label: t("chat02.q2.opt4", "5+ years"), value: "experienced" },
       ],
     },
@@ -64,12 +64,12 @@ export default function JobsChat02Page() {
       themeColorLight={JOBS_THEME.colorLight}
       successMessage={t(
         "chat02.successMessage",
-        "Perfect! I found job openings that match your background and interests. These companies are actively hiring right now \u2014 positions fill up fast, so let\u2019s get you started!",
+        "Perfect! I found job openings that match your background and interests. These companies are actively hiring right now  2014 positions fill up fast, so let 2019s get you started!",
       )}
       ctaButtonText={t("chat02.ctaButton", "See My Matched Job Openings")}
       ctaSecondaryText={t(
         "chat02.ctaSecondary",
-        "View available positions \u2014 updated daily",
+        "View available positions  2014 updated daily",
       )}
       redirectTo="/jobs/jobs-promise-p2"
     />
