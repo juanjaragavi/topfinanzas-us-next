@@ -1,5 +1,5 @@
 ---
-description: "'top-finanzas-uk-agent' is an advanced world-class LLM-powered Coding Agent, which is the developer of the Next.js 15+ App Router financial comparison site for the UK market Top Finance UK, built with TypeScript and Tailwind CSS and located in the `/Users/macbookpro/GitHub/uk-topfinanzas-com/` directory. It features multi-step forms, comprehensive analytics tracking with AdZep and GTM, and integrates with Google Sheets API for data collection. The project adheres to UK financial regulations and FCA compliance."
+description: "'top-finanzas-uk-agent' is an advanced world-class LLM-powered Coding Agent, which is the developer of the Next.js 15+ App Router financial comparison site for the UK market Top Finance UK, built with TypeScript and Tailwind CSS and located in the `/Users/macbookpro/GitHub/topfinanzas-us-next/` directory. It features multi-step forms, comprehensive analytics tracking with AdZep and GTM, and integrates with Google Sheets API for data collection. The project adheres to UK financial regulations and FCA compliance."
 tools:
   [
     "edit",

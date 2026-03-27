@@ -10,7 +10,7 @@ Successfully created an abbreviated quiz variant that reduces user friction by c
 
 #### New Quiz Page
 
-- **Path**: `app/campaign-quiz-credit-card-recommender-short/`
+- **Path**: `app/campaign-quiz-credit-card-recomender-short/`
 - **Files Created**:
   - `page.tsx` - Main quiz page component
   - `metadata.ts` - SEO metadata configuration
@@ -132,14 +132,14 @@ All visual elements from the screenshot are preserved:
 
 #### Full Quiz
 
-- **Path**: `/campaign-quiz-credit-card-recommender`
-- **URL**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recommender`
+- **Path**: `/campaign-quiz-credit-card-recomender`
+- **URL**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recomender`
 - **Canonical**: Set in metadata
 
 #### Short Quiz
 
-- **Path**: `/campaign-quiz-credit-card-recommender-short`
-- **URL**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recommender-short`
+- **Path**: `/campaign-quiz-credit-card-recomender-short`
+- **URL**: `https://us.topfinanzas.com/campaign-quiz-credit-card-recomender-short`
 - **Canonical**: Set in metadata
 
 ### 8. Logging and Debugging
@@ -191,7 +191,7 @@ Identical for both versions:
 
 #### Functional Testing
 
-2. [ ] Navigate to `/campaign-quiz-credit-card-recommender-short`
+2. [ ] Navigate to `/campaign-quiz-credit-card-recomender-short`
 3. [ ] Complete Step 1 (preference selection)
 4. [ ] Complete Step 2 (income selection)
 5. [ ] Test Step 3 validation:
@@ -234,7 +234,7 @@ Identical for both versions:
 
 #### Regression Testing
 
-21. [ ] Test original quiz at `/campaign-quiz-credit-card-recommender`
+21. [ ] Test original quiz at `/campaign-quiz-credit-card-recomender`
 22. [ ] Verify it still writes to original sheet (not "short-version")
 23. [ ] Verify all 4 fields still required
 24. [ ] Verify no functionality broken
@@ -278,7 +278,7 @@ Identical for both versions:
 
 ```
 app/
-├── campaign-quiz-credit-card-recommender-short/
+├── campaign-quiz-credit-card-recomender-short/
 │   ├── metadata.ts
 │   └── page.tsx
 └── api/
@@ -329,7 +329,7 @@ No new environment variables required. Uses existing:
 ### Build Output
 
 ```
-Route: /campaign-quiz-credit-card-recommender-short
+Route: /campaign-quiz-credit-card-recomender-short
 Size: 3.82 kB
 First Load JS: 170 kB
 Status: ○ (Static)
@@ -346,7 +346,7 @@ Status: ○ (Static)
 
 If issues occur:
 
-1. Delete `app/campaign-quiz-credit-card-recommender-short/` directory
+1. Delete `app/campaign-quiz-credit-card-recomender-short/` directory
 2. Delete `app/api/sheets/short-version/` directory
 3. Delete `components/steps/step3-short.tsx` file
 4. Rebuild and redeploy

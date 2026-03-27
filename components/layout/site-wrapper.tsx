@@ -13,7 +13,7 @@ export default function SiteWrapper({
   return (
     <div
       className={`min-h-screen transition-transform duration-300 ease-in-out ${
-        isMobileMenuOpen ? "translate-x-[300px]" : "translate-x-0"
+        isMobileMenuOpen ? "translate-x-[300px]" : ""
       }`}
     >
       {/* Overlay to close menu when clicking outside - optional but good UX */}

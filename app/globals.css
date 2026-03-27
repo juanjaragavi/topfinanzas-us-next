@@ -296,13 +296,14 @@ html[style*="overflow: hidden"] {
 body
   > div[style*="position: fixed"][style*="inset: 0"]:not(
     [id*="uk_topfinanzas"]
-  ):empty,
+  ):not(#quiz-overlay):empty,
 body
   > div[style*="position: fixed"][style*="z-index"][style*="background"]:not(
     [id*="uk_topfinanzas"]
-  ):empty,
-body > div[class*="backdrop"]:empty,
-body > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]) {
+  ):not(#quiz-overlay):empty,
+body > div[class*="backdrop"]:empty:not(#quiz-overlay),
+body
+  > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]):not(#quiz-overlay) {
   display: none !important;
   pointer-events: none !important;
 }
@@ -313,7 +314,9 @@ body > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]) {
 body
   > div[style*="position: fixed"][style*="z-index"]:not(
     [id*="uk_topfinanzas"]
-  ):not(:has(iframe)):not(:has(img)):not(:has([id^="google_ads"])) {
+  ):not(#quiz-overlay):not(:has(iframe)):not(:has(img)):not(
+    :has([id^="google_ads"])
+  ) {
   opacity: 0 !important;
   pointer-events: none !important;
   transition: opacity 0.3s ease-out !important;
@@ -322,25 +325,34 @@ body
 /* Additional protection: Hide fixed overlays with blur that have no ad content */
 body
   > div[style*="backdrop-filter"]:not([id*="uk_topfinanzas"]):not(
-    :has(iframe)
-  ):not(:has([id^="uk_topfinanzas_"])) {
+    #quiz-overlay
+  ):not(:has(iframe)):not(:has([id^="uk_topfinanzas_"])) {
   opacity: 0 !important;
   pointer-events: none !important;
   backdrop-filter: none !important;
 }
 
 /* Remove backdrop-filter blur effects from body when no active ads */
-body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])),
-body:not(:has([data-topads-active])) {
+body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])):not(
+    :has(#quiz-overlay)
+  ),
+body:not(:has([data-topads-active])):not(:has(#quiz-overlay)) {
   backdrop-filter: none !important;
   filter: none !important;
 }
 
 /* Ensure main content containers are not blurred when ads are dismissed */
-main,
-#__next,
-[id*="root"],
-.container {
+body:not(:has(#quiz-overlay)) main,
+body:not(:has(#quiz-overlay)) #__next,
+body:not(:has(#quiz-overlay)) [id*="root"],
+body:not(:has(#quiz-overlay)) .container {
   backdrop-filter: none !important;
   filter: none !important;
+}
+
+/* TopAds Quiz Overlay — immediate blur behind the overlay */
+#quiz-overlay {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background-color: rgba(0, 0, 0, 0.45) !important;
 }

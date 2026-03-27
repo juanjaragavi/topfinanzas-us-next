@@ -1,8 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
@@ -59,26 +59,19 @@ export default function CapitalOneVentureOneRequirementsPage() {
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
-              <div className="w-full h-full">
-                <div className="bg-[#19263A] rounded-lg overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
-                  <p className="text-4xl font-bold text-white text-center tracking-tight leading-snug">
-                    Capital One <br /> VentureOne
-                  </p>
-                </div>
-              </div>
-              <div className="w-full h-full">
-                <div className="rounded-lg overflow-hidden h-full">
-                  <ResponsiveImage
-                    src="https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp"
-                    alt="Capital One VentureOne Rewards Credit Card Requirements"
-                    width={800}
-                    height={600}
-                    className="object-cover h-full w-full"
-                    priority
-                  />
-                </div>
-              </div>
+            {/* ELEMENT 7: HERO IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Image
+                src="https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp"
+                alt="Capital One VentureOne Rewards Credit Card Requirements"
+                width={900}
+                height={507}
+                className="w-full h-auto rounded-xl"
+                priority={false}
+                fetchPriority="high"
+                quality={85}
+                loading="eager"
+              />
             </div>
 
             <div className="space-y-2 mb-8">
@@ -143,14 +136,19 @@ export default function CapitalOneVentureOneRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 12: FIRST PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                  alt="Practical Guide to Getting Out of Debt"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* Gathering the necessary documentation */}
@@ -215,14 +213,19 @@ export default function CapitalOneVentureOneRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 14: SECOND PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/financial-solutions">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                  alt="Personal Loans - Your Smart Strategy for Financial Control"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* The application process made simple */}
@@ -282,14 +285,19 @@ export default function CapitalOneVentureOneRequirementsPage() {
               </li>
             </ul>
 
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 16: THIRD PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                  alt="Looking for the Perfect Credit Card?"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* Tips for successful approval */}

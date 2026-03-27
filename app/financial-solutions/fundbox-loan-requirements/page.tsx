@@ -152,8 +152,9 @@ export default function RequirementsFundboxLoanPage() {
                   activity.
                 </p>
 
+                {/* ELEMENT 12: FIRST PROMOTIONAL IMAGE */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/getting-out-of-debt-a-practical-guide/">
+                  <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
                       alt="Practical Guide to Getting Out of Debt"
@@ -204,8 +205,9 @@ export default function RequirementsFundboxLoanPage() {
                   the next business day.
                 </p>
 
+                {/* ELEMENT 14: SECOND PROMOTIONAL IMAGE */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/personal-loans-your-smart-strategy-for-financial-control/">
+                  <Link href="/financial-solutions">
                     <Image
                       src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
                       alt="Personal Loans - Your Smart Strategy for Financial Control"
@@ -260,8 +262,9 @@ export default function RequirementsFundboxLoanPage() {
                   </div>
                 </div>
 
+                {/* ELEMENT 16: THIRD PROMOTIONAL IMAGE */}
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings/">
+                  <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings">
                     <Image
                       src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
                       alt="Looking for the Perfect Credit Card?"

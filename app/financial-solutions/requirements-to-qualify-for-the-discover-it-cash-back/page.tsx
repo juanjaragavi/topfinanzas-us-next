@@ -1,6 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
-import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
@@ -38,25 +39,19 @@ export default function DiscoverItCashBackRequirementsPage() {
               Requirements
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8 items-center">
-              <div className="w-full">
-                <div className="my-4 overflow-hidden flex items-center justify-center p-8 h-full min-h-[300px]">
-                  <p className="text-4xl font-bold text-gray-800 tracking-tight text-center">
-                    Discover it® Cash Back
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="rounded-lg overflow-hidden mb-0">
-                  <ResponsiveImage
-                    src="https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp"
-                    alt="Discover it® Cash Back Requirements"
-                    width={800}
-                    height={450}
-                    priority
-                  />
-                </div>
-              </div>
+            {/* ELEMENT 7: HERO IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Image
+                src="https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp"
+                alt="Discover it® Cash Back Requirements"
+                width={900}
+                height={507}
+                className="w-full h-auto rounded-xl"
+                priority={false}
+                fetchPriority="high"
+                quality={85}
+                loading="eager"
+              />
             </div>
 
             <div className="space-y-2 mb-8">
@@ -117,8 +112,8 @@ export default function DiscoverItCashBackRequirementsPage() {
               Recommended credit score: Good to excellent
             </h3>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              To qualify for the Discover it® Cash Back, you'll generally need
-              a credit score in the range of <strong>670 to 850</strong>.
+              To qualify for the Discover it® Cash Back, you'll generally need a
+              credit score in the range of <strong>670 to 850</strong>.
             </p>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
               <strong>Why does your credit score matter?</strong>
@@ -212,14 +207,19 @@ export default function DiscoverItCashBackRequirementsPage() {
               </li>
             </ul>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 12: FIRST PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                  alt="Practical Guide to Getting Out of Debt"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -269,22 +269,27 @@ export default function DiscoverItCashBackRequirementsPage() {
               </li>
             </ul>
 
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 14: SECOND PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/financial-solutions">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                  alt="Personal Loans - Your Smart Strategy for Financial Control"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
               How to apply successfully
             </h2>
             <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
-              If you meet the above criteria, applying for the Discover it®
-              Cash Back card is simple:
+              If you meet the above criteria, applying for the Discover it® Cash
+              Back card is simple:
             </p>
             <ol className="list-decimal pl-5 space-y-2 mb-6 text-left text-gray-800 text-md leading-5 marker:text-[#A0465C] marker:font-bold">
               <li>Visit the official Discover it® Cash Back website.</li>
@@ -302,14 +307,19 @@ export default function DiscoverItCashBackRequirementsPage() {
               enjoy its benefits.
             </p>
 
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 16: THIRD PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                  alt="Looking for the Perfect Credit Card?"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* Is the Discover it® Cash Back right for you? / CTA */}

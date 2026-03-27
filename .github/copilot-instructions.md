@@ -1,214 +1,106 @@
-# US TopFinanzas Copilot Instructions
+# TopFinanzas US — Copilot Instructions
 
-## Project Architecture
+**Next.js 15.4.10 + React 19 + TypeScript (strict) + Tailwind CSS**
+US financial comparison site migrating from `https://us.topfinanzas.com`.
+Full architecture details: see [`CLAUDE.md`](../CLAUDE.md).
 
-This is a **Next.js 15+ App Router** financial comparison site for the US market (migration target for `https://us.topfinanzas.com`), built with TypeScript and Tailwind CSS. The architecture centers around credit card/loan comparison tools with multi-step forms and comprehensive analytics tracking.
+## Build & Test
 
-### Key System Components
+```bash
+npm run dev      # Turbopack dev server → http://localhost:3040
+npm run build    # Production build (NODE_OPTIONS=--max-old-space-size=4096)
+npm run start    # Production server → port 3040
+npm run lint     # ESLint
+npm run format   # Prettier
 
-- **Analytics Layer**: GTM + TopAds (proprietary) integration at `/components/analytics/`
-- **UI System**: Shadcn/UI + Radix primitives with custom variants in `/components/ui/`
-- **Form Architecture**: Multi-step forms using React Hook Form + Zod in `/components/forms/` and `/components/steps/`
-- **Content System**: MDX support for blog content in `/content/` with custom components
-- **API Integration**: Google Sheets API for data collection at `/app/api/sheets/`
-- **Environment Management**: Multiple env files (`.env`, `.env.production`, `.env.local`) with strict production controls
+# Integration tests
+npm run test:brevo
+npm run test:activecampaign
+```
 
-### Project-Specific Patterns
+> Port is **3040**, not 3000.
 
-#### 1. Component Organization
+## Git Workflow (Non-Negotiable)
+
+```bash
+bash scripts/git-workflow.sh "<conventional commit message>"
+```
+
+Never use raw `git add/commit/push`. The script enforces TypeScript type-check, ESLint, Conventional Commits format, and pushes to dev/main/backup branches automatically. Available flags: `--branch`, `--force`, `--verify-build`, `--dry-run`.
+
+See [`.github/instructions/PUSH-AND-COMMIT.instructions.md`](.github/instructions/PUSH-AND-COMMIT.instructions.md).
+
+## Architecture
+
+| Area             | Path                                     | Notes                                                              |
+| ---------------- | ---------------------------------------- | ------------------------------------------------------------------ |
+| Pages            | `app/`                                   | App Router; Server Components by default                           |
+| UI primitives    | `components/ui/`                         | Shadcn/UI + Radix                                                  |
+| Analytics        | `components/analytics/`                  | GTM → TopAds load order is critical                                |
+| Multi-step forms | `components/steps/`, `components/forms/` | React Hook Form + Zod                                              |
+| API routes       | `app/api/*/route.ts`                     | contact, subscribe, sheets, search, activecampaign, posts, authors |
+| Search index     | `lib/search-index.ts`                    | ~400 hardcoded items; requires redeploy on update                  |
+| Constants        | `lib/constants.ts`                       | Brand tokens, UTM params                                           |
+| Logger           | `lib/logger.ts`                          | Pino-based; pre-scoped exports below                               |
+| Nav config       | `lib/navigation/`                        | Header/footer data                                                 |
+| US market data   | `lib/us/`                                | US-specific financial data                                         |
+
+**Content architecture**: all content (80+ financial-solutions pages, 60+ blog posts) is hardcoded in React page files — no CMS or database.
+
+## Conventions That Differ from Common Practice
+
+### 1. Logging — Never use `console.log`
+
+```typescript
+import { logger, apiLogger, formLogger, topadsLogger } from "@/lib/logger";
+// Pre-scoped: logger (App), apiLogger, analyticsLogger, topadsLogger,
+//             utmLogger, formLogger, validationLogger
+// Or scope your own: createScopedLogger("MyFeature")
+logger.info({ userId }, "User loaded");
+```
+
+Logging is auto-disabled in production unless `NEXT_PUBLIC_ENABLE_LOGGING=true`.
+
+### 2. Components — function declarations, not arrow functions
 
 ```tsx
-// Always use this import pattern with @/ alias
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-// Function component declarations (not arrow functions)
-export default function ComponentName({ prop }: ComponentProps) {
-  return <div className={cn("base-classes", className)} />;
+export default function MyCard({ className }: { className?: string }) {
+  return <div className={cn("base", className)} />;
 }
 ```
 
-#### 2. Analytics Integration
+### 3. TopAds — SPA navigation is automatic
 
-The project uses **TopAds** as the proprietary ad system:
+Do **not** manually call `window.topAds.spa()`. `TopAdsSPAHandler` in `app/layout.tsx` handles all route changes via `usePathname()`. Use `useTopAds()` hook only for explicit programmatic activation.
 
-- Script loads in `app/layout.tsx` with `TopAds` component
-- Auto-activates on SPA navigation via `TopAdsSPAHandler`
-- Manual triggers available via `useTopAds()` hook
-- Configuration: domain `TOPFIN_US`, networkCode `23062212598`
+### 4. Financial Solutions pages — mandatory layout
 
-**Navigation Tracking**: TopAds integrates with Next.js navigation system:
+ALL pages under `app/financial-solutions/` must follow the exact layout standard. **Any deviation breaks SEO and conversion tracking.**
+See [`.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`](.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md).
+Reference template: `app/financial-solutions/citi-simplicity-card/`.
 
-- Route changes trigger `window.topAds.spa()` using `usePathname()` hook
-- Back/forward navigation is handled via `popstate` events
-- Client-side navigation is properly tracked on every route change
-- Initial page load activation is handled separately
+### 5. Blog posts — sync all `allPosts` arrays
 
-#### 3. Multi-Step Form Pattern
+Creating/updating/deleting a blog post requires updating `allPosts` in every blog listing `page.tsx`.
+See [`.github/instructions/BLOG_POST_INTEGRATION.instructions.md`](.github/instructions/BLOG_POST_INTEGRATION.instructions.md).
 
-```tsx
-// Located in /components/steps/step{1,2,3}.tsx
-export default function Step1({ formData, updateFormData }: StepProps) {
-  return (
-    <div className="space-y-4">
-      <ProgressIndicator step={1} />
-      <OptionButton /> {/* Custom UI component */}
-    </div>
-  );
-}
-```
+### 6. Form multi-step navigation
 
-#### 4. US Market Specifics
+Always call `window.scrollTo(0, 0)` when advancing steps.
 
-- **Currency**: Prefer USD ($) formatting
-- **Localization**: US English (en-US), prefer MM/DD/YYYY dates
-- **Content**: Avoid UK-only (FCA) or MX-only (CAT/CONDUSEF/PROFECO) regulatory terms unless explicitly needed
-- **Business Context**: Credit cards, personal loans, financial guidance
+### 7. US market compliance
 
-## Development Workflows
+- Currency: USD (`$`), dates: MM/DD/YYYY
+- No outcome guarantees; use disclosures
+- Avoid UK-only (FCA) or MX-only (CAT/CONDUSEF/PROFECO) language
 
-### Build & Dev Commands
+## Key Files
 
-```bash
-npm run dev      # Development server on port 3040 with Turbo
-npm run build    # Production build
-npm run start    # Production server on port 3040
-```
-
-### Git Workflow (Critical)
-
-Use the **automated git workflow script** instead of manual commands:
-
-```bash
-# ALWAYS use this for commits/deployments
-bash ./scripts/git-workflow.sh
-```
-
-- Auto-commits across dev/main/backup branches
-- Reads commit message from `/lib/documents/commit-message.txt`
-- Handles merge conflicts automatically
-- Never commit directly without this script
-
-### Environment Setup
-
-- Copy `.env.example` to `.env.production`
-- Production environment files stored in `/opt/app/` with strict permissions
-- Google Sheets API requires `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_PRIVATE_KEY`
-- TopAds integration is handled by the proprietary `topads.tsx` component
-- Kit.com API integration for newsletter subscriptions
-- Multiple environment files in use: `.env`, `.env.production`, `.env.local`
-
-## Code Quality Standards
-
-### TypeScript Rules
-
-- **Strict mode enabled** - no `any` types without justification
-- Use proper React component typing with interfaces
-- Path aliases: `@/` for root imports
-
-### UI Component Patterns
-
-```tsx
-// Shadcn/UI forwarded ref pattern
-const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
-  ({ className, ...props }, ref) => (
-    <div className={cn("base-styles", className)} ref={ref} {...props} />
-  ),
-);
-Component.displayName = "Component";
-```
-
-### Styling Conventions
-
-- **Mobile-first** Tailwind approach
-- Use `cn()` utility for class merging
-- Custom text sizing with `getTextClass()` utility
-- Consistent spacing and color tokens
-- Local font loading (Poppins) to avoid external requests
-
-## API Architecture
-
-### Google Sheets Integration
-
-```typescript
-// Pattern in /app/api/sheets/route.ts
-export async function POST(req: Request) {
-  const auth = new google.auth.GoogleAuth({
-    credentials: {
-      client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-    },
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-  });
-  // Sheet handling logic...
-}
-```
-
-### API Route Patterns
-
-- All API routes use Next.js 14 App Router pattern: `app/api/*/route.ts`
-- Environment variables for external integrations (Google Sheets, Kit.com, SendGrid)
-- Consistent error handling and response formatting
-- CORS configuration in `cors-config.json` for cross-origin requests
-
-## Analytics & Performance
-
-### TopAds Integration (Critical)
-
-- TopAds uses proprietary script from `https://topads.topnetworks.co/topAds.min.js`
-- SPA navigation handled automatically via `TopAdsSPAHandler` calling `window.topAds.spa()`
-- Use `useTopAds()` hook for programmatic SPA activation only when needed
-- Configuration: domain `TOPFIN_US`, networkCode `23062212598`, lazyLoad `soft`
-- Script loads with `strategy="afterInteractive"` for performance
-
-### Performance Monitoring
-
-- Uses `window.performance.mark()` for custom metrics
-- Local font loading (Poppins) to avoid external requests
-- Image optimization with Next.js `Image` component
-
-## Content & SEO
-
-### MDX Content Structure
-
-- Blog posts in `/content/` with frontmatter
-- Custom MDX components for financial content
-- Avoid UK-only (FCA) and MX-only (CONDUSEF/PROFECO/CAT) regulatory references unless explicitly needed
-
-### SEO Pattern
-
-```typescript
-// In page.tsx files
-export const metadata: Metadata = {
-  title: "US-focused title",
-  description: "Clear, accurate description (no guarantees)",
-  // US-focused metadata
-};
-```
-
-## Common Gotchas
-
-1. **Port Configuration**: Development runs on port 3040, not 3000
-2. **Analytics Order**: GTM loads before TopAds in layout
-3. **Form Navigation**: Always call `window.scrollTo(0, 0)` on step changes
-4. **Compliance**: Avoid guarantees; use clear disclosures as needed
-5. **Git Workflow**: NEVER bypass the automated script for commits
-
-## File Naming Conventions
-
-- Components: `kebab-case.tsx` (e.g., `credit-card-form.tsx`)
-- API routes: `route.ts` in app router structure
-- Utilities: Descriptive names in `/lib/utils/`
-- Constants: Centralized in `/lib/constants.ts`
-
-This project prioritizes performance optimization and comprehensive analytics tracking, with US-market content and disclosures.
-
-## Instruction Files System
-
-The project uses a comprehensive instruction system at `.github/instructions/` with specific rules for different scenarios:
-
-- **`project-rules.instructions.md`**: Core project architecture and development standards
-- **`BLOG_POST_INTEGRATION.instructions.md`**: Blog content integration workflow
-- **`PUSH-AND-COMMIT.instructions.md`**: Automated git workflow procedures
-
-**Critical**: Always check and follow the instruction files before making changes. These contain project-specific implementation details and workflows that override general best practices.
+| File                      | Purpose                                                      |
+| ------------------------- | ------------------------------------------------------------ |
+| `app/layout.tsx`          | Root layout — analytics load order (GTM before TopAds)       |
+| `lib/logger.ts`           | Logging — import from here, never use `console.*`            |
+| `lib/search-index.ts`     | In-memory search; update when adding new pages               |
+| `scripts/git-workflow.sh` | Only way to commit/push                                      |
+| `.github/instructions/`   | Project-specific rules — read before modifying content pages |

@@ -16,7 +16,7 @@ const { google } = require("googleapis");
 require("dotenv").config({ path: ".env.local" });
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
-const SHEET_NAME = "uk-topfinanzas-com";
+const SHEET_NAME = "topfinanzas-us-next";
 
 async function diagnoseSheets() {
   console.log("==============================================");
@@ -84,7 +84,7 @@ async function diagnoseSheets() {
     console.log(`  Sheets found: ${spreadsheet.data.sheets?.length}`);
 
     // Step 4: Check if our sheet exists
-    console.log('\nStep 4: Checking for sheet "uk-topfinanzas-com"...');
+    console.log('\nStep 4: Checking for sheet "topfinanzas-us-next"...');
 
     const sheetExists = spreadsheet.data.sheets?.some(
       (s) => s.properties?.title === SHEET_NAME,

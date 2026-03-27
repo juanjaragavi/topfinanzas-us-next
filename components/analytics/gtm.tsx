@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { analyticsLogger } from "@/lib/logger";
 
-const GTM_ID = "GTM-MR76NXR3"; // Default GTM ID
+const GTM_ID = "GTM-5568TKCX";
 
 /**
  * Enhanced Google Tag Manager Script Component
@@ -42,31 +42,28 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
-            
-            // Function to push UTM parameters to dataLayer
+
             function pushUTMToDataLayer() {
               if (typeof window !== 'undefined' && window.sessionStorage) {
                 const utmData = {};
                 const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-                
+
                 utmParams.forEach(param => {
                   const value = sessionStorage.getItem(param);
                   if (value) {
                     utmData[param] = value;
                   }
                 });
-                
+
                 if (Object.keys(utmData).length > 0) {
                   window.dataLayer.push({
                     event: 'utm_parameters_loaded',
                     ...utmData
                   });
-                  analyticsLogger.debug('GTM: UTM parameters pushed to dataLayer', utmData);
                 }
               }
             }
-            
-            // Push UTM data when available
+
             if (document.readyState === 'loading') {
               document.addEventListener('DOMContentLoaded', pushUTMToDataLayer);
             } else {
@@ -135,8 +132,8 @@ export function pushGTMConversion(
     const conversionData: Record<string, unknown> = {
       event: "conversion",
       conversion_name: conversionName,
-      value: value,
-      currency: currency,
+      value,
+      currency,
       timestamp: new Date().toISOString(),
     };
 

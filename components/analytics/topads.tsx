@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { logger } from "@/lib/logger";
+import { TOPADS_EXCLUDED_PATHS } from "@/lib/jobs-delayed-ads";
 
 /**
  * TopAds Integration Component
@@ -42,28 +43,24 @@ export default function TopAds() {
                 domain: 'TOPFIN_US',
                 networkCode: '23062212598',
                 lazyLoad: 'soft',
+                refresh: {
+                  status: 'inactive',
+                  anchor: 'inactive',
+                },
                 pageSetting: {
-                    exclude: [
-                        '/about-us/',
-                        '/contact-us/',
-                        '/privacy-policy/',
-                        '/terms-conditions/',
-                        '/campaign-quiz-credit-card-recomender/',
-                        '/campaign-quiz-credit-card-recommender-short',
-                    ]
+                  exclude: ${JSON.stringify(TOPADS_EXCLUDED_PATHS)}
                 },
                 formats: {
                     interstitial: {
                         status: 'active',
                         exclude: [
-                            '/invit-credit-card-rec-us-2',
-                            '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short',
+                            '/campaign-quiz-credit-card-recomender',
+                            '/campaign-quiz-credit-card-recomender-short',
                         ],
                     },
                     offerwall: {
-                        status: 'active',
-                        logoUrl: 'https://media.topfinanzas.com/images/logo-white.webp',
+                        status: 'inactive',
+                        logoUrl: 'https://media.topfinanzas.com/images/LOGO-EnglishUS-COLOR.png',
                         websiteName: 'TopFinanzas US',
                         cooldown: '12',
                         exclude: [
@@ -71,9 +68,12 @@ export default function TopAds() {
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
                             '/invit-credit-card-rec-us',
-                            '/campaign-quiz-credit-card-recommender',
-                            '/campaign-quiz-credit-card-recommender-short',
+                            '/invit-credit-card-rec-us-2',
+                            '/choose-the-perfect-card-for-you-1',
+                            '/campaign-quiz-credit-card-recomender',
+                            '/campaign-quiz-credit-card-recomender-short',
                             '/financial-solutions/citi-simplicity-card-benefits',
+                            '/financial-solutions/chase-sapphire-preferred-credit-card-benefits',
                         ],
                     },
                 }
@@ -82,7 +82,7 @@ export default function TopAds() {
             (function () {
                 var w = window.top, d = w.document, h = d.head || d.getElementsByTagName("head")[0];
                 var s = d.createElement("script");
-                s.src = "https://topads.topnetworks.co/topAds.min.js";
+                s.src = "https://ads.gamadx.com/topAds.min.js";
                 s.type = "text/javascript";
                 s.defer = true;
                 s.async = true;

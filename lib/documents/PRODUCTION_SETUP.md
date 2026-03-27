@@ -153,7 +153,7 @@ If using environment file on server:
 
 ```bash
 # Navigate to app directory
-cd /opt/app/uk-topfinanzas-com
+cd /opt/app/topfinanzas-us-next
 
 # Create production env file
 cat > .env.production << 'EOF'

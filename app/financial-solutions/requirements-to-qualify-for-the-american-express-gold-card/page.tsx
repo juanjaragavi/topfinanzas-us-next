@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -137,14 +139,19 @@ export default function AmexGoldRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Debt Management"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 12: FIRST PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                  alt="Practical Guide to Getting Out of Debt"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -201,14 +208,19 @@ export default function AmexGoldRequirementsPage() {
               can exceed the annual fee.
             </p>
 
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Personal Loans"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 14: SECOND PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/financial-solutions">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                  alt="Personal Loans - Your Smart Strategy for Financial Control"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -282,14 +294,19 @@ export default function AmexGoldRequirementsPage() {
               </li>
             </ol>
 
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Credit Cards"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 16: THIRD PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                  alt="Looking for the Perfect Credit Card?"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             <div className="my-8">
@@ -299,15 +316,15 @@ export default function AmexGoldRequirementsPage() {
               <p className="text-lg text-gray-700 mb-6">
                 If you have a strong credit score, stable income, and are ready
                 to take advantage of the card's unique benefits, the American
-                Express® Gold Card is an excellent choice for earning rewards
-                on restaurants and grocery purchases, saving with credits for
-                Uber and Resy, and enjoying travel benefits.
+                Express® Gold Card is an excellent choice for earning rewards on
+                restaurants and grocery purchases, saving with credits for Uber
+                and Resy, and enjoying travel benefits.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Applying for the American Express® Gold Card is a simple
-                process if you meet the key criteria. Before applying, evaluate
-                your financial situation and ensure this card aligns with your
-                needs and spending habits.
+                Applying for the American Express® Gold Card is a simple process
+                if you meet the key criteria. Before applying, evaluate your
+                financial situation and ensure this card aligns with your needs
+                and spending habits.
               </p>
 
               {/* Final CTA to External Application */}

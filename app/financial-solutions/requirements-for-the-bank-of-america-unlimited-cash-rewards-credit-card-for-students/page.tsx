@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -131,14 +132,19 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 1 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
-                alt="Ready to tackle your debt?"
-                width={1200}
-                height={400}
-              />
+            {/* ELEMENT 12: FIRST PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-1-Top-Blog-Debt-management.webp"
+                  alt="Practical Guide to Getting Out of Debt"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* What you need to apply */}
@@ -300,14 +306,19 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 2 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-md">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
-                alt="Unlock your path to debt freedom"
-                width={600}
-                height={600}
-              />
+            {/* ELEMENT 14: SECOND PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/financial-solutions">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-2-Top-Blog-Personal-loans.webp"
+                  alt="Personal Loans - Your Smart Strategy for Financial Control"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* How to apply for the card */}
@@ -411,14 +422,19 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
               </div>
             </div>
 
-            {/* Banner 3 */}
-            <div className="my-8 w-full rounded-xl overflow-hidden shadow-sm">
-              <ResponsiveImage
-                src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
-                alt="Looking for the Perfect Credit Card?"
-                width={600}
-                height={600}
-              />
+            {/* ELEMENT 16: THIRD PROMOTIONAL IMAGE */}
+            <div className="my-8 text-left sm:text-left">
+              <Link href="/personal-finance/top-credit-cards-to-maximize-your-black-friday-savings">
+                <Image
+                  src="https://media.topfinanzas.com/images/banner-3-Top-Blog-Credit-Cards.webp"
+                  alt="Looking for the Perfect Credit Card?"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                  loading="lazy"
+                  quality={80}
+                />
+              </Link>
             </div>
 
             {/* Closing thoughts */}
