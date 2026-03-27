@@ -1,3 +1,5 @@
-fix: update finance quiz redirect URL
+fix: temporarily disable FinanceOfferwallRuntime on recommender pages
 
-- Update affiliate redirect endpoint in finance-quiz-recommender-p1
+Remove FinanceOfferwallRuntime wrapper from invit-credit-card-rec-us and
+credit-card-recommender-p1 pages to allow clean page loads with ad units
+enabled. Imports are commented out with TODO markers for easy re-enablement.
