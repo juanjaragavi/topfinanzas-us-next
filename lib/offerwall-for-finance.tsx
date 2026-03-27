@@ -74,6 +74,8 @@ export default function FinanceOfferwall({ config }: FinanceOfferwallProps) {
               style={{
                 all: "unset",
                 display: "block",
+                backgroundColor: "#F97316",
+                color: "#FFFFFF",
               }}
             >
               {opt.label}

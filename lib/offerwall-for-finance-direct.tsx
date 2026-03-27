@@ -40,7 +40,7 @@ export default function FinanceOfferwallDirect({
   return (
     <div
       data-topads-quiz=""
-      data-quiz-accent={themeColor}
+      data-quiz-accent="#F97316"
       data-topads-texts={texts}
       data-quiz-skip-ad={skipAds ? "true" : "false"}
       aria-hidden="true"

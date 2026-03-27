@@ -9,12 +9,12 @@
 /* ─── Theme (vibrant orange per design spec) ─── */
 
 export const FINANCE_QUIZ_THEME = {
-  /** Primary accent — vibrant orange */
-  color: "#FF8C00",
+  /** Primary accent — vivid orange */
+  color: "#F97316",
   /** Lighter hover variant */
-  colorLight: "#FFA633",
+  colorLight: "#FB923C",
   /** Dark gradient anchor */
-  colorDark: "#CC7000",
+  colorDark: "#EA580C",
 } as const;
 
 /* ─── Types (mirrors GamingQuizConfig from budgetbee-next) ─── */
