@@ -1,0 +1,6 @@
+feat: add FinanceOfferwallDirect and TopAdsQuizIdStamper to invit-credit-card-rec-us page
+
+Re-enable offerwall integration on the invit-credit-card-rec-us landing page,
+matching the implementation already present on invit-credit-card-rec-us-2.
+Replaces commented-out FinanceOfferwallRuntime with FinanceOfferwallDirect
+and adds TopAdsQuizIdStamper with journey ID quiz-finance-cc-recommender-01.
