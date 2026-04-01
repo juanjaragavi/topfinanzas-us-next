@@ -136,6 +136,10 @@ export default function JobsPromiseP4() {
           label: "View Target Reviews on Glassdoor",
           href: "/jobs/jobs-reward-p5",
         },
+        {
+          label: "See All Job Search Platforms",
+          href: "/jobs/jobs-reward-p1",
+        },
       ]}
       relatedArticles={JOBS_RELATED_ARTICLES}
       closingParagraph="Target's combination of competitive pay, genuine team culture, and strong advancement opportunities makes it one of the best options in US retail for 2026. Use the platforms below to find and apply to current Target openings near you."

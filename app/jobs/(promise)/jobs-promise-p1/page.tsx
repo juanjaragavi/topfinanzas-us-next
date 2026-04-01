@@ -1,5 +1,8 @@
 import JobsPromiseTemplate from "@/components/layout/jobs-promise-template";
 import JobsQuiz01Overlay from "@/components/jobs/quiz-overlays/jobs-quiz-01-overlay";
+import FinanceOfferwall from "@/lib/offerwall-for-finance";
+import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
+import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import {
   JOBS_THEME,
   JOBS_IMAGES,
@@ -18,6 +21,8 @@ export function generateMetadata() {
 }
 
 export default function JobsPromiseP1() {
+  const financeQuiz = FINANCE_QUIZ_CONFIGS.jobsPromiseP1;
+
   return (
     <>
       <JobsQuiz01Overlay />
@@ -146,6 +151,8 @@ export default function JobsPromiseP1() {
         relatedArticles={JOBS_RELATED_ARTICLES}
         closingParagraph="The US job market rewards those who act fast and apply strategically. Use the verified job search tools below to submit applications to multiple employers in minutes — then track your progress and follow up within 3 days for the best results."
       />
+      <FinanceOfferwall config={financeQuiz} />
+      <TopAdsQuizIdStamper journeyId={financeQuiz.journeyId} />
     </>
   );
 }

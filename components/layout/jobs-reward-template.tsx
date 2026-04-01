@@ -22,6 +22,8 @@ export interface JobsRewardTemplateProps {
   closingParagraphs?: string[];
   relatedArticles: RelatedArticle[];
   ctaBanner?: JobsCtaBannerProps;
+  /** Optional back-link to the corresponding Promise page */
+  backLink?: { label: string; href: string };
 }
 
 export default function JobsRewardTemplate({
@@ -37,6 +39,7 @@ export default function JobsRewardTemplate({
   closingParagraphs,
   relatedArticles,
   ctaBanner,
+  backLink,
 }: JobsRewardTemplateProps) {
   return (
     <main className="flex min-h-screen flex-col bg-white">
@@ -189,6 +192,19 @@ export default function JobsRewardTemplate({
               Check out these popular guides from our financial experts for more
               ways to save and earn with your new income.
             </p>
+
+            {/* Back-link to corresponding Promise page */}
+            {backLink && (
+              <div className="my-8">
+                <Link
+                  href={backLink.href}
+                  className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+                  style={{ color: themeColor }}
+                >
+                  ← {backLink.label}
+                </Link>
+              </div>
+            )}
 
             {/* Related Financial Articles */}
             {relatedArticles.length > 0 && (

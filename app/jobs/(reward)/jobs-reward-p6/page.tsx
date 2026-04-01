@@ -24,6 +24,10 @@ export default function JobsRewardP6() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "UPS & FedEx Jobs Guide — Roles, Pay & Application Tips",
+        href: "/jobs/jobs-promise-p6",
+      }}
       badge="FEDERAL JOB SEARCH"
       title="USAJobs.gov 2026 — How to Apply for Federal Government Jobs (And Why You Should)"
       subtitle="Federal jobs offer what almost no private employer can match: a defined pension, rock-solid job security, generous paid leave, and health insurance that covers your whole family. USAJobs.gov is the exclusive portal for all US federal hiring — here's how to navigate it effectively."

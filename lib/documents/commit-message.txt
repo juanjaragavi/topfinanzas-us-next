@@ -1,8 +1,8 @@
-feat: add Jobs offerwall quiz components for financial solutions pages
+feat: integrate finance offerwalls and bidirectional linking across jobs pages
 
-- Create lib/jobs-quiz-config.ts with Jobs quiz configurations (work schedule + job priorities questions)
-- Create lib/offerwall-for-jobs.tsx (with questions) cloned from Finance offerwall with Jobs CTA copy
-- Create lib/offerwall-for-jobs-direct.tsx (direct/no questions) cloned from Finance offerwall direct
-- Integrate JobsOfferwall into AmEx Gold benefits page with quiz questions
-- Integrate JobsOfferwallDirect into Wells Fargo Reflect benefits page without questions
-- Fix unused themeColor prop in offerwall-for-finance-direct.tsx (use prop instead of hardcoded value)
+- Add FinanceOfferwall (quiz-based) to jobs-promise-p1 with quiz config
+- Add FinanceOfferwallDirect to jobs-promise-p2 with TopAdsQuizIdStamper
+- Add finance quiz configs (jobsPromiseP1, jobsPromiseP2) to finance-quiz-config.ts
+- Update promise P3-P6 CTAs with links to corresponding reward pages
+- Add backLink prop to JobsRewardTemplate for return navigation
+- Wire backLink on all 6 reward pages pointing to their paired promise page

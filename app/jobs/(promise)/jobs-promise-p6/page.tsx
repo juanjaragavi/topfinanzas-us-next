@@ -126,10 +126,14 @@ export default function JobsPromiseP6() {
         },
       ]}
       cta={{
-        label: "Find UPS & FedEx Jobs Near You",
-        href: "/jobs/jobs-reward-p1",
+        label: "Apply for Federal & Government Driver Jobs",
+        href: "/jobs/jobs-reward-p6",
       }}
       extraCtas={[
+        {
+          label: "Find UPS & FedEx Jobs Near You",
+          href: "/jobs/jobs-reward-p1",
+        },
         { label: "Search Driver Jobs on Indeed", href: "/jobs/jobs-reward-p2" },
         {
           label: "Find Hourly Delivery Jobs on Snagajob",

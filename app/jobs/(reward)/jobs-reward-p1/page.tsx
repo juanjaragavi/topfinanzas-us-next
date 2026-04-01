@@ -26,6 +26,10 @@ export default function JobsRewardP1() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "How to Find High-Paying Jobs in 2026",
+        href: "/jobs/jobs-promise-p1",
+      }}
       badge="BEST JOB SEARCH PLATFORMS"
       title="Best Job Search Apps in 2026 — Top 4 US Platforms Ranked"
       subtitle="These four platforms account for more than 80% of all online job applications in the US. Whether you're looking for warehouse work, retail, remote jobs, or a professional career move, start here."
