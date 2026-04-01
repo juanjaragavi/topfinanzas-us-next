@@ -156,7 +156,7 @@ function HeroBanner() {
   return (
     <div className="w-full bg-[#2563EB] text-white py-8 md:py-12 px-4">
       <div className="max-w-3xl mx-auto text-center space-y-4">
-        <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+        <h1 className="text-2xl md:text-4xl font-bold leading-tight text-white">
           Find Your <span className="text-[#FBBF24]">Best Credit Card</span> in
           60 Seconds
         </h1>
@@ -168,19 +168,19 @@ function HeroBanner() {
         {/* Social proof stats */}
         <div className="flex justify-center gap-8 md:gap-16 pt-4">
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold">847K+</p>
+            <p className="text-2xl md:text-3xl font-bold text-white">847K+</p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
               Users Matched
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold">4.8/5</p>
+            <p className="text-2xl md:text-3xl font-bold text-white">4.8/5</p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
               Avg Rating
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold">50+</p>
+            <p className="text-2xl md:text-3xl font-bold text-white">50+</p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
               Cards Analyzed
             </p>
