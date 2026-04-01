@@ -1,6 +1,8 @@
-feat: add FinanceOfferwallDirect and TopAdsQuizIdStamper to invit-credit-card-rec-us page
+feat: add Jobs offerwall quiz components for financial solutions pages
 
-Re-enable offerwall integration on the invit-credit-card-rec-us landing page,
-matching the implementation already present on invit-credit-card-rec-us-2.
-Replaces commented-out FinanceOfferwallRuntime with FinanceOfferwallDirect
-and adds TopAdsQuizIdStamper with journey ID quiz-finance-cc-recommender-01.
+- Create lib/jobs-quiz-config.ts with Jobs quiz configurations (work schedule + job priorities questions)
+- Create lib/offerwall-for-jobs.tsx (with questions) cloned from Finance offerwall with Jobs CTA copy
+- Create lib/offerwall-for-jobs-direct.tsx (direct/no questions) cloned from Finance offerwall direct
+- Integrate JobsOfferwall into AmEx Gold benefits page with quiz questions
+- Integrate JobsOfferwallDirect into Wells Fargo Reflect benefits page without questions
+- Fix unused themeColor prop in offerwall-for-finance-direct.tsx (use prop instead of hardcoded value)

@@ -3,24 +3,24 @@
 import { useEffect, useState } from "react";
 
 /**
- * Question-less Finance offerwall container.
+ * Question-less Jobs offerwall container.
  *
  * Renders just the `data-topads-quiz` scaffold with NO question children
  * so TopAds skips directly to the preloader and CTA button.
  * Deferred to client-side mount so the page content paints first.
  */
 
-interface FinanceOfferwallDirectProps {
+interface JobsOfferwallDirectProps {
   themeColor: string;
   loadingMessage: string;
   skipAds?: boolean;
 }
 
-export default function FinanceOfferwallDirect({
+export default function JobsOfferwallDirect({
   themeColor,
   loadingMessage,
   skipAds = false,
-}: FinanceOfferwallDirectProps) {
+}: JobsOfferwallDirectProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -32,8 +32,8 @@ export default function FinanceOfferwallDirect({
   if (!mounted) return null;
   const texts = JSON.stringify({
     loading: loadingMessage,
-    ctaTitle: "Found the best credit cards 2026",
-    ctaButton: "See Cards Now",
+    ctaTitle: "Found the best jobs 2026",
+    ctaButton: "See Jobs Now",
     ctaDisclaimer: "To continue, it will be necessary to watch a short ad.",
   });
 
