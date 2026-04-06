@@ -309,16 +309,20 @@ function refreshGPTSlot(elementId: string, stepIndex: number) {
   if (typeof window === "undefined") return;
 
   const gt = (window as unknown as Record<string, unknown>).googletag as
-    | { cmd: Array<() => void>; pubads: () => { getSlots: () => Array<{ getSlotElementId: () => string }>; refresh: (slots: unknown[]) => void } }
+    | {
+        cmd: Array<() => void>;
+        pubads: () => {
+          getSlots: () => Array<{ getSlotElementId: () => string }>;
+          refresh: (slots: unknown[]) => void;
+        };
+      }
     | undefined;
 
   if (!gt?.cmd) return;
 
   gt.cmd.push(() => {
     const slots = gt.pubads().getSlots();
-    const target = slots.find(
-      (s) => s.getSlotElementId() === elementId,
-    );
+    const target = slots.find((s) => s.getSlotElementId() === elementId);
     if (target) {
       gt.pubads().refresh([target]);
       formLogger.info("[CC-REC-3] GPT slot refreshed via pubads().refresh()", {
@@ -343,13 +347,7 @@ function AdSlot({ step }: { step: number }) {
     }
   }, [step]);
 
-  return (
-    <TopAdsPlacement
-      id={AD_SLOT_ID}
-      size="square"
-      minHeight="250px"
-    />
-  );
+  return <TopAdsPlacement id={AD_SLOT_ID} size="square" minHeight="250px" />;
 }
 
 // ---------------------------------------------------------------------------

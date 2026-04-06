@@ -1,6 +1,14 @@
-fix: replace DOM unmount/remount ad strategy with GPT pubads refresh on rec-us-3
+fix: repair 12 broken internal links across 8 MDX content files
 
-- Keep a single stable ad div to prevent removeChild NotFoundError
-- Use googletag.pubads().refresh([slot]) to load fresh creative per step
-- Fire both GPT slot refresh and TopAds SPA trigger on step transitions
-
+- Replace absolute us.topfinanzas.com URLs with relative paths
+- Fix 404 links to removed category pages (cashback-credit-cards,
+  travel-credit-cards, no-annual-fee-credit-cards, top-credit-cards-0-intro-apr,
+  best-rewards-credit-cards)
+- Fix 404 links to non-existent editorial pages (understanding-credit-scores,
+  your-first-credit-card, what-is-a-credit-score, personal-finance-your-ultimate-guide,
+  how-to-save-money-fast)
+- Redirect removed product page links (chase-freedom-unlimited, citi-double-cash)
+  to closest existing alternatives
+- Convert remaining valid absolute URLs to relative paths for consistency
+- All replacement targets verified against existing app routes
+- Build passes with zero errors
