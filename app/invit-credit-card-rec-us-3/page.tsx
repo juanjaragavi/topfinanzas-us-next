@@ -298,40 +298,54 @@ function QuizOptionCard({
 }
 
 /**
- * Hard-swaps the ad placement on step change without Framer Motion or
- * key-based reconciliation — avoids both the AnimatePresence DOM conflict
- * and the "animate-out" disappearance.
+ * Stable ad container that stays in the DOM across quiz steps.
+ * Instead of unmounting / remounting (which causes "removeChild" errors
+ * because GPT injects its own children), we keep a single div and call
+ * `googletag.pubads().refresh([slot])` to load fresh creative.
  */
+const AD_SLOT_ID = "quiz-rec3-ad";
+
+function refreshGPTSlot(elementId: string, stepIndex: number) {
+  if (typeof window === "undefined") return;
+
+  const gt = (window as unknown as Record<string, unknown>).googletag as
+    | { cmd: Array<() => void>; pubads: () => { getSlots: () => Array<{ getSlotElementId: () => string }>; refresh: (slots: unknown[]) => void } }
+    | undefined;
+
+  if (!gt?.cmd) return;
+
+  gt.cmd.push(() => {
+    const slots = gt.pubads().getSlots();
+    const target = slots.find(
+      (s) => s.getSlotElementId() === elementId,
+    );
+    if (target) {
+      gt.pubads().refresh([target]);
+      formLogger.info("[CC-REC-3] GPT slot refreshed via pubads().refresh()", {
+        elementId,
+        step: stepIndex,
+      });
+    } else {
+      formLogger.warn("[CC-REC-3] GPT slot not found for refresh", {
+        elementId,
+      });
+    }
+  });
+}
+
 function AdSlot({ step }: { step: number }) {
-  const [mounted, setMounted] = useState(true);
   const prevStep = useRef(step);
 
   useEffect(() => {
     if (step !== prevStep.current) {
       prevStep.current = step;
-      setMounted(false); // unmount the old ad div
+      refreshGPTSlot(AD_SLOT_ID, step);
     }
   }, [step]);
 
-  useEffect(() => {
-    if (!mounted) {
-      // remount on next frame so TopAds sees a fresh DOM node
-      requestAnimationFrame(() => setMounted(true));
-    }
-  }, [mounted]);
-
-  if (!mounted) {
-    return (
-      <div
-        style={{ minHeight: "250px", margin: "20px auto" }}
-        aria-hidden="true"
-      />
-    );
-  }
-
   return (
     <TopAdsPlacement
-      id={`square0${step + 1}`}
+      id={AD_SLOT_ID}
       size="square"
       minHeight="250px"
     />
@@ -392,11 +406,13 @@ export default function InvitCreditCardRecUS3Page() {
         setVisible(false);
         setTimeout(() => {
           window.scrollTo(0, 0);
-          setCurrentStep((prev) => prev + 1);
+          const nextStep = currentStep + 1;
+          setCurrentStep(nextStep);
           setVisible(true);
 
-          // Trigger TopAds SPA refresh for new ad slot
+          // Refresh the GPT ad slot with fresh creative
           setTimeout(() => {
+            refreshGPTSlot(AD_SLOT_ID, nextStep);
             triggerSPA();
           }, 150);
         }, 250); // matches exit duration

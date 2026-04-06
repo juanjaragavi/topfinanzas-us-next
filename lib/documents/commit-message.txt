@@ -1,7 +1,6 @@
-feat: integrate FinanceOfferwall into credit-card-recommender-p1 page
+fix: replace DOM unmount/remount ad strategy with GPT pubads refresh on rec-us-3
 
-- Replace disabled FinanceOfferwallRuntime with active FinanceOfferwall component
-- Add TopAdsQuizIdStamper for quiz step tracking
-- Use dedicated creditCardRecommenderP1 quiz config
-- Wrap page in fragment to match invit-credit-card-rec-us pattern
+- Keep a single stable ad div to prevent removeChild NotFoundError
+- Use googletag.pubads().refresh([slot]) to load fresh creative per step
+- Fire both GPT slot refresh and TopAds SPA trigger on step transitions
 
