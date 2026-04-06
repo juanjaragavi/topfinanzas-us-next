@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -144,7 +145,7 @@ const QUIZ_STEPS: readonly QuizStep[] = [
 ] as const;
 
 const AFFILIATE_URL =
-  "https://route.topnetworks.co/api/redirect/d0dc0c93-d1fa-4f5f-8fb4-ff7753eb3f20";
+  "https://route.topnetworks.co/api/redirect/58a90a39-9189-46f6-8f65-fcda695d2a28";
 
 const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 
@@ -158,7 +159,7 @@ function HeroBanner() {
       <div className="max-w-3xl mx-auto text-center space-y-4">
         <h1 className="text-2xl md:text-4xl font-bold leading-tight text-white">
           Find Your <span className="text-[#FBBF24]">Best Credit Card</span> in
-          60 Seconds
+          30 Seconds
         </h1>
         <p className="text-sm md:text-lg text-blue-100">
           Answer 3 quick questions. Get personalized recommendations
@@ -296,6 +297,47 @@ function QuizOptionCard({
   );
 }
 
+/**
+ * Hard-swaps the ad placement on step change without Framer Motion or
+ * key-based reconciliation — avoids both the AnimatePresence DOM conflict
+ * and the "animate-out" disappearance.
+ */
+function AdSlot({ step }: { step: number }) {
+  const [mounted, setMounted] = useState(true);
+  const prevStep = useRef(step);
+
+  useEffect(() => {
+    if (step !== prevStep.current) {
+      prevStep.current = step;
+      setMounted(false); // unmount the old ad div
+    }
+  }, [step]);
+
+  useEffect(() => {
+    if (!mounted) {
+      // remount on next frame so TopAds sees a fresh DOM node
+      requestAnimationFrame(() => setMounted(true));
+    }
+  }, [mounted]);
+
+  if (!mounted) {
+    return (
+      <div
+        style={{ minHeight: "250px", margin: "20px auto" }}
+        aria-hidden="true"
+      />
+    );
+  }
+
+  return (
+    <TopAdsPlacement
+      id={`square0${step + 1}`}
+      size="square"
+      minHeight="250px"
+    />
+  );
+}
+
 // ---------------------------------------------------------------------------
 // Main page component
 // ---------------------------------------------------------------------------
@@ -305,113 +347,94 @@ export default function InvitCreditCardRecUS3Page() {
   const [currentStep, setCurrentStep] = useState(0);
   const [selections, setSelections] = useState<Record<number, string>>({});
   const { triggerSPA } = useTopAds();
+  const router = useRouter();
+  const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const step = QUIZ_STEPS[currentStep];
   const selectedId = selections[currentStep] ?? null;
-  const adSlotId = `square0${currentStep + 1}`;
   const isLastStep = currentStep === QUIZ_STEPS.length - 1;
+
+  // Drives enter/exit animation without AnimatePresence
+  const [visible, setVisible] = useState(true);
+
+  // Clean up pending timer on unmount
+  useEffect(() => {
+    return () => {
+      if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
+    };
+  }, []);
 
   const handleSelect = useCallback(
     (optionId: string) => {
-      setSelections((prev) => ({ ...prev, [currentStep]: optionId }));
-    },
-    [currentStep],
-  );
+      // Save selection immutably
+      const updatedSelections = { ...selections, [currentStep]: optionId };
+      setSelections(updatedSelections);
 
-  const handleContinue = useCallback(() => {
-    if (!selectedId) return;
-
-    formLogger.info("[CC-REC-3] Step completed", {
-      step: currentStep + 1,
-      selection: selectedId,
-    });
-
-    if (isLastStep) {
-      // Fire GTM conversion event
-      pushGTMConversion(GTM_CONVERSION_EVENT);
-      formLogger.info("[CC-REC-3] Quiz completed — redirecting to affiliate", {
-        selections,
+      formLogger.info("[CC-REC-3] Step completed", {
+        step: currentStep + 1,
+        selection: optionId,
       });
-      // Redirect handled by the Link wrapping the button
-      return;
-    }
 
-    // Advance to next step
-    window.scrollTo(0, 0);
-    setCurrentStep((prev) => prev + 1);
+      // Brief delay so the user sees their selection highlight
+      if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = setTimeout(() => {
+        if (isLastStep) {
+          pushGTMConversion(GTM_CONVERSION_EVENT);
+          formLogger.info(
+            "[CC-REC-3] Quiz completed — redirecting to affiliate",
+            { selections: updatedSelections },
+          );
+          router.push(AFFILIATE_URL);
+          return;
+        }
 
-    // Trigger TopAds SPA refresh for new ad slot
-    setTimeout(() => {
-      triggerSPA();
-    }, 150);
-  }, [selectedId, currentStep, isLastStep, selections, triggerSPA]);
+        // Fade out → swap step → fade in
+        setVisible(false);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          setCurrentStep((prev) => prev + 1);
+          setVisible(true);
+
+          // Trigger TopAds SPA refresh for new ad slot
+          setTimeout(() => {
+            triggerSPA();
+          }, 150);
+        }, 250); // matches exit duration
+      }, 350); // highlight delay
+    },
+    [currentStep, isLastStep, selections, triggerSPA, router],
+  );
 
   // Determine layout mode for step options
   const layoutMode = step.columns === 1 ? "list" : "grid";
-
-  const continueButton = isLastStep ? (
-    <Link
-      href={AFFILIATE_URL}
-      onClick={() => {
-        pushGTMConversion(GTM_CONVERSION_EVENT);
-        formLogger.info("[CC-REC-3] Quiz completed — redirecting to affiliate");
-      }}
-      className={`block w-full text-center py-3.5 rounded-xl font-semibold text-base transition-all duration-200 ${
-        selectedId
-          ? "bg-gray-800 text-white hover:bg-gray-900 shadow-md"
-          : "bg-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
-      }`}
-      aria-disabled={!selectedId}
-      tabIndex={selectedId ? 0 : -1}
-    >
-      Continue →
-    </Link>
-  ) : (
-    <button
-      type="button"
-      onClick={handleContinue}
-      disabled={!selectedId}
-      className={`w-full py-3.5 rounded-xl font-semibold text-base transition-all duration-200 ${
-        selectedId
-          ? "bg-gray-800 text-white hover:bg-gray-900 shadow-md"
-          : "bg-gray-200 text-gray-400 cursor-not-allowed"
-      }`}
-    >
-      Continue →
-    </button>
-  );
 
   return (
     <FinanceOfferwallRuntime quiz={offerwallQuiz}>
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
 
-      {/* Hero */}
-      <HeroBanner />
+        {/* Hero */}
+        <HeroBanner />
 
-      {/* Trust bar */}
-      <TrustBar />
+        {/* Trust bar */}
+        <TrustBar />
 
-      <main className="flex-grow">
-        <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
-          {/* TopAds ad unit — id rotates per step */}
-          <div className="flex justify-center mb-6">
-            <TopAdsPlacement id={adSlotId} size="square" minHeight="250px" />
-          </div>
+        <main className="flex-grow">
+          <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
+            {/* TopAds ad unit — hard-swapped outside AnimatePresence */}
+            <div className="flex justify-center mb-6">
+              <AdSlot step={currentStep} />
+            </div>
 
-          {/* Quiz progress */}
-          <QuizProgressBar
-            currentStep={currentStep + 1}
-            totalSteps={QUIZ_STEPS.length}
-          />
+            {/* Quiz progress */}
+            <QuizProgressBar
+              currentStep={currentStep + 1}
+              totalSteps={QUIZ_STEPS.length}
+            />
 
-          {/* Quiz step content */}
-          <AnimatePresence mode="wait">
+            {/* Quiz step content — state-driven animation (no AnimatePresence) */}
             <motion.div
-              key={currentStep}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
+              animate={visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
               transition={{ duration: 0.25 }}
               className="space-y-5"
             >
@@ -444,96 +467,97 @@ export default function InvitCreditCardRecUS3Page() {
                 ))}
               </div>
 
-              {/* Continue / Redirect button */}
-              <div className="pt-2">{continueButton}</div>
+              {/* Selection hint */}
+              <p className="text-center text-xs text-gray-400 pt-2">
+                Tap an option to continue
+              </p>
             </motion.div>
-          </AnimatePresence>
 
-          {/* ── Shared bottom sections ── */}
+            {/* ── Shared bottom sections ── */}
 
-          {/* FAQ Accordion */}
-          <div className="w-full text-left mt-12">
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>
-                  What is a credit card cash back statement credit?
-                </AccordionTrigger>
-                <AccordionContent>
-                  It&apos;s a benefit where you receive money back as a credit
-                  on your statement, lowering your overall balance.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  How do I choose the right credit card for travel?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Consider cards with no foreign fees, travel insurance, and
-                  rewards on airline or hotel purchases.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  Can I transfer my credit card balance to another person&apos;s
-                  card?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Balance transfers are typically only allowed between cards
-                  under the same account holder.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
+            {/* FAQ Accordion */}
+            <div className="w-full text-left mt-12">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    What is a credit card cash back statement credit?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    It&apos;s a benefit where you receive money back as a credit
+                    on your statement, lowering your overall balance.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>
+                    How do I choose the right credit card for travel?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Consider cards with no foreign fees, travel insurance, and
+                    rewards on airline or hotel purchases.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>
+                    Can I transfer my credit card balance to another
+                    person&apos;s card?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Balance transfers are typically only allowed between cards
+                    under the same account holder.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
 
-          {/* Stay Tuned Section */}
-          <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
-            <h4 className="text-xl font-semibold text-gray-800 mb-3">
-              Stay Tuned
-            </h4>
-            <p className="text-gray-700 leading-relaxed">
-              If you&apos;re looking for additional assistance in boosting your
-              credit score or optimizing your credit card usage while avoiding
-              banks capitalizing on your situation, please explore the
-              information below as well. We offer valuable resources tailored to
-              your specific needs.
-            </p>
-          </div>
+            {/* Stay Tuned Section */}
+            <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
+              <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                Stay Tuned
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                If you&apos;re looking for additional assistance in boosting
+                your credit score or optimizing your credit card usage while
+                avoiding banks capitalizing on your situation, please explore
+                the information below as well. We offer valuable resources
+                tailored to your specific needs.
+              </p>
+            </div>
 
-          {/* Limited Offer Card */}
-          <div className="flex justify-center mt-10 mb-4">
-            <div className="bg-white rounded-xl p-6 w-full max-w-xs shadow-md border border-gray-100">
-              <div className="flex flex-col items-center space-y-3">
-                <div className="relative w-48 h-28">
-                  <Image
-                    src="https://media.topfinanzas.com/images/credit-card-varity.png"
-                    alt="Credit Card Variety"
-                    fill
-                    className="object-contain"
-                  />
+            {/* Limited Offer Card */}
+            <div className="flex justify-center mt-10 mb-4">
+              <div className="bg-white rounded-xl p-6 w-full max-w-xs shadow-md border border-gray-100">
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="relative w-48 h-28">
+                    <Image
+                      src="https://media.topfinanzas.com/images/credit-card-varity.png"
+                      alt="Credit Card Variety"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex items-center space-x-1.5">
+                    <span className="text-lg">🔔</span>
+                    <h3 className="text-base font-bold text-[#EF4444] uppercase">
+                      Limited offer!
+                    </h3>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 uppercase text-center">
+                    CARD WITH NO ANNUAL FEE
+                  </h4>
+                  <p className="text-sm text-gray-700 text-center">
+                    The most requested among our readers! Check it out today...
+                  </p>
+                  <Link
+                    href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
+                    className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold px-6 py-2.5 text-sm uppercase"
+                  >
+                    SEE HOW TO APPLY
+                  </Link>
                 </div>
-                <div className="flex items-center space-x-1.5">
-                  <span className="text-lg">🔔</span>
-                  <h3 className="text-base font-bold text-[#EF4444] uppercase">
-                    Limited offer!
-                  </h3>
-                </div>
-                <h4 className="text-lg font-bold text-gray-900 uppercase text-center">
-                  CARD WITH NO ANNUAL FEE
-                </h4>
-                <p className="text-sm text-gray-700 text-center">
-                  The most requested among our readers! Check it out today...
-                </p>
-                <Link
-                  href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
-                  className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold px-6 py-2.5 text-sm uppercase"
-                >
-                  SEE HOW TO APPLY
-                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
 
         <Footer />
       </div>

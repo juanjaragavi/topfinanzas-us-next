@@ -1,9 +1,10 @@
-import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
 import { BRAND_STATIC_FIELDS } from "@/lib/constants";
 import { apiLogger } from "@/lib/logger";
 import { formatTimestampForSheets } from "@/lib/utils";
+
+export const dynamic = "force-dynamic";
 
 const pickString = (...values: unknown[]) => {
   for (const value of values) {
@@ -70,6 +71,8 @@ export async function POST(req: Request) {
       privateKeyLength: process.env.GOOGLE_PRIVATE_KEY?.length,
       privateKeyStartsWith: process.env.GOOGLE_PRIVATE_KEY?.substring(0, 30),
     });
+
+    const { google } = await import("googleapis");
 
     const auth = new google.auth.GoogleAuth({
       credentials: {

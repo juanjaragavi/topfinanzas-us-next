@@ -1,8 +1,7 @@
-feat: add invit-credit-card-rec-us-3 landing page with FinanceOfferwallRuntime
+feat: integrate FinanceOfferwall into credit-card-recommender-p1 page
 
-- Create multi-step credit card recommender page at /invit-credit-card-rec-us-3
-- 3-step quiz flow: Credit Score → Spending Categories → Monthly Spend
-- Integrate FinanceOfferwallRuntime with creditCardRecommender3 config
-- Add creditCardRecommender3 entry to FINANCE_QUIZ_CONFIGS
-- Include TopAds dynamic ad placement, FAQ accordion, and affiliate redirect
-- Shared components: Header, Footer, TopAdsPlacement, ProgressIndicator pattern
+- Replace disabled FinanceOfferwallRuntime with active FinanceOfferwall component
+- Add TopAdsQuizIdStamper for quiz step tracking
+- Use dedicated creditCardRecommenderP1 quiz config
+- Wrap page in fragment to match invit-credit-card-rec-us pattern
+
