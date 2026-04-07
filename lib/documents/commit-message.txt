@@ -1,8 +1,2 @@
-refactor: enforce brand green (#10B981) across all quiz and offerwall UI
+style: restyle landing page buttons to Electric Blue (#3B82F6) with raised shadow
 
-- Create shared offerwall-quiz-scaffold.tsx eliminating duplication across 4 offerwall wrappers
-- Update button specs to Iter.2 (50px height, 12px radius)
-- Replace orange (#FF8C00), yellow (#e7b739/#FBBF24), and blue (#2563EB/#3B82F6) with brand green (#10B981/#059669)
-- Update FINANCE_QUIZ_THEME and JOBS_QUIZ_THEME configs to green palette
-- Fix themeColor props on FinanceOfferwallDirect and JobsOfferwallDirect
-- Convert blue-* Tailwind classes to emerald-* in quiz option cards and hero banner

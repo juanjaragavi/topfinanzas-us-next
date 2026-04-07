@@ -58,25 +58,25 @@ export default function CreditCardRecommenderP1Page() {
               <div className="flex flex-col gap-3 w-full max-w-md mx-auto">
                 <Link
                   href="/financial-solutions/benefits-of-the-discover-it-cash-back"
-                  className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+                  className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-colors text-center shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
                 >
                   Up to 2% Cashback Credit Card
                 </Link>
                 <Link
                   href="/financial-solutions/citi-simplicity-card-benefits"
-                  className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+                  className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-colors text-center shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
                 >
                   No annual fee Credit Card
                 </Link>
                 <Link
                   href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
-                  className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+                  className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-colors text-center shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
                 >
                   No Credit Check Credit Card
                 </Link>
                 <Link
                   href="/financial-solutions"
-                  className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+                  className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-colors text-center shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
                 >
                   MORE OPTIONS
                 </Link>
@@ -99,7 +99,7 @@ export default function CreditCardRecommenderP1Page() {
               {/* Accept Recommendation CTA */}
               <Link
                 href="/financial-solutions/wells-fargo-autograph-card-benefits"
-                className="inline-flex items-center justify-center rounded-lg bg-[#10B981] hover:bg-[#059669] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors shadow-md"
+                className="inline-flex items-center justify-center rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 ACCEPT RECOMMENDATION
               </Link>
@@ -177,7 +177,7 @@ export default function CreditCardRecommenderP1Page() {
                   </p>
                   <Link
                     href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
-                    className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold px-6 py-2.5 text-sm uppercase"
+                    className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-6 py-2.5 text-sm uppercase shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
                   >
                     SEE HOW TO APPLY
                   </Link>

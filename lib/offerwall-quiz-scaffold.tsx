@@ -14,9 +14,9 @@ const QUIZ_BUTTON_FONT_WEIGHT = 500;
 const QUIZ_BUTTON_BORDER_RADIUS = "12px";
 /** Iter. 2: 50px target height */
 const QUIZ_BUTTON_MIN_HEIGHT = "50px";
-/** Raised shadow per design guide */
+/** Raised shadow per design guide — pronounced 3D lift */
 const QUIZ_BUTTON_BOX_SHADOW =
-  "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)";
+  "0 4px 6px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.1)";
 
 /* ─── Shared hidden-container styles ─── */
 

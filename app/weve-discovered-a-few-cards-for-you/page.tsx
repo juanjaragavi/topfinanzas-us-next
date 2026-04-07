@@ -42,25 +42,25 @@ export default function CreditCardLandingPage() {
             <div className="space-y-3 max-w-2xl mx-auto">
               <Link
                 href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 $1000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/benefits-of-the-discover-it-cash-back"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 $2500 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/chase-sapphire-preferred-credit-card-benefits"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 $5000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions"
-                className="block w-full rounded-full border-2 border-[#5B21B6] text-[#5B21B6] hover:bg-[#5B21B6] hover:text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 MORE OPTIONS
               </Link>
@@ -81,7 +81,7 @@ export default function CreditCardLandingPage() {
 
           <Link
             href="/financial-solutions"
-            className="inline-flex items-center justify-center rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-colors shadow-md"
+            className="inline-flex items-center justify-center rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
           >
             ACCEPT RECOMMENDATION
           </Link>
@@ -176,7 +176,7 @@ export default function CreditCardLandingPage() {
               </p>
               <Link
                 href="/financial-solutions"
-                className="inline-flex items-center justify-center rounded-md transition-colors bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold px-8 py-3 text-base md:text-lg uppercase"
+                className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-8 py-3 text-base md:text-lg uppercase shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
               >
                 SEE HOW TO APPLY
               </Link>
