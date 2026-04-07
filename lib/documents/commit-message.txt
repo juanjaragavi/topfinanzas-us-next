@@ -1,2 +1,7 @@
-style: restyle landing page buttons to Electric Blue (#3B82F6) with raised shadow
+fix: define --radius CSS variable to restore rounded-lg border radius
 
+The Tailwind config maps rounded-lg to var(--radius), but --radius was
+never declared in globals.css, causing all rounded-lg elements (blue
+CTA buttons, Shadcn/UI components) to render with 0px border-radius.
+
+Added --radius: 0.5rem (8px) to :root in globals.css.

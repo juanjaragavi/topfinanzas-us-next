@@ -12,6 +12,7 @@
   /* gray-700 */
   --text-muted: 107, 114, 128;
   /* gray-500 */
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
