@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
@@ -59,6 +60,15 @@ const poppins = localFont({
     "Arial",
     "sans-serif",
   ],
+});
+
+// Inter font for offerwall CTA buttons (design system spec)
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: false,
 });
 
 // Define base URL for metadata
@@ -236,7 +246,7 @@ export default function RootLayout({
           type="application/manifest+json"
         />
       </head>
-      <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
+      <body className={`${poppins.variable} ${inter.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
         <MobileMenuProvider>
           {/*<PreloaderProvider

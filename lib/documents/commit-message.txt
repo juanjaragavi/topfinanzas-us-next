@@ -1,6 +1,12 @@
-fix: enforce explicit #FFFFFF text color on all Jobs reward page titles for WCAG contrast compliance
+refactor: standardize offerwall button system to Electric Blue design
 
-- Add inline style color #FFFFFF to JobsCtaBanner headline h3
-- Add inline style color #FFFFFF to JobMethodCard h3 title and inner anchor elements
-- Add inline style color #FFFFFF to jobs-reward-template hero h1 title
-- Ensures consistent white-on-blue contrast across all 6 reward pages
+- Replace legacy Vibrant Orange (#F97316) and Emerald Green (#10B981)
+  with Electric Blue (#3B82F6) across all offerwall components
+- Add brand.primary color, shadow-raised utilities, and font-inter
+  family to tailwind.config.js
+- Load Inter font via next/font/google in root layout
+- Update button.tsx primary variant to use brand-primary with rounded-lg
+  and raised shadow
+- Update FINANCE_QUIZ_THEME and JOBS_QUIZ_THEME to Electric Blue palette
+- Increase backdrop-blur by 10% on jobs quiz modal overlay
+- Align Wells Fargo Reflect and jobs-promise-p2 themeColor props

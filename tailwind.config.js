@@ -16,6 +16,11 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        brand: {
+          primary: "#3B82F6",
+          "primary-hover": "#2563EB",
+          "primary-dark": "#1D4ED8",
+        },
         primary: {
           DEFAULT: "#4ADE80", // Light green
           dark: "#22C55E", // Darker green for hover
@@ -52,6 +57,15 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-poppins)"],
+        inter: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
+      boxShadow: {
+        raised:
+          "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)",
+        "raised-md":
+          "0 4px 8px rgba(0, 0, 0, 0.14), 0 6px 12px rgba(0, 0, 0, 0.10)",
+        "raised-lg":
+          "0 6px 12px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.12)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

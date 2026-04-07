@@ -6,15 +6,15 @@
  * the data attributes injected via the hidden offerwall component.
  */
 
-/* ─── Theme (matches JOBS_THEME from lib/jobs-config) ─── */
+/* ─── Theme (Electric Blue per fintech button spec) ─── */
 
 export const JOBS_QUIZ_THEME = {
-  /** Primary accent — teal/green */
-  color: "#10B981",
+  /** Primary accent — Electric Blue */
+  color: "#3B82F6",
   /** Lighter hover variant */
-  colorLight: "#34D399",
+  colorLight: "#60A5FA",
   /** Dark gradient anchor */
-  colorDark: "#059669",
+  colorDark: "#2563EB",
 } as const;
 
 /* ─── Types ─── */

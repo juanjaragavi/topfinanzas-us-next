@@ -141,7 +141,7 @@ export default function JobsPromiseP2() {
         closingParagraph="Amazon is not for everyone, but for those who fit the role, it's one of the most reliable employers in America. Use the verified job search tools below to apply directly to Amazon and other top employers today."
       />
       <FinanceOfferwallDirect
-        themeColor="#F97316"
+        themeColor="#3B82F6"
         loadingMessage="Fetching Credit Card Options 2026"
         skipAds={false}
       />
