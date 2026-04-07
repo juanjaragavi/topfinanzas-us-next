@@ -53,17 +53,22 @@ export default function JobMethodCard({
         <div className="flex items-center gap-3">
           {icon && <span className="text-3xl">{icon}</span>}
           <div>
-            <h3 className="text-xl font-bold">
+            <h3 className="text-xl font-bold" style={{ color: "#FFFFFF" }}>
               {external ? (
                 <a
                   href={cta.href}
-                  className="hover:underline text-white"
+                  className="hover:underline"
+                  style={{ color: "#FFFFFF" }}
                   {...externalProps}
                 >
                   {name}
                 </a>
               ) : (
-                <Link href={cta.href} className="hover:underline text-white">
+                <Link
+                  href={cta.href}
+                  className="hover:underline"
+                  style={{ color: "#FFFFFF" }}
+                >
                   {name}
                 </Link>
               )}

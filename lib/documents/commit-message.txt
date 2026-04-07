@@ -1,7 +1,6 @@
-fix: resolve Amazon Careers CTA redirect loop and enforce external routing for all job provider links
+fix: enforce explicit #FFFFFF text color on all Jobs reward page titles for WCAG contrast compliance
 
-- Update makeAmazonCtaBanner() href from self-referencing /jobs/jobs-reward-p2 to https://www.amazon.jobs/
-- Add makeIndeedCtaBanner() factory and use on jobs-reward-p1 to eliminate self-referencing CTA
-- Update JobMethodCard to detect external URLs and render <a target="_blank" rel="noopener noreferrer"> instead of Next.js <Link>
-- Update JobsCtaBanner with same external URL handling for provider links
-- All 6 external provider cards (Indeed, ZipRecruiter, LinkedIn, Snagajob, Glassdoor, USAJobs) now bypass internal routing
+- Add inline style color #FFFFFF to JobsCtaBanner headline h3
+- Add inline style color #FFFFFF to JobMethodCard h3 title and inner anchor elements
+- Add inline style color #FFFFFF to jobs-reward-template hero h1 title
+- Ensures consistent white-on-blue contrast across all 6 reward pages

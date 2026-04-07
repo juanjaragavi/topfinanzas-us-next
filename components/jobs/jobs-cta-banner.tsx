@@ -40,7 +40,12 @@ export default function JobsCtaBanner({
             {badge}
           </div>
         )}
-        <h3 className="text-xl md:text-2xl font-bold mb-3">{headline}</h3>
+        <h3
+          className="text-xl md:text-2xl font-bold mb-3"
+          style={{ color: "#FFFFFF" }}
+        >
+          {headline}
+        </h3>
         <p className="text-white/90 mb-5 text-sm md:text-base">{body}</p>
         {external ? (
           <a
