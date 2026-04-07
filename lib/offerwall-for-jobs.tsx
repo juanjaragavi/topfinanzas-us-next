@@ -81,7 +81,8 @@ export default function JobsOfferwall({ config }: JobsOfferwallProps) {
                 fontWeight: 500,
                 borderRadius: "8px",
                 minHeight: "44px",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)",
+                boxShadow:
+                  "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)",
               }}
             >
               {opt.label}

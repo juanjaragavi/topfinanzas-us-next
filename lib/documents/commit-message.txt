@@ -1,12 +1,9 @@
-refactor: standardize offerwall button system to Electric Blue design
+fix: resolve CLS/FOUC on offerwall landing pages during hydration
 
-- Replace legacy Vibrant Orange (#F97316) and Emerald Green (#10B981)
-  with Electric Blue (#3B82F6) across all offerwall components
-- Add brand.primary color, shadow-raised utilities, and font-inter
-  family to tailwind.config.js
-- Load Inter font via next/font/google in root layout
-- Update button.tsx primary variant to use brand-primary with rounded-lg
-  and raised shadow
-- Update FINANCE_QUIZ_THEME and JOBS_QUIZ_THEME to Electric Blue palette
-- Increase backdrop-blur by 10% on jobs quiz modal overlay
-- Align Wells Fargo Reflect and jobs-promise-p2 themeColor props
+Add OfferwallPageShell component that renders an opaque cover during
+SSR and initial mount, preventing page content from flashing before
+the TopAds quiz overlay has time to establish itself. Uses double-rAF
+to synchronize with FinanceOfferwall scaffold mounting.
+
+Applied to invit-credit-card-rec-us, invit-credit-card-rec-us-2,
+invit-credit-card-rec-us-3, and credit-card-recommender-p1 pages.

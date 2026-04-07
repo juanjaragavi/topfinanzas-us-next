@@ -45,7 +45,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const buttonStyles = cn(
       "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-colors duration-200 rounded-lg whitespace-nowrap font-inter shadow-raised",
       {
-        "bg-brand-primary hover:bg-brand-primary-hover text-white": variant === "primary",
+        "bg-brand-primary hover:bg-brand-primary-hover text-white":
+          variant === "primary",
         "bg-white hover:bg-gray-100 text-gray-900 border border-gray-300":
           variant === "secondary",
         "w-full": fullWidth,
@@ -92,7 +93,8 @@ export const buttonVariants = ({
   return cn(
     "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-colors duration-200 rounded-lg whitespace-nowrap font-inter shadow-raised",
     {
-      "bg-brand-primary hover:bg-brand-primary-hover text-white": variant === "primary",
+      "bg-brand-primary hover:bg-brand-primary-hover text-white":
+        variant === "primary",
       "bg-white hover:bg-gray-100 text-gray-900 border border-gray-300":
         variant === "secondary",
     },

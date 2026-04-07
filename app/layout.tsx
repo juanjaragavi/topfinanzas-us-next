@@ -246,7 +246,9 @@ export default function RootLayout({
           type="application/manifest+json"
         />
       </head>
-      <body className={`${poppins.variable} ${inter.variable} font-sans text-left sm:text-left`}>
+      <body
+        className={`${poppins.variable} ${inter.variable} font-sans text-left sm:text-left`}
+      >
         <GoogleTagManagerNoScript />
         <MobileMenuProvider>
           {/*<PreloaderProvider

@@ -60,8 +60,7 @@ module.exports = {
         inter: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        raised:
-          "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)",
+        raised: "0 2px 4px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)",
         "raised-md":
           "0 4px 8px rgba(0, 0, 0, 0.14), 0 6px 12px rgba(0, 0, 0, 0.10)",
         "raised-lg":
