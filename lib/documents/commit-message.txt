@@ -1,14 +1,7 @@
-fix: repair 12 broken internal links across 8 MDX content files
+fix: resolve Amazon Careers CTA redirect loop and enforce external routing for all job provider links
 
-- Replace absolute us.topfinanzas.com URLs with relative paths
-- Fix 404 links to removed category pages (cashback-credit-cards,
-  travel-credit-cards, no-annual-fee-credit-cards, top-credit-cards-0-intro-apr,
-  best-rewards-credit-cards)
-- Fix 404 links to non-existent editorial pages (understanding-credit-scores,
-  your-first-credit-card, what-is-a-credit-score, personal-finance-your-ultimate-guide,
-  how-to-save-money-fast)
-- Redirect removed product page links (chase-freedom-unlimited, citi-double-cash)
-  to closest existing alternatives
-- Convert remaining valid absolute URLs to relative paths for consistency
-- All replacement targets verified against existing app routes
-- Build passes with zero errors
+- Update makeAmazonCtaBanner() href from self-referencing /jobs/jobs-reward-p2 to https://www.amazon.jobs/
+- Add makeIndeedCtaBanner() factory and use on jobs-reward-p1 to eliminate self-referencing CTA
+- Update JobMethodCard to detect external URLs and render <a target="_blank" rel="noopener noreferrer"> instead of Next.js <Link>
+- Update JobsCtaBanner with same external URL handling for provider links
+- All 6 external provider cards (Indeed, ZipRecruiter, LinkedIn, Snagajob, Glassdoor, USAJobs) now bypass internal routing

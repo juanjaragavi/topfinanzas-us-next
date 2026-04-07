@@ -11,6 +11,10 @@ export interface JobsCtaBannerProps {
   themeColorDark: string;
 }
 
+function isExternal(href: string): boolean {
+  return /^https?:\/\//.test(href);
+}
+
 export default function JobsCtaBanner({
   badge,
   headline,
@@ -21,6 +25,8 @@ export default function JobsCtaBanner({
   themeColor,
   themeColorDark,
 }: JobsCtaBannerProps) {
+  const external = isExternal(ctaHref);
+
   return (
     <div
       className="rounded-xl overflow-hidden my-6"
@@ -36,13 +42,25 @@ export default function JobsCtaBanner({
         )}
         <h3 className="text-xl md:text-2xl font-bold mb-3">{headline}</h3>
         <p className="text-white/90 mb-5 text-sm md:text-base">{body}</p>
-        <Link
-          href={ctaHref}
-          className="inline-block bg-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:bg-gray-100 shadow-md text-sm md:text-base"
-          style={{ color: themeColor }}
-        >
-          {ctaLabel} →
-        </Link>
+        {external ? (
+          <a
+            href={ctaHref}
+            className="inline-block bg-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:bg-gray-100 shadow-md text-sm md:text-base"
+            style={{ color: themeColor }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ctaLabel} →
+          </a>
+        ) : (
+          <Link
+            href={ctaHref}
+            className="inline-block bg-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:bg-gray-100 shadow-md text-sm md:text-base"
+            style={{ color: themeColor }}
+          >
+            {ctaLabel} →
+          </Link>
+        )}
         {disclaimer && (
           <p className="text-white/60 text-xs mt-4">{disclaimer}</p>
         )}

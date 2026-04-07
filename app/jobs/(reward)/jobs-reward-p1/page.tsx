@@ -3,7 +3,7 @@ import {
   JOBS_THEME,
   JOBS_IMAGES,
   JOBS_RELATED_ARTICLES,
-  makeJobsSearchCtaBanner,
+  makeIndeedCtaBanner,
   makeIndeedCard,
   makeZipRecruiterCard,
   makeLinkedInCard,
@@ -58,7 +58,7 @@ export default function JobsRewardP1() {
         "If you're targeting warehouse, retail, or hourly work, prioritize Indeed and Snagajob. For professional or corporate positions, LinkedIn and ZipRecruiter will give you the most reach. Ready to apply? Start with Indeed or ZipRecruiter and build your profile in under 15 minutes.",
       ]}
       relatedArticles={JOBS_RELATED_ARTICLES}
-      ctaBanner={makeJobsSearchCtaBanner()}
+      ctaBanner={makeIndeedCtaBanner()}
     />
   );
 }

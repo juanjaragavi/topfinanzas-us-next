@@ -22,6 +22,10 @@ export interface JobMethodCardProps {
   icon?: string;
 }
 
+function isExternal(href: string): boolean {
+  return /^https?:\/\//.test(href);
+}
+
 export default function JobMethodCard({
   name,
   description,
@@ -32,6 +36,11 @@ export default function JobMethodCard({
   themeColor,
   icon,
 }: JobMethodCardProps) {
+  const external = isExternal(cta.href);
+  const externalProps = external
+    ? { target: "_blank" as const, rel: "noopener noreferrer" }
+    : {};
+
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
       {/* Header */}
@@ -45,9 +54,19 @@ export default function JobMethodCard({
           {icon && <span className="text-3xl">{icon}</span>}
           <div>
             <h3 className="text-xl font-bold">
-              <Link href={cta.href} className="hover:underline text-white">
-                {name}
-              </Link>
+              {external ? (
+                <a
+                  href={cta.href}
+                  className="hover:underline text-white"
+                  {...externalProps}
+                >
+                  {name}
+                </a>
+              ) : (
+                <Link href={cta.href} className="hover:underline text-white">
+                  {name}
+                </Link>
+              )}
             </h3>
             {badges && badges.length > 0 && (
               <div className="flex gap-2 mt-1">
@@ -84,27 +103,52 @@ export default function JobMethodCard({
         </ul>
 
         {/* Primary CTA */}
-        <Link
-          href={cta.href}
-          className="block w-full py-3 px-4 rounded-xl text-white font-semibold text-center transition-all duration-200 hover:opacity-90 shadow-md"
-          style={{ backgroundColor: themeColor }}
-        >
-          {cta.label}
-        </Link>
+        {external ? (
+          <a
+            href={cta.href}
+            className="block w-full py-3 px-4 rounded-xl text-white font-semibold text-center transition-all duration-200 hover:opacity-90 shadow-md"
+            style={{ backgroundColor: themeColor }}
+            {...externalProps}
+          >
+            {cta.label}
+          </a>
+        ) : (
+          <Link
+            href={cta.href}
+            className="block w-full py-3 px-4 rounded-xl text-white font-semibold text-center transition-all duration-200 hover:opacity-90 shadow-md"
+            style={{ backgroundColor: themeColor }}
+          >
+            {cta.label}
+          </Link>
+        )}
 
         {/* Download / secondary links */}
         {downloadLinks && downloadLinks.length > 0 && (
           <div className="flex justify-center gap-4 mt-3">
-            {downloadLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium hover:underline"
-                style={{ color: themeColor }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {downloadLinks.map((link) => {
+              const linkExternal = isExternal(link.href);
+              return linkExternal ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium hover:underline"
+                  style={{ color: themeColor }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium hover:underline"
+                  style={{ color: themeColor }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>
