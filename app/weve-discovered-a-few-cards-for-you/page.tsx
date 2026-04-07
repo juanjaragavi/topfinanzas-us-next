@@ -19,7 +19,7 @@ export default function CreditCardLandingPage() {
     <main className="bg-[#F9FAFB] min-h-screen py-8 md:py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col items-center text-center space-y-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3B82F6]">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#10B981]">
             We&apos;ve discovered a few cards that unlock remarkable boundaries
             for you.
           </h1>
@@ -68,7 +68,7 @@ export default function CreditCardLandingPage() {
           </div>
 
           <div className="bg-white p-6 md:p-8 rounded-xl w-full shadow-md">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3B82F6] mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#10B981] mb-4">
               Well Done
             </h3>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">

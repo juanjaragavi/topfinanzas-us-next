@@ -111,7 +111,7 @@ export default function FinanceQuizRecommenderP1Page() {
               >
                 {/* Progress bar */}
                 <div className="flex h-2">
-                  <div className="w-1/2 bg-[#FF8C00]" />
+                  <div className="w-1/2 bg-[#10B981]" />
                   <div className="w-1/2 bg-gray-200" />
                 </div>
 
@@ -126,7 +126,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep1Select}
-                        className="w-full rounded-xl bg-[#FF8C00] hover:bg-[#CC7000] active:bg-[#CC7000] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md"
+                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md"
                       >
                         {label}
                       </button>
@@ -148,7 +148,7 @@ export default function FinanceQuizRecommenderP1Page() {
               >
                 {/* Progress bar */}
                 <div className="flex h-2">
-                  <div className="w-full bg-[#FF8C00]" />
+                  <div className="w-full bg-[#10B981]" />
                 </div>
 
                 <div className="p-6 sm:p-8">
@@ -162,7 +162,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep2Select}
-                        className="w-full rounded-xl bg-[#FF8C00] hover:bg-[#CC7000] active:bg-[#CC7000] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md"
+                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md"
                       >
                         {label}
                       </button>

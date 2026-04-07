@@ -358,7 +358,7 @@ export default function WellsFargoReflectBenefitsPage() {
         <CompactFooter />
       </main>
       <JobsOfferwallDirect
-        themeColor="#3B82F6"
+        themeColor="#10B981"
         loadingMessage="Finding Best Job Opportunities 2026"
         skipAds={false}
       />

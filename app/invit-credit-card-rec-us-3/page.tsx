@@ -156,13 +156,13 @@ const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 
 function HeroBanner() {
   return (
-    <div className="w-full bg-[#2563EB] text-white py-8 md:py-12 px-4">
+    <div className="w-full bg-[#10B981] text-white py-8 md:py-12 px-4">
       <div className="max-w-3xl mx-auto text-center space-y-4">
         <h1 className="text-2xl md:text-4xl font-bold leading-tight text-white">
-          Find Your <span className="text-[#FBBF24]">Best Credit Card</span> in
+          Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
           30 Seconds
         </h1>
-        <p className="text-sm md:text-lg text-blue-100">
+        <p className="text-sm md:text-lg text-emerald-100">
           Answer 3 quick questions. Get personalized recommendations
           <br className="hidden md:block" /> matched to your spending habits.
         </p>
@@ -171,19 +171,19 @@ function HeroBanner() {
         <div className="flex justify-center gap-8 md:gap-16 pt-4">
           <div className="text-center">
             <p className="text-2xl md:text-3xl font-bold text-white">847K+</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
+            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Users Matched
             </p>
           </div>
           <div className="text-center">
             <p className="text-2xl md:text-3xl font-bold text-white">4.8/5</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
+            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Avg Rating
             </p>
           </div>
           <div className="text-center">
             <p className="text-2xl md:text-3xl font-bold text-white">50+</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-blue-200">
+            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Cards Analyzed
             </p>
           </div>
@@ -256,7 +256,7 @@ function QuizOptionCard({
         onClick={onClick}
         className={`flex items-center gap-4 w-full p-4 rounded-xl border-2 transition-all duration-200 text-left ${
           selected
-            ? "border-[#2563EB] bg-blue-50 shadow-md"
+            ? "border-[#10B981] bg-emerald-50 shadow-md"
             : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
         }`}
         whileHover={{ scale: 1.01 }}
@@ -279,7 +279,7 @@ function QuizOptionCard({
       onClick={onClick}
       className={`flex flex-col items-center justify-center p-5 md:p-6 rounded-xl border-2 transition-all duration-200 ${
         selected
-          ? "border-[#2563EB] bg-blue-50 shadow-md"
+          ? "border-[#10B981] bg-emerald-50 shadow-md"
           : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
       }`}
       whileHover={{ scale: 1.02 }}

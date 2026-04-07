@@ -99,7 +99,7 @@ export default function InvitCreditCardRecUSPage() {
               {/* Accept Recommendation CTA */}
               <Link
                 href="/financial-solutions/wells-fargo-autograph-card-benefits"
-                className="inline-flex items-center justify-center rounded-lg bg-[#FF8C00] hover:bg-[#CC7000] text-black py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors shadow-md"
+                className="inline-flex items-center justify-center rounded-lg bg-[#10B981] hover:bg-[#059669] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors shadow-md"
               >
                 ACCEPT RECOMMENDATION
               </Link>

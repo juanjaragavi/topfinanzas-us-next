@@ -6,15 +6,15 @@
  * the data attributes injected via the hidden offerwall component.
  */
 
-/* ─── Theme (Electric Blue per fintech button spec) ─── */
+/* ─── Theme (Brand Green per fintech button spec) ─── */
 
 export const FINANCE_QUIZ_THEME = {
-  /** Primary accent — Electric Blue */
-  color: "#3B82F6",
+  /** Primary accent — Brand Green */
+  color: "#10B981",
   /** Lighter hover variant */
-  colorLight: "#60A5FA",
+  colorLight: "#34D399",
   /** Dark gradient anchor */
-  colorDark: "#2563EB",
+  colorDark: "#059669",
 } as const;
 
 /* ─── Types (mirrors GamingQuizConfig from budgetbee-next) ─── */
