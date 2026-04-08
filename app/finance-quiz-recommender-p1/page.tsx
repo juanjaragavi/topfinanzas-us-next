@@ -126,7 +126,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep1Select}
-                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
+                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md hover:shadow-lg"
                       >
                         {label}
                       </button>
@@ -162,7 +162,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep2Select}
-                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-[0_4px_6px_rgba(0,0,0,0.12),0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_10px_rgba(0,0,0,0.15),0_14px_28px_rgba(0,0,0,0.12)]"
+                        className="w-full rounded-xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-colors shadow-md hover:shadow-lg"
                       >
                         {label}
                       </button>

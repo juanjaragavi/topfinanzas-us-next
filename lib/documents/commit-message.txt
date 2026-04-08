@@ -1,7 +1,6 @@
-fix: define --radius CSS variable to restore rounded-lg border radius
+style: increase button border-radius to rounded-xl and standardize shadow to shadow-md
 
-The Tailwind config maps rounded-lg to var(--radius), but --radius was
-never declared in globals.css, causing all rounded-lg elements (blue
-CTA buttons, Shadcn/UI components) to render with 0px border-radius.
-
-Added --radius: 0.5rem (8px) to :root in globals.css.
+- Update all blue (#3B82F6) landing page buttons from rounded-lg to rounded-xl (12px)
+- Replace verbose custom box-shadow with Tailwind shadow-md hover:shadow-lg across 5 landing pages
+- Standardize green (#10B981) quiz button shadows in finance-quiz-recommender-p1
+- Update QUIZ_BUTTON_BOX_SHADOW scaffold constant to match shadow-md specification
