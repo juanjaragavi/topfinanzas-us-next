@@ -231,7 +231,7 @@ export default function JobsChatEntry({
               <button
                 type="button"
                 onClick={handleCta}
-                className="block w-full py-4 px-6 rounded-xl text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg"
+                className="block w-full py-4 px-6 rounded-2xl text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 style={{ backgroundColor: themeColor }}
               >
                 {ctaButtonText} →

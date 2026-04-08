@@ -123,7 +123,7 @@ export default function JobsPromiseTemplate({
             <div className="mb-8 space-y-3">
               <Link
                 href={cta.href}
-                className="block w-full py-4 px-6 rounded-xl text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg"
+                className="block w-full py-4 px-6 rounded-2xl text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 style={{ backgroundColor: themeColor }}
               >
                 {cta.label} →
@@ -132,7 +132,7 @@ export default function JobsPromiseTemplate({
                 <Link
                   key={`extra-cta-${i}`}
                   href={ec.href}
-                  className="block w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 hover:opacity-90 shadow-md border-2"
+                  className="block w-full py-3 px-6 rounded-2xl font-semibold text-center transition-all duration-200 hover:opacity-90 shadow-3d border-2 hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                   style={{
                     color: themeColor,
                     borderColor: themeColor,
@@ -251,7 +251,7 @@ export default function JobsPromiseTemplate({
             <div className="mb-8">
               <Link
                 href={cta.href}
-                className="block w-full py-5 px-6 rounded-xl text-white font-bold text-xl text-center transition-all duration-200 hover:opacity-90 shadow-lg"
+                className="block w-full py-5 px-6 rounded-2xl text-white font-bold text-xl text-center transition-all duration-200 hover:opacity-90 shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 style={{ backgroundColor: themeColor }}
               >
                 {cta.label} →

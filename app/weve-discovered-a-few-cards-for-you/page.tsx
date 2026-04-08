@@ -42,25 +42,25 @@ export default function CreditCardLandingPage() {
             <div className="space-y-3 max-w-2xl mx-auto">
               <Link
                 href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
-                className="block w-full rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-md hover:shadow-lg"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $1000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/benefits-of-the-discover-it-cash-back"
-                className="block w-full rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-md hover:shadow-lg"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $2500 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/chase-sapphire-preferred-credit-card-benefits"
-                className="block w-full rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-md hover:shadow-lg"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $5000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions"
-                className="block w-full rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors shadow-md hover:shadow-lg"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 MORE OPTIONS
               </Link>
@@ -81,7 +81,7 @@ export default function CreditCardLandingPage() {
 
           <Link
             href="/financial-solutions"
-            className="inline-flex items-center justify-center rounded-xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
           >
             ACCEPT RECOMMENDATION
           </Link>
@@ -176,7 +176,7 @@ export default function CreditCardLandingPage() {
               </p>
               <Link
                 href="/financial-solutions"
-                className="inline-flex items-center justify-center rounded-xl transition-colors bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-8 py-3 text-base md:text-lg uppercase shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center rounded-2xl transition-all bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-8 py-3 text-base md:text-lg uppercase shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 SEE HOW TO APPLY
               </Link>

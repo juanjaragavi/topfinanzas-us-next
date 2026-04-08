@@ -1,7 +1,10 @@
-refactor: remove Offerwall dependency from credit-card-recommender-p1
+feat: implement 3D-aesthetic button design system across all CTA buttons
 
-- Remove FinanceOfferwall, OfferwallPageShell, TopAdsQuizIdStamper imports
-- Remove FINANCE_QUIZ_CONFIGS usage and offerwallQuiz variable
-- Unwrap OfferwallPageShell wrapper, page is now a pure server component
-- Exclude /credit-card-recommender-p1 from TopAds interstitial config
-- Reduces client-side bundle size for the route
+- Add shadow-3d, shadow-3d-hover, shadow-3d-active tokens to tailwind.config.js
+- Update shared Button component with 3D shadows, border, and press states
+- Update OptionButton with 3D shadow treatment for quiz flows
+- Apply 3D styling to all landing page inline CTA buttons (8 pages)
+- Update step3/step3-short submit buttons with press animation
+- Update jobs template, chat entry, and floating CTA components
+- Update contact-us submit and download-financial-guide buttons
+- Replace all shadow-md/shadow-lg button patterns with shadow-3d system

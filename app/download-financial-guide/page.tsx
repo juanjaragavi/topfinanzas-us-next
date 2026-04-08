@@ -103,7 +103,7 @@ function DownloadGuidePageContent() {
 
               <Button
                 onClick={handleDownload}
-                className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-4 w-full rounded-full inline-flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+                className="bg-[#80E67D] hover:bg-[#70D66D] text-white font-bold text-base py-4 w-full rounded-full inline-flex items-center justify-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] transition-all"
               >
                 <div className="flex items-center space-x-2">
                   <span>DOWNLOAD PDF NOW</span>

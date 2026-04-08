@@ -65,6 +65,10 @@ module.exports = {
           "0 4px 8px rgba(0, 0, 0, 0.14), 0 6px 12px rgba(0, 0, 0, 0.10)",
         "raised-lg":
           "0 6px 12px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.12)",
+        "3d": "0 4px 0 0 rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.10)",
+        "3d-hover":
+          "0 2px 0 0 rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.08)",
+        "3d-active": "0 1px 0 0 rgba(0, 0, 0, 0.18)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

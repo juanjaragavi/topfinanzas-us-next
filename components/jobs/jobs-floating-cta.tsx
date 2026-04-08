@@ -103,7 +103,7 @@ export default function JobsFloatingCta({
         <a
           href={ctaHref}
           aria-label={resolvedCtaLabel}
-          className="block w-full py-2 px-3 bg-[#1D4ED8] hover:bg-[#1E3A8A] text-white text-sm font-bold rounded-lg text-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#1D4ED8] focus:ring-offset-2"
+          className="block w-full py-2 px-3 bg-[#1D4ED8] hover:bg-[#1E3A8A] text-white text-sm font-bold rounded-xl text-center transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] focus:outline-none focus:ring-2 focus:ring-[#1D4ED8] focus:ring-offset-2"
         >
           {resolvedCtaLabel}
         </a>
