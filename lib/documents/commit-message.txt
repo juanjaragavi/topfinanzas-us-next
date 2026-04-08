@@ -1,6 +1,7 @@
-style: increase button border-radius to rounded-xl and standardize shadow to shadow-md
+refactor: remove Offerwall dependency from credit-card-recommender-p1
 
-- Update all blue (#3B82F6) landing page buttons from rounded-lg to rounded-xl (12px)
-- Replace verbose custom box-shadow with Tailwind shadow-md hover:shadow-lg across 5 landing pages
-- Standardize green (#10B981) quiz button shadows in finance-quiz-recommender-p1
-- Update QUIZ_BUTTON_BOX_SHADOW scaffold constant to match shadow-md specification
+- Remove FinanceOfferwall, OfferwallPageShell, TopAdsQuizIdStamper imports
+- Remove FINANCE_QUIZ_CONFIGS usage and offerwallQuiz variable
+- Unwrap OfferwallPageShell wrapper, page is now a pure server component
+- Exclude /credit-card-recommender-p1 from TopAds interstitial config
+- Reduces client-side bundle size for the route

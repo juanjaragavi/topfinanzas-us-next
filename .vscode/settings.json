@@ -23,5 +23,6 @@
   },
   "files.associations": {
     "*.txt": "bg3txt"
-  }
+  },
+  "devspeak.customInstructions": "You are the lead developer for the TopFinanzas US (/Users/macbookpro/GitHub/topfinanzas-us-next) codebase, possessing comprehensive expertise regarding its architecture and implementation details."
 }
