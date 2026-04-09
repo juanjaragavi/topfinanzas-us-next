@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import TopAdsPlacement from "@/components/ads/topads-placement";
 import { useTopAds } from "@/components/analytics/topads-spa-handler";
 import { formLogger } from "@/lib/logger";
 import { pushGTMConversion } from "@/components/analytics/gtm";
@@ -302,21 +301,46 @@ function QuizOptionCard({
 }
 
 /**
- * Stable ad container that stays in the DOM across quiz steps.
- * Uses `unitIndex` to rotate through square01 → square02 → square03.
- * A React `key` tied to `unitIndex` forces unmount/remount so the
- * ad provider detects the fresh DOM node.
+ * Imperative ad container that manages the inner ad div via DOM APIs.
+ *
+ * Ad scripts (TopAds / GPT) inject their own child nodes into the ad
+ * container.  If React tries to unmount that container (e.g. via a `key`
+ * swap) it calls `removeChild` on nodes the ad script has re‑parented,
+ * causing a runtime crash.  By owning only a stable wrapper `<div>` in
+ * React and creating / destroying the inner ad `<div>` imperatively we
+ * avoid the conflict entirely.
  */
-
 function AdSlot({ unitIndex }: { unitIndex: number }) {
-  return (
-    <TopAdsPlacement
-      key={unitIndex}
-      unitIndex={unitIndex}
-      size="square"
-      minHeight="250px"
-    />
-  );
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+
+    // Safely wipe any ad-injected DOM from the previous rotation
+    wrapper.innerHTML = "";
+
+    // Build a fresh ad container with the rotated ID
+    const adId = `square0${unitIndex}`;
+    const adDiv = document.createElement("div");
+    adDiv.id = adId;
+    adDiv.dataset.topads = "";
+    adDiv.dataset.topadsSize = "square";
+    adDiv.className = "topads-placement";
+    adDiv.style.cssText =
+      "min-height:250px;display:block;margin:20px auto;text-align:center";
+    adDiv.setAttribute("aria-label", `Advertisement ${adId}`);
+    wrapper.appendChild(adDiv);
+
+    formLogger.info("[CC-REC-3] Ad container created", { adId, unitIndex });
+
+    return () => {
+      // Cleanup on unmount — innerHTML avoids removeChild errors
+      wrapper.innerHTML = "";
+    };
+  }, [unitIndex]);
+
+  return <div ref={wrapperRef} />;
 }
 
 // ---------------------------------------------------------------------------

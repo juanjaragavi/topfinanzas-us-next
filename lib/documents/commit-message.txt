@@ -1,9 +1,9 @@
-feat: add round-robin ad unit rotation for TopAdsPlacement
+fix: resolve removeChild crash in round-robin ad rotation
 
-- Add optional `unitIndex` prop to TopAdsPlacement that generates
-  container IDs as `square0{n}` (backward-compatible with `id` prop)
-- Implement ad rotation in invit-credit-card-rec-us-3 quiz page:
-  square01 → square02 → square03 → square01 on each user selection
-- Use React key-based unmount/remount for clean ad provider detection
-- Remove legacy refreshGPTSlot in-place refresh in favor of rotation
-- Enhanced logging for rotation events and unitIndex tracking
+Ad scripts (TopAds/GPT) inject child nodes into the ad container div.
+Using a React `key` swap to remount the container caused React to call
+removeChild on nodes the ad script had re-parented, crashing the app.
+
+Replace the key-based remount with an imperative DOM approach: React
+owns only a stable wrapper div while the inner ad container is created
+and destroyed via innerHTML/appendChild, bypassing React reconciliation.
