@@ -1,9 +1,10 @@
-fix: resolve removeChild crash in round-robin ad rotation
+fix: re-inject TopAds script on ad slot rotation for container discovery
 
-Ad scripts (TopAds/GPT) inject child nodes into the ad container div.
-Using a React `key` swap to remount the container caused React to call
-removeChild on nodes the ad script had re-parented, crashing the app.
+TopAds spa() only refreshes slots registered during the initial bootstrap
+scan. Dynamically created containers (square02, square03) were never
+registered, so spa() left them empty after rotation.
 
-Replace the key-based remount with an imperative DOM approach: React
-owns only a stable wrapper div while the inner ad container is created
-and destroyed via innerHTML/appendChild, bypassing React reconciliation.
+On each rotation the TopAds external script is now removed and re-injected
+(same pattern used by activateDelayedAds in the SPA handler), forcing a
+full DOM re-scan that discovers the new [data-topads] container. The first
+mount is skipped since TopAds bootstrap handles initial fill naturally.

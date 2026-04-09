@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { useTopAds } from "@/components/analytics/topads-spa-handler";
 import { formLogger } from "@/lib/logger";
 import { pushGTMConversion } from "@/components/analytics/gtm";
 import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
@@ -151,6 +150,9 @@ const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 
 /** Round-robin pool size for ad unit rotation (square01-square03). */
 const AD_UNIT_COUNT = 3;
+
+/** TopAds external script URL (must match the one loaded in layout). */
+const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
 
 // ---------------------------------------------------------------------------
 // Sub-components
@@ -309,9 +311,14 @@ function QuizOptionCard({
  * causing a runtime crash.  By owning only a stable wrapper `<div>` in
  * React and creating / destroying the inner ad `<div>` imperatively we
  * avoid the conflict entirely.
+ *
+ * On the initial mount TopAds’ bootstrap script discovers the container
+ * automatically.  On subsequent rotations the ad script is re‑injected so
+ * that TopAds re‑scans the DOM and picks up the new `[data-topads]` node.
  */
 function AdSlot({ unitIndex }: { unitIndex: number }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const isFirstMount = useRef(true);
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
@@ -332,9 +339,52 @@ function AdSlot({ unitIndex }: { unitIndex: number }) {
     adDiv.setAttribute("aria-label", `Advertisement ${adId}`);
     wrapper.appendChild(adDiv);
 
-    formLogger.info("[CC-REC-3] Ad container created", { adId, unitIndex });
+    // On the first mount, TopAds’ bootstrap script handles the initial fill.
+    // On subsequent rotations we re‑inject the external script so TopAds
+    // re‑scans the DOM and discovers the new container.  Calling `spa()`
+    // alone is insufficient because `spa()` only refreshes slots that were
+    // registered during the *initial* bootstrap — a dynamically created
+    // container won’t be among them.
+    let reinitTimer: ReturnType<typeof setTimeout> | null = null;
+
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      formLogger.info("[CC-REC-3] Ad container created (initial)", {
+        adId,
+        unitIndex,
+      });
+    } else {
+      formLogger.info("[CC-REC-3] Ad container created (rotation)", {
+        adId,
+        unitIndex,
+      });
+
+      reinitTimer = setTimeout(() => {
+        try {
+          document
+            .querySelectorAll('script[src*="topAds.min.js"]')
+            .forEach((s) => s.remove());
+
+          const script = document.createElement("script");
+          script.src = TOPADS_SCRIPT_URL;
+          script.type = "text/javascript";
+          script.async = true;
+          script.defer = true;
+          script.setAttribute("data-cfasync", "false");
+          document.head.appendChild(script);
+
+          formLogger.info("[CC-REC-3] TopAds script re-injected", { adId });
+        } catch (err) {
+          formLogger.error(
+            "[CC-REC-3] Failed to re-inject TopAds script",
+            err,
+          );
+        }
+      }, 100);
+    }
 
     return () => {
+      if (reinitTimer) clearTimeout(reinitTimer);
       // Cleanup on unmount — innerHTML avoids removeChild errors
       wrapper.innerHTML = "";
     };
@@ -351,7 +401,6 @@ export default function InvitCreditCardRecUS3Page() {
   const offerwallQuiz = FINANCE_QUIZ_CONFIGS.creditCardRecommender3;
   const [currentStep, setCurrentStep] = useState(0);
   const [selections, setSelections] = useState<Record<number, string>>({});
-  const { triggerSPA } = useTopAds();
   const router = useRouter();
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -411,15 +460,10 @@ export default function InvitCreditCardRecUS3Page() {
           const nextStep = currentStep + 1;
           setCurrentStep(nextStep);
           setVisible(true);
-
-          // Trigger TopAds SPA handler for the new placement
-          setTimeout(() => {
-            triggerSPA();
-          }, 150);
         }, 250); // matches exit duration
       }, 350); // highlight delay
     },
-    [currentStep, isLastStep, selections, triggerSPA, router, adIndex],
+    [currentStep, isLastStep, selections, router, adIndex],
   );
 
   // Determine layout mode for step options
