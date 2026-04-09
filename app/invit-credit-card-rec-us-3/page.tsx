@@ -150,6 +150,9 @@ const AFFILIATE_URL =
 
 const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 
+/** Round-robin pool size for ad unit rotation (square01-square03). */
+const AD_UNIT_COUNT = 3;
+
 // ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
@@ -300,55 +303,20 @@ function QuizOptionCard({
 
 /**
  * Stable ad container that stays in the DOM across quiz steps.
- * Instead of unmounting / remounting (which causes "removeChild" errors
- * because GPT injects its own children), we keep a single div and call
- * `googletag.pubads().refresh([slot])` to load fresh creative.
+ * Uses `unitIndex` to rotate through square01 → square02 → square03.
+ * A React `key` tied to `unitIndex` forces unmount/remount so the
+ * ad provider detects the fresh DOM node.
  */
-const AD_SLOT_ID = "quiz-rec3-ad";
 
-function refreshGPTSlot(elementId: string, stepIndex: number) {
-  if (typeof window === "undefined") return;
-
-  const gt = (window as unknown as Record<string, unknown>).googletag as
-    | {
-        cmd: Array<() => void>;
-        pubads: () => {
-          getSlots: () => Array<{ getSlotElementId: () => string }>;
-          refresh: (slots: unknown[]) => void;
-        };
-      }
-    | undefined;
-
-  if (!gt?.cmd) return;
-
-  gt.cmd.push(() => {
-    const slots = gt.pubads().getSlots();
-    const target = slots.find((s) => s.getSlotElementId() === elementId);
-    if (target) {
-      gt.pubads().refresh([target]);
-      formLogger.info("[CC-REC-3] GPT slot refreshed via pubads().refresh()", {
-        elementId,
-        step: stepIndex,
-      });
-    } else {
-      formLogger.warn("[CC-REC-3] GPT slot not found for refresh", {
-        elementId,
-      });
-    }
-  });
-}
-
-function AdSlot({ step }: { step: number }) {
-  const prevStep = useRef(step);
-
-  useEffect(() => {
-    if (step !== prevStep.current) {
-      prevStep.current = step;
-      refreshGPTSlot(AD_SLOT_ID, step);
-    }
-  }, [step]);
-
-  return <TopAdsPlacement id={AD_SLOT_ID} size="square" minHeight="250px" />;
+function AdSlot({ unitIndex }: { unitIndex: number }) {
+  return (
+    <TopAdsPlacement
+      key={unitIndex}
+      unitIndex={unitIndex}
+      size="square"
+      minHeight="250px"
+    />
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -362,6 +330,9 @@ export default function InvitCreditCardRecUS3Page() {
   const { triggerSPA } = useTopAds();
   const router = useRouter();
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  /** Round-robin ad unit index cycling 1 → 2 → 3 → 1 */
+  const [adIndex, setAdIndex] = useState(1);
 
   const step = QUIZ_STEPS[currentStep];
   const selectedId = selections[currentStep] ?? null;
@@ -401,6 +372,14 @@ export default function InvitCreditCardRecUS3Page() {
           return;
         }
 
+        // Rotate the ad unit before transitioning
+        const nextAdIndex = (adIndex % AD_UNIT_COUNT) + 1;
+        setAdIndex(nextAdIndex);
+        formLogger.info("[CC-REC-3] Ad unit rotated", {
+          from: `square0${adIndex}`,
+          to: `square0${nextAdIndex}`,
+        });
+
         // Fade out → swap step → fade in
         setVisible(false);
         setTimeout(() => {
@@ -409,15 +388,14 @@ export default function InvitCreditCardRecUS3Page() {
           setCurrentStep(nextStep);
           setVisible(true);
 
-          // Refresh the GPT ad slot with fresh creative
+          // Trigger TopAds SPA handler for the new placement
           setTimeout(() => {
-            refreshGPTSlot(AD_SLOT_ID, nextStep);
             triggerSPA();
           }, 150);
         }, 250); // matches exit duration
       }, 350); // highlight delay
     },
-    [currentStep, isLastStep, selections, triggerSPA, router],
+    [currentStep, isLastStep, selections, triggerSPA, router, adIndex],
   );
 
   // Determine layout mode for step options
@@ -437,9 +415,9 @@ export default function InvitCreditCardRecUS3Page() {
 
           <main className="flex-grow">
             <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
-              {/* TopAds ad unit — hard-swapped outside AnimatePresence */}
+              {/* TopAds ad unit — round-robin rotation via key/unitIndex */}
               <div className="flex justify-center mb-6">
-                <AdSlot step={currentStep} />
+                <AdSlot unitIndex={adIndex} />
               </div>
 
               {/* Quiz progress */}
