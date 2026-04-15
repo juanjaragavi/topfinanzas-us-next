@@ -59,6 +59,7 @@ export function FinanceChatOfferwall({
   const [isTyping, setIsTyping] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
   const [showCta, setShowCta] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = useCallback(() => {
@@ -91,16 +92,18 @@ export function FinanceChatOfferwall({
 
   useEffect(() => {
     const init = async () => {
-      await addBotMessage(`Hi! I'm ${botName}. ${greeting}`, 800);
+      await addBotMessage(`Hi! I'm ${botName}. ${greeting}`, 2000);
       if (questions.length > 0) {
         setCurrentQuestion(0);
-        await addBotMessage(questions[0].botMessage, 1000);
+        await addBotMessage(questions[0].botMessage, 2200);
         setShowOptions(true);
       }
     };
-    init();
+    if (hasStarted) {
+      init();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [hasStarted]);
 
   useEffect(() => {
     scrollToBottom();
@@ -123,11 +126,11 @@ export function FinanceChatOfferwall({
 
       if (nextIndex < questions.length) {
         setCurrentQuestion(nextIndex);
-        await addBotMessage(questions[nextIndex].botMessage, 1200);
+        await addBotMessage(questions[nextIndex].botMessage, 2400);
         setShowOptions(true);
       } else {
         setCurrentQuestion(-1);
-        await addBotMessage(successMessage, 1000);
+        await addBotMessage(successMessage, 2200);
         setShowCta(true);
       }
     },
@@ -139,109 +142,123 @@ export function FinanceChatOfferwall({
   }, [router, redirectTo]);
 
   return (
-    <main className="fixed inset-0 z-[9999] bg-white sm:bg-gray-100 flex justify-center items-start overflow-hidden">
+    <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
       <div className="w-full h-full max-w-md bg-white flex flex-col shadow-2xl relative">
-        {/* Header */}
-        <div 
-          className={`p-4 text-white text-center font-bold relative shadow-sm ${currentTheme.bg}`}
-        >
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-lg">
-            🤖
-          </div>
-          <h2 className="text-lg">{botName}</h2>
-        </div>
-      </div>
-
-      {/* Chat Window */}
-      <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-gray-50 flex flex-col gap-4">
-        {messages.map((msg, i) => (
-          <div
-            key={i}
-            className={`flex ${msg.type === "user" ? "justify-end" : "justify-start"}`}
-          >
-            {msg.type === "bot" && (
-              <div
-                className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold mr-2 mt-1 ${currentTheme.bg}`}
-              >
-                🤖
-              </div>
-            )}
+        {!hasStarted ? (
+          <div className="flex flex-col items-center justify-center h-full p-6 bg-[#F8F9FA]">
+            <h1 className="text-lg font-semibold text-center text-gray-700 mb-8 leading-snug">
+              Answer a few questions in our chat to find your loan. It&apos;s very quick!
+            </h1>
             
-            {msg.type === "ad" ? (
-              <div className="w-full max-w-sm mx-auto my-4 bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 p-2">
-                <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">Advertisement</span>
-                <TopAdsSquare id="square01" className="w-full min-h-[250px] flex items-center justify-center bg-gray-50 rounded" />
+            <div className="w-full flex items-center justify-center mb-8 relative">
+              <div className="w-full h-px bg-[#FDBA74] absolute top-1/2 left-0 -translate-y-1/2"></div>
+              <div className="w-6 h-6 rounded-full bg-white border border-[#FDBA74] text-[#FDBA74] flex items-center justify-center relative z-10">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
               </div>
-            ) : (
-              <div
-                className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
-                  msg.type === "bot"
-                    ? "bg-gray-100 text-gray-800 rounded-2xl rounded-tl-sm border-none"
-                    : `text-white rounded-2xl rounded-tr-sm ${currentTheme.bg}`
-                }`}
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 w-full flex flex-col items-center">
+              <h2 className="text-lg font-medium text-gray-900 mb-6">Shall we begin?</h2>
+              <button
+                type="button"
+                onClick={() => setHasStarted(true)}
+                className="w-full relative bg-[#FED7AA] hover:bg-[#FDBA74] text-[#9A3412] font-semibold py-3.5 rounded-lg transition-colors"
               >
-                {msg.text}
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#F59E0B]"></div>
+                Let&apos;s do it!
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-white flex flex-col gap-4">
+            {messages.map((msg, i) => (
+              <div
+                key={i}
+                className={`flex ${msg.type === "user" ? "justify-end" : "justify-start"}`}
+              >
+                {msg.type === "ad" ? (
+                  <div className="w-full max-w-sm mx-auto my-4">
+                    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 p-5 mb-4">
+                      <h3 className="text-lg font-bold text-center text-gray-900 mb-2">Your Instant Loan Opportunity Awaits</h3>
+                      <p className="text-sm text-center text-gray-700 mb-5">See loans from $100 up to $50,000, no collateral needed</p>
+                      <button type="button" className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 mb-3 transition-colors">
+                        Show My Options
+                        <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
+                          <svg className="w-3 h-3 text-[#7C3AED] ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6V4z" /></svg>
+                        </div>
+                      </button>
+                      <p className="text-xs text-center text-gray-500 leading-tight px-2">To view your suggested loans please watch an ad before we unlock the list</p>
+                    </div>
+                    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 p-2">
+                      <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">Advertisement</span>
+                      <TopAdsSquare id="square01" className="w-full min-h-[250px] flex items-center justify-center bg-gray-50 rounded" />
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
+                      msg.type === "bot"
+                        ? "bg-[#F3F4F6] text-gray-800 rounded-3xl rounded-tl-sm border-none"
+                        : `text-white rounded-3xl rounded-tr-sm ${currentTheme.bg}`
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {isTyping && (
+              <div className="flex justify-start">
+                <div className="bg-[#F3F4F6] px-4 py-3 rounded-3xl rounded-tl-sm flex gap-1.5 items-center shadow-sm h-10 border-none">
+                  <span
+                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
+                    style={{ animationDelay: "0ms" }}
+                  />
+                  <span
+                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
+                    style={{ animationDelay: "150ms" }}
+                  />
+                  <span
+                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
+                    style={{ animationDelay: "300ms" }}
+                  />
+                </div>
               </div>
             )}
-          </div>
-        ))}
 
-        {isTyping && (
-          <div className="flex justify-start">
-            <div
-              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold mr-2 ${currentTheme.bg}`}
-            >
-              🤖
-            </div>
-            <div className="bg-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm flex gap-1.5 items-center shadow-sm h-10 border-none">
-              <span
-                className={`w-2 h-2 rounded-full animate-bounce ${currentTheme.bg}`}
-                style={{ animationDelay: "0ms" }}
-              />
-              <span
-                className={`w-2 h-2 rounded-full animate-bounce ${currentTheme.bg}`}
-                style={{ animationDelay: "150ms" }}
-              />
-              <span
-                className={`w-2 h-2 rounded-full animate-bounce ${currentTheme.bg}`}
-                style={{ animationDelay: "300ms" }}
-              />
-            </div>
-          </div>
-        )}
+            {showOptions && currentQuestion >= 0 && (
+              <div className="flex flex-col gap-2 mt-1 max-w-sm">
+                {questions[currentQuestion].options.map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => handleAnswer(opt.label)}
+                    className={`px-5 py-3.5 rounded-full text-[15px] font-semibold transition-all duration-200 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${currentTheme.bg} ${currentTheme.hoverBg}`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            )}
 
-        {showOptions && currentQuestion >= 0 && (
-          <div className="flex flex-col gap-2 pl-10 mt-1 max-w-sm">
-            {questions[currentQuestion].options.map((opt) => (
-              <button
-                key={opt.value}
-                type="button"
-                onClick={() => handleAnswer(opt.label)}
-                className={`px-5 py-3.5 rounded-full text-[15px] font-semibold transition-all duration-200 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${currentTheme.bg} ${currentTheme.hoverBg}`}
-              >
-                {opt.label}
-              </button>
-            ))}
+            {showCta && (
+              <div className="mt-4 space-y-3 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
+                <h3 className="font-bold text-gray-900 text-lg mb-2">Your Results Are Ready</h3>
+                <p className="text-sm text-gray-600 mb-4">{ctaSecondaryText}</p>
+                <button
+                  type="button"
+                  onClick={handleCta}
+                  className={`block w-full py-4 px-6 rounded-full text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg ${currentTheme.bg} ${currentTheme.hoverBg}`}
+                >
+                  {ctaButtonText} →
+                </button>
+              </div>
+            )}
+
+            <div ref={chatEndRef} />
           </div>
         )}
-
-        {showCta && (
-          <div className="mt-4 space-y-3 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
-            <h3 className="font-bold text-gray-900 text-lg mb-2">Your Results Are Ready</h3>
-            <p className="text-sm text-gray-600 mb-4">{ctaSecondaryText}</p>
-            <button
-              type="button"
-              onClick={handleCta}
-              className={`block w-full py-4 px-6 rounded-full text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg ${currentTheme.bg} ${currentTheme.hoverBg}`}
-            >
-              {ctaButtonText} →
-            </button>
-          </div>
-        )}
-
-        <div ref={chatEndRef} />
-      </div>
       </div>
     </main>
   );
