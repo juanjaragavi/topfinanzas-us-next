@@ -1,5 +1,9 @@
-chore: expand devspeak workspace instructions
+refactor: split invit-credit-card-rec-us-3 quiz into three separate routes
 
-Replace the repo-specific DevSpeak instruction prompt with a broader,
-cross-stack expert profile in the VS Code workspace settings.
+- Extract shared quiz components into components/steps/credit-card-rec-shared.tsx
+- Refactor /invit-credit-card-rec-us-3 to Step 1 only (credit score, square01, preloader active)
+- Create /invit-credit-card-rec-us-4 for Step 2 (spending category, square02, preloader disabled)
+- Create /invit-credit-card-rec-us-5 for Step 3 (monthly spend, square03, preloader disabled)
+- Add creditCardRecommender4 and creditCardRecommender5 quiz configs
+- Offerwall only renders on the first route (/invit-credit-card-rec-us-3)
 

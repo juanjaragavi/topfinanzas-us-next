@@ -1,420 +1,43 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { formLogger } from "@/lib/logger";
-import { pushGTMConversion } from "@/components/analytics/gtm";
 import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
 import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
 import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
+import {
+  CREDIT_SCORE_OPTIONS,
+  HeroBanner,
+  TrustBar,
+  QuizProgressBar,
+  QuizOptionCard,
+  AdSlot,
+  BottomContent,
+} from "@/components/steps/credit-card-rec-shared";
 
 // ---------------------------------------------------------------------------
-// Types
+// Constants
 // ---------------------------------------------------------------------------
 
-interface QuizOption {
-  id: string;
-  emoji: string;
-  label: string;
-  description?: string;
-}
-
-interface QuizStep {
-  question: string;
-  subtitle: string;
-  options: readonly QuizOption[];
-  columns: 2 | 1;
-}
+const LOG_TAG = "CC-REC-3";
+const STEP_QUESTION = "What's your credit score range?";
+const STEP_SUBTITLE =
+  "This helps us match cards you're most likely to be approved for.";
 
 // ---------------------------------------------------------------------------
-// Quiz data (immutable)
-// ---------------------------------------------------------------------------
-
-const CREDIT_SCORE_OPTIONS: readonly QuizOption[] = [
-  { id: "excellent", emoji: "🚀", label: "Excellent", description: "750+" },
-  { id: "good", emoji: "⭐", label: "Good", description: "700-749" },
-  { id: "fair", emoji: "📈", label: "Fair", description: "650-699" },
-  {
-    id: "building",
-    emoji: "🌱",
-    label: "Building",
-    description: "Below 650",
-  },
-] as const;
-
-const SPENDING_CATEGORY_OPTIONS: readonly QuizOption[] = [
-  {
-    id: "dining",
-    emoji: "🍔",
-    label: "Dining & Delivery",
-    description: "Restaurants, Uber Eats, DoorDash",
-  },
-  {
-    id: "groceries",
-    emoji: "🛒",
-    label: "Groceries",
-    description: "Supermarkets, Costco, Whole Foods",
-  },
-  {
-    id: "gas",
-    emoji: "⛽",
-    label: "Gas & Transit",
-    description: "Gas stations, rideshare, public transit",
-  },
-  {
-    id: "online",
-    emoji: "💻",
-    label: "Online Shopping",
-    description: "Amazon, subscriptions, streaming",
-  },
-  {
-    id: "travel",
-    emoji: "✈️",
-    label: "Travel & Hotels",
-    description: "Flights, Airbnb, car rentals",
-  },
-  {
-    id: "bills",
-    emoji: "🏠",
-    label: "Bills & Utilities",
-    description: "Rent, phone, insurance, internet",
-  },
-] as const;
-
-const MONTHLY_SPEND_OPTIONS: readonly QuizOption[] = [
-  {
-    id: "under1000",
-    emoji: "💵",
-    label: "Under $1,000",
-    description: "Best for no-fee cards with flat rewards",
-  },
-  {
-    id: "1000-3000",
-    emoji: "💶",
-    label: "$1,000 - $3,000",
-    description: "Sweet spot for category bonus cards",
-  },
-  {
-    id: "3000-5000",
-    emoji: "💳",
-    label: "$3,000 - $5,000",
-    description: "Premium cards start making sense here",
-  },
-  {
-    id: "5000plus",
-    emoji: "🤑",
-    label: "$5,000+",
-    description: "Maximize premium perks and sign-up bonuses",
-  },
-] as const;
-
-const QUIZ_STEPS: readonly QuizStep[] = [
-  {
-    question: "What's your credit score range?",
-    subtitle:
-      "This helps us match cards you're most likely to be approved for.",
-    options: CREDIT_SCORE_OPTIONS,
-    columns: 2,
-  },
-  {
-    question: "Where do you spend the most each month?",
-    subtitle:
-      "Cards offer bonus rewards in specific categories. We'll match you to the ones that maximize your return.",
-    options: SPENDING_CATEGORY_OPTIONS,
-    columns: 2,
-  },
-  {
-    question: "How much do you spend monthly?",
-    subtitle:
-      "This determines which reward tiers you'll actually benefit from.",
-    options: MONTHLY_SPEND_OPTIONS,
-    columns: 1,
-  },
-] as const;
-
-const AFFILIATE_URL =
-  "https://route.topnetworks.co/api/redirect/58a90a39-9189-46f6-8f65-fcda695d2a28";
-
-const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
-
-/** Round-robin pool size for ad unit rotation (square01-square03). */
-const AD_UNIT_COUNT = 3;
-
-/** TopAds external script URL (must match the one loaded in layout). */
-const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
-
-// ---------------------------------------------------------------------------
-// Sub-components
-// ---------------------------------------------------------------------------
-
-function HeroBanner() {
-  return (
-    <div className="w-full bg-[#10B981] text-white py-8 md:py-12 px-4">
-      <div className="max-w-3xl mx-auto text-center space-y-4">
-        <h1 className="text-2xl md:text-4xl font-bold leading-tight text-white">
-          Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
-          30 Seconds
-        </h1>
-        <p className="text-sm md:text-lg text-emerald-100">
-          Answer 3 quick questions. Get personalized recommendations
-          <br className="hidden md:block" /> matched to your spending habits.
-        </p>
-
-        {/* Social proof stats */}
-        <div className="flex justify-center gap-8 md:gap-16 pt-4">
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">847K+</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
-              Users Matched
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">4.8/5</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
-              Avg Rating
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">50+</p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
-              Cards Analyzed
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TrustBar() {
-  const [liveCount, setLiveCount] = useState(127);
-
-  // Gentle random drift every 8 s
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setLiveCount((prev) => {
-        const delta = Math.random() > 0.5 ? 1 : -1;
-        return Math.max(100, Math.min(200, prev + delta));
-      });
-    }, 8000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="w-full bg-white border-b border-gray-200 py-2 px-4">
-      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-4 text-sm">
-        <span className="text-yellow-500 font-medium">
-          ★★★★★ Rated 4.8 by users
-        </span>
-        <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
-          {liveCount} people taking the quiz right now
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function QuizProgressBar({
-  currentStep,
-  totalSteps,
-}: {
-  currentStep: number;
-  totalSteps: number;
-}) {
-  return (
-    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
-      <span className="font-medium text-gray-700">Your Credit Card Match</span>
-      <span>
-        Step {currentStep} of {totalSteps}
-      </span>
-    </div>
-  );
-}
-
-function QuizOptionCard({
-  option,
-  selected,
-  onClick,
-  layout,
-}: {
-  option: QuizOption;
-  selected: boolean;
-  onClick: () => void;
-  layout: "grid" | "list";
-}) {
-  if (layout === "list") {
-    return (
-      <motion.button
-        type="button"
-        onClick={onClick}
-        className={`flex items-center gap-4 w-full p-4 rounded-xl border-2 transition-all duration-200 text-left ${
-          selected
-            ? "border-[#10B981] bg-emerald-50 shadow-md"
-            : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
-        }`}
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.99 }}
-      >
-        <span className="text-2xl flex-shrink-0">{option.emoji}</span>
-        <div>
-          <p className="font-bold text-gray-900">{option.label}</p>
-          {option.description && (
-            <p className="text-sm text-gray-500">{option.description}</p>
-          )}
-        </div>
-      </motion.button>
-    );
-  }
-
-  return (
-    <motion.button
-      type="button"
-      onClick={onClick}
-      className={`flex flex-col items-center justify-center p-5 md:p-6 rounded-xl border-2 transition-all duration-200 ${
-        selected
-          ? "border-[#10B981] bg-emerald-50 shadow-md"
-          : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
-      }`}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      <span className="text-3xl md:text-4xl mb-2">{option.emoji}</span>
-      <p className="font-bold text-gray-900 text-sm md:text-base">
-        {option.label}
-      </p>
-      {option.description && (
-        <p className="text-xs md:text-sm text-gray-500 mt-1">
-          {option.description}
-        </p>
-      )}
-    </motion.button>
-  );
-}
-
-/**
- * Imperative ad container that manages the inner ad div via DOM APIs.
- *
- * Ad scripts (TopAds / GPT) inject their own child nodes into the ad
- * container.  If React tries to unmount that container (e.g. via a `key`
- * swap) it calls `removeChild` on nodes the ad script has re‑parented,
- * causing a runtime crash.  By owning only a stable wrapper `<div>` in
- * React and creating / destroying the inner ad `<div>` imperatively we
- * avoid the conflict entirely.
- *
- * On the initial mount TopAds’ bootstrap script discovers the container
- * automatically.  On subsequent rotations the ad script is re‑injected so
- * that TopAds re‑scans the DOM and picks up the new `[data-topads]` node.
- */
-function AdSlot({ unitIndex }: { unitIndex: number }) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const isFirstMount = useRef(true);
-
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-    if (!wrapper) return;
-
-    // Safely wipe any ad-injected DOM from the previous rotation
-    wrapper.innerHTML = "";
-
-    // Build a fresh ad container with the rotated ID
-    const adId = `square0${unitIndex}`;
-    const adDiv = document.createElement("div");
-    adDiv.id = adId;
-    adDiv.dataset.topads = "";
-    adDiv.dataset.topadsSize = "square";
-    adDiv.className = "topads-placement";
-    adDiv.style.cssText =
-      "min-height:250px;display:block;margin:20px auto;text-align:center";
-    adDiv.setAttribute("aria-label", `Advertisement ${adId}`);
-    wrapper.appendChild(adDiv);
-
-    // On the first mount, TopAds’ bootstrap script handles the initial fill.
-    // On subsequent rotations we re‑inject the external script so TopAds
-    // re‑scans the DOM and discovers the new container.  Calling `spa()`
-    // alone is insufficient because `spa()` only refreshes slots that were
-    // registered during the *initial* bootstrap — a dynamically created
-    // container won’t be among them.
-    let reinitTimer: ReturnType<typeof setTimeout> | null = null;
-
-    if (isFirstMount.current) {
-      isFirstMount.current = false;
-      formLogger.info("[CC-REC-3] Ad container created (initial)", {
-        adId,
-        unitIndex,
-      });
-    } else {
-      formLogger.info("[CC-REC-3] Ad container created (rotation)", {
-        adId,
-        unitIndex,
-      });
-
-      reinitTimer = setTimeout(() => {
-        try {
-          document
-            .querySelectorAll('script[src*="topAds.min.js"]')
-            .forEach((s) => s.remove());
-
-          const script = document.createElement("script");
-          script.src = TOPADS_SCRIPT_URL;
-          script.type = "text/javascript";
-          script.async = true;
-          script.defer = true;
-          script.setAttribute("data-cfasync", "false");
-          document.head.appendChild(script);
-
-          formLogger.info("[CC-REC-3] TopAds script re-injected", { adId });
-        } catch (err) {
-          formLogger.error(
-            "[CC-REC-3] Failed to re-inject TopAds script",
-            err,
-          );
-        }
-      }, 100);
-    }
-
-    return () => {
-      if (reinitTimer) clearTimeout(reinitTimer);
-      // Cleanup on unmount — innerHTML avoids removeChild errors
-      wrapper.innerHTML = "";
-    };
-  }, [unitIndex]);
-
-  return <div ref={wrapperRef} />;
-}
-
-// ---------------------------------------------------------------------------
-// Main page component
+// Main page component — Step 1 of 3 (with preloader)
 // ---------------------------------------------------------------------------
 
 export default function InvitCreditCardRecUS3Page() {
   const offerwallQuiz = FINANCE_QUIZ_CONFIGS.creditCardRecommender3;
-  const [currentStep, setCurrentStep] = useState(0);
-  const [selections, setSelections] = useState<Record<number, string>>({});
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const router = useRouter();
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  /** Round-robin ad unit index cycling 1 → 2 → 3 → 1 */
-  const [adIndex, setAdIndex] = useState(1);
-
-  const step = QUIZ_STEPS[currentStep];
-  const selectedId = selections[currentStep] ?? null;
-  const isLastStep = currentStep === QUIZ_STEPS.length - 1;
-
-  // Drives enter/exit animation without AnimatePresence
-  const [visible, setVisible] = useState(true);
-
-  // Clean up pending timer on unmount
   useEffect(() => {
     return () => {
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
@@ -423,204 +46,72 @@ export default function InvitCreditCardRecUS3Page() {
 
   const handleSelect = useCallback(
     (optionId: string) => {
-      // Save selection immutably
-      const updatedSelections = { ...selections, [currentStep]: optionId };
-      setSelections(updatedSelections);
+      setSelectedId(optionId);
 
-      formLogger.info("[CC-REC-3] Step completed", {
-        step: currentStep + 1,
+      formLogger.info(`[${LOG_TAG}] Step completed`, {
+        step: 1,
         selection: optionId,
       });
 
-      // Brief delay so the user sees their selection highlight
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
       advanceTimerRef.current = setTimeout(() => {
-        if (isLastStep) {
-          pushGTMConversion(GTM_CONVERSION_EVENT);
-          formLogger.info(
-            "[CC-REC-3] Quiz completed — redirecting to affiliate",
-            { selections: updatedSelections },
-          );
-          router.push(AFFILIATE_URL);
-          return;
-        }
-
-        // Rotate the ad unit before transitioning
-        const nextAdIndex = (adIndex % AD_UNIT_COUNT) + 1;
-        setAdIndex(nextAdIndex);
-        formLogger.info("[CC-REC-3] Ad unit rotated", {
-          from: `square0${adIndex}`,
-          to: `square0${nextAdIndex}`,
-        });
-
-        // Fade out → swap step → fade in
-        setVisible(false);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          const nextStep = currentStep + 1;
-          setCurrentStep(nextStep);
-          setVisible(true);
-        }, 250); // matches exit duration
-      }, 350); // highlight delay
+        window.scrollTo(0, 0);
+        router.push("/invit-credit-card-rec-us-4");
+      }, 350);
     },
-    [currentStep, isLastStep, selections, router, adIndex],
+    [router],
   );
-
-  // Determine layout mode for step options
-  const layoutMode = step.columns === 1 ? "list" : "grid";
 
   return (
     <FinanceOfferwallRuntime quiz={offerwallQuiz}>
       <OfferwallPageShell>
         <div className="min-h-screen flex flex-col bg-white">
           <Header />
-
-          {/* Hero */}
           <HeroBanner />
-
-          {/* Trust bar */}
           <TrustBar />
 
           <main className="flex-grow">
             <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
-              {/* TopAds ad unit — round-robin rotation via key/unitIndex */}
+              {/* TopAds ad unit — square01 */}
               <div className="flex justify-center mb-6">
-                <AdSlot unitIndex={adIndex} />
+                <AdSlot unitIndex={1} logTag={LOG_TAG} />
               </div>
 
-              {/* Quiz progress */}
-              <QuizProgressBar
-                currentStep={currentStep + 1}
-                totalSteps={QUIZ_STEPS.length}
-              />
+              <QuizProgressBar currentStep={1} totalSteps={3} />
 
-              {/* Quiz step content — state-driven animation (no AnimatePresence) */}
               <motion.div
-                animate={
-                  visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }
-                }
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.25 }}
                 className="space-y-5"
               >
-                {/* Question */}
                 <div className="space-y-2">
                   <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-                    {step.question}
+                    {STEP_QUESTION}
                   </h2>
                   <p className="text-sm md:text-base text-gray-500">
-                    {step.subtitle}
+                    {STEP_SUBTITLE}
                   </p>
                 </div>
 
-                {/* Options */}
-                <div
-                  className={
-                    layoutMode === "grid"
-                      ? "grid grid-cols-2 gap-3 md:gap-4"
-                      : "flex flex-col gap-3"
-                  }
-                >
-                  {step.options.map((option) => (
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  {CREDIT_SCORE_OPTIONS.map((option) => (
                     <QuizOptionCard
                       key={option.id}
                       option={option}
                       selected={selectedId === option.id}
                       onClick={() => handleSelect(option.id)}
-                      layout={layoutMode}
+                      layout="grid"
                     />
                   ))}
                 </div>
 
-                {/* Selection hint */}
                 <p className="text-center text-xs text-gray-400 pt-2">
                   Tap an option to continue
                 </p>
               </motion.div>
 
-              {/* ── Shared bottom sections ── */}
-
-              {/* FAQ Accordion */}
-              <div className="w-full text-left mt-12">
-                <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>
-                      What is a credit card cash back statement credit?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      It&apos;s a benefit where you receive money back as a
-                      credit on your statement, lowering your overall balance.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger>
-                      How do I choose the right credit card for travel?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      Consider cards with no foreign fees, travel insurance, and
-                      rewards on airline or hotel purchases.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger>
-                      Can I transfer my credit card balance to another
-                      person&apos;s card?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      Balance transfers are typically only allowed between cards
-                      under the same account holder.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </div>
-
-              {/* Stay Tuned Section */}
-              <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
-                <h4 className="text-xl font-semibold text-gray-800 mb-3">
-                  Stay Tuned
-                </h4>
-                <p className="text-gray-700 leading-relaxed">
-                  If you&apos;re looking for additional assistance in boosting
-                  your credit score or optimizing your credit card usage while
-                  avoiding banks capitalizing on your situation, please explore
-                  the information below as well. We offer valuable resources
-                  tailored to your specific needs.
-                </p>
-              </div>
-
-              {/* Limited Offer Card */}
-              <div className="flex justify-center mt-10 mb-4">
-                <div className="bg-white rounded-xl p-6 w-full max-w-xs shadow-md border border-gray-100">
-                  <div className="flex flex-col items-center space-y-3">
-                    <div className="relative w-48 h-28">
-                      <Image
-                        src="https://media.topfinanzas.com/images/credit-card-varity.png"
-                        alt="Credit Card Variety"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <div className="flex items-center space-x-1.5">
-                      <span className="text-lg">🔔</span>
-                      <h3 className="text-base font-bold text-[#EF4444] uppercase">
-                        Limited offer!
-                      </h3>
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900 uppercase text-center">
-                      CARD WITH NO ANNUAL FEE
-                    </h4>
-                    <p className="text-sm text-gray-700 text-center">
-                      The most requested among our readers! Check it out
-                      today...
-                    </p>
-                    <Link
-                      href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
-                      className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold px-6 py-2.5 text-sm uppercase"
-                    >
-                      SEE HOW TO APPLY
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <BottomContent />
             </div>
           </main>
 
