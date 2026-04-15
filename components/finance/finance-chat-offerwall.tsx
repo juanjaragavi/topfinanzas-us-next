@@ -139,11 +139,12 @@ export function FinanceChatOfferwall({
   }, [router, redirectTo]);
 
   return (
-    <div className="flex flex-col bg-white w-full max-w-2xl mx-auto rounded-xl shadow-sm border border-gray-100 overflow-hidden min-h-[60vh]">
-      {/* Header */}
-      <div 
-        className={`p-4 text-white text-center font-bold relative shadow-sm ${currentTheme.bg}`}
-      >
+    <main className="fixed inset-0 z-[9999] bg-white sm:bg-gray-100 flex justify-center items-start overflow-hidden">
+      <div className="w-full h-full max-w-md bg-white flex flex-col shadow-2xl relative">
+        {/* Header */}
+        <div 
+          className={`p-4 text-white text-center font-bold relative shadow-sm ${currentTheme.bg}`}
+        >
         <div className="flex items-center justify-center gap-2">
           <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-lg">
             🤖
@@ -176,7 +177,7 @@ export function FinanceChatOfferwall({
               <div
                 className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
                   msg.type === "bot"
-                    ? "bg-white text-gray-800 rounded-2xl rounded-tl-sm border border-gray-100"
+                    ? "bg-gray-100 text-gray-800 rounded-2xl rounded-tl-sm border-none"
                     : `text-white rounded-2xl rounded-tr-sm ${currentTheme.bg}`
                 }`}
               >
@@ -193,7 +194,7 @@ export function FinanceChatOfferwall({
             >
               🤖
             </div>
-            <div className="bg-white border border-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm flex gap-1.5 items-center shadow-sm h-10">
+            <div className="bg-gray-100 px-4 py-3 rounded-2xl rounded-tl-sm flex gap-1.5 items-center shadow-sm h-10 border-none">
               <span
                 className={`w-2 h-2 rounded-full animate-bounce ${currentTheme.bg}`}
                 style={{ animationDelay: "0ms" }}
@@ -217,7 +218,7 @@ export function FinanceChatOfferwall({
                 key={opt.value}
                 type="button"
                 onClick={() => handleAnswer(opt.label)}
-                className={`px-5 py-3.5 rounded-xl text-[15px] font-semibold transition-all duration-200 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${currentTheme.bg} ${currentTheme.hoverBg}`}
+                className={`px-5 py-3.5 rounded-full text-[15px] font-semibold transition-all duration-200 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${currentTheme.bg} ${currentTheme.hoverBg}`}
               >
                 {opt.label}
               </button>
@@ -232,7 +233,7 @@ export function FinanceChatOfferwall({
             <button
               type="button"
               onClick={handleCta}
-              className={`block w-full py-4 px-6 rounded-xl text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg ${currentTheme.bg} ${currentTheme.hoverBg}`}
+              className={`block w-full py-4 px-6 rounded-full text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg ${currentTheme.bg} ${currentTheme.hoverBg}`}
             >
               {ctaButtonText} →
             </button>
@@ -241,6 +242,7 @@ export function FinanceChatOfferwall({
 
         <div ref={chatEndRef} />
       </div>
-    </div>
+      </div>
+    </main>
   );
 }
