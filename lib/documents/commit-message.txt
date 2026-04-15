@@ -1,4 +1,4 @@
-refactor: split invit-credit-card-rec-us-3 quiz into three separate routes
+fix(topads): suppress blocking overlays on invite quiz stepsrefactor: split invit-credit-card-rec-us-3 quiz into three separate routes
 
 - Extract shared quiz components into components/steps/credit-card-rec-shared.tsx
 - Refactor /invit-credit-card-rec-us-3 to Step 1 only (credit score, square01, preloader active)
