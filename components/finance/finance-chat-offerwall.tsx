@@ -178,9 +178,9 @@ export function FinanceChatOfferwall({
               >
                 {msg.type === "ad" ? (
                   <div className="w-full max-w-sm mx-auto my-4">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 p-2">
+                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-2">
                       <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">Advertisement</span>
-                      <TopAdsSquare id="square01" className="w-full min-h-[250px] block mx-auto bg-gray-50 rounded" />
+                      <TopAdsSquare id="square01" className="min-h-[250px] mx-auto" />
                     </div>
                   </div>
                 ) : (
