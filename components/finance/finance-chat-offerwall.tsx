@@ -121,7 +121,7 @@ export function FinanceChatOfferwall({
         await addAdMessage(800);
         setTimeout(() => {
           triggerSPA();
-        }, 100);
+        }, 500);
       }
 
       if (nextIndex < questions.length) {
@@ -178,20 +178,9 @@ export function FinanceChatOfferwall({
               >
                 {msg.type === "ad" ? (
                   <div className="w-full max-w-sm mx-auto my-4">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 p-5 mb-4">
-                      <h3 className="text-lg font-bold text-center text-gray-900 mb-2">Your Instant Loan Opportunity Awaits</h3>
-                      <p className="text-sm text-center text-gray-700 mb-5">See loans from $100 up to $50,000, no collateral needed</p>
-                      <button type="button" className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 mb-3 transition-colors">
-                        Show My Options
-                        <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center">
-                          <svg className="w-3 h-3 text-[#7C3AED] ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6V4z" /></svg>
-                        </div>
-                      </button>
-                      <p className="text-xs text-center text-gray-500 leading-tight px-2">To view your suggested loans please watch an ad before we unlock the list</p>
-                    </div>
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 p-2">
                       <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">Advertisement</span>
-                      <TopAdsSquare id="square01" className="w-full min-h-[250px] flex items-center justify-center bg-gray-50 rounded" />
+                      <TopAdsSquare id="square01" className="w-full min-h-[250px] block mx-auto bg-gray-50 rounded" />
                     </div>
                   </div>
                 ) : (
