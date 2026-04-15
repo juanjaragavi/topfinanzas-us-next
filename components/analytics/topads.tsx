@@ -18,7 +18,7 @@ import { TOPADS_EXCLUDED_PATHS } from "@/lib/jobs-delayed-ads";
  * - pageSetting.exclude: Pages that should NOT display ads
  * - formats: Interstitial and Offerwall configurations
  *
- * @see /lib/documents/topAdsGuide.pdf for full configuration options
+ * @see /lib/documents/topAdsGuide.md for full configuration options
  */
 export default function TopAds() {
   useEffect(() => {
@@ -69,6 +69,7 @@ export default function TopAds() {
                             '/credit-card-recommender-p1',
                             '/credit-card-recommender-p2',
                             '/credit-card-recommender-p3',
+                            '/finance-quiz-recommender-p2',
                             '/invit-credit-card-rec-us',
                             '/invit-credit-card-rec-us-2',
                             '/choose-the-perfect-card-for-you-1',
