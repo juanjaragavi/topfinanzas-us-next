@@ -27,7 +27,7 @@ export default function FinanceQuizRecommenderP2Page() {
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
       finalAction="auto-redirect"
-      redirectTypingDelayMs={300}
+      redirectTypingDelayMs={800}
     />
   );
 }

@@ -264,11 +264,17 @@ export default function TopAdsSPAHandler() {
 
 // Custom hook for manual TopAds SPA triggering
 export function useTopAds() {
+  const pathname = usePathname();
+
   const triggerSPA = () => {
     try {
       logger.info(
         "[TopAds] Manual SPA trigger - Re-injecting script for dynamic element",
       );
+
+      if (pathname) {
+        removePathFromCurrentExclusions(pathname);
+      }
 
       // Clear container first to ensure fresh fill
       document.querySelectorAll("[data-topads]").forEach((el) => {
