@@ -34,7 +34,7 @@ export function FinanceChatOfferwall({
   botName = "Assistant",
   greeting = "Let's find the best options for you.",
   questions,
-  theme,
+  theme: _theme,
   successMessage = "Great options found for you!",
   ctaButtonText = "Show My Options",
   ctaSecondaryText = "Tap above to see your matches.",
@@ -206,7 +206,7 @@ export function FinanceChatOfferwall({
                   key={opt.value}
                   type="button"
                   onClick={() => handleAnswer(opt.label)}
-                  className="max-w-[85%] md:max-w-sm px-5 py-3 rounded-3xl rounded-tr-sm text-[15px] font-medium transition-all duration-200 bg-[#3B82F6] text-white shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                  className="max-w-[85%] md:max-w-sm px-5 py-3 rounded-3xl rounded-tr-sm text-[15px] font-medium transition-all duration-200 bg-[#10B981] text-white hover:bg-[#059669]"
                 >
                   {opt.label}
                 </button>

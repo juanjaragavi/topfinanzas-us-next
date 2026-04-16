@@ -1,19 +1,2 @@
-refactor: extract chat intro screen and standardize chat offerwall UX
-
-- Extract introductory screen from finance-chat-offerwall into dedicated
-  /finance-chat-intro route as a server component with metadata
-- Apply 3D blue button styling (shadow-3d, border-black/[.15]) across
-  all non-chat-bubble buttons for visual consistency
-- Convert multi-option response buttons from pill variants to chat
-  bubble variants with right-aligned layout
-- Add initRef guard to prevent React Strict Mode double-rendering of
-  sequential bot messages
-- Implement sequential typing delays (800ms/1200ms/1400ms) for
-  humanized chat timing
-- Reduce conversational copy length ~30% across quiz configs
-- Cap user response options at 3 per interaction node
-- Update TopAds placement and SPA handler components
-- Create /invit-credit-card-rec-us-5 for Step 3 (monthly spend, square03, preloader disabled)
-- Add creditCardRecommender4 and creditCardRecommender5 quiz configs
-- Offerwall only renders on the first route (/invit-credit-card-rec-us-3)
+style: update chat bubble option buttons to green (#10B981)
 
