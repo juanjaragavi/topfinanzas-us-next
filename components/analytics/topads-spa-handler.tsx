@@ -39,7 +39,7 @@ const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
  */
 let lastSPAPathname: string | null = null;
 
-function reinjectTopAdsScript(): void {
+export function reinjectTopAdsScript(): void {
   try {
     const existingScripts = document.querySelectorAll(
       'script[src*="topAds.min.js"]',
@@ -56,7 +56,9 @@ function reinjectTopAdsScript(): void {
     (document.head || document.getElementsByTagName("head")[0]).appendChild(
       script,
     );
-    logger.info("[TopAds] Re-injected external script for delayed Jobs flow");
+    logger.info(
+      "[TopAds] Re-injected external script for delayed/dynamic flow",
+    );
   } catch (error) {
     logger.error("[TopAds] Failed to re-inject external script:", error);
   }
@@ -264,17 +266,17 @@ export default function TopAdsSPAHandler() {
 export function useTopAds() {
   const triggerSPA = () => {
     try {
-      if (
-        typeof window !== "undefined" &&
-        window.topAds &&
-        typeof window.topAds.spa === "function"
-      ) {
-        logger.info("[TopAds] Manual SPA trigger");
-        window.topAds.spa();
-        return true;
-      }
-      logger.warn("[TopAds] topAds.spa() not available");
-      return false;
+      logger.info(
+        "[TopAds] Manual SPA trigger - Re-injecting script for dynamic element",
+      );
+
+      // Clear container first to ensure fresh fill
+      document.querySelectorAll("[data-topads]").forEach((el) => {
+        el.innerHTML = "";
+      });
+
+      reinjectTopAdsScript();
+      return true;
     } catch (error) {
       logger.error("[TopAds] Error in manual SPA trigger:", error);
       return false;

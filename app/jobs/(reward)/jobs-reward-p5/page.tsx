@@ -24,6 +24,10 @@ export default function JobsRewardP5() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "CVS Health Jobs Guide — Roles, Pay & Application Tips",
+        href: "/jobs/jobs-promise-p5",
+      }}
       badge="RESEARCH + APPLY"
       title="Glassdoor 2026 — Use Real Employee Reviews to Find the Right Job"
       subtitle="Most job seekers apply blind. Glassdoor gives you verified insider data — real salaries, real interview questions, real company culture assessments — before you commit a single minute to applying. Pair it with LinkedIn and you'll interview more prepared than 95% of other applicants."

@@ -67,12 +67,12 @@ export default function JobsChat01Page() {
       themeColorLight={JOBS_THEME.colorLight}
       successMessage={t(
         "chat01.successMessage",
-        "Great! Based on your answers, I found some excellent job opportunities that match your profile. Thousands of positions are available right now at top US companies \u2014 click below to see the best ones for you.",
+        "Great! Based on your answers, I found some excellent job opportunities that match your profile. Thousands of positions are available right now at top US companies  2014 click below to see the best ones for you.",
       )}
       ctaButtonText={t("chat01.ctaButton", "Show Me the Best Jobs Now")}
       ctaSecondaryText={t(
         "chat01.ctaSecondary",
-        "View matched opportunities \u2014 free, no sign-up required",
+        "View matched opportunities  2014 free, no sign-up required",
       )}
       redirectTo="/jobs/jobs-promise-p1"
     />

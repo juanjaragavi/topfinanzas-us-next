@@ -24,6 +24,10 @@ export default function JobsRewardP2() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "Amazon Jobs Guide — Roles, Pay & Application Tips",
+        href: "/jobs/jobs-promise-p2",
+      }}
       badge="TOP HIRING PLATFORMS"
       title="Indeed & ZipRecruiter — Best Apps for Warehouse and Retail Jobs in 2026"
       subtitle="If you're searching for Amazon, Walmart, Target, UPS, or any other major US employer, Indeed and ZipRecruiter give you the fastest path from application to interview. Here's how to use each one effectively."

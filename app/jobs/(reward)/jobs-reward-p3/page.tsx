@@ -24,6 +24,10 @@ export default function JobsRewardP3() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "Walmart Jobs Guide — Roles, Pay & Application Tips",
+        href: "/jobs/jobs-promise-p3",
+      }}
       badge="PROFESSIONAL JOB SEARCH"
       title="LinkedIn Jobs 2026 — How to Use It to Get Hired 5x Faster"
       subtitle="LinkedIn isn't just a professional network — it's the most powerful hiring machine in the world for professional and mid-career roles. Combine LinkedIn's job board with Glassdoor's research tools and you'll know more about any employer than 90% of your competition."

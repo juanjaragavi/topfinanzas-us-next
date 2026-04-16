@@ -5,9 +5,16 @@ import { logger } from "@/lib/logger";
 
 interface TopAdsPlacementProps {
   /**
-   * Unique ID for this ad placement (e.g., "square01", "square02")
+   * Unique ID for this ad placement (e.g., "square01", "square02").
+   * Optional when `unitIndex` is provided.
    */
-  id: string;
+  id?: string;
+
+  /**
+   * 1-based index used to generate the ad container ID as `square0{unitIndex}`.
+   * When provided, overrides `id`.
+   */
+  unitIndex?: number;
 
   /**
    * Ad size format
@@ -40,25 +47,39 @@ interface TopAdsPlacementProps {
  */
 export default function TopAdsPlacement({
   id,
+  unitIndex,
   size = "square",
   className = "",
   minHeight = "250px",
 }: TopAdsPlacementProps) {
+  const effectiveId = unitIndex != null ? `square0${unitIndex}` : id;
+
   useEffect(() => {
-    logger.info(`[TopAds] Ad placement mounted: ${id} (${size})`);
+    if (!effectiveId) {
+      logger.warn("[TopAds] No id or unitIndex provided — skipping mount");
+      return;
+    }
+
+    logger.info(
+      `[TopAds] Ad placement mounted: ${effectiveId} (${size})${
+        unitIndex != null ? ` [unitIndex=${unitIndex}]` : ""
+      }`,
+    );
 
     // Log when the div is actually in the DOM
-    const element = document.getElementById(id);
+    const element = document.getElementById(effectiveId);
     if (element) {
-      logger.info(`[TopAds] Ad container found in DOM: ${id}`);
+      logger.info(`[TopAds] Ad container found in DOM: ${effectiveId}`);
     } else {
-      logger.warn(`[TopAds] Ad container not found in DOM: ${id}`);
+      logger.warn(`[TopAds] Ad container not found in DOM: ${effectiveId}`);
     }
-  }, [id, size]);
+  }, [effectiveId, size, unitIndex]);
+
+  if (!effectiveId) return null;
 
   return (
     <div
-      id={id}
+      id={effectiveId}
       data-topads
       data-topads-size={size}
       className={`topads-placement ${className}`}
@@ -68,7 +89,7 @@ export default function TopAdsPlacement({
         margin: "20px auto",
         textAlign: "center",
       }}
-      aria-label={`Advertisement ${id}`}
+      aria-label={`Advertisement ${effectiveId}`}
     />
   );
 }

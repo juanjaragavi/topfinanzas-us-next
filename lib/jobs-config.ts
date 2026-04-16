@@ -48,13 +48,27 @@ export function makeJobsSearchCtaBanner(): JobsCtaBannerProps {
   };
 }
 
+export function makeIndeedCtaBanner(): JobsCtaBannerProps {
+  return {
+    badge: "#1 Job Site",
+    headline: "Start Your Job Search on Indeed — The #1 US Job Platform",
+    body: "Over 300 million people use Indeed every month to find work. Search millions of listings and apply instantly — 100% free for job seekers.",
+    ctaLabel: "Search Jobs on Indeed",
+    ctaHref: "https://www.indeed.com/",
+    disclaimer:
+      "Job matching results may vary. Indeed is a third-party platform not affiliated with TopFinanzas.",
+    themeColor: JOBS_THEME.color,
+    themeColorDark: JOBS_THEME.colorDark,
+  };
+}
+
 export function makeAmazonCtaBanner(): JobsCtaBannerProps {
   return {
     badge: "Amazon Careers",
     headline: "Apply to Amazon Jobs Today — No Degree Required",
     body: "Amazon hires thousands of workers every month for warehouse, delivery, and remote positions. See the current openings and apply now.",
     ctaLabel: "View Amazon Open Positions",
-    ctaHref: "/jobs/jobs-reward-p2",
+    ctaHref: "https://www.amazon.jobs/",
     disclaimer:
       "Job availability subject to location and demand. Apply through Amazon's official hiring portal.",
     themeColor: JOBS_THEME.color,

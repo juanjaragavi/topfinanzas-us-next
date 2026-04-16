@@ -1,5 +1,7 @@
 import JobsPromiseTemplate from "@/components/layout/jobs-promise-template";
 import JobsQuiz02Overlay from "@/components/jobs/quiz-overlays/jobs-quiz-02-overlay";
+import FinanceOfferwallDirect from "@/lib/offerwall-for-finance-direct";
+import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import {
   JOBS_THEME,
   JOBS_IMAGES,
@@ -138,6 +140,12 @@ export default function JobsPromiseP2() {
         relatedArticles={JOBS_RELATED_ARTICLES}
         closingParagraph="Amazon is not for everyone, but for those who fit the role, it's one of the most reliable employers in America. Use the verified job search tools below to apply directly to Amazon and other top employers today."
       />
+      <FinanceOfferwallDirect
+        themeColor="#10B981"
+        loadingMessage="Fetching Credit Card Options 2026"
+        skipAds={false}
+      />
+      <TopAdsQuizIdStamper journeyId="quiz-finance-jobs-promise-p2" />
     </>
   );
 }

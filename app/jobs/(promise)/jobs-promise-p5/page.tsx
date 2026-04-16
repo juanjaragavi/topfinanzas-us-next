@@ -129,8 +129,8 @@ export default function JobsPromiseP5() {
         },
       ]}
       cta={{
-        label: "Search CVS Pharmacy Jobs Near You",
-        href: "/jobs/jobs-reward-p1",
+        label: "Research CVS Culture on Glassdoor",
+        href: "/jobs/jobs-reward-p5",
       }}
       extraCtas={[
         {
@@ -138,8 +138,12 @@ export default function JobsPromiseP5() {
           href: "/jobs/jobs-reward-p2",
         },
         {
-          label: "Research CVS Culture on Glassdoor",
-          href: "/jobs/jobs-reward-p5",
+          label: "See All Job Search Platforms",
+          href: "/jobs/jobs-reward-p1",
+        },
+        {
+          label: "Connect with CVS Recruiters on LinkedIn",
+          href: "/jobs/jobs-reward-p3",
         },
       ]}
       relatedArticles={JOBS_RELATED_ARTICLES}

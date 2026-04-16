@@ -43,10 +43,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const buttonStyles = cn(
-      "inline-flex items-center justify-center px-5 md:px-6 py-2 md:py-2.5 text-sm md:text-base font-medium transition-colors duration-200 rounded-full whitespace-nowrap",
+      "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-all duration-200 rounded-xl whitespace-nowrap font-inter shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]",
       {
-        "bg-[#3e73c4] hover:bg-[#305ca3] text-white": variant === "primary",
-        "bg-white hover:bg-gray-100 text-gray-900 border border-gray-300":
+        "bg-brand-primary hover:bg-brand-primary-hover text-white":
+          variant === "primary",
+        "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
           variant === "secondary",
         "w-full": fullWidth,
       },
@@ -90,10 +91,11 @@ export const buttonVariants = ({
   className,
 }: { variant?: "primary" | "secondary"; className?: string } = {}) => {
   return cn(
-    "inline-flex items-center justify-center px-5 md:px-6 py-2 md:py-2.5 text-sm md:text-base font-medium transition-colors duration-200 rounded-full whitespace-nowrap",
+    "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-all duration-200 rounded-xl whitespace-nowrap font-inter shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]",
     {
-      "bg-[#3e73c4] hover:bg-[#305ca3] text-white": variant === "primary",
-      "bg-white hover:bg-gray-100 text-gray-900 border border-gray-300":
+      "bg-brand-primary hover:bg-brand-primary-hover text-white":
+        variant === "primary",
+      "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
         variant === "secondary",
     },
     className,

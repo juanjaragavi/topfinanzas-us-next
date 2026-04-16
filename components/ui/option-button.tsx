@@ -24,8 +24,8 @@ export default function OptionButton({
       onClick={onClick}
       className={`flex items-center justify-center w-full px-4 py-2 sm:py-3 rounded-full border-2 transition-all duration-200 ${
         selected
-          ? "bg-[#2E74B5] border-[#2E74B5] text-white shadow-lg scale-[1.02]"
-          : "bg-white border-[#2E74B5] text-[#2E74B5] hover:bg-blue-50 shadow-md"
+          ? "bg-[#2E74B5] border-[#215a8f] text-white shadow-3d scale-[1.02]"
+          : "bg-white border-[#2E74B5] text-[#2E74B5] hover:bg-blue-50 shadow-3d hover:shadow-3d-hover hover:translate-y-[1px]"
       } ${className}`}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}

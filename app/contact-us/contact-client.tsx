@@ -461,7 +461,7 @@ export default function ContactUsPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#2E74B5] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#1e5a8a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#2E74B5] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#1e5a8a] transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
               </button>

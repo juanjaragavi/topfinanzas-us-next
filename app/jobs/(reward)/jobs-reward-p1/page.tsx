@@ -3,7 +3,7 @@ import {
   JOBS_THEME,
   JOBS_IMAGES,
   JOBS_RELATED_ARTICLES,
-  makeJobsSearchCtaBanner,
+  makeIndeedCtaBanner,
   makeIndeedCard,
   makeZipRecruiterCard,
   makeLinkedInCard,
@@ -26,6 +26,10 @@ export default function JobsRewardP1() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "How to Find High-Paying Jobs in 2026",
+        href: "/jobs/jobs-promise-p1",
+      }}
       badge="BEST JOB SEARCH PLATFORMS"
       title="Best Job Search Apps in 2026 — Top 4 US Platforms Ranked"
       subtitle="These four platforms account for more than 80% of all online job applications in the US. Whether you're looking for warehouse work, retail, remote jobs, or a professional career move, start here."
@@ -54,7 +58,7 @@ export default function JobsRewardP1() {
         "If you're targeting warehouse, retail, or hourly work, prioritize Indeed and Snagajob. For professional or corporate positions, LinkedIn and ZipRecruiter will give you the most reach. Ready to apply? Start with Indeed or ZipRecruiter and build your profile in under 15 minutes.",
       ]}
       relatedArticles={JOBS_RELATED_ARTICLES}
-      ctaBanner={makeJobsSearchCtaBanner()}
+      ctaBanner={makeIndeedCtaBanner()}
     />
   );
 }

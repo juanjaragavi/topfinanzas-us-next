@@ -19,7 +19,7 @@ export default function CreditCardLandingPage() {
     <main className="bg-[#F9FAFB] min-h-screen py-8 md:py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col items-center text-center space-y-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3B82F6]">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#10B981]">
             We&apos;ve discovered a few cards that unlock remarkable boundaries
             for you.
           </h1>
@@ -42,25 +42,25 @@ export default function CreditCardLandingPage() {
             <div className="space-y-3 max-w-2xl mx-auto">
               <Link
                 href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $1000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/benefits-of-the-discover-it-cash-back"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $2500 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions/chase-sapphire-preferred-credit-card-benefits"
-                className="block w-full rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 $5000 CREDIT CARD
               </Link>
               <Link
                 href="/financial-solutions"
-                className="block w-full rounded-full border-2 border-[#5B21B6] text-[#5B21B6] hover:bg-[#5B21B6] hover:text-white py-3.5 px-6 text-base md:text-lg font-bold transition-colors"
+                className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 MORE OPTIONS
               </Link>
@@ -68,7 +68,7 @@ export default function CreditCardLandingPage() {
           </div>
 
           <div className="bg-white p-6 md:p-8 rounded-xl w-full shadow-md">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3B82F6] mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#10B981] mb-4">
               Well Done
             </h3>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
@@ -81,7 +81,7 @@ export default function CreditCardLandingPage() {
 
           <Link
             href="/financial-solutions"
-            className="inline-flex items-center justify-center rounded-full bg-[#5B21B6] hover:bg-[#4C1D95] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-colors shadow-md"
+            className="inline-flex items-center justify-center rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-10 text-base md:text-lg font-bold transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
           >
             ACCEPT RECOMMENDATION
           </Link>
@@ -176,7 +176,7 @@ export default function CreditCardLandingPage() {
               </p>
               <Link
                 href="/financial-solutions"
-                className="inline-flex items-center justify-center rounded-md transition-colors bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold px-8 py-3 text-base md:text-lg uppercase"
+                className="inline-flex items-center justify-center rounded-2xl transition-all bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-8 py-3 text-base md:text-lg uppercase shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 SEE HOW TO APPLY
               </Link>

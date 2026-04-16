@@ -10,9 +10,6 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TopAdsSquare } from "@/components/ads/topads-placement";
-// TODO: Temporarily disabled FinanceOfferwallRuntime – re-enable when ready
-// import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
-// import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
   title:
@@ -53,25 +50,25 @@ export default function CreditCardRecommenderP1Page() {
           <div className="flex flex-col gap-3 w-full max-w-md mx-auto">
             <Link
               href="/financial-solutions/benefits-of-the-discover-it-cash-back"
-              className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+              className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
             >
               Up to 2% Cashback Credit Card
             </Link>
             <Link
               href="/financial-solutions/citi-simplicity-card-benefits"
-              className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+              className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
             >
               No annual fee Credit Card
             </Link>
             <Link
               href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
-              className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+              className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
             >
               No Credit Check Credit Card
             </Link>
             <Link
               href="/financial-solutions"
-              className="block w-full rounded-lg bg-[#0056b3] hover:bg-[#004494] text-white py-3 px-6 text-base font-semibold transition-colors text-center"
+              className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
             >
               MORE OPTIONS
             </Link>
@@ -93,7 +90,7 @@ export default function CreditCardRecommenderP1Page() {
           {/* Accept Recommendation CTA */}
           <Link
             href="/financial-solutions/wells-fargo-autograph-card-benefits"
-            className="inline-flex items-center justify-center rounded-lg bg-[#FF8C00] hover:bg-[#CC7000] text-black py-3 px-8 text-base font-bold uppercase tracking-wide transition-colors shadow-md"
+            className="inline-flex items-center justify-center rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
           >
             ACCEPT RECOMMENDATION
           </Link>
@@ -171,7 +168,7 @@ export default function CreditCardRecommenderP1Page() {
               </p>
               <Link
                 href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
-                className="inline-flex items-center justify-center rounded-lg transition-colors bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold px-6 py-2.5 text-sm uppercase"
+                className="inline-flex items-center justify-center rounded-2xl transition-all bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-6 py-2.5 text-sm uppercase shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
               >
                 SEE HOW TO APPLY
               </Link>

@@ -1,8 +1,4 @@
-fix: defer offerwall scaffold to client mount to prevent blank overlay background
+docs(topads): format markdown documentation for improved readability
 
-- Convert offerwall-for-finance and offerwall-for-finance-direct to client components
-- Defer data-topads-quiz DOM node until after first paint via requestAnimationFrame
-- Whitelist #quiz-overlay from orphan-cleanup CSS rules in globals.css
-- Apply immediate backdrop-filter blur to #quiz-overlay for smooth overlay transition
-- Re-enable offerwall on recommender pages with updated quiz configs
-- Format fixes across multiple page files
+- Fix escaped lists and tables in `public/topads-documentation.md`
+- Ensure correct formatting for data tables

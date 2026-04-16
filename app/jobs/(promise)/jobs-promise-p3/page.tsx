@@ -114,10 +114,14 @@ export default function JobsPromiseP3() {
         },
       ]}
       cta={{
-        label: "Apply to Walmart Jobs on Indeed",
-        href: "/jobs/jobs-reward-p2",
+        label: "Apply to Walmart Jobs on LinkedIn",
+        href: "/jobs/jobs-reward-p3",
       }}
       extraCtas={[
+        {
+          label: "Apply to Walmart Jobs on Indeed",
+          href: "/jobs/jobs-reward-p2",
+        },
         { label: "See All Job Search Platforms", href: "/jobs/jobs-reward-p1" },
         {
           label: "Find Part-Time Walmart Jobs on Snagajob",

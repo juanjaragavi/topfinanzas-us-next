@@ -6,15 +6,15 @@
  * the data attributes injected via the hidden offerwall component.
  */
 
-/* ─── Theme (vibrant orange per design spec) ─── */
+/* ─── Theme (Brand Green per fintech button spec) ─── */
 
 export const FINANCE_QUIZ_THEME = {
-  /** Primary accent — vibrant orange */
-  color: "#FF8C00",
+  /** Primary accent — Brand Green */
+  color: "#10B981",
   /** Lighter hover variant */
-  colorLight: "#FFA633",
+  colorLight: "#34D399",
   /** Dark gradient anchor */
-  colorDark: "#CC7000",
+  colorDark: "#059669",
 } as const;
 
 /* ─── Types (mirrors GamingQuizConfig from budgetbee-next) ─── */
@@ -175,6 +175,96 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
       },
     ],
   },
+  creditCardRecommender3: {
+    journeyId: "quiz-finance-cc-recommender-03",
+    parentPath: "/invit-credit-card-rec-us-3",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Confirm Desired Credit Card Limit:",
+        options: [
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
+        ],
+      },
+      {
+        id: "preferred-benefit",
+        question: "I would also like:",
+        options: [
+          { label: "Cashback", value: "cashback" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+
+  creditCardRecommender4: {
+    journeyId: "quiz-finance-cc-recommender-04",
+    parentPath: "/invit-credit-card-rec-us-4",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Confirm Desired Credit Card Limit:",
+        options: [
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
+        ],
+      },
+      {
+        id: "preferred-benefit",
+        question: "I would also like:",
+        options: [
+          { label: "Cashback", value: "cashback" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+
+  creditCardRecommender5: {
+    journeyId: "quiz-finance-cc-recommender-05",
+    parentPath: "/invit-credit-card-rec-us-5",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Confirm Desired Credit Card Limit:",
+        options: [
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
+        ],
+      },
+      {
+        id: "preferred-benefit",
+        question: "I would also like:",
+        options: [
+          { label: "Cashback", value: "cashback" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+
   creditCardRecommenderP1: {
     journeyId: "quiz-finance-cc-recommender-p1",
     parentPath: "/credit-card-recommender-p1",
@@ -200,6 +290,66 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
           { label: "Cashback", value: "cashback" },
           { label: "0 handling cost", value: "no-fee" },
           { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+
+  jobsPromiseP1: {
+    journeyId: "quiz-finance-jobs-promise-p1",
+    parentPath: "/jobs/jobs-promise-p1",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Select Your Ideal Credit Limit:",
+        options: [
+          { label: "$2,500", value: "2500" },
+          { label: "$5,000", value: "5000" },
+          { label: "$10,000", value: "10000" },
+          { label: "Higher limit", value: "more" },
+        ],
+      },
+      {
+        id: "card-priority",
+        question: "What's most important in a credit card?",
+        options: [
+          { label: "Cash back rewards", value: "cashback" },
+          { label: "No annual fee", value: "no-fee" },
+          { label: "0% intro APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+
+  jobsPromiseP2: {
+    journeyId: "quiz-finance-jobs-promise-p2",
+    parentPath: "/jobs/jobs-promise-p2",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Choose Your Preferred Credit Limit:",
+        options: [
+          { label: "$2,500", value: "2500" },
+          { label: "$5,000", value: "5000" },
+          { label: "$10,000", value: "10000" },
+          { label: "I want more", value: "more" },
+        ],
+      },
+      {
+        id: "card-feature",
+        question: "Which feature appeals to you most?",
+        options: [
+          { label: "Earning cash back", value: "cashback" },
+          { label: "Zero fees", value: "no-fee" },
+          { label: "Interest-free period", value: "zero-apr" },
         ],
       },
     ],

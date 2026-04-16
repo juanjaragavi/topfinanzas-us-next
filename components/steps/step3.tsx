@@ -329,10 +329,10 @@ export default function Step3({
             type="submit"
             disabled={isSubmitting}
             onClick={handleFormSubmit}
-            className={`w-full py-3 sm:py-4 text-lg sm:text-xl font-black rounded-full transition-all shadow-lg ${
+            className={`w-full py-3 sm:py-4 text-lg sm:text-xl font-black rounded-full transition-all shadow-3d border border-black/[.15] ${
               isSubmitting
                 ? "bg-gray-400 text-white cursor-not-allowed"
-                : "bg-[#1E3A8A] hover:bg-[#1E40AF] text-white active:scale-95"
+                : "bg-[#1E3A8A] hover:bg-[#1E40AF] text-white hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
             }`}
           >
             {isSubmitting ? "SENDING..." : step3Strings.button}

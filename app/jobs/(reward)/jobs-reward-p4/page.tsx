@@ -24,6 +24,10 @@ export default function JobsRewardP4() {
     <JobsRewardTemplate
       themeColor={JOBS_THEME.color}
       themeColorDark={JOBS_THEME.colorDark}
+      backLink={{
+        label: "Target Jobs Guide — Roles, Pay & Application Tips",
+        href: "/jobs/jobs-promise-p4",
+      }}
       badge="HOURLY JOB PLATFORMS"
       title="Snagajob 2026 — The Fastest Way to Apply to Hourly Jobs Near You"
       subtitle="Snagajob is purpose-built for hourly work — retail, restaurant, warehouse, delivery, and seasonal positions. If you need a job quickly and can start working within the next 1–2 weeks, Snagajob gets you in front of employers faster than any other platform."

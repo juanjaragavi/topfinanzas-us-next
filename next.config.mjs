@@ -331,7 +331,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year cache for improved performance
     // Remove deprecated domains configuration (already covered by remotePatterns)
   },
-  serverExternalPackages: ["@google-cloud/translate"],
+  serverExternalPackages: ["@google-cloud/translate", "googleapis"],
   experimental: {
     webpackBuildWorker: false,
     parallelServerBuildTraces: false,
