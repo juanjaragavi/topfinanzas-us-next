@@ -1,1 +1,1 @@
-fix: render user answers as classic chat bubbles
+fix: widen simulated chat option button group
