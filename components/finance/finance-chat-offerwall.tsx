@@ -223,7 +223,7 @@ export function FinanceChatOfferwall({
               <button
                 type="button"
                 onClick={handleCta}
-                className="block w-full py-4 px-6 rounded-2xl text-white font-bold text-lg text-center transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] bg-[#3B82F6] hover:bg-[#2563EB]"
+                className="block w-full py-4 px-6 rounded-2xl text-white font-bold text-lg text-center transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] bg-[#10B981] hover:bg-[#059669]"
               >
                 {ctaButtonText} →
               </button>

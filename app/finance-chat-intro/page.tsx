@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function FinanceChatIntroPage() {
   return (
     <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
-      <div className="w-full h-full max-w-md bg-[#F8F9FA] flex flex-col items-center justify-start pt-[25vh] p-6 shadow-2xl relative">
+      <div className="w-full h-full max-w-md bg-[#F8F9FA] flex flex-col items-center justify-start pt-12 p-6 shadow-2xl relative">
         <h1 className="text-lg font-semibold text-center text-gray-700 mb-8 leading-snug">
           Answer a few questions in our chat to find your loan. It&apos;s very
           quick!

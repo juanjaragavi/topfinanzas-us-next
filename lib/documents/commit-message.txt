@@ -1,2 +1,2 @@
-style: update chat bubble option buttons to green (#10B981)
+style: green CTA button and move intro content to top of page
 
