@@ -119,33 +119,39 @@ const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
 
 export function HeroBanner() {
   return (
-    <div className="w-full bg-[#10B981] text-white py-8 md:py-12 px-4">
-      <div className="max-w-3xl mx-auto text-center space-y-4">
-        <h1 className="text-2xl md:text-4xl font-bold leading-tight text-white">
+    <div className="w-full bg-[#10B981] text-white py-4 md:py-8 px-4">
+      <div className="max-w-3xl mx-auto text-center space-y-2.5 md:space-y-4">
+        <h1 className="text-[34px] md:text-4xl font-bold leading-[1.1] text-white">
           Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
           30 Seconds
         </h1>
-        <p className="text-sm md:text-lg text-emerald-100">
+        <p className="text-[13px] leading-[1.3] md:text-lg text-emerald-100">
           Answer 3 quick questions. Get personalized recommendations
           <br className="hidden md:block" /> matched to your spending habits.
         </p>
 
         {/* Social proof stats */}
-        <div className="flex justify-center gap-8 md:gap-16 pt-4">
+        <div className="flex justify-center gap-5 md:gap-16 pt-1 md:pt-4">
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">847K+</p>
+            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+              847K+
+            </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Users Matched
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">4.8/5</p>
+            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+              4.8/5
+            </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Avg Rating
             </p>
           </div>
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-white">50+</p>
+            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+              50+
+            </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
               Cards Analyzed
             </p>
@@ -170,12 +176,12 @@ export function TrustBar() {
   }, []);
 
   return (
-    <div className="w-full bg-white border-b border-gray-200 py-2 px-4">
-      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-4 text-sm">
-        <span className="text-yellow-500 font-medium">
+    <div className="w-full bg-white border-b border-gray-200 py-1.5 px-4">
+      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-2.5 text-xs md:text-sm">
+        <span className="text-yellow-500 font-medium leading-none">
           ★★★★★ Rated 4.8 by users
         </span>
-        <span className="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+        <span className="bg-green-100 text-green-800 text-[11px] md:text-xs font-semibold px-3 py-1 rounded-full leading-none">
           {liveCount} people taking the quiz right now
         </span>
       </div>
@@ -191,7 +197,7 @@ export function QuizProgressBar({
   totalSteps: number;
 }) {
   return (
-    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
       <span className="font-medium text-gray-700">Your Credit Card Match</span>
       <span>
         Step {currentStep} of {totalSteps}
@@ -216,7 +222,7 @@ export function QuizOptionCard({
       <motion.button
         type="button"
         onClick={onClick}
-        className={`flex items-center gap-4 w-full p-4 rounded-xl border-2 transition-all duration-200 text-left ${
+        className={`flex items-center gap-3 w-full p-3.5 rounded-xl border-2 transition-all duration-200 text-left ${
           selected
             ? "border-[#10B981] bg-emerald-50 shadow-md"
             : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
@@ -224,11 +230,15 @@ export function QuizOptionCard({
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
       >
-        <span className="text-2xl flex-shrink-0">{option.emoji}</span>
+        <span className="text-3xl leading-none flex-shrink-0">{option.emoji}</span>
         <div>
-          <p className="font-bold text-gray-900">{option.label}</p>
+          <p className="font-bold text-gray-900 text-[15px] leading-tight">
+            {option.label}
+          </p>
           {option.description && (
-            <p className="text-sm text-gray-500">{option.description}</p>
+            <p className="text-xs text-gray-500 leading-tight mt-1">
+              {option.description}
+            </p>
           )}
         </div>
       </motion.button>
@@ -239,7 +249,7 @@ export function QuizOptionCard({
     <motion.button
       type="button"
       onClick={onClick}
-      className={`flex flex-col items-center justify-center p-5 md:p-6 rounded-xl border-2 transition-all duration-200 ${
+      className={`flex flex-col items-center justify-center p-3.5 md:p-5 rounded-xl border-2 transition-all duration-200 ${
         selected
           ? "border-[#10B981] bg-emerald-50 shadow-md"
           : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
@@ -247,12 +257,12 @@ export function QuizOptionCard({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
-      <span className="text-3xl md:text-4xl mb-2">{option.emoji}</span>
-      <p className="font-bold text-gray-900 text-sm md:text-base">
+      <span className="text-[34px] md:text-4xl leading-none mb-1.5">{option.emoji}</span>
+      <p className="font-bold text-gray-900 text-[15px] md:text-base leading-tight text-center">
         {option.label}
       </p>
       {option.description && (
-        <p className="text-xs md:text-sm text-gray-500 mt-1">
+        <p className="text-[11px] md:text-sm text-gray-500 mt-1 leading-tight text-center">
           {option.description}
         </p>
       )}

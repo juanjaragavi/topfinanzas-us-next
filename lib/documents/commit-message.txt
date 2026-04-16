@@ -1,2 +1,1 @@
-style: increase typing delays and unify green color across chat bubbles
-
+fix: compact invit quiz mobile layout and topads interstitial guard

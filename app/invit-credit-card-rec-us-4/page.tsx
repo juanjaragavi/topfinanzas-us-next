@@ -66,7 +66,7 @@ export default function InvitCreditCardRecUS4Page() {
         <TrustBar />
 
         <main className="flex-grow">
-          <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
+          <div className="max-w-3xl mx-auto px-4 py-4 md:py-8">
             {/* TopAds ad unit — square02 */}
             <div className="flex justify-center mb-6">
               <AdSlot unitIndex={2} logTag={LOG_TAG} />
@@ -78,13 +78,13 @@ export default function InvitCreditCardRecUS4Page() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.25 }}
-              className="space-y-5"
+              className="space-y-4"
             >
               <div className="space-y-2">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+                <h2 className="text-[31px] md:text-2xl font-bold leading-[1.15] text-gray-900">
                   {STEP_QUESTION}
                 </h2>
-                <p className="text-sm md:text-base text-gray-500">
+                <p className="text-[13px] leading-[1.35] md:text-base text-gray-500">
                   {STEP_SUBTITLE}
                 </p>
               </div>
@@ -101,7 +101,7 @@ export default function InvitCreditCardRecUS4Page() {
                 ))}
               </div>
 
-              <p className="text-center text-xs text-gray-400 pt-2">
+              <p className="text-center text-xs text-gray-400 pt-1">
                 Tap an option to continue
               </p>
             </motion.div>
