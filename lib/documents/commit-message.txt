@@ -1,1 +1,1 @@
-fix: compact invit quiz mobile layout and topads interstitial guard
+fix: render user answers as classic chat bubbles

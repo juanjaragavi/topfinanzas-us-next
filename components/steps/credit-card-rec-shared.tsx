@@ -119,21 +119,21 @@ const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
 
 export function HeroBanner() {
   return (
-    <div className="w-full bg-[#10B981] text-white py-4 md:py-8 px-4">
+    <div className="w-full bg-[#10B981] text-white py-3 md:py-7 px-4">
       <div className="max-w-3xl mx-auto text-center space-y-2.5 md:space-y-4">
-        <h1 className="text-[34px] md:text-4xl font-bold leading-[1.1] text-white">
+        <h1 className="text-[21px] md:text-4xl font-bold leading-[1.15] text-white">
           Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
           30 Seconds
         </h1>
-        <p className="text-[13px] leading-[1.3] md:text-lg text-emerald-100">
+        <p className="text-[12px] leading-[1.25] md:text-lg text-emerald-100">
           Answer 3 quick questions. Get personalized recommendations
           <br className="hidden md:block" /> matched to your spending habits.
         </p>
 
         {/* Social proof stats */}
-        <div className="flex justify-center gap-5 md:gap-16 pt-1 md:pt-4">
+        <div className="flex justify-center gap-4 md:gap-16 pt-0.5 md:pt-4">
           <div className="text-center">
-            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+            <p className="text-lg md:text-3xl font-bold leading-none text-white">
               847K+
             </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
@@ -141,7 +141,7 @@ export function HeroBanner() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+            <p className="text-lg md:text-3xl font-bold leading-none text-white">
               4.8/5
             </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
@@ -149,7 +149,7 @@ export function HeroBanner() {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-xl md:text-3xl font-bold leading-none text-white">
+            <p className="text-lg md:text-3xl font-bold leading-none text-white">
               50+
             </p>
             <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
@@ -176,7 +176,7 @@ export function TrustBar() {
   }, []);
 
   return (
-    <div className="w-full bg-white border-b border-gray-200 py-1.5 px-4">
+    <div className="w-full bg-white border-b border-gray-200 py-1 px-4">
       <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-2.5 text-xs md:text-sm">
         <span className="text-yellow-500 font-medium leading-none">
           ★★★★★ Rated 4.8 by users
@@ -197,7 +197,7 @@ export function QuizProgressBar({
   totalSteps: number;
 }) {
   return (
-    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-4 md:mb-6">
+    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-3 md:mb-6">
       <span className="font-medium text-gray-700">Your Credit Card Match</span>
       <span>
         Step {currentStep} of {totalSteps}

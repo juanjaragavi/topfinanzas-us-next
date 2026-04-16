@@ -176,6 +176,9 @@ export function FinanceChatOfferwall({
     currentQuestion >= 0
       ? questions[currentQuestion].options.slice(0, MAX_OPTIONS_PER_NODE)
       : [];
+  const optionButtonWidthCh =
+    visibleOptions.reduce((max, option) => Math.max(max, option.label.length), 0) +
+    2;
 
   return (
     <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
@@ -203,7 +206,7 @@ export function FinanceChatOfferwall({
                   className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
                     msg.type === "bot"
                       ? "bg-[#F3F4F6] text-gray-800 rounded-3xl rounded-tl-sm border-none"
-                      : "bg-[#10B981] text-white rounded-2xl shadow-3d border border-black/[.15]"
+                      : "bg-[#10B981] text-white rounded-2xl rounded-br-sm border border-emerald-600/25 shadow-sm"
                   }`}
                 >
                   {msg.text}
@@ -238,6 +241,7 @@ export function FinanceChatOfferwall({
                   key={opt.value}
                   type="button"
                   onClick={() => handleAnswer(opt.label)}
+                  style={{ width: `min(85%, ${optionButtonWidthCh}ch)` }}
                   className="max-w-[85%] md:max-w-sm px-5 py-3 rounded-2xl text-[15px] font-semibold transition-all duration-200 bg-[#10B981] text-white shadow-3d border border-black/[.15] hover:bg-[#059669] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 >
                   {opt.label}
