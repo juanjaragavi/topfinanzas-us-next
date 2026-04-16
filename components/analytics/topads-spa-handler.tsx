@@ -56,7 +56,9 @@ export function reinjectTopAdsScript(): void {
     (document.head || document.getElementsByTagName("head")[0]).appendChild(
       script,
     );
-    logger.info("[TopAds] Re-injected external script for delayed/dynamic flow");
+    logger.info(
+      "[TopAds] Re-injected external script for delayed/dynamic flow",
+    );
   } catch (error) {
     logger.error("[TopAds] Failed to re-inject external script:", error);
   }
@@ -264,13 +266,15 @@ export default function TopAdsSPAHandler() {
 export function useTopAds() {
   const triggerSPA = () => {
     try {
-      logger.info("[TopAds] Manual SPA trigger - Re-injecting script for dynamic element");
-      
+      logger.info(
+        "[TopAds] Manual SPA trigger - Re-injecting script for dynamic element",
+      );
+
       // Clear container first to ensure fresh fill
       document.querySelectorAll("[data-topads]").forEach((el) => {
         el.innerHTML = "";
       });
-      
+
       reinjectTopAdsScript();
       return true;
     } catch (error) {

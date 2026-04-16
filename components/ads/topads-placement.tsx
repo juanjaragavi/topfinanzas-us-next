@@ -52,8 +52,7 @@ export default function TopAdsPlacement({
   className = "",
   minHeight = "250px",
 }: TopAdsPlacementProps) {
-  const effectiveId =
-    unitIndex != null ? `square0${unitIndex}` : id;
+  const effectiveId = unitIndex != null ? `square0${unitIndex}` : id;
 
   useEffect(() => {
     if (!effectiveId) {

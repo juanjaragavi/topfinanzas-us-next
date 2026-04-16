@@ -1,9 +1,4 @@
-fix(topads): suppress blocking overlays on invite quiz stepsrefactor: split invit-credit-card-rec-us-3 quiz into three separate routes
+docs(topads): format markdown documentation for improved readability
 
-- Extract shared quiz components into components/steps/credit-card-rec-shared.tsx
-- Refactor /invit-credit-card-rec-us-3 to Step 1 only (credit score, square01, preloader active)
-- Create /invit-credit-card-rec-us-4 for Step 2 (spending category, square02, preloader disabled)
-- Create /invit-credit-card-rec-us-5 for Step 3 (monthly spend, square03, preloader disabled)
-- Add creditCardRecommender4 and creditCardRecommender5 quiz configs
-- Offerwall only renders on the first route (/invit-credit-card-rec-us-3)
-
+- Fix escaped lists and tables in `public/topads-documentation.md`
+- Ensure correct formatting for data tables

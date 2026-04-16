@@ -53,13 +53,13 @@ export function FinanceChatOfferwall({
       hoverBg: "hover:bg-[#2563EB]",
     },
   };
-  
+
   const currentTheme = themeClasses[theme] || themeClasses.green;
   const [currentQuestion, setCurrentQuestion] = useState(-1);
   const [isTyping, setIsTyping] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
   const [showCta, setShowCta] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
+
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = useCallback(() => {
@@ -67,9 +67,9 @@ export function FinanceChatOfferwall({
   }, []);
 
   const addBotMessage = useCallback((text: string, delay = 1200) => {
-    setIsTyping(true);
-    setShowOptions(false);
     return new Promise<void>((resolve) => {
+      setIsTyping(true);
+      setShowOptions(false);
       setTimeout(() => {
         setMessages((prev) => [...prev, { type: "bot", text }]);
         setIsTyping(false);
@@ -79,9 +79,9 @@ export function FinanceChatOfferwall({
   }, []);
 
   const addAdMessage = useCallback((delay = 800) => {
-    setIsTyping(true);
-    setShowOptions(false);
     return new Promise<void>((resolve) => {
+      setIsTyping(true);
+      setShowOptions(false);
       setTimeout(() => {
         setMessages((prev) => [...prev, { type: "ad" }]);
         setIsTyping(false);
@@ -92,18 +92,18 @@ export function FinanceChatOfferwall({
 
   useEffect(() => {
     const init = async () => {
-      await addBotMessage(`Hi! I'm ${botName}. ${greeting}`, 2000);
+      await new Promise((r) => setTimeout(r, 500)); // Initial thinking gap
+      await addBotMessage(`Hi! I'm ${botName}. ${greeting}`, 1000);
+      await new Promise((r) => setTimeout(r, 600)); // Gap before next message
       if (questions.length > 0) {
         setCurrentQuestion(0);
-        await addBotMessage(questions[0].botMessage, 2200);
+        await addBotMessage(questions[0].botMessage, 1200);
         setShowOptions(true);
       }
     };
-    if (hasStarted) {
-      init();
-    }
+    init();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasStarted]);
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
@@ -115,26 +115,37 @@ export function FinanceChatOfferwall({
       setShowOptions(false);
 
       const nextIndex = currentQuestion + 1;
-      
+
       // Inject Ad at specific step
       if (currentQuestion === adStepIndex - 1) {
+        await new Promise((r) => setTimeout(r, 400));
         await addAdMessage(800);
         setTimeout(() => {
           triggerSPA();
         }, 500);
       }
 
+      await new Promise((r) => setTimeout(r, 500)); // Human typing latency
+
       if (nextIndex < questions.length) {
         setCurrentQuestion(nextIndex);
-        await addBotMessage(questions[nextIndex].botMessage, 2400);
+        await addBotMessage(questions[nextIndex].botMessage, 1200);
         setShowOptions(true);
       } else {
         setCurrentQuestion(-1);
-        await addBotMessage(successMessage, 2200);
+        await addBotMessage(successMessage, 1200);
         setShowCta(true);
       }
     },
-    [currentQuestion, questions, addBotMessage, addAdMessage, successMessage, adStepIndex, triggerSPA],
+    [
+      currentQuestion,
+      questions,
+      addBotMessage,
+      addAdMessage,
+      successMessage,
+      adStepIndex,
+      triggerSPA,
+    ],
   );
 
   const handleCta = useCallback(() => {
@@ -144,32 +155,7 @@ export function FinanceChatOfferwall({
   return (
     <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
       <div className="w-full h-full max-w-md bg-white flex flex-col shadow-2xl relative">
-        {!hasStarted ? (
-          <div className="flex flex-col items-center justify-center h-full p-6 bg-[#F8F9FA]">
-            <h1 className="text-lg font-semibold text-center text-gray-700 mb-8 leading-snug">
-              Answer a few questions in our chat to find your loan. It&apos;s very quick!
-            </h1>
-            
-            <div className="w-full flex items-center justify-center mb-8 relative">
-              <div className="w-full h-px bg-[#FDBA74] absolute top-1/2 left-0 -translate-y-1/2"></div>
-              <div className="w-6 h-6 rounded-full bg-white border border-[#FDBA74] text-[#FDBA74] flex items-center justify-center relative z-10">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 w-full flex flex-col items-center">
-              <h2 className="text-lg font-medium text-gray-900 mb-6">Shall we begin?</h2>
-              <button
-                type="button"
-                onClick={() => setHasStarted(true)}
-                className="w-full relative bg-[#FED7AA] hover:bg-[#FDBA74] text-[#9A3412] font-semibold py-3.5 rounded-lg transition-colors"
-              >
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#F59E0B]"></div>
-                Let&apos;s do it!
-              </button>
-            </div>
-          </div>
-        ) : (
+        {
           <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-white flex flex-col gap-4">
             {messages.map((msg, i) => (
               <div
@@ -179,8 +165,13 @@ export function FinanceChatOfferwall({
                 {msg.type === "ad" ? (
                   <div className="w-full max-w-sm mx-auto my-4">
                     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-2">
-                      <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">Advertisement</span>
-                      <TopAdsSquare id="square01" className="min-h-[250px] mx-auto" />
+                      <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">
+                        Advertisement
+                      </span>
+                      <TopAdsSquare
+                        id="square01"
+                        className="min-h-[250px] mx-auto"
+                      />
                     </div>
                   </div>
                 ) : (
@@ -217,13 +208,13 @@ export function FinanceChatOfferwall({
             )}
 
             {showOptions && currentQuestion >= 0 && (
-              <div className="flex flex-col gap-2 mt-1 max-w-sm">
-                {questions[currentQuestion].options.map((opt) => (
+              <div className="flex flex-col items-end gap-2 mt-2 w-full">
+                {questions[currentQuestion].options.slice(0, 3).map((opt) => (
                   <button
                     key={opt.value}
                     type="button"
                     onClick={() => handleAnswer(opt.label)}
-                    className={`px-5 py-3.5 rounded-full text-[15px] font-semibold transition-all duration-200 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${currentTheme.bg} ${currentTheme.hoverBg}`}
+                    className={`self-end text-right w-auto px-5 py-3 text-[15px] font-semibold text-white shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 rounded-3xl rounded-tr-sm max-w-[85%] md:max-w-sm ${currentTheme.bg} ${currentTheme.hoverBg}`}
                   >
                     {opt.label}
                   </button>
@@ -233,12 +224,14 @@ export function FinanceChatOfferwall({
 
             {showCta && (
               <div className="mt-4 space-y-3 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
-                <h3 className="font-bold text-gray-900 text-lg mb-2">Your Results Are Ready</h3>
+                <h3 className="font-bold text-gray-900 text-lg mb-2">
+                  Your Results Are Ready
+                </h3>
                 <p className="text-sm text-gray-600 mb-4">{ctaSecondaryText}</p>
                 <button
                   type="button"
                   onClick={handleCta}
-                  className={`block w-full py-4 px-6 rounded-full text-white font-bold text-lg text-center transition-all duration-200 hover:opacity-90 shadow-lg ${currentTheme.bg} ${currentTheme.hoverBg}`}
+                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 >
                   {ctaButtonText} →
                 </button>
@@ -247,7 +240,7 @@ export function FinanceChatOfferwall({
 
             <div ref={chatEndRef} />
           </div>
-        )}
+        }
       </div>
     </main>
   );

@@ -126,7 +126,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep1Select}
-                        className="w-full rounded-2xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                        className="w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold text-lg py-4 px-6 transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                       >
                         {label}
                       </button>
@@ -162,7 +162,7 @@ export default function FinanceQuizRecommenderP1Page() {
                         key={label}
                         type="button"
                         onClick={handleStep2Select}
-                        className="w-full rounded-2xl bg-[#10B981] hover:bg-[#059669] active:bg-[#059669] text-white font-bold text-lg py-4 px-6 transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                        className="w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold text-lg py-4 px-6 transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                       >
                         {label}
                       </button>

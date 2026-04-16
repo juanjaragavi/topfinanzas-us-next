@@ -55,9 +55,12 @@ export default function InvitCreditCardRecUS5Page() {
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
       advanceTimerRef.current = setTimeout(() => {
         pushGTMConversion(GTM_CONVERSION_EVENT);
-        formLogger.info(`[${LOG_TAG}] Quiz completed — redirecting to affiliate`, {
-          selection: optionId,
-        });
+        formLogger.info(
+          `[${LOG_TAG}] Quiz completed — redirecting to affiliate`,
+          {
+            selection: optionId,
+          },
+        );
         router.push(AFFILIATE_URL);
       }, 350);
     },
