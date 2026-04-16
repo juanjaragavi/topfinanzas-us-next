@@ -60,6 +60,18 @@ export function FinanceChatOfferwall({
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
+  const navigateToTarget = useCallback(
+    (target: string) => {
+      const isExternal = /^https?:\/\//i.test(target);
+      if (isExternal) {
+        window.location.href = target;
+        return;
+      }
+      router.push(target);
+    },
+    [router],
+  );
+
   const addBotMessage = useCallback((text: string, delay = 1000) => {
     setIsTyping(true);
     setShowOptions(false);
@@ -135,7 +147,7 @@ export function FinanceChatOfferwall({
               resolve();
             }, redirectTypingDelayMs);
           });
-          router.push(redirectTo);
+          navigateToTarget(redirectTo);
           return;
         }
 
@@ -152,14 +164,14 @@ export function FinanceChatOfferwall({
       triggerSPA,
       finalAction,
       redirectTypingDelayMs,
-      router,
       redirectTo,
+      navigateToTarget,
     ],
   );
 
   const handleCta = useCallback(() => {
-    router.push(redirectTo);
-  }, [router, redirectTo]);
+    navigateToTarget(redirectTo);
+  }, [navigateToTarget, redirectTo]);
 
   const visibleOptions =
     currentQuestion >= 0

@@ -56,7 +56,6 @@ export default function TopAds() {
                         exclude: [
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
-                            '/invit-credit-card-rec-us-5',
                             '/finance-quiz-recommender-p2',
                         ],
                     },
