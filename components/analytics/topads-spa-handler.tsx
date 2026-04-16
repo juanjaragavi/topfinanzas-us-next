@@ -265,10 +265,11 @@ export default function TopAdsSPAHandler() {
 // Custom hook for manual TopAds SPA triggering
 export function useTopAds() {
   const pathname = usePathname();
+  const canForceManualTopAds = pathname === "/finance-quiz-recommender-p2";
 
   const triggerSPA = () => {
     try {
-      if (pathname && isTopAdsExcludedPath(pathname)) {
+      if (pathname && isTopAdsExcludedPath(pathname) && !canForceManualTopAds) {
         logger.info("[TopAds] Manual SPA trigger skipped on excluded route", {
           path: pathname,
         });

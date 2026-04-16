@@ -69,23 +69,6 @@ export default function InvitCreditCardRecUS5Page() {
 
   return (
     <>
-      {/* Suppress ALL TopAds blocking UI on this quiz-step route */}
-      <style>{`
-        .topads-preloader-active,
-        .topads-preloader,
-        [data-topads-interstitial],
-        [data-topads-overlay] {
-          display: none !important;
-          visibility: hidden !important;
-          opacity: 0 !important;
-          pointer-events: none !important;
-        }
-        body.topads-preloader-active {
-          overflow: auto !important;
-          position: static !important;
-        }
-      `}</style>
-
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
         <HeroBanner />
