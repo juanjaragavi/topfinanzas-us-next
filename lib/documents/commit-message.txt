@@ -1,2 +1,2 @@
-style: green CTA button and move intro content to top of page
+style: increase typing delays and unify green color across chat bubbles
 

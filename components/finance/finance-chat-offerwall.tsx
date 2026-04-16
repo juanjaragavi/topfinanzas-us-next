@@ -85,11 +85,11 @@ export function FinanceChatOfferwall({
     initRef.current = true;
 
     const init = async () => {
-      await addBotMessage(`Hi! I'm ${botName}.`, 800);
-      await addBotMessage(greeting, 1200);
+      await addBotMessage(`Hi! I'm ${botName}.`, 1100);
+      await addBotMessage(greeting, 1500);
       if (questions.length > 0) {
         setCurrentQuestion(0);
-        await addBotMessage(questions[0].botMessage, 1400);
+        await addBotMessage(questions[0].botMessage, 1700);
         setShowOptions(true);
       }
     };
@@ -117,11 +117,11 @@ export function FinanceChatOfferwall({
 
       if (nextIndex < questions.length) {
         setCurrentQuestion(nextIndex);
-        await addBotMessage(questions[nextIndex].botMessage, 1400);
+        await addBotMessage(questions[nextIndex].botMessage, 1700);
         setShowOptions(true);
       } else {
         setCurrentQuestion(-1);
-        await addBotMessage(successMessage, 1200);
+        await addBotMessage(successMessage, 1500);
         setShowCta(true);
       }
     },
@@ -171,7 +171,7 @@ export function FinanceChatOfferwall({
                   className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
                     msg.type === "bot"
                       ? "bg-[#F3F4F6] text-gray-800 rounded-3xl rounded-tl-sm border-none"
-                      : "bg-[#3B82F6] text-white rounded-3xl rounded-tr-sm"
+                      : "bg-[#10B981] text-white rounded-3xl rounded-tr-sm"
                   }`}
                 >
                   {msg.text}
