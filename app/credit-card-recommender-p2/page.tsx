@@ -21,11 +21,13 @@ export default function CreditCardRecommenderP2Page() {
       greeting="Let's match you with the right card."
       questions={CREDIT_CARD_QUIZ_P2_QUESTIONS}
       theme="blue"
-      successMessage="Excellent matches ready for you!"
+      successMessage="Excellent matches ready for you! I am redirecting you right now..."
       ctaButtonText="View Recommendations"
       ctaSecondaryText="Tap above to see your matches."
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
+      finalAction="auto-redirect"
+      redirectTypingDelayMs={800}
     />
   );
 }

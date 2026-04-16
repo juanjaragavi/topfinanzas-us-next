@@ -143,7 +143,6 @@ export function FinanceChatOfferwall({
           setIsTyping(true);
           await new Promise<void>((resolve) => {
             setTimeout(() => {
-              setIsTyping(false);
               resolve();
             }, redirectTypingDelayMs);
           });

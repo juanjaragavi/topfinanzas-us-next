@@ -57,7 +57,6 @@ export default function TopAds() {
                             '/campaign-quiz-credit-card-recomender',
                             '/campaign-quiz-credit-card-recomender-short',
                             '/finance-quiz-recommender-p2',
-                            '/finance-chat-intro',
                         ],
                     },
                     offerwall: {
