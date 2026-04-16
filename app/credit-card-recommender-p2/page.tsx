@@ -18,12 +18,12 @@ export default function CreditCardRecommenderP2Page() {
   return (
     <FinanceChatOfferwall
       botName="Card Matcher"
-      greeting="Welcome! Let's find a credit card that fits your lifestyle perfectly."
+      greeting="Let's match you with the right card."
       questions={CREDIT_CARD_QUIZ_P2_QUESTIONS}
-      theme="blue" // Blue theme
-      successMessage="Great! Based on your answers, I have some excellent recommendations."
+      theme="blue"
+      successMessage="Excellent matches ready for you!"
       ctaButtonText="View Recommendations"
-      ctaSecondaryText="Click above to unlock your personalized card matches."
+      ctaSecondaryText="Tap above to see your matches."
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
     />

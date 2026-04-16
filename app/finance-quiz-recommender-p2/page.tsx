@@ -18,12 +18,12 @@ export default function FinanceQuizRecommenderP2Page() {
   return (
     <FinanceChatOfferwall
       botName="Top Finance Assistant"
-      greeting="Hello! I'm here to help you find the best credit card options available in the US market."
+      greeting="Let's find the best card for you."
       questions={FINANCE_QUIZ_P2_QUESTIONS}
-      theme="green" // Green theme
-      successMessage="I found some fantastic options that match your profile perfectly."
+      theme="green"
+      successMessage="Great matches found for you!"
       ctaButtonText="Show My Options"
-      ctaSecondaryText="To view your suggested cards please click above."
+      ctaSecondaryText="Tap above to see your matches."
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
     />

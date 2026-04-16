@@ -383,14 +383,12 @@ export function BottomContent() {
 
       {/* Stay Tuned Section */}
       <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
-        <h4 className="text-xl font-semibold text-gray-800 mb-3">
-          Stay Tuned
-        </h4>
+        <h4 className="text-xl font-semibold text-gray-800 mb-3">Stay Tuned</h4>
         <p className="text-gray-700 leading-relaxed">
           If you&apos;re looking for additional assistance in boosting your
           credit score or optimizing your credit card usage while avoiding banks
-          capitalizing on your situation, please explore the information below as
-          well. We offer valuable resources tailored to your specific needs.
+          capitalizing on your situation, please explore the information below
+          as well. We offer valuable resources tailored to your specific needs.
         </p>
       </div>
 
