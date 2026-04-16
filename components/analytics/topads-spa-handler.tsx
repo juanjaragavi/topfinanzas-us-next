@@ -268,6 +268,13 @@ export function useTopAds() {
 
   const triggerSPA = () => {
     try {
+      if (pathname && isTopAdsExcludedPath(pathname)) {
+        logger.info("[TopAds] Manual SPA trigger skipped on excluded route", {
+          path: pathname,
+        });
+        return false;
+      }
+
       logger.info(
         "[TopAds] Manual SPA trigger - Re-injecting script for dynamic element",
       );
