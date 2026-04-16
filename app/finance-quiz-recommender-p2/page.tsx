@@ -21,11 +21,13 @@ export default function FinanceQuizRecommenderP2Page() {
       greeting="Let's find the best card for you."
       questions={FINANCE_QUIZ_P2_QUESTIONS}
       theme="green"
-      successMessage="Great matches found for you!"
+      successMessage="I've found great matches for you! I am redirecting you right now..."
       ctaButtonText="Show My Options"
       ctaSecondaryText="Tap above to see your matches."
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
+      finalAction="auto-redirect"
+      redirectTypingDelayMs={300}
     />
   );
 }

@@ -21,6 +21,8 @@ export interface FinanceChatOfferwallProps {
   ctaSecondaryText?: string;
   redirectTo: string;
   adStepIndex?: number;
+  finalAction?: "cta" | "auto-redirect";
+  redirectTypingDelayMs?: number;
 }
 
 interface ChatBubble {
@@ -40,6 +42,8 @@ export function FinanceChatOfferwall({
   ctaSecondaryText = "Tap above to see your matches.",
   redirectTo,
   adStepIndex = 1,
+  finalAction = "cta",
+  redirectTypingDelayMs = 300,
 }: FinanceChatOfferwallProps) {
   const router = useRouter();
   const { triggerSPA } = useTopAds();
@@ -122,6 +126,19 @@ export function FinanceChatOfferwall({
       } else {
         setCurrentQuestion(-1);
         await addBotMessage(successMessage, 1500);
+
+        if (finalAction === "auto-redirect") {
+          setIsTyping(true);
+          await new Promise<void>((resolve) => {
+            setTimeout(() => {
+              setIsTyping(false);
+              resolve();
+            }, redirectTypingDelayMs);
+          });
+          router.push(redirectTo);
+          return;
+        }
+
         setShowCta(true);
       }
     },
@@ -133,6 +150,10 @@ export function FinanceChatOfferwall({
       successMessage,
       adStepIndex,
       triggerSPA,
+      finalAction,
+      redirectTypingDelayMs,
+      router,
+      redirectTo,
     ],
   );
 
@@ -171,7 +192,7 @@ export function FinanceChatOfferwall({
                   className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
                     msg.type === "bot"
                       ? "bg-[#F3F4F6] text-gray-800 rounded-3xl rounded-tl-sm border-none"
-                      : "bg-[#10B981] text-white rounded-3xl rounded-tr-sm"
+                      : "bg-[#10B981] text-white rounded-2xl shadow-3d border border-black/[.15]"
                   }`}
                 >
                   {msg.text}
@@ -206,7 +227,7 @@ export function FinanceChatOfferwall({
                   key={opt.value}
                   type="button"
                   onClick={() => handleAnswer(opt.label)}
-                  className="max-w-[85%] md:max-w-sm px-5 py-3 rounded-3xl rounded-tr-sm text-[15px] font-medium transition-all duration-200 bg-[#10B981] text-white hover:bg-[#059669]"
+                  className="max-w-[85%] md:max-w-sm px-5 py-3 rounded-2xl text-[15px] font-semibold transition-all duration-200 bg-[#10B981] text-white shadow-3d border border-black/[.15] hover:bg-[#059669] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 >
                   {opt.label}
                 </button>
