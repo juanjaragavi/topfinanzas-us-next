@@ -175,9 +175,17 @@ export function FinanceChatOfferwall({
     currentQuestion >= 0
       ? questions[currentQuestion].options.slice(0, MAX_OPTIONS_PER_NODE)
       : [];
+  const optionGroupId =
+    currentQuestion === 0
+      ? "preguntas-quiz-finanzas-1"
+      : currentQuestion === 1
+        ? "preguntas-quiz-finanzas-2"
+        : undefined;
   const optionButtonWidthCh =
-    visibleOptions.reduce((max, option) => Math.max(max, option.label.length), 0) +
-    4;
+    visibleOptions.reduce(
+      (max, option) => Math.max(max, option.label.length),
+      0,
+    ) + 4;
 
   return (
     <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
@@ -234,13 +242,18 @@ export function FinanceChatOfferwall({
           )}
 
           {showOptions && currentQuestion >= 0 && (
-            <div className="flex flex-col gap-2 mt-1 items-end">
+            <div
+              id={optionGroupId}
+              className="flex flex-col gap-2 mt-1 items-end"
+            >
               {visibleOptions.map((opt) => (
                 <button
                   key={opt.value}
                   type="button"
                   onClick={() => handleAnswer(opt.label)}
-                  style={{ width: `clamp(220px, ${optionButtonWidthCh}ch, 92%)` }}
+                  style={{
+                    width: `clamp(220px, ${optionButtonWidthCh}ch, 92%)`,
+                  }}
                   className="max-w-[92%] md:max-w-sm px-5 py-3 rounded-2xl text-[15px] leading-tight font-semibold text-center transition-all duration-200 bg-[#10B981] text-white shadow-3d border border-black/[.15] hover:bg-[#059669] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
                 >
                   {opt.label}
