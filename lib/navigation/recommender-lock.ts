@@ -2,8 +2,10 @@ import { logger } from "@/lib/logger";
 export const RECOMMENDER_LOCK_COOKIE = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_STORAGE_KEY = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
-const RECOMMENDER_PATH_PATTERN =
-  /^\/credit-card-recommender(?:-[a-z0-9-]+)?(?:\/.+)?$/i;
+const RECOMMENDER_PATH_PATTERNS = [
+  /^\/credit-card-recommender(?:-[a-z0-9-]+)?(?:\/.+)?$/i,
+  /^\/invit-credit-card-rec-us-\d+(?:\/.+)?$/i,
+] as const;
 
 export interface RecommenderLockPayload {
   pathname: string;
@@ -36,7 +38,7 @@ export function normalizeSearch(search?: string | null): string {
 }
 
 export function isValidRecommenderPath(pathname: string): boolean {
-  return RECOMMENDER_PATH_PATTERN.test(pathname);
+  return RECOMMENDER_PATH_PATTERNS.some((pattern) => pattern.test(pathname));
 }
 
 export function createRecommenderLockPayload(
