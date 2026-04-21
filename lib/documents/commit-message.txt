@@ -1,9 +1,6 @@
-feat(funnel): add premium engagement variant route 9 with glassmorphism and micro-interactions
+feat(quiz): add gamified card quest variants and shared engagement utilities
 
-- Add new /invit-credit-card-rec-us-9 route with dark theme and gamification layer
-- Create reusable EngagementCard component with glassmorphism styling and motion support
-- Implement framer-variants module for consistent animation definitions across components
-- Add engagement tracking system (interactionCount, engagementTier metric)
-- Enhance recommender navigation lock pattern to support future variant routes (10+)
-- Ensure full accessibility compliance (prefers-reduced-motion, WCAG 2.1 AA contrast, aria labels)
-- All validation checks passing: ESLint, TypeScript strict, Prettier format
+- Add new invitation route variants: /invit-credit-card-rec-us-10 and /invit-credit-card-rec-us-11
+- Upgrade /invit-credit-card-rec-us-9 to a Card Quest experience with interaction-driven effects
+- Add reusable gamification effects and quest engagement helpers
+- Extend shared recommender components and quiz config for new variants

@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { formLogger } from "@/lib/logger";
+import { cn } from "@/lib/utils";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -114,47 +115,114 @@ export const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 
 /** TopAds external script URL (must match the one loaded in layout). */
 const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
+const TRUST_BAR_STORAGE_KEY = "tf_quiz_live_count_state_v1";
+const TRUST_BAR_INTERVALS_MS = [1000, 500, 1500] as const;
+
+interface TrustBarPersistedState {
+  count: number;
+  intervalIndex: number;
+  lastIncrementAt: number;
+}
 
 // ---------------------------------------------------------------------------
 // Sub-components
 // ---------------------------------------------------------------------------
 
-export function HeroBanner() {
+export function HeroBanner({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="w-full bg-[#10B981] text-white py-3 md:py-7 px-4">
-      <div className="max-w-3xl mx-auto text-center space-y-2.5 md:space-y-4">
-        <h1 className="text-[21px] md:text-4xl font-bold leading-[1.15] text-white">
+    <div
+      className={cn(
+        "w-full bg-[#10B981] text-white px-4",
+        compact ? "py-2 md:py-5" : "py-3 md:py-7",
+      )}
+    >
+      <div
+        className={cn(
+          "max-w-3xl mx-auto text-center",
+          compact ? "space-y-2 md:space-y-3" : "space-y-2.5 md:space-y-4",
+        )}
+      >
+        <h1
+          className={cn(
+            "font-bold text-white",
+            compact
+              ? "text-[19px] md:text-3xl leading-[1.08]"
+              : "text-[21px] md:text-4xl leading-[1.15]",
+          )}
+        >
           Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
           30 Seconds
         </h1>
-        <p className="text-[12px] leading-[1.25] md:text-lg text-emerald-100">
+        <p
+          className={cn(
+            "text-emerald-100",
+            compact
+              ? "text-[11px] leading-[1.2] md:text-base"
+              : "text-[12px] leading-[1.25] md:text-lg",
+          )}
+        >
           Answer 3 quick questions. Get personalized recommendations
           <br className="hidden md:block" /> matched to your spending habits.
         </p>
 
         {/* Social proof stats */}
-        <div className="flex justify-center gap-4 md:gap-16 pt-0.5 md:pt-4">
+        <div
+          className={cn(
+            "flex justify-center",
+            compact ? "gap-3 md:gap-12 pt-0" : "gap-4 md:gap-16 pt-0.5 md:pt-4",
+          )}
+        >
           <div className="text-center">
-            <p className="text-lg md:text-3xl font-bold leading-none text-white">
+            <p
+              className={cn(
+                "font-bold leading-none text-white",
+                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+              )}
+            >
               847K+
             </p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
+            <p
+              className={cn(
+                "uppercase tracking-wider text-emerald-200",
+                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+              )}
+            >
               Users Matched
             </p>
           </div>
           <div className="text-center">
-            <p className="text-lg md:text-3xl font-bold leading-none text-white">
+            <p
+              className={cn(
+                "font-bold leading-none text-white",
+                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+              )}
+            >
               4.8/5
             </p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
+            <p
+              className={cn(
+                "uppercase tracking-wider text-emerald-200",
+                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+              )}
+            >
               Avg Rating
             </p>
           </div>
           <div className="text-center">
-            <p className="text-lg md:text-3xl font-bold leading-none text-white">
+            <p
+              className={cn(
+                "font-bold leading-none text-white",
+                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+              )}
+            >
               50+
             </p>
-            <p className="text-[10px] md:text-xs uppercase tracking-wider text-emerald-200">
+            <p
+              className={cn(
+                "uppercase tracking-wider text-emerald-200",
+                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+              )}
+            >
               Cards Analyzed
             </p>
           </div>
@@ -164,27 +232,147 @@ export function HeroBanner() {
   );
 }
 
-export function TrustBar() {
+export function TrustBar({ compact = false }: { compact?: boolean }) {
   const [liveCount, setLiveCount] = useState(127);
+  const [isPulsing, setIsPulsing] = useState(false);
+  const countRef = useRef(127);
+  const intervalIndexRef = useRef(0);
+  const lastIncrementAtRef = useRef(0);
+  const tickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pulseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setLiveCount((prev) => {
-        const delta = Math.random() > 0.5 ? 1 : -1;
-        return Math.max(100, Math.min(200, prev + delta));
-      });
-    }, 8000);
-    return () => clearInterval(timer);
+    const persistState = () => {
+      const nextState: TrustBarPersistedState = {
+        count: countRef.current,
+        intervalIndex: intervalIndexRef.current,
+        lastIncrementAt: lastIncrementAtRef.current,
+      };
+      window.localStorage.setItem(TRUST_BAR_STORAGE_KEY, JSON.stringify(nextState));
+    };
+
+    const triggerPulse = () => {
+      setIsPulsing(true);
+      if (pulseTimerRef.current) {
+        clearTimeout(pulseTimerRef.current);
+      }
+      pulseTimerRef.current = setTimeout(() => {
+        setIsPulsing(false);
+      }, 180);
+    };
+
+    const now = Date.now();
+    const rawState = window.localStorage.getItem(TRUST_BAR_STORAGE_KEY);
+
+    if (rawState) {
+      try {
+        const parsed = JSON.parse(rawState) as TrustBarPersistedState;
+        if (
+          Number.isFinite(parsed.count) &&
+          Number.isFinite(parsed.intervalIndex) &&
+          Number.isFinite(parsed.lastIncrementAt)
+        ) {
+          countRef.current = Math.max(100, parsed.count);
+          intervalIndexRef.current =
+            parsed.intervalIndex % TRUST_BAR_INTERVALS_MS.length;
+          lastIncrementAtRef.current = parsed.lastIncrementAt;
+        }
+      } catch {
+        countRef.current = 127;
+        intervalIndexRef.current = 0;
+        lastIncrementAtRef.current = now;
+      }
+    }
+
+    if (!lastIncrementAtRef.current) {
+      lastIncrementAtRef.current = now;
+      persistState();
+    }
+
+    let catchUpIncrements = 0;
+    let guard = 0;
+    while (guard < 500) {
+      const currentInterval = TRUST_BAR_INTERVALS_MS[intervalIndexRef.current];
+      if (now - lastIncrementAtRef.current < currentInterval) {
+        break;
+      }
+      lastIncrementAtRef.current += currentInterval;
+      intervalIndexRef.current =
+        (intervalIndexRef.current + 1) % TRUST_BAR_INTERVALS_MS.length;
+      countRef.current += 1;
+      catchUpIncrements += 1;
+      guard += 1;
+    }
+
+    setLiveCount(countRef.current);
+    if (catchUpIncrements > 0) {
+      triggerPulse();
+      persistState();
+    }
+
+    const scheduleNextTick = () => {
+      const interval = TRUST_BAR_INTERVALS_MS[intervalIndexRef.current];
+      const elapsed = Date.now() - lastIncrementAtRef.current;
+      const wait = Math.max(80, interval - elapsed);
+
+      tickTimerRef.current = setTimeout(() => {
+        countRef.current += 1;
+        setLiveCount(countRef.current);
+        triggerPulse();
+
+        lastIncrementAtRef.current = Date.now();
+        intervalIndexRef.current =
+          (intervalIndexRef.current + 1) % TRUST_BAR_INTERVALS_MS.length;
+        persistState();
+        scheduleNextTick();
+      }, wait);
+    };
+
+    scheduleNextTick();
+
+    return () => {
+      if (tickTimerRef.current) {
+        clearTimeout(tickTimerRef.current);
+      }
+      if (pulseTimerRef.current) {
+        clearTimeout(pulseTimerRef.current);
+      }
+    };
   }, []);
 
   return (
-    <div className="w-full bg-white border-b border-gray-200 py-1 px-4">
-      <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-2.5 text-xs md:text-sm">
+    <div
+      className={cn(
+        "w-full bg-white border-b border-gray-200 px-4",
+        compact ? "py-0.5" : "py-1",
+      )}
+    >
+      <div
+        className={cn(
+          "max-w-3xl mx-auto flex flex-wrap items-center justify-center",
+          compact ? "gap-2 text-[11px] md:text-sm" : "gap-2.5 text-xs md:text-sm",
+        )}
+      >
         <span className="text-yellow-500 font-medium leading-none">
           ★★★★★ Rated 4.8 by users
         </span>
-        <span className="bg-green-100 text-green-800 text-[11px] md:text-xs font-semibold px-3 py-1 rounded-full leading-none">
-          {liveCount} people taking the quiz right now
+        <span
+          className={cn(
+            "bg-green-100 text-green-800 font-semibold rounded-full leading-none",
+            compact
+              ? "text-[10px] md:text-xs px-2.5 py-0.5"
+              : "text-[11px] md:text-xs px-3 py-1",
+          )}
+        >
+          <span
+            className={cn(
+              "inline-block transition-transform duration-150",
+              isPulsing && "scale-105",
+            )}
+          >
+            {liveCount}
+          </span>{" "}
+          people taking the quiz right now
         </span>
       </div>
     </div>
@@ -194,14 +382,27 @@ export function TrustBar() {
 export function QuizProgressBar({
   currentStep,
   totalSteps,
+  className,
+  titleClassName,
+  stepClassName,
 }: {
   currentStep: number;
   totalSteps: number;
+  className?: string;
+  titleClassName?: string;
+  stepClassName?: string;
 }) {
   return (
-    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-3 md:mb-6">
-      <span className="font-medium text-gray-700">Your Credit Card Match</span>
-      <span>
+    <div
+      className={cn(
+        "flex items-center justify-between text-[11px] md:text-sm mb-2 md:mb-4",
+        className ?? "text-gray-500",
+      )}
+    >
+      <span className={cn("font-medium", titleClassName ?? "text-gray-700")}>
+        Your Credit Card Match
+      </span>
+      <span className={stepClassName}>
         Step {currentStep} of {totalSteps}
       </span>
     </div>
@@ -392,36 +593,38 @@ export function AdSlot({
   return <div ref={wrapperRef} />;
 }
 
-export function BottomContent() {
+export function BottomContent({ variant = "default" }: { variant?: "default" | "dark" }) {
+  const dark = variant === "dark";
+
   return (
     <>
       {/* FAQ Accordion */}
       <div className="w-full text-left mt-12">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>
+          <AccordionItem value="item-1" className={dark ? "border-white/35" : undefined}>
+            <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               What is a credit card cash back statement credit?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className={dark ? "text-white/80" : undefined}>
               It&apos;s a benefit where you receive money back as a credit on
               your statement, lowering your overall balance.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>
+          <AccordionItem value="item-2" className={dark ? "border-white/35" : undefined}>
+            <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               How do I choose the right credit card for travel?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className={dark ? "text-white/80" : undefined}>
               Consider cards with no foreign fees, travel insurance, and rewards
               on airline or hotel purchases.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>
+          <AccordionItem value="item-3" className={dark ? "border-white/35" : undefined}>
+            <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               Can I transfer my credit card balance to another person&apos;s
               card?
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className={dark ? "text-white/80" : undefined}>
               Balance transfers are typically only allowed between cards under
               the same account holder.
             </AccordionContent>
@@ -431,8 +634,10 @@ export function BottomContent() {
 
       {/* Stay Tuned Section */}
       <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
-        <h4 className="text-xl font-semibold text-gray-800 mb-3">Stay Tuned</h4>
-        <p className="text-gray-700 leading-relaxed">
+        <h4 className={cn("text-xl font-semibold mb-3", dark ? "text-white" : "text-gray-800")}>
+          Stay Tuned
+        </h4>
+        <p className={cn(dark ? "text-white/85 leading-snug" : "text-gray-700 leading-relaxed")}>
           If you&apos;re looking for additional assistance in boosting your
           credit score or optimizing your credit card usage while avoiding banks
           capitalizing on your situation, please explore the information below
