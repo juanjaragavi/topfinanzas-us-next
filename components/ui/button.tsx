@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export interface ButtonBaseProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "3d-blue";
   showArrow?: boolean;
   fullWidth?: boolean;
   className?: string;
@@ -49,6 +49,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "primary",
         "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
           variant === "secondary",
+        "bg-[#3B82F6] hover:bg-[#2563EB] text-white border-[#2563EB] shadow-[0_4px_0_0_#1E40AF] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none":
+          variant === "3d-blue",
         "w-full": fullWidth,
       },
       className,
@@ -89,7 +91,10 @@ export { Button };
 export const buttonVariants = ({
   variant = "primary",
   className,
-}: { variant?: "primary" | "secondary"; className?: string } = {}) => {
+}: {
+  variant?: "primary" | "secondary" | "3d-blue";
+  className?: string;
+} = {}) => {
   return cn(
     "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-all duration-200 rounded-xl whitespace-nowrap font-inter shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]",
     {
@@ -97,6 +102,8 @@ export const buttonVariants = ({
         variant === "primary",
       "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
         variant === "secondary",
+      "bg-[#3B82F6] hover:bg-[#2563EB] text-white border-[#2563EB] shadow-[0_4px_0_0_#1E40AF] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none":
+        variant === "3d-blue",
     },
     className,
   );

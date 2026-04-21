@@ -23,6 +23,8 @@ export interface QuizOption {
   description?: string;
 }
 
+export type QuizOptionCardVariant = "default" | "3d-blue";
+
 // ---------------------------------------------------------------------------
 // Quiz data (immutable)
 // ---------------------------------------------------------------------------
@@ -211,32 +213,52 @@ export function QuizOptionCard({
   selected,
   onClick,
   layout,
+  variant = "default",
 }: {
   option: QuizOption;
   selected: boolean;
   onClick: () => void;
   layout: "grid" | "list";
+  variant?: QuizOptionCardVariant;
 }) {
+  const isThreeDBlue = variant === "3d-blue";
+
   if (layout === "list") {
     return (
       <motion.button
         type="button"
         onClick={onClick}
+        aria-pressed={selected}
+        aria-label={option.label}
         className={`flex items-center gap-3 w-full p-3.5 rounded-xl border-2 transition-all duration-200 text-left ${
-          selected
-            ? "border-[#10B981] bg-emerald-50 shadow-md"
-            : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
+          isThreeDBlue
+            ? selected
+              ? "border-[#1E40AF] bg-[#2563EB] text-white shadow-[0_4px_0_0_#1E40AF]"
+              : "border-[#2563EB] bg-[#3B82F6] text-white shadow-[0_4px_0_0_#1E40AF] hover:bg-[#2563EB] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none"
+            : selected
+              ? "border-[#10B981] bg-emerald-50 shadow-md"
+              : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
         }`}
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.99 }}
       >
-        <span className="text-3xl leading-none flex-shrink-0">{option.emoji}</span>
+        <span className="text-3xl leading-none flex-shrink-0">
+          {option.emoji}
+        </span>
         <div>
-          <p className="font-bold text-gray-900 text-[15px] leading-tight">
+          <p
+            className={`font-bold text-[15px] leading-tight ${
+              isThreeDBlue ? "text-white" : "text-gray-900"
+            }`}
+          >
             {option.label}
           </p>
           {option.description && (
-            <p className="text-xs text-gray-500 leading-tight mt-1">
+            <p
+              className={`text-xs leading-tight mt-1 ${
+                isThreeDBlue ? "text-blue-100" : "text-gray-500"
+              }`}
+            >
               {option.description}
             </p>
           )}
@@ -249,20 +271,36 @@ export function QuizOptionCard({
     <motion.button
       type="button"
       onClick={onClick}
+      aria-pressed={selected}
+      aria-label={option.label}
       className={`flex flex-col items-center justify-center p-3.5 md:p-5 rounded-xl border-2 transition-all duration-200 ${
-        selected
-          ? "border-[#10B981] bg-emerald-50 shadow-md"
-          : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
+        isThreeDBlue
+          ? selected
+            ? "border-[#1E40AF] bg-[#2563EB] text-white shadow-[0_4px_0_0_#1E40AF]"
+            : "border-[#2563EB] bg-[#3B82F6] text-white shadow-[0_4px_0_0_#1E40AF] hover:bg-[#2563EB] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none"
+          : selected
+            ? "border-[#10B981] bg-emerald-50 shadow-md"
+            : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"
       }`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
-      <span className="text-[34px] md:text-4xl leading-none mb-1.5">{option.emoji}</span>
-      <p className="font-bold text-gray-900 text-[15px] md:text-base leading-tight text-center">
+      <span className="text-[34px] md:text-4xl leading-none mb-1.5">
+        {option.emoji}
+      </span>
+      <p
+        className={`font-bold text-[15px] md:text-base leading-tight text-center ${
+          isThreeDBlue ? "text-white" : "text-gray-900"
+        }`}
+      >
         {option.label}
       </p>
       {option.description && (
-        <p className="text-[11px] md:text-sm text-gray-500 mt-1 leading-tight text-center">
+        <p
+          className={`text-[11px] md:text-sm mt-1 leading-tight text-center ${
+            isThreeDBlue ? "text-blue-100" : "text-gray-500"
+          }`}
+        >
           {option.description}
         </p>
       )}
