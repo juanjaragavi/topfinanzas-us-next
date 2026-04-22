@@ -13,7 +13,6 @@ interface FunnelLayoutProps {
 }
 
 export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
-  progress: _progress, // kept in interface but unused here as each page renders its own
   title,
   'aria-label': ariaLabel,
   unitIndex = 1,
