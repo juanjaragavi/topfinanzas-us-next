@@ -15,24 +15,28 @@ const FunnelStep14: React.FC = () => {
 
   useEffect(() => {
     setIsClient(true)
-    // Trigger confetti on successful completion
-    const duration = 3 * 1000;
-    const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+    // Trigger confetti on successful completion with 500ms delay
+    const timeout = setTimeout(() => {
+      const duration = 3 * 1000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
 
-    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+      const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
-    const interval: ReturnType<typeof setInterval> = setInterval(function() {
-      const timeLeft = animationEnd - Date.now();
+      const interval: ReturnType<typeof setInterval> = setInterval(function() {
+        const timeLeft = animationEnd - Date.now();
 
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
-      }
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
 
-      const particleCount = 50 * (timeLeft / duration);
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-    }, 250);
+        const particleCount = 50 * (timeLeft / duration);
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+      }, 250);
+    }, 500);
+
+    return () => clearTimeout(timeout);
   }, [])
 
   const handleRedirect = () => {
@@ -74,7 +78,7 @@ const FunnelStep14: React.FC = () => {
         
         <motion.div variants={itemVariants} className="pt-2">
           <Button
-            variant="3d-blue"
+            variant="3d-green"
             fullWidth
             onClick={handleRedirect}
             aria-label="View personalized credit card offers"
