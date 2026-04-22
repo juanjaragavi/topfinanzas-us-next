@@ -534,4 +534,62 @@ export const FINANCE_QUIZ_CONFIGS: Record<string, FinanceQuizConfig> = {
       },
     ],
   },
+  creditCardRecommender12: {
+    journeyId: "quiz-finance-cc-recommender-12",
+    parentPath: "/invit-credit-card-rec-us-12",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Confirm Desired Credit Card Limit:",
+        options: [
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
+        ],
+      },
+      {
+        id: "preferred-benefit",
+        question: "I would also like:",
+        options: [
+          { label: "Cashback", value: "cashback" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
+  creditCardRecommender15: {
+    journeyId: "quiz-finance-cc-recommender-15",
+    parentPath: "/invit-credit-card-rec-us-15",
+    themeColor: FINANCE_QUIZ_THEME.color,
+    themeColorLight: FINANCE_QUIZ_THEME.colorLight,
+    loadingMessage: "Fetching Credit Card Options 2026",
+    skipAds: false,
+    questions: [
+      {
+        id: "credit-limit",
+        question: "Confirm Desired Credit Card Limit:",
+        options: [
+          { label: "$2500", value: "2500" },
+          { label: "$5000", value: "5000" },
+          { label: "$10000", value: "10000" },
+          { label: "I need more", value: "more" },
+        ],
+      },
+      {
+        id: "preferred-benefit",
+        question: "I would also like:",
+        options: [
+          { label: "Cashback", value: "cashback" },
+          { label: "0 handling cost", value: "no-fee" },
+          { label: "0% APR", value: "zero-apr" },
+        ],
+      },
+    ],
+  },
 };

@@ -49,7 +49,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "primary",
         "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
           variant === "secondary",
-        "bg-[#3B82F6] hover:bg-[#2563EB] text-white border-[#2563EB] shadow-[0_4px_0_0_#1E40AF] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none":
+        "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
           variant === "3d-blue",
         "w-full": fullWidth,
       },
@@ -102,7 +102,7 @@ export const buttonVariants = ({
         variant === "primary",
       "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
         variant === "secondary",
-      "bg-[#3B82F6] hover:bg-[#2563EB] text-white border-[#2563EB] shadow-[0_4px_0_0_#1E40AF] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-none":
+      "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
         variant === "3d-blue",
     },
     className,
