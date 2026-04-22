@@ -207,12 +207,18 @@ export default function TopAdsSPAHandler() {
       if (cancelled) return;
 
       if (ready) {
-        try {
-          logger.info("[TopAds] Triggering SPA navigation");
-          window.topAds!.spa!();
-        } catch (error) {
-          logger.error("[TopAds] Error triggering SPA:", error);
-        }
+        // Delay the SPA trigger slightly to allow React to mount new components (like AdSlot)
+        // and append their ad containers into the DOM. Without this delay, spa() fires before
+        // the new ad slots exist, resulting in empty ads on SPA navigations.
+        setTimeout(() => {
+          if (cancelled) return;
+          try {
+            logger.info("[TopAds] Triggering SPA navigation");
+            window.topAds!.spa!();
+          } catch (error) {
+            logger.error("[TopAds] Error triggering SPA:", error);
+          }
+        }, 150);
       } else {
         logger.warn(
           "[TopAds] topAds.spa() not available after timeout — skipping",
