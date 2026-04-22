@@ -30,6 +30,7 @@ const FunnelStep13: React.FC = () => {
       title="Step 2: What is your primary financial goal?"
       aria-label="Financial Progress Bar Step 2: Financial Goal"
       unitIndex={2}
+      logTag="CC-REC-13"
     >
       <AnimatedProgressBar progress={66} label="Matching with Partner Banks..." />
       <motion.div 

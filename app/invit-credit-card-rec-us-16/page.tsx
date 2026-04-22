@@ -50,6 +50,7 @@ const FunnelStep16: React.FC = () => {
       title="Step 2: How is your credit currently?"
       aria-label="Card Scratch/Reveal Step 2: Credit Status"
       unitIndex={5}
+      logTag="CC-REC-16"
     >
       <ScratchCardPrompt />
       <motion.div 

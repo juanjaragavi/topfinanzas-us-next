@@ -58,6 +58,7 @@ const FunnelStep14: React.FC = () => {
       title="Processing Complete: Your Matches Are Ready!"
       aria-label="Financial Progress Bar Final Step"
       unitIndex={3}
+      logTag="CC-REC-14"
     >
       <AnimatedProgressBar progress={100} label="Algorithm Complete" />
       <motion.div 
