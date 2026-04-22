@@ -39,17 +39,17 @@ const FunnelStep13: React.FC = () => {
         className="flex flex-col space-y-4 p-4 mobile-first-container"
       >
         <motion.div variants={itemVariants}>
-          <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('cash')} aria-label="Earn Cash Back">
+          <Button variant="3d-blue" fullWidth onClick={() => handleNext('cash')} aria-label="Earn Cash Back">
             💵 Earn Cash Back
           </Button>
         </motion.div>
         <motion.div variants={itemVariants}>
-          <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('travel')} aria-label="Travel Rewards">
+          <Button variant="3d-blue" fullWidth onClick={() => handleNext('travel')} aria-label="Travel Rewards">
             ✈️ Travel Rewards
           </Button>
         </motion.div>
         <motion.div variants={itemVariants}>
-          <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('low_rate')} aria-label="Lower Interest Rate">
+          <Button variant="3d-blue" fullWidth onClick={() => handleNext('low_rate')} aria-label="Lower Interest Rate">
             📉 Lower Interest Rate
           </Button>
         </motion.div>

@@ -75,7 +75,6 @@ const FunnelStep14: React.FC = () => {
         <motion.div variants={itemVariants} className="pt-2">
           <Button
             variant="3d-blue"
-            size="lg"
             fullWidth
             onClick={handleRedirect}
             aria-label="View personalized credit card offers"

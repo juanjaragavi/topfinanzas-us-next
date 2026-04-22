@@ -45,17 +45,17 @@ const FunnelStep12: React.FC = () => {
             className="flex flex-col space-y-4 p-4 mobile-first-container"
           >
             <motion.div variants={itemVariants}>
-              <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('excellent')} aria-label="Excellent credit health">
+              <Button variant="3d-blue" fullWidth onClick={() => handleNext('excellent')} aria-label="Excellent credit health">
                 🏆 Excellent (740+)
               </Button>
             </motion.div>
             <motion.div variants={itemVariants}>
-              <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('good')} aria-label="Good credit health">
+              <Button variant="3d-blue" fullWidth onClick={() => handleNext('good')} aria-label="Good credit health">
                 👍 Good (670-739)
               </Button>
             </motion.div>
             <motion.div variants={itemVariants}>
-              <Button variant="3d-blue" size="lg" fullWidth onClick={() => handleNext('average')} aria-label="Average credit health">
+              <Button variant="3d-blue" fullWidth onClick={() => handleNext('average')} aria-label="Average credit health">
                 🤏 Average (580-669)
               </Button>
             </motion.div>
