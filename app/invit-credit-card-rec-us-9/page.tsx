@@ -284,7 +284,8 @@ export default function InvitCreditCardRecUS9Page() {
 
                 {!selectedId && (
                   <p className="text-center text-[11px] md:text-sm text-cyan-200 pt-2">
-                    🎮 Tap any option to play • Hover to engage • Unlock the treasure
+                    🎮 Tap any option to play • Hover to engage • Unlock the
+                    treasure
                   </p>
                 )}
               </motion.div>

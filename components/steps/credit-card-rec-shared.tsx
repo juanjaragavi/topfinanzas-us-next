@@ -248,7 +248,10 @@ export function TrustBar({ compact = false }: { compact?: boolean }) {
         intervalIndex: intervalIndexRef.current,
         lastIncrementAt: lastIncrementAtRef.current,
       };
-      window.localStorage.setItem(TRUST_BAR_STORAGE_KEY, JSON.stringify(nextState));
+      window.localStorage.setItem(
+        TRUST_BAR_STORAGE_KEY,
+        JSON.stringify(nextState),
+      );
     };
 
     const triggerPulse = () => {
@@ -350,7 +353,9 @@ export function TrustBar({ compact = false }: { compact?: boolean }) {
       <div
         className={cn(
           "max-w-3xl mx-auto flex flex-wrap items-center justify-center",
-          compact ? "gap-2 text-[11px] md:text-sm" : "gap-2.5 text-xs md:text-sm",
+          compact
+            ? "gap-2 text-[11px] md:text-sm"
+            : "gap-2.5 text-xs md:text-sm",
         )}
       >
         <span className="text-yellow-500 font-medium leading-none">
@@ -593,7 +598,11 @@ export function AdSlot({
   return <div ref={wrapperRef} />;
 }
 
-export function BottomContent({ variant = "default" }: { variant?: "default" | "dark" }) {
+export function BottomContent({
+  variant = "default",
+}: {
+  variant?: "default" | "dark";
+}) {
   const dark = variant === "dark";
 
   return (
@@ -601,7 +610,10 @@ export function BottomContent({ variant = "default" }: { variant?: "default" | "
       {/* FAQ Accordion */}
       <div className="w-full text-left mt-12">
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1" className={dark ? "border-white/35" : undefined}>
+          <AccordionItem
+            value="item-1"
+            className={dark ? "border-white/35" : undefined}
+          >
             <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               What is a credit card cash back statement credit?
             </AccordionTrigger>
@@ -610,7 +622,10 @@ export function BottomContent({ variant = "default" }: { variant?: "default" | "
               your statement, lowering your overall balance.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2" className={dark ? "border-white/35" : undefined}>
+          <AccordionItem
+            value="item-2"
+            className={dark ? "border-white/35" : undefined}
+          >
             <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               How do I choose the right credit card for travel?
             </AccordionTrigger>
@@ -619,7 +634,10 @@ export function BottomContent({ variant = "default" }: { variant?: "default" | "
               on airline or hotel purchases.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3" className={dark ? "border-white/35" : undefined}>
+          <AccordionItem
+            value="item-3"
+            className={dark ? "border-white/35" : undefined}
+          >
             <AccordionTrigger className={dark ? "text-white/95" : undefined}>
               Can I transfer my credit card balance to another person&apos;s
               card?
@@ -634,10 +652,21 @@ export function BottomContent({ variant = "default" }: { variant?: "default" | "
 
       {/* Stay Tuned Section */}
       <div className="border-l-4 border-[#0056b3] p-6 text-left w-full mt-10 rounded-r-md">
-        <h4 className={cn("text-xl font-semibold mb-3", dark ? "text-white" : "text-gray-800")}>
+        <h4
+          className={cn(
+            "text-xl font-semibold mb-3",
+            dark ? "text-white" : "text-gray-800",
+          )}
+        >
           Stay Tuned
         </h4>
-        <p className={cn(dark ? "text-white/85 leading-snug" : "text-gray-700 leading-relaxed")}>
+        <p
+          className={cn(
+            dark
+              ? "text-white/85 leading-snug"
+              : "text-gray-700 leading-relaxed",
+          )}
+        >
           If you&apos;re looking for additional assistance in boosting your
           credit score or optimizing your credit card usage while avoiding banks
           capitalizing on your situation, please explore the information below

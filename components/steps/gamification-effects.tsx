@@ -189,7 +189,13 @@ export function EngagementOrb({
           transition={{ duration: 0.5 }}
         />
         <defs>
-          <linearGradient id="engagementGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient
+            id="engagementGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#00d4ff" />
             <stop offset="50%" stopColor="#ff006e" />
             <stop offset="100%" stopColor="#6bff00" />
