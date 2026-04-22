@@ -86,7 +86,7 @@ const FunnelStep17: React.FC = () => {
 
         <motion.div variants={itemVariants}>
           <Button
-            variant="3d-blue"
+            variant="3d-green"
             fullWidth
             onClick={handleRedirect}
             disabled={!scratched}

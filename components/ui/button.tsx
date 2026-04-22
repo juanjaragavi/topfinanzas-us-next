@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export interface ButtonBaseProps {
-  variant?: "primary" | "secondary" | "3d-blue";
+  variant?: "primary" | "secondary" | "3d-blue" | "3d-green";
   showArrow?: boolean;
   fullWidth?: boolean;
   className?: string;
@@ -51,6 +51,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "secondary",
         "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
           variant === "3d-blue",
+        "bg-[#10B981] hover:bg-[#059669] text-white font-bold tracking-wide border-b-4 border-[#047857] shadow-[0_4px_0_0_#047857] active:translate-y-[2px] active:shadow-none active:border-b-2":
+          variant === "3d-green",
         "w-full": fullWidth,
       },
       className,
@@ -92,7 +94,7 @@ export const buttonVariants = ({
   variant = "primary",
   className,
 }: {
-  variant?: "primary" | "secondary" | "3d-blue";
+  variant?: "primary" | "secondary" | "3d-blue" | "3d-green";
   className?: string;
 } = {}) => {
   return cn(
@@ -104,6 +106,8 @@ export const buttonVariants = ({
         variant === "secondary",
       "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
         variant === "3d-blue",
+      "bg-[#10B981] hover:bg-[#059669] text-white font-bold tracking-wide border-b-4 border-[#047857] shadow-[0_4px_0_0_#047857] active:translate-y-[2px] active:shadow-none active:border-b-2":
+        variant === "3d-green",
     },
     className,
   );

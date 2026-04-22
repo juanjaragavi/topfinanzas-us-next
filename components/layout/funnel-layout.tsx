@@ -34,7 +34,7 @@ export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
             className="space-y-6"
           >
             <h2 className="text-[20px] md:text-2xl font-bold leading-tight text-gray-900 text-center mb-6">
