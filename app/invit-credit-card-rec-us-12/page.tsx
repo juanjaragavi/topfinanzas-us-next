@@ -30,6 +30,7 @@ const FunnelStep12: React.FC = () => {
       title="Step 1: Where do you think your credit health stands?"
       aria-label="Financial Progress Bar Step 1: Credit Health"
       unitIndex={1}
+      logTag="CC-REC-12"
     >
       <AnimatedProgressBar progress={33} label="Analyzing Credit Score..." />
       <motion.div 

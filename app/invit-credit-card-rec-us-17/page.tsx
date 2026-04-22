@@ -58,6 +58,7 @@ const FunnelStep17: React.FC = () => {
       title="Final Match! Scratch to Reveal Your Pre-Approved Card!"
       aria-label="Card Scratch/Reveal Final Step"
       unitIndex={6}
+      logTag="CC-REC-17"
     >
       <motion.div 
         variants={containerVariants}

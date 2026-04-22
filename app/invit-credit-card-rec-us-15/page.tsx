@@ -58,6 +58,7 @@ const FunnelStep15: React.FC = () => {
           title="Step 1: What is your #1 credit card goal?"
           aria-label="Card Scratch/Reveal Step 1: Credit Goal"
           unitIndex={4}
+          logTag="CC-REC-15"
         >
           <ScratchCardPrompt />
           <motion.div 

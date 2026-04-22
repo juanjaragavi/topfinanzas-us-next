@@ -9,6 +9,7 @@ interface FunnelLayoutProps {
   title: string;
   'aria-label'?: string;
   unitIndex?: number;
+  logTag?: string;
   children: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
   title,
   'aria-label': ariaLabel,
   unitIndex = 1,
+  logTag = "CC-FUNNEL",
   children,
 }) => {
   return (
@@ -27,8 +29,8 @@ export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
       <main className="flex-grow">
         <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
           {/* TopAds ad unit */}
-          <div className="flex justify-center mb-6">
-            <AdSlot unitIndex={unitIndex} logTag="CC-FUNNEL-LAYOUT" />
+          <div className="flex justify-center mb-6 min-h-[250px]">
+            <AdSlot unitIndex={unitIndex} logTag={logTag} />
           </div>
           
           <motion.div
