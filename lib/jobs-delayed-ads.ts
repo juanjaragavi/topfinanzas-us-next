@@ -12,6 +12,7 @@ const BASE_TOPADS_EXCLUDED_PATHS = [
   "/campaign-quiz-credit-card-recomender-short",
   "/finance-quiz-recommender-p2",
   "/finance-chat-intro",
+  "/finance-chat-intro-p2",
 ] as const;
 
 export const TOPADS_EXCLUDED_PATHS = [

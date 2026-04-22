@@ -265,7 +265,9 @@ export default function TopAdsSPAHandler() {
 // Custom hook for manual TopAds SPA triggering
 export function useTopAds() {
   const pathname = usePathname();
-  const canForceManualTopAds = pathname === "/finance-quiz-recommender-p2";
+  const canForceManualTopAds =
+    pathname === "/finance-quiz-recommender-p2" ||
+    pathname === "/finance-chat-intro-p2";
 
   const triggerSPA = () => {
     try {
