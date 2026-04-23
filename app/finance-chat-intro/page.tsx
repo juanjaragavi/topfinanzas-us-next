@@ -42,7 +42,7 @@ export default function FinanceChatIntroPage() {
             Shall we begin?
           </h2>
           <Link
-            href="/finance-quiz-recommender-p2"
+            href="https://route.topnetworks.co/api/redirect/5458f64e-5e61-4da4-9102-584dc7f3f1e0"
             className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3.5 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
           >
             Let&apos;s do it!

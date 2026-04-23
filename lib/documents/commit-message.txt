@@ -1,6 +1,4 @@
-refactor: rename finance-chat-intro-p2 to finance-quiz-recommender-p3
+fix(finance-chat-intro): update CTA to TopNetworks redirect URL
 
-- Moved `/app/finance-chat-intro-p2` route to `/app/finance-quiz-recommender-p3`.
-- Renamed the configuration file `lib/finance-chat-intro-p2-config.ts` to `lib/finance-quiz-recommender-p3-config.ts`.
-- Updated all route references and component names across the application.
-- Updated TopAds and delayed ad exclusion lists.
+- Replaced the CTA href in the finance chat intro flow.
+- Switched from an internal recommender route to the tracked external redirect endpoint.
