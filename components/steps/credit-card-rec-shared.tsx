@@ -153,17 +153,6 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
           Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
           30 Seconds
         </h1>
-        <p
-          className={cn(
-            "text-emerald-100",
-            compact
-              ? "text-[11px] leading-[1.2] md:text-base"
-              : "text-[12px] leading-[1.25] md:text-lg",
-          )}
-        >
-          Answer 3 quick questions. Get personalized recommendations
-          <br className="hidden md:block" /> matched to your spending habits.
-        </p>
 
         {/* Social proof stats */}
         <div
@@ -176,7 +165,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
               )}
             >
               847K+
@@ -184,7 +173,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
               )}
             >
               Users Matched
@@ -194,7 +183,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
               )}
             >
               4.8/5
@@ -202,7 +191,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
               )}
             >
               Avg Rating
@@ -212,7 +201,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-base md:text-3xl" : "text-lg md:text-3xl",
+                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
               )}
             >
               50+
@@ -220,7 +209,7 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[9px] md:text-xs" : "text-[10px] md:text-xs",
+                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
               )}
             >
               Cards Analyzed

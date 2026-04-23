@@ -1,6 +1,6 @@
-feat(quiz): add gamified card quest variants and shared engagement utilities
+feat: update credit card recommender UI and routing
 
-- Add new invitation route variants: /invit-credit-card-rec-us-10 and /invit-credit-card-rec-us-11
-- Upgrade /invit-credit-card-rec-us-9 to a Card Quest experience with interaction-driven effects
-- Add reusable gamification effects and quest engagement helpers
-- Extend shared recommender components and quiz config for new variants
+- Remove "Answer 3 quick questions" subtitle from the shared HeroBanner component.
+- Reduce font sizes for the social proof statistics (847K+, 4.8/5, 50+) by 30% in HeroBanner.
+- Update the redirect destination in /invit-credit-card-rec-us-11 (Quest Gamified Flow step 3) to point directly to the Discover It Cash Back article.
+- Document five distinct 3-part user journeys, including the new entry point routes and the 6-to-8 flow, in THREE_PART_USER_JOURNEYS.md.
