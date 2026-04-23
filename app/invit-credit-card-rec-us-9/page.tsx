@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { formLogger } from "@/lib/logger";
-import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
+import FinanceOfferwallDirect from "@/lib/offerwall-for-finance-direct";
+import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
-import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 import {
   MONTHLY_SPEND_OPTIONS,
   HeroBanner,
@@ -37,7 +37,6 @@ const STEP_SUBTITLE =
   "You're almost there! Engage with this power challenge to unlock your ideal card match.";
 
 export default function InvitCreditCardRecUS9Page() {
-  const offerwallQuiz = FINANCE_QUIZ_CONFIGS.creditCardRecommender9;
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [interactionCount, setInteractionCount] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -80,7 +79,7 @@ export default function InvitCreditCardRecUS9Page() {
   );
 
   return (
-    <FinanceOfferwallRuntime quiz={offerwallQuiz}>
+    <>
       <OfferwallPageShell>
         {showConfetti && <ConfettiCanvas />}
         <FloatingParticles />
@@ -297,6 +296,12 @@ export default function InvitCreditCardRecUS9Page() {
           <Footer />
         </div>
       </OfferwallPageShell>
-    </FinanceOfferwallRuntime>
+      <FinanceOfferwallDirect
+        themeColor="#10B981"
+        loadingMessage="Fetching Credit Card Options 2026"
+        skipAds={false}
+      />
+      <TopAdsQuizIdStamper journeyId="quiz-finance-cc-recommender-09" />
+    </>
   );
 }
