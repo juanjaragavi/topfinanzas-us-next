@@ -1,6 +1,6 @@
 import { ChatQuestion } from "@/components/finance/finance-chat-offerwall";
 
-export const FINANCE_CHAT_INTRO_P2_QUESTIONS: ChatQuestion[] = [
+export const FINANCE_QUIZ_RECOMMENDER_P3_QUESTIONS: ChatQuestion[] = [
   {
     id: "q1",
     botMessage: "Hi! To find your perfect match, are you looking for a personal or business credit card?",

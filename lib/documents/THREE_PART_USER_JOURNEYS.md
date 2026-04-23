@@ -7,7 +7,7 @@ Based on the codebase audit, here are the five distinct 3-part user journeys (fu
 These conversational intro pages serve as initial landing points that route users into the recommendation flows:
 
 - **Finance Chat Intro:** [https://us.topfinanzas.com/finance-chat-intro](https://us.topfinanzas.com/finance-chat-intro)
-- **Finance Chat Intro P2:** [https://us.topfinanzas.com/finance-chat-intro-p2](https://us.topfinanzas.com/finance-chat-intro-p2) _(Directs to the Algorithm Processing Funnel Flow)_
+- **Finance Quiz Recommender P3:** [https://us.topfinanzas.com/finance-quiz-recommender-p3](https://us.topfinanzas.com/finance-quiz-recommender-p3) _(Directs to the Algorithm Processing Funnel Flow)_
 
 ## 1. Standard Progress Bar Quiz Flow
 

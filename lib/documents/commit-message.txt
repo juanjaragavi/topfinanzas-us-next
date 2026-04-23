@@ -1,4 +1,6 @@
-style: reduce hero banner title size
+refactor: rename finance-chat-intro-p2 to finance-quiz-recommender-p3
 
-- Adjusted the text size from text-[19px]/text-[21px] to text-[15px]/text-[16px] on mobile.
-- Added `tracking-tight` and `sm:` breakpoints to ensure the title correctly fits on a single line on smaller screens.
+- Moved `/app/finance-chat-intro-p2` route to `/app/finance-quiz-recommender-p3`.
+- Renamed the configuration file `lib/finance-chat-intro-p2-config.ts` to `lib/finance-quiz-recommender-p3-config.ts`.
+- Updated all route references and component names across the application.
+- Updated TopAds and delayed ad exclusion lists.

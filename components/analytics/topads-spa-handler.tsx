@@ -273,7 +273,7 @@ export function useTopAds() {
   const pathname = usePathname();
   const canForceManualTopAds =
     pathname === "/finance-quiz-recommender-p2" ||
-    pathname === "/finance-chat-intro-p2";
+    pathname === "/finance-quiz-recommender-p3";
 
   const triggerSPA = () => {
     try {
