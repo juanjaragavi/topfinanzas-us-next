@@ -1,5 +1,4 @@
-feat: replace runtime offerwall with direct offerwall in cc-rec-9
+style: reduce hero banner title size
 
-- Swapped `FinanceOfferwallRuntime` for `FinanceOfferwallDirect` in `/invit-credit-card-rec-us-9`
-- Removed unused `FINANCE_QUIZ_CONFIGS` import and constant
-- Added `TopAdsQuizIdStamper` configured with `journeyId="quiz-finance-cc-recommender-09"`
+- Adjusted the text size from text-[19px]/text-[21px] to text-[15px]/text-[16px] on mobile.
+- Added `tracking-tight` and `sm:` breakpoints to ensure the title correctly fits on a single line on smaller screens.
