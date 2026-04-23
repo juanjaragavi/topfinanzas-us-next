@@ -144,10 +144,10 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
       >
         <h1
           className={cn(
-            "font-bold text-white",
+            "font-bold text-white tracking-tight",
             compact
-              ? "text-[19px] md:text-3xl leading-[1.08]"
-              : "text-[21px] md:text-4xl leading-[1.15]",
+              ? "text-[15px] sm:text-[19px] md:text-3xl leading-[1.08]"
+              : "text-[16px] sm:text-[21px] md:text-4xl leading-[1.15]",
           )}
         >
           Find Your <span className="text-[#A7F3D0]">Best Credit Card</span> in
