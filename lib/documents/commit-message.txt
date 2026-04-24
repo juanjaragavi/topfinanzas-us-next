@@ -1,10 +1,1 @@
-feat(seo): add SEO/LLM-optimized A/B clones of invit-credit-card-rec-us routes
-
-- Clone app/invit-credit-card-rec-us → app/invit-credit-card-rec-us-seo-optimized
-- Clone app/invit-credit-card-rec-us-2 → app/invit-credit-card-rec-us-2-seo-optimized
-- Add complete metadata (title, description, canonical, openGraph, twitter, robots)
-- Add WebPage, BreadcrumbList, and FAQPage JSON-LD structured data
-- Rename locally-defined metadata.ts with -seo-optimized suffix
-- Create app/robots.ts to allow new SEO routes, keep originals disallowed
-- Add AI crawler allowlisting (GPTBot, ClaudeBot, PerplexityBot, etc.)
-- Original routes unchanged; A/B test via ad campaign targeting
+feat(ui): modernize chat interfaces for finance chat intro and offerwall
