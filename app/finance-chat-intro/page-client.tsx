@@ -26,7 +26,7 @@ export default function FinanceChatIntroClient() {
             <div className="relative bg-[#E9E9EB] text-[#000000] p-6 rounded-[28px] rounded-br-sm shadow-sm mb-6 w-full transform origin-bottom-right">
               <p className="text-lg font-medium leading-relaxed text-center tracking-tight">
                 Answer a few questions in our chat to find your loan. <br/>
-                <span className="font-bold text-blue-600">It's very quick! ⚡</span>
+                <span className="font-bold text-blue-600">It&apos;s very quick! ⚡</span>
               </p>
               {/* iMessage style tail pointing down-right towards the avatar */}
               <div className="absolute -bottom-2 -right-2 w-6 h-6">
@@ -75,7 +75,7 @@ export default function FinanceChatIntroClient() {
             >
               <div className="absolute inset-0 bg-white/20 w-full h-full translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12"></div>
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Let's do it!
+                Let&apos;s do it!
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

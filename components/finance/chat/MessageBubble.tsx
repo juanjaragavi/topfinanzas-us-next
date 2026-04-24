@@ -24,7 +24,6 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
   };
 
   const userBg = theme === "green" ? "bg-[#10B981]" : "bg-[#3B82F6]";
-  const userBorder = theme === "green" ? "border-emerald-600/25" : "border-blue-600/25";
   const userTextTail = theme === "green" ? "text-emerald-100" : "text-blue-100";
 
   if (isAd) {
