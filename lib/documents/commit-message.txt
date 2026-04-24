@@ -1,1 +1,1 @@
-feat(ui): modernize chat interfaces for finance chat intro and offerwall
+feat(ui): redesign finance chat intro splash screen and refine chat bubbles
