@@ -29,6 +29,7 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
   if (isAd) {
     return (
       <motion.div 
+        layout
         variants={bubbleVariants}
         initial="initial"
         animate="animate"
@@ -42,6 +43,7 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
 
   return (
     <motion.div 
+      layout
       variants={bubbleVariants}
       initial="initial"
       animate="animate"

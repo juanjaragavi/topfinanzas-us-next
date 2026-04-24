@@ -1,1 +1,1 @@
-feat(ui): redesign finance chat intro splash screen and refine chat bubbles
+fix(ui): resolve persistent chat typing indicators by adding AnimatePresence keys

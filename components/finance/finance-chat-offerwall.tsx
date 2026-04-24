@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { useTopAds } from "@/components/analytics/topads-spa-handler";
 import { TopAdsSquare } from "@/components/ads/topads-placement";
 import { ChatContainer } from "@/components/finance/chat/ChatContainer";
@@ -226,10 +227,15 @@ export function FinanceChatOfferwall({
           );
         })}
 
-        {isTyping && <MessageBubble type="typing" showAvatar={messages.length === 0 || messages[messages.length - 1]?.type !== "bot"} />}
+        {isTyping && <MessageBubble key="typing-indicator" type="typing" showAvatar={messages.length === 0 || messages[messages.length - 1]?.type !== "bot"} />}
 
         {showOptions && currentQuestion >= 0 && (
-          <div
+          <motion.div
+            key="options-container"
+            layout
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
             id={optionGroupId}
             className="flex flex-col gap-2 mt-2 items-end w-full max-w-[85%] md:max-w-md ml-auto"
           >
@@ -250,11 +256,18 @@ export function FinanceChatOfferwall({
                 {opt.label}
               </button>
             ))}
-          </div>
+          </motion.div>
         )}
 
         {showCta && (
-          <div className="mt-4 w-full">
+          <motion.div 
+            key="cta-container" 
+            layout
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+            className="mt-4 w-full"
+          >
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
               <h3 className="font-bold text-gray-900 text-lg mb-2">
                 Results Ready 🎯
@@ -270,7 +283,7 @@ export function FinanceChatOfferwall({
                 {ctaButtonText} →
               </button>
             </div>
-          </div>
+          </motion.div>
         )}
 
         <div ref={chatEndRef} />
