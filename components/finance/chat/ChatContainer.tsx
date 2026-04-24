@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface ChatContainerProps {
   children: ReactNode;
@@ -9,13 +10,26 @@ interface ChatContainerProps {
 
 export function ChatContainer({ children }: ChatContainerProps) {
   return (
-    <div className="w-full h-full sm:h-[90vh] sm:mt-[5vh] sm:rounded-3xl max-w-md bg-[#F0F2F5] flex flex-col shadow-2xl relative mx-auto overflow-hidden">
+    <div className="w-full h-full sm:h-[90vh] sm:mt-[5vh] sm:rounded-[40px] max-w-md bg-[#F0F2F5] flex flex-col shadow-2xl relative mx-auto overflow-hidden sm:border-[8px] sm:border-gray-900">
       {/* Header */}
-      <div className="bg-white px-4 py-3 border-b border-gray-200 flex items-center justify-between shrink-0 shadow-sm z-10">
-        <div className="flex items-center gap-3">
-          <div className="flex flex-col">
-            <h2 className="font-semibold text-gray-900 text-[15px]">Top Finance Assistant</h2>
-            <p className="text-xs text-green-500 font-medium">Online</p>
+      <div className="bg-white/80 backdrop-blur-md px-4 py-3 border-b border-gray-200/50 flex items-center justify-center shrink-0 z-20 sticky top-0">
+        <div className="flex flex-col items-center gap-1">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-100 bg-gray-50 relative">
+            <Image
+              src="https://media.topfinanzas.com/images/top-us-operator.webp"
+              alt="Operator"
+              fill
+              className="object-cover"
+              sizes="40px"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <h2 className="font-semibold text-gray-900 text-[13px] flex items-center gap-1">
+              Top Finance Assistant
+              <svg className="w-3 h-3 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </h2>
           </div>
         </div>
       </div>

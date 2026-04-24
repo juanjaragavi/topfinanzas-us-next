@@ -24,7 +24,6 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
   };
 
   const userBg = theme === "green" ? "bg-[#10B981]" : "bg-[#3B82F6]";
-  const userBorder = theme === "green" ? "border-emerald-600/25" : "border-blue-600/25";
   const userTextTail = theme === "green" ? "text-emerald-100" : "text-blue-100";
 
   if (isAd) {
@@ -58,10 +57,10 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
         
         <div className="flex flex-col gap-1">
           <div 
-            className={`px-4 py-3 text-[15px] leading-relaxed shadow-sm relative ${
+            className={`px-4 py-2.5 text-[15px] leading-relaxed relative ${
               isBot 
-                ? "bg-white text-gray-800 rounded-2xl rounded-tl-sm border border-gray-100" 
-                : `${userBg} text-white rounded-2xl rounded-tr-sm border ${userBorder}`
+                ? "bg-white text-black rounded-[20px] shadow-[0_1px_2px_rgba(0,0,0,0.1)]" 
+                : `${userBg} text-white rounded-[20px] shadow-[0_1px_2px_rgba(0,0,0,0.1)]`
             }`}
           >
             {type === "typing" ? (
@@ -82,8 +81,16 @@ export function MessageBubble({ type, text, timestamp, children, showAvatar = tr
               </>
             )}
             
-            {/* Tailwind tail simulator */}
-            <div className={`absolute top-0 w-3 h-3 ${isBot ? "-left-1.5 bg-white border-l border-t border-gray-100" : `-right-1.5 ${userBg} border-r border-t ${userBorder}`}`} style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)", transform: isBot ? "rotate(0deg)" : "rotate(90deg)", borderTopLeftRadius: isBot ? "2px" : "0", borderTopRightRadius: isBot ? "0" : "2px" }} />
+            {/* Tailwind tail simulator -> SVG iMessage tail */}
+            {isBot ? (
+              <svg viewBox="0 0 42 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 -left-2 w-4 h-4 text-white fill-current">
+                <path d="M41.6 43.5C41.6 43.5 29.8 41.2 21.3 32C12.8 22.8 15.5 0 15.5 0H0C0 0 1.2 24.5 13.5 35.8C25.8 47.1 41.6 43.5 41.6 43.5Z" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 42 44" fill="none" xmlns="http://www.w3.org/2000/svg" className={`absolute bottom-0 -right-2 w-4 h-4 ${userTextTail.replace('text-', 'text-').replace('100', '500')} fill-current`} style={{ transform: "scaleX(-1)", color: theme === "green" ? "#10B981" : "#3B82F6" }}>
+                <path d="M41.6 43.5C41.6 43.5 29.8 41.2 21.3 32C12.8 22.8 15.5 0 15.5 0H0C0 0 1.2 24.5 13.5 35.8C25.8 47.1 41.6 43.5 41.6 43.5Z" />
+              </svg>
+            )}
           </div>
         </div>
       </div>
