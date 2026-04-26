@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -9,15 +10,38 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
-  description:
-    "The Bank of America® Travel Rewards Credit Card for Students is designed for young adventurers looking to make the most of their travel experiences.",
+  title: "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
+  description: "The Bank of America® Travel Rewards Credit Card for Students is designed for young adventurers looking to make the most of their travel experiences.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+  },
+  openGraph: {
+    title: "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
+    description: "The Bank of America® Travel Rewards Credit Card for Students is designed for young adventurers looking to make the most of their travel experiences.",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BankOfAmericaStudentTravelCardBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits for the Bank of America® Travel Rewards Credit Card for Students",
+              description: "The Bank of America® Travel Rewards Credit Card for Students is designed for young adventurers looking to make the most of their travel experiences.",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+              image: "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-travel-rewards-credit-card-for-students.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

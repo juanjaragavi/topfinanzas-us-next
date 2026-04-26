@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits QuickBridge Loans | TopFinanzas US",
-  description:
-    "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+  description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
+  },
+  openGraph: {
+    title: "Benefits QuickBridge Loans | TopFinanzas US",
+    description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BenefitsQuickBridgeLoansPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits QuickBridge Loans | TopFinanzas US",
+              description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
+              image: "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

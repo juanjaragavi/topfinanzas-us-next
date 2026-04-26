@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,15 +11,38 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-  description:
-    "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+  title: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+  description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+  },
+  openGraph: {
+    title: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+    description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BankOfAmericaStudentCardRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+              description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+              image: "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

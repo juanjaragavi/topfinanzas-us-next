@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -9,15 +10,38 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
-  description:
-    "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
+  title: "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
+  description: "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-citi-diamond-preferred-card",
+  },
+  openGraph: {
+    title: "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
+    description: "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-citi-diamond-preferred-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-citi-diamond-preferred-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CitiDiamondPreferredBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits of the Citi® Diamond Preferred® Card: The best choice for balance transfers",
+              description: "Save big with 0% APR for 21 months on balance transfers. The Citi® Diamond Preferred® Card is your go-to tool to manage debt smarter—no annual fee!",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-citi-diamond-preferred-card",
+              image: "https://media.topfinanzas.com/images/benefits-of-the-citi-diamond-preferred-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

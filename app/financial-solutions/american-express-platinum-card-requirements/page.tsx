@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,12 +8,18 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
-  description:
-    "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
-  keywords:
-    "Amex Platinum requirements, American Express Platinum Card, premium credit card eligibility, Amex application",
+  title: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
+  description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
+  },
+  openGraph: {
+    title: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
+    description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+    url: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function RequirementsAmexPlatinumPage() {
@@ -21,6 +28,21 @@ export default function RequirementsAmexPlatinumPage() {
       className="bg-white min-h-screen flex flex-col"
       data-category="credit-cards"
     >
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
+              description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+              url: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
+              image: "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

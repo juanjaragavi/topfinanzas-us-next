@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "The benefits of the Capital One Platinum Secured Credit Card",
-  description:
-    "If you're building or rebuilding your credit, the Capital One Platinum Secured Credit Card is your perfect ally.",
+  description: "If you",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
+  },
+  openGraph: {
+    title: "The benefits of the Capital One Platinum Secured Credit Card",
+    description: "If you",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BenefitsCapitalOnePlatinumSecuredPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "The benefits of the Capital One Platinum Secured Credit Card",
+              description: "If you",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
+              image: "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

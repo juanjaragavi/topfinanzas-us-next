@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -10,13 +11,37 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements for the Discover it Student Cash Back Card",
-  description:
-    "A student's gateway to credit benefits: The Discover it Student Cash Back Card offers unmatched rewards for students looking to establish credit.",
+  description: "A student",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
+  },
+  openGraph: {
+    title: "Requirements for the Discover it Student Cash Back Card",
+    description: "A student",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function RequirementsDiscoverItStudentCashBackPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements for the Discover it Student Cash Back Card",
+              description: "A student",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
+              image: "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

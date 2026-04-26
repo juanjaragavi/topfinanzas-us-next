@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -12,8 +13,17 @@ import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
   title: "Chase Sapphire Preferred Credit Card Benefits",
-  description:
-    "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+  description: "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
+  },
+  openGraph: {
+    title: "Chase Sapphire Preferred Credit Card Benefits",
+    description: "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+    url: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function ChaseSapphirePreferredBenefitsPage() {
@@ -22,6 +32,21 @@ export default function ChaseSapphirePreferredBenefitsPage() {
   return (
     <FinanceOfferwallRuntime quiz={offerwallQuiz}>
       <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Chase Sapphire Preferred Credit Card Benefits",
+              description: "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+              url: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-benefits",
+              image: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
         <Header />
 
         <article className="bg-white py-8 md:py-12">
