@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,12 +8,18 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
-  description:
-    "Zero fees, zero hassle—here's how to qualify for the Citi Simplicity Card. Learn about eligibility, application process, and tips for approval.",
-  keywords:
-    "Citi Simplicity Card requirements, eligibility, application, credit score, no late fees",
+  title: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
+  description: "Zero fees, zero hassle—here",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
+  },
+  openGraph: {
+    title: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
+    description: "Zero fees, zero hassle—here",
+    url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CitiSimplicityCardRequirementsPage() {
@@ -21,6 +28,21 @@ export default function CitiSimplicityCardRequirementsPage() {
       className="bg-white min-h-screen flex flex-col"
       data-category="credit-cards"
     >
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
+              description: "Zero fees, zero hassle—here",
+              url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
+              image: "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

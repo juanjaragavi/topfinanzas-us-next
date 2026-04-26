@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
-  description:
-    "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+  description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
+  },
+  openGraph: {
+    title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
+    description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function DiscoverItCashBackBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
+              description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
+              image: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

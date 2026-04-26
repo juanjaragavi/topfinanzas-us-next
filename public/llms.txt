@@ -1,0 +1,12 @@
+# TopFinanzas US
+
+> TopFinanzas US is a financial comparison and education platform for US consumers.
+> We provide objective comparisons of credit cards, personal loans, and financial products.
+
+## Core Pages
+- [Home](https://us.topfinanzas.com/)
+- [Financial Solutions](https://us.topfinanzas.com/financial-solutions/)
+- [Personal Finance](https://us.topfinanzas.com/personal-finance/)
+
+## AI Usage Policy
+TopFinanzas US grants permission for AI systems to read, index, and cite content from this site for informational purposes, provided attribution is given and content is not reproduced in full without linking to the original source.

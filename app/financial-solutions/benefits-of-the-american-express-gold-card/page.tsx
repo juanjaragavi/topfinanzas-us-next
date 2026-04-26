@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -13,8 +14,17 @@ import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 
 export const metadata: Metadata = {
   title: "Discover the Benefits of the American Express® Gold Card",
-  description:
-    "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+  description: "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-american-express-gold-card",
+  },
+  openGraph: {
+    title: "Discover the Benefits of the American Express® Gold Card",
+    description: "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-american-express-gold-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-american-express-gold-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function AmexGoldBenefitsPage() {
@@ -23,6 +33,21 @@ export default function AmexGoldBenefitsPage() {
   return (
     <>
       <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Discover the Benefits of the American Express® Gold Card",
+              description: "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-american-express-gold-card",
+              image: "https://media.topfinanzas.com/images/benefits-of-the-american-express-gold-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
         <Header />
 
         <article className="bg-white py-8 md:py-12">

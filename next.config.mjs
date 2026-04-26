@@ -151,6 +151,25 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://securepubads.g.doubleclick.net",
+              "img-src 'self' data: https://media.topfinanzas.com https://storage.googleapis.com",
+              "connect-src 'self' https://www.google-analytics.com",
+              "frame-src https://tpc.googlesyndication.com"
+            ].join('; '),
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          }
+        ],
+      },
+      {
         // Apply these headers to all static assets
         source:
           "/((?:fonts|images|media)/.*|favicon.png|apple-touch-icon.png|favicon.ico|site.webmanifest)",

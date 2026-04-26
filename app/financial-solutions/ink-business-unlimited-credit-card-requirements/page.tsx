@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,12 +8,18 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
-  description:
-    "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
-  keywords:
-    "Ink Business Unlimited requirements, Chase business card, eligibility, application, credit score",
+  title: "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+  description: "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-requirements",
+  },
+  openGraph: {
+    title: "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+    description: "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
+    url: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function InkBusinessUnlimitedRequirementsPage() {
@@ -21,6 +28,21 @@ export default function InkBusinessUnlimitedRequirementsPage() {
       className="bg-white min-h-screen flex flex-col"
       data-category="credit-cards"
     >
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+              description: "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
+              url: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-requirements",
+              image: "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

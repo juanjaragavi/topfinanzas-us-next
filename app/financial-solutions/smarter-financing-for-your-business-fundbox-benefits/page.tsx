@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Smarter financing for your business: Fundbox benefits",
-  description:
-    "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+  description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+  },
+  openGraph: {
+    title: "Smarter financing for your business: Fundbox benefits",
+    description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+    url: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function FundboxBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Smarter financing for your business: Fundbox benefits",
+              description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+              url: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+              image: "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

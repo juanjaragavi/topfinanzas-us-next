@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,12 +8,18 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "Wells Fargo Autograph Card Requirements: Complete Guide - TopFinanzas US",
-  description:
-    "Learn about Wells Fargo Autograph Card requirements, eligibility criteria, and how to apply for this popular no-annual-fee rewards card.",
-  keywords:
-    "Wells Fargo Autograph requirements, no annual fee credit card, rewards card eligibility, Wells Fargo application",
+  title: "Wells Fargo Autograph Card Requirements: Complete Guide - TopFinanzas US",
+  description: "Learn about Wells Fargo Autograph Card requirements, eligibility criteria, and how to apply for this popular no-annual-fee rewards card.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-requirements",
+  },
+  openGraph: {
+    title: "Wells Fargo Autograph Card Requirements: Complete Guide - TopFinanzas US",
+    description: "Learn about Wells Fargo Autograph Card requirements, eligibility criteria, and how to apply for this popular no-annual-fee rewards card.",
+    url: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/wells-fargo-autograph-card-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function RequirementsWellsFargoAutographPage() {
@@ -21,6 +28,21 @@ export default function RequirementsWellsFargoAutographPage() {
       className="bg-white min-h-screen flex flex-col"
       data-category="credit-cards"
     >
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Wells Fargo Autograph Card Requirements: Complete Guide - TopFinanzas US",
+              description: "Learn about Wells Fargo Autograph Card requirements, eligibility criteria, and how to apply for this popular no-annual-fee rewards card.",
+              url: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-requirements",
+              image: "https://media.topfinanzas.com/images/wells-fargo-autograph-card-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">
