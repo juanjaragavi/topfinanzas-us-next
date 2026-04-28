@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
@@ -9,15 +10,38 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
-  description:
-    "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+  title: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
+  description: "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card",
+  },
+  openGraph: {
+    title: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
+    description: "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-american-express-gold-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function AmexGoldRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
+              description: "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card",
+              image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-american-express-gold-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

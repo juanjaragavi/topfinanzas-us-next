@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack -p 3040",
     "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
+    "postbuild": "next-sitemap",
     "start": "next start -p 3040",
     "lint": "next lint",
     "format": "prettier --write .",
@@ -52,6 +53,7 @@
     "@types/mdx": "^2.0.13",
     "@types/nodemailer": "^6.4.17",
     "autoprefixer": "^10.4.20",
+    "canvas-confetti": "^1.9.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -80,6 +82,7 @@
     "react-hook-form": "^7.54.1",
     "react-icons": "^5.5.0",
     "react-resizable-panels": "^2.1.7",
+    "react-use-gesture": "^9.1.3",
     "recharts": "2.15.0",
     "sendgrid": "^5.2.3",
     "sharp": "^0.34.1",
@@ -91,11 +94,13 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.16.3",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint-config-next": "15.4.3",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "prettier": "^3.8.1",
     "tailwindcss": "^3.4.17",

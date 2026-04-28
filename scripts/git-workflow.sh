@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export GIT_MERGE_AUTOEDIT=no
 # =============================================================================
 # git-workflow.sh — Automated Git workflow for TopFinanzas US (Next.js on Vercel)
 # =============================================================================

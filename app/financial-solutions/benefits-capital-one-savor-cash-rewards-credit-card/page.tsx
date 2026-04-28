@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -9,15 +10,38 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
-  description:
-    "A card designed for life's tasty moments. Explore the unlimited cash back and travel perks of the Capital One Savor Card.",
+  title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+  description: "A card designed for life",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
+  },
+  openGraph: {
+    title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+    description: "A card designed for life",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CapitalOneSavorBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+              description: "A card designed for life",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
+              image: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

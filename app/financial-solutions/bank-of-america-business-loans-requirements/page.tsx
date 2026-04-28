@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,17 +8,38 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
-  description:
-    "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
-  keywords:
-    "Bank of America business loans requirements, eligibility, application, business financing, credit line",
+  title: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
+  description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
+  },
+  openGraph: {
+    title: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
+    description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+    url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function RequirementsBofABusinessLoansPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col" data-category="loans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
+              description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+              url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
+              image: "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

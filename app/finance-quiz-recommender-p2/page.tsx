@@ -18,14 +18,16 @@ export default function FinanceQuizRecommenderP2Page() {
   return (
     <FinanceChatOfferwall
       botName="Top Finance Assistant"
-      greeting="Hi! I'll help you find top US credit cards."
+      greeting="Let's find the best card for you."
       questions={FINANCE_QUIZ_P2_QUESTIONS}
-      theme="green" // Green theme
-      successMessage="I found some fantastic matches for you!"
+      theme="green"
+      successMessage="I've found great matches for you! I am redirecting you right now..."
       ctaButtonText="Show My Options"
-      ctaSecondaryText="Click to view your top suggestions."
+      ctaSecondaryText="Tap above to see your matches."
       redirectTo={REDIRECT_URL}
       adStepIndex={1} // Inject ad after first question
+      finalAction="auto-redirect"
+      redirectTypingDelayMs={800}
     />
   );
 }

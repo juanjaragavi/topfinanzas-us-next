@@ -1,11 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-User-agent: Mediapartners-Google
-Allow: /api/
+# Host
+Host: https://us.topfinanzas.com
 
-User-agent: Mediapartners-Google*
-Allow: /api/
-
-# Sitemap location
+# Sitemaps
 Sitemap: https://us.topfinanzas.com/sitemap.xml

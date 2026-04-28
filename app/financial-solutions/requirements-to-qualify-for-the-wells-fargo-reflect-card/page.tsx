@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
-  description:
-    "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+  description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
+  },
+  openGraph: {
+    title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
+    description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function WellsFargoReflectRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements to Qualify for the Wells Fargo Reflect® Card",
+              description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
+              image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

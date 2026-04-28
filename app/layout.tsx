@@ -27,6 +27,7 @@ import { MobileMenu } from "@/components/layout/mobile-menu";
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
 import ClientOnly from "@/components/ClientOnly";
+import { generateWebSiteSchema } from "@/lib/seo";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -90,21 +91,20 @@ try {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
   themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  // Updated Title and Description for US focus
-  title: "Top Finance US | Choose wisely, live fully",
+  title: {
+    template: "%s | Top Finance US",
+    default: "Top Finance US | Choose wisely, live fully",
+  },
   description:
     "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
   keywords:
-    "credit cards us, personal loans, compare cards, financial education, Top Finance US", // Updated keywords
-  // Removed generator tag
+    "credit cards us, personal loans, compare cards, financial education, Top Finance US",
 
-  // Added Open Graph Metadata
   openGraph: {
     title: "Top Finance US | Choose wisely, live fully",
     description:
@@ -113,29 +113,24 @@ export const metadata: Metadata = {
     siteName: "Top Finance US",
     images: [
       {
-        url: `https://media.topfinanzas.com/images/placeholder-image.webp`, // Using the provided image URL
-        width: 900, // Assuming standard OG image width
-        height: 600, // Assuming standard OG image height
-        alt: "Top Finance US - Financial Guide", // Updated Alt Text
+        url: `https://media.topfinanzas.com/images/placeholder-image.webp`,
+        width: 1200,
+        height: 630,
+        alt: "Top Finance US - Financial Guide",
       },
     ],
     locale: "en_US",
     type: "website",
   },
 
-  // Added Twitter Card Metadata
   twitter: {
     card: "summary_large_image",
     title: "Top Finance US | Choose wisely, live fully",
     description:
       "Leading financial guide in the US. Expert advice on credit cards, loans, and personal finance.",
-    // siteId: "[Optional Twitter ID]",
-    // creator: "[Optional Twitter Handle]",
-    // creatorId: "[Optional Twitter ID]",
-    images: [`https://media.topfinanzas.com/images/placeholder-image.webp`], // Using the provided image URL
+    images: [`https://media.topfinanzas.com/images/placeholder-image.webp`],
   },
 
-  // Use simplified favicon configuration
   icons: {
     icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
@@ -173,7 +168,10 @@ export default function RootLayout({
           content="public, max-age=31536000, immutable"
         />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preconnect to Analytics Domains for Performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://securepubads.g.doubleclick.net" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Preconnect to media domain to establish early connection */}
         <link
@@ -185,34 +183,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Top Finance US",
-                url: baseUrl,
-                logo: "https://media.topfinanzas.com/images/logo-english.webp", // Assuming english logo exists or using fallback
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "PANAMA, PANAMA CITY",
-                  addressLocality: "AV. AQUILINO DE LA GUARDIA",
-                  postalCode: "OCEAN BUSINESS PLAZA BUILDING, FLOOR 12",
-                  addressCountry: "PA",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+1-800-123-4567", // US Example Placeholder
-                  contactType: "customer support",
-                  email: "info@topfinanzas.com",
-                },
-                sameAs: [
-                  "https://www.linkedin.com/company/top-networks-inc",
-                  "https://www.instagram.com/topfinanzas/",
-                ],
-              },
-              null,
-              2,
-            ),
+            __html: JSON.stringify(generateWebSiteSchema()).replace(/</g, '\\u003c'),
           }}
         />
 

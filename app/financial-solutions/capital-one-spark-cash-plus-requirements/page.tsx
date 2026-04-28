@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -7,10 +8,18 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title:
-    "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
-  description:
-    "Comprehensive guide to Capital One Spark Cash Plus requirements, a charge card designed for high-spending businesses with unlimited 2% cash back.",
+  title: "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
+  description: "Comprehensive guide to Capital One Spark Cash Plus requirements, a charge card designed for high-spending businesses with unlimited 2% cash back.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-requirements",
+  },
+  openGraph: {
+    title: "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
+    description: "Comprehensive guide to Capital One Spark Cash Plus requirements, a charge card designed for high-spending businesses with unlimited 2% cash back.",
+    url: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-requirements",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-requirements.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function RequirementsSparkCashPlusPage() {
@@ -19,6 +28,21 @@ export default function RequirementsSparkCashPlusPage() {
       className="bg-white min-h-screen flex flex-col"
       data-category="credit-cards"
     >
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
+              description: "Comprehensive guide to Capital One Spark Cash Plus requirements, a charge card designed for high-spending businesses with unlimited 2% cash back.",
+              url: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-requirements",
+              image: "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-requirements.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">

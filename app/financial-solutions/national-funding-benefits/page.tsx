@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "National Funding Benefits | TopFinanzas US",
-  description:
-    "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+  description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
+  },
+  openGraph: {
+    title: "National Funding Benefits | TopFinanzas US",
+    description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+    url: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/national-funding-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function NationalFundingBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "National Funding Benefits | TopFinanzas US",
+              description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+              url: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
+              image: "https://media.topfinanzas.com/images/national-funding-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

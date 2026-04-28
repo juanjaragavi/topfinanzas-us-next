@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export interface ButtonBaseProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "3d-blue" | "3d-green";
   showArrow?: boolean;
   fullWidth?: boolean;
   className?: string;
@@ -49,6 +49,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "primary",
         "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
           variant === "secondary",
+        "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
+          variant === "3d-blue",
+        "bg-[#10B981] hover:bg-[#059669] text-white font-bold tracking-wide border-b-4 border-[#047857] shadow-[0_4px_0_0_#047857] active:translate-y-[2px] active:shadow-none active:border-b-2":
+          variant === "3d-green",
         "w-full": fullWidth,
       },
       className,
@@ -89,7 +93,10 @@ export { Button };
 export const buttonVariants = ({
   variant = "primary",
   className,
-}: { variant?: "primary" | "secondary"; className?: string } = {}) => {
+}: {
+  variant?: "primary" | "secondary" | "3d-blue" | "3d-green";
+  className?: string;
+} = {}) => {
   return cn(
     "inline-flex items-center justify-center px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base font-medium transition-all duration-200 rounded-xl whitespace-nowrap font-inter shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]",
     {
@@ -97,6 +104,10 @@ export const buttonVariants = ({
         variant === "primary",
       "bg-white hover:bg-gray-100 text-gray-900 border-gray-300":
         variant === "secondary",
+      "bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide border-b-4 border-blue-800 shadow-[0_4px_0_0_#1e40af] active:translate-y-[2px] active:shadow-none active:border-b-2":
+        variant === "3d-blue",
+      "bg-[#10B981] hover:bg-[#059669] text-white font-bold tracking-wide border-b-4 border-[#047857] shadow-[0_4px_0_0_#047857] active:translate-y-[2px] active:shadow-none active:border-b-2":
+        variant === "3d-green",
     },
     className,
   );

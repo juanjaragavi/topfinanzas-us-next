@@ -1,4 +1,4 @@
-docs(topads): format markdown documentation for improved readability
+docs: add SEO and LLM indexing optimization technical reports
 
-- Fix escaped lists and tables in `public/topads-documentation.md`
-- Ensure correct formatting for data tables
+- Added INFORME_SEO_IA_TOPFINANZAS.md (Spanish version)
+- Added REPORT_SEO_AI_TOPFINANZAS.md (English translation)

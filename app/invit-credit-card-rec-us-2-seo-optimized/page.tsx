@@ -1,0 +1,325 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { TopAdsSquare } from "@/components/ads/topads-placement";
+import FinanceOfferwallDirect from "@/lib/offerwall-for-finance-direct";
+import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
+import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
+
+const BASE_URL = "https://us.topfinanzas.com";
+const PAGE_SLUG = "invit-credit-card-rec-us-2-seo-optimized";
+
+export const metadata: Metadata = {
+  title: "Your Personalized Credit Card Results",
+  description:
+    "See credit cards selected for your financial needs — compare cashback, no annual fee, 0% APR, and no credit check cards with no application required.",
+  alternates: {
+    canonical: `${BASE_URL}/${PAGE_SLUG}`,
+  },
+  openGraph: {
+    title: "Your Personalized Credit Card Results | TopFinanzas US",
+    description:
+      "See credit cards selected for your financial needs — compare cashback, no annual fee, 0% APR, and no credit check cards with no application required.",
+    url: `${BASE_URL}/${PAGE_SLUG}`,
+    type: "website",
+    siteName: "TopFinanzas US",
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/topfinanzas-credit-card-comparison.webp",
+        width: 1200,
+        height: 630,
+        alt: "TopFinanzas US — Personalized Credit Card Results",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Your Personalized Credit Card Results | TopFinanzas US",
+    description:
+      "See credit cards selected for your financial needs — compare cashback, no annual fee, 0% APR, and no credit check cards.",
+    images: [
+      "https://media.topfinanzas.com/images/topfinanzas-credit-card-comparison.webp",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
+
+export default function InvitCreditCardRecUS2SeoOptimizedPage() {
+  return (
+    <>
+      <OfferwallPageShell>
+        <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
+          <Header />
+          <main className="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+            <div className="flex flex-col items-center text-center space-y-8">
+              {/* Hero Title */}
+              <h1 className="text-3xl md:text-4xl font-bold text-[#1A2B3C]">
+                We&apos;ve discovered a few cards that unlock remarkable
+                boundaries for you.
+              </h1>
+
+              {/* Ad Placement - Top */}
+              <TopAdsSquare id="square01" />
+
+              {/* Subtitle */}
+              <div className="space-y-2">
+                <p className="text-gray-600">
+                  Please select the limit option below that aligns with your
+                  daily requirements:
+                </p>
+                <p className="text-sm text-gray-400 uppercase tracking-wide">
+                  By Top Finance
+                </p>
+              </div>
+
+              {/* Card Selection CTA */}
+              <div className="flex flex-col gap-3 w-full max-w-md mx-auto">
+                <Link
+                  href="/financial-solutions/benefits-of-the-discover-it-cash-back"
+                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                >
+                  Up to 2% Cashback Credit Card
+                </Link>
+                <Link
+                  href="/financial-solutions/citi-simplicity-card-benefits"
+                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                >
+                  No annual fee Credit Card
+                </Link>
+                <Link
+                  href="/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card"
+                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                >
+                  No Credit Check Credit Card
+                </Link>
+                <Link
+                  href="/financial-solutions"
+                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                >
+                  MORE OPTIONS
+                </Link>
+              </div>
+
+              {/* Well Done Section */}
+              <div className="border-l-4 border-[#0056b3] bg-gray-50 p-6 text-left w-full max-w-3xl rounded-r-md">
+                <h3 className="text-2xl font-semibold text-[#1A2B3C] mb-3">
+                  Well Done
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Your card is prepared for you. Select the limit option that
+                  suits you best and begin enjoying perks like 0% APR, cashback,
+                  points, and more. If none of these options fits your
+                  preferences, we have additional alternatives available for
+                  your consideration.
+                </p>
+              </div>
+
+              {/* Accept Recommendation CTA */}
+              <Link
+                href="/financial-solutions/wells-fargo-autograph-card-benefits"
+                className="inline-flex items-center justify-center rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-8 text-base font-bold uppercase tracking-wide transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+              >
+                ACCEPT RECOMMENDATION
+              </Link>
+
+              {/* FAQ Accordion */}
+              <div className="w-full text-left max-w-3xl mt-8">
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>
+                      What is a credit card cash back statement credit?
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      It&apos;s a benefit where you receive money back as a
+                      credit on your statement, lowering your overall balance.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger>
+                      How do I choose the right credit card for travel?
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      Consider cards with no foreign fees, travel insurance, and
+                      rewards on airline or hotel purchases.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger>
+                      Can I transfer my credit card balance to another
+                      person&apos;s card?
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      Balance transfers are typically only allowed between cards
+                      under the same account holder.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Stay Tuned Section */}
+              <div className="border-l-4 border-[#0056b3] bg-gray-50 p-6 text-left w-full max-w-3xl rounded-r-md">
+                <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                  Stay Tuned
+                </h4>
+                <p className="text-gray-700 leading-relaxed">
+                  If you&apos;re looking for additional assistance in boosting
+                  your credit score or optimizing your credit card usage while
+                  avoiding banks capitalizing on your situation, please explore
+                  the information below as well. We offer valuable resources
+                  tailored to your specific needs.
+                </p>
+              </div>
+
+              {/* Limited Offer Card */}
+              <div className="bg-white rounded-xl p-6 w-full max-w-xs shadow-md border border-gray-100">
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="relative w-48 h-28">
+                    <Image
+                      src="https://media.topfinanzas.com/images/credit-card-varity.png"
+                      alt="Credit Card Variety"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex items-center space-x-1.5">
+                    <span className="text-lg">🔔</span>
+                    <h3 className="text-base font-bold text-[#EF4444] uppercase">
+                      Limited offer!
+                    </h3>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 uppercase text-center">
+                    CARD WITH NO ANNUAL FEE
+                  </h4>
+                  <p className="text-sm text-gray-700 text-center">
+                    The most requested among our readers! Check it out today...
+                  </p>
+                  <Link
+                    href="/financial-solutions/benefits-of-the-wells-fargo-reflect-card"
+                    className="inline-flex items-center justify-center rounded-2xl transition-all bg-[#3B82F6] hover:bg-[#2563EB] text-white font-bold px-6 py-2.5 text-sm uppercase shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
+                  >
+                    SEE HOW TO APPLY
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </main>
+          <Footer />
+        </div>
+      </OfferwallPageShell>
+      <FinanceOfferwallDirect
+        themeColor="#10B981"
+        loadingMessage="Fetching Credit Card Options 2026"
+        skipAds={false}
+      />
+      <TopAdsQuizIdStamper journeyId="quiz-finance-cc-recommender-02" />
+      {/* JSON-LD: WebPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Your Personalized Credit Card Results",
+            description:
+              "See credit cards selected for your financial needs — compare cashback, no annual fee, 0% APR, and no credit check cards with no application required.",
+            url: "https://us.topfinanzas.com/invit-credit-card-rec-us-2-seo-optimized",
+            isPartOf: {
+              "@type": "WebSite",
+              name: "TopFinanzas US",
+              url: "https://us.topfinanzas.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "TopFinanzas US",
+              url: "https://us.topfinanzas.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://media.topfinanzas.com/images/logo-english.webp",
+              },
+            },
+            inLanguage: "en-US",
+            dateModified: new Date().toISOString().split("T")[0],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
+      {/* JSON-LD: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://us.topfinanzas.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Credit Card Recommender Results",
+                item: "https://us.topfinanzas.com/invit-credit-card-rec-us-2-seo-optimized",
+              },
+            ],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
+      {/* JSON-LD: FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is a credit card cash back statement credit?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It's a benefit where you receive money back as a credit on your statement, lowering your overall balance.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I choose the right credit card for travel?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Consider cards with no foreign fees, travel insurance, and rewards on airline or hotel purchases.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I transfer my credit card balance to another person's card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Balance transfers are typically only allowed between cards under the same account holder.",
+                },
+              },
+            ],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
+    </>
+  );
+}
