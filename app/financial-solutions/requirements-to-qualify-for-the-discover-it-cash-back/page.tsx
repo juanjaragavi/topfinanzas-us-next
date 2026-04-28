@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
@@ -9,13 +10,37 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements to qualify for the Discover it® Cash Back",
-  description:
-    "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+  description: "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-discover-it-cash-back",
+  },
+  openGraph: {
+    title: "Requirements to qualify for the Discover it® Cash Back",
+    description: "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-discover-it-cash-back",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function DiscoverItCashBackRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements to qualify for the Discover it® Cash Back",
+              description: "Qualifying for the Discover it® Cash Back card requires good credit. Learn about the credit score, income, and history requirements.",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-discover-it-cash-back",
+              image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

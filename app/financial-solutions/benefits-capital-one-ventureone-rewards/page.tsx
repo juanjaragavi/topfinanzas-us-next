@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits: VentureOne Rewards from Capital One",
-  description:
-    "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+  description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
+  },
+  openGraph: {
+    title: "Benefits: VentureOne Rewards from Capital One",
+    description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+    url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BenefitsCapitalOneVentureOnePage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Benefits: VentureOne Rewards from Capital One",
+              description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+              url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
+              image: "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

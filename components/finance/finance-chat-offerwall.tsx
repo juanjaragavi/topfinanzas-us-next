@@ -2,8 +2,11 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { useTopAds } from "@/components/analytics/topads-spa-handler";
 import { TopAdsSquare } from "@/components/ads/topads-placement";
+import { ChatContainer } from "@/components/finance/chat/ChatContainer";
+import { MessageBubble } from "@/components/finance/chat/MessageBubble";
 
 export interface ChatQuestion {
   id: string;
@@ -21,6 +24,8 @@ export interface FinanceChatOfferwallProps {
   ctaSecondaryText?: string;
   redirectTo: string;
   adStepIndex?: number;
+  finalAction?: "cta" | "auto-redirect";
+  redirectTypingDelayMs?: number;
 }
 
 interface ChatBubble {
@@ -28,48 +33,52 @@ interface ChatBubble {
   text?: string;
 }
 
+const MAX_OPTIONS_PER_NODE = 3;
+
 export function FinanceChatOfferwall({
   botName = "Assistant",
-  greeting = "Hello! I'm here to help you find the best financial options.",
+  greeting = "Let's find the best options for you.",
   questions,
   theme,
-  successMessage = "I found some great options for you!",
+  successMessage = "Great options found for you!",
   ctaButtonText = "Show My Options",
-  ctaSecondaryText = "To view your suggested options, please click above.",
+  ctaSecondaryText = "Tap above to see your matches.",
   redirectTo,
   adStepIndex = 1,
+  finalAction = "cta",
+  redirectTypingDelayMs = 300,
 }: FinanceChatOfferwallProps) {
   const router = useRouter();
   const { triggerSPA } = useTopAds();
   const [messages, setMessages] = useState<ChatBubble[]>([]);
 
-  const themeClasses = {
-    green: {
-      bg: "bg-[#10B981]",
-      hoverBg: "hover:bg-[#059669]",
-    },
-    blue: {
-      bg: "bg-[#3B82F6]",
-      hoverBg: "hover:bg-[#2563EB]",
-    },
-  };
-
-  const currentTheme = themeClasses[theme] || themeClasses.green;
   const [currentQuestion, setCurrentQuestion] = useState(-1);
   const [isTyping, setIsTyping] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
   const [showCta, setShowCta] = useState(false);
-
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const initRef = useRef(false);
 
   const scrollToBottom = useCallback(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
-  const addBotMessage = useCallback((text: string, delay = 1200) => {
+  const navigateToTarget = useCallback(
+    (target: string) => {
+      const isExternal = /^https?:\/\//i.test(target);
+      if (isExternal) {
+        window.location.href = target;
+        return;
+      }
+      router.push(target);
+    },
+    [router],
+  );
+
+  const addBotMessage = useCallback((text: string, delay = 1000) => {
+    setIsTyping(true);
+    setShowOptions(false);
     return new Promise<void>((resolve) => {
-      setIsTyping(true);
-      setShowOptions(false);
       setTimeout(() => {
         setMessages((prev) => [...prev, { type: "bot", text }]);
         setIsTyping(false);
@@ -79,9 +88,9 @@ export function FinanceChatOfferwall({
   }, []);
 
   const addAdMessage = useCallback((delay = 800) => {
+    setIsTyping(true);
+    setShowOptions(false);
     return new Promise<void>((resolve) => {
-      setIsTyping(true);
-      setShowOptions(false);
       setTimeout(() => {
         setMessages((prev) => [...prev, { type: "ad" }]);
         setIsTyping(false);
@@ -91,13 +100,15 @@ export function FinanceChatOfferwall({
   }, []);
 
   useEffect(() => {
+    if (initRef.current) return;
+    initRef.current = true;
+
     const init = async () => {
-      await new Promise((r) => setTimeout(r, 500)); // Initial thinking gap
-      await addBotMessage(`Hi! I'm ${botName}. ${greeting}`, 1000);
-      await new Promise((r) => setTimeout(r, 600)); // Gap before next message
+      await addBotMessage(`Hi! I'm ${botName}.`, 1100);
+      await addBotMessage(greeting, 1500);
       if (questions.length > 0) {
         setCurrentQuestion(0);
-        await addBotMessage(questions[0].botMessage, 1200);
+        await addBotMessage(questions[0].botMessage, 1700);
         setShowOptions(true);
       }
     };
@@ -116,24 +127,32 @@ export function FinanceChatOfferwall({
 
       const nextIndex = currentQuestion + 1;
 
-      // Inject Ad at specific step
       if (currentQuestion === adStepIndex - 1) {
-        await new Promise((r) => setTimeout(r, 400));
         await addAdMessage(800);
         setTimeout(() => {
           triggerSPA();
         }, 500);
       }
 
-      await new Promise((r) => setTimeout(r, 500)); // Human typing latency
-
       if (nextIndex < questions.length) {
         setCurrentQuestion(nextIndex);
-        await addBotMessage(questions[nextIndex].botMessage, 1200);
+        await addBotMessage(questions[nextIndex].botMessage, 1700);
         setShowOptions(true);
       } else {
         setCurrentQuestion(-1);
-        await addBotMessage(successMessage, 1200);
+        await addBotMessage(successMessage, 1500);
+
+        if (finalAction === "auto-redirect") {
+          setIsTyping(true);
+          await new Promise<void>((resolve) => {
+            setTimeout(() => {
+              resolve();
+            }, redirectTypingDelayMs);
+          });
+          navigateToTarget(redirectTo);
+          return;
+        }
+
         setShowCta(true);
       }
     },
@@ -145,103 +164,130 @@ export function FinanceChatOfferwall({
       successMessage,
       adStepIndex,
       triggerSPA,
+      finalAction,
+      redirectTypingDelayMs,
+      redirectTo,
+      navigateToTarget,
     ],
   );
 
   const handleCta = useCallback(() => {
-    router.push(redirectTo);
-  }, [router, redirectTo]);
+    navigateToTarget(redirectTo);
+  }, [navigateToTarget, redirectTo]);
+
+  const visibleOptions =
+    currentQuestion >= 0
+      ? questions[currentQuestion].options.slice(0, MAX_OPTIONS_PER_NODE)
+      : [];
+  const getCurrentTime = () => {
+    const now = new Date();
+    return now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  };
+
+  const optionGroupId =
+    currentQuestion === 0
+      ? "preguntas-quiz-finanzas-1"
+      : currentQuestion === 1
+        ? "preguntas-quiz-finanzas-2"
+        : undefined;
+  const optionButtonWidthCh =
+    visibleOptions.reduce(
+      (max, option) => Math.max(max, option.label.length),
+      0,
+    ) + 4;
 
   return (
-    <main className="fixed inset-0 z-[9999] bg-[#F8F9FA] sm:bg-gray-100 flex justify-center items-start overflow-hidden">
-      <div className="w-full h-full max-w-md bg-white flex flex-col shadow-2xl relative">
-        {
-          <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-white flex flex-col gap-4">
-            {messages.map((msg, i) => (
-              <div
-                key={i}
-                className={`flex ${msg.type === "user" ? "justify-end" : "justify-start"}`}
-              >
-                {msg.type === "ad" ? (
-                  <div className="w-full max-w-sm mx-auto my-4">
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-2">
-                      <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">
-                        Advertisement
-                      </span>
-                      <TopAdsSquare
-                        id="square01"
-                        className="min-h-[250px] mx-auto"
-                      />
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    className={`max-w-[85%] md:max-w-sm px-4 py-3 text-[15px] leading-relaxed shadow-sm ${
-                      msg.type === "bot"
-                        ? "bg-[#F3F4F6] text-gray-800 rounded-3xl rounded-tl-sm border-none"
-                        : `text-white rounded-3xl rounded-tr-sm ${currentTheme.bg}`
-                    }`}
-                  >
-                    {msg.text}
-                  </div>
-                )}
-              </div>
-            ))}
-
-            {isTyping && (
-              <div className="flex justify-start">
-                <div className="bg-[#F3F4F6] px-4 py-3 rounded-3xl rounded-tl-sm flex gap-1.5 items-center shadow-sm h-10 border-none">
-                  <span
-                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
-                    style={{ animationDelay: "0ms" }}
-                  />
-                  <span
-                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
-                    style={{ animationDelay: "150ms" }}
-                  />
-                  <span
-                    className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
-                    style={{ animationDelay: "300ms" }}
+    <main className="fixed inset-0 z-[9999] bg-black/10 sm:bg-gray-100 flex justify-center items-start overflow-hidden">
+      <ChatContainer>
+        {messages.map((msg, i) => {
+          if (msg.type === "ad") {
+            return (
+              <MessageBubble key={i} type="ad">
+                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-2 w-full max-w-sm">
+                  <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">
+                    Advertisement
+                  </span>
+                  <TopAdsSquare
+                    id="square01"
+                    className="min-h-[250px] mx-auto"
                   />
                 </div>
-              </div>
-            )}
+              </MessageBubble>
+            );
+          }
+          return (
+            <MessageBubble 
+              key={i} 
+              type={msg.type} 
+              text={msg.text} 
+              timestamp={getCurrentTime()}
+              showAvatar={msg.type === "bot" && (i === 0 || messages[i-1]?.type !== "bot")} 
+              theme={theme}
+            />
+          );
+        })}
 
-            {showOptions && currentQuestion >= 0 && (
-              <div className="flex flex-col items-end gap-2 mt-2 w-full">
-                {questions[currentQuestion].options.slice(0, 3).map((opt) => (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    onClick={() => handleAnswer(opt.label)}
-                    className={`self-end text-right w-auto px-5 py-3 text-[15px] font-semibold text-white shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 rounded-3xl rounded-tr-sm max-w-[85%] md:max-w-sm ${currentTheme.bg} ${currentTheme.hoverBg}`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            )}
+        {isTyping && <MessageBubble key="typing-indicator" type="typing" showAvatar={messages.length === 0 || messages[messages.length - 1]?.type !== "bot"} />}
 
-            {showCta && (
-              <div className="mt-4 space-y-3 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
-                <h3 className="font-bold text-gray-900 text-lg mb-2">
-                  Your Results Are Ready
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">{ctaSecondaryText}</p>
-                <button
-                  type="button"
-                  onClick={handleCta}
-                  className="block w-full rounded-2xl bg-[#3B82F6] hover:bg-[#2563EB] text-white py-3 px-6 text-base font-semibold transition-all text-center shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px]"
-                >
-                  {ctaButtonText} →
-                </button>
-              </div>
-            )}
+        {showOptions && currentQuestion >= 0 && (
+          <motion.div
+            key="options-container"
+            layout
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+            id={optionGroupId}
+            className="flex flex-col gap-2 mt-2 items-end w-full max-w-[85%] md:max-w-md ml-auto"
+          >
+            {visibleOptions.map((opt) => (
+              <button
+                key={opt.value}
+                type="button"
+                onClick={() => handleAnswer(opt.label)}
+                style={{
+                  width: `clamp(220px, ${optionButtonWidthCh}ch, 100%)`,
+                }}
+                className={`w-full px-5 py-3 rounded-2xl text-[15px] leading-tight font-semibold text-center transition-all duration-200 text-white shadow-sm hover:-translate-y-0.5 active:translate-y-0 ${
+                  theme === "green" 
+                    ? "bg-[#10B981] border border-emerald-600/25 hover:bg-[#059669]" 
+                    : "bg-[#3B82F6] border border-blue-600/25 hover:bg-[#2563EB]"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </motion.div>
+        )}
 
-            <div ref={chatEndRef} />
-          </div>
-        }
-      </div>
+        {showCta && (
+          <motion.div 
+            key="cta-container" 
+            layout
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+            className="mt-4 w-full"
+          >
+            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
+              <h3 className="font-bold text-gray-900 text-lg mb-2">
+                Results Ready 🎯
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">{ctaSecondaryText}</p>
+              <button
+                type="button"
+                onClick={handleCta}
+                className={`block w-full py-3.5 px-6 rounded-xl text-white font-semibold text-base text-center transition-all shadow-sm hover:-translate-y-0.5 active:translate-y-0 ${
+                  theme === "green" ? "bg-[#10B981] hover:bg-[#059669]" : "bg-[#3B82F6] hover:bg-[#2563EB]"
+                }`}
+              >
+                {ctaButtonText} →
+              </button>
+            </div>
+          </motion.div>
+        )}
+
+        <div ref={chatEndRef} />
+      </ChatContainer>
     </main>
   );
 }

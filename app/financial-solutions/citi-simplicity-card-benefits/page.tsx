@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Citi Simplicity Card Benefits",
-  description:
-    "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+  description: "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-benefits",
+  },
+  openGraph: {
+    title: "Citi Simplicity Card Benefits",
+    description: "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+    url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CitiSimplicityCardBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Citi Simplicity Card Benefits",
+              description: "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+              url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-benefits",
+              image: "https://media.topfinanzas.com/images/citi-simplicity-card-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

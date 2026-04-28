@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Titanium Rewards Visa Signature credit card benefits",
-  description:
-    "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+  description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+  },
+  openGraph: {
+    title: "Titanium Rewards Visa Signature credit card benefits",
+    description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+    url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function BenefitsTitaniumRewardsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Titanium Rewards Visa Signature credit card benefits",
+              description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+              url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+              image: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

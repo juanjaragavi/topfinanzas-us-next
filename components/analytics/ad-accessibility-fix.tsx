@@ -28,6 +28,12 @@ export default function AdAccessibilityFix() {
     // Remove aria-hidden from body if it exists
     const removeAriaHidden = () => {
       if (document.body.hasAttribute("aria-hidden")) {
+        // TopAds may temporarily set aria-hidden while rendering preloader/interstitial.
+        // Do not interfere during that lifecycle or interstitial display can be suppressed.
+        if (document.body.classList.contains("topads-preloader-active")) {
+          return;
+        }
+
         document.body.removeAttribute("aria-hidden");
 
         if (process.env.NODE_ENV === "development") {

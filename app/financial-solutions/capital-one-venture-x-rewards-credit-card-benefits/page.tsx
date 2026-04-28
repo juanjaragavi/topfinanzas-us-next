@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Capital One Venture X Rewards Credit Card Benefits",
-  description:
-    "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+  description: "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",
+  },
+  openGraph: {
+    title: "Capital One Venture X Rewards Credit Card Benefits",
+    description: "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+    url: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-benefits.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CapitalOneVentureXBenefitsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Capital One Venture X Rewards Credit Card Benefits",
+              description: "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+              url: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",
+              image: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-benefits.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import { generateCreditCardSchema } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -10,13 +11,37 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
-  description:
-    "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+  description: "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+  alternates: {
+    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card",
+  },
+  openGraph: {
+    title: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
+    description: "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+    url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card",
+    type: "article",
+    images: [{ url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-citi-diamond-preferred-card.webp", width: 1200, height: 630 }],
+  },
 };
 
 export default function CitiDiamondPreferredRequirementsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col font-sans">
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateCreditCardSchema({
+              name: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
+              description: "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+              url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card",
+              image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-citi-diamond-preferred-card.webp"
+            })
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">

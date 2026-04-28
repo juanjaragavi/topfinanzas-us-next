@@ -69,32 +69,15 @@ export default function InvitCreditCardRecUS5Page() {
 
   return (
     <>
-      {/* Suppress ALL TopAds blocking UI on this quiz-step route */}
-      <style>{`
-        .topads-preloader-active,
-        .topads-preloader,
-        [data-topads-interstitial],
-        [data-topads-overlay] {
-          display: none !important;
-          visibility: hidden !important;
-          opacity: 0 !important;
-          pointer-events: none !important;
-        }
-        body.topads-preloader-active {
-          overflow: auto !important;
-          position: static !important;
-        }
-      `}</style>
-
       <div className="min-h-screen flex flex-col bg-white">
         <Header />
         <HeroBanner />
         <TrustBar />
 
         <main className="flex-grow">
-          <div className="max-w-3xl mx-auto px-4 py-6 md:py-10">
+          <div className="max-w-3xl mx-auto px-4 py-3 md:py-8">
             {/* TopAds ad unit — square03 */}
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-4">
               <AdSlot unitIndex={3} logTag={LOG_TAG} />
             </div>
 
@@ -104,13 +87,13 @@ export default function InvitCreditCardRecUS5Page() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.25 }}
-              className="space-y-5"
+              className="space-y-3"
             >
               <div className="space-y-2">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+                <h2 className="text-[18px] md:text-2xl font-bold leading-[1.2] text-gray-900">
                   {STEP_QUESTION}
                 </h2>
-                <p className="text-sm md:text-base text-gray-500">
+                <p className="text-xs leading-[1.3] md:text-base text-gray-500">
                   {STEP_SUBTITLE}
                 </p>
               </div>
@@ -127,7 +110,7 @@ export default function InvitCreditCardRecUS5Page() {
                 ))}
               </div>
 
-              <p className="text-center text-xs text-gray-400 pt-2">
+              <p className="text-center text-xs text-gray-400 pt-1">
                 Tap an option to continue
               </p>
             </motion.div>

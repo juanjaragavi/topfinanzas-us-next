@@ -207,12 +207,18 @@ export default function TopAdsSPAHandler() {
       if (cancelled) return;
 
       if (ready) {
-        try {
-          logger.info("[TopAds] Triggering SPA navigation");
-          window.topAds!.spa!();
-        } catch (error) {
-          logger.error("[TopAds] Error triggering SPA:", error);
-        }
+        // Delay the SPA trigger slightly to allow React to mount new components (like AdSlot)
+        // and append their ad containers into the DOM. Without this delay, spa() fires before
+        // the new ad slots exist, resulting in empty ads on SPA navigations.
+        setTimeout(() => {
+          if (cancelled) return;
+          try {
+            logger.info("[TopAds] Triggering SPA navigation");
+            window.topAds!.spa!();
+          } catch (error) {
+            logger.error("[TopAds] Error triggering SPA:", error);
+          }
+        }, 150);
       } else {
         logger.warn(
           "[TopAds] topAds.spa() not available after timeout — skipping",
@@ -264,11 +270,27 @@ export default function TopAdsSPAHandler() {
 
 // Custom hook for manual TopAds SPA triggering
 export function useTopAds() {
+  const pathname = usePathname();
+  const canForceManualTopAds =
+    pathname === "/finance-quiz-recommender-p2" ||
+    pathname === "/finance-quiz-recommender-p3";
+
   const triggerSPA = () => {
     try {
+      if (pathname && isTopAdsExcludedPath(pathname) && !canForceManualTopAds) {
+        logger.info("[TopAds] Manual SPA trigger skipped on excluded route", {
+          path: pathname,
+        });
+        return false;
+      }
+
       logger.info(
         "[TopAds] Manual SPA trigger - Re-injecting script for dynamic element",
       );
+
+      if (pathname) {
+        removePathFromCurrentExclusions(pathname);
+      }
 
       // Clear container first to ensure fresh fill
       document.querySelectorAll("[data-topads]").forEach((el) => {
