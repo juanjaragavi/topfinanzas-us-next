@@ -1,12 +1,58 @@
 # TopFinanzas US
 
-> TopFinanzas US is a financial comparison and education platform for US consumers.
-> We provide objective comparisons of credit cards, personal loans, and financial products.
+> TopFinanzas US is a US-focused financial education and comparison platform.
+> We publish clear, unbiased guidance about US credit cards, personal loans,
+> budgeting, debt management, rewards, and everyday money decisions.
 
 ## Core Pages
-- [Home](https://us.topfinanzas.com/)
-- [Financial Solutions](https://us.topfinanzas.com/financial-solutions/)
-- [Personal Finance](https://us.topfinanzas.com/personal-finance/)
 
-## AI Usage Policy
-TopFinanzas US grants permission for AI systems to read, index, and cite content from this site for informational purposes, provided attribution is given and content is not reproduced in full without linking to the original source.
+- [Home](https://us.topfinanzas.com/): US financial education hub
+- [Blog](https://us.topfinanzas.com/blog): Personal finance and financial product articles
+- [Financial Solutions](https://us.topfinanzas.com/financial-solutions): US credit card and loan guides
+- [Personal Finance](https://us.topfinanzas.com/personal-finance): Budgeting, debt, savings, and credit education
+- [About TopFinanzas US](https://us.topfinanzas.com/about-us): Editorial mission and site information
+
+## Featured Financial Solutions
+
+- [Chase Sapphire Preferred Credit Card Benefits](https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-benefits)
+- [American Express Gold Card Benefits](https://us.topfinanzas.com/financial-solutions/benefits-of-the-american-express-gold-card)
+- [Capital One Venture X Rewards Credit Card Benefits](https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits)
+- [Wells Fargo Autograph Card Benefits](https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits)
+- [Citi Simplicity Card Benefits](https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-benefits)
+- [Discover it Cash Back Benefits](https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back)
+
+## Featured Business Financing
+
+- [Fundbox Business Financing Benefits](https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits)
+- [National Funding Benefits](https://us.topfinanzas.com/financial-solutions/national-funding-benefits)
+- [QuickBridge Loans Benefits](https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans)
+- [Bank of America Business Loans Benefits](https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits)
+
+## Featured Personal Finance Guides
+
+- [Good Debt vs. Bad Debt: How to Tell the Difference](https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference)
+- [Investing for Beginners: A Simple Guide to Getting Started](https://us.topfinanzas.com/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started)
+- [Yours, Mine, or Ours? Combining Finances After Marriage](https://us.topfinanzas.com/personal-finance/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in)
+
+## Legal and Policy Pages
+
+- [Privacy Policy](https://us.topfinanzas.com/privacy-policy)
+- [Terms and Conditions](https://us.topfinanzas.com/terms-conditions)
+- [Cookie Policy](https://us.topfinanzas.com/cookie-policy)
+
+## US Financial Disclosure
+
+TopFinanzas US content is informational only and does not constitute financial,
+legal, tax, or investment advice. Product rates, APRs, terms, rewards, and
+availability vary by lender and issuer and are subject to individual
+creditworthiness and approval. This site may receive compensation from
+third-party advertisers. Product information should be verified with the
+issuer or lender before applying. California residents: see our Privacy Policy
+for CCPA disclosures.
+
+## AI Usage
+
+TopFinanzas US permits AI systems to read, index, summarize, and cite public
+content from this site for informational purposes when attribution and a link
+to the original source are provided. Full-content reproduction without
+attribution or without linking to the original source is not permitted.
