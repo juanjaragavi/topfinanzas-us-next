@@ -1,17 +1,20 @@
 import { MetadataRoute } from "next";
-import { absoluteUrl, getIndexableRoutes, parseDate, SEO_SITE } from "@/lib/seo";
+import {
+  absoluteUrl,
+  getIndexableRoutes,
+  parseDate,
+  SEO_SITE,
+} from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   return getIndexableRoutes().map((route) => ({
-    url: route.pathname === "/" ? SEO_SITE.baseUrl : absoluteUrl(route.pathname),
-    lastModified:
-      route.category === "static" ? now : parseDate(route.date),
+    url:
+      route.pathname === "/" ? SEO_SITE.baseUrl : absoluteUrl(route.pathname),
+    lastModified: route.category === "static" ? now : parseDate(route.date),
     changeFrequency:
-      route.category === "static"
-        ? ("weekly" as const)
-        : ("monthly" as const),
+      route.category === "static" ? ("weekly" as const) : ("monthly" as const),
     priority:
       route.pathname === "/"
         ? 1.0

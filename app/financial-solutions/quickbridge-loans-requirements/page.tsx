@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
-  description: "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
+  title:
+    "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
+  description:
+    "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/quickbridge-loans-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/quickbridge-loans-requirements",
   },
   openGraph: {
-    title: "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
-    description: "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
+    title:
+      "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
+    description:
+      "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
     url: "https://us.topfinanzas.com/financial-solutions/quickbridge-loans-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -32,11 +43,13 @@ export default function RequirementsQuickBridgeLoansPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
-              description: "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
+              description:
+                "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
               url: "https://us.topfinanzas.com/financial-solutions/quickbridge-loans-requirements",
-              image: "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/quickbridge-loans-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

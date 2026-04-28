@@ -51,7 +51,8 @@ function titleFromSlug(pathname: string) {
 }
 
 function inferCategory(pathname: string): RouteSeoEntry["category"] {
-  if (pathname.startsWith("/financial-solutions/")) return "financial-solutions";
+  if (pathname.startsWith("/financial-solutions/"))
+    return "financial-solutions";
   if (pathname.startsWith("/personal-finance/")) return "personal-finance";
   return "static";
 }

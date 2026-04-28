@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
-  description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+  title:
+    "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
+  description:
+    "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
   },
   openGraph: {
-    title: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
-    description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+    title:
+      "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
+    description:
+      "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
     url: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -35,11 +46,13 @@ export default function RequirementsAmexPlatinumPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
-              description: "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+              description:
+                "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
               url: "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",
-              image: "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/american-express-platinum-card-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

@@ -10,16 +10,25 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements for the Capital One Savor Cash Rewards Credit Card",
-  description: "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
+  description:
+    "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card",
   },
   openGraph: {
     title: "Requirements for the Capital One Savor Cash Rewards Credit Card",
-    description: "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
+    description:
+      "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -33,11 +42,13 @@ export default function CapitalOneSavorRequirementsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements for the Capital One Savor Cash Rewards Credit Card",
-              description: "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
+              description:
+                "The Capital One Savor Card is targeted at individuals with excellent credit. Learn about the requirements, eligibility factors, and how to apply.",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card",
-              image: "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-for-the-capital-one-savor-cash-rewards-credit-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

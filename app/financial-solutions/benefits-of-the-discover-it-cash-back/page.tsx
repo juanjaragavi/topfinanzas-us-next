@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
-  description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+  description:
+    "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
   },
   openGraph: {
     title: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
-    description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+    description:
+      "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function DiscoverItCashBackBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Benefits of the Discover it® Cash Back: Smart rewards and savings",
-              description: "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
+              description:
+                "The Discover it® Cash Back offers flexible rewards, 5% cash back in rotating categories, and no annual fee. Learn why it might be the perfect tool for you.",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-cash-back",
-              image: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

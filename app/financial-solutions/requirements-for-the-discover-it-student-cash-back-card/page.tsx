@@ -13,14 +13,21 @@ export const metadata: Metadata = {
   title: "Requirements for the Discover it Student Cash Back Card",
   description: "A student",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
   },
   openGraph: {
     title: "Requirements for the Discover it Student Cash Back Card",
     description: "A student",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -36,9 +43,10 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
               name: "Requirements for the Discover it Student Cash Back Card",
               description: "A student",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
-              image: "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

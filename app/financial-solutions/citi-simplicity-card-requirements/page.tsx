@@ -8,17 +8,26 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
+  title:
+    "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
   description: "Zero fees, zero hassle—here",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
   },
   openGraph: {
-    title: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
+    title:
+      "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
     description: "Zero fees, zero hassle—here",
     url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -37,9 +46,10 @@ export default function CitiSimplicityCardRequirementsPage() {
               name: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
               description: "Zero fees, zero hassle—here",
               url: "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",
-              image: "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

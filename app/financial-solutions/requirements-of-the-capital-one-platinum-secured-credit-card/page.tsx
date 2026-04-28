@@ -11,16 +11,25 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements of the Capital One Platinum Secured Credit Card",
-  description: "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
+  description:
+    "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card",
   },
   openGraph: {
     title: "Requirements of the Capital One Platinum Secured Credit Card",
-    description: "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
+    description:
+      "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-of-the-capital-one-platinum-secured-credit-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-of-the-capital-one-platinum-secured-credit-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function RequirementsCapitalOnePlatinumSecuredPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements of the Capital One Platinum Secured Credit Card",
-              description: "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
+              description:
+                "A secured option to build credit effortlessly: The Capital One Platinum Secured Credit Card is designed for those starting their credit journey.",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-of-the-capital-one-platinum-secured-credit-card",
-              image: "https://media.topfinanzas.com/images/requirements-of-the-capital-one-platinum-secured-credit-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-of-the-capital-one-platinum-secured-credit-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

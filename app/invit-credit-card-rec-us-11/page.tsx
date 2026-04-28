@@ -69,7 +69,9 @@ export default function InvitCreditCardRecUS11Page() {
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
       advanceTimerRef.current = setTimeout(() => {
         window.scrollTo(0, 0);
-        router.push("/financial-solutions/benefits-of-the-discover-it-cash-back");
+        router.push(
+          "/financial-solutions/benefits-of-the-discover-it-cash-back",
+        );
       }, 500);
     },
     [router, trackInteraction],

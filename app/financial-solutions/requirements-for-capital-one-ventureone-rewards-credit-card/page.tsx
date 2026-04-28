@@ -11,16 +11,25 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements for Capital One VentureOne Rewards Credit Card",
-  description: "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
+  description:
+    "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-capital-one-ventureone-rewards-credit-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-for-capital-one-ventureone-rewards-credit-card",
   },
   openGraph: {
     title: "Requirements for Capital One VentureOne Rewards Credit Card",
-    description: "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
+    description:
+      "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-for-capital-one-ventureone-rewards-credit-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function CapitalOneVentureOneRequirementsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements for Capital One VentureOne Rewards Credit Card",
-              description: "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
+              description:
+                "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-for-capital-one-ventureone-rewards-credit-card",
-              image: "https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-for-capital-one-ventureone-rewards-credit-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

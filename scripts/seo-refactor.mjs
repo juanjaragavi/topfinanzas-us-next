@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-const searchDir = path.join(process.cwd(), 'app', 'financial-solutions');
+const searchDir = path.join(process.cwd(), "app", "financial-solutions");
 
 function processFile(filePath, slug) {
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
 
   // Extract current Title and Description
   const titleMatch = content.match(/title:\s*['"](.*?)['"]/);
@@ -34,10 +34,10 @@ function processFile(filePath, slug) {
   content = content.replace(metadataRegex, newMetadata);
 
   // 2. Inject JSON-LD Schema using lib/seo
-  if (!content.includes('import { generateCreditCardSchema }')) {
+  if (!content.includes("import { generateCreditCardSchema }")) {
     content = content.replace(
       'import { Metadata } from "next";',
-      `import { Metadata } from "next";\nimport { generateCreditCardSchema } from "@/lib/seo";`
+      `import { Metadata } from "next";\nimport { generateCreditCardSchema } from "@/lib/seo";`,
     );
   }
 
@@ -61,13 +61,13 @@ function processFile(filePath, slug) {
   const mainRegex = /(<main[^>]*>|<article[^>]*>)/;
   content = content.replace(mainRegex, `$1${schemaScript}`);
 
-  fs.writeFileSync(filePath, content, 'utf8');
+  fs.writeFileSync(filePath, content, "utf8");
   console.log(`✅ SEO Injected: ${slug}`);
 }
 
 const folders = fs.readdirSync(searchDir);
-folders.forEach(folder => {
-  if (folder === '[slug]' || folder.includes('.')) return;
-  const filePath = path.join(searchDir, folder, 'page.tsx');
+folders.forEach((folder) => {
+  if (folder === "[slug]" || folder.includes(".")) return;
+  const filePath = path.join(searchDir, folder, "page.tsx");
   if (fs.existsSync(filePath)) processFile(filePath, folder);
 });

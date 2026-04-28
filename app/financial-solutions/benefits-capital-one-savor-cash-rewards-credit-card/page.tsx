@@ -10,17 +10,26 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+  title:
+    "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
   description: "A card designed for life",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
   },
   openGraph: {
-    title: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
+    title:
+      "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
     description: "A card designed for life",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -36,9 +45,10 @@ export default function CapitalOneSavorBenefitsPage() {
               name: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
               description: "A card designed for life",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
-              image: "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

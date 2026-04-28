@@ -11,16 +11,25 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Titanium Rewards Visa Signature credit card benefits",
-  description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+  description:
+    "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
   },
   openGraph: {
     title: "Titanium Rewards Visa Signature credit card benefits",
-    description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+    description:
+      "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
     url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function BenefitsTitaniumRewardsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Titanium Rewards Visa Signature credit card benefits",
-              description: "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+              description:
+                "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
               url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
-              image: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

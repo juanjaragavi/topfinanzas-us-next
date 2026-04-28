@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits QuickBridge Loans | TopFinanzas US",
-  description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+  description:
+    "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
   },
   openGraph: {
     title: "Benefits QuickBridge Loans | TopFinanzas US",
-    description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+    description:
+      "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function BenefitsQuickBridgeLoansPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Benefits QuickBridge Loans | TopFinanzas US",
-              description: "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+              description:
+                "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",
-              image: "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-quickbridge-loans.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Capital One Spark Cash Plus Benefits",
-  description: "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
+  description:
+    "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-benefits",
   },
   openGraph: {
     title: "Capital One Spark Cash Plus Benefits",
-    description: "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
+    description:
+      "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
     url: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Capital One Spark Cash Plus Benefits",
-              description: "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
+              description:
+                "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
               url: "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-benefits",
-              image: "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

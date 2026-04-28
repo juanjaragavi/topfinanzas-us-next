@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   },
   other: {
     // LLM-Indexing Control
-    "robots": "noai, noimageai, indexifembedded"
-  }
+    robots: "noai, noimageai, indexifembedded",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

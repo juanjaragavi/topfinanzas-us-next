@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits of the Discover it Student Cash Back Card",
-  description: "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
+  description:
+    "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-student-cash-back-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-student-cash-back-card",
   },
   openGraph: {
     title: "Benefits of the Discover it Student Cash Back Card",
-    description: "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
+    description:
+      "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-student-cash-back-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function BenefitsDiscoverItStudentCashBackPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Benefits of the Discover it Student Cash Back Card",
-              description: "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
+              description:
+                "The Discover it Student Cash Back Card is tailor-made for students who want to build credit and earn rewards simultaneously. Packed with features, it",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-discover-it-student-cash-back-card",
-              image: "https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-of-the-discover-it-student-cash-back-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

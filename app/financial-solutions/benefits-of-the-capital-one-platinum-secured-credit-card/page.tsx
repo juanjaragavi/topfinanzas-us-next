@@ -13,14 +13,21 @@ export const metadata: Metadata = {
   title: "The benefits of the Capital One Platinum Secured Credit Card",
   description: "If you",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
   },
   openGraph: {
     title: "The benefits of the Capital One Platinum Secured Credit Card",
     description: "If you",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -36,9 +43,10 @@ export default function BenefitsCapitalOnePlatinumSecuredPage() {
               name: "The benefits of the Capital One Platinum Secured Credit Card",
               description: "If you",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",
-              image: "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-of-the-capital-one-platinum-secured-credit-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

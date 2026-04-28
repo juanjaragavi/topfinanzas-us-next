@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
-  description: "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
+  title:
+    "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
+  description:
+    "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-requirements",
   },
   openGraph: {
-    title: "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
-    description: "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
+    title:
+      "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
+    description:
+      "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
     url: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -35,11 +46,13 @@ export default function RequirementsChaseSapphirePreferredPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
-              description: "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
+              description:
+                "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
               url: "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-requirements",
-              image: "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

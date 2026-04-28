@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Smarter financing for your business: Fundbox benefits",
-  description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+  description:
+    "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
   },
   openGraph: {
     title: "Smarter financing for your business: Fundbox benefits",
-    description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+    description:
+      "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
     url: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function FundboxBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Smarter financing for your business: Fundbox benefits",
-              description: "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+              description:
+                "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
               url: "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
-              image: "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

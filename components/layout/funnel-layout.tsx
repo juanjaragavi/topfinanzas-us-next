@@ -1,13 +1,17 @@
-import React from 'react';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
-import { HeroBanner, TrustBar, AdSlot } from '@/components/steps/credit-card-rec-shared';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import {
+  HeroBanner,
+  TrustBar,
+  AdSlot,
+} from "@/components/steps/credit-card-rec-shared";
+import { motion } from "framer-motion";
 
 interface FunnelLayoutProps {
   progress: number;
   title: string;
-  'aria-label'?: string;
+  "aria-label"?: string;
   unitIndex?: number;
   logTag?: string;
   children: React.ReactNode;
@@ -15,7 +19,7 @@ interface FunnelLayoutProps {
 
 export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
   title,
-  'aria-label': ariaLabel,
+  "aria-label": ariaLabel,
   unitIndex = 1,
   logTag = "CC-FUNNEL",
   children,
@@ -32,7 +36,7 @@ export const CreditCardFunnelLayout: React.FC<FunnelLayoutProps> = ({
           <div className="flex justify-center mb-6 min-h-[250px]">
             <AdSlot unitIndex={unitIndex} logTag={logTag} />
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

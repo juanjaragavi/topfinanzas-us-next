@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
-  description: "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
+  title:
+    "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
+  description:
+    "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",
   },
   openGraph: {
-    title: "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
-    description: "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
+    title:
+      "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
+    description:
+      "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
     url: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -35,11 +46,13 @@ export default function RequirementsCapitalOneVentureXPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
-              description: "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
+              description:
+                "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
               url: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",
-              image: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

@@ -1,4 +1,7 @@
-export type RouteCategory = "static" | "financial-solutions" | "personal-finance";
+export type RouteCategory =
+  | "static"
+  | "financial-solutions"
+  | "personal-finance";
 export type RouteContentType =
   | "webpage"
   | "collection"
@@ -238,8 +241,7 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
     {
       pathname:
         "/financial-solutions/requirements-for-the-capital-one-savor-cash-rewards-credit-card",
-      title:
-        "Requirements for the Capital One Savor Cash Rewards Credit Card",
+      title: "Requirements for the Capital One Savor Cash Rewards Credit Card",
       description:
         "Learn about the eligibility criteria and application requirements for the Capital One Savor Cash Rewards Credit Card.",
       image:
@@ -547,19 +549,18 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
   },
 
   // ─── Financial Solutions: Titanium Rewards ────────────────────────────────
-  "/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits":
-    {
-      pathname:
-        "/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
-      title: "Titanium Rewards Visa Signature Credit Card Benefits",
-      description:
-        "Explore the premium rewards, travel benefits, and Visa Signature perks of the Titanium Rewards Visa Signature Credit Card.",
-      image:
-        "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
-      category: "financial-solutions",
-      contentType: "credit-card",
-      date: "2025-10-28T00:00:00Z",
-    },
+  "/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits": {
+    pathname:
+      "/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+    title: "Titanium Rewards Visa Signature Credit Card Benefits",
+    description:
+      "Explore the premium rewards, travel benefits, and Visa Signature perks of the Titanium Rewards Visa Signature Credit Card.",
+    image:
+      "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
+    category: "financial-solutions",
+    contentType: "credit-card",
+    date: "2025-10-28T00:00:00Z",
+  },
   "/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements":
     {
       pathname:
@@ -575,19 +576,18 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
     },
 
   // ─── Financial Solutions: Business Loans ─────────────────────────────────
-  "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits":
-    {
-      pathname:
-        "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
-      title: "Smarter Financing for Your Business: Fundbox Benefits",
-      description:
-        "Discover how Fundbox provides flexible revolving lines of credit and term loans for small businesses with fast approvals and transparent fees.",
-      image:
-        "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
-      category: "financial-solutions",
-      contentType: "loan",
-      date: "2025-10-28T00:00:00Z",
-    },
+  "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits": {
+    pathname:
+      "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+    title: "Smarter Financing for Your Business: Fundbox Benefits",
+    description:
+      "Discover how Fundbox provides flexible revolving lines of credit and term loans for small businesses with fast approvals and transparent fees.",
+    image:
+      "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
+    category: "financial-solutions",
+    contentType: "loan",
+    date: "2025-10-28T00:00:00Z",
+  },
   "/financial-solutions/fundbox-loan-requirements": {
     pathname: "/financial-solutions/fundbox-loan-requirements",
     title: "Fundbox Loan Requirements: Small Business Financing Guide",

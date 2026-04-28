@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Benefits: VentureOne Rewards from Capital One",
-  description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+  description:
+    "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
   },
   openGraph: {
     title: "Benefits: VentureOne Rewards from Capital One",
-    description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+    description:
+      "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function BenefitsCapitalOneVentureOnePage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Benefits: VentureOne Rewards from Capital One",
-              description: "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+              description:
+                "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",
-              image: "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-capital-one-ventureone-rewards.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

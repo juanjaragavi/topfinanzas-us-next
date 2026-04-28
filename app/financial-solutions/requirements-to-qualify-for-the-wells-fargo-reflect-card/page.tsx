@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
-  description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+  description:
+    "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
   },
   openGraph: {
     title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
-    description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+    description:
+      "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function WellsFargoReflectRequirementsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements to Qualify for the Wells Fargo Reflect® Card",
-              description: "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+              description:
+                "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
-              image: "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

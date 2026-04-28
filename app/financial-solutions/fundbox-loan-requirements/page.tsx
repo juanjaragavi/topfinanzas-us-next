@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
-  description: "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
+  title:
+    "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
+  description:
+    "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/fundbox-loan-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/fundbox-loan-requirements",
   },
   openGraph: {
-    title: "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
-    description: "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
+    title:
+      "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
+    description:
+      "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
     url: "https://us.topfinanzas.com/financial-solutions/fundbox-loan-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -32,11 +43,13 @@ export default function RequirementsFundboxLoanPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
-              description: "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
+              description:
+                "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
               url: "https://us.topfinanzas.com/financial-solutions/fundbox-loan-requirements",
-              image: "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/fundbox-loan-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

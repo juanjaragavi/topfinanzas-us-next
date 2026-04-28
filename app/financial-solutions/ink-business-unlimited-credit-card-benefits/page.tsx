@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Ink Business Unlimited Credit Card Benefits",
-  description: "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
+  description:
+    "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-benefits",
   },
   openGraph: {
     title: "Ink Business Unlimited Credit Card Benefits",
-    description: "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
+    description:
+      "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
     url: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function InkBusinessUnlimitedBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Ink Business Unlimited Credit Card Benefits",
-              description: "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
+              description:
+                "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
               url: "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-benefits",
-              image: "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/ink-business-unlimited-credit-card-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

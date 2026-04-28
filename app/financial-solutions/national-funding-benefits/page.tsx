@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "National Funding Benefits | TopFinanzas US",
-  description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+  description:
+    "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
   },
   openGraph: {
     title: "National Funding Benefits | TopFinanzas US",
-    description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+    description:
+      "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
     url: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/national-funding-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/national-funding-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function NationalFundingBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "National Funding Benefits | TopFinanzas US",
-              description: "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+              description:
+                "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
               url: "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",
-              image: "https://media.topfinanzas.com/images/national-funding-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/national-funding-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

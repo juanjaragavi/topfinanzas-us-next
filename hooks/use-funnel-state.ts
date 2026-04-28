@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface FunnelState {
-  creditStatus?: 'excellent' | 'good' | 'average';
-  primaryGoal?: 'cash' | 'travel' | 'low_rate';
+  creditStatus?: "excellent" | "good" | "average";
+  primaryGoal?: "cash" | "travel" | "low_rate";
   progress?: number;
 }
 
-const STORAGE_KEY = 'tf_cc_funnel_state';
+const STORAGE_KEY = "tf_cc_funnel_state";
 
 export function useCreditCardFunnel() {
   const [funnelState, setFunnelState] = useState<FunnelState>({});
@@ -18,7 +18,7 @@ export function useCreditCardFunnel() {
         setFunnelState(JSON.parse(stored));
       }
     } catch (e) {
-      console.warn('Failed to load funnel state', e);
+      console.warn("Failed to load funnel state", e);
     }
   }, []);
 
@@ -28,7 +28,7 @@ export function useCreditCardFunnel() {
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
       } catch (e) {
-        console.warn('Failed to save funnel state', e);
+        console.warn("Failed to save funnel state", e);
       }
       return updated;
     });
@@ -39,7 +39,7 @@ export function useCreditCardFunnel() {
     try {
       localStorage.removeItem(STORAGE_KEY);
     } catch (e) {
-      console.warn('Failed to remove funnel state', e);
+      console.warn("Failed to remove funnel state", e);
     }
   };
 

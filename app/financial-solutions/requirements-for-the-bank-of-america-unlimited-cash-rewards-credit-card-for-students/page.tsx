@@ -11,17 +11,28 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-  description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+  title:
+    "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+  description:
+    "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
   },
   openGraph: {
-    title: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-    description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+    title:
+      "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+    description:
+      "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -35,11 +46,13 @@ export default function BankOfAmericaStudentCardRequirementsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-              description: "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
+              description:
+                "A complete guide to meeting application requirements for U.S.-based students looking to build credit responsibly with Bank of America.",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
-              image: "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Wells Fargo Autograph Card benefits: Maximize your rewards",
-  description: "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
+  description:
+    "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits",
   },
   openGraph: {
     title: "Wells Fargo Autograph Card benefits: Maximize your rewards",
-    description: "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
+    description:
+      "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
     url: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function WellsFargoAutographBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Wells Fargo Autograph Card benefits: Maximize your rewards",
-              description: "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
+              description:
+                "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
               url: "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits",
-              image: "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

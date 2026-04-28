@@ -165,7 +165,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
+                compact
+                  ? "text-[11px] md:text-[21px]"
+                  : "text-[12px] md:text-[21px]",
               )}
             >
               847K+
@@ -173,7 +175,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
+                compact
+                  ? "text-[6px] md:text-[8px]"
+                  : "text-[7px] md:text-[8px]",
               )}
             >
               Users Matched
@@ -183,7 +187,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
+                compact
+                  ? "text-[11px] md:text-[21px]"
+                  : "text-[12px] md:text-[21px]",
               )}
             >
               4.8/5
@@ -191,7 +197,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
+                compact
+                  ? "text-[6px] md:text-[8px]"
+                  : "text-[7px] md:text-[8px]",
               )}
             >
               Avg Rating
@@ -201,7 +209,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "font-bold leading-none text-white",
-                compact ? "text-[11px] md:text-[21px]" : "text-[12px] md:text-[21px]",
+                compact
+                  ? "text-[11px] md:text-[21px]"
+                  : "text-[12px] md:text-[21px]",
               )}
             >
               50+
@@ -209,7 +219,9 @@ export function HeroBanner({ compact = false }: { compact?: boolean }) {
             <p
               className={cn(
                 "uppercase tracking-wider text-emerald-200",
-                compact ? "text-[6px] md:text-[8px]" : "text-[7px] md:text-[8px]",
+                compact
+                  ? "text-[6px] md:text-[8px]"
+                  : "text-[7px] md:text-[8px]",
               )}
             >
               Cards Analyzed

@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
-  description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+  title:
+    "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
+  description:
+    "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
   },
   openGraph: {
-    title: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
-    description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+    title:
+      "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
+    description:
+      "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
     url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -32,11 +43,13 @@ export default function RequirementsBofABusinessLoansPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
-              description: "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+              description:
+                "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
               url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",
-              image: "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

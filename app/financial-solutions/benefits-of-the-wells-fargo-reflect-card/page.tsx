@@ -12,17 +12,28 @@ import JobsOfferwallDirect from "@/lib/offerwall-for-jobs-direct";
 import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 
 export const metadata: Metadata = {
-  title: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
-  description: "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
+  title:
+    "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
+  description:
+    "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-wells-fargo-reflect-card",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-of-the-wells-fargo-reflect-card",
   },
   openGraph: {
-    title: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
-    description: "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
+    title:
+      "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
+    description:
+      "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-wells-fargo-reflect-card",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -30,20 +41,22 @@ export default function WellsFargoReflectBenefitsPage() {
   return (
     <>
       <main className="bg-white min-h-screen flex flex-col font-sans">
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            generateCreditCardSchema({
-              name: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
-              description: "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
-              url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-wells-fargo-reflect-card",
-              image: "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp"
-            })
-          ).replace(/</g, '\u003c'),
-        }}
-      />
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              generateCreditCardSchema({
+                name: "Benefits of the Wells Fargo Reflect® Card: Maximize your savings on interest",
+                description:
+                  "Save big with 0% APR for 21 months on purchases and balance transfers. The Wells Fargo Reflect® Card makes managing debt simple and cost-effective—no annual fee required!",
+                url: "https://us.topfinanzas.com/financial-solutions/benefits-of-the-wells-fargo-reflect-card",
+                image:
+                  "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
+              }),
+            ).replace(/</g, "\u003c"),
+          }}
+        />
 
         <Header />
 

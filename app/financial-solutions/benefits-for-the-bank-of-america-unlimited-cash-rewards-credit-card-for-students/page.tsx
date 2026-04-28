@@ -10,17 +10,28 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-  description: "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
+  title:
+    "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+  description:
+    "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
   },
   openGraph: {
-    title: "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-    description: "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
+    title:
+      "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
+    description:
+      "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
     url: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +45,13 @@ export default function BankOfAmericaStudentCardBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Benefits for the Bank of America® Unlimited Cash Rewards Credit Card for Students",
-              description: "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
+              description:
+                "The Bank of America® Unlimited Cash Rewards Credit Card for Students is the ultimate tool for those looking to earn while they spend.",
               url: "https://us.topfinanzas.com/financial-solutions/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students",
-              image: "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/benefits-for-the-bank-of-america-unlimited-cash-rewards-credit-card-for-students.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

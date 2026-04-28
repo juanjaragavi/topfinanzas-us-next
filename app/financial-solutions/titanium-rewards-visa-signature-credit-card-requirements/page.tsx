@@ -8,17 +8,28 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export const metadata: Metadata = {
-  title: "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
-  description: "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
+  title:
+    "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+  description:
+    "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements",
   },
   openGraph: {
-    title: "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
-    description: "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
+    title:
+      "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
+    description:
+      "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
     url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -35,11 +46,13 @@ export default function RequirementsTitaniumRewardsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
-              description: "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
+              description:
+                "The Titanium Rewards Visa Signature Card by Andrews Federal Credit Union offers exceptional rewards on everyday spending categories.",
               url: "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements",
-              image: "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

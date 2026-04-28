@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Bank of America Business Loan Benefits | TopFinanzas US",
-  description: "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+  description:
+    "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits",
   },
   openGraph: {
     title: "Bank of America Business Loan Benefits | TopFinanzas US",
-    description: "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+    description:
+      "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
     url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function BankOfAmericaBenefitsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Bank of America Business Loan Benefits | TopFinanzas US",
-              description: "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+              description:
+                "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
               url: "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits",
-              image: "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

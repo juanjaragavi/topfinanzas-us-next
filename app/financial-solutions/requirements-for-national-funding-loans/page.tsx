@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Requirements for National Funding Loans | TopFinanzas US",
-  description: "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+  description:
+    "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
   alternates: {
-    canonical: "https://us.topfinanzas.com/financial-solutions/requirements-for-national-funding-loans",
+    canonical:
+      "https://us.topfinanzas.com/financial-solutions/requirements-for-national-funding-loans",
   },
   openGraph: {
     title: "Requirements for National Funding Loans | TopFinanzas US",
-    description: "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+    description:
+      "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
     url: "https://us.topfinanzas.com/financial-solutions/requirements-for-national-funding-loans",
     type: "article",
-    images: [{ url: "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -34,11 +43,13 @@ export default function NationalFundingRequirementsPage() {
           __html: JSON.stringify(
             generateCreditCardSchema({
               name: "Requirements for National Funding Loans | TopFinanzas US",
-              description: "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+              description:
+                "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
               url: "https://us.topfinanzas.com/financial-solutions/requirements-for-national-funding-loans",
-              image: "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp"
-            })
-          ).replace(/</g, '\u003c'),
+              image:
+                "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
+            }),
+          ).replace(/</g, "\u003c"),
         }}
       />
 

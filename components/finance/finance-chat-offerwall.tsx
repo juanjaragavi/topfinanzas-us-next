@@ -216,18 +216,30 @@ export function FinanceChatOfferwall({
             );
           }
           return (
-            <MessageBubble 
-              key={i} 
-              type={msg.type} 
-              text={msg.text} 
+            <MessageBubble
+              key={i}
+              type={msg.type}
+              text={msg.text}
               timestamp={getCurrentTime()}
-              showAvatar={msg.type === "bot" && (i === 0 || messages[i-1]?.type !== "bot")} 
+              showAvatar={
+                msg.type === "bot" &&
+                (i === 0 || messages[i - 1]?.type !== "bot")
+              }
               theme={theme}
             />
           );
         })}
 
-        {isTyping && <MessageBubble key="typing-indicator" type="typing" showAvatar={messages.length === 0 || messages[messages.length - 1]?.type !== "bot"} />}
+        {isTyping && (
+          <MessageBubble
+            key="typing-indicator"
+            type="typing"
+            showAvatar={
+              messages.length === 0 ||
+              messages[messages.length - 1]?.type !== "bot"
+            }
+          />
+        )}
 
         {showOptions && currentQuestion >= 0 && (
           <motion.div
@@ -248,8 +260,8 @@ export function FinanceChatOfferwall({
                   width: `clamp(220px, ${optionButtonWidthCh}ch, 100%)`,
                 }}
                 className={`w-full px-5 py-3 rounded-2xl text-[15px] leading-tight font-semibold text-center transition-all duration-200 text-white shadow-sm hover:-translate-y-0.5 active:translate-y-0 ${
-                  theme === "green" 
-                    ? "bg-[#10B981] border border-emerald-600/25 hover:bg-[#059669]" 
+                  theme === "green"
+                    ? "bg-[#10B981] border border-emerald-600/25 hover:bg-[#059669]"
                     : "bg-[#3B82F6] border border-blue-600/25 hover:bg-[#2563EB]"
                 }`}
               >
@@ -260,8 +272,8 @@ export function FinanceChatOfferwall({
         )}
 
         {showCta && (
-          <motion.div 
-            key="cta-container" 
+          <motion.div
+            key="cta-container"
             layout
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -277,7 +289,9 @@ export function FinanceChatOfferwall({
                 type="button"
                 onClick={handleCta}
                 className={`block w-full py-3.5 px-6 rounded-xl text-white font-semibold text-base text-center transition-all shadow-sm hover:-translate-y-0.5 active:translate-y-0 ${
-                  theme === "green" ? "bg-[#10B981] hover:bg-[#059669]" : "bg-[#3B82F6] hover:bg-[#2563EB]"
+                  theme === "green"
+                    ? "bg-[#10B981] hover:bg-[#059669]"
+                    : "bg-[#3B82F6] hover:bg-[#2563EB]"
                 }`}
               >
                 {ctaButtonText} →
