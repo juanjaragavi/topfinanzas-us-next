@@ -1,9 +1,4 @@
-feat: 2025-2026 SEO and LLM-indexing optimization
+docs: add SEO and LLM indexing optimization technical reports
 
-- Centralized Schema.org generator in lib/seo.ts
-- Refactored root layout metadata with proper structure and WebSite JSON-LD
-- Explicitly blocked AI crawlers and indexing on funnel/quiz pages
-- Bulk-refactored 80+ product pages with canonicals and schemas
-- Implemented next-sitemap for dynamic sitemaps and programmatic robots.txt
-- Created llms.txt AI crawler manifest
-- Enforced Security Headers (CSP, Permissions-Policy) in next.config.mjs
+- Added INFORME_SEO_IA_TOPFINANZAS.md (Spanish version)
+- Added REPORT_SEO_AI_TOPFINANZAS.md (English translation)
