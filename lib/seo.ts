@@ -447,3 +447,31 @@ export function parseDate(date?: string) {
     ? new Date("2025-10-28T00:00:00Z")
     : parsed;
 }
+
+export function generateCreditCardSchema(card: {
+  name: string;
+  description: string;
+  url: string;
+  image: string;
+}): SchemaValue {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreditCard",
+    name: card.name,
+    description: card.description,
+    url: card.url,
+    image: card.image,
+    provider: {
+      "@type": "Organization",
+      name: SEO_SITE.name,
+      url: SEO_SITE.baseUrl,
+    },
+    offers: {
+      "@type": "Offer",
+      url: card.url,
+      availability: "https://schema.org/InStock",
+      priceCurrency: "USD",
+      description: `${card.description} ${SEO_SITE.disclosure}`,
+    },
+  };
+}
