@@ -289,7 +289,7 @@ export function generateBreadcrumbSchema(route: RouteSeoEntry): SchemaValue {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: SEO_SITE.baseUrl,
+      item: SEO_SITE.baseUrl as string,
     },
   ];
 
@@ -298,14 +298,14 @@ export function generateBreadcrumbSchema(route: RouteSeoEntry): SchemaValue {
       "@type": "ListItem",
       position: 2,
       name: "Financial Solutions",
-      item: absoluteUrl("/financial-solutions"),
+      item: absoluteUrl("/financial-solutions") as string,
     });
   } else if (route.category === "personal-finance") {
     itemListElement.push({
       "@type": "ListItem",
       position: 2,
       name: "Personal Finance",
-      item: absoluteUrl("/personal-finance"),
+      item: absoluteUrl("/personal-finance") as string,
     });
   }
 
@@ -314,7 +314,7 @@ export function generateBreadcrumbSchema(route: RouteSeoEntry): SchemaValue {
       "@type": "ListItem",
       position: itemListElement.length + 1,
       name: title,
-      item: absoluteUrl(route.pathname),
+      item: absoluteUrl(route.pathname) as string,
     });
   }
 
