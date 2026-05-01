@@ -14,7 +14,7 @@ export function generateMetadata() {
     title:
       "Snagajob 2026 — Best App for Hourly and Part-Time Jobs Near You — TopFinanzas",
     description:
-      "Snagajob is the #1 platform for hourly jobs, part-time work, and seasonal positions in the US. Find work at Target, Walmart, FedEx, restaurants, and more in minutes with quick-apply.",
+      "Snagajob is the #1 platform for hourly jobs, part-time work, and seasonal positions in the US. Browse openings, apply instantly, and find flexible schedules.",
     keywords:
       "snagajob 2026, hourly jobs app, part-time jobs near me, seasonal jobs, retail hiring app",
   };

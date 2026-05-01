@@ -11,7 +11,7 @@ export function generateMetadata() {
     title:
       "CVS Health Jobs 2026 — Healthcare Careers for Everyone — TopFinanzas",
     description:
-      "CVS Health is one of the largest healthcare employers in the US, with jobs ranging from pharmacy tech to telehealth and clinical roles. Learn salaries, requirements, and how to apply in 2026.",
+      "CVS Health employs 300,000+ people across pharmacy, clinical, and corporate roles. Explore CVS job openings, pay ranges, benefits, and how to apply.",
     keywords:
       "CVS health jobs 2026, CVS pharmacy technician, CVS careers, CVS application, pharmacy tech jobs, CVS hiring",
   };

@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Smarter financing for your business: Fundbox benefits",
   description:
-    "Simplifying cash flow management for modern businesses. Fundbox offers flexible lines of credit to keep your operations moving.",
+    "Fundbox offers revolving credit lines up to $150K with weekly repayment and no prepayment penalties. Compare rates and accounting integrations.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",

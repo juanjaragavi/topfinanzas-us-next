@@ -19,7 +19,7 @@ import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 export const metadata: Metadata = {
   title: "Discover the Benefits of the American Express® Gold Card",
   description:
-    "Maximize rewards on dining, travel, and daily spending. Turn expenses into experiences with the Amex Gold Card. Unlock its benefits today!",
+    "The Amex Gold Card earns 4x points on dining and groceries, plus $120 in annual dining credits. Compare rewards, fees, and membership perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/benefits-of-the-american-express-gold-card",

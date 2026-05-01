@@ -10,7 +10,7 @@ export function generateMetadata() {
     robots: { index: false, follow: false },
     title: "Walmart Jobs 2026 — Positions, Pay & How to Apply — TopFinanzas",
     description:
-      "Walmart is the largest private employer in the US with 1.6 million associates. Explore Walmart job openings in 2026, starting pay, benefits, and the step-by-step application process.",
+      "Walmart is the largest private employer in the US with 1.6 million workers. Explore Walmart job openings, pay rates ($14–$20/hr), benefits, and how to apply.",
     keywords:
       "walmart jobs 2026, walmart hiring, walmart associate pay, walmart application, walmart careers",
   };

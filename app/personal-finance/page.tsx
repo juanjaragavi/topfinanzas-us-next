@@ -40,7 +40,7 @@ export default function PersonalFinanceArchivePage() {
         "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
       slug: "yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
       description:
-        "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
+        "Practical personal finance guides for Americans — covering budgeting, debt management, investing basics, credit building, and strategies for couples merging finances.",
       image:
         "https://media.topfinanzas.com/images/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in.webp",
       date: "September 17, 2025",

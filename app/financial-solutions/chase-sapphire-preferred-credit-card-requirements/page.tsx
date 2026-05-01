@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Chase Sapphire Preferred Credit Card Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Discover everything you need to know about Chase Sapphire Preferred requirements, from credit score to income verification.",
+    "The Chase Sapphire Preferred requires good-to-excellent credit (700+) and a steady income. Review the full eligibility criteria and 5/24 rule before applying.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-requirements",

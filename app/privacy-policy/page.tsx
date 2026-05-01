@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Top Finanzas US",
   description:
-    "Privacy Policy for Top Finanzas US. Learn how we collect, use, and share your personal information.",
+    "TopFinanzas US collects and processes personal data to provide financial product comparisons. Review how we handle your information, your rights, and our data practices.",
   alternates: {
     canonical: "/privacy-policy",
     languages: {

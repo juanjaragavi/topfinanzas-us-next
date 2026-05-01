@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
   description:
-    "Unlock the Gold Standard: Great credit, steady income, and endless rewards await. See if the Amex Gold Card is for you!",
+    "The Amex Gold Card requires good-to-excellent credit (700+), a steady income, and a clean credit history. Review the full eligibility criteria and application tips.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card",

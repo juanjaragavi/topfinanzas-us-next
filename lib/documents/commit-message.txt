@@ -1,7 +1,5 @@
-feat: enhance SEO metadata, schema generation, and dynamic opengraph images
+fix: resolve edge runtime and font loading build errors in opengraph-image files
 
-- Added generateFAQSchema and enhanced generateCreditCardSchema with dates in lib/seo.ts
-- Added dynamic OpenGraph image generation (opengraph-image.tsx) for app/ and slug routes
-- Configured security headers (Permissions-Policy and Content-Security-Policy) in next.config.mjs
-- Implemented static implementations for Personal Finance and Financial Solutions dynamic routes
-- Updated LLM optimization report with the latest SEO recommendations
+- Removed `export const runtime = 'edge'` from all opengraph-image.tsx files to fix static generation conflicts with `generateStaticParams`.
+- Removed direct fetch logic for unsupported WOFF2 fonts in Satori `ImageResponse` to prevent Node.js parsing and runtime signature validation errors during prerendering.
+- Verified full success of static generation for 117 pages via `npm run build`.

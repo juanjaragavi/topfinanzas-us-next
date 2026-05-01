@@ -15,7 +15,7 @@ export function generateMetadata() {
     title:
       "How to Find High-Paying Jobs in 2026 — US Job Opportunities — TopFinanzas",
     description:
-      "Discover proven strategies to find high-paying jobs in 2026. Learn where top US companies like Amazon, Walmart, and CVS are actively hiring — and how to get your application noticed.",
+      "Top US companies like Amazon, Walmart, Target, CVS, and UPS are actively hiring in 2026. Learn where to find openings, salary ranges, and how to apply.",
     keywords:
       "find jobs 2026, high paying jobs us, job search strategies, amazon jobs, walmart jobs, cvs jobs",
   };

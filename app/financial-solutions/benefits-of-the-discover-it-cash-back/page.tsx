@@ -58,29 +58,29 @@ export default function DiscoverItCashBackBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
             }),
-                    {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Who is this card ideal for?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Discover it® Cash Back is an excellent option for:",
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Who is this card ideal for?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The Discover it® Cash Back is an excellent option for:",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Why choose the Discover it® Cash Back?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "With its 5% cash back program, unique Cashback Match offer, and no annual fee, the Discover it® Cash Back delivers unmatched value for those looking to maximize their rewards and save money.",
+                {
+                  "@type": "Question",
+                  name: "Why choose the Discover it® Cash Back?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "With its 5% cash back program, unique Cashback Match offer, and no annual fee, the Discover it® Cash Back delivers unmatched value for those looking to maximize their rewards and save money.",
+                  },
                 },
-              },
-            ],
-          },
-]).replace(/</g, "\u003c"),
+              ],
+            },
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

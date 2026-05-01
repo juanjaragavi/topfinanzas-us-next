@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Requirements to Qualify for the Wells Fargo Reflect® Card",
   description:
-    "Good credit unlocks 21 months of 0% APR with the Wells Fargo Reflect® Card. Simplify your finances today!",
+    "The Wells Fargo Reflect requires good credit (670+) and stable income for 21 months of 0% intro APR. Review the full eligibility and how to apply.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-wells-fargo-reflect-card",
@@ -58,29 +58,29 @@ export default function WellsFargoReflectRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
             }),
-                    {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Who should apply for the Wells Fargo Reflect® Card?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "This card is best suited for individuals who:",
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Who should apply for the Wells Fargo Reflect® Card?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "This card is best suited for individuals who:",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Is the Wells Fargo Reflect® Card right for you?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Qualifying for the Wells Fargo Reflect® Card requires a solid credit score, stable income, and reliable credit history. By meeting these requirements, you'll gain access to one of the best cards for avoiding interest, along with added benefits like cell phone protection and financial management tools.",
+                {
+                  "@type": "Question",
+                  name: "Is the Wells Fargo Reflect® Card right for you?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Qualifying for the Wells Fargo Reflect® Card requires a solid credit score, stable income, and reliable credit history. By meeting these requirements, you'll gain access to one of the best cards for avoiding interest, along with added benefits like cell phone protection and financial management tools.",
+                  },
                 },
-              },
-            ],
-          },
-]).replace(/</g, "\u003c"),
+              ],
+            },
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

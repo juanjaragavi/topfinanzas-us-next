@@ -15,7 +15,7 @@ export default function FinancialSolutions() {
       "@type": "ItemList",
       name: "US Credit Cards & Loan Comparisons",
       description:
-        "Side-by-side comparisons of US credit cards and personal loans, including benefits, requirements, APRs, and rewards.",
+        "Side-by-side comparisons of US credit cards and personal loans — benefits, requirements, APR, fees, and rewards. Find the best financial product for your needs.",
       numberOfItems: 45,
       itemListOrder: "https://schema.org/ItemListUnordered",
     },

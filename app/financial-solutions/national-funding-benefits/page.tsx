@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "National Funding Benefits | TopFinanzas US",
   description:
-    "As a small business owner, finding reliable and fast financing options can be one of the most challenging aspects of running your business. Discover the benefits of National Funding.",
+    "National Funding provides $5K–$500K in business financing with approval in 24 hours and flexible repayment terms. Compare loan types, rates, and merchant benefits.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/national-funding-benefits",

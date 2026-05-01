@@ -11,7 +11,7 @@ export function generateMetadata() {
     title:
       "Target Jobs 2026 — What It's Really Like to Work There — TopFinanzas",
     description:
-      "Target is known for being one of the best places to work in retail. Explore Target job openings in 2026, hourly pay, team culture, and how to get hired for store and fulfillment roles.",
+      "Target pays $15–$24/hr and is rated one of the best retail employers in the US. Explore Target job openings, benefits, and the application process.",
     keywords:
       "target jobs 2026, target hiring, target pay 2026, target application, target careers",
   };

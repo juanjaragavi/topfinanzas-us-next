@@ -14,7 +14,7 @@ export function generateMetadata() {
     title:
       "LinkedIn Jobs 2026 — How to Use LinkedIn to Get Hired Faster — TopFinanzas",
     description:
-      "LinkedIn is the most powerful job search tool for professional, corporate, and mid-career roles. Learn how to optimize your profile and use LinkedIn Jobs to get 5x more interview callbacks in 2026.",
+      "LinkedIn is the top job search platform for professional and corporate roles. Learn how to optimize your profile, apply to jobs, and network with recruiters.",
     keywords:
       "linkedin jobs 2026, linkedin job search tips, linkedin easy apply, glassdoor reviews, professional job apps",
   };

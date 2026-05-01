@@ -44,7 +44,9 @@ export async function generateMetadata({
         ? {
             publishedTime: new Date(post.frontmatter.date).toISOString(),
             modifiedTime: new Date(post.frontmatter.date).toISOString(),
-            authors: [post.frontmatter.author || "TopFinanzas US Editorial Team"],
+            authors: [
+              post.frontmatter.author || "TopFinanzas US Editorial Team",
+            ],
           }
         : {}),
     },
@@ -103,8 +105,18 @@ export default async function PersonalFinancePost({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SEO_SITE.baseUrl },
-      { "@type": "ListItem", position: 2, name: "Personal Finance", item: `${SEO_SITE.baseUrl}/personal-finance` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SEO_SITE.baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Personal Finance",
+        item: `${SEO_SITE.baseUrl}/personal-finance`,
+      },
       { "@type": "ListItem", position: 3, name: fm.title, item: canonical },
     ],
   };

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
   description:
-    "Comprehensive guide to Capital One Spark Cash Plus requirements, a charge card designed for high-spending businesses with unlimited 2% cash back.",
+    "The Spark Cash Plus requires good-to-excellent business credit and established revenue. Review the full eligibility criteria for this no-limit business charge card.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-requirements",

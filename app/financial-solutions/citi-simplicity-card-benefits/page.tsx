@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Citi Simplicity Card Benefits",
   description:
-    "Say goodbye to late fees and hello to financial freedom. The Citi Simplicity Card offers no late fees, no annual fee, and a lengthy 0% intro APR period.",
+    "The Citi Simplicity card charges no late fees, no penalty rate, and no annual fee, with 0% intro APR for 21 months on balance transfers. Compare its full benefits.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-benefits",

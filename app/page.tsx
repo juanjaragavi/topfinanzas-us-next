@@ -6,7 +6,7 @@ const BASE_URL = "https://us.topfinanzas.com";
 export const metadata: Metadata = {
   title: "Compare Credit Cards, Loans & Financial Solutions",
   description:
-    "TopFinanzas US helps you compare the best credit cards, personal loans, and financial products. Expert guides, side-by-side comparisons, and unbiased advice to help you choose wisely.",
+    "TopFinanzas US compares the best credit cards, personal loans, and business financing in 2026. Expert reviews, side-by-side comparisons, and how to apply.",
   openGraph: {
     title: "TopFinanzas US | Compare Credit Cards, Loans & Financial Solutions",
     description:

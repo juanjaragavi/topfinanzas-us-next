@@ -14,7 +14,7 @@ export function generateMetadata() {
     title:
       "Indeed vs ZipRecruiter 2026 — Best Apps for Warehouse & Retail Jobs — TopFinanzas",
     description:
-      "Searching for Amazon, Walmart, Target, or retail jobs? Indeed and ZipRecruiter are the two best platforms for hourly and warehouse work in 2026. Compare features, salaries, and apply today.",
+      "Indeed and ZipRecruiter are the two best platforms for retail jobs at Amazon, Walmart, and Target. Compare listings, salaries, and application tips for hourly roles.",
     keywords:
       "indeed 2026, ziprecruiter 2026, amazon job search, warehouse job apps, retail hiring apps",
   };

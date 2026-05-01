@@ -43,7 +43,7 @@ export default function BlogArchivePage() {
       title: "Chase Sapphire Preferred Credit Card Benefits",
       slug: "chase-sapphire-preferred-credit-card-benefits",
       description:
-        "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+        "The TopFinanzas US blog covers personal finance tips, credit card strategies, debt management, and money-saving advice for Americans at every financial stage.",
       image:
         "https://media.topfinanzas.com/images/chase-sapphire-preferred-credit-card-benefits.webp",
       date: "February 27, 2026",

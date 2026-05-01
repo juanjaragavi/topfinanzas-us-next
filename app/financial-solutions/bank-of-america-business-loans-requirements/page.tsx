@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Learn about Bank of America business loan requirements, eligibility criteria, and how to apply. Discover financing options for your business.",
+    "Bank of America business loans require 2+ years in business, $100K+ annual revenue, and good credit. Review the full eligibility criteria and application steps.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-requirements",

@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Benefits: VentureOne Rewards from Capital One",
   description:
-    "Unlock simplicity & travel rewards: The Capital One VentureOne Card offers hassle-free perks with no annual fee—perfect for stress-free adventures!",
+    "The Capital One VentureOne card earns 1.25x miles on every purchase with no annual fee. Compare its travel rewards, sign-up bonus, and perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/benefits-capital-one-ventureone-rewards",

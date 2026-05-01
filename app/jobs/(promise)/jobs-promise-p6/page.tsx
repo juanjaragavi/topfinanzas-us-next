@@ -11,7 +11,7 @@ export function generateMetadata() {
     title:
       "UPS & FedEx Jobs 2026 — Delivery and Warehouse Opportunities — TopFinanzas",
     description:
-      "UPS and FedEx are two of the largest employers in the US with thousands of delivery driver, package handler, and seasonal jobs available in 2026. Learn pay rates, shift options, and how to apply.",
+      "UPS and FedEx hire thousands of drivers, package handlers, and warehouse workers year-round. Compare pay ($17–$25/hr), benefits, and application steps.",
     keywords:
       "UPS jobs 2026, FedEx jobs 2026, delivery driver jobs, package handler jobs, seasonal delivery jobs, UPS pay, FedEx pay",
   };

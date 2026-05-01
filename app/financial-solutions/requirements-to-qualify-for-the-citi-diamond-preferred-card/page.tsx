@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Requirements to Qualify for the Citi® Diamond Preferred® Card",
   description:
-    "Good credit, steady income, and a clean history—qualify for the Citi® Diamond Preferred® Card and enjoy 0% APR for 21 months.",
+    "The Citi Diamond Preferred requires good credit (670+), a steady income, and a clean payment history. Review the full eligibility for this 0% intro APR card.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-to-qualify-for-the-citi-diamond-preferred-card",

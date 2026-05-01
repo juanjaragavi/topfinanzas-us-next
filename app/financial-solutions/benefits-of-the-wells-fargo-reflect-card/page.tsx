@@ -63,29 +63,29 @@ export default function WellsFargoReflectBenefitsPage() {
                 image:
                   "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
               }),
-                      {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
               {
-                "@type": "Question",
-                name: "Who is the Wells Fargo Reflect® Card ideal for?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "This card is particularly well-suited for individuals who:",
-                },
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Who is the Wells Fargo Reflect® Card ideal for?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "This card is particularly well-suited for individuals who:",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why choose the Wells Fargo Reflect® Card?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "The Wells Fargo Reflect® Card is a standout choice for anyone seeking an unparalleled introductory APR offer and cost-effective financial flexibility. Whether you're managing debt, planning a major purchase, or simply looking for a reliable card with essential benefits, this card delivers substantial value without additional fees.",
+                    },
+                  },
+                ],
               },
-              {
-                "@type": "Question",
-                name: "Why choose the Wells Fargo Reflect® Card?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Wells Fargo Reflect® Card is a standout choice for anyone seeking an unparalleled introductory APR offer and cost-effective financial flexibility. Whether you're managing debt, planning a major purchase, or simply looking for a reliable card with essential benefits, this card delivers substantial value without additional fees.",
-                },
-              },
-            ],
-          },
-]).replace(/</g, "\u003c"),
+            ]).replace(/</g, "\u003c"),
           }}
         />
 

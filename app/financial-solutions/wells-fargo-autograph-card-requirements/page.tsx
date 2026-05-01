@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Wells Fargo Autograph Card Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Learn about Wells Fargo Autograph Card requirements, eligibility criteria, and how to apply for this popular no-annual-fee rewards card.",
+    "The Wells Fargo Autograph requires good-to-excellent credit (670+) and steady income. Review eligibility criteria and tips to boost approval odds.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-requirements",

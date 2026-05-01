@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "American Express Platinum Card Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Learn about the Amex Platinum Card requirements, eligibility criteria, and how to apply for this premium rewards card.",
+    "The Amex Platinum Card requires excellent credit (720+), a high income, and a strong credit history. Here's the full eligibility breakdown and how to apply.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/american-express-platinum-card-requirements",

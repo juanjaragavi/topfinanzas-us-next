@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Capital One Venture X Rewards Credit Card Benefits",
   description:
-    "Unlock luxury & rewards: Elevate every journey with exclusive perks, premium travel benefits, and accelerated rewards tailored for frequent travelers.",
+    "The Capital One Venture X earns 2x miles on every purchase, 10x on hotels and rental cars, plus a $300 annual travel credit. Compare its premium travel rewards.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-benefits",

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Ink Business Unlimited Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
   description:
-    "Unlock generous cash-back rewards with the Ink Business Unlimited Card. Learn about credit score, business type, and income requirements.",
+    "The Ink Business Unlimited requires good-to-excellent personal credit (670+) and a registered business. Review the full eligibility and application requirements.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-requirements",

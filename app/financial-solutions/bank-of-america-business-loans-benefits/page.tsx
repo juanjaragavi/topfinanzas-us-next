@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Bank of America Business Loan Benefits | TopFinanzas US",
   description:
-    "Maximize your business potential with Bank of America. Discover tailored loans, credit lines, and rewards designed to fuel your growth.",
+    "Bank of America business loans offer flexible terms from $10K to $5M, competitive rates, and SBA-backed options. Compare loan types and benefits for your business.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/bank-of-america-business-loans-benefits",
@@ -58,29 +58,29 @@ export default function BankOfAmericaBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
             }),
-                    {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Why choose Bank of America for Your Business?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Bank of America understands the unique challenges businesses face. With flexible financing options, you can:",
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Why choose Bank of America for Your Business?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Bank of America understands the unique challenges businesses face. With flexible financing options, you can:",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Who Should Use Bank of America Business Solutions?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Bank of America is ideal for:",
+                {
+                  "@type": "Question",
+                  name: "Who Should Use Bank of America Business Solutions?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Bank of America is ideal for:",
+                  },
                 },
-              },
-            ],
-          },
-]).replace(/</g, "\u003c"),
+              ],
+            },
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

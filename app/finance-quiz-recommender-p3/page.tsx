@@ -5,7 +5,7 @@ import { FINANCE_QUIZ_RECOMMENDER_P3_QUESTIONS } from "@/lib/finance-quiz-recomm
 export const metadata: Metadata = {
   title: "Find Your Perfect Credit Card | Top Finanzas US",
   description:
-    "Answer a few quick questions in our chat to find the best credit card options tailored to your needs.",
+    "Answer a few quick questions to get personalized credit card recommendations based on your credit score, spending habits, and rewards preferences.",
   keywords:
     "credit cards US, credit card recommender, card comparison USA, cashback, rewards, points, no annual fee",
 };

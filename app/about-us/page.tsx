@@ -3,7 +3,8 @@ import AboutUsClient from "./about-client";
 
 export const metadata: Metadata = {
   title: "About Us | Top Finanzas US", // Replicating implied title or standard
-  description: "Learn more about Top Finanzas US, our mission, and our team.",
+  description:
+    "TopFinanzas US is a personal finance comparison platform helping Americans find the best credit cards, loans, and financial products. Meet our team and mission.",
   alternates: {
     canonical: "/about-us",
     languages: {

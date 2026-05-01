@@ -16,7 +16,7 @@ import { CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Titanium Rewards Visa Signature credit card benefits",
   description:
-    "Turn your everyday expenses into extraordinary rewards with unmatched earning potential.",
+    "The Titanium Rewards Visa Signature earns 5x points on gas and 3x on groceries with no annual fee. Compare its rewards tiers, redemption options, and card perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
@@ -58,29 +58,29 @@ export default function BenefitsTitaniumRewardsPage() {
               image:
                 "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
             }),
-                    {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Why choose the Titanium Rewards Visa Signature Card?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The Titanium Rewards Visa Signature Credit Card is designed for those who want to earn more from their spending. Whether you're refueling your car, stocking your pantry, or planning an international getaway, this card ensures every dollar works harder for you.",
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Why choose the Titanium Rewards Visa Signature Card?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The Titanium Rewards Visa Signature Credit Card is designed for those who want to earn more from their spending. Whether you're refueling your car, stocking your pantry, or planning an international getaway, this card ensures every dollar works harder for you.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Who should get this card?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "If your spending revolves around gas and groceries, the 5x and 3x reward categories make this card an excellent fit. Families and commuters will find the earning potential unmatched.",
+                {
+                  "@type": "Question",
+                  name: "Who should get this card?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "If your spending revolves around gas and groceries, the 5x and 3x reward categories make this card an excellent fit. Families and commuters will find the earning potential unmatched.",
+                  },
                 },
-              },
-            ],
-          },
-]).replace(/</g, "\u003c"),
+              ],
+            },
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

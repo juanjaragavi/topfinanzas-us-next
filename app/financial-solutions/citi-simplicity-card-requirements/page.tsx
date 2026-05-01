@@ -14,7 +14,8 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 export const metadata: Metadata = {
   title:
     "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
-  description: "Zero fees, zero hassle—here",
+  description:
+    "The Citi Simplicity card requires good credit (670+), steady income, and U.S. residency. Review eligibility criteria and tips to maximize approval.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/citi-simplicity-card-requirements",

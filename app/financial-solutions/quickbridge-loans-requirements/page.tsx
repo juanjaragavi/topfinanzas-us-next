@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "QuickBridge Loans Requirements: Fast Business Financing Guide - TopFinanzas US",
   description:
-    "Discover QuickBridge loan requirements and eligibility criteria. Learn how to qualify for fast, flexible business financing tailored to your needs.",
+    "QuickBridge requires 1+ year in business, $10K+ monthly revenue, and a 500+ credit score. Review the full eligibility criteria for fast business funding.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/quickbridge-loans-requirements",

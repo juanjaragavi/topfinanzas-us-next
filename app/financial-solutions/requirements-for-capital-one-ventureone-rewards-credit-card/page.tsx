@@ -16,7 +16,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Requirements for Capital One VentureOne Rewards Credit Card",
   description:
-    "Embark on a journey of rewards: Your path to simplicity and savings with the Capital One VentureOne Rewards Credit Card.",
+    "The Capital One VentureOne requires good credit (660+), a steady income, and limited recent applications. Review the full eligibility criteria and application tips.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-for-capital-one-ventureone-rewards-credit-card",

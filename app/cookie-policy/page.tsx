@@ -9,7 +9,7 @@ import { logger } from "@/lib/logger";
 export const metadata = {
   title: "Cookie Policy | Top Finanzas US",
   description:
-    "Learn about how Top Finanzas US uses cookies and similar technologies on our website.",
+    "TopFinanzas US uses cookies for analytics, personalization, and advertising. Review our full cookie policy, what data we collect, and how to manage your preferences.",
   alternates: {
     canonical: "/cookie-policy",
     languages: {

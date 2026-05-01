@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title:
     "Requirements for the Bank of America® Travel Rewards Credit Card for Students",
   description:
-    "Essential steps to qualify for the perfect student credit card. Learn about the requirements and application process for the Bank of America® Travel Rewards Credit Card for Students.",
+    "The Bank of America Travel Rewards student card requires enrollment in a U.S. college and limited credit history. Review eligibility, benefits, and how to apply.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-for-the-bank-of-america-travel-rewards-credit-card-for-students",

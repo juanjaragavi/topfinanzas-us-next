@@ -15,7 +15,8 @@ import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "The benefits of the Capital One Platinum Secured Credit Card",
-  description: "If you",
+  description:
+    "The Capital One Platinum Secured card helps build credit with no annual fee and a refundable $49–$200 deposit. Review benefits and how it reports to all 3 bureaus.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/benefits-of-the-capital-one-platinum-secured-credit-card",

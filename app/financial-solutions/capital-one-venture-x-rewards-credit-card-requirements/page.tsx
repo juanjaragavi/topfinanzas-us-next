@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Capital One Venture X Rewards Card Requirements: Complete Guide - TopFinanzas US",
   description:
-    "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
+    "The Capital One Venture X requires excellent credit (740+) and strong income. Review the full eligibility criteria for this premium travel card.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",

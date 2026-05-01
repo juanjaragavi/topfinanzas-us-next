@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Benefits QuickBridge Loans | TopFinanzas US",
   description:
-    "QuickBridge Loans provide fast, flexible funding for small businesses to grow, manage cash flow, or invest—without the red tape.",
+    "QuickBridge loans provide $10K–$500K in fast business funding with approval in 24 hours. Compare rates, repayment terms, and eligibility for your business.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/benefits-quickbridge-loans",

@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Requirements for National Funding Loans | TopFinanzas US",
   description:
-    "Unlock your business potential with National Funding. Learn about the requirements, application journey, and eligibility factors for quick and flexible financing.",
+    "National Funding requires 6+ months in business, $120K+ annual revenue, and a 500+ credit score. Review the full eligibility criteria and application process.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/requirements-for-national-funding-loans",

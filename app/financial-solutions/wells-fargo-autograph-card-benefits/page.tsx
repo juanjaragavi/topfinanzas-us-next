@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Wells Fargo Autograph Card benefits: Maximize your rewards",
   description:
-    "Unlock the full potential of your everyday spending with rewards that match your lifestyle. No annual fee and 3x points on popular categories.",
+    "The Wells Fargo Autograph earns 3x points on dining, travel, gas, and streaming with no annual fee. Compare its 20,000-point bonus, cell phone protection, and perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/wells-fargo-autograph-card-benefits",

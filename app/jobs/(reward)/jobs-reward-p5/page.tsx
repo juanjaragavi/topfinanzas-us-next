@@ -14,7 +14,7 @@ export function generateMetadata() {
     title:
       "Glassdoor 2026 — Research Companies and Find Better Jobs — TopFinanzas",
     description:
-      "Glassdoor combines job listings with millions of verified employee reviews, salary data, and interview questions. Use it to research any company before you apply — and avoid bad surprises.",
+      "Glassdoor combines job listings with verified employee reviews, salary data, and interview tips. Research companies and find roles that match your expectations.",
     keywords:
       "glassdoor 2026, company reviews, salary research, interview questions, employer reviews job search",
   };

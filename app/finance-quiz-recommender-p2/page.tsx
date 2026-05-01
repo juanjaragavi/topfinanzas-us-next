@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:
-    "Find the perfect credit card tailored to your needs with our smart assistant. Select the options that suit you best.",
+    "Answer a few questions to find the best credit card for your spending habits and credit profile. Our quiz matches you with top-rated cards in under 2 minutes.",
   keywords:
     "credit cards US, credit card recommender, card comparison USA, cashback, rewards, points, no annual fee, 0% APR",
 };

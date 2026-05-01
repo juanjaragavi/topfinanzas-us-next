@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Ink Business Unlimited Credit Card Benefits",
   description:
-    "With no annual fee and unlimited 1.5% cash back, Ink Business Unlimited is an essential tool for scaling your business.",
+    "The Ink Business Unlimited earns 1.5% cash back on every business purchase with no annual fee. Compare its $900 sign-up bonus, employee cards, and Chase perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/ink-business-unlimited-credit-card-benefits",

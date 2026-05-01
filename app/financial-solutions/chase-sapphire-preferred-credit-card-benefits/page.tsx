@@ -18,7 +18,7 @@ import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 export const metadata: Metadata = {
   title: "Chase Sapphire Preferred Credit Card Benefits",
   description:
-    "Unlock exceptional travel rewards with the Chase Sapphire Preferred Credit Card. Earn 3x points on dining, enjoy a 60,000-point sign-up bonus, and travel with built-in protections.",
+    "The Chase Sapphire Preferred earns 3x points on dining and streaming, plus a 60,000-point sign-up bonus worth $750 in travel. Compare its full rewards and perks.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/chase-sapphire-preferred-credit-card-benefits",

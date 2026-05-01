@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Capital One Spark Cash Plus Benefits",
   description:
-    "Unleash unlimited rewards for your business with the Capital One Spark Cash Plus. Earn 2% cash back on every purchase.",
+    "The Capital One Spark Cash Plus earns unlimited 2% cash back on every business purchase with no preset spending limit. Compare benefits, bonuses, and rewards.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/capital-one-spark-cash-plus-benefits",

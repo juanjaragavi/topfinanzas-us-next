@@ -13,7 +13,7 @@ export function generateMetadata() {
     robots: { index: false, follow: false },
     title: "Amazon Jobs 2026 — How to Apply and Get Hired Fast — TopFinanzas",
     description:
-      "Amazon is one of the largest employers in the US, hiring thousands every month. Learn about Amazon warehouse, delivery, and remote jobs — including pay, benefits, and how to apply.",
+      "Amazon hires thousands of warehouse, delivery, and corporate workers every month. Learn about Amazon wages ($17–$22/hr), benefits, and how to apply.",
     keywords:
       "amazon jobs 2026, amazon warehouse jobs, amazon work from home, amazon application, amazon hiring process",
   };

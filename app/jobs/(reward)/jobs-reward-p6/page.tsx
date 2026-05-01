@@ -14,7 +14,7 @@ export function generateMetadata() {
     title:
       "USAJobs.gov 2026 — How to Apply for Federal Government Jobs — TopFinanzas",
     description:
-      "Federal government jobs offer unmatched job security, pension plans, and healthcare benefits. Learn how to navigate USAJobs.gov and apply for federal positions in 2026.",
+      "Federal government jobs offer job security, pension plans, and healthcare benefits. Learn how to apply on USAJOBS, navigate the federal hiring process, and qualify.",
     keywords:
       "usajobs 2026, federal government jobs, how to apply usajobs, government job security, federal benefits, GS pay scale",
   };

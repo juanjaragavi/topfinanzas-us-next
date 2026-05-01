@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title:
     "Fundbox Loan Requirements: Quick Access to Business Credit - TopFinanzas US",
   description:
-    "Everything you need to know about Fundbox loan requirements. Discover eligibility criteria and how to apply for fast, flexible business financing.",
+    "Fundbox requires a business bank account, 6+ months in operation, and $30K+ in annual revenue. No minimum credit score. Review the full eligibility criteria.",
   alternates: {
     canonical:
       "https://us.topfinanzas.com/financial-solutions/fundbox-loan-requirements",
