@@ -58,7 +58,29 @@ export default function DiscoverItCashBackBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/benefits-of-the-discover-it-cash-back.webp",
             }),
-          ]).replace(/</g, "\u003c"),
+                    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who is this card ideal for?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Discover it® Cash Back is an excellent option for:",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why choose the Discover it® Cash Back?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "With its 5% cash back program, unique Cashback Match offer, and no annual fee, the Discover it® Cash Back delivers unmatched value for those looking to maximize their rewards and save money.",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
         }}
       />
 
@@ -167,7 +189,7 @@ export default function DiscoverItCashBackBenefitsPage() {
                 width={900}
                 height={507}
                 className="w-full rounded-xl"
-                priority={false}
+                priority
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 900px"
                 containerClassName="w-full"

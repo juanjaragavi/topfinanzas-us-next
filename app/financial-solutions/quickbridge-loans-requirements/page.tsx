@@ -96,7 +96,7 @@ export default function RequirementsQuickBridgeLoansPage() {
                   className="w-full h-auto rounded-xl"
                   fetchPriority="high"
                   loading="eager"
-                  priority={false}
+                  priority
                   quality={85}
                 />
               </div>

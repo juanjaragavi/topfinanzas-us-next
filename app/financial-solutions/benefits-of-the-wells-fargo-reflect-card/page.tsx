@@ -63,7 +63,29 @@ export default function WellsFargoReflectBenefitsPage() {
                 image:
                   "https://media.topfinanzas.com/images/benefits-of-the-wells-fargo-reflect-card.webp",
               }),
-            ]).replace(/</g, "\u003c"),
+                      {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who is the Wells Fargo Reflect® Card ideal for?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "This card is particularly well-suited for individuals who:",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why choose the Wells Fargo Reflect® Card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Wells Fargo Reflect® Card is a standout choice for anyone seeking an unparalleled introductory APR offer and cost-effective financial flexibility. Whether you're managing debt, planning a major purchase, or simply looking for a reliable card with essential benefits, this card delivers substantial value without additional fees.",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
           }}
         />
 
@@ -178,7 +200,7 @@ export default function WellsFargoReflectBenefitsPage() {
                   width={900}
                   height={507}
                   className="w-full rounded-xl"
-                  priority={false}
+                  priority
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 900px"
                   containerClassName="w-full"

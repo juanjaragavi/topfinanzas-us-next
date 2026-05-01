@@ -20,6 +20,46 @@ export const metadata = {
 
 export default function PostPage() {
   return (
+    <>
+      {/* BlogPosting + Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://us.topfinanzas.com" },
+                { "@type": "ListItem", position: 2, name: "Personal Finance", item: "https://us.topfinanzas.com/personal-finance" },
+                { "@type": "ListItem", position: 3, name: "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)", item: "https://us.topfinanzas.com/personal-finance/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in" },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "Yours, Mine, or Ours? How to Strategically Combine Finances After Marriage (or Moving In)",
+              description: "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
+              image: "https://media.topfinanzas.com/images/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in.webp",
+              url: "https://us.topfinanzas.com/personal-finance/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
+              inLanguage: "en-US",
+              datePublished: "September 17, 2025",
+              dateModified: "September 17, 2025",
+              author: {
+                "@type": "Person",
+                name: "Juan Jaramillo",
+                image: "https://media.topfinanzas.com/images/authors.webp",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "TopFinanzas US",
+                logo: { "@type": "ImageObject", url: "https://media.topfinanzas.com/images/logo-english.webp" },
+              },
+              mainEntityOfPage: { "@type": "WebPage", "@id": "https://us.topfinanzas.com/personal-finance/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in" },
+            },
+          ]).replace(/</g, "\u003c"),
+        }}
+      />
     <BlogPost
       metadata={{
         title:
@@ -167,5 +207,6 @@ export default function PostPage() {
         foundation for your future together.
       </p>
     </BlogPost>
+    </>
   );
 }

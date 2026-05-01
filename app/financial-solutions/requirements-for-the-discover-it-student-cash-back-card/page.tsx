@@ -107,7 +107,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
                 width={900}
                 height={507}
                 className="w-full h-auto rounded-xl"
-                priority={false}
+                priority
                 fetchPriority="high"
                 quality={85}
                 loading="eager"

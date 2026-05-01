@@ -58,7 +58,29 @@ export default function BankOfAmericaBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/bank-of-america-business-loans-benefits.webp",
             }),
-          ]).replace(/</g, "\u003c"),
+                    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Why choose Bank of America for Your Business?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bank of America understands the unique challenges businesses face. With flexible financing options, you can:",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who Should Use Bank of America Business Solutions?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bank of America is ideal for:",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
         }}
       />
 
@@ -165,7 +187,7 @@ export default function BankOfAmericaBenefitsPage() {
                 width={900}
                 height={507}
                 className="w-full rounded-xl"
-                priority={false}
+                priority
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 900px"
                 containerClassName="w-full"

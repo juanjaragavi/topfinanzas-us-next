@@ -58,7 +58,29 @@ export default function WellsFargoReflectRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-wells-fargo-reflect-card.webp",
             }),
-          ]).replace(/</g, "\u003c"),
+                    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who should apply for the Wells Fargo Reflect® Card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "This card is best suited for individuals who:",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is the Wells Fargo Reflect® Card right for you?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Qualifying for the Wells Fargo Reflect® Card requires a solid credit score, stable income, and reliable credit history. By meeting these requirements, you'll gain access to one of the best cards for avoiding interest, along with added benefits like cell phone protection and financial management tools.",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
         }}
       />
 
@@ -104,7 +126,7 @@ export default function WellsFargoReflectRequirementsPage() {
                 width={900}
                 height={507}
                 className="w-full h-auto rounded-xl"
-                priority={false}
+                priority
                 fetchPriority="high"
                 quality={85}
                 loading="eager"

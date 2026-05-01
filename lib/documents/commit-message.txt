@@ -1,7 +1,7 @@
-chore: update financial solutions pages and add credit card recommendation routes
+feat: enhance SEO metadata, schema generation, and dynamic opengraph images
 
-- Refactor financial solutions listing page with client-side rendering
-- Standardize benefits and requirements page layouts across credit cards
-- Add new credit card recommendation routes (invit-credit-card-rec-us-3 through -17)
-- Update jobs section with new layout and promise/reward pages
-- Add download financial guide layout
+- Added generateFAQSchema and enhanced generateCreditCardSchema with dates in lib/seo.ts
+- Added dynamic OpenGraph image generation (opengraph-image.tsx) for app/ and slug routes
+- Configured security headers (Permissions-Policy and Content-Security-Policy) in next.config.mjs
+- Implemented static implementations for Personal Finance and Financial Solutions dynamic routes
+- Updated LLM optimization report with the latest SEO recommendations

@@ -58,7 +58,29 @@ export default function BenefitsTitaniumRewardsPage() {
               image:
                 "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
             }),
-          ]).replace(/</g, "\u003c"),
+                    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Why choose the Titanium Rewards Visa Signature Card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Titanium Rewards Visa Signature Credit Card is designed for those who want to earn more from their spending. Whether you're refueling your car, stocking your pantry, or planning an international getaway, this card ensures every dollar works harder for you.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who should get this card?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "If your spending revolves around gas and groceries, the 5x and 3x reward categories make this card an excellent fit. Families and commuters will find the earning potential unmatched.",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
         }}
       />
 

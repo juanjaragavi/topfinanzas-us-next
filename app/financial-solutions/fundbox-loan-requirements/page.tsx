@@ -94,7 +94,7 @@ export default function RequirementsFundboxLoanPage() {
                   className="w-full h-auto rounded-xl"
                   fetchPriority="high"
                   loading="eager"
-                  priority={false}
+                  priority
                   quality={85}
                 />
               </div>

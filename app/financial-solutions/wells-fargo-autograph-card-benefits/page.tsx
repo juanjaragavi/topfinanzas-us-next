@@ -167,7 +167,7 @@ export default function WellsFargoAutographBenefitsPage() {
                 width={900}
                 height={507}
                 className="w-full rounded-xl"
-                priority={false}
+                priority
                 quality={85}
                 sizes="(max-width: 768px) 100vw, 900px"
                 containerClassName="w-full"

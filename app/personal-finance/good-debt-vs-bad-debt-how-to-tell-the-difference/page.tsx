@@ -19,6 +19,46 @@ export const metadata = {
 
 export default function PostPage() {
   return (
+    <>
+      {/* BlogPosting + Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://us.topfinanzas.com" },
+                { "@type": "ListItem", position: 2, name: "Personal Finance", item: "https://us.topfinanzas.com/personal-finance" },
+                { "@type": "ListItem", position: 3, name: "Good Debt vs. Bad Debt: How to Tell the Difference", item: "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference" },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "Good Debt vs. Bad Debt: How to Tell the Difference",
+              description: "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
+              image: "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference.webp",
+              url: "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference",
+              inLanguage: "en-US",
+              datePublished: "September 3, 2025",
+              dateModified: "September 3, 2025",
+              author: {
+                "@type": "Person",
+                name: "Diana Berrio",
+                image: "https://media.topfinanzas.com/images/authors.webp",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "TopFinanzas US",
+                logo: { "@type": "ImageObject", url: "https://media.topfinanzas.com/images/logo-english.webp" },
+              },
+              mainEntityOfPage: { "@type": "WebPage", "@id": "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference" },
+            },
+          ]).replace(/</g, "\u003c"),
+        }}
+      />
     <BlogPost
       metadata={{
         title: "Good Debt vs. Bad Debt: How to Tell the Difference",
@@ -187,5 +227,6 @@ export default function PostPage() {
         </em>
       </p>
     </BlogPost>
+    </>
   );
 }

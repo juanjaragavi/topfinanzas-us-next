@@ -99,9 +99,7 @@ export default function RequirementsTitaniumRewardsPage() {
                   width={900}
                   height={507}
                   className="w-full h-auto rounded-xl"
-                  fetchPriority="high"
-                  loading="eager"
-                  priority={false}
+                  priority
                   quality={85}
                 />
               </div>

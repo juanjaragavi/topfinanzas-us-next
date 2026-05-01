@@ -19,6 +19,46 @@ export const metadata = {
 
 export default function PostPage() {
   return (
+    <>
+      {/* BlogPosting + Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://us.topfinanzas.com" },
+                { "@type": "ListItem", position: 2, name: "Personal Finance", item: "https://us.topfinanzas.com/personal-finance" },
+                { "@type": "ListItem", position: 3, name: "Investing for Beginners: A Simple Guide to Getting Started", item: "https://us.topfinanzas.com/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started" },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "Investing for Beginners: A Simple Guide to Getting Started",
+              description: "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
+              image: "https://media.topfinanzas.com/images/investing-for-beginners-a-simple-guide-to-getting-started.webp",
+              url: "https://us.topfinanzas.com/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started",
+              inLanguage: "en-US",
+              datePublished: "September 10, 2025",
+              dateModified: "September 10, 2025",
+              author: {
+                "@type": "Person",
+                name: "Diana Berrio",
+                image: "https://media.topfinanzas.com/images/authors.webp",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "TopFinanzas US",
+                logo: { "@type": "ImageObject", url: "https://media.topfinanzas.com/images/logo-english.webp" },
+              },
+              mainEntityOfPage: { "@type": "WebPage", "@id": "https://us.topfinanzas.com/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started" },
+            },
+          ]).replace(/</g, "\u003c"),
+        }}
+      />
     <BlogPost
       metadata={{
         title: "Investing for Beginners: A Simple Guide to Getting Started",
@@ -193,5 +233,6 @@ export default function PostPage() {
         </em>
       </p>
     </BlogPost>
+    </>
   );
 }

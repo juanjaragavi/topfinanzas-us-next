@@ -100,7 +100,7 @@ export default function RequirementsSparkCashPlusPage() {
                   className="w-full h-auto rounded-xl"
                   fetchPriority="high"
                   loading="eager"
-                  priority={false}
+                  priority
                   quality={85}
                 />
               </div>

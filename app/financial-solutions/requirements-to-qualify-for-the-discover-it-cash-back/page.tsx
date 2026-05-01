@@ -57,7 +57,29 @@ export default function DiscoverItCashBackRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-discover-it-cash-back.webp",
             }),
-          ]).replace(/</g, "\u003c"),
+                    {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who is this card ideal for?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Discover it® Cash Back card is perfect for:",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is the Discover it® Cash Back right for you?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Qualifying for the Discover it® Cash Back card requires good credit, stable finances, and a solid credit history. Meeting these requirements not only increases your chances of approval but also ensures you can fully enjoy the card's benefits, including cash back rewards, intro APR, and no annual fee.",
+                },
+              },
+            ],
+          },
+]).replace(/</g, "\u003c"),
         }}
       />
 
@@ -92,7 +114,7 @@ export default function DiscoverItCashBackRequirementsPage() {
                 width={900}
                 height={507}
                 className="w-full h-auto rounded-xl"
-                priority={false}
+                priority
                 fetchPriority="high"
                 quality={85}
                 loading="eager"

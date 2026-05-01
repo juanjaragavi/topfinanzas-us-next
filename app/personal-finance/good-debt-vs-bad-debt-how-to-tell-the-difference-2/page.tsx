@@ -19,6 +19,46 @@ export const metadata = {
 
 export default function PostPage() {
   return (
+    <>
+      {/* BlogPosting + Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://us.topfinanzas.com" },
+                { "@type": "ListItem", position: 2, name: "Personal Finance", item: "https://us.topfinanzas.com/personal-finance" },
+                { "@type": "ListItem", position: 3, name: "The Magic of Compound Interest: How Your Money Can Grow Over Time", item: "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference-2" },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "The Magic of Compound Interest: How Your Money Can Grow Over Time",
+              description: "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
+              image: "https://media.topfinanzas.com/images/good-debt-vs-bad-debt-how-to-tell-the-difference-2.webp",
+              url: "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference-2",
+              inLanguage: "en-US",
+              datePublished: "September 5, 2025",
+              dateModified: "September 5, 2025",
+              author: {
+                "@type": "Person",
+                name: "Diana Berrio",
+                image: "https://media.topfinanzas.com/images/authors.webp",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "TopFinanzas US",
+                logo: { "@type": "ImageObject", url: "https://media.topfinanzas.com/images/logo-english.webp" },
+              },
+              mainEntityOfPage: { "@type": "WebPage", "@id": "https://us.topfinanzas.com/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference-2" },
+            },
+          ]).replace(/</g, "\u003c"),
+        }}
+      />
     <BlogPost
       metadata={{
         title:
@@ -180,5 +220,6 @@ export default function PostPage() {
         </em>
       </p>
     </BlogPost>
+    </>
   );
 }

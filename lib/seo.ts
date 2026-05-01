@@ -215,6 +215,11 @@ export function generateOrganizationSchema(): SchemaValue {
     url: SEO_SITE.baseUrl,
     logo: SEO_SITE.logo,
     sameAs: SEO_SITE.socialProfiles,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "US",
+      addressLocality: "United States",
+    },
     areaServed: {
       "@type": "Country",
       name: "United States",
@@ -454,7 +459,13 @@ export function generateCreditCardSchema(card: {
   description: string;
   url: string;
   image: string;
+  datePublished?: string;
 }): SchemaValue {
+  // Auto-resolve date from route registry if not provided
+  const pathname = card.url.replace(SEO_SITE.baseUrl, "") || "/";
+  const routeDate = card.datePublished ?? getRouteSeo(pathname).date;
+  const isoDate = routeDate ? parseDate(routeDate).toISOString() : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "CreditCard",
@@ -474,5 +485,24 @@ export function generateCreditCardSchema(card: {
       priceCurrency: "USD",
       description: `${card.description} ${SEO_SITE.disclosure}`,
     },
+    ...(isoDate ? { datePublished: isoDate } : {}),
+    ...(isoDate ? { dateModified: isoDate } : {}),
+  };
+}
+
+export function generateFAQSchema(
+  faqs: { question: string; answer: string }[],
+): SchemaValue {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }

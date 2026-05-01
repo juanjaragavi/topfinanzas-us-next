@@ -44,6 +44,12 @@ export async function generateMetadata({
         : [],
       url: `https://us.topfinanzas.com/${CATEGORY}/${slug}`,
       type: "article",
+      ...(post.frontmatter.date
+        ? {
+            publishedTime: new Date(post.frontmatter.date).toISOString(),
+            modifiedTime: new Date(post.frontmatter.date).toISOString(),
+          }
+        : {}),
     },
     alternates: {
       canonical: `https://us.topfinanzas.com/${CATEGORY}/${slug}`,
