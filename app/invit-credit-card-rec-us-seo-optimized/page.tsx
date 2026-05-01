@@ -19,7 +19,6 @@ const BASE_URL = "https://us.topfinanzas.com";
 const PAGE_SLUG = "invit-credit-card-rec-us-seo-optimized";
 
 export const metadata: Metadata = {
-  robots: { index: false, follow: false },
   title: "Find Your Best Credit Card Match",
   description:
     "Discover the top US credit cards matched to your financial profile — cashback, no annual fee, 0% APR, and no credit check options compared side by side.",
