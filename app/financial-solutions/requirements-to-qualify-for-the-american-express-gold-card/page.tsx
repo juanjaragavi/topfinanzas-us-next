@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
@@ -42,7 +46,12 @@ export default function AmexGoldRequirementsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/requirements-to-qualify-for-the-american-express-gold-card",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Requirements to Qualify for the American Express® Gold Card: What You Need to Know",
               description:
@@ -51,7 +60,7 @@ export default function AmexGoldRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-to-qualify-for-the-american-express-gold-card.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

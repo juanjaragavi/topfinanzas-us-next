@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,12 @@ export default function BenefitsTitaniumRewardsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/titanium-rewards-visa-signature-credit-card-benefits",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Titanium Rewards Visa Signature credit card benefits",
               description:
@@ -49,7 +58,7 @@ export default function BenefitsTitaniumRewardsPage() {
               image:
                 "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-benefits.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

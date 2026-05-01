@@ -15,6 +15,7 @@ import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title:
     "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:

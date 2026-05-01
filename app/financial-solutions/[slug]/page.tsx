@@ -4,6 +4,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { BlogPost } from "@/components/mdx/blog-post";
 import { useMDXComponents as getMDXComponents } from "@/mdx-components";
 import { Metadata } from "next";
+import {
+  generateBreadcrumbSchema,
+  generateFinancialProductSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 
 const CATEGORY = "financial-solutions";
 
@@ -64,10 +69,26 @@ export default async function FinancialSolutionsPost({
   // Get shared components
   const components = getMDXComponents({});
 
+  // Build structured data from frontmatter
+  const routeSeo = getRouteSeo(`/${CATEGORY}/${slug}`);
+
+  const schemas = [
+    generateBreadcrumbSchema(routeSeo),
+    generateFinancialProductSchema(routeSeo),
+  ];
+
   return (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    <BlogPost metadata={post.frontmatter as any}>
-      <MDXRemote source={post.content} components={components} />
-    </BlogPost>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemas).replace(/</g, "\\u003c"),
+        }}
+      />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <BlogPost metadata={post.frontmatter as any}>
+        <MDXRemote source={post.content} components={components} />
+      </BlogPost>
+    </>
   );
 }

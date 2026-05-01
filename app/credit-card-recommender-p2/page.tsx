@@ -3,6 +3,7 @@ import { FinanceChatOfferwall } from "@/components/finance/finance-chat-offerwal
 import { CREDIT_CARD_QUIZ_P2_QUESTIONS } from "@/lib/credit-card-quiz-p2-config";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title:
     "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:

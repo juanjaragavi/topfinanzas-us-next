@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -41,7 +45,12 @@ export default function CitiSimplicityCardRequirementsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/citi-simplicity-card-requirements",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Citi Simplicity Card Requirements: Everything You Need to Know - TopFinanzas US",
               description: "Zero fees, zero hassle—here",
@@ -49,7 +58,7 @@ export default function CitiSimplicityCardRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/citi-simplicity-card-requirements.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

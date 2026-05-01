@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,12 @@ export default function CapitalOneSavorBenefitsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/benefits-capital-one-savor-cash-rewards-credit-card",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Benefits Capital One Savor Cash Rewards Credit Card: Maximize Your Rewards",
               description: "A card designed for life",
@@ -48,7 +57,7 @@ export default function CapitalOneSavorBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/benefits-capital-one-savor-cash-rewards-credit-card.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,12 @@ export default function WellsFargoAutographBenefitsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/wells-fargo-autograph-card-benefits",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Wells Fargo Autograph Card benefits: Maximize your rewards",
               description:
@@ -49,7 +58,7 @@ export default function WellsFargoAutographBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/wells-fargo-autograph-card-benefits.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

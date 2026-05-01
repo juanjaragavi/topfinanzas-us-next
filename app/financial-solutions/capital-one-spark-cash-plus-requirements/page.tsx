@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -43,7 +47,12 @@ export default function RequirementsSparkCashPlusPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/capital-one-spark-cash-plus-requirements",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Capital One Spark Cash Plus Requirements: Business Charge Card Guide - TopFinanzas US",
               description:
@@ -52,7 +61,7 @@ export default function RequirementsSparkCashPlusPage() {
               image:
                 "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-requirements.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

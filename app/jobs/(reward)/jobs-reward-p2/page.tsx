@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "Indeed vs ZipRecruiter 2026 — Best Apps for Warehouse & Retail Jobs — TopFinanzas",
     description:

@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -40,7 +44,12 @@ export default function NationalFundingRequirementsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/requirements-for-national-funding-loans",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Requirements for National Funding Loans | TopFinanzas US",
               description:
@@ -49,7 +58,7 @@ export default function NationalFundingRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-for-national-funding-loans.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "Glassdoor 2026 — Research Companies and Find Better Jobs — TopFinanzas",
     description:

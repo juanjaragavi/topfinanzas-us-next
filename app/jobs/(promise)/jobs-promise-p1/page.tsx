@@ -11,6 +11,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "How to Find High-Paying Jobs in 2026 — US Job Opportunities — TopFinanzas",
     description:

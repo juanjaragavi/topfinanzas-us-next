@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,12 @@ export default function FundboxBenefitsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/smarter-financing-for-your-business-fundbox-benefits",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Smarter financing for your business: Fundbox benefits",
               description:
@@ -49,7 +58,7 @@ export default function FundboxBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/smarter-financing-for-your-business-fundbox-benefits.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

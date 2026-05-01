@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -43,7 +47,12 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/requirements-for-the-bank-of-america-travel-rewards-credit-card-for-students",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Requirements for the Bank of America® Travel Rewards Credit Card for Students",
               description:
@@ -52,7 +61,7 @@ export default function BankOfAmericaStudentTravelCardRequirementsPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-for-the-bank-of-america-travel-rewards-credit-card-for-students.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

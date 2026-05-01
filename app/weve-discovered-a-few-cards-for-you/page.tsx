@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "We've discovered a few cards for you | Top Finanzas US",
   description:
     "We've discovered a few cards that unlock remarkable boundaries for you. Select the limit option that aligns with your daily requirements.",

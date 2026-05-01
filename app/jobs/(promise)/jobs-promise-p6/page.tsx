@@ -7,6 +7,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "UPS & FedEx Jobs 2026 — Delivery and Warehouse Opportunities — TopFinanzas",
     description:

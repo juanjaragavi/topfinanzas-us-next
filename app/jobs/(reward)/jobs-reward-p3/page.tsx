@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "LinkedIn Jobs 2026 — How to Use LinkedIn to Get Hired Faster — TopFinanzas",
     description:

@@ -7,6 +7,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "Target Jobs 2026 — What It's Really Like to Work There — TopFinanzas",
     description:

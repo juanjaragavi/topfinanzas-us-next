@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title: "Amazon Jobs 2026 — How to Apply and Get Hired Fast — TopFinanzas",
     description:
       "Amazon is one of the largest employers in the US, hiring thousands every month. Learn about Amazon warehouse, delivery, and remote jobs — including pay, benefits, and how to apply.",

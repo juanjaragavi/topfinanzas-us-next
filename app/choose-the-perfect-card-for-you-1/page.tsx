@@ -15,6 +15,7 @@ import { TopAdsSquare } from "@/components/ads/topads-placement";
 // import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title:
     "We've discovered a few cards that unlock remarkable boundaries for you | Top Finanzas US",
   description:

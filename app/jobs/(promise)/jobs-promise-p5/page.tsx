@@ -7,6 +7,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "CVS Health Jobs 2026 — Healthcare Careers for Everyone — TopFinanzas",
     description:

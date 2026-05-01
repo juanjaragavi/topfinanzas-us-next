@@ -18,6 +18,7 @@ const BASE_URL = "https://us.topfinanzas.com";
 const PAGE_SLUG = "invit-credit-card-rec-us-2-seo-optimized";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Your Personalized Credit Card Results",
   description:
     "See credit cards selected for your financial needs — compare cashback, no annual fee, 0% APR, and no credit check cards with no application required.",

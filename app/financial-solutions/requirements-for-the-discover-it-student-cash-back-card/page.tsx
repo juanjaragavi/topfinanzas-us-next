@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -38,7 +42,12 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/requirements-for-the-discover-it-student-cash-back-card",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Requirements for the Discover it Student Cash Back Card",
               description: "A student",
@@ -46,7 +55,7 @@ export default function RequirementsDiscoverItStudentCashBackPage() {
               image:
                 "https://media.topfinanzas.com/images/requirements-for-the-discover-it-student-cash-back-card.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

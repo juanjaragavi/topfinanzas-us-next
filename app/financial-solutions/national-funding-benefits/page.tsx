@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,10 @@ export default function NationalFundingBenefitsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo("/financial-solutions/national-funding-benefits"),
+            ),
             generateCreditCardSchema({
               name: "National Funding Benefits | TopFinanzas US",
               description:
@@ -49,7 +56,7 @@ export default function NationalFundingBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/national-funding-benefits.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

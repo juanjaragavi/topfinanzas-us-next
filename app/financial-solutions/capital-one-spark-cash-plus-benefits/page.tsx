@@ -1,6 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ResponsiveImage from "@/components/ui/responsive-image";
@@ -40,7 +44,12 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/capital-one-spark-cash-plus-benefits",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Capital One Spark Cash Plus Benefits",
               description:
@@ -49,7 +58,7 @@ export default function CapitalOneSparkCashPlusBenefitsPage() {
               image:
                 "https://media.topfinanzas.com/images/capital-one-spark-cash-plus-benefits.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

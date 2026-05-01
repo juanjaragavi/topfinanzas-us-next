@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
 
 import { TranslationProvider } from "@/components/jobs/translation-provider";
 import { headers } from "next/headers";
@@ -7,6 +8,10 @@ import { jobsStrings } from "@/lib/translation/jobs-strings";
 
 // This layout reads Accept-Language headers for translation, so it must be dynamic.
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function JobsLayout({
   children,

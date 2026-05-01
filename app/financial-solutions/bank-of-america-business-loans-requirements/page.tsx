@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -40,7 +44,12 @@ export default function RequirementsBofABusinessLoansPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/bank-of-america-business-loans-requirements",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Bank of America Business Loans Requirements: Complete Guide - TopFinanzas US",
               description:
@@ -49,7 +58,7 @@ export default function RequirementsBofABusinessLoansPage() {
               image:
                 "https://media.topfinanzas.com/images/bank-of-america-business-loans-requirements.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

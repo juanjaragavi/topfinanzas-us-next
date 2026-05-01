@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "Snagajob 2026 — Best App for Hourly and Part-Time Jobs Near You — TopFinanzas",
     description:

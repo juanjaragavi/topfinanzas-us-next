@@ -12,6 +12,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "Best Job Search Apps 2026 — Top 4 Platforms to Find Work Fast — TopFinanzas",
     description:

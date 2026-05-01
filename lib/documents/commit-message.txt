@@ -1,4 +1,7 @@
-docs: add SEO and LLM indexing optimization technical reports
+chore: update financial solutions pages and add credit card recommendation routes
 
-- Added INFORME_SEO_IA_TOPFINANZAS.md (Spanish version)
-- Added REPORT_SEO_AI_TOPFINANZAS.md (English translation)
+- Refactor financial solutions listing page with client-side rendering
+- Standardize benefits and requirements page layouts across credit cards
+- Add new credit card recommendation routes (invit-credit-card-rec-us-3 through -17)
+- Update jobs section with new layout and promise/reward pages
+- Add download financial guide layout

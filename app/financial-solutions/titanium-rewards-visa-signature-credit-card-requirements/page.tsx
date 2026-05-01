@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { generateCreditCardSchema } from "@/lib/seo";
+import {
+  generateCreditCardSchema,
+  generateBreadcrumbSchema,
+  getRouteSeo,
+} from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -43,7 +47,12 @@ export default function RequirementsTitaniumRewardsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
+          __html: JSON.stringify([
+            generateBreadcrumbSchema(
+              getRouteSeo(
+                "/financial-solutions/titanium-rewards-visa-signature-credit-card-requirements",
+              ),
+            ),
             generateCreditCardSchema({
               name: "Titanium Rewards Visa Signature Credit Card Requirements: Everything You Need to Know - TopFinanzas US",
               description:
@@ -52,7 +61,7 @@ export default function RequirementsTitaniumRewardsPage() {
               image:
                 "https://media.topfinanzas.com/images/titanium-rewards-visa-signature-credit-card-requirements.webp",
             }),
-          ).replace(/</g, "\u003c"),
+          ]).replace(/</g, "\u003c"),
         }}
       />
 

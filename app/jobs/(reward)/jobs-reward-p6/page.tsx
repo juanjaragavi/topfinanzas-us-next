@@ -10,6 +10,7 @@ import {
 
 export function generateMetadata() {
   return {
+    robots: { index: false, follow: false },
     title:
       "USAJobs.gov 2026 — How to Apply for Federal Government Jobs — TopFinanzas",
     description:
