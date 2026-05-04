@@ -37,6 +37,28 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "From Allowances to Apps: Raising Financially Smart Kids in a Digital World | Top Finance US",
+      slug: "raising-financially-smart-kids-in-a-digital-world",
+      description:
+        "Learn how to teach kids about money in the digital age — from allowances and savings jars to budgeting apps and debit cards designed for teens.",
+      image:
+        "https://media.topfinanzas.com/images/raising-financially-smart-kids-in-a-digital-world.webp",
+      date: "May 4, 2026",
+      category: "guide",
+    },
+    {
+      title:
+        "The Sandwich Generation: Balancing Your Kids' Future With Your Aging Parents' Needs | Top Finance US",
+      slug: "the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs",
+      description:
+        "Caught between raising children and supporting aging parents? Learn practical financial strategies to manage competing priorities without sacrificing your own future.",
+      image:
+        "https://media.topfinanzas.com/images/the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs.webp",
+      date: "May 4, 2026",
+      category: "guide",
+    },
+    {
+      title:
         "The Debt Detox: Choosing Between the Snowball and Avalanche Payoff Methods | Top Finance US",
       slug: "the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
       description:

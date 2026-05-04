@@ -27,8 +27,8 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
-              The Debt Detox: Choosing Between the Snowball and Avalanche
-              Payoff Methods
+              The Debt Detox: Choosing Between the Snowball and Avalanche Payoff
+              Methods
             </h1>
             <div id="square01" data-topads data-topads-size="square"></div>
 
@@ -69,9 +69,9 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
                 psychological wins.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
-                <strong>Debt avalanche:</strong> You pay off the highest interest
-                rate debt first, regardless of balance size. Once it is gone,
-                you roll that payment into the next highest rate debt. The
+                <strong>Debt avalanche:</strong> You pay off the highest
+                interest rate debt first, regardless of balance size. Once it is
+                gone, you roll that payment into the next highest rate debt. The
                 result is lower total interest paid over time.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
@@ -169,8 +169,8 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
                     <strong className="text-gray-800">
                       We ignore interest rate resets and promo deadlines.
                     </strong>{" "}
-                    Intro APR offers can jump sharply when the promo period ends.
-                    Mark those dates on your calendar.
+                    Intro APR offers can jump sharply when the promo period
+                    ends. Mark those dates on your calendar.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

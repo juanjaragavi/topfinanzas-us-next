@@ -6,6 +6,12 @@
       "sourceType": "github",
       "skillPath": "skills/blog-writing-guide/SKILL.md",
       "computedHash": "f885b9890d8a1c43e8ed0386e2ef2c17e941a403aa354513d6b844e99229ffb7"
+    },
+    "pagespeed-insights": {
+      "source": "enderpuentes/ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "pagespeed-insights/SKILL.md",
+      "computedHash": "060ab0c75f7a9ae1e02c8948118deb01c5b93f9789283255b356ab3bea15fff4"
     }
   }
 }

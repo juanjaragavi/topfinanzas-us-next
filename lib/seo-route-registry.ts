@@ -766,6 +766,20 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
       contentType: "article",
       date: "2026-05-04T00:00:00Z",
     },
+  "/personal-finance/the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs":
+    {
+      pathname:
+        "/personal-finance/the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs",
+      title:
+        "The Sandwich Generation: Balancing Your Kids' Future With Your Aging Parents' Needs",
+      description:
+        "Caught between raising children and supporting aging parents? Learn practical financial strategies to manage competing priorities without sacrificing your own future.",
+      image:
+        "https://media.topfinanzas.com/images/the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
   "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods":
     {
       pathname:
@@ -780,4 +794,17 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
       contentType: "article",
       date: "2026-05-04T00:00:00Z",
     },
+  "/personal-finance/raising-financially-smart-kids-in-a-digital-world": {
+    pathname:
+      "/personal-finance/raising-financially-smart-kids-in-a-digital-world",
+    title:
+      "From Allowances to Apps: Raising Financially Smart Kids in a Digital World",
+    description:
+      "Learn how to teach kids about money in the digital age — from allowances and savings jars to budgeting apps and debit cards designed for teens.",
+    image:
+      "https://media.topfinanzas.com/images/raising-financially-smart-kids-in-a-digital-world.webp",
+    category: "personal-finance",
+    contentType: "article",
+    date: "2026-05-04T00:00:00Z",
+  },
 };
