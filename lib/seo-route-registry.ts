@@ -342,7 +342,7 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
       description:
         "Learn about the eligibility criteria, income requirements, and application process for the Capital One Venture X Rewards Credit Card.",
       image:
-        "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+        "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements-NEW.webp",
       category: "financial-solutions",
       contentType: "credit-card",
       date: "2025-10-28T00:00:00Z",

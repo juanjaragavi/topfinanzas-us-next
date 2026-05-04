@@ -197,109 +197,110 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6 ml-6 flex-1 justify-end">
-              {/* Categories Mega Menu - Matching WordPress US Layout */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMegaMenuEnter("categories")}
-                onMouseLeave={handleMegaMenuLeave}
-              >
-                <button
-                  ref={(el) => {
-                    setMenuButtonRef(el, "categories");
-                  }}
-                  className="text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-1 text-sm uppercase tracking-wide"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      toggleMegaMenu("categories");
-                    }
-                  }}
-                  aria-expanded={activeMegaMenu === "categories"}
-                  aria-haspopup="true"
-                  role="button"
-                  tabIndex={0}
+              {/* Main Nav Items Mega Menus */}
+              {headerNavigation.mainNavItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => handleMegaMenuEnter(item.id)}
+                  onMouseLeave={handleMegaMenuLeave}
                 >
-                  <span>{headerNavigation.categoryDropdown.text}</span>
-                  <ChevronDown
-                    className={`size-4 transition-transform ${
-                      activeMegaMenu === "categories" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {activeMegaMenu === "categories" && (
-                  <div
+                  <button
                     ref={(el) => {
-                      setMegaMenuRef(el, "categories");
+                      setMenuButtonRef(el, item.id);
                     }}
-                    className="fixed left-0 right-0 mx-auto mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
-                    style={{ width: "950px", maxWidth: "95vw", top: "64px" }}
-                    onMouseEnter={() => handleMegaMenuEnter("categories")}
-                    onMouseLeave={handleMegaMenuLeave}
+                    className="text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-1 text-sm uppercase tracking-wide"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        toggleMegaMenu(item.id);
+                      }
+                    }}
+                    aria-expanded={activeMegaMenu === item.id}
+                    aria-haspopup="true"
+                    role="button"
+                    tabIndex={0}
                   >
-                    <div className="p-6 flex gap-8">
-                      {/* Categories List - Left Side */}
-                      <div className="w-48 flex-shrink-0">
-                        <ul className="space-y-3">
-                          {headerNavigation.categoryDropdown.items.map(
-                            (item) => (
-                              <li key={item.href}>
+                    <span>{item.text}</span>
+                    <ChevronDown
+                      className={`size-4 transition-transform ${
+                        activeMegaMenu === item.id ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {activeMegaMenu === item.id && (
+                    <div
+                      ref={(el) => {
+                        setMegaMenuRef(el, item.id);
+                      }}
+                      className="fixed left-0 right-0 mx-auto mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
+                      style={{ width: "950px", maxWidth: "95vw", top: "64px" }}
+                      onMouseEnter={() => handleMegaMenuEnter(item.id)}
+                      onMouseLeave={handleMegaMenuLeave}
+                    >
+                      <div className="p-6 flex gap-8">
+                        {/* Categories List - Left Side */}
+                        <div className="flex gap-8 flex-shrink-0">
+                          {item.megaMenu.columns.map((column, colIdx) => (
+                            <div key={colIdx} className="w-48">
+                              <h3 className="font-semibold text-gray-900 mb-3 text-sm tracking-wider uppercase border-b border-gray-100 pb-2">
+                                {column.title}
+                              </h3>
+                              <ul className="space-y-3">
+                                {column.items.map((linkItem, linkIdx) => (
+                                  <li key={linkIdx}>
+                                    <Link
+                                      href={linkItem.href}
+                                      className={`text-sm ${
+                                        linkItem.isEmphasis
+                                          ? "text-blue-600 hover:text-blue-800 font-semibold uppercase tracking-wide"
+                                          : "text-gray-600 hover:text-blue-600"
+                                      } transition-colors`}
+                                      onClick={() => setActiveMegaMenu(null)}
+                                    >
+                                      {linkItem.text}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Featured Articles Grid - Right Side */}
+                        {item.megaMenu.featuredArticles && (
+                          <div className="flex-1 grid grid-cols-2 gap-4 border-l border-gray-100 pl-8">
+                            {item.megaMenu.featuredArticles.map(
+                              (article, idx) => (
                                 <Link
-                                  href={item.href}
-                                  className="text-blue-600 hover:text-blue-800 font-medium text-sm uppercase tracking-wide"
+                                  key={idx}
+                                  href={article.href}
+                                  className="group block"
                                   onClick={() => setActiveMegaMenu(null)}
                                 >
-                                  {item.text}
+                                  <div className="relative aspect-[4/3] rounded overflow-hidden mb-2">
+                                    <Image
+                                      src={article.image}
+                                      alt={article.title}
+                                      fill
+                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                      sizes="200px"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                  <h4 className="text-xs font-medium text-gray-700 group-hover:text-blue-600 line-clamp-2 leading-tight">
+                                    {article.title}
+                                  </h4>
                                 </Link>
-                              </li>
-                            ),
-                          )}
-                        </ul>
+                              ),
+                            )}
+                          </div>
+                        )}
                       </div>
-
-                      {/* Featured Articles Grid - Right Side */}
-                      {headerNavigation.categoryDropdown.featuredArticles && (
-                        <div className="flex-1 grid grid-cols-4 gap-4">
-                          {headerNavigation.categoryDropdown.featuredArticles.map(
-                            (article, idx) => (
-                              <Link
-                                key={idx}
-                                href={article.href}
-                                className="group block"
-                                onClick={() => setActiveMegaMenu(null)}
-                              >
-                                <div className="relative aspect-[4/3] rounded overflow-hidden mb-2">
-                                  <Image
-                                    src={article.image}
-                                    alt={article.title}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                    sizes="140px"
-                                    loading="lazy"
-                                  />
-                                </div>
-                                <h4 className="text-xs font-medium text-gray-700 group-hover:text-blue-600 line-clamp-2 text-center leading-tight">
-                                  {article.title}
-                                </h4>
-                              </Link>
-                            ),
-                          )}
-                        </div>
-                      )}
                     </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Main Nav Items (LOANS, CREDIT CARDS) */}
-              {headerNavigation.mainNavItems.map((item) => (
-                <Link
-                  key={item.href + item.text}
-                  href={item.href}
-                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide"
-                >
-                  {item.text}
-                </Link>
+                  )}
+                </div>
               ))}
 
               {/* Desktop Search Button */}

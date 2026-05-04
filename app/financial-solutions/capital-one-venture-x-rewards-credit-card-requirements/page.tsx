@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+        url: "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements-NEW.webp",
         width: 1200,
         height: 630,
       },
@@ -59,7 +59,7 @@ export default function RequirementsCapitalOneVentureXPage() {
                 "Learn about Capital One Venture X requirements, eligibility criteria, and how to apply for this premium travel rewards card.",
               url: "https://us.topfinanzas.com/financial-solutions/capital-one-venture-x-rewards-credit-card-requirements",
               image:
-                "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+                "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements-NEW.webp",
             }),
           ]).replace(/</g, "\u003c"),
         }}
@@ -99,7 +99,7 @@ export default function RequirementsCapitalOneVentureXPage() {
               {/* ELEMENT 7: HERO IMAGE */}
               <div className="my-8 text-left sm:text-left">
                 <Image
-                  src="https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp"
+                  src="https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements-NEW.webp"
                   alt="Capital One Venture X Rewards Credit Card Requirements"
                   width={900}
                   height={507}
