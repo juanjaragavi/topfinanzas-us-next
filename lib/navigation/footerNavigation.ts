@@ -50,18 +50,6 @@ export const footerNavigation = {
       text: "Financial Solutions",
       href: "/financial-solutions",
     },
-    {
-      text: "Home Finance",
-      href: "/personal-finance",
-    },
-    {
-      text: "Student Finance",
-      href: "/personal-finance",
-    },
-    {
-      text: "SME Finance",
-      href: "/personal-finance",
-    },
   ],
 
   /** Popular Articles section - Empty for MX Layout as it's not shown */

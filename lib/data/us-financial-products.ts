@@ -205,7 +205,7 @@ export const creditCardsContent: FinancialContent[] = [
     description:
       "Elevate your travel experience with Venture X. Check credit score, income, and residency requirements to qualify for premium rewards.",
     image:
-      "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements.webp",
+      "https://media.topfinanzas.com/images/capital-one-venture-x-rewards-credit-card-requirements-NEW.webp",
     date: "October 31, 2025",
     type: "traditional",
     category: "Credit Cards",
