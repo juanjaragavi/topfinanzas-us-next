@@ -374,19 +374,16 @@ Cache-Control: public, max-age=31536000, immutable
 When auditing a page for PageSpeed optimization:
 
 1. **Analyze Current State**
-
    - Check current PageSpeed scores
    - Identify Core Web Vitals metrics
    - Review lab and field data differences
 
 2. **Identify Issues**
-
    - List all performance problems
    - Prioritize by impact (Core Web Vitals first)
    - Categorize by type (images, JS, CSS, etc.)
 
 3. **Provide Solutions**
-
    - Suggest specific optimizations
    - Provide code examples
    - Explain expected improvements

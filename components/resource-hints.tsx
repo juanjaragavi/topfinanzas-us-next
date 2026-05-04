@@ -50,6 +50,10 @@ export default function ResourceHints() {
         crossOrigin="anonymous"
       />
       <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+      {/* Add preconnect for TopAds CDN */}
+      <link rel="preconnect" href="https://ads.gamadx.com" />
+      <link rel="dns-prefetch" href="https://ads.gamadx.com" />
     </>
   );
 }

@@ -337,14 +337,15 @@ const nextConfig = {
       },
     ],
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [
-      16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048,
-    ],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year cache for improved performance
     // Remove deprecated domains configuration (already covered by remotePatterns)
   },
   serverExternalPackages: ["@google-cloud/translate", "googleapis"],
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
   experimental: {
     webpackBuildWorker: false,
     parallelServerBuildTraces: false,

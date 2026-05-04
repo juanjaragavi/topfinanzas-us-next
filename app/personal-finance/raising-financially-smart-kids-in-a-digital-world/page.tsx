@@ -114,17 +114,17 @@ export default function RaisingFinanciallySmartKidsPage() {
                 their world gets more expensive.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
-                As your household navigates competing financial priorities — kids&apos;
-                expenses alongside other goals like retirement or emergency savings — our
-                guide on{" "}
+                As your household navigates competing financial priorities —
+                kids&apos; expenses alongside other goals like retirement or
+                emergency savings — our guide on{" "}
                 <Link
                   href="/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free"
                   className="text-blue-600 hover:underline"
                 >
                   building your first $1,000 financial safety net
                 </Link>{" "}
-                can help you keep the family finances stable while you invest
-                in your children&apos;s financial education.
+                can help you keep the family finances stable while you invest in
+                your children&apos;s financial education.
               </p>
             </section>
 
@@ -199,10 +199,10 @@ export default function RaisingFinanciallySmartKidsPage() {
               </p>
               <p className="text-gray-700 mb-4 leading-7">
                 This is uncomfortable. It means sometimes watching your teen go
-                without something they want because they spent their budget early
-                in the month. Resist the urge to bail them out every time. The
-                experience of a small shortage at 15 is far less costly than the
-                same lesson learned at 25 with credit card debt.
+                without something they want because they spent their budget
+                early in the month. Resist the urge to bail them out every time.
+                The experience of a small shortage at 15 is far less costly than
+                the same lesson learned at 25 with credit card debt.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
                 For older teens with part-time jobs, this is also the right
@@ -220,8 +220,9 @@ export default function RaisingFinanciallySmartKidsPage() {
                 that work well as conversation starters.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
-                If your teen is approaching college age, the compounding benefits
-                of early investing are worth explaining concretely. Our guide on{" "}
+                If your teen is approaching college age, the compounding
+                benefits of early investing are worth explaining concretely. Our
+                guide on{" "}
                 <Link
                   href="/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory"
                   className="text-blue-600 hover:underline"
@@ -256,11 +257,11 @@ export default function RaisingFinanciallySmartKidsPage() {
                 <li>
                   <strong>Modeling contradictory behavior.</strong> Kids absorb
                   what they observe. If they see parents making impulsive
-                  purchases and carrying high-interest credit card balances, that
-                  pattern registers — regardless of what they are told. If your
-                  own financial habits need work, involving your child in
-                  improvement efforts (not the stress) can turn it into a
-                  shared learning experience.
+                  purchases and carrying high-interest credit card balances,
+                  that pattern registers — regardless of what they are told. If
+                  your own financial habits need work, involving your child in
+                  improvement efforts (not the stress) can turn it into a shared
+                  learning experience.
                 </li>
               </ol>
             </section>
@@ -271,8 +272,8 @@ export default function RaisingFinanciallySmartKidsPage() {
               </h2>
               <div id="square02" data-topads data-topads-size="square"></div>
               <p className="text-gray-700 mb-4 leading-7">
-                You do not need to overhaul your family&apos;s entire approach to
-                money overnight. The most effective financial education is
+                You do not need to overhaul your family&apos;s entire approach
+                to money overnight. The most effective financial education is
                 incremental and consistent. Pick one practice from the list
                 below that matches your child&apos;s current age:
               </p>
@@ -309,9 +310,9 @@ export default function RaisingFinanciallySmartKidsPage() {
                 >
                   navigating the sandwich generation
                 </Link>{" "}
-                addresses exactly that tension — how to invest in your children&apos;s
-                future without neglecting your own financial stability or your
-                parents&apos; needs.
+                addresses exactly that tension — how to invest in your
+                children&apos;s future without neglecting your own financial
+                stability or your parents&apos; needs.
               </p>
               <p className="text-gray-700 mb-4 leading-7">
                 Financial literacy is not a single conversation. It is a

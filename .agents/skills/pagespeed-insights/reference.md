@@ -42,9 +42,9 @@ This file complements the pagespeed-insights skill with official documentation l
 
 ## Score thresholds (reminder)
 
-| Category | Good | Needs Improvement | Poor |
-|----------|------|-------------------|------|
-| Performance | 90-100 | 50-89 | 0-49 |
-| Accessibility | 90-100 | 50-89 | 0-49 |
-| Best Practices | 90-100 | 50-89 | 0-49 |
-| SEO | 90-100 | 50-89 | 0-49 |
+| Category       | Good   | Needs Improvement | Poor |
+| -------------- | ------ | ----------------- | ---- |
+| Performance    | 90-100 | 50-89             | 0-49 |
+| Accessibility  | 90-100 | 50-89             | 0-49 |
+| Best Practices | 90-100 | 50-89             | 0-49 |
+| SEO            | 90-100 | 50-89             | 0-49 |

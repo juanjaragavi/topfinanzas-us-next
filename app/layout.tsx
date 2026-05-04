@@ -52,7 +52,7 @@ const poppins = localFont({
   ],
   display: "swap",
   variable: "--font-poppins",
-  preload: false, // Disable preloading to prevent "unused preload" warnings
+  preload: true,
   fallback: [
     "system-ui",
     "Segoe UI",
@@ -179,6 +179,10 @@ export default function RootLayout({
           href="https://media.topfinanzas.com"
           crossOrigin="anonymous"
         />
+
+        {/* Preconnect to TopAds CDN for faster ad script delivery */}
+        <link rel="preconnect" href="https://ads.gamadx.com" />
+        <link rel="dns-prefetch" href="https://ads.gamadx.com" />
 
         <script
           type="application/ld+json"
