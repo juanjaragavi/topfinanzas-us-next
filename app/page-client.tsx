@@ -1,8 +1,5 @@
-"use client";
-
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -248,22 +245,22 @@ const cardPosts = [...allPosts, ...allPosts]
   .slice(4, 8)
   .map((p) => ({ ...p, category: "Choose Your Card" }));
 
+// Pre-sorted at module level (server component — computed once at build time)
+const homepagePosts = [...allPosts]
+  .sort((a, b) => {
+    const dateA = a.frontmatter.date
+      ? new Date(a.frontmatter.date).getTime()
+      : 0;
+    const dateB = b.frontmatter.date
+      ? new Date(b.frontmatter.date).getTime()
+      : 0;
+    return dateB - dateA;
+  })
+  .slice(0, 3);
+
 // --- End of Hardcoded Data ---
 
 export default function Home() {
-  const homepagePosts = useMemo(() => {
-    return [...allPosts]
-      .sort((a, b) => {
-        const dateA = a.frontmatter.date
-          ? new Date(a.frontmatter.date).getTime()
-          : 0;
-        const dateB = b.frontmatter.date
-          ? new Date(b.frontmatter.date).getTime()
-          : 0;
-        return dateB - dateA;
-      })
-      .slice(0, 3);
-  }, []);
 
   return (
     <main className="bg-white min-h-screen flex flex-col">
@@ -317,7 +314,7 @@ export default function Home() {
                   alt={post.frontmatter.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  priority={true}
+                  priority={idx === 0}
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
