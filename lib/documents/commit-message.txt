@@ -1,5 +1,8 @@
-fix: resolve edge runtime and font loading build errors in opengraph-image files
+feat: add new personal finance blog articles
 
-- Removed `export const runtime = 'edge'` from all opengraph-image.tsx files to fix static generation conflicts with `generateStaticParams`.
-- Removed direct fetch logic for unsupported WOFF2 fonts in Satori `ImageResponse` to prevent Node.js parsing and runtime signature validation errors during prerendering.
-- Verified full success of static generation for 117 pages via `npm run build`.
+- Add article "Legacy Planning 101"
+- Add article "Micro-Investing for Big Dreams"
+- Add article "The Financial Integration Roadmap"
+- Update blog and personal finance index pages
+- Update recent articles in blog layout
+- Update search index with new content

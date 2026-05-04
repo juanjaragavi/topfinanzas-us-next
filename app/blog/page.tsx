@@ -40,6 +40,37 @@ export default function BlogArchivePage() {
   // Combine posts from both categories
   const allPosts: PostItem[] = [
     {
+      title: "Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes | Top Finance US",
+      slug: "legacy-planning-how-to-talk-to-aging-parents-about-finances",
+      description: "Learn how to approach the difficult conversation about legacy planning with your aging parents. Discover actionable steps to understand their financial wishes.",
+      image: "https://media.topfinanzas.com/images/legacy-planning-how-to-talk-to-aging-parents-about-finances.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
+      title: "Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances | Top Finance US",
+      slug: "micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory",
+      description:
+        "Discover how micro-investing just $5 a day can transform your personal finances. Learn the basics, explore the power of compounding, and start building wealth today.",
+      image:
+        "https://media.topfinanzas.com/images/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
+      title: "The Financial Integration Roadmap | Top Finance US",
+      slug: "the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
+      description:
+        "A step-by-step guide for newlyweds and long-term partners on merging finances, setting joint goals, and navigating shared expenses together.",
+      image:
+        "https://media.topfinanzas.com/images/financial-integration-roadmap-newlyweds-partners.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
       title: "Chase Sapphire Preferred Credit Card Benefits",
       slug: "chase-sapphire-preferred-credit-card-benefits",
       description:

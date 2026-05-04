@@ -13,7 +13,7 @@ Generate **one complete Next.js page component** (`page.tsx`) for each commissio
 - Reside in the correct App Router directory (`/app/personal-finance/{slug}/page.tsx` for TOFU articles unless the brief specifies another category)
 - Use US English, friendly-expert tone, and clear, non-misleading language
 - Follow established layout, styling, and component patterns
-- Deliver internal linking, rich sections, and actionable takeaways tailored to UK readers
+- Deliver internal linking, rich sections, and actionable takeaways tailored to US readers
 
 ### Mandatory Listing Synchronization
 
@@ -24,11 +24,11 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 **Input Required from User**:
 
 - `{pillar}` (topic family) and `{isPillar}` flag
-- `{mainKeyword}` (primary SEO keyword)
-- `{tentativeTitle}`
+- `{mainKeyword}` (primary SEO keywords for metadata and content integration)
+- <tentativeTitle>Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes</tentativeTitle>
 - `{contentFocus}` (angle and category guidance)
-- `{seoIntentType}`
-- `{funnelStage}` (TOFU | MOFU | BOFU)
+- `{seoIntentType}` (informational, product awareness, user intent)
+- `{funnelStage}` (TOFU | MOFU | BOFU. Default to TOFU if not specified)
 - `{market}` (default: United States)
 - `{language}` (default: English (United States))
 - `{supportingNotes}` or `{officialSources}` when provided
@@ -51,7 +51,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 **Key Tools**:
 
 - `fetch_txt` - retrieve CSV schema and sitemap data
-- `fetch_webpage` - validate facts against official UK sources
+- `fetch_webpage` - validate facts against official US sources
 - Workspace file system - inspect existing article templates for structure and class usage
 - `replace_string_in_file` - update blog and category page arrays
 
@@ -182,10 +182,11 @@ After generating the article component, plan updates across the site (see `.gith
 - Identify pillar relationships and supporting cluster topics
 - Retrieve the sitemap for current internal URLs
 
-### Step 2: Determine Article Type and Placement
+### Step 2: Determine Article Type, Placement, and Media URL
 
 - Use `Is Pillar?` and `Funnel Stage` to set strategy and select the target directory
-- Derive the final slug from `Tentative Title` (kebab-case, lowercase)
+- Derive the final slug from the `{tentativeTitle}` variable (kebab-case, lowercase, remove special characters)
+- Automatically construct the hero image URL using this slug: `https://media.topfinanzas.com/images/{slug}.webp`. Do NOT pause or wait for the user to provide an image URL.
 
 ### Step 3: Template Analysis
 
@@ -201,12 +202,12 @@ After generating the article component, plan updates across the site (see `.gith
 ### Step 5: Compliance and Tone Check
 
 - Ensure messaging is informative, unbiased, and non-prescriptive
-- Incorporate references to UK regulators or support resources where helpful
+- Incorporate references to US regulators or support resources where helpful
 
 ### Step 6: Code Generation
 
 - Produce a full `page.tsx` component with imports, metadata, JSX hierarchy, and closing tags
-- Include hero image, ad placeholders, CTA, internal links, and disclaimer
+- Include the automatically generated hero image URL, ad placeholders, CTA, internal links, and disclaimer
 
 ### Step 7: Quality Assurance
 
@@ -236,13 +237,13 @@ After generating the blog article component, you MUST immediately update the fol
 
 ```typescript
 {
-  title: "Article Title | Top Finance UK",
+  title: "Article Title | Top Finance US",
   slug: "article-slug",
   description: "Compelling article description focusing on value to reader",
-  image: "https://media.topfinanzas.com/images/uk/article-image.webp",
+  image: "https://media.topfinanzas.com/images/article-image.webp",
   category: "Personal Finance",
   categoryPath: "/personal-finance",
-  date: "DD Month YYYY", // Current date in UK format (e.g., "23 October 2025")
+  date: "DD Month YYYY", // Current date in US format (e.g., "October 23, 2025")
 }
 ```
 
@@ -250,11 +251,11 @@ After generating the blog article component, you MUST immediately update the fol
 
 ```typescript
 {
-  title: "Article Title | Top Finance UK",
+  title: "Article Title | Top Finance US",
   slug: "article-slug",
   description: "Brief article description",
-  image: "https://media.topfinanzas.com/images/uk/article-image.webp",
-  date: "DD Month YYYY",
+  image: "https://media.topfinanzas.com/images/article-image.webp",
+  date: "DD Month YYYY", // Current date in US format (e.g., "October 23, 2025")
   category: "guide", // Options: "guide", "creditCards", "loans", "debt"
 }
 ```
@@ -265,6 +266,13 @@ After generating the blog article component, you MUST immediately update the fol
 
 - Consider updating the blog sidebar in `components/mdx/blog-layout.tsx` if this is a flagship article
 - For standout content, suggest featuring on homepage or header navigation
+
+### Step 10: Generate Completion Report & Image Prompt
+
+Using the topic contextually obtained from the `{tentativeTitle}` variable and the generated article content, create a prompt for an image generation Large Language Model (LLM). The prompt should generate an ultra-realistic stock image to use as the featured image for the attached article.
+
+Present this image generation prompt at the very end of your final completion report, after you have already generated the media asset URL, created the Next.js component, and completed all listing synchronizations.
+Begin the prompt with "Generate an..." and end it with the directive "Generate the image with a 16:9 aspect ratio."
 
 </ExpectedBehaviorAndInteraction>
 
@@ -282,7 +290,7 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "{SEO Title} - Top Finance UK",
+    title: "{SEO Title} - Top Finance US",
     description: "Compelling description (150-160 characters)",
     keywords: "keyword1, keyword2, keyword3",
   };
@@ -300,12 +308,12 @@ export default function {ComponentName}Page() {
             </h1>
             <div id="square01" data-topads data-topads-size="square"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
-              {Narrative introduction referencing UK context}
+              {Narrative introduction referencing US context}
             </p>
             <div className="my-8">
               <Image
-                src="https://media.topfinanzas.com/images/{hero-image}.webp"
-                alt="{Descriptive alt text for UK audience}"
+                src="https://media.topfinanzas.com/images/{slug}.webp"
+                alt="{Descriptive alt text for US audience}"
                 width={800}
                 height={450}
                 className="w-full h-auto rounded-xl"
@@ -342,10 +350,10 @@ export default function {ComponentName}Page() {
 - `generateMetadata()` must return accurate SEO title, description, and comma-separated keywords
 - `data-category` must match the target section (`personal-finance` or `financial-solutions`)
 - Include both ad placeholders with exact IDs
-- Incorporate at least three `<Link>` components pointing to live UK pages
+- Incorporate at least three `<Link>` components pointing to live US pages
 - Conclude with `AIContentDisclaimer` before closing the article container
 - Keep typography classes aligned with reference pages (`text-left`, `text-gray-800`, `leading-6`, etc.)
-- Do not output explanatory prose around the code; deliver production-ready JSX followed by integration notes when requested
+- Do not output explanatory prose around the code; deliver production-ready JSX followed by integration notes and the image generation prompt from Step 10 when requested
 
 </OutputFormatting>
 

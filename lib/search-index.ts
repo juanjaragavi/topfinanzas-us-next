@@ -10,6 +10,14 @@ export interface SearchItem {
 // In a real application, this might be generated at build time
 export const searchIndex: SearchItem[] = [
   {
+    id: "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
+    href: "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
+    title: "The Financial Integration Roadmap | Top Finance US",
+    description:
+      "A step-by-step guide for newlyweds and long-term partners on merging finances, setting joint goals, and navigating shared expenses together.",
+    image: "https://media.topfinanzas.com/images/financial-integration-roadmap-newlyweds-partners.webp",
+  },
+  {
     id: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
     href: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
     title: "Best 0% APR Balance Transfer Cards: A Guide to Managing Debt",

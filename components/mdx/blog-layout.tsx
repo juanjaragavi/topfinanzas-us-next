@@ -62,6 +62,49 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Legacy Planning 101 */}
+                    <div className="flex items-center gap-3">
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/legacy-planning-how-to-talk-to-aging-parents-about-finances.webp"
+                          alt="Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
+                      <div>
+                        <Link
+                          href="/personal-finance/legacy-planning-how-to-talk-to-aging-parents-about-finances"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Micro-Investing for Big Dreams */}
+                    <div className="flex items-center gap-3">
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory.webp"
+                          alt="Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
+                      <div>
+                        <Link
+                          href="/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances
+                        </Link>
+                      </div>
+                    </div>
                     {/* Best 0% APR Balance Transfer Cards */}
                     <div className="flex items-center gap-3">
                       <div className="relative w-[50px] h-[50px] flex-shrink-0">
