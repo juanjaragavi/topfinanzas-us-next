@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://us.topfinanzas.com
-
-# Sitemaps
-Sitemap: https://us.topfinanzas.com/sitemap.xml
