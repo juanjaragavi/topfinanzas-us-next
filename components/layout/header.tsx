@@ -27,7 +27,8 @@ export function Header() {
 
   // Scroll Aware Header State
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
+  const isVisibleRef = useRef(true);
   const megaMenuRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>(
     {},
@@ -120,17 +121,23 @@ export function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const isMobile = window.innerWidth < 768;
+      let nextIsVisible = true;
 
       // On mobile, always keep header visible (sticky behavior)
       if (isMobile) {
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false); // Hide on scroll down (desktop only)
+        nextIsVisible = true;
+      } else if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
+        nextIsVisible = false; // Hide on scroll down (desktop only)
       } else {
-        setIsVisible(true); // Show on scroll up
+        nextIsVisible = true; // Show on scroll up
       }
 
-      setLastScrollY(currentScrollY);
+      if (nextIsVisible !== isVisibleRef.current) {
+        isVisibleRef.current = nextIsVisible;
+        setIsVisible(nextIsVisible);
+      }
+
+      lastScrollYRef.current = currentScrollY;
     };
 
     // Throttle via requestAnimationFrame for performance
@@ -147,7 +154,7 @@ export function Header() {
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <>
@@ -334,7 +341,9 @@ export function Header() {
       </header>
 
       {/* Search Bar Overlay */}
-      <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      {isSearchOpen ? (
+        <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      ) : null}
     </>
   );
 }

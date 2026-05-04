@@ -261,13 +261,12 @@ const homepagePosts = [...allPosts]
 // --- End of Hardcoded Data ---
 
 export default function Home() {
-
   return (
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       {/* Hero Section - WordPress US Layout with Background Image */}
-      <section className="relative w-full min-h-[400px] md:min-h-[450px] flex items-center overflow-hidden bg-[#3E73C4] md:bg-transparent">
+      <section className="relative w-full min-h-96 md:min-h-[28rem] flex items-center overflow-hidden bg-[#3E73C4] md:bg-transparent">
         {/* Background Image - hidden on mobile to match WordPress */}
         <div className="absolute inset-0 hidden md:block">
           <Image
@@ -281,12 +280,12 @@ export default function Home() {
         </div>
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-[500px]">
-            <h1 className="text-white text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold mb-4 leading-[1.1] tracking-tight">
+          <div className="max-w-xl">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight">
               Welcome to <br />
               Top Finance
             </h1>
-            <p className="text-white text-lg md:text-xl leading-[1.5]">
+            <p className="text-white text-lg md:text-xl leading-relaxed">
               Where every financial decision expands your world.
               <br />
               Choose wisely, live fully.
@@ -304,7 +303,7 @@ export default function Home() {
               <Link
                 key={post.slug}
                 href={`/${post.categoryPath}/${post.slug}`}
-                className="group relative block overflow-hidden rounded-lg shadow-lg h-[350px] md:h-[400px]"
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-80 md:h-96"
               >
                 <Image
                   src={
@@ -380,7 +379,7 @@ export default function Home() {
               </div>
               <Link
                 href={`/${cardPosts[0]?.categoryPath}/${cardPosts[0]?.slug}`}
-                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-64 mb-4"
               >
                 <Image
                   src={
@@ -447,7 +446,7 @@ export default function Home() {
               </div>
               <Link
                 href={`/${savingsPosts[0]?.categoryPath}/${savingsPosts[0]?.slug}`}
-                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-64 mb-4"
               >
                 <Image
                   src={
@@ -514,7 +513,7 @@ export default function Home() {
               </div>
               <Link
                 href={`/${debtPosts[0]?.categoryPath}/${debtPosts[0]?.slug}`}
-                className="group relative block overflow-hidden rounded-lg shadow-lg h-[250px] mb-4"
+                className="group relative block overflow-hidden rounded-lg shadow-lg h-64 mb-4"
               >
                 <Image
                   src={
