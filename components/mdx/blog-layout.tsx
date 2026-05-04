@@ -62,6 +62,29 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* The Debt Detox */}
+                    <div className="flex items-center gap-3">
+                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
+                        <Image
+                          src="https://media.topfinanzas.com/images/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods.webp"
+                          alt="The Debt Detox: Choosing Between the Snowball and Avalanche Payoff Methods"
+                          fill
+                          loading="lazy"
+                          className="rounded-md object-cover"
+                          sizes="50px"
+                        />
+                      </div>
+                      <div>
+                        <Link
+                          href="/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          The Debt Detox: Choosing Between the Snowball and
+                          Avalanche Payoff Methods
+                        </Link>
+                      </div>
+                    </div>
+
                     {/* Legacy Planning 101 */}
                     <div className="flex items-center gap-3">
                       <div className="relative w-[50px] h-[50px] flex-shrink-0">
@@ -79,7 +102,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/legacy-planning-how-to-talk-to-aging-parents-about-finances"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes
+                          Legacy Planning 101: How to Talk to Aging Parents
+                          About Their Finances and Wishes
                         </Link>
                       </div>
                     </div>
@@ -101,7 +125,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances
+                          Micro-Investing for Big Dreams: How $5 a Day Changes
+                          Your Finances
                         </Link>
                       </div>
                     </div>
@@ -169,29 +194,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Beat Inflation with Your Cashback
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* FICO Score Guide */}
-                    <div className="flex items-center gap-3">
-                      <div className="relative w-[50px] h-[50px] flex-shrink-0">
-                        <Image
-                          src="https://media.topfinanzas.com/images/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score.webp"
-                          alt="Guide: How to Use Multiple Credit Cards to Maximize Your FICO Score"
-                          fill
-                          loading="lazy"
-                          className="rounded-md object-cover"
-                          sizes="50px"
-                        />
-                      </div>
-                      <div>
-                        <Link
-                          href="/personal-finance/guide-how-to-use-multiple-credit-cards-to-maximize-your-fico-score"
-                          className="text-sm font-medium hover:underline line-clamp-2"
-                        >
-                          Guide: How to Use Multiple Credit Cards to Maximize
-                          Your FICO Score
                         </Link>
                       </div>
                     </div>

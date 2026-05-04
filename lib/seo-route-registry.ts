@@ -696,4 +696,88 @@ export const ROUTE_SEO_REGISTRY: Record<string, RouteSeoEntry> = {
       contentType: "article",
       date: "2025-10-28T00:00:00Z",
     },
+  "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners":
+    {
+      pathname:
+        "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
+      title:
+        "The Financial Integration Roadmap: A Step-by-Step Guide for Newlyweds and Long-Term Partners",
+      description:
+        "Learn how to combine finances as a couple with a practical roadmap for shared budgets, joint goals, and transparent money decisions.",
+      image:
+        "https://media.topfinanzas.com/images/financial-integration-roadmap-newlyweds-partners.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
+  "/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory":
+    {
+      pathname:
+        "/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory",
+      title:
+        "Micro-Investing for Big Dreams: How $5 a Day Can Change Your Financial Trajectory",
+      description:
+        "Discover how consistent micro-investing can build momentum over time, and learn practical steps to start investing with small daily amounts.",
+      image:
+        "https://media.topfinanzas.com/images/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
+  "/personal-finance/the-30-day-spending-challenge-uncovering-your-hidden-money-habits":
+    {
+      pathname:
+        "/personal-finance/the-30-day-spending-challenge-uncovering-your-hidden-money-habits",
+      title:
+        "The 30-Day Spending Challenge: Uncovering Your Hidden Money Habits",
+      description:
+        "Take the 30-day spending challenge and discover the hidden money habits draining your budget. A practical guide for Americans ready to take control of their finances.",
+      image:
+        "https://media.topfinanzas.com/images/the-30-day-spending-challenge-uncovering-your-hidden-money-habits.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
+  "/personal-finance/legacy-planning-how-to-talk-to-aging-parents-about-finances":
+    {
+      pathname:
+        "/personal-finance/legacy-planning-how-to-talk-to-aging-parents-about-finances",
+      title:
+        "Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes",
+      description:
+        "A practical guide to discussing legacy planning with aging parents, including how to start the conversation and organize key financial decisions.",
+      image:
+        "https://media.topfinanzas.com/images/legacy-planning-how-to-talk-to-aging-parents-about-finances.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
+  "/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free":
+    {
+      pathname:
+        "/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free",
+      title:
+        "Building Your Financial Safety Net: How to Save Your First $1,000 (Stress-Free)",
+      description:
+        "Saving your first $1,000 emergency fund is the single most impactful financial move you can make. Here's a practical, stress-free plan to get there fast.",
+      image:
+        "https://media.topfinanzas.com/images/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
+  "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods":
+    {
+      pathname:
+        "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
+      title:
+        "The Debt Detox: Choosing Between the Snowball and Avalanche Payoff Methods",
+      description:
+        "Compare debt snowball and debt avalanche payoff methods, understand the trade-offs, and build a practical debt plan you can sustain.",
+      image:
+        "https://media.topfinanzas.com/images/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods.webp",
+      category: "personal-finance",
+      contentType: "article",
+      date: "2026-05-04T00:00:00Z",
+    },
 };

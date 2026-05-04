@@ -1,8 +1,8 @@
-feat: add new personal finance blog articles
+feat: publish new personal finance guides and sync SEO/search indexes
 
-- Add article "Legacy Planning 101"
-- Add article "Micro-Investing for Big Dreams"
-- Add article "The Financial Integration Roadmap"
-- Update blog and personal finance index pages
-- Update recent articles in blog layout
-- Update search index with new content
+- add new personal finance articles for debt payoff, emergency savings, and spending challenge
+- update blog and personal finance listings with latest posts
+- refresh blog sidebar recent articles entries
+- sync SEO route registry and search index for newly published content
+- update TOFU blog generation instructions and add blog-writing skill assets
+- include current dependency lockfile updates

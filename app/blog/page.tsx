@@ -40,16 +40,56 @@ export default function BlogArchivePage() {
   // Combine posts from both categories
   const allPosts: PostItem[] = [
     {
-      title: "Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes | Top Finance US",
-      slug: "legacy-planning-how-to-talk-to-aging-parents-about-finances",
-      description: "Learn how to approach the difficult conversation about legacy planning with your aging parents. Discover actionable steps to understand their financial wishes.",
-      image: "https://media.topfinanzas.com/images/legacy-planning-how-to-talk-to-aging-parents-about-finances.webp",
+      title:
+        "The Debt Detox: Choosing Between the Snowball and Avalanche Payoff Methods | Top Finance US",
+      slug: "the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
+      description:
+        "Choosing between debt snowball and debt avalanche comes down to behavior versus math. Compare both payoff methods and build a realistic debt plan.",
+      image:
+        "https://media.topfinanzas.com/images/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods.webp",
       date: "May 4, 2026",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
     },
     {
-      title: "Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances | Top Finance US",
+      title:
+        "Building Your Financial Safety Net: How to Save Your First $1,000 (Stress-Free) | Top Finance US",
+      slug: "building-your-financial-safety-net-how-to-save-your-first-1000-stress-free",
+      description:
+        "Saving your first $1,000 emergency fund is the single most impactful financial move you can make. Here's a practical, stress-free plan to get there fast.",
+      image:
+        "https://media.topfinanzas.com/images/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
+      title:
+        "The 30-Day Spending Challenge: Uncovering Your Hidden Money Habits | Top Finance US",
+      slug: "the-30-day-spending-challenge-uncovering-your-hidden-money-habits",
+      description:
+        "Take the 30-day spending challenge and discover the hidden money habits draining your budget. A practical guide for Americans ready to take control of their finances.",
+      image:
+        "https://media.topfinanzas.com/images/the-30-day-spending-challenge-uncovering-your-hidden-money-habits.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
+      title:
+        "Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes | Top Finance US",
+      slug: "legacy-planning-how-to-talk-to-aging-parents-about-finances",
+      description:
+        "Learn how to approach the difficult conversation about legacy planning with your aging parents. Discover actionable steps to understand their financial wishes.",
+      image:
+        "https://media.topfinanzas.com/images/legacy-planning-how-to-talk-to-aging-parents-about-finances.webp",
+      date: "May 4, 2026",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+    },
+    {
+      title:
+        "Micro-Investing for Big Dreams: How $5 a Day Changes Your Finances | Top Finance US",
       slug: "micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory",
       description:
         "Discover how micro-investing just $5 a day can transform your personal finances. Learn the basics, explore the power of compounding, and start building wealth today.",

@@ -15,9 +15,11 @@ Generate **one complete Next.js page component** (`page.tsx`) for each commissio
 - Follow established layout, styling, and component patterns
 - Deliver internal linking, rich sections, and actionable takeaways tailored to US readers
 
-### Mandatory Listing Synchronization
+### Mandatory Listing and Sitemap Synchronization
 
 Whenever you create, update, or delete any blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Update metadata for edits, remove entries for deletions, and add new entries for creations so the rendered listings always reflect the current content set.
+
+You must also update `lib/seo-route-registry.ts` in the same operation so the route is included (or removed) from the generated sitemap at `/sitemap.xml` via `app/sitemap.ts`.
 
 ## Quick Reference
 
@@ -25,7 +27,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 
 - `{pillar}` (topic family) and `{isPillar}` flag
 - `{mainKeyword}` (primary SEO keywords for metadata and content integration)
-- <tentativeTitle>Legacy Planning 101: How to Talk to Aging Parents About Their Finances and Wishes</tentativeTitle>
+- <tentativeTitle>Building Your Financial Safety Net: How to Save Your First $1,000 (Stress-Free)</tentativeTitle>
 - `{contentFocus}` (angle and category guidance)
 - `{seoIntentType}` (informational, product awareness, user intent)
 - `{funnelStage}` (TOFU | MOFU | BOFU. Default to TOFU if not specified)
@@ -46,6 +48,8 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
    - Add the article to `/app/blog/page.tsx` in the `allPosts` array
    - Add the article to `/app/personal-finance/page.tsx` in the `allPosts` array
 
+- Add the route metadata to `/lib/seo-route-registry.ts` so it is emitted by `/app/sitemap.ts`
+
 - Update both arrays immediately after generating the page component, and keep them in sync for any subsequent edits or deletions
 
 **Key Tools**:
@@ -55,7 +59,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 - Workspace file system - inspect existing article templates for structure and class usage
 - `replace_string_in_file` - update blog and category page arrays
 
----
+## Prompt for Coding Agent
 
 <Task>
 
@@ -233,6 +237,14 @@ After generating the blog article component, you MUST immediately update the fol
    - Place at the top of the array
    - Use `replace_string_in_file` tool to update
 
+3. **Sitemap Route Registry** (`/lib/seo-route-registry.ts`):
+
+- Add a new route object keyed by the canonical pathname (for example, `/personal-finance/{slug}`)
+- Include all required fields: `pathname`, `title`, `description`, `image`, `category`, `contentType`, and `date`
+- Use `category: "personal-finance"` (or `"financial-solutions"` when applicable) and `contentType: "article"` for blog posts
+- For deletions, remove the corresponding registry entry
+- For edits, keep route metadata synchronized with the latest page metadata
+
 **Example Entry Format for Blog Page**:
 
 ```typescript
@@ -243,7 +255,7 @@ After generating the blog article component, you MUST immediately update the fol
   image: "https://media.topfinanzas.com/images/article-image.webp",
   category: "Personal Finance",
   categoryPath: "/personal-finance",
-  date: "DD Month YYYY", // Current date in US format (e.g., "October 23, 2025")
+  date: "Month DD, YYYY", // Current date in US format (e.g., "October 23, 2025")
 }
 ```
 
@@ -255,12 +267,12 @@ After generating the blog article component, you MUST immediately update the fol
   slug: "article-slug",
   description: "Brief article description",
   image: "https://media.topfinanzas.com/images/article-image.webp",
-  date: "DD Month YYYY", // Current date in US format (e.g., "October 23, 2025")
+  date: "Month DD, YYYY", // Current date in US format (e.g., "October 23, 2025")
   category: "guide", // Options: "guide", "creditCards", "loans", "debt"
 }
 ```
 
-**CRITICAL**: This step is NOT optional. Articles that are not added to these indexes will remain invisible to users browsing the site. Always complete this integration step immediately after generating the page component.
+**CRITICAL**: This step is NOT optional. Articles that are not added to these indexes and to `lib/seo-route-registry.ts` will remain invisible in listings and/or excluded from the sitemap. Always complete this integration step immediately after generating the page component.
 
 ### Step 9: Optional Enhancements
 

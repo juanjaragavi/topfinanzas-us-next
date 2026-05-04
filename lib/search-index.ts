@@ -10,12 +10,43 @@ export interface SearchItem {
 // In a real application, this might be generated at build time
 export const searchIndex: SearchItem[] = [
   {
+    id: "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
+    href: "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
+    title:
+      "The Debt Detox: Choosing Between the Snowball and Avalanche Payoff Methods | Top Finance US",
+    description:
+      "Choosing between debt snowball and debt avalanche comes down to behavior versus math. Compare both payoff methods and build a realistic debt plan.",
+    image:
+      "https://media.topfinanzas.com/images/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods.webp",
+  },
+  {
+    id: "/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free",
+    href: "/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free",
+    title:
+      "Building Your Financial Safety Net: How to Save Your First $1,000 (Stress-Free) | Top Finance US",
+    description:
+      "Saving your first $1,000 emergency fund is the single most impactful financial move you can make. Here's a practical, stress-free plan to get there fast.",
+    image:
+      "https://media.topfinanzas.com/images/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free.webp",
+  },
+  {
+    id: "/personal-finance/the-30-day-spending-challenge-uncovering-your-hidden-money-habits",
+    href: "/personal-finance/the-30-day-spending-challenge-uncovering-your-hidden-money-habits",
+    title:
+      "The 30-Day Spending Challenge: Uncovering Your Hidden Money Habits | Top Finance US",
+    description:
+      "Take the 30-day spending challenge and discover hidden money habits draining your budget with a practical framework for US households.",
+    image:
+      "https://media.topfinanzas.com/images/the-30-day-spending-challenge-uncovering-your-hidden-money-habits.webp",
+  },
+  {
     id: "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
     href: "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
     title: "The Financial Integration Roadmap | Top Finance US",
     description:
       "A step-by-step guide for newlyweds and long-term partners on merging finances, setting joint goals, and navigating shared expenses together.",
-    image: "https://media.topfinanzas.com/images/financial-integration-roadmap-newlyweds-partners.webp",
+    image:
+      "https://media.topfinanzas.com/images/financial-integration-roadmap-newlyweds-partners.webp",
   },
   {
     id: "/personal-finance/best-0-apr-balance-transfer-cards-a-guide-to-managing-debt",
