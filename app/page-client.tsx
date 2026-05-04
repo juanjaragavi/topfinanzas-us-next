@@ -317,7 +317,7 @@ export default function Home() {
                   alt={post.frontmatter.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  priority={idx === 0}
+                  priority={true}
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />

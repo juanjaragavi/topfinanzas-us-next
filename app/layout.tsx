@@ -18,7 +18,6 @@ import AdAccessibilityFix from "@/components/analytics/ad-accessibility-fix";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
 import TopAds from "@/components/analytics/topads";
 import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
-import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import { MobileMenuProvider } from "@/components/providers/mobile-menu-context";
 import SiteWrapper from "@/components/layout/site-wrapper";
@@ -173,13 +172,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://securepubads.g.doubleclick.net" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* Preconnect to media domain to establish early connection */}
-        <link
-          rel="preconnect"
-          href="https://media.topfinanzas.com"
-          crossOrigin="anonymous"
-        />
-
         {/* Preconnect to TopAds CDN for faster ad script delivery */}
         <link rel="preconnect" href="https://ads.gamadx.com" />
         <link rel="dns-prefetch" href="https://ads.gamadx.com" />
@@ -199,8 +191,6 @@ export default function RootLayout({
           <GoogleAdManager />
           <TopAds />
         </ClientOnly>
-
-        <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
         <link rel="icon" href="/favicon.png" type="image/png" />
