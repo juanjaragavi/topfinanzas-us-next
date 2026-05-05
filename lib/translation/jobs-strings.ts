@@ -25,7 +25,7 @@ export const jobsStrings: Record<string, string> = {
   "footer.editorialNote.body":
     "The compensation we receive from our affiliated partners does not influence the recommendations or advice that our editorial team provides in our articles, or otherwise affect any of the site content. While we work hard to provide accurate and up-to-date information that we believe our users will find relevant, we do not guarantee that all information provided is complete, and make no representations or warranties in connection thereto, nor as to the accuracy or applicability thereof.",
   "footer.copyright":
-    "A TOP NETWORKS INC. Product |  00A9 Copyright Top Networks Inc. 2025",
+    "A TOP NETWORKS INC. Product |  00A9 Copyright Top Networks Inc. 2026",
 
   // ── Floating CTA ───────────────────────────────────────────────────────
   "floatingCta.headline": "Great benefits & flexibility!",

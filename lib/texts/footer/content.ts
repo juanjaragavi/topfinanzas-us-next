@@ -28,11 +28,11 @@ export const footerContent = {
 
     /** Copyright notice */
     copyright: {
-      text: "Copyright Top Networks Inc. 2025",
-      year: "2025",
+      text: "Copyright Top Networks Inc. 2026",
+      year: "2026",
     },
     fullCopyright: {
-      text: "ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025 REPRODUCTION IN WHOLE OR IN PART BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE EXPRESS WRITTEN AUTHORIZATION OF ITS OWNER.",
+      text: "ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2026 REPRODUCTION IN WHOLE OR IN PART BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE EXPRESS WRITTEN AUTHORIZATION OF ITS OWNER.",
     },
   },
 

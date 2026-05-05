@@ -1,7 +1,1 @@
-perf: convert homepage to server component for PageSpeed score improvement
-
-- Remove 'use client' directive from page-client.tsx (only hook was useMemo)
-- Move homepagePosts sort to module-level constant (computed once at build time)
-- Fix LCP image: priority={idx === 0} instead of priority={true} for all 3 featured posts
-- Homepage now prerendered as static HTML (○) instead of client-rendered
-- Expected improvements: Speed Index, TBT, fetchpriority=high on LCP image
+chore: update copyright year to 2026 across footer and translations

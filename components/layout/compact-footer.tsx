@@ -26,7 +26,7 @@ export function CompactFooter() {
         {/* Copyright Text Block */}
         <div className="text-left mb-4">
           <p className="text-xs uppercase tracking-wide text-white">
-            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL
+            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2026. TOTAL OR PARTIAL
             REPRODUCTION BY ANY MEANS OR FORM WITHOUT THE WRITTEN AND EXPRESS
             AUTHORIZATION OF THE COPYRIGHT HOLDER IS PROHIBITED.
           </p>
@@ -47,7 +47,7 @@ export function CompactFooter() {
           </span>
           <span className="text-white">
             {" "}
-            | Copyright Top Networks Inc. 2025
+            | Copyright Top Networks Inc. 2026
           </span>
         </div>
       </div>
