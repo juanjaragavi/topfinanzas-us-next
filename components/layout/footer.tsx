@@ -155,6 +155,10 @@ export function Footer() {
               {footerContent.companyInfo.productLabel}
             </span>
             <span className="mx-2">|</span>
+            <span className="font-normal">
+              {footerContent.companyInfo.registrationNumber}
+            </span>
+            <span className="mx-2">|</span>
             {footerNavigation.legalLinks.map((link) => (
               <span key={link.href}>
                 <Link

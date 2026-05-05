@@ -15,6 +15,7 @@ export const footerContent = {
   companyInfo: {
     name: "TOP NETWORKS INC",
     productLabel: "A TOP NETWORKS INC. Product",
+    registrationNumber: "RUC 155730757-0002-2022",
   },
 
   /** Legal content */
