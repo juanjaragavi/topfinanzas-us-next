@@ -16,7 +16,7 @@ import {
   commonStrings,
 } from "@/lib/constants";
 import { step1Strings, step2Strings } from "@/lib/strings";
-import { pushGTMConversion } from "@/components/analytics/gtm";
+import { pushGTMConversion } from "@/components/analytics/gtm-partytown";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 import { redirectWithUtmParams } from "@/lib/utils/url-builder";
 

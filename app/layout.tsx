@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 import "./globals.css";
 import { logger } from "@/lib/logger";
-import { GoogleTagManagerNoScript } from "@/components/analytics/gtm";
+import { GoogleTagManagerNoScript } from "@/components/analytics/gtm-partytown";
 import HeadScripts from "@/components/analytics/head-scripts";
 import AnalyticsWrapper from "@/components/analytics/analytics-wrapper";
 import NavigationProvider from "@/components/providers/navigation-provider";

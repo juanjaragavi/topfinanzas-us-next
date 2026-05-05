@@ -338,16 +338,17 @@ export default function Home() {
                   className="block"
                 >
                   <div className="relative h-48 overflow-hidden rounded-lg mb-4">
-                    <Image
-                      src={
-                        post.frontmatter.featuredImage ||
-                        "https://media.topfinanzas.com/images/placeholder.webp"
-                      }
-                      alt={post.frontmatter.title}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                  <Image
+                    src={
+                      post.frontmatter.featuredImage ||
+                      "https://media.topfinanzas.com/images/placeholder.webp"
+                    }
+                    alt={post.frontmatter.title}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                  />
                   </div>
                 </Link>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
@@ -386,13 +387,14 @@ export default function Home() {
               >
                 <Image
                   src={
-                    cardPosts[0]?.frontmatter.featuredImage ||
+                    savingsPosts[0]?.frontmatter.featuredImage ||
                     "https://media.topfinanzas.com/images/placeholder.webp"
                   }
-                  alt={cardPosts[0]?.frontmatter.title || ""}
+                  alt={savingsPosts[0]?.frontmatter.title || ""}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -460,6 +462,7 @@ export default function Home() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -491,6 +494,7 @@ export default function Home() {
                         fill
                         className="object-cover"
                         sizes="64px"
+                        loading="lazy"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -527,6 +531,7 @@ export default function Home() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -558,6 +563,7 @@ export default function Home() {
                         fill
                         className="object-cover"
                         sizes="64px"
+                        loading="lazy"
                       />
                     </div>
                     <div className="flex-1 min-w-0">

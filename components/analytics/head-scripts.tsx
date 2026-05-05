@@ -1,19 +1,21 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import PartytownInit from "./partytown-init";
 
-const GoogleTagManager = dynamic(
-  () => import("@/components/analytics/gtm"),
+const GoogleTagManagerPartytown = dynamic(
+  () => import("./gtm-partytown").then((mod) => mod.default),
   { ssr: false }
 );
-const TopAds = dynamic(() => import("@/components/analytics/topads"), {
+const TopAds = dynamic(() => import("./topads"), {
   ssr: false,
 });
 
 export default function HeadScripts() {
   return (
     <>
-      <GoogleTagManager />
+      <PartytownInit />
+      <GoogleTagManagerPartytown />
       <TopAds />
     </>
   );

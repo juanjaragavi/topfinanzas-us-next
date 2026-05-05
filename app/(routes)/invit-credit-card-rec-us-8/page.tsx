@@ -9,7 +9,7 @@ import { formLogger } from "@/lib/logger";
 import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
 import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
 import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
-import { pushGTMConversion } from "@/components/analytics/gtm";
+import { pushGTMConversion } from "@/components/analytics/gtm-partytown";
 import {
   MONTHLY_SPEND_OPTIONS,
   AFFILIATE_URL,

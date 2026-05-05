@@ -1,12 +1,11 @@
-perf: optimize Core Web Vitals and reduce main-thread blocking
+perf: integrate Partytown to offload GTM and third-party scripts to web worker
 
-- Reduce preconnect count from 11 to 4 to fix PSI "Network dependency tree" warning
-- Convert 7 preconnects to dns-prefetch for lower-priority third parties
-- Dynamic import all analytics components (GTM, TopAds, UTM, SPA handler)
-  with ssr: false to exclude them from initial SSR/JS bundle
-- Change GTM dataLayer init strategy from afterInteractive to lazyOnload
-- Extract analytics into HeadScripts and AnalyticsWrapper client components
-- Add 8 heavy libraries to optimizePackageImports for better tree-shaking
-  (react-icons, recharts, embla-carousel-react, cmdk, date-fns, vaul,
-   @radix-ui/react-alert-dialog, @radix-ui/react-select, etc.)
-- Remove unused ClientOnly and Suspense imports from layout.tsx
+- Install @builder.io/partytown and copy lib files to public/~partytown
+- Create PartytownInit component that forwards dataLayer.push, gtag, fbq, clarity
+- Create GoogleTagManagerPartytown that loads GTM with type="text/partytown"
+- Move all GTM imports to new gtm-partytown.tsx to preserve dataLayer API
+- Add TypeScript declarations for @builder.io/partytown/react
+- Add loading="lazy" to all below-the-fold homepage images (secondary features,
+  category hero images, and category thumbnails)
+- TopAds remains on lazyOnload (not Partytown) because it injects ad iframes
+  into the DOM, which requires main-thread DOM access
