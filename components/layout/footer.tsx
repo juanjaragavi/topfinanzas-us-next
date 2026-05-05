@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Col 2: Categories */}
           <div className="order-2">
-            <h2 className="footer-h2 mb-4 text-white text-base font-semibold">
+            <h2 className="footer-h2 mt-8 md:mt-0 mb-4 text-white text-base font-semibold">
               {footerContent.headings.categories}
             </h2>
             <ul className="space-y-4">
@@ -50,7 +50,7 @@ export function Footer() {
 
           {/* Col 3: Navigate & Socials */}
           <div className="order-3">
-            <h2 className="footer-h2 mb-4 text-white text-base font-semibold">
+            <h2 className="footer-h2 mt-8 md:mt-0 mb-4 text-white text-base font-semibold">
               {footerContent.headings.navigate}
             </h2>
             <ul className="space-y-4">

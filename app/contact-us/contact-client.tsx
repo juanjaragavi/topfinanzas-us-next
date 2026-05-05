@@ -238,8 +238,39 @@ export default function ContactUsPage() {
             We look forward to hearing from you soon!
           </p>
 
+          {/* Department Directory */}
+          <div className="pt-4 pb-2 border-b border-gray-200">
+            <h3 className="text-xl font-bold text-[#2E74B5] mb-4">
+              Department Directory
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <strong className="text-gray-800">Editorial Team:</strong>
+                <p className="text-sm text-gray-600">
+                  For feedback on our articles, corrections, or pitches.
+                </p>
+              </li>
+              <li>
+                <strong className="text-gray-800">Partnerships:</strong>
+                <p className="text-sm text-gray-600">
+                  For financial institutions looking to feature their products.
+                </p>
+              </li>
+              <li>
+                <strong className="text-gray-800">Technical Support:</strong>
+                <p className="text-sm text-gray-600">
+                  Report broken links, calculation errors, or site issues.
+                </p>
+              </li>
+            </ul>
+            <p className="text-xs text-gray-500 mt-4 italic">
+              Please specify your intended department in the message field so we
+              can route your inquiry efficiently.
+            </p>
+          </div>
+
           {/* Contact Image */}
-          <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+          <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg mt-6">
             <Image
               src="https://media.topfinanzas.com/images/contacto360x738.png"
               alt="Contact Top Finanzas"
@@ -467,6 +498,65 @@ export default function ContactUsPage() {
               </button>
             </form>
           )}
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="mt-20 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-[#2E74B5] mb-8 text-center">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              Can you give me personal financial advice?
+            </h3>
+            <p className="text-gray-600">
+              Top Finanzas US provides educational resources and product
+              comparisons to help you make informed decisions. However, we are
+              not registered financial advisors and cannot provide personalized
+              investment, tax, or legal advice. If you need customized guidance,
+              we recommend consulting with a certified financial planner (CFP)
+              or legal professional.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              How long will it take to get a response?
+            </h3>
+            <p className="text-gray-600">
+              Our support team reviews messages Monday through Friday during
+              regular business hours (EST). We aim to respond to all standard
+              inquiries within 24 to 48 hours. If your question requires
+              specialized research from our editorial team, it may take slightly
+              longer.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              How do I unsubscribe from your newsletter?
+            </h3>
+            <p className="text-gray-600">
+              Every newsletter we send includes a clear &quot;Unsubscribe&quot;
+              link at the bottom. Clicking that link will instantly remove you
+              from our mailing list. You can also use the contact form above to
+              request removal; just ensure you use the email address associated
+              with your subscription.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              How do you choose which financial products to feature?
+            </h3>
+            <p className="text-gray-600">
+              Our editorial team evaluates products based on fees, rewards,
+              accessibility, and overall consumer value. While we do receive
+              compensation from some partner institutions, this does not dictate
+              our ratings or the educational content we publish. For more
+              details on how we make money, please review our Advertising
+              Disclosure.
+            </p>
+          </div>
         </div>
       </div>
     </main>
