@@ -1,1 +1,12 @@
-perf: defer GTM to lazyOnload, expand preconnects, target modern browsers
+perf: optimize Core Web Vitals and reduce main-thread blocking
+
+- Reduce preconnect count from 11 to 4 to fix PSI "Network dependency tree" warning
+- Convert 7 preconnects to dns-prefetch for lower-priority third parties
+- Dynamic import all analytics components (GTM, TopAds, UTM, SPA handler)
+  with ssr: false to exclude them from initial SSR/JS bundle
+- Change GTM dataLayer init strategy from afterInteractive to lazyOnload
+- Extract analytics into HeadScripts and AnalyticsWrapper client components
+- Add 8 heavy libraries to optimizePackageImports for better tree-shaking
+  (react-icons, recharts, embla-carousel-react, cmdk, date-fns, vaul,
+   @radix-ui/react-alert-dialog, @radix-ui/react-select, etc.)
+- Remove unused ClientOnly and Suspense imports from layout.tsx

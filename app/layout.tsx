@@ -2,29 +2,17 @@ import type React from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
-import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
 import "./globals.css";
 import { logger } from "@/lib/logger";
-import GoogleTagManager, {
-  GoogleTagManagerNoScript,
-} from "@/components/analytics/gtm";
-import UtmPersister from "@/components/analytics/utm-persister";
-import UtmLinkInjector from "@/components/analytics/utm-link-injector";
-import UtmMonitor from "@/components/analytics/utm-monitor";
-import AdAccessibilityFix from "@/components/analytics/ad-accessibility-fix";
-import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
-import TopAds from "@/components/analytics/topads";
-import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
+import { GoogleTagManagerNoScript } from "@/components/analytics/gtm";
+import HeadScripts from "@/components/analytics/head-scripts";
+import AnalyticsWrapper from "@/components/analytics/analytics-wrapper";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import { MobileMenuProvider } from "@/components/providers/mobile-menu-context";
 import SiteWrapper from "@/components/layout/site-wrapper";
 import { MobileMenu } from "@/components/layout/mobile-menu";
-{
-  /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
-}
-import ClientOnly from "@/components/ClientOnly";
 import { generateWebSiteSchema } from "@/lib/seo";
 
 // Use local font to avoid external requests during build
@@ -162,62 +150,34 @@ export default function RootLayout({
         />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        {/* Preconnect to Analytics Domains for Performance */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Google/Doubleclick Ads — largest unused-JS contributor in PSI */}
-        <link
-          rel="preconnect"
-          href="https://securepubads.g.doubleclick.net"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://securepubads.g.doubleclick.net"
-        />
-        <link
-          rel="preconnect"
-          href="https://pagead2.googlesyndication.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://pagead2.googlesyndication.com"
-        />
-        <link rel="dns-prefetch" href="https://tpc.googlesyndication.com" />
-        {/* Google FundingChoices (Consent) */}
-        <link
-          rel="preconnect"
-          href="https://fundingchoicesmessages.google.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://fundingchoicesmessages.google.com"
-        />
-        {/* Facebook Pixel */}
-        <link
-          rel="preconnect"
-          href="https://connect.facebook.net"
-          crossOrigin="anonymous"
-        />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        {/* Microsoft Clarity */}
-        <link
-          rel="preconnect"
-          href="https://scripts.clarity.ms"
-          crossOrigin="anonymous"
-        />
-        <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
-        {/* Image CDN — every page image comes from here; preconnect is critical for LCP */}
+        {/*
+          Resource Hints — Optimized for Core Web Vitals
+          Keep preconnect count ≤ 4 to avoid connection overhead (PSI warning).
+          Only preconnect to origins that serve render-blocking or LCP-critical resources.
+        */}
+        {/* Image CDN — critical for LCP; every page loads hero images from here */}
         <link
           rel="preconnect"
           href="https://media.topfinanzas.com"
           crossOrigin="anonymous"
         />
-        <link rel="dns-prefetch" href="https://media.topfinanzas.com" />
-        {/* TopAds CDN */}
-        <link rel="preconnect" href="https://ads.gamadx.com" />
+        {/* GTM — loads early via lazyOnload but preconnect shaves DNS/TCP time */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {/* Google Ads/Doubleclick — revenue-critical, preconnect helps ad fill speed */}
+        <link
+          rel="preconnect"
+          href="https://securepubads.g.doubleclick.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://pagead2.googlesyndication.com"
+          crossOrigin="anonymous"
+        />
+        {/* dns-prefetch only for lower-priority third parties */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
         <link rel="dns-prefetch" href="https://ads.gamadx.com" />
 
         <script
@@ -230,10 +190,7 @@ export default function RootLayout({
           }}
         />
 
-        <ClientOnly>
-          <GoogleTagManager />
-          <TopAds />
-        </ClientOnly>
+        <HeadScripts />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -276,17 +233,7 @@ export default function RootLayout({
           <NavigationProvider>
             <MobileMenu />
             <SiteWrapper>
-              <Suspense fallback={null}>
-                <UtmPersister />
-                <UtmLinkInjector />
-                <AdAccessibilityFix />{" "}
-                {/* Prevents ad scripts from setting aria-hidden on body */}
-                <TopAdsSPAHandler />
-                {process.env.NODE_ENV === "development" && <UtmMonitor />}
-                {process.env.NODE_ENV === "development" && (
-                  <AnalyticsValidationPanel />
-                )}
-              </Suspense>
+              <AnalyticsWrapper />
               {children}
             </SiteWrapper>
           </NavigationProvider>
