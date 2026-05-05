@@ -10,7 +10,6 @@ import { logger } from "@/lib/logger";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
-import GoogleAdManager from "@/components/analytics/gam";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmLinkInjector from "@/components/analytics/utm-link-injector";
 import UtmMonitor from "@/components/analytics/utm-monitor";
@@ -188,7 +187,6 @@ export default function RootLayout({
 
         <ClientOnly>
           <GoogleTagManager />
-          <GoogleAdManager />
           <TopAds />
         </ClientOnly>
 

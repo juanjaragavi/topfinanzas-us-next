@@ -126,7 +126,10 @@ export function Header() {
       // On mobile, always keep header visible (sticky behavior)
       if (isMobile) {
         nextIsVisible = true;
-      } else if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
+      } else if (
+        currentScrollY > lastScrollYRef.current &&
+        currentScrollY > 100
+      ) {
         nextIsVisible = false; // Hide on scroll down (desktop only)
       } else {
         nextIsVisible = true; // Show on scroll up
@@ -342,7 +345,10 @@ export function Header() {
 
       {/* Search Bar Overlay */}
       {isSearchOpen ? (
-        <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        <SearchBar
+          isOpen={isSearchOpen}
+          onClose={() => setIsSearchOpen(false)}
+        />
       ) : null}
     </>
   );
