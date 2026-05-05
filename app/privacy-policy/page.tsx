@@ -249,6 +249,29 @@ export default function PrivacyPolicyPage() {
               based on user preferences.
             </li>
             <li>
+              <strong>Ad Personalization Controls:</strong> You can manage or
+              disable Google ad personalization by visiting{" "}
+              <a
+                href="https://adssettings.google.com"
+                className="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Ads Settings
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://myadcenter.google.com"
+                className="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google My Ad Center
+              </a>
+              . These tools let you review and update your ad personalization
+              preferences directly with Google.
+            </li>
+            <li>
               <strong>Analytics Tools:</strong> These tools gather details on
               your browsing patterns, such as page visits, site interactions,
               and referral sites.
