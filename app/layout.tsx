@@ -168,11 +168,13 @@ export default function RootLayout({
 
         {/* Preconnect to Analytics Domains for Performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://securepubads.g.doubleclick.net" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link
+          rel="dns-prefetch"
+          href="https://securepubads.g.doubleclick.net"
+        />
 
         {/* Preconnect to TopAds CDN for faster ad script delivery */}
-        <link rel="preconnect" href="https://ads.gamadx.com" />
         <link rel="dns-prefetch" href="https://ads.gamadx.com" />
 
         <script

@@ -1,14 +1,7 @@
-import { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 
-export const metadata: Metadata = {
-  title: "About Us | Top Finanzas US",
-  description:
-    "Learn about Top Finanzas, your trusted guide to personal finance management, financial freedom and prosperity in the United States.",
-};
-
-export default function AboutUsLayout({
+export default function TermsConditionsLayout({
   children,
 }: {
   children: React.ReactNode;

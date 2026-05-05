@@ -2,8 +2,12 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { logger } from "@/lib/logger";
-import { TOPADS_EXCLUDED_PATHS } from "@/lib/jobs-delayed-ads";
+import {
+  TOPADS_EXCLUDED_PATHS,
+  isTopAdsExcludedPath,
+} from "@/lib/jobs-delayed-ads";
 
 /**
  * TopAds Integration Component
@@ -21,6 +25,8 @@ import { TOPADS_EXCLUDED_PATHS } from "@/lib/jobs-delayed-ads";
  * @see /lib/documents/topAdsGuide.md for full configuration options
  */
 export default function TopAds() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // Mark when TopAds component mounts
     if (typeof window !== "undefined" && window.performance) {
@@ -29,12 +35,16 @@ export default function TopAds() {
     }
   }, []);
 
+  if (isTopAdsExcludedPath(pathname)) {
+    return null;
+  }
+
   return (
     <>
       {/* Load TopAds configuration script */}
       <Script
         id="topads-config"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.topAds = window.topAds || {};

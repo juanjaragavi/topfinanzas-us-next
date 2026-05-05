@@ -274,8 +274,7 @@ export default function Home() {
             alt="Top Finance Hero"
             fill
             className="object-cover object-center"
-            priority
-            sizes="100vw"
+            sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
         {/* Content */}
@@ -314,6 +313,8 @@ export default function Home() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   priority={idx === 0}
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                  loading={idx === 0 ? "eager" : "lazy"}
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />

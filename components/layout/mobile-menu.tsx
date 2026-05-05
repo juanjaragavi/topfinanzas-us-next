@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X, ChevronDown } from "lucide-react";
@@ -11,6 +11,34 @@ import { headerNavigation } from "@/lib/navigation/headerNavigation";
 export function MobileMenu() {
   const { isMobileMenuOpen, closeMobileMenu } = useMobileMenu();
   const [openStates, setOpenStates] = useState<{ [key: string]: boolean }>({});
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen || !menuRef.current) {
+      return;
+    }
+
+    const menuElement = menuRef.current;
+
+    // Some third-party scripts may inject aria-hidden on focusable containers.
+    // Keep the open dialog accessible by stripping it if injected.
+    menuElement.removeAttribute("aria-hidden");
+
+    const observer = new MutationObserver(() => {
+      if (menuElement.getAttribute("aria-hidden") === "true") {
+        menuElement.removeAttribute("aria-hidden");
+      }
+    });
+
+    observer.observe(menuElement, {
+      attributes: true,
+      attributeFilter: ["aria-hidden"],
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleSection = (id: string) => {
     setOpenStates((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -31,10 +59,12 @@ export function MobileMenu() {
 
       {isMobileMenuOpen && (
         <div
+          ref={menuRef}
           className="md:hidden fixed top-0 bottom-0 left-0 w-[300px] bg-white z-50 h-full border-r border-gray-200 overscroll-contain"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation menu"
+          tabIndex={-1}
         >
           <div className="flex flex-col h-full">
             {/* Menu Header: Close Button & Logo — fixed at top, does not scroll */}
