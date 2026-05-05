@@ -275,6 +275,8 @@ export default function Home() {
             fill
             className="object-cover object-center"
             sizes="(min-width: 768px) 100vw, 0px"
+            priority
+            fetchPriority="high"
           />
         </div>
         {/* Content */}

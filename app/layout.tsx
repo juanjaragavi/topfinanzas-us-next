@@ -209,6 +209,13 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
+        {/* Image CDN — every page image comes from here; preconnect is critical for LCP */}
+        <link
+          rel="preconnect"
+          href="https://media.topfinanzas.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://media.topfinanzas.com" />
         {/* TopAds CDN */}
         <link rel="preconnect" href="https://ads.gamadx.com" />
         <link rel="dns-prefetch" href="https://ads.gamadx.com" />

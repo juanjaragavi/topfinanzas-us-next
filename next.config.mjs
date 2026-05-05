@@ -351,7 +351,17 @@ const nextConfig = {
     parallelServerBuildTraces: false,
     parallelServerCompiles: false,
     optimizeCss: true,
-    optimizePackageImports: ["next/font", "framer-motion", "lucide-react"],
+    optimizePackageImports: [
+      "next/font",
+      "framer-motion",
+      "lucide-react",
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-navigation-menu",
+      "@radix-ui/react-slot",
+      "@radix-ui/react-tabs",
+    ],
   },
   // Add compression to improve loading speeds
   compress: true,
