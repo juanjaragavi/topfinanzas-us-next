@@ -161,20 +161,56 @@ export default function RootLayout({
           }}
         />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta
-          httpEquiv="Cache-Control"
-          content="public, max-age=31536000, immutable"
-        />
 
         {/* Preconnect to Analytics Domains for Performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* Google/Doubleclick Ads — largest unused-JS contributor in PSI */}
+        <link
+          rel="preconnect"
+          href="https://securepubads.g.doubleclick.net"
+          crossOrigin="anonymous"
+        />
         <link
           rel="dns-prefetch"
           href="https://securepubads.g.doubleclick.net"
         />
-
-        {/* Preconnect to TopAds CDN for faster ad script delivery */}
+        <link
+          rel="preconnect"
+          href="https://pagead2.googlesyndication.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://pagead2.googlesyndication.com"
+        />
+        <link rel="dns-prefetch" href="https://tpc.googlesyndication.com" />
+        {/* Google FundingChoices (Consent) */}
+        <link
+          rel="preconnect"
+          href="https://fundingchoicesmessages.google.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://fundingchoicesmessages.google.com"
+        />
+        {/* Facebook Pixel */}
+        <link
+          rel="preconnect"
+          href="https://connect.facebook.net"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        {/* Microsoft Clarity */}
+        <link
+          rel="preconnect"
+          href="https://scripts.clarity.ms"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
+        {/* TopAds CDN */}
+        <link rel="preconnect" href="https://ads.gamadx.com" />
         <link rel="dns-prefetch" href="https://ads.gamadx.com" />
 
         <script

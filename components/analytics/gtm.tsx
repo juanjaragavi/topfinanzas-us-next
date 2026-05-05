@@ -73,10 +73,12 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
         }}
       />
 
-      {/* Main GTM script */}
+      {/* Main GTM script — lazyOnload defers execution until after window.load,
+          keeping third-party tag payloads (GA4, Ads, Facebook, Clarity) off the
+          critical path and significantly reducing Total Blocking Time. */}
       <Script
         id="gtm-script"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -1,1 +1,1 @@
-chore: update copyright year to 2026 across footer and translations
+perf: defer GTM to lazyOnload, expand preconnects, target modern browsers
