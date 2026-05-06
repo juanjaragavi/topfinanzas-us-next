@@ -12,7 +12,7 @@ export default function ContactUsPage() {
     email: "",
     phone: "",
     message: "",
-    acceptPolicy: false,
+    acceptTerms: false,
   });
 
   const [errors, setErrors] = useState<{
@@ -34,6 +34,46 @@ export default function ContactUsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const departmentDirectory = [
+    {
+      title: "Editorial Team",
+      description: "Feedback on our articles, corrections, or media pitches.",
+    },
+    {
+      title: "Partnerships",
+      description:
+        "Requests from financial institutions interested in featuring products.",
+    },
+    {
+      title: "Technical Support",
+      description:
+        "Report broken links, calculator issues, or other site problems.",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "Can you give me personal financial advice?",
+      answer:
+        "Top Finanzas US provides educational resources and product comparisons to help you make informed decisions. We are not registered financial advisors and cannot provide personalized investment, tax, or legal advice.",
+    },
+    {
+      question: "How long will it take to get a response?",
+      answer:
+        "Our support team reviews messages Monday through Friday during regular business hours (EST). We aim to respond to standard inquiries within 24 to 48 hours.",
+    },
+    {
+      question: "How do I unsubscribe from your newsletter?",
+      answer:
+        'Every newsletter includes an "Unsubscribe" link at the bottom. You can also use the form above to request removal and include the email tied to your subscription.',
+    },
+    {
+      question: "How do you choose which financial products to feature?",
+      answer:
+        "Our editorial team evaluates products based on fees, rewards, accessibility, and overall consumer value. Compensation from partners does not dictate our ratings or educational content.",
+    },
+  ];
 
   const validateEmail = (email: string): boolean => {
     if (!email) {
@@ -110,9 +150,12 @@ export default function ContactUsPage() {
 
     // US phone numbers validation (10 digits)
     const usPhoneRegex = /^(\+1)?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-    const cleanPhone = phoneNumber.replace(/[\s.-]/g, "");
+    const cleanPhone = phoneNumber.replace(/\D/g, "");
 
-    if (!usPhoneRegex.test(phoneNumber) && cleanPhone.length !== 10) {
+    if (
+      !usPhoneRegex.test(phoneNumber) ||
+      ![10, 11].includes(cleanPhone.length)
+    ) {
       setErrors((prev) => ({
         ...prev,
         phone: "Please enter a valid US phone number (10 digits)",
@@ -164,7 +207,7 @@ export default function ContactUsPage() {
       return;
     }
 
-    if (!formData.acceptPolicy) {
+    if (!formData.acceptTerms) {
       setErrors((prev) => ({
         ...prev,
         general: "Please accept the data processing policies",
@@ -196,7 +239,7 @@ export default function ContactUsPage() {
         email: "",
         phone: "",
         message: "",
-        acceptPolicy: false,
+        acceptTerms: false,
       });
     } catch {
       setSubmitError(
@@ -208,114 +251,151 @@ export default function ContactUsPage() {
   };
 
   return (
-    <main className="container mx-auto px-4 py-12 max-w-5xl">
-      <h1 className="text-4xl font-bold text-[#2E74B5] mb-8 text-center">
-        Contact Us
-      </h1>
-
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        {/* Left side - Text and Image */}
-        <div className="space-y-6">
-          <p className="text-lg text-gray-700">
-            Are you wondering how you can make a significant change in your
-            personal finances?
-          </p>
-          <p className="text-gray-600">
-            If you&apos;re ready to embark on a transformative journey toward
-            financial stability and prosperity, we&apos;re here to support you.
-            Contact us at{" "}
-            <a
-              href="mailto:info@topfinanzas.com"
-              className="text-blue-600 hover:underline"
-            >
-              info@topfinanzas.com
-            </a>{" "}
-            or fill out the form below to share your concerns, ideas, or plans.
-            We are committed to responding promptly and being your allies at
-            every stage of this exciting journey that will transform your life.
-          </p>
-          <p className="text-gray-700 font-medium">
-            We look forward to hearing from you soon!
-          </p>
-
-          {/* Department Directory */}
-          <div className="pt-4 pb-2 border-b border-gray-200">
-            <h3 className="text-xl font-bold text-[#2E74B5] mb-4">
-              Department Directory
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <strong className="text-gray-800">Editorial Team:</strong>
-                <p className="text-sm text-gray-600">
-                  For feedback on our articles, corrections, or pitches.
-                </p>
-              </li>
-              <li>
-                <strong className="text-gray-800">Partnerships:</strong>
-                <p className="text-sm text-gray-600">
-                  For financial institutions looking to feature their products.
-                </p>
-              </li>
-              <li>
-                <strong className="text-gray-800">Technical Support:</strong>
-                <p className="text-sm text-gray-600">
-                  Report broken links, calculation errors, or site issues.
-                </p>
-              </li>
-            </ul>
-            <p className="text-xs text-gray-500 mt-4 italic">
-              Please specify your intended department in the message field so we
-              can route your inquiry efficiently.
-            </p>
-          </div>
-
-          {/* Contact Image */}
-          <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg mt-6">
+    <main className="bg-white">
+      <div className="container mx-auto max-w-5xl px-4 py-12">
+        <div className="space-y-12">
+          <section className="relative w-full overflow-hidden rounded-2xl shadow-lg aspect-[21/9]">
             <Image
               src="https://media.topfinanzas.com/images/contacto360x738.png"
-              alt="Contact Top Finanzas"
+              alt="Contact Top Finanzas US"
               fill
               className="object-cover"
               priority
             />
-          </div>
-
-          {/* Social Media Links */}
-          <div className="pt-6">
-            <p className="text-gray-700 font-medium mb-4">
-              Follow us on our social media and take control of your finances
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/TopFinanzasParaTi"
-                className="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
-              >
-                <FaFacebook size={20} />
-              </a>
-              <a
-                href="https://youtube.com/@top_finanzas_latam"
-                className="w-10 h-10 bg-[#FF0000] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
-              >
-                <FaYoutube size={20} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@topfinanzas1"
-                className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
-              >
-                <FaTiktok size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/top_finanzas23/"
-                className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
-              >
-                <FaInstagram size={20} />
-              </a>
+            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
+              <div className="max-w-3xl space-y-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/85">
+                  TopFinanzas US
+                </p>
+                <h1 className="text-4xl font-bold text-white drop-shadow-lg md:text-6xl">
+                  Contact our team with questions, feedback, or partnership
+                  inquiries
+                </h1>
+              </div>
             </div>
-          </div>
-        </div>
+          </section>
 
-        {/* Right side - Form */}
-        <div className="bg-white p-8 rounded-xl shadow-lg border">
+          <section className="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700">
+            <p className="text-xl font-medium text-[#2E74B5]">
+              We help readers compare credit cards, loans, and everyday money
+              decisions. If you need to reach our team, this is the right place.
+            </p>
+            <p>
+              Whether you want to report an issue, ask a question about our
+              content, or discuss a potential collaboration, send us a message
+              and we&apos;ll route it to the right team member.
+            </p>
+            <p>
+              You can also write to{" "}
+              <a
+                href="mailto:info@topfinanzas.com"
+                className="font-medium text-blue-600 hover:underline"
+              >
+                info@topfinanzas.com
+              </a>{" "}
+              if email is the best channel for your request.
+            </p>
+          </section>
+
+          <section className="grid items-start gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-8">
+              <div className="rounded-2xl bg-[#f0f7ff] p-8 shadow-sm">
+                <h2 className="mb-4 text-3xl font-bold text-[#2E74B5]">
+                  How we can help
+                </h2>
+                <p className="text-gray-700">
+                  We review every inquiry carefully. Share enough context in
+                  your message so we can point you to the right answer faster.
+                </p>
+                <p className="mt-4 font-medium text-gray-800">
+                  We look forward to hearing from you.
+                </p>
+              </div>
+
+              <div className="py-2">
+                <h2 className="mb-6 text-center text-3xl font-bold text-[#2E74B5] lg:text-left">
+                  Department Directory
+                </h2>
+                <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-1">
+                  {departmentDirectory.map((department) => (
+                    <div
+                      key={department.title}
+                      className="rounded-xl border-t-4 border-[#2E74B5] bg-gray-50 p-6 shadow-sm"
+                    >
+                      <h3 className="mb-3 text-xl font-bold text-[#2E74B5]">
+                        {department.title}
+                      </h3>
+                      <p className="text-gray-600">{department.description}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm italic text-gray-500">
+                  Please mention the department you intended to reach in the
+                  message field so we can route your inquiry efficiently.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-3xl font-bold text-[#2E74B5]">
+                  Follow TopFinanzas
+                </h2>
+                <p className="mb-5 text-gray-600">
+                  Stay connected for new financial guides, updates, and tips for
+                  navigating the US market.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="https://www.facebook.com/TopFinanzasParaTi"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Follow TopFinanzas on Facebook"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1877F2] text-white transition-opacity hover:opacity-80"
+                  >
+                    <FaFacebook size={20} />
+                  </a>
+                  <a
+                    href="https://youtube.com/@top_finanzas_latam"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Follow TopFinanzas on YouTube"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FF0000] text-white transition-opacity hover:opacity-80"
+                  >
+                    <FaYoutube size={20} />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@topfinanzas1"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Follow TopFinanzas on TikTok"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-opacity hover:opacity-80"
+                  >
+                    <FaTiktok size={20} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/top_finanzas23/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Follow TopFinanzas on Instagram"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white transition-opacity hover:opacity-80"
+                  >
+                    <FaInstagram size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-[#d8e6f4] bg-white p-8 shadow-lg lg:sticky lg:top-28">
+              <div className="mb-6">
+                <h2 className="text-3xl font-bold text-[#2E74B5]">
+                  Send us a message
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  Tell us what you need and we&apos;ll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+
           {submitSuccess ? (
             <div className="text-center py-8">
               <div className="text-green-500 text-5xl mb-4">✓</div>
@@ -456,14 +536,16 @@ export default function ContactUsPage() {
               <div className="flex items-start">
                 <input
                   type="checkbox"
-                  id="acceptPolicy"
-                  checked={formData.acceptPolicy}
+                  id="acceptTerms"
+                  checked={formData.acceptTerms}
                   onChange={(e) =>
-                    setFormData({ ...formData, acceptPolicy: e.target.checked })
+                    setFormData({ ...formData, acceptTerms: e.target.checked })
                   }
-                  className="mt-1 mr-2"
+                  aria-invalid={!!errors.general}
+                  aria-describedby={errors.general ? "policy-error" : undefined}
+                  className="mt-1 mr-2 h-4 w-4"
                 />
-                <label htmlFor="acceptPolicy" className="text-sm text-gray-600">
+                <label htmlFor="acceptTerms" className="text-sm text-gray-600">
                   I accept{" "}
                   <Link
                     href="/privacy-policy/"
@@ -482,7 +564,9 @@ export default function ContactUsPage() {
               </div>
 
               {errors.general && (
-                <p className="text-red-500 text-sm">{errors.general}</p>
+                <p id="policy-error" className="text-red-500 text-sm">
+                  {errors.general}
+                </p>
               )}
 
               {submitError && (
@@ -498,65 +582,27 @@ export default function ContactUsPage() {
               </button>
             </form>
           )}
-        </div>
-      </div>
+            </div>
+          </section>
 
-      {/* FAQ Section */}
-      <div className="mt-20 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#2E74B5] mb-8 text-center">
-          Frequently Asked Questions
-        </h2>
-        <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Can you give me personal financial advice?
-            </h3>
-            <p className="text-gray-600">
-              Top Finanzas US provides educational resources and product
-              comparisons to help you make informed decisions. However, we are
-              not registered financial advisors and cannot provide personalized
-              investment, tax, or legal advice. If you need customized guidance,
-              we recommend consulting with a certified financial planner (CFP)
-              or legal professional.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              How long will it take to get a response?
-            </h3>
-            <p className="text-gray-600">
-              Our support team reviews messages Monday through Friday during
-              regular business hours (EST). We aim to respond to all standard
-              inquiries within 24 to 48 hours. If your question requires
-              specialized research from our editorial team, it may take slightly
-              longer.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              How do I unsubscribe from your newsletter?
-            </h3>
-            <p className="text-gray-600">
-              Every newsletter we send includes a clear &quot;Unsubscribe&quot;
-              link at the bottom. Clicking that link will instantly remove you
-              from our mailing list. You can also use the contact form above to
-              request removal; just ensure you use the email address associated
-              with your subscription.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              How do you choose which financial products to feature?
-            </h3>
-            <p className="text-gray-600">
-              Our editorial team evaluates products based on fees, rewards,
-              accessibility, and overall consumer value. While we do receive
-              compensation from some partner institutions, this does not dictate
-              our ratings or the educational content we publish. For more
-              details on how we make money, please review our Advertising
-              Disclosure.
-            </p>
-          </div>
+          <section className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center text-3xl font-bold text-[#2E74B5]">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div
+                  key={faq.question}
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-gray-900">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </div>
     </main>

@@ -15,6 +15,7 @@ export default function HeadScripts() {
     pathname && pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
   const isActiveViewExcludedRoute =
+    normalizedPath === "/" ||
     normalizedPath === "/about-us" ||
     normalizedPath === "/contact-us" ||
     normalizedPath === "/privacy-policy" ||

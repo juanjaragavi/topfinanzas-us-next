@@ -97,12 +97,12 @@ export async function POST(request: Request) {
     }
 
     const timestamp = Math.floor(Date.now() / 1000);
-    const extId = `topfinanzas-uk-contact-${timestamp}`;
+    const extId = `topfinanzas-us-contact-${timestamp}`;
 
     const attributes: Record<string, string> = {
       FIRSTNAME: name,
       LASTNAME: lastName,
-      COUNTRIES: "United Kingdom",
+      COUNTRIES: "United States",
     };
 
     if (phone) {
