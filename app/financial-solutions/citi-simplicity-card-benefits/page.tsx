@@ -70,12 +70,10 @@ export default function CitiSimplicityCardBenefitsPage() {
               Citi Simplicity Card Benefits
             </h1>
 
-            {/* Ad Unit: square02 */}
+            {/* Ad Unit: av_content_1 */}
             <div
-              id="square02"
+              id="av_content_1"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
             {/* Intro */}
@@ -192,12 +190,10 @@ export default function CitiSimplicityCardBenefitsPage() {
               Card eliminates late fees entirely, giving you peace of mind.
             </p>
 
-            {/* Ad Unit: square04 */}
+            {/* Ad Unit: av_content_2 */}
             <div
-              id="square04"
+              id="av_content_2"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
             <hr className="my-8" />

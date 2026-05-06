@@ -7,5 +7,5 @@ perf: integrate Partytown to offload GTM and third-party scripts to web worker
 - Add TypeScript declarations for @builder.io/partytown/react
 - Add loading="lazy" to all below-the-fold homepage images (secondary features,
   category hero images, and category thumbnails)
-- TopAds remains on lazyOnload (not Partytown) because it injects ad iframes
+- ActView Ads remains on lazyOnload (not Partytown) because it injects ad iframes
   into the DOM, which requires main-thread DOM access

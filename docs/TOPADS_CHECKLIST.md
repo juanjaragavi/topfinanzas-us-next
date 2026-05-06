@@ -1,4 +1,4 @@
-# TopAds Implementation Checklist
+# ActView Ads Implementation Checklist
 
 ## ✅ Implementation Complete
 
@@ -6,26 +6,26 @@ All required components have been successfully implemented and tested.
 
 ### Files Created
 
-- [x] `/components/analytics/topads.tsx` - Main TopAds script loader
-- [x] `/components/analytics/topads-spa-handler.tsx` - SPA navigation handler
-- [x] `/components/ads/topads-placement.tsx` - Ad placement components
+- [x] `/components/analytics/actview.tsx` - Main ActView Ads script loader
+- [x] `/components/analytics/actview-spa-handler.tsx` - SPA navigation handler
+- [x] `/components/ads/actview-placement.tsx` - Ad placement components
 - [x] `/docs/TOPADS_IMPLEMENTATION.md` - Comprehensive documentation
 - [x] `/docs/TOPADS_QUICK_REFERENCE.md` - Quick reference guide
 - [x] `/docs/TOPADS_INTEGRATION_SUMMARY.md` - Implementation summary
 
 ### Files Modified
 
-- [x] `/app/layout.tsx` - Added TopAds and SPA handler
+- [x] `/app/layout.tsx` - Added ActView Ads and SPA handler
 - [x] `/lib/documents/config.js` - Updated for UK market
 - [x] `/app/utm-test/page.tsx` - Added test placements
-- [x] `/components/ads/README.md` - Updated with TopAds info
+- [x] `/components/ads/README.md` - Updated with ActView Ads info
 
 ### Implementation Requirements
 
 #### Step 1: Script Loading ✅
 
 - [x] Config script loads inline in head section
-- [x] TopAds main script loads from CDN
+- [x] ActView Ads main script loads from CDN
 - [x] Uses Next.js Script component with afterInteractive strategy
 - [x] UK-specific configuration applied
 - [x] Error handling implemented
@@ -38,13 +38,13 @@ All required components have been successfully implemented and tested.
 - [x] topAds.spa() called on navigation
 - [x] Browser back/forward navigation handled
 - [x] 100ms delay for DOM readiness
-- [x] Manual trigger hook available (useTopAds)
+- [x] Manual trigger hook available (useActView Ads)
 
 #### Step 3: Ad Placements ✅
 
 - [x] Reusable placement components created
 - [x] Pre-configured size variants (Square, Leaderboard, Banner)
-- [x] Proper HTML attributes (id, data-topads, data-topads-size)
+- [x] Proper HTML attributes (id, data-actview, data-actview-size)
 - [x] Accessibility attributes (aria-label)
 - [x] Test placements added to /utm-test page
 - [x] Development logging implemented
@@ -83,7 +83,7 @@ All required components have been successfully implemented and tested.
 
 - [ ] Deploy to staging environment
 - [ ] Verify script loads in browser Network tab
-- [ ] Check console for TopAds initialization logs
+- [ ] Check console for ActView Ads initialization logs
 - [ ] Verify ad containers render in DOM
 - [ ] Test navigation between pages
 - [ ] Verify SPA triggers on route changes
@@ -95,7 +95,7 @@ All required components have been successfully implemented and tested.
 - [ ] Review staging test results
 - [ ] Deploy to production
 - [ ] Monitor console logs in production
-- [ ] Verify ad delivery in TopAds dashboard
+- [ ] Verify ad delivery in ActView Ads dashboard
 - [ ] Check for any errors or warnings
 - [ ] Monitor Core Web Vitals
 
@@ -118,7 +118,7 @@ All required components have been successfully implemented and tested.
 
 ### Analytics & Optimization
 
-- [ ] Check TopAds dashboard for impressions
+- [ ] Check ActView Ads dashboard for impressions
 - [ ] Monitor click-through rates
 - [ ] Verify ad formats (anchor, interstitial, offerwall)
 - [ ] Adjust placement locations if needed
@@ -129,17 +129,17 @@ All required components have been successfully implemented and tested.
 ### Browser Console
 
 ```javascript
-// Verify TopAds loaded
+// Verify ActView Ads loaded
 window.topAds;
 
 // Check SPA function
 typeof window.topAds.spa; // Should return 'function'
 
 // Find ad containers
-document.querySelectorAll("[data-topads]");
+document.querySelectorAll("[data-actview]");
 
 // Check performance
-window.performance.getEntriesByName("topads-execution");
+window.performance.getEntriesByName("actview-execution");
 ```
 
 ### Development Server
@@ -152,10 +152,10 @@ npm run dev
 # Open http://localhost:3040/utm-test
 
 # Check console for:
-# [TopAds] Component mounted
-# [TopAds] Configuration loaded
-# [TopAds] Script loaded successfully
-# [TopAds] Ad placement mounted: square01 (square)
+# [ActView Ads] Component mounted
+# [ActView Ads] Configuration loaded
+# [ActView Ads] Script loaded successfully
+# [ActView Ads] Ad placement mounted: av_top (square)
 ```
 
 ### Build Verification
@@ -172,12 +172,12 @@ npm run build
 ### Add Ad to Any Page
 
 ```tsx
-import { TopAdsSquare } from "@/components/ads/topads-placement";
+import { ActView AdsSquare } from "@/components/ads/actview-placement";
 
 export default function MyPage() {
   return (
     <div>
-      <TopAdsSquare id="square01" />
+      <ActView AdsSquare id="av_top" />
     </div>
   );
 }
@@ -186,9 +186,9 @@ export default function MyPage() {
 ### Manual SPA Trigger
 
 ```tsx
-import { useTopAds } from "@/components/analytics/topads-spa-handler";
+import { useActView Ads } from "@/components/analytics/actview-spa-handler";
 
-const { triggerSPA } = useTopAds();
+const { triggerSPA } = useActView Ads();
 triggerSPA(); // Manually trigger
 ```
 
@@ -214,7 +214,7 @@ triggerSPA(); // Manually trigger
 
 ### Business Requirements (Pending Verification)
 
-- [ ] Ads serve properly from TopAds network
+- [ ] Ads serve properly from ActView Ads network
 - [ ] Impression tracking works
 - [ ] Click tracking works
 - [ ] All ad formats available (anchor, interstitial, offerwall)
@@ -223,7 +223,7 @@ triggerSPA(); // Manually trigger
 ## 🚨 Known Considerations
 
 1. **Testing Required**: While implementation is complete, real ad delivery testing requires staging/production environment
-2. **Network Dependency**: Ads depend on TopAds CDN availability
+2. **Network Dependency**: Ads depend on ActView Ads CDN availability
 3. **Ad Blockers**: Users with ad blockers won't see ads
 4. **Performance**: Monitor impact on Core Web Vitals
 5. **User Experience**: Ensure ads don't negatively impact UX
@@ -238,9 +238,9 @@ triggerSPA(); // Manually trigger
 
 ### Code Locations
 
-- `/components/analytics/topads.tsx` - Main component
-- `/components/analytics/topads-spa-handler.tsx` - SPA handler
-- `/components/ads/topads-placement.tsx` - Placement components
+- `/components/analytics/actview.tsx` - Main component
+- `/components/analytics/actview-spa-handler.tsx` - SPA handler
+- `/components/ads/actview-placement.tsx` - Placement components
 
 ### Test Resources
 

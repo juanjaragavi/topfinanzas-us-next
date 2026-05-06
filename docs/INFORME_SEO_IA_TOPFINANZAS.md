@@ -49,7 +49,7 @@ Con más del 50% del tráfico web interactuando con asistentes de Inteligencia A
 ### 2.5. Rendimiento y Compatibilidad con Ecosistema de Anuncios
 
 - **Limpieza del DOM y Viewport:** Se eliminaron etiquetas duplicadas y atributos que bloqueaban la accesibilidad (`maximumScale: 1`), alineándose con los requisitos de las _Core Web Vitals_.
-- **Resolución de Conflictos de CSP (Content-Security-Policy):** Durante el proceso de seguridad SEO, se detectó y corrigió un bloqueo en la carga del script `TopAds` (Google Ad Manager). Se balanceó la seguridad técnica permitiendo la ejecución fluida de los mecanismos de monetización, análisis de GTM y carga de _pre-loaders_ intersticiales sin impactar las métricas de rendimiento.
+- **Resolución de Conflictos de CSP (Content-Security-Policy):** Durante el proceso de seguridad SEO, se detectó y corrigió un bloqueo en la carga del script `ActView Ads` (Google Ad Manager). Se balanceó la seguridad técnica permitiendo la ejecución fluida de los mecanismos de monetización, análisis de GTM y carga de _pre-loaders_ intersticiales sin impactar las métricas de rendimiento.
 
 ---
 

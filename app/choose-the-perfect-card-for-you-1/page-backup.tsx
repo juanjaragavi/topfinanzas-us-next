@@ -31,7 +31,7 @@ function CreditCardRecommenderPageContent() {
               Descubre tu tarjeta de crédito ideal
             </h1>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <p className="text-left text-sm leading-6 text-gray-800 my-8">
               En <strong>TopFinanzas</strong>, te ayudamos a tomar el control de

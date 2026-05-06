@@ -103,7 +103,7 @@ export default function PostPage() {
             "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
         }}
       >
-        <div id="square01" data-topads data-topads-size="square"></div>
+        <div id="av_top"></div>
 
         <h3>
           Moving in with a partner or getting married is a huge, exciting step.

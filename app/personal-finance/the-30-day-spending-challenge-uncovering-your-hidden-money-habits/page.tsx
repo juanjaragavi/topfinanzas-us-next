@@ -29,7 +29,7 @@ export default function ThirtyDaySpendingChallengePage() {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
               The 30-Day Spending Challenge: Uncovering Your Hidden Money Habits
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Most Americans believe they have a decent handle on where their
               money goes each month. Then the credit card statement arrives.
@@ -199,7 +199,7 @@ export default function ThirtyDaySpendingChallengePage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your 30-Day Action Plan
               </h2>
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
               <p className="text-gray-700 mb-4 leading-7">
                 You now have a clear framework. Here is how to start today:
               </p>

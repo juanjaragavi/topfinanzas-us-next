@@ -1,9 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-
-import { JOBS_DELAYED_ADS_EVENT } from "@/lib/jobs-delayed-ads";
 
 export interface JobsQuizQuestion {
   id: string;
@@ -112,7 +109,6 @@ export default function JobsQuizModal({
   loadingMessages = DEFAULT_LOADING_MESSAGES,
   loadingDuration = 3500,
 }: JobsQuizModalProps) {
-  const pathname = usePathname();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [phase, setPhase] = useState<Phase>("quiz");
   const [hoveredOptionIndex, setHoveredOptionIndex] = useState<number | null>(
@@ -218,14 +214,6 @@ export default function JobsQuizModal({
             onComplete={() => {
               setPhase("done");
               window.dispatchEvent(new CustomEvent("jobsQuizDone"));
-              window.dispatchEvent(
-                new CustomEvent(JOBS_DELAYED_ADS_EVENT, {
-                  detail: {
-                    path: pathname,
-                    journeyId,
-                  },
-                }),
-              );
             }}
           />
         )}

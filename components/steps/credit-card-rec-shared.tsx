@@ -112,9 +112,6 @@ export const AFFILIATE_URL =
   "https://route.topnetworks.co/api/redirect/58a90a39-9189-46f6-8f65-fcda695d2a28";
 
 export const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
-
-/** TopAds external script URL (must match the one loaded in layout). */
-const TOPADS_SCRIPT_URL = "https://ads.gamadx.com/topAds.min.js";
 const TRUST_BAR_STORAGE_KEY = "tf_quiz_live_count_state_v1";
 const TRUST_BAR_INTERVALS_MS = [1000, 500, 1500] as const;
 
@@ -541,18 +538,20 @@ export function AdSlot({
 
     wrapper.innerHTML = "";
 
-    const adId = `square0${unitIndex}`;
+    const getAdId = (index: number) => {
+      if (index === 1 || index === 3) return "av_top";
+      if (index === 2) return "av_content_1";
+      return "av_content_2";
+    };
+
+    const adId = getAdId(unitIndex);
     const adDiv = document.createElement("div");
     adDiv.id = adId;
-    adDiv.dataset.topads = "";
-    adDiv.dataset.topadsSize = "square";
-    adDiv.className = "topads-placement";
+    adDiv.className = "actview-placement";
     adDiv.style.cssText =
       "min-height:250px;display:block;margin:20px auto;text-align:center";
     adDiv.setAttribute("aria-label", `Advertisement ${adId}`);
     wrapper.appendChild(adDiv);
-
-    let reinitTimer: ReturnType<typeof setTimeout> | null = null;
 
     if (isFirstMount.current) {
       isFirstMount.current = false;
@@ -565,33 +564,9 @@ export function AdSlot({
         adId,
         unitIndex,
       });
-
-      reinitTimer = setTimeout(() => {
-        try {
-          document
-            .querySelectorAll('script[src*="topAds.min.js"]')
-            .forEach((s) => s.remove());
-
-          const script = document.createElement("script");
-          script.src = TOPADS_SCRIPT_URL;
-          script.type = "text/javascript";
-          script.async = true;
-          script.defer = true;
-          script.setAttribute("data-cfasync", "false");
-          document.head.appendChild(script);
-
-          formLogger.info(`[${logTag}] TopAds script re-injected`, { adId });
-        } catch (err) {
-          formLogger.error(
-            `[${logTag}] Failed to re-inject TopAds script`,
-            err,
-          );
-        }
-      }, 100);
     }
 
     return () => {
-      if (reinitTimer) clearTimeout(reinitTimer);
       wrapper.innerHTML = "";
     };
   }, [unitIndex, logTag]);

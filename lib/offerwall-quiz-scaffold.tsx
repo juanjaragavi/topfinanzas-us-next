@@ -84,7 +84,7 @@ interface OfferwallQuizScaffoldProps {
  * Hidden ad-unit container for TopAds quiz overlays.
  *
  * The TopAds external script discovers this DOM node via the
- * `data-topads-quiz` attribute, parses the question/answer markup,
+ * `data-actview-slot-quiz` attribute, parses the question/answer markup,
  * and renders its own quiz modal overlay with the supplied accent
  * colour and copy strings. Deferred to client-side mount so the page
  * content paints first.
@@ -108,9 +108,8 @@ export function OfferwallQuizScaffold({
 
   return (
     <div
-      data-topads-quiz=""
       data-quiz-accent={themeColor}
-      data-topads-texts={JSON.stringify(texts)}
+      data-quiz-texts={JSON.stringify(texts)}
       data-quiz-skip-ad={skipAds ? "true" : "false"}
       aria-hidden="true"
       style={HIDDEN_CONTAINER_STYLE}
@@ -147,7 +146,7 @@ interface OfferwallDirectScaffoldProps {
 /**
  * Question-less offerwall container.
  *
- * Renders just the `data-topads-quiz` scaffold with NO question children
+ * Renders just the `data-actview-slot-quiz` scaffold with NO question children
  * so TopAds skips directly to the preloader and CTA button.
  * Deferred to client-side mount so the page content paints first.
  *
@@ -168,9 +167,8 @@ export function OfferwallDirectScaffold({
 
   return (
     <div
-      data-topads-quiz=""
       data-quiz-accent={themeColor}
-      data-topads-texts={JSON.stringify(texts)}
+      data-quiz-texts={JSON.stringify(texts)}
       data-quiz-skip-ad={skipAds ? "true" : "false"}
       aria-hidden="true"
       style={HIDDEN_CONTAINER_STYLE}

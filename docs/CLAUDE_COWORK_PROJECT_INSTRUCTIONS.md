@@ -87,7 +87,7 @@ Do not introduce random redesigns or reorder key conversion sections.
 
 - GTM is the primary analytics path; do not add duplicate tracking scripts.
 - Approved GTM container: `GTM-5568TKCX`.
-- Preserve TopAds behavior and SPA handling.
+- Preserve ActView Ads behavior and SPA handling.
 - Do not remove or break ad placeholders/units that are part of revenue flow.
 
 ## SEO Rules

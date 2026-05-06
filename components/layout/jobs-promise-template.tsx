@@ -93,10 +93,10 @@ export default function JobsPromiseTemplate({
       <article className="py-4 md:py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* ─── Ad Unit: square02 — Very top of content, before subtitle ─── */}
+            {/* ─── Ad Unit: av_content_1 — Very top of content, before subtitle ─── */}
             <JobsDeferredAd
               type="square"
-              id="square02"
+              id="av_content_1"
               defer={deferAdsUntilUserInteraction}
             />
 
@@ -208,7 +208,7 @@ export default function JobsPromiseTemplate({
                     )}
                   </section>
 
-                  {/* ─── Ad Unit: square03 — Between sections 1 and 2 ─── */}
+                  {/* ─── Ad Unit: av_top — Between sections 1 and 2 ─── */}
                   {i === 1 && (
                     <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                       Discover more job opportunities and application tips from
@@ -218,7 +218,7 @@ export default function JobsPromiseTemplate({
                   {i === 1 && (
                     <JobsDeferredAd
                       type="square"
-                      id="square03"
+                      id="av_top"
                       defer={deferAdsUntilUserInteraction}
                     />
                   )}
@@ -263,10 +263,10 @@ export default function JobsPromiseTemplate({
               search and financial planning.
             </p>
 
-            {/* ─── Ad Unit: square04 — Before related content ─── */}
+            {/* ─── Ad Unit: av_content_2 — Before related content ─── */}
             <JobsDeferredAd
               type="square"
-              id="square04"
+              id="av_content_2"
               defer={deferAdsUntilUserInteraction}
             />
 

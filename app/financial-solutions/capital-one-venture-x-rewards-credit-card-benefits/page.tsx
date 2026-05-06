@@ -72,12 +72,10 @@ export default function CapitalOneVentureXBenefitsPage() {
               Capital One Venture X Rewards Credit Card Benefits
             </h1>
 
-            {/* Ad Unit: square02 */}
+            {/* Ad Unit: av_content_1 */}
             <div
-              id="square02"
+              id="av_content_1"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
             {/* Intro */}
@@ -201,12 +199,10 @@ export default function CapitalOneVentureXBenefitsPage() {
               trip feel first-class.
             </p>
 
-            {/* Ad Unit: square04 */}
+            {/* Ad Unit: av_content_2 */}
             <div
-              id="square04"
+              id="av_content_2"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
             <hr className="my-8" />

@@ -1,8 +1,8 @@
-# AdZep → TopAds Migration Summary
+# AdZep → ActView Ads Migration Summary
 
 ## Overview
 
-Successfully removed all legacy AdZep references and replaced them with TopAds, the proprietary ad system now in use.
+Successfully removed all legacy AdZep references and replaced them with ActView Ads, the proprietary ad system now in use.
 
 ## Changes Made
 
@@ -37,11 +37,11 @@ Successfully removed all legacy AdZep references and replaced them with TopAds, 
 - Removed `ENABLE_ADZEP` constant
 - Removed AdZep conditional rendering
 - Updated to use `AdAccessibilityFix` (renamed component)
-- All TopAds components remain active
+- All ActView Ads components remain active
 
 ##### **lib/ads/config.ts**
 
-- Renamed `AdZepConfig` interface → `TopAdsConfig`
+- Renamed `AdZepConfig` interface → `ActView AdsConfig`
 - Renamed `adZepConfig` export → `topAdsConfig`
 - Updated all comments and documentation
 - Removed legacy AdZep-specific selectors (`[data-adzep]`, `[id^='adzep-']`, `[class*='adzep-']`)
@@ -49,7 +49,7 @@ Successfully removed all legacy AdZep references and replaced them with TopAds, 
 
 ##### **lib/logger.ts**
 
-- Renamed `adzepLogger` → `topadsLogger`
+- Renamed `adzepLogger` → `actviewLogger`
 
 ##### **types/window.d.ts**
 
@@ -57,24 +57,24 @@ Successfully removed all legacy AdZep references and replaced them with TopAds, 
 
 ##### **lib/ads/overlay.ts**
 
-- Updated comment: "AdZep's own ad units" → "TopAds ad units"
+- Updated comment: "AdZep's own ad units" → "ActView Ads ad units"
 
 ##### **app/globals.css**
 
-- Updated all comments referencing AdZep → TopAds
-- Changed `body:not(:has([data-adzep-active]))` → `body:not(:has([data-topads-active]))`
+- Updated all comments referencing AdZep → ActView Ads
+- Changed `body:not(:has([data-adzep-active]))` → `body:not(:has([data-actview-active]))`
 
 ##### **components/layout/header.tsx**
 
-- Updated comments to reference TopAds instead of AdZep
-- Noted that SPA activation is handled by `TopAdsSPAHandler` in layout.tsx
+- Updated comments to reference ActView Ads instead of AdZep
+- Noted that SPA activation is handled by `ActView AdsSPAHandler` in layout.tsx
 
 ### 2. **Documentation Files**
 
 #### Instruction Files
 
 - `.github/instructions/project-rules.instructions.md` - Updated analytics section
-- `.github/copilot-instructions.md` - Comprehensive AdZep → TopAds update throughout
+- `.github/copilot-instructions.md` - Comprehensive AdZep → ActView Ads update throughout
 - `.clinerules/RULES.md` - Updated analytics integration section
 
 #### Reference Documentation
@@ -92,18 +92,18 @@ Successfully removed all legacy AdZep references and replaced them with TopAds, 
 
 #### **scripts/analyze-console-usage.js**
 
-- Updated logger mappings: `adzep` → `topads`
-- Updated pattern matching: `adzep` → `topads`
+- Updated logger mappings: `adzep` → `actview`
+- Updated pattern matching: `adzep` → `actview`
 - Updated example file references
 
 #### **scripts/auto-migrate-logger.js**
 
-- Updated file paths to reference TopAds components
+- Updated file paths to reference ActView Ads components
 - Updated logger detection logic
 
 ## Technical Details
 
-### TopAds vs AdZep Architecture
+### ActView Ads vs AdZep Architecture
 
 **AdZep (Legacy):**
 
@@ -113,10 +113,10 @@ Successfully removed all legacy AdZep references and replaced them with TopAds, 
 - Centralized handler + SPA bridge architecture
 - Complex activation logic with retries and timeouts
 
-**TopAds (Current):**
+**ActView Ads (Current):**
 
 - Uses `window.topAds.spa()` function
-- Automatic SPA navigation via `TopAdsSPAHandler`
+- Automatic SPA navigation via `ActView AdsSPAHandler`
 - Single handler component
 - Configuration-driven (domain, networkCode, lazyLoad)
 - Simpler, cleaner architecture
@@ -127,22 +127,22 @@ Both systems use the same container IDs:
 
 **Benefits Pages:**
 
-- `square02` (first ad)
-- `square04` (second ad)
+- `av_content_1` (first ad)
+- `av_content_2` (second ad)
 
 **Requirements Pages:**
 
-- `square03` (first ad)
-- `square04` (second ad)
+- `av_top` (first ad)
+- `av_content_2` (second ad)
 
 All containers require:
 
-- `data-topads` attribute
-- `data-topads-size="square"` attribute
+- `data-actview` attribute
+- `data-actview-size="square"` attribute
 
 ### Configuration
 
-**TopAds Configuration** (in `topads.tsx`):
+**ActView Ads Configuration** (in `actview.tsx`):
 
 ```javascript
 topAds.config = {
@@ -162,8 +162,8 @@ topAds.config = {
 ✅ **No TypeScript/TSX errors** - All active code compiles successfully
 ✅ **No broken imports** - All references updated
 ✅ **No stale AdZep references** in active code (only in historical `/docs/` and `/lib/documents/`)
-✅ **Layout.tsx clean** - Only TopAds components remain
-✅ **Logger updated** - `topadsLogger` available for TopAds components
+✅ **Layout.tsx clean** - Only ActView Ads components remain
+✅ **Logger updated** - `actviewLogger` available for ActView Ads components
 ✅ **Window type definitions clean** - AdZep function declaration removed
 
 ## Remaining AdZep References
@@ -179,8 +179,8 @@ These files document the implementation history and troubleshooting processes, w
 ## Testing Recommendations
 
 1. **Visual Testing:**
-   - Verify ad units display correctly on Benefits pages (`square02`, `square04`)
-   - Verify ad units display correctly on Requirements pages (`square03`, `square04`)
+   - Verify ad units display correctly on Benefits pages (`av_content_1`, `av_content_2`)
+   - Verify ad units display correctly on Requirements pages (`av_top`, `av_content_2`)
    - Check interstitial and offerwall formats activate properly
 
 2. **SPA Navigation Testing:**
@@ -194,8 +194,8 @@ These files document the implementation history and troubleshooting processes, w
    - Check Chrome DevTools console for accessibility warnings
 
 4. **Analytics Testing:**
-   - Verify GTM loads before TopAds
-   - Check TopAds configuration in browser console: `window.topAds.config`
+   - Verify GTM loads before ActView Ads
+   - Check ActView Ads configuration in browser console: `window.topAds.config`
    - Verify exclusions work correctly (quiz pages, etc.)
 
 ## Rollback Procedure
@@ -213,7 +213,7 @@ If issues arise and rollback is needed:
 ## Next Steps
 
 1. Monitor production for any ad delivery issues
-2. Check analytics to ensure TopAds is tracking properly
+2. Check analytics to ensure ActView Ads is tracking properly
 3. Verify revenue metrics remain stable
 4. Consider removing historical `/docs/ADZEP_*.md` files after 30-day stabilization period
 

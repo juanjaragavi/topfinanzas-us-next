@@ -18,7 +18,7 @@ This Next.js project (`topfinanzas-us-next`) is the migration target for the leg
 - **UI Components**: Shadcn/UI with Radix UI primitives
 - **State Management**: React hooks and context
 - **MDX Support**: Next.js MDX for blog content
-- **Analytics**: Google Tag Manager + TopAds integration
+- **Analytics**: Google Tag Manager + ActView Ads integration
 
 ### Key Dependencies
 
@@ -171,10 +171,10 @@ import { CustomComponent } from "./custom-component";
 - **Event Tracking**: US user interactions
 - **Conversion Tracking**: US-specific goals
 
-### 2. TopAds Integration
+### 2. ActView Ads Integration
 
-- **Script Loading**: Proprietary TopAds script loaded via `topads.tsx` component
-- **SPA Navigation**: Automatic activation via `topads-spa-handler.tsx`
+- **Script Loading**: Proprietary ActView Ads script loaded via `actview.tsx` component
+- **SPA Navigation**: Automatic activation via `actview-spa-handler.tsx`
 - **Configuration**: Domain `TOPFIN_US`, networkCode `23062212598`
 - **Performance**: Lazy loading with `soft` strategy
 - **Debugging**: Development logging available

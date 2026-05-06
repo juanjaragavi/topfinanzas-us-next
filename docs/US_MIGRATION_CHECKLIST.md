@@ -17,7 +17,7 @@ The MX project serves as the production-ready reference implementation. This aud
 | Category                     | MX Status              | US Status                          | Priority    |
 | ---------------------------- | ---------------------- | ---------------------------------- | ----------- |
 | Core Layout                  | ✅ Production-ready    | ⚠️ Has merge conflicts             | 🔴 Critical |
-| TopAds Configuration         | ✅ MX-localized        | ⚠️ Has merge conflicts (UK/US mix) | 🔴 Critical |
+| ActView Ads Configuration    | ✅ MX-localized        | ⚠️ Has merge conflicts (UK/US mix) | 🔴 Critical |
 | Centralized Posts Data       | ✅ `lib/data/posts.ts` | ❌ Missing                         | 🔴 Critical |
 | Category Page Protocol       | ✅ Dynamic filtering   | ❌ Hardcoded                       | 🟠 High     |
 | SEO hreflang                 | ✅ Defined             | ✅ Present (needs verification)    | 🟡 Medium   |
@@ -36,7 +36,7 @@ The MX project serves as the production-ready reference implementation. This aud
 
 **Specific Files with Conflicts**:
 
-- `/components/analytics/topads.tsx` - Contains UK/US domain conflict
+- `/components/analytics/actview.tsx` - Contains UK/US domain conflict
 - `/app/financial-solutions/118-118-money-credit-card/*.tsx`
 - `/app/financial-solutions/american-express-preferred-rewards-gold-credit-card/*.tsx`
 - `/app/invit-credit-card-rec-uk/page.tsx`
@@ -49,7 +49,7 @@ The MX project serves as the production-ready reference implementation. This aud
 grep -r "<<<<<<< " --include="*.tsx" --include="*.ts" . | head -50
 ```
 
-### 2. TopAds Domain Configuration
+### 2. ActView Ads Domain Configuration
 
 **MX Configuration** (Correct Pattern):
 
@@ -82,7 +82,7 @@ topAds.config = {
 ```javascript
 topAds.config = {
   domain: "TOPFIN_US",
-  networkCode: "23062212598", // Verify with TopAds team
+  networkCode: "23062212598", // Verify with ActView Ads team
   lazyLoad: "soft",
   pageSetting: {
     exclude: [
@@ -361,8 +361,8 @@ articlePathPrefixes: [
    - Fix each file systematically
    - Verify build passes: `npm run build`
 
-2. **Day 3-4**: Fix TopAds configuration
-   - Update `/components/analytics/topads.tsx`
+2. **Day 3-4**: Fix ActView Ads configuration
+   - Update `/components/analytics/actview.tsx`
    - Remove UK references
    - Test ad delivery
 
@@ -381,7 +381,7 @@ articlePathPrefixes: [
    - Change UK → US references
 
 6. **Day 5**: Verify ad unit configuration
-   - Confirm ad unit IDs with TopAds team
+   - Confirm ad unit IDs with ActView Ads team
    - Update if necessary
 
 ### Phase 3: Medium Priority (Week 3)
@@ -429,15 +429,15 @@ grep -A5 "const.*Content = \[" app/personal-loans/page.tsx
 
 ## Reference Files
 
-| Purpose           | MX Location                                                                | US Location               |
-| ----------------- | -------------------------------------------------------------------------- | ------------------------- |
-| Project Rules     | `.github/instructions/project-rules.instructions.md`                       | Same                      |
-| Layout Standard   | `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md` | Same (needs US updates)   |
-| TopAds Config     | `components/analytics/topads.tsx`                                          | Same (has conflicts)      |
-| Ad Config         | `lib/ads/config.ts`                                                        | Same                      |
-| Posts Data        | `lib/data/posts.ts`                                                        | **MISSING**               |
-| Footer Nav        | `lib/navigation/footerNavigation.ts`                                       | Same (needs localization) |
-| Category Protocol | `docs/CATEGORY_PAGE_UPDATE_PROTOCOL.md`                                    | **MISSING**               |
+| Purpose            | MX Location                                                                | US Location               |
+| ------------------ | -------------------------------------------------------------------------- | ------------------------- |
+| Project Rules      | `.github/instructions/project-rules.instructions.md`                       | Same                      |
+| Layout Standard    | `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md` | Same (needs US updates)   |
+| ActView Ads Config | `components/analytics/actview.tsx`                                         | Same (has conflicts)      |
+| Ad Config          | `lib/ads/config.ts`                                                        | Same                      |
+| Posts Data         | `lib/data/posts.ts`                                                        | **MISSING**               |
+| Footer Nav         | `lib/navigation/footerNavigation.ts`                                       | Same (needs localization) |
+| Category Protocol  | `docs/CATEGORY_PAGE_UPDATE_PROTOCOL.md`                                    | **MISSING**               |
 
 ---
 

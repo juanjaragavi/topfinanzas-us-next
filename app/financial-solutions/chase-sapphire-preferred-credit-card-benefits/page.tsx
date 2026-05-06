@@ -77,12 +77,12 @@ export default function ChaseSapphirePreferredBenefitsPage() {
                 Chase Sapphire Preferred Credit Card Benefits
               </h1>
 
-              {/* Ad Unit: square02 */}
+              {/* Ad Unit: av_content_1 */}
               <div
-                id="square02"
+                id="av_content_1"
+                data-actview-slot
+                data-actview-slot-size="square"
                 className="w-full flex justify-center my-6"
-                data-topads
-                data-topads-size="square"
               ></div>
 
               {/* Intro */}
@@ -201,12 +201,12 @@ export default function ChaseSapphirePreferredBenefitsPage() {
                 the market, giving you a head start on your next vacation.
               </p>
 
-              {/* Ad Unit: square04 */}
+              {/* Ad Unit: av_content_2 */}
               <div
-                id="square04"
+                id="av_content_2"
+                data-actview-slot
+                data-actview-slot-size="square"
                 className="w-full flex justify-center my-6"
-                data-topads
-                data-topads-size="square"
               ></div>
 
               <hr className="my-8" />

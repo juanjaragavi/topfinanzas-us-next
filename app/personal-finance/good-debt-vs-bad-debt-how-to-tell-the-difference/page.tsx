@@ -100,7 +100,7 @@ export default function PostPage() {
             "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
         }}
       >
-        <div id="square01" data-topads data-topads-size="square"></div>
+        <div id="av_top"></div>
 
         <p>
           If you’re just starting your career, the word “debt” probably sounds

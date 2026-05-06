@@ -12,9 +12,9 @@ export interface TopAdsConfig {
   initialContainerWaitMs: number;
   // Maximum time to wait for containers on SPA navigations (ms)
   navigationContainerWaitMs: number;
-  // Activation default timeout for waiting topAds.spa to exist (ms)
+  // Activation default timeout for waiting actview.spa to exist (ms)
   defaultActivationTimeoutMs: number;
-  // Retry attempts and delay for waiting topAds.spa to exist
+  // Retry attempts and delay for waiting actview.spa to exist
   defaultRetryAttempts: number;
   defaultRetryDelayMs: number;
   // Post-activation verification retries
@@ -25,10 +25,10 @@ export interface TopAdsConfig {
 }
 
 export const topAdsConfig: TopAdsConfig = {
-  // TopAds container patterns - square0N IDs with data-topads attributes
+  // TopAds container patterns - square0N IDs with attributes
   containerSelectors: [
-    // TopAds containers (square01, square02, square03, square04, etc.)
-    "[data-topads]",
+    // TopAds containers (av_top, av_content_1, av_top, av_content_2, etc.)
+    "[data-actview-slot]",
     "[id^='square0']",
     // Legacy containers (uk_topfinanzas_1, uk_topfinanzas_2, etc.)
     "[id^='uk_topfinanzas_']",

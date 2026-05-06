@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { TopAdsSquare } from "@/components/ads/topads-placement";
 // TODO: Temporarily disabled FinanceOfferwallRuntime – re-enable when ready
 // import FinanceOfferwallRuntime from "@/components/finance/finance-offerwall-runtime";
 // import { FINANCE_QUIZ_CONFIGS } from "@/lib/finance-quiz-config";
@@ -37,7 +36,18 @@ export default function FindYourCardPage() {
           </h1>
 
           {/* Ad Placement - Top */}
-          <TopAdsSquare id="square01" />
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Ads
+            </p>
+            <div id="av_top"></div>
+          </div>
 
           {/* Subtitle */}
           <div className="space-y-2">

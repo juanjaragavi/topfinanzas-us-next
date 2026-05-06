@@ -5,7 +5,7 @@ This document reflects the current state of the application's UI, UX, and archit
 ## Component Changes
 
 - **Shadcn/UI & Radix Primitives**: Replaced custom UI components with robust, accessible pieces from Shadcn/UI and Radix, including `Accordion`, `Carousel` (via `embla-carousel-react`), `Drawer`, `Alert Dialog`, and `Navigation Menu`.
-- **Analytics & Advertising**: Integrated `TopAds` and `TopAdsSPAHandler` for non-intrusive, SPA-aware ad serving. Added `GoogleAdManager` and `AnalyticsValidationPanel` to the component tree. A special `AdAccessibilityFix` is used to prevent external ad scripts from improperly applying `aria-hidden` attributes to the body.
+- **Analytics & Advertising**: Integrated `ActView Ads` and `ActView AdsSPAHandler` for non-intrusive, SPA-aware ad serving. Added `GoogleAdManager` and `AnalyticsValidationPanel` to the component tree. A special `AdAccessibilityFix` is used to prevent external ad scripts from improperly applying `aria-hidden` attributes to the body.
 - **Forms**: Upgraded form handling to rely fully on `react-hook-form` paired with `zod` schema validation for reliable user inputs (especially multi-step forms).
 
 ## Layout and Routing

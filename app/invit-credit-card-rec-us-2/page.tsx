@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { TopAdsSquare } from "@/components/ads/topads-placement";
 import FinanceOfferwallDirect from "@/lib/offerwall-for-finance-direct";
 import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import OfferwallPageShell from "@/components/finance/offerwall-page-shell";
@@ -39,7 +38,18 @@ export default function InvitCreditCardRecUS2Page() {
               </h1>
 
               {/* Ad Placement - Top */}
-              <TopAdsSquare id="square01" />
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Ads
+                </p>
+                <div id="av_top"></div>
+              </div>
 
               {/* Subtitle */}
               <div className="space-y-2">

@@ -62,7 +62,7 @@ function DownloadGuidePageContent() {
             </p>
 
             {/* Ad Container */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <h3 className="text-lg font-bold text-gray-800 mt-8 mb-4">
               What do we do?

@@ -1,8 +1,8 @@
-# TopAds Integration Documentation
+# ActView Ads Integration Documentation
 
 ## Overview
 
-TopAds has been successfully integrated into the TopFinanzas US Next.js project. This implementation provides:
+ActView Ads has been successfully integrated into the TopFinanzas US Next.js project. This implementation provides:
 
 - Script loading with Next.js optimization
 - Automatic SPA (Single Page Application) navigation handling
@@ -14,28 +14,28 @@ TopAds has been successfully integrated into the TopFinanzas US Next.js project.
 
 ### New Files
 
-1. **`/components/analytics/topads.tsx`**
-   - Main TopAds component that loads the script
+1. **`/components/analytics/actview.tsx`**
+   - Main ActView Ads component that loads the script
    - Handles configuration and script loading
    - Includes performance monitoring and error handling
 
-2. **`/components/analytics/topads-spa-handler.tsx`**
+2. **`/components/analytics/actview-spa-handler.tsx`**
    - Handles SPA navigation for Next.js routing
    - Triggers `topAds.spa()` on route changes
-   - Includes custom hook `useTopAds()` for manual control
+   - Includes custom hook `useActView Ads()` for manual control
    - Handles browser back/forward navigation
 
-3. **`/components/ads/topads-placement.tsx`**
+3. **`/components/ads/actview-placement.tsx`**
    - Reusable components for ad placements
-   - Pre-configured components: `TopAdsSquare`, `TopAdsLeaderboard`, `TopAdsBanner`
+   - Pre-configured components: `ActView AdsSquare`, `ActView AdsLeaderboard`, `ActView AdsBanner`
    - Automatic logging for debugging
 
 ### Modified Files
 
 1. **`/app/layout.tsx`**
-   - Added TopAds imports
-   - Integrated `<TopAds />` in head section
-   - Integrated `<TopAdsSPAHandler />` in body section
+   - Added ActView Ads imports
+   - Integrated `<ActView Ads />` in head section
+   - Integrated `<ActView AdsSPAHandler />` in body section
 
 2. **`/lib/documents/config.js`**
 
@@ -44,14 +44,14 @@ TopAds has been successfully integrated into the TopFinanzas US Next.js project.
 - Updated website name to "TopFinanzas US"
 
 3. **`/app/utm-test/page.tsx`** (example)
-   - Added two test ad placements (square01, square02)
+   - Added two test ad placements (av_top, av_content_1)
    - Demonstrates proper usage
 
 ## Implementation Details
 
 ### Step 1: Script Loading
 
-The TopAds script is loaded in the `<head>` section of `/app/layout.tsx`:
+The ActView Ads script is loaded in the `<head>` section of `/app/layout.tsx`:
 
 ```tsx
 <ClientOnly>
@@ -59,14 +59,14 @@ The TopAds script is loaded in the `<head>` section of `/app/layout.tsx`:
   <GoogleAds />
   <GoogleAdManager />
   <AdZep />
-  <TopAds /> {/* ← New */}
+  <ActView Ads /> {/* ← New */}
 </ClientOnly>
 ```
 
-The `TopAds` component:
+The `ActView Ads` component:
 
 - Loads configuration inline
-- Loads the TopAds script from `//test-topads.tbytpm.easypanel.host/topAds.min.js`
+- Loads the ActView Ads script from `//test-actview.tbytpm.easypanel.host/topAds.min.js`
 - Uses `strategy="afterInteractive"` for optimal performance
 - Includes error handling and performance monitoring
 
@@ -83,14 +83,14 @@ The SPA handler is integrated in the body section:
     <AdZepInterstitialBlocker />
     <AdZepAccessibilityFix />
     <AdZepBackdropCleaner />
-    <TopAdsSPAHandler /> {/* ← New */}
+    <ActView AdsSPAHandler /> {/* ← New */}
     {/* ... */}
   </Suspense>
   {children}
 </NavigationProvider>
 ```
 
-The `TopAdsSPAHandler` component:
+The `ActView AdsSPAHandler` component:
 
 - Monitors route changes using `usePathname()`
 - Calls `topAds.spa()` on every navigation
@@ -102,28 +102,28 @@ The `TopAdsSPAHandler` component:
 Ad placements are added using the provided components:
 
 ```tsx
-import { TopAdsSquare } from "@/components/ads/topads-placement";
+import { ActView AdsSquare } from "@/components/ads/actview-placement";
 
 // In your page component:
-<TopAdsSquare id="square01" />
-<TopAdsSquare id="square02" />
+<ActView AdsSquare id="av_top" />
+<ActView AdsSquare id="av_content_1" />
 ```
 
 The generated HTML:
 
 ```html
 <div
-  id="square01"
-  data-topads
-  data-topads-size="square"
+  id="av_top"
+  data-actview
+  data-actview-size="square"
   style="min-height: 250px; display: block; margin: 20px auto; text-align: center;"
-  aria-label="Advertisement square01"
+  aria-label="Advertisement av_top"
 ></div>
 ```
 
 ## Configuration
 
-### TopAds Config (in topads.tsx)
+### ActView Ads Config (in actview.tsx)
 
 ```javascript
 topAds.config = {
@@ -163,17 +163,17 @@ topAds.config = {
 ### Basic Ad Placement
 
 ```tsx
-import { TopAdsSquare } from "@/components/ads/topads-placement";
+import { ActView AdsSquare } from "@/components/ads/actview-placement";
 
 export default function MyPage() {
   return (
     <div>
       <h1>My Page</h1>
-      <TopAdsSquare id="square01" />
+      <ActView AdsSquare id="av_top" />
 
       {/* Your content */}
 
-      <TopAdsSquare id="square02" />
+      <ActView AdsSquare id="av_content_1" />
     </div>
   );
 }
@@ -183,22 +183,22 @@ export default function MyPage() {
 
 ```tsx
 import {
-  TopAdsSquare,
-  TopAdsLeaderboard,
-  TopAdsBanner,
-} from "@/components/ads/topads-placement";
+  ActView AdsSquare,
+  ActView AdsLeaderboard,
+  ActView AdsBanner,
+} from "@/components/ads/actview-placement";
 
 export default function MyPage() {
   return (
     <div>
       {/* Square ad (300x250) */}
-      <TopAdsSquare id="square01" />
+      <ActView AdsSquare id="av_top" />
 
       {/* Leaderboard ad (728x90) */}
-      <TopAdsLeaderboard id="leaderboard01" />
+      <ActView AdsLeaderboard id="leaderboard01" />
 
       {/* Banner ad (320x50) */}
-      <TopAdsBanner id="banner01" />
+      <ActView AdsBanner id="banner01" />
     </div>
   );
 }
@@ -207,11 +207,11 @@ export default function MyPage() {
 ### Custom Ad Placement
 
 ```tsx
-import TopAdsPlacement from "@/components/ads/topads-placement";
+import ActView AdsPlacement from "@/components/ads/actview-placement";
 
 export default function MyPage() {
   return (
-    <TopAdsPlacement
+    <ActView AdsPlacement
       id="custom-ad-01"
       size="square"
       className="my-custom-class"
@@ -226,17 +226,17 @@ export default function MyPage() {
 ```tsx
 "use client";
 
-import { useTopAds } from "@/components/analytics/topads-spa-handler";
+import { useActView Ads } from "@/components/analytics/actview-spa-handler";
 
 export default function MyComponent() {
-  const { triggerSPA } = useTopAds();
+  const { triggerSPA } = useActView Ads();
 
   const handleCustomEvent = () => {
     // Your custom logic
 
-    // Manually trigger TopAds SPA
+    // Manually trigger ActView Ads SPA
     const success = triggerSPA();
-    console.log("TopAds SPA triggered:", success);
+    console.log("ActView Ads SPA triggered:", success);
   };
 
   return <button onClick={handleCustomEvent}>Custom Action</button>;
@@ -248,28 +248,28 @@ export default function MyComponent() {
 ### 1. Initial Page Load
 
 1. User visits the site
-2. `TopAds` component loads in `<head>`
+2. `ActView Ads` component loads in `<head>`
 3. Configuration is set via inline script
-4. TopAds main script is loaded
+4. ActView Ads main script is loaded
 5. Ad placements are rendered in the DOM
-6. TopAds SDK detects and fills ad containers
+6. ActView Ads SDK detects and fills ad containers
 
 ### 2. Navigation Between Pages
 
 1. User clicks a link (Next.js Link or native)
 2. Next.js changes the route
-3. `TopAdsSPAHandler` detects pathname change via `usePathname()`
+3. `ActView AdsSPAHandler` detects pathname change via `usePathname()`
 4. After 100ms delay, `topAds.spa()` is called
-5. TopAds SDK scans for new ad containers
+5. ActView Ads SDK scans for new ad containers
 6. New ads are loaded and displayed
 
 ### 3. Browser Navigation
 
 1. User clicks back/forward button
 2. `popstate` event is fired
-3. `TopAdsSPAHandler` detects the event
+3. `ActView AdsSPAHandler` detects the event
 4. After 100ms delay, `topAds.spa()` is called
-5. TopAds updates ads for the current page
+5. ActView Ads updates ads for the current page
 
 ## Development and Debugging
 
@@ -278,22 +278,22 @@ export default function MyComponent() {
 The implementation includes comprehensive logging:
 
 ```javascript
-// TopAds component mounted
-[TopAds] Component mounted
+// ActView Ads component mounted
+[ActView Ads] Component mounted
 
 // Configuration loaded
-[TopAds] Configuration loaded
+[ActView Ads] Configuration loaded
 
 // Script loaded
-[TopAds] Script loaded successfully
+[ActView Ads] Script loaded successfully
 
 // Ad placement mounted
-[TopAds] Ad placement mounted: square01 (square)
-[TopAds] Ad container found in DOM: square01
+[ActView Ads] Ad placement mounted: av_top (square)
+[ActView Ads] Ad container found in DOM: av_top
 
 // SPA navigation
-[TopAds] Triggering SPA navigation
-[TopAds] Browser navigation detected
+[ActView Ads] Triggering SPA navigation
+[ActView Ads] Browser navigation detected
 ```
 
 ### Performance Monitoring
@@ -304,10 +304,10 @@ Performance marks are created for monitoring:
 // Check performance in console:
 window.performance
   .getEntriesByType("mark")
-  .filter((m) => m.name.includes("topads"));
+  .filter((m) => m.name.includes("actview"));
 
 // Get measure:
-window.performance.getEntriesByName("topads-execution");
+window.performance.getEntriesByName("actview-execution");
 ```
 
 ### Testing
@@ -316,7 +316,7 @@ To test the implementation:
 
 1. **Visit the test page**: `/utm-test`
 2. **Open browser console** (F12)
-3. **Look for TopAds logs**:
+3. **Look for ActView Ads logs**:
    - Script loading confirmation
    - Ad placement detection
    - SPA navigation triggers
@@ -330,10 +330,10 @@ To test the implementation:
 
    ```javascript
    // In browser console:
-   document.querySelectorAll("[data-topads]");
+   document.querySelectorAll("[data-actview]");
    ```
 
-6. **Check TopAds object**:
+6. **Check ActView Ads object**:
 
    ```javascript
    // In browser console:
@@ -346,14 +346,14 @@ To test the implementation:
 ### Ad Placement IDs
 
 - Each ad placement must have a **unique ID**
-- Use descriptive IDs: `square01`, `square02`, `leaderboard01`, etc.
+- Use descriptive IDs: `av_top`, `av_content_1`, `leaderboard01`, etc.
 - **Don't repeat IDs** on the same page
 
 ### SPA Navigation
 
 - The system **automatically handles** all navigation
 - Manual triggering is **rarely needed**
-- Use `useTopAds()` hook only for custom events
+- Use `useActView Ads()` hook only for custom events
 
 ### Performance
 
@@ -374,15 +374,15 @@ To test the implementation:
 1. **Check console** for errors
 2. **Verify ad container IDs** are unique
 3. **Check network tab** for script loading
-4. **Verify TopAds object** exists: `window.topAds`
+4. **Verify ActView Ads object** exists: `window.topAds`
 5. **Check if SPA function exists**: `typeof window.topAds.spa`
 
 ### SPA Not Triggering
 
 1. **Check console** for navigation logs
 2. **Verify pathname changes** are detected
-3. **Check if TopAds script loaded** before navigation
-4. **Try manual trigger** with `useTopAds()` hook
+3. **Check if ActView Ads script loaded** before navigation
+4. **Try manual trigger** with `useActView Ads()` hook
 
 ### Script Loading Errors
 
@@ -393,10 +393,10 @@ To test the implementation:
 
 ## Integration Checklist
 
-- [x] TopAds component created
+- [x] ActView Ads component created
 - [x] SPA handler component created
 - [x] Ad placement components created
-- [x] Layout.tsx updated with TopAds
+- [x] Layout.tsx updated with ActView Ads
 - [x] Layout.tsx updated with SPA handler
 - [x] Config.js updated for UK market
 - [x] Test page updated with examples
@@ -422,11 +422,11 @@ To test the implementation:
 
 ## Support
 
-For TopAds-specific issues:
+For ActView Ads-specific issues:
 
-- Check TopAds documentation
-- Contact TopAds support
-- Review TopAds dashboard for delivery metrics
+- Check ActView Ads documentation
+- Contact ActView Ads support
+- Review ActView Ads dashboard for delivery metrics
 
 For integration issues:
 

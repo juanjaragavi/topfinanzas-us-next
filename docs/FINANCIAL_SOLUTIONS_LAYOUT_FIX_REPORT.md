@@ -28,7 +28,7 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 ### Issue: Ad Units Adjacent to Visual Content
 
-**Current Violation**: Ad units (`square04`) are placed immediately before promotional images/banners with **zero text content buffer** in between, violating the established layout standard.
+**Current Violation**: Ad units (`av_content_2`) are placed immediately before promotional images/banners with **zero text content buffer** in between, violating the established layout standard.
 
 **Impact**:
 
@@ -51,7 +51,7 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 ```tsx
 {/* ELEMENT 8: SECOND AD UNIT */}
-<div id="square04" className="w-full flex justify-center my-6" data-topads></div>
+<div id="av_content_2" className="w-full flex justify-center my-6" data-actview></div>
 
 {/* ELEMENT 9: FIRST PROMOTIONAL IMAGE */}
 <div className="my-8 text-left sm:text-left">
@@ -72,8 +72,8 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 **Lines 162-220**:
 
 ```tsx
-{/* Ad Unit: square04 */}
-<div id="square04" className="w-full flex justify-center my-6" data-topads></div>
+{/* Ad Unit: av_content_2 */}
+<div id="av_content_2" className="w-full flex justify-center my-6" data-actview></div>
 
 <h3 className="text-xl font-bold...">Stable income and financial stability</h3>
 {/* ~30 lines of text content */}
@@ -92,15 +92,15 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 #### `/app/financial-solutions/citi-simplicity-card-benefits/page.tsx`
 
-**Issue**: Page is **missing the second ad unit (`square04`)** entirely!
+**Issue**: Page is **missing the second ad unit (`av_content_2`)** entirely!
 
 **Current Structure**:
 
-- Only has `square02` ad unit (line 31-36)
-- No `square04` ad unit present
+- Only has `av_content_1` ad unit (line 31-36)
+- No `av_content_2` ad unit present
 - Missing revenue opportunity
 
-**Required Fix**: Add `square04` ad unit per layout standard at correct position (after content section 1, before promotional content).
+**Required Fix**: Add `av_content_2` ad unit per layout standard at correct position (after content section 1, before promotional content).
 
 ---
 
@@ -112,7 +112,7 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 **CORRECT ORDER**:
 
-1. **ELEMENT 8**: Second ad unit (`square04`)
+1. **ELEMENT 8**: Second ad unit (`av_content_2`)
 2. **ELEMENT 9**: Required Documentation Section (text content)
 3. **ELEMENT 10**: Understanding Costs Section (text content)
 4. **ELEMENT 11**: Promotional image with link
@@ -129,7 +129,7 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 **CORRECT ORDER**:
 
-1. **ELEMENT 11**: Second ad unit (`square04`)
+1. **ELEMENT 11**: Second ad unit (`av_content_2`)
 2. **ELEMENT 12**: Horizontal rule (`<hr />`)
 3. **ELEMENT 13**: Additional content sections (2-4 H2 sections with text)
 4. **ELEMENT 14**: Promotional image with link
@@ -147,7 +147,7 @@ This ad-next-to-banner pattern creates poor visual hierarchy and content flow.
 
 Run comprehensive audit of all `*-requirements/page.tsx` files to identify:
 
-1. Pages where `square04` appears immediately before promotional images
+1. Pages where `av_content_2` appears immediately before promotional images
 2. Pages missing required content sections between ads and images
 3. Pages with incorrect element ordering
 
@@ -156,7 +156,7 @@ Run comprehensive audit of all `*-requirements/page.tsx` files to identify:
 ```bash
 find app/financial-solutions -name "*requirements*" -name "page.tsx" -type f | while read file; do
   echo "=== $(basename $(dirname $file)) ==="
-  grep -n "square04\|banner-\|promotional\|Image src.*topfinanzas" "$file" | head -20
+  grep -n "av_content_2\|banner-\|promotional\|Image src.*topfinanzas" "$file" | head -20
 done
 ```
 
@@ -164,26 +164,26 @@ done
 
 - ✅ `/app/financial-solutions/citi-simplicity-card-requirements/page.tsx`
 - ⚠️ `/app/financial-solutions/requirements-to-qualify-for-the-discover-it-cash-back/page.tsx`
-- 🔍 20+ more requirements pages to audit (see grep results showing square04 matches)
+- 🔍 20+ more requirements pages to audit (see grep results showing av_content_2 matches)
 
 ### Phase 2: Audit All Benefits Pages (HIGH)
 
-Identify Benefits pages missing `square04` ad unit:
+Identify Benefits pages missing `av_content_2` ad unit:
 
 1. Check all `*benefits*/page.tsx` files
-2. Verify presence of both `square02` AND `square04`
+2. Verify presence of both `av_content_1` AND `av_content_2`
 3. Ensure proper spacing with content sections
 
 **Known Issues**:
 
-- ✅ `/app/financial-solutions/citi-simplicity-card-benefits/page.tsx` - Missing square04
+- ✅ `/app/financial-solutions/citi-simplicity-card-benefits/page.tsx` - Missing av_content_2
 
 **Command**:
 
 ```bash
 for file in app/financial-solutions/*benefits*/page.tsx; do
   echo "=== $file ==="
-  grep -c "square02" "$file" && grep -c "square04" "$file" || echo "Missing ad units!"
+  grep -c "av_content_1" "$file" && grep -c "av_content_2" "$file" || echo "Missing ad units!"
 done
 ```
 
@@ -197,7 +197,7 @@ For each affected page:
 
 ```tsx
 {/* Ad unit */}
-<div id="square04" ...></div>
+<div id="av_content_2" ...></div>
 
 {/* Promotional image - TOO CLOSE! */}
 <div className="my-8...">
@@ -209,7 +209,7 @@ For each affected page:
 
 ```tsx
 {/* Ad unit */}
-<div id="square04" ...></div>
+<div id="av_content_2" ...></div>
 
 {/* REQUIRED: Content buffer section 1 */}
 <h2 className="text-lg font-bold...">Section Title</h2>
@@ -237,7 +237,7 @@ For each affected page:
 
 #### Fix Pattern for Benefits Pages (Missing Ad Unit)
 
-**Add `square04` after content sections, before promotional content**:
+**Add `av_content_2` after content sections, before promotional content**:
 
 ```tsx
 {/* Content sections */}
@@ -247,12 +247,12 @@ For each affected page:
 <h2>When to consider this card</h2>
 <p>...</p>
 
-{/* MISSING: Add square04 here */}
+{/* MISSING: Add av_content_2 here */}
 <div
-  id="square04"
+  id="av_content_2"
   className="w-full flex justify-center my-6"
-  data-topads
-  data-topads-size="square"
+  data-actview
+  data-actview-size="square"
 ></div>
 
 {/* Horizontal rule */}
@@ -281,11 +281,11 @@ After implementing fixes, verify:
 
 ### Technical Testing
 
-- [ ] All Benefits pages have both `square02` and `square04` ad units
-- [ ] All Requirements pages have both `square03` and `square04` ad units
-- [ ] Ad units have correct TopAds data attributes:
-  - `data-topads`
-  - `data-topads-size="square"`
+- [ ] All Benefits pages have both `av_content_1` and `av_content_2` ad units
+- [ ] All Requirements pages have both `av_top` and `av_content_2` ad units
+- [ ] Ad units have correct ActView Ads data attributes:
+  - `data-actview`
+  - `data-actview-size="square"`
 - [ ] No TypeScript compilation errors
 - [ ] No console errors on page load
 
@@ -298,7 +298,7 @@ After implementing fixes, verify:
 
 ### SEO/Analytics Testing
 
-- [ ] TopAds tracking fires correctly for all ad units
+- [ ] ActView Ads tracking fires correctly for all ad units
 - [ ] GTM events track properly
 - [ ] Page metadata is complete
 - [ ] No broken images or links
@@ -344,14 +344,14 @@ function validateAdPlacement(filePath) {
 
   // Check for missing ad units in Benefits pages
   if (filePath.includes("benefits") && !filePath.includes("requirements")) {
-    const hasSquare02 = content.includes('id="square02"');
-    const hasSquare04 = content.includes('id="square04"');
+    const hasSquare02 = content.includes('id="av_content_1"');
+    const hasSquare04 = content.includes('id="av_content_2"');
 
     if (!hasSquare02 || !hasSquare04) {
       issues.push({
         file: filePath,
         line: 0,
-        issue: `Missing ad units - square02: ${hasSquare02}, square04: ${hasSquare04}`,
+        issue: `Missing ad units - av_content_1: ${hasSquare02}, av_content_2: ${hasSquare04}`,
       });
     }
   }
@@ -389,8 +389,8 @@ const allIssues = [];
 ## Success Criteria
 
 ✅ **Phase 1 Complete**: No ad units appear immediately adjacent to images/banners/buttons  
-✅ **Phase 2 Complete**: All Benefits pages have both ad units (square02 + square04)  
-✅ **Phase 3 Complete**: All Requirements pages have both ad units (square03 + square04)  
+✅ **Phase 2 Complete**: All Benefits pages have both ad units (av_content_1 + av_content_2)  
+✅ **Phase 3 Complete**: All Requirements pages have both ad units (av_top + av_content_2)  
 ✅ **Phase 4 Complete**: Minimum 2-3 content sections between ads and promotional images  
 ✅ **Phase 5 Complete**: Visual testing passes on mobile and desktop  
 ✅ **Phase 6 Complete**: Zero TypeScript/console errors  
@@ -412,7 +412,7 @@ const allIssues = [];
 - Edit files in small batches (5-10 files)
 - Test thoroughly after each batch
 - Use git commits for each batch (easy rollback)
-- Verify TopAds tracking after changes
+- Verify ActView Ads tracking after changes
 - Run lint/build checks after each batch
 
 ---
@@ -462,10 +462,10 @@ const allIssues = [];
 
 ## Contact & Context
 
-**Previous Work**: AdZep → TopAds migration completed and deployed (commit: 78cc07c)  
+**Previous Work**: AdZep → ActView Ads migration completed and deployed (commit: 78cc07c)  
 **Current Branch**: `dev` (clean working tree)  
 **Remote**: All branches synced (dev, main, backup)  
-**Environment**: Next.js 15+, TypeScript, Tailwind CSS, TopAds integration
+**Environment**: Next.js 15+, TypeScript, Tailwind CSS, ActView Ads integration
 
 **Related Issues**:
 
@@ -479,7 +479,7 @@ const allIssues = [];
 
 Based on grep search results:
 
-### Requirements Pages with square04
+### Requirements Pages with av_content_2
 
 1. /bank-of-america-business-loans-requirements/page.tsx
 2. /requirements-of-the-capital-one-platinum-secured-credit-card/page.tsx
@@ -495,9 +495,9 @@ Based on grep search results:
 12. /citi-simplicity-card-requirements/page.tsx
 13. _...and more_ (20+ total)
 
-### Benefits Pages (Need square04 Audit)
+### Benefits Pages (Need av_content_2 Audit)
 
-1. /citi-simplicity-card-benefits/page.tsx (confirmed missing square04)
+1. /citi-simplicity-card-benefits/page.tsx (confirmed missing av_content_2)
 2. /wells-fargo-autograph-card-benefits/page.tsx
 3. /benefits-of-the-american-express-gold-card/page.tsx
 4. /chase-sapphire-preferred-credit-card-benefits/page.tsx

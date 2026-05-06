@@ -36,7 +36,7 @@ See [`.github/instructions/PUSH-AND-COMMIT.instructions.md`](./instructions/PUSH
 | ---------------- | ---------------------------------------- | ------------------------------------------------------------------ |
 | Pages            | `app/`                                   | App Router; Server Components by default                           |
 | UI primitives    | `components/ui/`                         | Shadcn/UI + Radix                                                  |
-| Analytics        | `components/analytics/`                  | GTM → TopAds load order is critical                                |
+| Analytics        | `components/analytics/`                  | GTM → ActView Ads load order is critical                           |
 | Multi-step forms | `components/steps/`, `components/forms/` | React Hook Form + Zod                                              |
 | API routes       | `app/api/*/route.ts`                     | contact, subscribe, sheets, search, activecampaign, posts, authors |
 | Search index     | `lib/search-index.ts`                    | ~400 hardcoded items; requires redeploy on update                  |
@@ -52,8 +52,8 @@ See [`.github/instructions/PUSH-AND-COMMIT.instructions.md`](./instructions/PUSH
 ### 1. Logging — Never use `console.log`
 
 ```typescript
-import { logger, apiLogger, formLogger, topadsLogger } from "@/lib/logger";
-// Pre-scoped: logger (App), apiLogger, analyticsLogger, topadsLogger,
+import { logger, apiLogger, formLogger, actviewLogger } from "@/lib/logger";
+// Pre-scoped: logger (App), apiLogger, analyticsLogger, actviewLogger,
 //             utmLogger, formLogger, validationLogger
 // Or scope your own: createScopedLogger("MyFeature")
 logger.info({ userId }, "User loaded");
@@ -70,9 +70,9 @@ export default function MyCard({ className }: { className?: string }) {
 }
 ```
 
-### 3. TopAds — SPA navigation is automatic
+### 3. ActView Ads — SPA navigation is automatic
 
-Do **not** manually call `window.topAds.spa()`. `TopAdsSPAHandler` in `app/layout.tsx` handles all route changes via `usePathname()`. Use `useTopAds()` hook only for explicit programmatic activation.
+Do **not** manually call `window.topAds.spa()`. `ActView AdsSPAHandler` in `app/layout.tsx` handles all route changes via `usePathname()`. Use `useActView Ads()` hook only for explicit programmatic activation.
 
 ### 4. Financial Solutions pages — mandatory layout
 
@@ -99,7 +99,7 @@ Always call `window.scrollTo(0, 0)` when advancing steps.
 
 | File                      | Purpose                                                      |
 | ------------------------- | ------------------------------------------------------------ |
-| `app/layout.tsx`          | Root layout — analytics load order (GTM before TopAds)       |
+| `app/layout.tsx`          | Root layout — analytics load order (GTM before ActView Ads)  |
 | `lib/logger.ts`           | Logging — import from here, never use `console.*`            |
 | `lib/search-index.ts`     | In-memory search; update when adding new pages               |
 | `scripts/git-workflow.sh` | Only way to commit/push                                      |

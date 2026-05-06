@@ -72,13 +72,8 @@ export default function NationalFundingRequirementsPage() {
               Requirements for National Funding Loans
             </h1>
 
-            {/* Ad Unit: square03 */}
-            <div
-              id="square03"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
+            {/* Ad Unit: av_top */}
+            <div id="av_top" className="w-full flex justify-center my-6"></div>
 
             {/* Intro */}
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -193,12 +188,10 @@ export default function NationalFundingRequirementsPage() {
               to $500,000, they cater to a diverse range of industries.
             </p>
 
-            {/* Ad Unit: square04 */}
+            {/* Ad Unit: av_content_2 */}
             <div
-              id="square04"
+              id="av_content_2"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
             ></div>
 
             {/* Advantages of National Funding */}

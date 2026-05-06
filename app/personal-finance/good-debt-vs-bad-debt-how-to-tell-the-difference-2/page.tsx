@@ -99,7 +99,7 @@ export default function PostPage() {
             "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
         }}
       >
-        <div id="square01" data-topads data-topads-size="square"></div>
+        <div id="av_top"></div>
 
         <p>
           When you first start earning a steady paycheck, saving money can feel

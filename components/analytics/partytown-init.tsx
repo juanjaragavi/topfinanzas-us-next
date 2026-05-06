@@ -44,11 +44,7 @@ export default function PartytownInit() {
           "ads.gamadx.com",
           "fundingchoicesmessages.google.com",
         ];
-        if (
-          partytownHosts.some(
-            (host) => url.hostname.includes(host)
-          )
-        ) {
+        if (partytownHosts.some((host) => url.hostname.includes(host))) {
           return url;
         }
         // Let Partytown decide for everything else

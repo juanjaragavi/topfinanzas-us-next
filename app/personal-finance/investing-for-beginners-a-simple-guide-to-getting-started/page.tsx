@@ -101,7 +101,7 @@ export default function PostPage() {
             "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
         }}
       >
-        <div id="square01" data-topads data-topads-size="square"></div>
+        <div id="av_top"></div>
 
         <p>
           You’ve landed your first job, you’re earning a steady paycheck, and

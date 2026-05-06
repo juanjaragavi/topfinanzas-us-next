@@ -68,12 +68,7 @@ export default function RequirementsFundboxLoanPage() {
               Fundbox Loan Requirements: Quick Access to Business Credit
             </h1>
 
-            <div
-              className="w-full flex justify-center my-6"
-              data-topads=""
-              data-topads-size="square"
-              id="square03"
-            ></div>
+            <div className="w-full flex justify-center my-6" id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
@@ -156,9 +151,7 @@ export default function RequirementsFundboxLoanPage() {
 
                 <div
                   className="w-full flex justify-center my-6"
-                  data-topads=""
-                  data-topads-size="square"
-                  id="square04"
+                  id="av_content_2"
                 ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">

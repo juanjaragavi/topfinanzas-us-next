@@ -81,14 +81,14 @@ Heavy multi-layer analytics implementation:
 
 - **Google Tag Manager** - Core analytics
 - **Google Ads** - Conversion tracking
-- **TopAds** - Proprietary ad network with SPA navigation support
+- **ActView Ads** - Proprietary ad network with SPA navigation support
 - **UTM Tracking** - Captured and persisted throughout user journey
 - All analytics components in `/components/analytics/`
 
-**TopAds Critical Pattern**:
+**ActView Ads Critical Pattern**:
 
-- SPA navigation handled automatically via `TopAdsSPAHandler` calling `window.topAds.spa()`
-- Use `useTopAds()` hook for programmatic SPA activation only when needed
+- SPA navigation handled automatically via `ActView AdsSPAHandler` calling `window.topAds.spa()`
+- Use `useActView Ads()` hook for programmatic SPA activation only when needed
 - Configuration: domain `TOPFIN_US`, networkCode `23062212598`, lazyLoad `soft`
 - See `.github/copilot-instructions.md` for full implementation details
 
@@ -233,7 +233,7 @@ logger.info({ userData }, "User data retrieved");
 
 /components/
   /ui/                              # Shadcn/Radix base components
-  /analytics/                       # GTM, Google Ads, TopAds
+  /analytics/                       # GTM, Google Ads, ActView Ads
   /layout/                          # Header, footer, site wrapper
   /forms/                           # Contact, subscription forms
 
@@ -271,8 +271,8 @@ logger.info({ userData }, "User data retrieved");
 
 ### Implementation Guides
 
-- **`ADZEP_IMPLEMENTATION.instructions.md`**: ~~Removed~~ (AdZep replaced by TopAds)
-  - TopAds integration now handled via `topads.tsx` and `topads-spa-handler.tsx`
+- **`ADZEP_IMPLEMENTATION.instructions.md`**: ~~Removed~~ (AdZep replaced by ActView Ads)
+  - ActView Ads integration now handled via `actview.tsx` and `actview-spa-handler.tsx`
 
 - **`BLOG_POST_INTEGRATION.instructions.md`**: Blog content workflow
   - Multi-location sync requirements
@@ -284,7 +284,7 @@ logger.info({ userData }, "User data retrieved");
   - Benefits and Requirements page separation
   - Exact element ordering (validated against GA/Google Ads)
   - Image component specifications (`ResponsiveImage` vs `Image`)
-  - Ad unit placement (`square03`, `square04`)
+  - Ad unit placement (`av_top`, `av_content_2`)
   - NO colored background boxes, grid layouts, or bullet lists
   - Template reference: `/app/financial-solutions/citi-simplicity-card/`
   - **ANY deviation negatively impacts SEO and conversion rates**
@@ -303,10 +303,10 @@ logger.info({ userData }, "User data retrieved");
 
 1. **Port 3040** - Not standard 3000
 2. **Git Workflow** - Never bypass `git-workflow.sh` script; reads commit from `/lib/documents/commit-message.txt`
-3. **Analytics Order** - GTM must load before TopAds in layout
+3. **Analytics Order** - GTM must load before ActView Ads in layout
 4. **Form Navigation** - Always scroll to top on step changes (`window.scrollTo(0, 0)`)
 5. **MDX Support** - Configured but unused; content is hardcoded
-6. **TopAds Activation** - SPA navigation handled automatically via `TopAdsSPAHandler`
+6. **ActView Ads Activation** - SPA navigation handled automatically via `ActView AdsSPAHandler`
 7. **Search Index** - Requires rebuild/redeploy for content changes (~400 items in memory)
 8. **Image Sources** - Multiple CDN patterns configured in next.config.mjs
 9. **Console Logging** - NEVER use `console.log()`; always use `logger` from `@/lib/logger`
@@ -326,7 +326,7 @@ logger.info({ userData }, "User data retrieved");
   - `npm run test:brevo` - New contact integration test
   - `npm run test:brevo-direct` - Direct API test
   - `npm run test:brevo-api` - Full integration test
-- Development testing panel for TopAds via browser DevTools
+- Development testing panel for ActView Ads via browser DevTools
 - Analytics tracking verification through browser DevTools
 
 ## Deployment
@@ -400,7 +400,7 @@ README.md                       # Project overview and setup
 ### Key Reference Files
 
 - **Architecture**: `.github/instructions/project-rules.instructions.md`
-- **Analytics**: TopAds integration via `topads.tsx` and `topads-spa-handler.tsx`
+- **Analytics**: ActView Ads integration via `actview.tsx` and `actview-spa-handler.tsx`
 - **Content**: `.github/instructions/BLOG_POST_INTEGRATION.instructions.md`
 - **Product Pages**: `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`
 - **Git**: `.github/instructions/PUSH-AND-COMMIT.instructions.md`

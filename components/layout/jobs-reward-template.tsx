@@ -72,11 +72,9 @@ export default function JobsRewardTemplate({
       <article className="py-4 md:py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* ─── Ad Unit: square02 — Top of content, before subtitle ─── */}
+            {/* ─── Ad Unit: av_content_1 — Top of content, before subtitle ─── */}
             <div
-              id="square02"
-              data-topads
-              data-topads-size="square"
+              id="av_content_1"
               className="items-center justify-center flex w-full my-8"
             />
 
@@ -147,13 +145,11 @@ export default function JobsRewardTemplate({
                 <div key={`method-wrapper-${i}`}>
                   <JobMethodCard {...method} />
 
-                  {/* ─── Ad Unit: square03 — After first half of method cards ─── */}
+                  {/* ─── Ad Unit: av_top — After first half of method cards ─── */}
                   {i === Math.ceil(methods.length / 2) - 1 && (
                     <>
                       <div
-                        id="square03"
-                        data-topads
-                        data-topads-size="square"
+                        id="av_top"
                         className="items-center justify-center flex w-full my-8"
                       />
                       <p className="text-gray-600 mb-4 text-sm leading-relaxed">
@@ -183,11 +179,9 @@ export default function JobsRewardTemplate({
                 </p>
               ))}
 
-            {/* ─── Ad Unit: square04 — Before related content ─── */}
+            {/* ─── Ad Unit: av_content_2 — Before related content ─── */}
             <div
-              id="square04"
-              data-topads
-              data-topads-size="square"
+              id="av_content_2"
               className="items-center justify-center flex w-full my-8"
             />
 

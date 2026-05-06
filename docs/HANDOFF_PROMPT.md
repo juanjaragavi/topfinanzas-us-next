@@ -7,7 +7,7 @@ You're working on the TopFinanzas US Next.js project (`topfinanzas-us-next`). A 
 ## Current State
 
 - **Repository**: Clean working tree on `dev` branch
-- **Last Commit**: 78cc07c (AdZep → TopAds migration complete)
+- **Last Commit**: 78cc07c (AdZep → ActView Ads migration complete)
 - **Issue**: 40+ Financial Solutions pages have incorrect ad placement
 - **Report**: Complete analysis in `docs/FINANCIAL_SOLUTIONS_LAYOUT_FIX_REPORT.md`
 
@@ -18,7 +18,7 @@ Fix ad unit placement in Financial Solutions blog posts to ensure proper content
 ### Critical Requirements
 
 1. **No ads next to images**: There must be 2-3 content sections (H2/H3 + paragraphs) between any ad unit and promotional images/banners
-2. **Add missing ad units**: Benefits pages need `square04` ad unit (currently missing on multiple pages)
+2. **Add missing ad units**: Benefits pages need `av_content_2` ad unit (currently missing on multiple pages)
 3. **Follow the standard**: Use `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md` as the authority
 
 ### Example Fix Needed
@@ -26,7 +26,7 @@ Fix ad unit placement in Financial Solutions blog posts to ensure proper content
 **Current (Broken)** - `/app/financial-solutions/citi-simplicity-card-requirements/page.tsx` lines 125-145:
 
 ```tsx
-<div id="square04" data-topads></div>;
+<div id="av_content_2" data-actview></div>;
 
 {
   /* Promotional image TOO CLOSE! */
@@ -39,7 +39,7 @@ Fix ad unit placement in Financial Solutions blog posts to ensure proper content
 **Required (Fixed)**:
 
 ```tsx
-<div id="square04" data-topads></div>
+<div id="av_content_2" data-actview></div>
 
 {/* Add content buffer sections */}
 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
@@ -77,8 +77,8 @@ Fix ad unit placement in Financial Solutions blog posts to ensure proper content
 ### Success Criteria
 
 - [ ] No ad units appear immediately next to images/banners/buttons
-- [ ] All Benefits pages have both `square02` AND `square04` ad units
-- [ ] All Requirements pages have both `square03` AND `square04` ad units
+- [ ] All Benefits pages have both `av_content_1` AND `av_content_2` ad units
+- [ ] All Requirements pages have both `av_top` AND `av_content_2` ad units
 - [ ] Minimum 2-3 content sections between ads and promotional content
 - [ ] Zero TypeScript compilation errors
 - [ ] Visual testing passes on mobile and desktop viewports
@@ -105,7 +105,7 @@ git checkout -b fix/financial-solutions-ad-placement
 # 3. Find all affected Requirements pages
 find app/financial-solutions -name "*requirements*" -name "page.tsx" -type f
 
-# 4. Find all Benefits pages (check for missing square04)
+# 4. Find all Benefits pages (check for missing av_content_2)
 find app/financial-solutions -name "*benefits*" -name "page.tsx" -type f
 
 # 5. Start with the template/reference fix
@@ -124,7 +124,7 @@ npm run build && git add . && git commit -m "fix: Add content buffer between ads
 **Repository**: juanjaragavi/topfinanzas-us-next  
 **Branch**: dev  
 **Framework**: Next.js 15+ (App Router)  
-**Ad System**: TopAds (proprietary)
+**Ad System**: ActView Ads (proprietary)
 
 **Questions?** Reference the comprehensive report in `docs/FINANCIAL_SOLUTIONS_LAYOUT_FIX_REPORT.md`
 

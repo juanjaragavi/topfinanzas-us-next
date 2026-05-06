@@ -29,7 +29,7 @@ export default function OfferwallPageShell({
   useEffect(() => {
     // Double-rAF ensures FinanceOfferwall's own rAF-deferred mount has
     // completed and TopAds has had at least one frame to discover the
-    // data-topads-quiz scaffold and begin creating the quiz overlay.
+    // scaffold and begin creating the quiz overlay.
     let cancelled = false;
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {

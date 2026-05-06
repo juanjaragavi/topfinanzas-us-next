@@ -336,8 +336,7 @@ body
 /* Remove backdrop-filter blur effects from body when no active ads */
 body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])):not(
     :has(#quiz-overlay)
-  ),
-body:not(:has([data-topads-active])):not(:has(#quiz-overlay)) {
+  ) {
   backdrop-filter: none !important;
   filter: none !important;
 }

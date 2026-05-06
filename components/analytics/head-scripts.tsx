@@ -5,18 +5,56 @@ import PartytownInit from "./partytown-init";
 
 const GoogleTagManagerPartytown = dynamic(
   () => import("./gtm-partytown").then((mod) => mod.default),
-  { ssr: false }
+  { ssr: false },
 );
-const TopAds = dynamic(() => import("./topads"), {
-  ssr: false,
-});
-
 export default function HeadScripts() {
   return (
     <>
       <PartytownInit />
       <GoogleTagManagerPartytown />
-      <TopAds />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.topAds = window.topAds || {};
+            window.topAds.config = {
+              domain: "TOPFIN_US",
+              networkCode: "23062212598",
+              lazyLoad: "soft",
+              pageSetting: {
+                exclude: [
+                  "/terms",
+                  "/privacy-policy",
+                  "/cookie-policy",
+                  "/about-us",
+                  "/contact-us",
+                  "/quiz"
+                ]
+              },
+              formats: {
+                interstitial: {
+                  status: "active",
+                  exclude: []
+                },
+                offerwall: {
+                  status: "active",
+                  logoUrl: "https://media.topfinanzas.com/images/logo-english.webp",
+                  websiteName: "TopFinanzas US",
+                  cooldown: "12",
+                  exclude: ["/invit-credit-card-rec-us"]
+                }
+              }
+            };
+            window.actviewAds = window.actviewAds || window.topAds;
+            window.actviewAds.config = window.topAds.config;
+          `,
+        }}
+      />
+      <link
+        rel="preload"
+        as="script"
+        href="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+      />
+      <script async src="https://scr.actview.net/ustopfinanzas.js"></script>
     </>
   );
 }

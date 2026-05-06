@@ -75,13 +75,8 @@ export default function AmexGoldRequirementsPage() {
               You Need to Know
             </h1>
 
-            {/* Ad Unit: square03 */}
-            <div
-              id="square03"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
+            {/* Ad Unit: av_top */}
+            <div id="av_top" className="w-full flex justify-center my-6"></div>
 
             {/* Intro */}
             <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
@@ -109,7 +104,7 @@ export default function AmexGoldRequirementsPage() {
               />
             </div>
 
-            {/* Ad Unit: square04 (Inserted after 3rd paragraph block - roughly here or inside next section) */}
+            {/* Ad Unit: av_content_2 (Inserted after 3rd paragraph block - roughly here or inside next section) */}
             {/* We have 2 paragraphs above. Let's put one more before the ad or put the ad inside the next section's flow */}
 
             <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
@@ -133,10 +128,8 @@ export default function AmexGoldRequirementsPage() {
 
               {/* Square04 could go here to be "after 3rd paragraph" if we count list items as blocks, or just insert it after this block */}
               <div
-                id="square04"
+                id="av_content_2"
                 className="w-full flex justify-center my-6"
-                data-topads
-                data-topads-size="square"
               ></div>
 
               <div className="flex items-start">

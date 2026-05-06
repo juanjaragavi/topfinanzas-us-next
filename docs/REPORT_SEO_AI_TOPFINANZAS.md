@@ -49,7 +49,7 @@ With over 50% of web traffic interacting with Artificial Intelligence assistants
 ### 2.5. Performance and Ad Ecosystem Compatibility
 
 - **DOM and Viewport Cleanup:** Duplicate tags and attributes that blocked accessibility (`maximumScale: 1`) were removed, aligning with _Core Web Vitals_ requirements.
-- **CSP (Content-Security-Policy) Conflict Resolution:** During the SEO security process, a block was detected and corrected in the loading of the `TopAds` script (Google Ad Manager). Technical security was balanced to allow the fluid execution of monetization mechanisms, GTM analytics, and the loading of interstitial pre-loaders without impacting performance metrics.
+- **CSP (Content-Security-Policy) Conflict Resolution:** During the SEO security process, a block was detected and corrected in the loading of the `ActView Ads` script (Google Ad Manager). Technical security was balanced to allow the fluid execution of monetization mechanisms, GTM analytics, and the loading of interstitial pre-loaders without impacting performance metrics.
 
 ---
 

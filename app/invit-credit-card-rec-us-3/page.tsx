@@ -72,7 +72,7 @@ export default function InvitCreditCardRecUS3Page() {
 
           <main className="flex-grow">
             <div className="max-w-3xl mx-auto px-4 py-3 md:py-8">
-              {/* TopAds ad unit — square01 */}
+              {/* TopAds ad unit — av_top */}
               <div className="flex justify-center mb-4">
                 <AdSlot unitIndex={1} logTag={LOG_TAG} />
               </div>

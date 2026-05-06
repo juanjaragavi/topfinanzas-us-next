@@ -1,18 +1,18 @@
-# TopAds Integration - Implementation Summary
+# ActView Ads Integration - Implementation Summary
 
 ## Overview
 
-Successfully integrated TopAds advertising system into TopFinanzas US Next.js project following the provided instructions. The implementation includes script loading, SPA navigation handling, ad placement components, and comprehensive documentation.
+Successfully integrated ActView Ads advertising system into TopFinanzas US Next.js project following the provided instructions. The implementation includes script loading, SPA navigation handling, ad placement components, and comprehensive documentation.
 
 ## Changes Made
 
 ### 1. New Components Created
 
-#### `/components/analytics/topads.tsx`
+#### `/components/analytics/actview.tsx`
 
-- Main TopAds component for script loading
+- Main ActView Ads component for script loading
 - Loads configuration inline with UK-specific settings
-- Loads TopAds script from `https://topads.topnetworks.co/topAds.min.js`
+- Loads ActView Ads script from `https://actview.topnetworks.co/topAds.min.js`
 - Uses Next.js `Script` component with `afterInteractive` strategy
 - Includes performance monitoring and error handling
 - Comprehensive logging for debugging
@@ -24,13 +24,13 @@ Successfully integrated TopAds advertising system into TopFinanzas US Next.js pr
 - Configuration for anchor, interstitial, and offerwall ads
 - Performance marks for monitoring
 
-#### `/components/analytics/topads-spa-handler.tsx`
+#### `/components/analytics/actview-spa-handler.tsx`
 
 - Handles SPA navigation for Next.js routing
 - Monitors route changes using `usePathname()` hook
 - Triggers `topAds.spa()` on every navigation
 - Handles browser back/forward navigation via `popstate` events
-- Includes custom `useTopAds()` hook for manual control
+- Includes custom `useActView Ads()` hook for manual control
 - 100ms delay to ensure DOM readiness
 
 **Key Features:**
@@ -40,11 +40,11 @@ Successfully integrated TopAds advertising system into TopFinanzas US Next.js pr
 - Manual trigger capability
 - TypeScript type declarations
 
-#### `/components/ads/topads-placement.tsx`
+#### `/components/ads/actview-placement.tsx`
 
 - Reusable ad placement components
-- Pre-configured components: `TopAdsSquare`, `TopAdsLeaderboard`, `TopAdsBanner`
-- Generic `TopAdsPlacement` for custom needs
+- Pre-configured components: `ActView AdsSquare`, `ActView AdsLeaderboard`, `ActView AdsBanner`
+- Generic `ActView AdsPlacement` for custom needs
 - Automatic logging when components mount
 - Accessibility attributes included
 - Customizable styling
@@ -63,8 +63,8 @@ Successfully integrated TopAds advertising system into TopFinanzas US Next.js pr
 Added imports:
 
 ```tsx
-import TopAds from "@/components/analytics/topads";
-import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
+import ActView Ads from "@/components/analytics/actview";
+import ActView AdsSPAHandler from "@/components/analytics/actview-spa-handler";
 ```
 
 Added to head section:
@@ -75,7 +75,7 @@ Added to head section:
   <GoogleAds />
   <GoogleAdManager />
   <AdZep />
-  <TopAds /> {/* NEW */}
+  <ActView Ads /> {/* NEW */}
 </ClientOnly>
 ```
 
@@ -85,7 +85,7 @@ Added to body section:
 <NavigationProvider>
   <Suspense fallback={null}>
     {/* ...existing components... */}
-    <TopAdsSPAHandler /> {/* NEW */}
+    <ActView AdsSPAHandler /> {/* NEW */}
     {/* ...rest... */}
   </Suspense>
   {children}
@@ -103,11 +103,11 @@ Updated configuration:
 
 #### `/app/utm-test/page.tsx` (Test Example)
 
-Added TopAds placements for testing:
+Added ActView Ads placements for testing:
 
-- Import statement for `TopAdsSquare`
-- Two test placements: `square01` and `square02`
-- Information section about TopAds testing
+- Import statement for `ActView AdsSquare`
+- Two test placements: `av_top` and `av_content_1`
+- Information section about ActView Ads testing
 - Demonstrates proper usage
 
 ### 3. Documentation Created
@@ -143,16 +143,16 @@ Quick reference guide including:
 
 ### Step 1: Script Loading ✅
 
-The config.js file content is loaded via inline script in the `TopAds` component, which is included in the `<head>` section of the root layout. The script:
+The config.js file content is loaded via inline script in the `ActView Ads` component, which is included in the `<head>` section of the root layout. The script:
 
 1. Initializes `window.topAds` object
 2. Sets UK-specific configuration
-3. Loads the TopAds main script
+3. Loads the ActView Ads main script
 4. Uses `afterInteractive` strategy for optimal performance
 
 ### Step 2: SPA Navigation ✅
 
-The `TopAdsSPAHandler` component is included in the root layout body and:
+The `ActView AdsSPAHandler` component is included in the root layout body and:
 
 1. Monitors Next.js route changes via `usePathname()`
 2. Calls `topAds.spa()` on every pathname change
@@ -166,18 +166,18 @@ Ad placement components render divs with proper attributes:
 
 ```html
 <div
-  id="square01"
-  data-topads
-  data-topads-size="square"
+  id="av_top"
+  data-actview
+  data-actview-size="square"
   style="min-height: 250px; display: block; margin: 20px auto; text-align: center;"
-  aria-label="Advertisement square01"
+  aria-label="Advertisement av_top"
 ></div>
 ```
 
 Example usage in `/app/utm-test/page.tsx`:
 
-- `square01` placement before navigation buttons
-- `square02` placement after navigation section
+- `av_top` placement before navigation buttons
+- `av_content_1` placement after navigation section
 - Information box explaining the test setup
 
 ## Technical Implementation
@@ -192,8 +192,8 @@ Example usage in `/app/utm-test/page.tsx`:
 ### Performance
 
 - Scripts load with `afterInteractive` strategy
-- Performance marks: `topads-mount`, `topads-loaded`
-- Performance measure: `topads-execution`
+- Performance marks: `actview-mount`, `actview-loaded`
+- Performance measure: `actview-execution`
 - Minimal impact on Core Web Vitals
 
 ### Accessibility
@@ -241,7 +241,7 @@ Example usage in `/app/utm-test/page.tsx`:
 
 The `/utm-test` page now includes:
 
-- Two TopAds placements (square01, square02)
+- Two ActView Ads placements (av_top, av_content_1)
 - Visual indication of ad test areas
 - Console logging for debugging
 - Navigation links to test SPA functionality
@@ -260,17 +260,17 @@ Development mode includes extensive logging:
 
 1. Visit `/utm-test` page
 2. Open browser console (F12)
-3. Look for TopAds initialization logs
+3. Look for ActView Ads initialization logs
 4. Navigate between pages
 5. Check for SPA trigger logs
 6. Verify ad containers in DOM
 
 ## Integration Checklist
 
-✅ TopAds component created and integrated  
+✅ ActView Ads component created and integrated  
 ✅ SPA handler component created and integrated  
 ✅ Ad placement components created  
-✅ Layout.tsx updated with TopAds in head  
+✅ Layout.tsx updated with ActView Ads in head  
 ✅ Layout.tsx updated with SPA handler in body  
 ✅ Config.js updated for UK market  
 ✅ Test page updated with examples  
@@ -306,7 +306,7 @@ Development mode includes extensive logging:
    - Verify no render blocking
 
 5. **Ad Delivery Verification**
-   - Check TopAds dashboard
+   - Check ActView Ads dashboard
    - Verify impressions tracking
    - Monitor click-through rates
 
@@ -321,10 +321,10 @@ Development mode includes extensive logging:
 topfinanzas-us-next/
 ├── components/
 │ ├── ads/
-│ │ └── topads-placement.tsx [NEW]
+│ │ └── actview-placement.tsx [NEW]
 │ └── analytics/
-│ ├── topads.tsx [NEW]
-│ └── topads-spa-handler.tsx [NEW]
+│ ├── actview.tsx [NEW]
+│ └── actview-spa-handler.tsx [NEW]
 ├── app/
 │ ├── layout.tsx [MODIFIED]
 │ └── utm-test/
@@ -352,7 +352,7 @@ topfinanzas-us-next/
 
 ### Automatic Operation
 
-The TopAds system works automatically once deployed:
+The ActView Ads system works automatically once deployed:
 
 1. Script loads on every page
 2. SPA handler triggers on navigation
@@ -360,10 +360,10 @@ The TopAds system works automatically once deployed:
 
 ### Manual Control
 
-For custom scenarios, use the `useTopAds()` hook:
+For custom scenarios, use the `useActView Ads()` hook:
 
 ```tsx
-const { triggerSPA } = useTopAds();
+const { triggerSPA } = useActView Ads();
 triggerSPA(); // Manual trigger
 ```
 
@@ -371,7 +371,7 @@ triggerSPA(); // Manual trigger
 
 - Each ad must have a unique ID
 - Don't repeat IDs on the same page
-- Use descriptive IDs (square01, square02, etc.)
+- Use descriptive IDs (av_top, av_content_1, etc.)
 
 ### Performance Impact
 
@@ -386,7 +386,7 @@ triggerSPA(); // Manual trigger
 
 Check browser console for:
 
-- `[TopAds]` prefixed messages
+- `[ActView Ads]` prefixed messages
 - Script load confirmations
 - SPA trigger events
 - Error messages
@@ -402,7 +402,7 @@ Check browser console for:
 ```javascript
 window.topAds; // Check if loaded
 typeof window.topAds.spa; // Should be 'function'
-document.querySelectorAll("[data-topads]"); // Find ad containers
+document.querySelectorAll("[data-actview]"); // Find ad containers
 ```
 
 ---

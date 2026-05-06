@@ -76,12 +76,7 @@ export default function RequirementsWellsFargoAutographPage() {
             </h1>
 
             {/* ELEMENT 4: FIRST AD UNIT */}
-            <div
-              id="square03"
-              className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
-            ></div>
+            <div id="av_top" className="w-full flex justify-center my-6"></div>
 
             <div className="my-8 text-left sm:text-left">
               {/* ELEMENT 6: SUBTITLE + INTRO PARAGRAPH */}
@@ -164,10 +159,8 @@ export default function RequirementsWellsFargoAutographPage() {
 
                 {/* ELEMENT 10: SECOND AD UNIT */}
                 <div
-                  id="square04"
+                  id="av_content_2"
                   className="w-full flex justify-center my-6"
-                  data-topads
-                  data-topads-size="square"
                 ></div>
 
                 {/* ELEMENT 11: WHY REQUIREMENTS MATTER */}

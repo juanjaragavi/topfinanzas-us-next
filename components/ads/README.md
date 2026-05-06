@@ -13,19 +13,28 @@ This directory contains advertisement management components for the application,
 Reusable components for TopAds ad placements with pre-configured variants:
 
 - `TopAdsPlacement` - Generic component for custom ad placements
-- `TopAdsSquare` - Pre-configured square ad (300x250)
+- `ActviewAdSlot` - Pre-configured square ad (300x250)
 - `TopAdsLeaderboard` - Pre-configured leaderboard ad (728x90)
 - `TopAdsBanner` - Pre-configured banner ad (320x50)
 
 **Example Usage:**
 
 ```tsx
-import { TopAdsSquare } from "@/components/ads/topads-placement";
-
-<TopAdsSquare id="square01" />;
+<div>
+  <p
+    style={{
+      fontSize: "10px",
+      textTransform: "uppercase",
+      textAlign: "center",
+    }}
+  >
+    Ads
+  </p>
+  <div id="av_top"></div>
+</div>
 ```
 
-**See:** `/docs/TOPADS_IMPLEMENTATION.md` for comprehensive documentation.
+**See:** `/docs/ACTVIEW_IMPLEMENTATION.md` for comprehensive documentation.
 
 ### Local Advertisement Components
 

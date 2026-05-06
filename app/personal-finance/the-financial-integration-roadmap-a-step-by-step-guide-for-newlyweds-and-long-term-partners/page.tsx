@@ -29,7 +29,7 @@ export default function FinancialIntegrationRoadmapPage() {
               The Financial Integration Roadmap: A Step-by-Step Guide for
               Newlyweds and Long-Term Partners
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Moving in together or tying the knot is a major milestone—and
               along with unpacking boxes and building a life together, it also
@@ -162,7 +162,7 @@ export default function FinancialIntegrationRoadmapPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Step 4: Streamline Your Accounts and Cards
               </h2>
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
               <p className="text-gray-700 mb-4 leading-7">
                 As your lives merge, it often makes sense to consolidate certain
                 accounts. Review your recurring subscriptions to eliminate

@@ -3,8 +3,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { useTopAds } from "@/components/analytics/topads-spa-handler";
-import { TopAdsSquare } from "@/components/ads/topads-placement";
 import { ChatContainer } from "@/components/finance/chat/ChatContainer";
 import { MessageBubble } from "@/components/finance/chat/MessageBubble";
 
@@ -49,7 +47,6 @@ export function FinanceChatOfferwall({
   redirectTypingDelayMs = 300,
 }: FinanceChatOfferwallProps) {
   const router = useRouter();
-  const { triggerSPA } = useTopAds();
   const [messages, setMessages] = useState<ChatBubble[]>([]);
 
   const [currentQuestion, setCurrentQuestion] = useState(-1);
@@ -129,9 +126,6 @@ export function FinanceChatOfferwall({
 
       if (currentQuestion === adStepIndex - 1) {
         await addAdMessage(800);
-        setTimeout(() => {
-          triggerSPA();
-        }, 500);
       }
 
       if (nextIndex < questions.length) {
@@ -163,7 +157,6 @@ export function FinanceChatOfferwall({
       addAdMessage,
       successMessage,
       adStepIndex,
-      triggerSPA,
       finalAction,
       redirectTypingDelayMs,
       redirectTo,
@@ -207,10 +200,18 @@ export function FinanceChatOfferwall({
                   <span className="text-[10px] text-gray-400 uppercase tracking-wider block text-center mb-2">
                     Advertisement
                   </span>
-                  <TopAdsSquare
-                    id="square01"
-                    className="min-h-[250px] mx-auto"
-                  />
+                  <div>
+                    <p
+                      style={{
+                        fontSize: "10px",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                      }}
+                    >
+                      Ads
+                    </p>
+                    <div id="av_top"></div>
+                  </div>
                 </div>
               </MessageBubble>
             );

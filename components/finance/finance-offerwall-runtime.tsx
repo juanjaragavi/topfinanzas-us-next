@@ -7,7 +7,7 @@ import TopAdsQuizIdStamper from "@/components/finance/topads-quiz-id-stamper";
 import type { FinanceQuizConfig } from "@/lib/finance-quiz-config";
 
 /**
- * Client wrapper that renders the hidden offerwall data-topads-quiz div
+ * Client wrapper that renders the hidden offerwall div
  * alongside the page content. TopAds discovers this div during its normal
  * bootstrap (loaded via the root layout config script) and renders the
  * quiz overlay automatically.

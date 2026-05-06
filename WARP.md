@@ -61,7 +61,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 - **Styling**: Tailwind CSS with mobile-first approach
 - **UI Components**: Shadcn/UI + Radix UI primitives
 - **Forms**: React Hook Form + Zod validation
-- **Analytics**: GTM + TopAds proprietary tracking system
+- **Analytics**: GTM + ActView Ads proprietary tracking system
 - **Content**: MDX support for blog posts
 
 ### Directory Structure
@@ -72,7 +72,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 /blog # Blog pages and categories
 /credit-card-recommender-p[1-3] # Multi-step form pages
 /components
-/analytics # TopAds and GTM tracking components
+/analytics # ActView Ads and GTM tracking components
 /forms # Form components with validation
 /steps # Multi-step form step components (step1, step2, step3)
 /ui # Shadcn/UI components
@@ -92,10 +92,10 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 
 #### Analytics Layer (`/components/analytics/`)
 
-- **TopAds Integration**: Automatically activates on SPA navigation
-- **GTM**: Loads before TopAds in layout
+- **ActView Ads Integration**: Automatically activates on SPA navigation
+- **GTM**: Loads before ActView Ads in layout
 - **Configuration**: Domain `TOPFIN_US`, networkCode `23062212598`
-- **Usage**: `useTopAds()` hook for programmatic SPA activation
+- **Usage**: `useActView Ads()` hook for programmatic SPA activation
 
 #### Multi-Step Forms (`/components/steps/`)
 
@@ -179,12 +179,12 @@ Component.displayName = "Component";
 ### Analytics Tracking
 
 ```tsx
-// TopAds SPA navigation handled automatically via TopAdsSPAHandler
+// ActView Ads SPA navigation handled automatically via ActView AdsSPAHandler
 // Uses window.topAds.spa() on route changes
 
 // For programmatic activation only when needed:
-import { useTopAds } from "@/components/analytics/topads-spa-handler";
-const { triggerSPA } = useTopAds();
+import { useActView Ads } from "@/components/analytics/actview-spa-handler";
+const { triggerSPA } = useActView Ads();
 ```
 
 ## Performance Optimizations
@@ -212,7 +212,7 @@ const { triggerSPA } = useTopAds();
 # Development mode includes comprehensive logging
 # Check browser console for:
 # - '[QUIZ] Cookie validation: [enabled/disabled]'
-# - TopAds activation logs
+# - ActView Ads activation logs
 # - GTM event tracking
 ```
 
@@ -226,7 +226,7 @@ const { triggerSPA } = useTopAds();
 
 1. **Port 3040 in use**: Kill existing process or use different port
 2. **Git merge conflicts**: Script automatically resolves by keeping current changes
-3. **TopAds not loading**: Check script order in layout.tsx (GTM must load first)
+3. **ActView Ads not loading**: Check script order in layout.tsx (GTM must load first)
 4. **Form submission failing**: Verify Google Sheets API credentials
 5. **Cookie validation issues**: Use cookie-validation-control.sh to debug
 

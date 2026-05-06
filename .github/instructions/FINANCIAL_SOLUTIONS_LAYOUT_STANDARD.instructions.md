@@ -85,10 +85,10 @@ export default function ProductPage() {
 
               {/* ELEMENT 5: FIRST AD UNIT */}
               <div
-                id="square02"
+                id="av_content_1"
                 className="w-full flex justify-center my-6"
-                data-topads
-                data-topads-size="square"
+                data-actview
+                data-actview-size="square"
               ></div>
 
               {/* ELEMENT 6: HORIZONTAL RULE */}
@@ -147,10 +147,10 @@ export default function ProductPage() {
 
                 {/* ELEMENT 11: SECOND AD UNIT */}
                 <div
-                  id="square04"
+                  id="av_content_2"
                   className="w-full flex justify-center my-6"
-                  data-topads
-                  data-topads-size="square"
+                  data-actview
+                  data-actview-size="square"
                 ></div>
 
                 {/* ELEMENT 12: HORIZONTAL RULE */}
@@ -316,10 +316,10 @@ export default function ProductRequirementsPage() {
 
             {/* ELEMENT 4: FIRST AD UNIT */}
             <div
-              id="square03"
+              id="av_top"
               className="w-full flex justify-center my-6"
-              data-topads
-              data-topads-size="square"
+              data-actview
+              data-actview-size="square"
             ></div>
 
             <div className="my-8 text-left sm:text-left">
@@ -364,10 +364,10 @@ export default function ProductRequirementsPage() {
 
                 {/* ELEMENT 8: SECOND AD UNIT */}
                 <div
-                  id="square04"
+                  id="av_content_2"
                   className="w-full flex justify-center my-6"
-                  data-topads
-                  data-topads-size="square"
+                  data-actview
+                  data-actview-size="square"
                 ></div>
 
                 {/* ELEMENT 9: REQUIRED DOCUMENTATION SECTION */}
@@ -612,15 +612,15 @@ The following elements are **STRICTLY PROHIBITED** and must be removed if found:
 
 ### Ad Container Classes (MANDATORY)
 
-Benefits pages use `square02` (first) and `square04` (second).
-Requirements pages use `square03` (first) and `square04` (second).
+Benefits pages use `av_content_1` (first) and `av_content_2` (second).
+Requirements pages use `av_top` (first) and `av_content_2` (second).
 
 ```typescript
 <div
-  id="square02" // Benefits first ad | "square03" for Requirements first ad | "square04" for second ad on both
+  id="av_content_1" // Benefits first ad | "av_top" for Requirements first ad | "av_content_2" for second ad on both
   className="w-full flex justify-center my-6"
-  data-topads
-  data-topads-size="square"
+  data-actview
+  data-actview-size="square"
 ></div>
 ```
 
@@ -710,7 +710,7 @@ Before publishing or committing any Financial Solutions page, verify:
 - [ ] NO `<ul>` tag bullet lists (use circular badges instead)
 - [ ] Buttons use the specified brand color
 - [ ] Circular badges use the specified brand color
-- [ ] Both ad units are present (Benefits: `square02` + `square04`; Requirements: `square03` + `square04`) with `data-topads` and `data-topads-size="square"` attributes
+- [ ] Both ad units are present (Benefits: `av_content_1` + `av_content_2`; Requirements: `av_top` + `av_content_2`) with `data-actview` and `data-actview-size="square"` attributes
 - [ ] Hero image positioned correctly (after first CTA button on Benefits page)
 - [ ] Benefits page uses `ResponsiveImage` for hero
 - [ ] Requirements page uses `Image` for hero

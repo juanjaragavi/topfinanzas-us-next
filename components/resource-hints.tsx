@@ -51,9 +51,8 @@ export default function ResourceHints() {
       />
       <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
-      {/* Add preconnect for TopAds CDN */}
-      <link rel="preconnect" href="https://ads.gamadx.com" />
-      <link rel="dns-prefetch" href="https://ads.gamadx.com" />
+      <link rel="preconnect" href="https://scr.actview.net" />
+      <link rel="dns-prefetch" href="https://scr.actview.net" />
     </>
   );
 }

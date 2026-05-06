@@ -30,7 +30,7 @@ export default function SandwichGenerationPage() {
               The Sandwich Generation: Balancing Your Kids&apos; Future With
               Your Aging Parents&apos; Needs
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               You&apos;re helping your teenager research colleges while
               simultaneously figuring out whether your mom needs in-home care or
@@ -255,7 +255,7 @@ export default function SandwichGenerationPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your Next Steps
               </h2>
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
               <p className="text-gray-700 mb-4 leading-7">
                 The sandwich generation squeeze is real, but the worst outcome
                 is paralysis — continuing to absorb competing demands without a

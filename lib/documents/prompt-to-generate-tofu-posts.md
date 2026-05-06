@@ -79,7 +79,7 @@ Generate a blog article following these rules:
    - No misleading claims; no guaranteed outcomes; include clear disclosures where relevant
    - SEO metadata (title, description, keywords)
    - Hero image from CSV or CDN
-   - Ad placeholders (`square01`, `square02`)
+   - Ad placeholders (`av_top`, `av_content_1`)
    - Internal links using Next.js `<Link>` component
    - CTA button with `className="cta-button-blue"`
    - `AIContentDisclaimer` component at the end

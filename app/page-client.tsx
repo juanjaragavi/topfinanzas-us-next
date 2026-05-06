@@ -338,17 +338,17 @@ export default function Home() {
                   className="block"
                 >
                   <div className="relative h-48 overflow-hidden rounded-lg mb-4">
-                  <Image
-                    src={
-                      post.frontmatter.featuredImage ||
-                      "https://media.topfinanzas.com/images/placeholder.webp"
-                    }
-                    alt={post.frontmatter.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    loading="lazy"
-                  />
+                    <Image
+                      src={
+                        post.frontmatter.featuredImage ||
+                        "https://media.topfinanzas.com/images/placeholder.webp"
+                      }
+                      alt={post.frontmatter.title}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                    />
                   </div>
                 </Link>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">

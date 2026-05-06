@@ -30,7 +30,7 @@ export default function BuildingFinancialSafetyNetPage() {
               Building Your Financial Safety Net: How to Save Your First $1,000
               (Stress-Free)
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Most financial advice skips straight to retirement accounts and
               investment portfolios. Before any of that makes sense, there is
@@ -242,7 +242,7 @@ export default function BuildingFinancialSafetyNetPage() {
             </section>
 
             <section className="my-8">
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your action plan: $1,000 in 90 days
               </h2>

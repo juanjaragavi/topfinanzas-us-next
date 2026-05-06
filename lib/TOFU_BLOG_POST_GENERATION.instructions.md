@@ -87,7 +87,7 @@ You must also update `lib/seo-route-registry.ts` in the same operation so the ro
 - Maintain US English spelling and US-relevant terminology/examples
 - Include at least **three internal links** to relevant pages on <https://us.topfinanzas.com> using `<Link>` from `next/link`
 - Provide at least one contextual CTA block linking to a related comparison or guide (for example `/financial-solutions` or a specific product page)
-- Insert display ad placeholders with IDs `square01` and `square02` in the standard positions after the H1 and near the final third of the article
+- Insert display ad placeholders with IDs `av_top` and `av_content_1` in the standard positions after the H1 and near the final third of the article
 - Use the `AIContentDisclaimer` component at the end of the article body
 - Include at least one hero image (Next.js `Image`) hosted on the Top Finanzas CDN with descriptive alt text and lazy loading best practices
 - Keep tone approachable and practical: never promise guaranteed outcomes, never give personalized advice, and encourage readers to verify details with official sources and/or qualified professionals when appropriate
@@ -217,7 +217,7 @@ After generating the article component, plan updates across the site (see `.gith
 
 - Confirm TypeScript validity, consistent class names, and accessible alt text
 - Verify all required components are included and properly imported
-- Check that ad container div IDs are correct: `square01` and `square02`
+- Check that ad container div IDs are correct: `av_top` and `av_content_1`
 
 ### Step 8: Post-Publication Integration (REQUIRED)
 
@@ -318,7 +318,7 @@ export default function {ComponentName}Page() {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
               {H1 Title}
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top" data-actview-slot data-actview-slot-size="square"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               {Narrative introduction referencing US context}
             </p>
@@ -336,7 +336,7 @@ export default function {ComponentName}Page() {
             {/* Section content with h2/h3, paragraphs, lists, callouts, internal links */}
             <section className="my-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Next steps</h2>
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1" data-actview-slot data-actview-slot-size="square"></div>
               <p className="text-gray-700 mb-4">
                 {Actionable guidance with internal links}
               </p>

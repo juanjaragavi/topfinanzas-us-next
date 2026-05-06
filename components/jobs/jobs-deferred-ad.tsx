@@ -15,14 +15,10 @@ interface JobsDeferredAdProps {
  *
  * Renders ad slots that are always present in the DOM.
  * When `defer={true}`, slots are hidden (zero height, overflow hidden) until
- * the "jobsQuizDone" event fires. TopAds activation is handled separately by
- * the global SPA handler once the quiz completion event removes the page-level
- * exclusion and re-injects the vendor script.
+ * the "jobsQuizDone" event fires.
  *
- * IMPORTANT: The slot div must exist in the DOM before topAds.spa() runs.
- * Conditional mounting (returning null until the event) causes TopAds to
- * scan an empty DOM and produce unfilled placements. This component avoids
- * that race condition by keeping the div mounted at all times.
+ * IMPORTANT: The slot div must exist in the DOM before third-party ad scripts
+ * evaluate the page.
  */
 export default function JobsDeferredAd({
   type,
@@ -45,7 +41,7 @@ export default function JobsDeferredAd({
   }, [defer]);
 
   // Inline style toggling: slot is always in the DOM.
-  // Hidden state: zero height, no overflow, no margin — invisible to TopAds
+  // Hidden state: zero height, no overflow, no margin — invisible until reveal.
   // fill cycles that run before quiz completion.
   // Revealed state: natural block flow restored.
   const deferStyle: React.CSSProperties = revealed
@@ -53,22 +49,26 @@ export default function JobsDeferredAd({
     : { height: 0, overflow: "hidden", margin: 0, padding: 0 };
 
   if (type === "rewarded") {
-    const rewardedProps = texts ? { "data-topads-texts": texts } : {};
+    const rewardedLabel = texts ?? "Ads";
     return (
-      <div
-        data-topads-rewarded
-        {...rewardedProps}
-        style={deferStyle}
-        aria-hidden={!revealed}
-      />
+      <div style={deferStyle} aria-hidden={!revealed}>
+        <p
+          style={{
+            fontSize: "10px",
+            textTransform: "uppercase",
+            textAlign: "center",
+          }}
+        >
+          {rewardedLabel}
+        </p>
+        <div id="av_top"></div>
+      </div>
     );
   }
 
   return (
     <div
       id={id}
-      data-topads
-      data-topads-size="square"
       className={className ?? "items-center justify-center flex w-full my-8"}
       style={deferStyle}
       aria-hidden={!revealed}
