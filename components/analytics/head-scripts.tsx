@@ -27,7 +27,7 @@ export default function HeadScripts() {
       <GoogleTagManagerPartytown />
       {!isActiveViewExcludedRoute && (
         <>
-          <script
+         {/*<script
             dangerouslySetInnerHTML={{
               __html: `
                 window.topAds = window.topAds || {};
@@ -63,7 +63,7 @@ export default function HeadScripts() {
                 window.actviewAds.config = window.topAds.config;
               `,
             }}
-          />
+          />*/}
           <link
             rel="preload"
             as="script"
