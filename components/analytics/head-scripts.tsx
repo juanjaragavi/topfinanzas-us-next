@@ -27,7 +27,7 @@ export default function HeadScripts() {
       <GoogleTagManagerPartytown />
       {!isActiveViewExcludedRoute && (
         <>
-         {/*<script
+          {/*<script
             dangerouslySetInnerHTML={{
               __html: `
                 window.topAds = window.topAds || {};

@@ -391,197 +391,214 @@ export default function ContactUsPage() {
                   Send us a message
                 </h2>
                 <p className="mt-2 text-gray-600">
-                  Tell us what you need and we&apos;ll get back to you as soon as
-                  possible.
+                  Tell us what you need and we&apos;ll get back to you as soon
+                  as possible.
                 </p>
               </div>
 
-          {submitSuccess ? (
-            <div className="text-center py-8">
-              <div className="text-green-500 text-5xl mb-4">✓</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Message Sent!
-              </h3>
-              <p className="text-gray-600">
-                Thank you for contacting us. We&apos;ll get back to you soon.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  First Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  onBlur={() => validateName(formData.name)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  }`}
-                  placeholder="Enter your first name"
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                )}
-              </div>
+              {submitSuccess ? (
+                <div className="text-center py-8">
+                  <div className="text-green-500 text-5xl mb-4">✓</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Message Sent!
+                  </h3>
+                  <p className="text-gray-600">
+                    Thank you for contacting us. We&apos;ll get back to you
+                    soon.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
+                      onBlur={() => validateName(formData.name)}
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                        errors.name ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="Enter your first name"
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                    )}
+                  </div>
 
-              <div>
-                <label
-                  htmlFor="lastName"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Last Name *
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  value={formData.lastName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, lastName: e.target.value })
-                  }
-                  onBlur={() => validateLastName(formData.lastName)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
-                    errors.lastName ? "border-red-500" : "border-gray-300"
-                  }`}
-                  placeholder="Enter your last name"
-                />
-                {errors.lastName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-                )}
-              </div>
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
+                      }
+                      onBlur={() => validateLastName(formData.lastName)}
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                        errors.lastName ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="Enter your last name"
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.lastName}
+                      </p>
+                    )}
+                  </div>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  onBlur={() => validateEmail(formData.email)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  }`}
-                  placeholder="Enter your email"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                )}
-              </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      onBlur={() => validateEmail(formData.email)}
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                        errors.email ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="Enter your email"
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
 
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Phone *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  onBlur={() => validatePhone(formData.phone)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
-                    errors.phone ? "border-red-500" : "border-gray-300"
-                  }`}
-                  placeholder="(555) 555-5555"
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
-                )}
-              </div>
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
+                      onBlur={() => validatePhone(formData.phone)}
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                        errors.phone ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="(555) 555-5555"
+                    />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.phone}
+                      </p>
+                    )}
+                  </div>
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  onBlur={() => validateMessage(formData.message)}
-                  rows={4}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
-                    errors.message ? "border-red-500" : "border-gray-300"
-                  }`}
-                  placeholder="How can we help you?"
-                />
-                {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                )}
-              </div>
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      onBlur={() => validateMessage(formData.message)}
+                      rows={4}
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#2E74B5] focus:border-transparent ${
+                        errors.message ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="How can we help you?"
+                    />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
 
-              <div className="flex items-start">
-                <input
-                  type="checkbox"
-                  id="acceptTerms"
-                  checked={formData.acceptTerms}
-                  onChange={(e) =>
-                    setFormData({ ...formData, acceptTerms: e.target.checked })
-                  }
-                  aria-invalid={!!errors.general}
-                  aria-describedby={errors.general ? "policy-error" : undefined}
-                  className="mt-1 mr-2 h-4 w-4"
-                />
-                <label htmlFor="acceptTerms" className="text-sm text-gray-600">
-                  I accept{" "}
-                  <Link
-                    href="/privacy-policy/"
-                    className="text-blue-600 hover:underline"
+                  <div className="flex items-start">
+                    <input
+                      type="checkbox"
+                      id="acceptTerms"
+                      checked={formData.acceptTerms}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          acceptTerms: e.target.checked,
+                        })
+                      }
+                      aria-invalid={!!errors.general}
+                      aria-describedby={
+                        errors.general ? "policy-error" : undefined
+                      }
+                      className="mt-1 mr-2 h-4 w-4"
+                    />
+                    <label
+                      htmlFor="acceptTerms"
+                      className="text-sm text-gray-600"
+                    >
+                      I accept{" "}
+                      <Link
+                        href="/privacy-policy/"
+                        className="text-blue-600 hover:underline"
+                      >
+                        the data processing policies
+                      </Link>{" "}
+                      and{" "}
+                      <Link
+                        href="/terms-conditions/"
+                        className="text-blue-600 hover:underline"
+                      >
+                        terms and conditions
+                      </Link>
+                    </label>
+                  </div>
+
+                  {errors.general && (
+                    <p id="policy-error" className="text-red-500 text-sm">
+                      {errors.general}
+                    </p>
+                  )}
+
+                  {submitError && (
+                    <p className="text-red-500 text-sm">{submitError}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#2E74B5] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#1e5a8a] transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    the data processing policies
-                  </Link>{" "}
-                  and{" "}
-                  <Link
-                    href="/terms-conditions/"
-                    className="text-blue-600 hover:underline"
-                  >
-                    terms and conditions
-                  </Link>
-                </label>
-              </div>
-
-              {errors.general && (
-                <p id="policy-error" className="text-red-500 text-sm">
-                  {errors.general}
-                </p>
+                    {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+                  </button>
+                </form>
               )}
-
-              {submitError && (
-                <p className="text-red-500 text-sm">{submitError}</p>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-[#2E74B5] text-white py-3 px-6 rounded-xl font-semibold hover:bg-[#1e5a8a] transition-all shadow-3d border border-black/[.15] hover:shadow-3d-hover hover:translate-y-[1px] active:shadow-3d-active active:translate-y-[3px] disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
-              </button>
-            </form>
-          )}
             </div>
           </section>
 

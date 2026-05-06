@@ -1,11 +1,59 @@
 {
   "version": 1,
   "skills": {
+    "baoyu-format-markdown": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-format-markdown/SKILL.md",
+      "computedHash": "48ebaa7378f4c38f56d05d9b32038476ecc74732c4110160e13840c405cc7082"
+    },
     "blog-writing-guide": {
       "source": "getsentry/skills",
       "sourceType": "github",
       "skillPath": "skills/blog-writing-guide/SKILL.md",
       "computedHash": "f885b9890d8a1c43e8ed0386e2ef2c17e941a403aa354513d6b844e99229ffb7"
+    },
+    "lark-markdown": {
+      "source": "larksuite/cli",
+      "sourceType": "github",
+      "skillPath": "skills/lark-markdown/SKILL.md",
+      "computedHash": "badcc618249ac64300ed320f2a824a0498806ad3e8101c136623ca87803bb423"
+    },
+    "markdown-accessibility": {
+      "source": "community-access/accessibility-agents",
+      "sourceType": "github",
+      "skillPath": ".github/skills/markdown-accessibility/SKILL.md",
+      "computedHash": "903cee69a049abfb65adecf9772316ce2ad20a46fc79dbbb813d34f944b359d1"
+    },
+    "markdown-documentation": {
+      "source": "aj-geddes/useful-ai-prompts",
+      "sourceType": "github",
+      "skillPath": "skills/markdown-documentation/SKILL.md",
+      "computedHash": "bebe932f4f94560dd90ae7534f2a8731edb70a3ca33f96ad8127cb1de4464780"
+    },
+    "markdown-formatter": {
+      "source": "markpitt/claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/markdown-formatter/SKILL.md",
+      "computedHash": "16a172e26a723e891b8b58c7b66677819b780c63d10cff0bab7f380b35269c33"
+    },
+    "markdown-mermaid-writing": {
+      "source": "k-dense-ai/claude-scientific-skills",
+      "sourceType": "github",
+      "skillPath": "scientific-skills/markdown-mermaid-writing/SKILL.md",
+      "computedHash": "455e0a0df2616317e6832d6f67d65ecee6a751f5e4dd510429f93234553dde77"
+    },
+    "markdown-token-optimizer": {
+      "source": "microsoft/github-copilot-for-azure",
+      "sourceType": "github",
+      "skillPath": ".github/skills/markdown-token-optimizer/SKILL.md",
+      "computedHash": "e5ef96faafd7eca72c156e25a0aac321a35cc4964d1c4448c73e3529962a190b"
+    },
+    "obsidian-markdown": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "computedHash": "cacc9058a35ad3fd4985b4c31121bff8202f1337c39808c1326ded6a19a7915f"
     },
     "pagespeed-insights": {
       "source": "enderpuentes/ai-agent-skills",
