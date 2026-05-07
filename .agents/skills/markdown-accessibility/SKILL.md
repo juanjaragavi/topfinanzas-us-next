@@ -162,7 +162,7 @@ Flag for human review: `sequenceDiagram`, `classDiagram`, `erDiagram`, `stateDia
 
 ### Mermaid Replacement Template
 
-````markdown
+`````markdown
 [Generated or user-provided text description - this is the primary accessible content]
 
 <details>
@@ -174,7 +174,9 @@ Flag for human review: `sequenceDiagram`, `classDiagram`, `erDiagram`, `stateDia
 
 </details>
 ````
-````
+`````
+
+`````
 
 ### ASCII Diagram Detection
 
@@ -326,7 +328,8 @@ Wrapping template:
 ```text
 
 </details>
-````
+`````
+
 ````
 
 ## Fix Templates
@@ -428,3 +431,4 @@ See [Installation](#installation) for setup steps.
 | MD056 | table-column-count       | Table structural integrity           |
 
 Command: `npx --yes markdownlint-cli2 <filepath>`
+````

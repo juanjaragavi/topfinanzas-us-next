@@ -1,11 +1,1 @@
-perf: integrate Partytown to offload GTM and third-party scripts to web worker
-
-- Install @builder.io/partytown and copy lib files to public/~partytown
-- Create PartytownInit component that forwards dataLayer.push, gtag, fbq, clarity
-- Create GoogleTagManagerPartytown that loads GTM with type="text/partytown"
-- Move all GTM imports to new gtm-partytown.tsx to preserve dataLayer API
-- Add TypeScript declarations for @builder.io/partytown/react
-- Add loading="lazy" to all below-the-fold homepage images (secondary features,
-  category hero images, and category thumbnails)
-- ActView Ads remains on lazyOnload (not Partytown) because it injects ad iframes
-  into the DOM, which requires main-thread DOM access
+refactor: decommission TopAds and implement ActView global scripts
