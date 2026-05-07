@@ -428,8 +428,25 @@ export function createRouteStructuredData(pathname: string): SchemaValue[] {
   return [generateBreadcrumbSchema(route), generateWebPageSchema(pathname)];
 }
 
+// Explicitly excluded from sitemap generation per SEO/content policy.
+const EXCLUDED_SITEMAP_PATHS = new Set([
+  "/personal-finance/the-debt-detox-choosing-between-the-snowball-and-avalanche-payoff-methods",
+  "/personal-finance/the-financial-integration-roadmap-a-step-by-step-guide-for-newlyweds-and-long-term-partners",
+  "/personal-finance/the-30-day-spending-challenge-uncovering-your-hidden-money-habits",
+  "/personal-finance/investing-for-beginners-a-simple-guide-to-getting-started",
+  "/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference",
+  "/personal-finance/the-sandwich-generation-balancing-your-kids-future-with-your-aging-parents-needs",
+  "/personal-finance/micro-investing-for-big-dreams-how-5-a-day-can-change-your-financial-trajectory",
+  "/personal-finance/legacy-planning-how-to-talk-to-aging-parents-about-finances",
+  "/personal-finance/good-debt-vs-bad-debt-how-to-tell-the-difference-2",
+  "/personal-finance/building-your-financial-safety-net-how-to-save-your-first-1000-stress-free",
+  "/personal-finance/raising-financially-smart-kids-in-a-digital-world",
+  "/personal-finance/yours-mine-or-ours-how-to-strategically-combine-finances-after-marriage-or-moving-in",
+]);
+
 export function getIndexableRoutes() {
   return Object.values(ROUTE_SEO_REGISTRY).filter((route) => {
+    if (EXCLUDED_SITEMAP_PATHS.has(route.pathname)) return false;
     if (route.category === "financial-solutions") return true;
     if (route.category === "personal-finance") return true;
     return [

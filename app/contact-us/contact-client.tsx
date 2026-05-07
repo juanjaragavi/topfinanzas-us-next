@@ -364,7 +364,7 @@ export default function ContactUsPage() {
                     <FaYoutube size={20} />
                   </a>
                   <a
-                    href="https://www.tiktok.com/@topfinanzas1"
+                    href="https://www.tiktok.com/@top.finanzas.latam"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Follow TopFinanzas on TikTok"
