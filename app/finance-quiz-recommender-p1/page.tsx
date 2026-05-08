@@ -7,7 +7,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 const REDIRECT_URL =
-  "https://route.topnetworks.co/api/redirect/d0dc0c93-d1fa-4f5f-8fb4-ff7753eb3f20";
+  "https://redirect.topfinanzas.com/experimento_test_1";
 
 const STEP_1_OPTIONS = ["$2500", "$5000", "$10000", "I need more"];
 const STEP_2_OPTIONS = ["Cashback", "0 handling cost", "0% APR"];
