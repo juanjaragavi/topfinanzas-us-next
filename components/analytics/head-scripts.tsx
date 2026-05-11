@@ -4,10 +4,7 @@ import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import PartytownInit from "./partytown-init";
 
-const GoogleTagManagerPartytown = dynamic(
-  () => import("./gtm-partytown").then((mod) => mod.default),
-  { ssr: false },
-);
+
 export default function HeadScripts() {
   const pathname = usePathname();
 
@@ -24,7 +21,6 @@ export default function HeadScripts() {
   return (
     <>
       <PartytownInit />
-      <GoogleTagManagerPartytown />
       {!isActiveViewExcludedRoute && (
         <>
           {/*<script

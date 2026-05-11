@@ -6,7 +6,6 @@ import fs from "fs";
 import path from "path";
 import "./globals.css";
 import { logger } from "@/lib/logger";
-import { GoogleTagManagerNoScript } from "@/components/analytics/gtm-partytown";
 import HeadScripts from "@/components/analytics/head-scripts";
 import AnalyticsWrapper from "@/components/analytics/analytics-wrapper";
 import NavigationProvider from "@/components/providers/navigation-provider";
@@ -142,6 +141,24 @@ export default function RootLayout({
   return (
     <html lang="en-us">
       <head>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-5568TKCX");`,
+          }}
+        />
         {/* Inline critical CSS for faster rendering */}
         <style
           dangerouslySetInnerHTML={{
@@ -217,7 +234,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${inter.variable} font-sans text-left sm:text-left`}
       >
-        <GoogleTagManagerNoScript />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5568TKCX" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
         <MobileMenuProvider>
           {/*<PreloaderProvider
             defaultConfig={{
