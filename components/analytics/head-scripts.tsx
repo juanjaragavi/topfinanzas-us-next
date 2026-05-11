@@ -1,9 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import PartytownInit from "./partytown-init";
-
 
 export default function HeadScripts() {
   const pathname = usePathname();

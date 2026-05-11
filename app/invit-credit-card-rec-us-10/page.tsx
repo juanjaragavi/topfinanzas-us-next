@@ -155,6 +155,7 @@ export default function InvitCreditCardRecUS10Page() {
 
             {/* Quest Challenge Container */}
             <motion.div
+              id="invit-credit-card-rec-us-10-preguntas-2"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}

@@ -172,7 +172,10 @@ export default function InvitCreditCardRecUS9Page() {
                 </ShimmerText>
 
                 {/* Colorful Spending Options */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                <div
+                  id="invit-credit-card-rec-us-9-preguntas-1"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
+                >
                   {MONTHLY_SPEND_OPTIONS.map((option, idx) => {
                     const colors = [
                       {
