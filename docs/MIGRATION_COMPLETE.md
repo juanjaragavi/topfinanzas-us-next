@@ -214,7 +214,7 @@ import {
 ### Build Status
 
 ```bash
-$ npm run build
+$ pnpm build
 ✓ Compiled successfully in 17.0s
 ✓ Generating static pages (152/152)
 ```

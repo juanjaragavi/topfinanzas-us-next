@@ -63,8 +63,8 @@ Fix ad unit placement in Financial Solutions blog posts to ensure proper content
 2. **Create feature branch**: `git checkout -b fix/financial-solutions-ad-placement`
 3. **Audit files**: Run the audit commands in the report to identify all affected pages
 4. **Fix in batches**: Edit 5-10 files at a time, commit after each batch
-5. **Test locally**: `npm run dev` and check mobile viewport
-6. **Build check**: `npm run build` to verify no TypeScript errors
+5. **Test locally**: `pnpm dev` and check mobile viewport
+6. **Build check**: `pnpm build` to verify no TypeScript errors
 7. **Commit changes**: Use conventional commit format
 8. **Push and deploy**: Follow standard git workflow
 
@@ -112,11 +112,11 @@ find app/financial-solutions -name "*benefits*" -name "page.tsx" -type f
 code app/financial-solutions/citi-simplicity-card-requirements/page.tsx
 
 # 6. Test your changes
-npm run dev
+pnpm dev
 # Visit: http://localhost:3040/financial-solutions/citi-simplicity-card-requirements
 
 # 7. After batch completion
-npm run build && git add . && git commit -m "fix: Add content buffer between ads and banners in [category]"
+pnpm build && git add . && git commit -m "fix: Add content buffer between ads and banners in [category]"
 ```
 
 ---

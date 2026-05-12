@@ -170,7 +170,7 @@ export const mapQuizDataToFieldValues = (data: {
  *    - Check automation rules are configured to assign contacts based on field values
  *
  * 3. Test Field Mapping:
- *    - Use npm run test:brevo to verify field transmission
+ *    - Use pnpm test:brevo to verify field transmission
  *    - Check ActiveCampaign contact record shows all custom fields populated
  *    - Verify contact is automatically added to TOP US list (ID 4)
  */

@@ -178,7 +178,7 @@ console.table(fieldMap);
 2. **Run integration test**
 
    ```bash
-   npm run test:activecampaign
+   pnpm test:activecampaign
    ```
 
 3. **Check test results**
@@ -302,7 +302,7 @@ export const AC_FIELD_IDS = {
 After retrieving and configuring field IDs:
 
 1. ✅ Update `lib/activecampaign-field-mapping.ts`
-2. ✅ Run `npm run test:activecampaign`
+2. ✅ Run `pnpm test:activecampaign`
 3. ✅ Test quiz form submission
 4. ✅ Verify contact in ActiveCampaign
 5. ✅ Check TOP US list membership

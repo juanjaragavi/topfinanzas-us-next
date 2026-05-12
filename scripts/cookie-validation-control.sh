@@ -68,7 +68,7 @@ test_configuration() {
         echo ""
     else
         echo "❌ Next.js server is not running"
-        echo "🚀 Start with: npm run dev"
+        echo "🚀 Start with: pnpm dev"
         echo ""
     fi
 }

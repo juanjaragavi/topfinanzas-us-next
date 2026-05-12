@@ -226,7 +226,7 @@ For automatic list assignment based on field values:
 Run the included test script:
 
 ```bash
-npm run test:activecampaign
+pnpm test:activecampaign
 ```
 
 This will:

@@ -1,6 +1,7 @@
 {
   "name": "topfinanzas-us-next",
   "version": "0.1.0",
+  "packageManager": "pnpm@10.27.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3040",
@@ -12,7 +13,7 @@
     "test:brevo": "node scripts/test-brevo-new-contact.js",
     "test:brevo-direct": "node scripts/test-brevo-direct.js",
     "test:brevo-api": "node scripts/test-brevo-integration.js",
-    "test:activecampaign": "npx tsx scripts/test-activecampaign.ts"
+    "test:activecampaign": "pnpm exec tsx scripts/test-activecampaign.ts"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",

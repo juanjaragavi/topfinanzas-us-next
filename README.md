@@ -19,14 +19,14 @@ The project features a modern, accessible UI powered by Shadcn/UI and Radix prim
 Development:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Production build:
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 ## API keys

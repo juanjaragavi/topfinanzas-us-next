@@ -313,7 +313,7 @@ step "Running pre-push validation..."
 
 # 7a: TypeScript type checking
 step "  TypeScript type check (tsc --noEmit)..."
-if ! npx tsc --noEmit; then
+if ! pnpm exec tsc --noEmit; then
     error "TypeScript type check failed. Fix type errors before pushing."
     exit 1
 fi
@@ -321,7 +321,7 @@ success "  TypeScript type check passed."
 
 # 7b: Linting via next lint (project uses Next 15.x where next lint is available)
 step "  Linting (next lint)..."
-if ! npx next lint; then
+if ! pnpm exec next lint; then
     error "Linting failed. Fix lint errors before pushing."
     exit 1
 fi
@@ -330,7 +330,7 @@ success "  Linting passed."
 # 7c: Build verification — gated behind --verify-build to avoid full builds on every push
 if [[ "$VERIFY_BUILD" == true ]]; then
     step "  Build verification (next build)..."
-    if ! npx next build; then
+    if ! pnpm exec next build; then
         error "Build verification failed. Fix build errors before pushing."
         exit 1
     fi

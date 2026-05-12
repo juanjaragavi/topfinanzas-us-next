@@ -42,7 +42,7 @@ Based on research (including Midudev's analysis: <https://youtu.be/GvqZuVgRKWw?s
 ### Installation
 
 ```bash
-npm install pino pino-pretty
+pnpm add pino pino-pretty
 ```
 
 ## Usage
@@ -288,7 +288,7 @@ if (isLoggingEnabled) {
 ### Development Testing
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Check console output - you should see formatted log messages with:
@@ -301,8 +301,8 @@ Check console output - you should see formatted log messages with:
 ### Production Build
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 Verify that:
@@ -356,7 +356,7 @@ Check:
 Check:
 
 1. `NEXT_PUBLIC_ENABLE_LOGGING` is not set to `true`
-2. Build is production build (`npm run build`)
+2. Build is production build (`pnpm build`)
 3. Environment variables are correct
 
 ### TypeScript Errors

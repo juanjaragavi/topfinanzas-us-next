@@ -152,7 +152,7 @@ The fix carefully preserves all AdZep functionality:
 ### Development Testing
 
 ```bash
-npm run dev
+pnpm dev
 # Test on localhost:3040
 ```
 

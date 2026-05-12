@@ -80,7 +80,7 @@ Expected logs:
 
 ### Issue: 404 on submission
 
-**Fix**: Ensure dev server is running (`npm run dev`)
+**Fix**: Ensure dev server is running (`pnpm dev`)
 
 ### Issue: Google Sheets error
 

@@ -91,10 +91,10 @@ node scripts/analyze-console-usage.js
 bash scripts/migrate-to-logger.sh
 
 # Test the build
-npm run build
+pnpm build
 
 # Test in development
-npm run dev
+pnpm dev
 ```
 
 ## 📖 Common Tasks
@@ -145,7 +145,7 @@ if (isLoggingEnabled) {
 ### Development Mode
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 **Expected**: Colorized, formatted logs with namespaces
@@ -153,7 +153,7 @@ npm run dev
 ### Production Build
 
 ```bash
-npm run build
+pnpm build
 npm start
 ```
 

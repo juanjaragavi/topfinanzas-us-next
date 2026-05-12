@@ -103,13 +103,13 @@ All user data is preserved and mapped to Brevo attributes:
 
 ```bash
 # Test with unique email (creates new contact)
-npm run test:brevo
+pnpm test:brevo
 
 # Test direct API (may show duplicate for existing emails)
-npm run test:brevo-direct
+pnpm test:brevo-direct
 
 # Test through Next.js API route (requires dev server running)
-npm run test:brevo-api
+pnpm test:brevo-api
 ```
 
 ## Frontend Compatibility

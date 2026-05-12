@@ -108,7 +108,7 @@ Check environment variables in dashboard
 
 ```bash
 # Clear cache and rebuild
-npm run build
+pnpm build
 # Or on your hosting platform
 # - Clear build cache
 # - Trigger new deployment

@@ -141,7 +141,7 @@ The script intelligently added `loading="lazy"` to images that:
 **Build Test Results:**
 
 ```bash
-npm run build
+pnpm build
 ```
 
 **Results:**

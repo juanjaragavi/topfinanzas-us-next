@@ -39,7 +39,7 @@ Three-layer defense system:
 ## Testing
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 **Look for:**

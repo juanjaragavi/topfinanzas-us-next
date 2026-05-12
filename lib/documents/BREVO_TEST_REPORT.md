@@ -269,13 +269,13 @@ Quick reference for running tests:
 
 ```bash
 # Test with unique email (creates new contact)
-npm run test:brevo
+pnpm test:brevo
 
 # Test direct API connection
-npm run test:brevo-direct
+pnpm test:brevo-direct
 
 # Test Next.js API route (requires server on port 3040)
-npm run test:brevo-api
+pnpm test:brevo-api
 ```
 
 All commands added to `package.json` for easy access.

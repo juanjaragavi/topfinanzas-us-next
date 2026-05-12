@@ -76,7 +76,7 @@ grep -n "use client" components/credit-card-form.tsx
 
 ```bash
 # Start dev server with explicit env file
-npm run dev
+pnpm dev
 ```
 
 Then check if the server logs show any environment variable warnings.
@@ -96,7 +96,7 @@ node scripts/test-full-flow.js
 1. Start the dev server if not running:
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 2. Open <http://localhost:3040/quiz> in your browser
@@ -201,7 +201,7 @@ fetch("/api/sheets", {
 
 ## 📋 Checklist
 
-- [ ] Dev server is running (`npm run dev`)
+- [ ] Dev server is running (`pnpm dev`)
 - [ ] Navigated to <http://localhost:3040/quiz>
 - [ ] Browser DevTools Console is open
 - [ ] Browser DevTools Network tab is open

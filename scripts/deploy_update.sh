@@ -21,7 +21,7 @@ echo "[3/6] Removing previous build directory (.next)..."
 sudo rm -rf .next
 
 echo "[4/6] Building the application..."
-sudo npm run build
+sudo env "PATH=$PATH" pnpm build
 
 # Copy static files for standalone server
 # Copy static files for standalone server

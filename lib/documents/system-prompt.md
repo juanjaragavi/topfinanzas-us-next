@@ -77,7 +77,7 @@ When you trigger a new LLM agent using this prompt on a new repository (e.g., `t
 1. **Discovery:** The agent reads the handoff document and runs a series of `grep` commands to locate all the legacy ad components in the UK repository.
 2. **Implementation:** The agent automatically edits the `<head>` injection files, traverses all the page templates to swap the React components for static `div`s, and deletes the obsolete runtime files.
 3. **Documentation Cleanup:** It updates the local `.instructions.md` and `README.md` files so future agents don't accidentally try to use the old TopAds code.
-4. **Verification:** The agent runs the validation suite outlined in the handoff (e.g., `npm run lint`, `npm run build`, and specific `grep` commands to ensure zero legacy references remain).
+4. **Verification:** The agent runs the validation suite outlined in the handoff (e.g., `pnpm lint`, `pnpm build`, and specific `grep` commands to ensure zero legacy references remain).
 5. **Reporting:** Finally, the agent outputs a concise summary of what it did, ready for a human engineer to review and merge.
 
 ### Summary

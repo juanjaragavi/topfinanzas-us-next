@@ -438,14 +438,14 @@ const allIssues = [];
 
 1. Start with Citi Simplicity Requirements page (template fix)
 2. Implement fix pattern from this report
-3. Test locally: `npm run dev`
+3. Test locally: `pnpm dev`
 4. Verify visual appearance on mobile viewport
 5. Commit: `git commit -m "fix: Add content buffer between ad and banner in Citi Simplicity Requirements"`
 6. Repeat for remaining files in batches of 5-10
 
 ### Step 4: Testing Phase
 
-1. Run build: `npm run build`
+1. Run build: `pnpm build`
 2. Check for TypeScript errors
 3. Visual regression testing on key pages
 4. Verify ad tracking in development

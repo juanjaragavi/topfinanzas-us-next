@@ -154,7 +154,7 @@ export const AC_FIELD_IDS = {
 - [ ] **Run Integration Tests**
 
   ```bash
-  npm run test:activecampaign
+  pnpm test:activecampaign
   ```
 
 - [ ] **Manual Form Testing**
@@ -231,7 +231,7 @@ Return success response to client
 Run the comprehensive test script:
 
 ```bash
-npm run test:activecampaign
+pnpm test:activecampaign
 ```
 
 **Test Coverage**:
@@ -295,7 +295,7 @@ npm run test:activecampaign
 
 1. Verify field IDs match ActiveCampaign configuration
 2. Check API logs for field values transmission
-3. Test with `npm run test:activecampaign`
+3. Test with `pnpm test:activecampaign`
 4. Review `lib/activecampaign-field-mapping.ts`
 
 #### Issue: Contact Not in List

@@ -7,7 +7,7 @@
  * 3. Field population verification
  *
  * Usage:
- *   npx tsx scripts/test-activecampaign.ts
+ *   pnpm exec tsx scripts/test-activecampaign.ts
  *
  * Requirements:
  *   - ACTIVECAMPAIGN_API_KEY environment variable

@@ -41,16 +41,16 @@ All requirements have been successfully implemented and verified with real API c
 
 ```bash
 # Run the main test (creates new contact with unique email)
-npm run test:brevo
+pnpm test:brevo
 
 # Test direct Brevo API connection
-npm run test:brevo-direct
+pnpm test:brevo-direct
 
 # Test through Next.js API (requires dev server)
-npm run test:brevo-api
+pnpm test:brevo-api
 
 # Start development server
-npm run dev
+pnpm dev
 ```
 
 ---

@@ -214,4 +214,4 @@ console.log(`   - Already migrated: ${results.alreadyMigrated}`);
 console.log(`   - Not found: ${results.notFound}`);
 console.log("=".repeat(60));
 console.log("\n💡 Note: Complex patterns may need manual review.");
-console.log("🔍 Run `npm run build` to check for any issues.\n");
+console.log("🔍 Run `pnpm build` to check for any issues.\n");

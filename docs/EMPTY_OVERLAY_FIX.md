@@ -140,7 +140,7 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 
    ```bash
    # Already enabled in development mode
-   npm run dev
+   pnpm dev
    ```
 
 2. **Monitor Console Output**
@@ -163,8 +163,8 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 1. **Deploy to Staging**
 
    ```bash
-   npm run build
-   npm run start
+   pnpm build
+   pnpm start
    ```
 
 2. **Verify Behavior**

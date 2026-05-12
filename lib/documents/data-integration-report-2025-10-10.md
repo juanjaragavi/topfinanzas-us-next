@@ -47,7 +47,7 @@
    - Load `/quiz` and `/contact-us` with crafted query strings, e.g. `?utm_source=google&utm_medium=cpc&utm_campaign=promo&utm_content=hero&utm_term=credit+card`.
    - In DevTools console inspect `sessionStorage` and confirm hidden fields populate by logging `window.sessionStorage.getItem("utm_source")`.
 2. **Sheets API (local smoke)**
-   - With Google credentials configured, run `npm run dev` and submit the quiz.
+   - With Google credentials configured, run `pnpm dev` and submit the quiz.
    - Inspect the terminal logs for `[Sheets API] Request received` to ensure `hasPais`, `hasMarca`, and alias flags are `true`.
    - Verify the new columns appear in the Google Sheet (`Pais`, `Marca`, `Source`, `Medium`, `Campaign`, `Term`, `Content`, `UTM ...`).
 3. **Brevo & ConvertKit**

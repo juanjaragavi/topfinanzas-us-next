@@ -225,7 +225,7 @@ NEXT_PUBLIC_ENABLE_LOGGING=true
 ### Development Mode
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 **Expected behavior**:
@@ -239,8 +239,8 @@ npm run dev
 ### Production Mode
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 **Expected behavior**:

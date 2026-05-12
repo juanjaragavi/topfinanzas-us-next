@@ -359,7 +359,7 @@ articlePathPrefixes: [
 1. **Day 1-2**: Resolve all merge conflicts
    - Run `grep -r "<<<<<<< " --include="*.tsx" --include="*.ts" .`
    - Fix each file systematically
-   - Verify build passes: `npm run build`
+   - Verify build passes: `pnpm build`
 
 2. **Day 3-4**: Fix ActView Ads configuration
    - Update `/components/analytics/actview.tsx`
@@ -413,7 +413,7 @@ articlePathPrefixes: [
 grep -r "<<<<<<< " --include="*.tsx" --include="*.ts" . 2>/dev/null | wc -l
 
 # Verify build
-npm run build
+pnpm build
 
 # Check for UK references that should be US
 grep -r "uk.topfinanzas" --include="*.tsx" --include="*.ts" . 2>/dev/null

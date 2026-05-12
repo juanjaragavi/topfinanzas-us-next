@@ -159,7 +159,7 @@ Tests the complete integration through your Next.js API:
 
 ```bash
 # In one terminal, start your dev server:
-npm run dev
+pnpm dev
 
 # In another terminal, run the test:
 node scripts/test-brevo-integration.js

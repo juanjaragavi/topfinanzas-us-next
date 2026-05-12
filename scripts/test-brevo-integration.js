@@ -78,7 +78,7 @@ async function testBrevoIntegration() {
     console.error(
       "\n💡 Make sure your development server is running on port 3030",
     );
-    console.error("   Run: npm run dev\n");
+    console.error("   Run: pnpm dev\n");
     return false;
   }
 }

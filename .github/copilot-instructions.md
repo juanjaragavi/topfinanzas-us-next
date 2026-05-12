@@ -7,15 +7,15 @@ Full architecture details: see [`CLAUDE.md`](../CLAUDE.md).
 ## Build & Test
 
 ```bash
-npm run dev      # Turbopack dev server → http://localhost:3040
-npm run build    # Production build (NODE_OPTIONS=--max-old-space-size=4096)
-npm run start    # Production server → port 3040
-npm run lint     # ESLint
-npm run format   # Prettier
+pnpm dev      # Turbopack dev server → http://localhost:3040
+pnpm build    # Production build (NODE_OPTIONS=--max-old-space-size=4096)
+pnpm start    # Production server → port 3040
+pnpm lint     # ESLint
+pnpm format   # Prettier
 
 # Integration tests
-npm run test:brevo
-npm run test:activecampaign
+pnpm test:brevo
+pnpm test:activecampaign
 ```
 
 > Port is **3040**, not 3000.

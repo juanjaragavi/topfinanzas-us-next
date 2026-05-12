@@ -91,8 +91,8 @@
 ### Deployment Command
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 ### Post-Deployment Tasks

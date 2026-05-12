@@ -98,9 +98,9 @@ export default function Step1({ formData, updateFormData }: StepProps) {
 ### Build & Dev Commands
 
 ```bash
-npm run dev      # Development server on port 3030 with Turbo
-npm run build    # Production build
-npm run start    # Production server on port 3030
+pnpm dev      # Development server on port 3030 with Turbo
+pnpm build    # Production build
+pnpm start    # Production server on port 3030
 ```
 
 ### Git Workflow (Critical)

@@ -55,7 +55,7 @@ If you're using your own server (VPS, dedicated server):
 ```bash
 pm2 restart all
 # or
-npm run build && npm start
+pnpm build && npm start
 ```
 
 ## Verification Steps
@@ -164,7 +164,7 @@ BREVO_API_KEY=xkeysib-[REDACTED_FOR_SECURITY]
 EOF
 
 # Rebuild and restart
-npm run build
+pnpm build
 pm2 restart all
 ```
 

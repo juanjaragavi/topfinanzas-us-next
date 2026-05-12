@@ -139,8 +139,8 @@ Cannot find module 'pino-pretty'
 Install the dependencies:
 
 ```bash
-npm install pino
-npm install -D pino-pretty  # Optional, not used in current config
+pnpm add pino
+pnpm add -D pino-pretty  # Optional, not used in current config
 ```
 
 **Note:** After the worker thread fix, `pino-pretty` is no longer required but can remain installed.
@@ -317,13 +317,13 @@ node scripts/analyze-console-usage.js
 ### Test build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ### Check logs in production
 
 ```bash
-NEXT_PUBLIC_ENABLE_LOGGING=true npm run build
+NEXT_PUBLIC_ENABLE_LOGGING=true pnpm build
 NEXT_PUBLIC_ENABLE_LOGGING=true npm start
 ```
 

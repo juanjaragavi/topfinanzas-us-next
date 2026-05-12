@@ -676,11 +676,11 @@ export function trackImagePerformance() {
 
 ```bash
 # Run Lighthouse audits
-npm run lighthouse:before
-npm run lighthouse:after
+pnpm lighthouse:before
+pnpm lighthouse:after
 
 # Compare results
-npm run lighthouse:compare
+pnpm lighthouse:compare
 ```
 
 **Success Criteria:**

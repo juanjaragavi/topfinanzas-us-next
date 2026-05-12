@@ -86,7 +86,7 @@ import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner"
 
 ```bash
 cd /Users/macbookpro/GitHub/topfinanzas-us-next
-npm run dev
+pnpm dev
 ```
 
 **Watch Console For:**
@@ -311,7 +311,7 @@ Confirmed `window.AdZepActivateAds()` is called correctly:
 ### 1. Test in Development
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 - Monitor console output
@@ -321,8 +321,8 @@ npm run dev
 ### 2. Deploy to Staging
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 - Test in production-like environment

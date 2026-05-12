@@ -141,7 +141,7 @@ Sheets API (short-version)
 
 ```bash
 # Development
-npm run dev | grep "QUIZ-SHORT"
+pnpm dev | grep "QUIZ-SHORT"
 
 # Production logs
 grep "short-version" /var/log/app.log
