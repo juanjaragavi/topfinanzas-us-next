@@ -31,21 +31,30 @@ export default function PartytownInit() {
         if (type === "image") {
           return url;
         }
-        // Force worker execution for known ad / analytics origins
-        const partytownHosts = [
-          "googletagmanager.com",
-          "google-analytics.com",
-          "googleadservices.com",
+        // Exclude ad networks from Partytown (they need main thread access to googletag)
+        const mainThreadHosts = [
           "doubleclick.net",
           "googlesyndication.com",
-          "connect.facebook.net",
-          "facebook.com",
-          "scripts.clarity.ms",
+          "securepubads.g.doubleclick.net",
+          "actview.net",
+          "scr.actview.net",
           "ads.gamadx.com",
           "fundingchoicesmessages.google.com",
         ];
-        if (partytownHosts.some((host) => url.hostname.includes(host))) {
-          return url;
+        if (mainThreadHosts.some((host) => url.hostname.includes(host))) {
+          return undefined; // Return undefined to run on main thread
+        }
+        // Keep GTM/GA4/FB analytics in worker
+        const workerHosts = [
+          "googletagmanager.com",
+          "google-analytics.com",
+          "googleadservices.com",
+          "connect.facebook.net",
+          "facebook.com",
+          "scripts.clarity.ms",
+        ];
+        if (workerHosts.some((host) => url.hostname.includes(host))) {
+          return url; // Run in worker
         }
         // Let Partytown decide for everything else
         return url;
