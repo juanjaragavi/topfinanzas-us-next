@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import PartytownInit from "./partytown-init";
+import ActViewSPAHandler from "./actview-spa-handler";
 
 export default function HeadScripts() {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ export default function HeadScripts() {
 
   return (
     <>
-      <PartytownInit />
+      <ActViewSPAHandler />
       {!isActiveViewExcludedRoute && (
         <>
           {/*<script

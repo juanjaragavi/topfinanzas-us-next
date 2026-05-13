@@ -291,6 +291,13 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://scr.actview.net https://securepubads.g.doubleclick.net",
+              "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://securepubads.g.doubleclick.net https://pagead2.googlesyndication.com",
+              "img-src 'self' data: https://media.topfinanzas.com https://www.googletagmanager.com",
+              "frame-src 'self' https://www.googletagmanager.com",
+              "style-src 'self' 'unsafe-inline'",
+              "font-src 'self' data:",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self' https://us.topfinanzas.com",

@@ -16,11 +16,14 @@ sudo git checkout "$MAIN_BRANCH"
 echo "[2/6] Pulling latest changes from Git repository (origin $MAIN_BRANCH)..."
 sudo git pull origin "$MAIN_BRANCH"
 
-echo "[3/6] Removing previous build directory (.next)..."
+echo "[3/6] Installing dependencies with pnpm..."
+sudo env "PATH=$PATH" pnpm install
+
+echo "[4/6] Removing previous build directory (.next)..."
 # Use -f to force removal without prompts and ignore if it doesn't exist
 sudo rm -rf .next
 
-echo "[4/6] Building the application..."
+echo "[5/6] Building the application..."
 sudo env "PATH=$PATH" pnpm build
 
 # Copy static files for standalone server
@@ -30,10 +33,10 @@ sudo cp -r .next/static .next/standalone/.next/
 
 sudo mkdir -p .next/standalone/app && sudo cp app/critical.css .next/standalone/app/
 
-echo "[5/6] Restarting PM2 process 'topfinanzas-us-next'..."
+echo "[6/6] Restarting PM2 process 'topfinanzas-us-next'..."
 sudo pm2 restart topfinanzas-us-next
 
-echo "[6/6] Saving current PM2 process list..."
+echo "[7/7] Saving current PM2 process list..."
 sudo pm2 save
 
 # Note: 'sudo pm2 startup' is typically a one-time setup command
