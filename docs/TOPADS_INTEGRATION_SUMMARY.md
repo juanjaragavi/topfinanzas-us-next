@@ -71,7 +71,7 @@ Added to head section:
 
 ```tsx
 <ClientOnly>
-  <GoogleTagManager />
+  {/* GTM snippet is hardcoded natively in <head> & <body> */}
   <GoogleAds />
   <GoogleAdManager />
   <AdZep />

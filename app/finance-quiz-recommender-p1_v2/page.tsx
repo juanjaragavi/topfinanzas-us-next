@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-const REDIRECT_URL = "https://redirect.topfinanzas.com/experimento_test_1";
+const REDIRECT_URL = "https://redirect.topfinanzas.com/experimento_test_2";
 
 const STEP_1_OPTIONS = ["$2500", "$5000", "$10000", "I need more"];
 const STEP_2_OPTIONS = ["Cashback", "0 handling cost", "0% APR"];

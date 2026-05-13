@@ -98,7 +98,10 @@ export default function InvitCreditCardRecUS5Page() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div
+                id="invit-credit-card-rec-us-5-preguntas-3"
+                className="flex flex-col gap-3"
+              >
                 {MONTHLY_SPEND_OPTIONS.map((option) => (
                   <QuizOptionCard
                     key={option.id}

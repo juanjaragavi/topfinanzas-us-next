@@ -1,11 +1,7 @@
 import { MetadataRoute } from "next";
 import { SEO_SITE } from "@/lib/seo";
 
-const disallowedRoutes = [
-  "/api/",
-  "/admin/",
-  "/uncategorized/",
-];
+const disallowedRoutes = ["/api/", "/admin/", "/uncategorized/"];
 
 export default function robots(): MetadataRoute.Robots {
   return {

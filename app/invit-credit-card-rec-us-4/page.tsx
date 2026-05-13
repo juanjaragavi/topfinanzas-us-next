@@ -89,7 +89,10 @@ export default function InvitCreditCardRecUS4Page() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div
+                id="invit-credit-card-rec-us-4-preguntas-2"
+                className="grid grid-cols-2 gap-3 md:gap-4"
+              >
                 {SPENDING_CATEGORY_OPTIONS.map((option) => (
                   <QuizOptionCard
                     key={option.id}

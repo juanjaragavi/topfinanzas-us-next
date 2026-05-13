@@ -55,7 +55,7 @@ The ActView Ads script is loaded in the `<head>` section of `/app/layout.tsx`:
 
 ```tsx
 <ClientOnly>
-  <GoogleTagManager />
+  {/* GTM snippet is hardcoded natively in <head> & <body> */}
   <GoogleAds />
   <GoogleAdManager />
   <AdZep />
