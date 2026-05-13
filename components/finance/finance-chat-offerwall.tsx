@@ -201,6 +201,15 @@ export function FinanceChatOfferwall({
                     Advertisement
                   </span>
                   <div>
+                    <p
+                      style={{
+                        fontSize: "10px",
+                        textTransform: "uppercase",
+                        textAlign: "center",
+                      }}
+                    >
+                      Ads
+                    </p>
                     <div id="av_top"></div>
                   </div>
                 </div>
