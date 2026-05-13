@@ -294,6 +294,16 @@ const nextConfig = {
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self' https://us.topfinanzas.com",
+              // Allow all ad/analytics scripts - revenue critical
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://* http://*",
+              // Allow all ad/analytics images
+              "img-src 'self' data: https: https://* http://*",
+              // Allow all ad/analytics connections
+              "connect-src 'self' https: https://* http://*",
+              // Allow all ad frames
+              "frame-src 'self' https: https://* http://*",
+              // Styles
+              "style-src 'self' 'unsafe-inline' https: https://* http://*",
             ].join("; "),
           },
         ],
