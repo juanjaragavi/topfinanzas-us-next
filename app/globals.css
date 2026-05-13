@@ -356,3 +356,26 @@ body:not(:has(#quiz-overlay)) .container {
   -webkit-backdrop-filter: blur(8px) !important;
   background-color: rgba(0, 0, 0, 0.45) !important;
 }
+
+
+
+
+/* Fix ActView ad container forced heights causing large white gaps */
+/* ONLY apply when GAM has processed the slot (data-google-query-id) AND left it empty */
+[id^="av_"][data-google-query-id]:has([id^="google_ads_iframe_"][style*="height: 0px"]):has([id^="google_ads_iframe_"][style*="display: none"]),
+[id^="av_"][data-google-query-id]:has([id^="google_ads_iframe_"][style*="height:0px"]):has([id^="google_ads_iframe_"][style*="display:none"]),
+[data-actview-slot][data-google-query-id]:has([id^="google_ads_iframe_"][style*="height: 0px"]):has([id^="google_ads_iframe_"][style*="display: none"]),
+[data-topads][data-google-query-id]:has([id^="google_ads_iframe_"][style*="height: 0px"]):has([id^="google_ads_iframe_"][style*="display: none"]) {
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: none !important;
+}
+
+/* Specific fix for quiz chat bubbles containing empty ads - ONLY hide when GAM confirms empty */
+.bg-white.rounded-xl.shadow-sm:has([id^="av_"][data-google-query-id]:has([id^="google_ads_iframe_"][style*="height: 0px"]):has([id^="google_ads_iframe_"][style*="display: none"])) {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
