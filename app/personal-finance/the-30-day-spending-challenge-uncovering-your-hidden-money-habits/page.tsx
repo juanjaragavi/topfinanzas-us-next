@@ -29,7 +29,29 @@ export default function ThirtyDaySpendingChallengePage() {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
               The 30-Day Spending Challenge: Uncovering Your Hidden Money Habits
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Most Americans believe they have a decent handle on where their
               money goes each month. Then the credit card statement arrives.
@@ -199,7 +221,29 @@ export default function ThirtyDaySpendingChallengePage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your 30-Day Action Plan
               </h2>
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <p className="text-gray-700 mb-4 leading-7">
                 You now have a clear framework. Here is how to start today:
               </p>
@@ -260,6 +304,29 @@ export default function ThirtyDaySpendingChallengePage() {
               </Link>
             </div>
 
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
+            </div>
             <AIContentDisclaimer />
           </div>
         </div>

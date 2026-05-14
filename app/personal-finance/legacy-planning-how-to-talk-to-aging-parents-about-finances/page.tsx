@@ -30,7 +30,29 @@ export default function LegacyPlanningPage() {
               Legacy Planning 101: How to Talk to Aging Parents About Their
               Finances and Wishes
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Discussing finances with your parents is rarely easy. It can feel
               invasive, awkward, or even morbid. However, having a clear
@@ -171,7 +193,29 @@ export default function LegacyPlanningPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Next steps
               </h2>
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <p className="text-gray-700 mb-4 leading-7">
                 Once the initial conversation is out of the way, the focus
                 should shift to organization and professional consultation. Help
@@ -205,6 +249,29 @@ export default function LegacyPlanningPage() {
               </Link>
             </div>
 
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
+            </div>
             <AIContentDisclaimer />
           </div>
         </div>

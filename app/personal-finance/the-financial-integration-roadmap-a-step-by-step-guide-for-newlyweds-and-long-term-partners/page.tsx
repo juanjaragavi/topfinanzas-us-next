@@ -29,7 +29,29 @@ export default function FinancialIntegrationRoadmapPage() {
               The Financial Integration Roadmap: A Step-by-Step Guide for
               Newlyweds and Long-Term Partners
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Moving in together or tying the knot is a major milestone—and
               along with unpacking boxes and building a life together, it also
@@ -162,7 +184,29 @@ export default function FinancialIntegrationRoadmapPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Step 4: Streamline Your Accounts and Cards
               </h2>
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <p className="text-gray-700 mb-4 leading-7">
                 As your lives merge, it often makes sense to consolidate certain
                 accounts. Review your recurring subscriptions to eliminate
@@ -206,6 +250,29 @@ export default function FinancialIntegrationRoadmapPage() {
               </Link>
             </div>
 
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
+            </div>
             <AIContentDisclaimer />
           </div>
         </div>

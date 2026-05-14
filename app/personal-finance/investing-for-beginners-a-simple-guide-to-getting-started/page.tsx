@@ -101,7 +101,29 @@ export default function PostPage() {
             "This guide will break down the basics of investing into simple, actionable steps. It’s a crucial part of taking control of your personal finance and building long-term wealth.",
         }}
       >
-        <div id="av_top"></div>
+        <div
+          id="av_top_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_top"></div>
+          </div>
+        </div>
 
         <p>
           You’ve landed your first job, you’re earning a steady paycheck, and
@@ -149,6 +171,29 @@ export default function PostPage() {
           </li>
         </ul>
 
+        <div
+          id="av_content_1_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_1"></div>
+          </div>
+        </div>
         <h2>Understanding the Basic Lingo (Without the Headache)</h2>
 
         <p>
@@ -253,6 +298,29 @@ export default function PostPage() {
           your future self will thank you for.
         </p>
 
+        <div
+          id="av_content_2_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_2"></div>
+          </div>
+        </div>
         <p>
           <em>
             Disclaimer: This article is for informational purposes only and does

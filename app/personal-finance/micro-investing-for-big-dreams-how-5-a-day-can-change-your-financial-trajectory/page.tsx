@@ -30,7 +30,29 @@ export default function MicroInvestingPage() {
               Micro-Investing for Big Dreams: How $5 a Day Can Change Your
               Financial Trajectory
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               For many Americans, the word "investing" conjures up images of
               Wall Street executives, complex charts, and needing thousands of
@@ -193,7 +215,29 @@ export default function MicroInvestingPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Next steps
               </h2>
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <p className="text-gray-700 mb-4 leading-7">
                 Micro-investing is a powerful gateway into the broader world of
                 personal finance. Once you see your money growing, you might
@@ -231,6 +275,29 @@ export default function MicroInvestingPage() {
               </Link>
             </div>
 
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
+            </div>
             <AIContentDisclaimer />
           </div>
         </div>

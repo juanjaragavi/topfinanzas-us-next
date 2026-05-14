@@ -99,7 +99,29 @@ export default function PostPage() {
             "Understanding this single concept is one of the most powerful things you can do for your personal finance journey, turning small, consistent savings into significant wealth down the road.",
         }}
       >
-        <div id="av_top"></div>
+        <div
+          id="av_top_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_top"></div>
+          </div>
+        </div>
 
         <p>
           When you first start earning a steady paycheck, saving money can feel
@@ -140,6 +162,29 @@ export default function PostPage() {
           exponential growth over time.
         </p>
 
+        <div
+          id="av_content_1_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_1"></div>
+          </div>
+        </div>
         <h2>A Simple Example: The Power of Starting Early</h2>
 
         <p>
@@ -237,6 +282,29 @@ export default function PostPage() {
           the heavy lifting for you.
         </p>
 
+        <div
+          id="av_content_2_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_2"></div>
+          </div>
+        </div>
         <p>
           <em>
             Disclaimer: This article is for informational purposes only and does

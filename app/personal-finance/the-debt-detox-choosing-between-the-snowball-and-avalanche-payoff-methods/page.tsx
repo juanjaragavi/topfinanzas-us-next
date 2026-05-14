@@ -30,7 +30,29 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
               The Debt Detox: Choosing Between the Snowball and Avalanche Payoff
               Methods
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
 
             <p className="text-lg text-gray-700 mb-6 leading-7">
               If debt feels like a constant background noise in your life, you
@@ -208,7 +230,29 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
             </section>
 
             <section className="my-8">
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your debt detox action plan for the next 30 days
               </h2>
@@ -303,6 +347,29 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
               </Link>
             </div>
 
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
+            </div>
             <AIContentDisclaimer />
           </div>
         </div>

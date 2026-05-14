@@ -30,7 +30,29 @@ export default function SandwichGenerationPage() {
               The Sandwich Generation: Balancing Your Kids&apos; Future With
               Your Aging Parents&apos; Needs
             </h1>
-            <div id="av_top"></div>
+            <div
+              id="av_top_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_top"></div>
+              </div>
+            </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               You&apos;re helping your teenager research colleges while
               simultaneously figuring out whether your mom needs in-home care or
@@ -255,7 +277,29 @@ export default function SandwichGenerationPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Your Next Steps
               </h2>
-              <div id="av_content_1"></div>
+              <div
+                id="av_content_1_wrapper"
+                align="center"
+                style={{
+                  width: "100%",
+                  marginTop: "2rem",
+                  marginBottom: "2rem",
+                  minHeight: "400px",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      textTransform: "uppercase",
+                      textAlign: "center",
+                    }}
+                  >
+                    Anúncios
+                  </p>
+                  <div id="av_content_1"></div>
+                </div>
+              </div>
               <p className="text-gray-700 mb-4 leading-7">
                 The sandwich generation squeeze is real, but the worst outcome
                 is paralysis — continuing to absorb competing demands without a
@@ -313,6 +357,30 @@ export default function SandwichGenerationPage() {
               <Link href="/personal-finance" className="cta-button-blue">
                 Explore more personal finance guides
               </Link>
+            </div>
+
+            <div
+              id="av_content_2_wrapper"
+              align="center"
+              style={{
+                width: "100%",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                minHeight: "400px",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "10px",
+                    textTransform: "uppercase",
+                    textAlign: "center",
+                  }}
+                >
+                  Anúncios
+                </p>
+                <div id="av_content_2"></div>
+              </div>
             </div>
             <AIContentDisclaimer />
           </div>

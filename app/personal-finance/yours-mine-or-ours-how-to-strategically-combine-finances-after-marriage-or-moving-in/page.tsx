@@ -103,7 +103,29 @@ export default function PostPage() {
             "Moving in with a partner or getting married is a huge, exciting step. But what about your finances? This guide will walk you through how to tackle this conversation.",
         }}
       >
-        <div id="av_top"></div>
+        <div
+          id="av_top_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_top"></div>
+          </div>
+        </div>
 
         <h3>
           Moving in with a partner or getting married is a huge, exciting step.
@@ -163,6 +185,29 @@ export default function PostPage() {
           </li>
         </ul>
 
+        <div
+          id="av_content_1_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_1"></div>
+          </div>
+        </div>
         <h2>The Three Main Approaches to Combining Finances</h2>
 
         <p>
@@ -231,6 +276,30 @@ export default function PostPage() {
           finance as a team, you’re not just managing money; you’re building a
           stronger foundation for your future together.
         </p>
+
+        <div
+          id="av_content_2_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_2"></div>
+          </div>
+        </div>
       </BlogPost>
     </>
   );

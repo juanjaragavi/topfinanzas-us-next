@@ -100,7 +100,29 @@ export default function PostPage() {
             "If you’re just starting your career, the word “debt” probably sounds like a four-letter word. We’re often taught that borrowing money is bad and should be avoided at all costs. While that’s good advice for avoiding financial trouble, it’s not the whole story.",
         }}
       >
-        <div id="av_top"></div>
+        <div
+          id="av_top_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_top"></div>
+          </div>
+        </div>
 
         <p>
           If you’re just starting your career, the word “debt” probably sounds
@@ -153,6 +175,29 @@ export default function PostPage() {
           </li>
         </ul>
 
+        <div
+          id="av_content_1_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_1"></div>
+          </div>
+        </div>
         <h2>What Makes Debt “Bad”? 🛍️</h2>
 
         <p>
@@ -243,6 +288,29 @@ export default function PostPage() {
           borrowing and build a secure financial future.
         </p>
 
+        <div
+          id="av_content_2_wrapper"
+          align="center"
+          style={{
+            width: "100%",
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            minHeight: "400px",
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontSize: "10px",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              Anúncios
+            </p>
+            <div id="av_content_2"></div>
+          </div>
+        </div>
         <p>
           <em>
             Disclaimer: This article is for informational purposes only and does
