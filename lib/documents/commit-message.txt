@@ -1,5 +1,1 @@
-chore: remove partytown and integrate actview ads spa handler
-
-- Removed @builder.io/partytown dependency and related files
-- Added actview-spa-handler.tsx and updated layout
-- Cleaned up partytown configuration from next.config.mjs
+chore(skills): migrate to centralized versioned orchestrator skill artifact
