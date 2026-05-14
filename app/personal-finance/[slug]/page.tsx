@@ -8,6 +8,82 @@ import { SEO_SITE } from "@/lib/seo";
 
 const CATEGORY = "personal-finance";
 
+type ActiveViewSlot = "top" | "content_1" | "content_2";
+
+const ACTIVE_VIEW_SLOT_TAGS: Record<ActiveViewSlot, string> = {
+  top: "<InlineActiveViewAd slot=\"top\" />",
+  content_1: "<InlineActiveViewAd slot=\"content_1\" />",
+  content_2: "<InlineActiveViewAd slot=\"content_2\" />",
+};
+
+function insertBeforeNthH2(
+  content: string,
+  nth: number,
+  injection: string,
+): string {
+  const matches = [...content.matchAll(/^##\s+/gm)];
+  if (matches.length < nth || matches[nth - 1].index === undefined) {
+    return content;
+  }
+
+  const index = matches[nth - 1].index;
+  return `${content.slice(0, index)}${injection}\n\n${content.slice(index)}`;
+}
+
+function injectActiveViewSlots(content: string): string {
+  // Avoid duplicate ad slot injection for content already instrumented.
+  if (
+    content.includes("id=\"av_top\"") ||
+    content.includes("id=\"av_content_1\"") ||
+    content.includes("id=\"av_content_2\"") ||
+    content.includes("<InlineActiveViewAd")
+  ) {
+    return content;
+  }
+
+  let result = content;
+  result = insertBeforeNthH2(result, 1, ACTIVE_VIEW_SLOT_TAGS.top);
+  result = insertBeforeNthH2(result, 2, ACTIVE_VIEW_SLOT_TAGS.content_1);
+  result = insertBeforeNthH2(result, 3, ACTIVE_VIEW_SLOT_TAGS.content_2);
+  return result;
+}
+
+function InlineActiveViewAd({ slot }: { slot: ActiveViewSlot }) {
+  const slotIdByType: Record<ActiveViewSlot, string> = {
+    top: "av_top",
+    content_1: "av_content_1",
+    content_2: "av_content_2",
+  };
+
+  const slotId = slotIdByType[slot];
+
+  return (
+    <div
+      id={`${slotId}_wrapper`}
+      align="center"
+      style={{
+        width: "100%",
+        marginTop: "2rem",
+        marginBottom: "2rem",
+        minHeight: "400px",
+      }}
+    >
+      <div>
+        <p
+          style={{
+            fontSize: "10px",
+            textTransform: "uppercase",
+            textAlign: "center",
+          }}
+        >
+          Ads
+        </p>
+        <div id={slotId}></div>
+      </div>
+    </div>
+  );
+}
+
 export async function generateStaticParams() {
   const posts = getAllPosts(CATEGORY);
   return posts.map((post) => ({
@@ -72,7 +148,8 @@ export default async function PersonalFinancePost({
   }
 
   // Get shared components
-  const components = getMDXComponents({});
+  const components = getMDXComponents({ InlineActiveViewAd });
+  const contentWithAds = injectActiveViewSlots(post.content);
 
   // Build BlogPosting JSON-LD from MDX frontmatter
   const canonical = `https://us.topfinanzas.com/${CATEGORY}/${slug}`;
@@ -134,7 +211,7 @@ export default async function PersonalFinancePost({
       />
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <BlogPost metadata={post.frontmatter as any}>
-        <MDXRemote source={post.content} components={components} />
+        <MDXRemote source={contentWithAds} components={components} />
       </BlogPost>
     </>
   );
