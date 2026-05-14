@@ -11,9 +11,9 @@ const CATEGORY = "personal-finance";
 type ActiveViewSlot = "top" | "content_1" | "content_2";
 
 const ACTIVE_VIEW_SLOT_TAGS: Record<ActiveViewSlot, string> = {
-  top: "<InlineActiveViewAd slot=\"top\" />",
-  content_1: "<InlineActiveViewAd slot=\"content_1\" />",
-  content_2: "<InlineActiveViewAd slot=\"content_2\" />",
+  top: '<InlineActiveViewAd slot="top" />',
+  content_1: '<InlineActiveViewAd slot="content_1" />',
+  content_2: '<InlineActiveViewAd slot="content_2" />',
 };
 
 function insertBeforeNthH2(
@@ -33,9 +33,9 @@ function insertBeforeNthH2(
 function injectActiveViewSlots(content: string): string {
   // Avoid duplicate ad slot injection for content already instrumented.
   if (
-    content.includes("id=\"av_top\"") ||
-    content.includes("id=\"av_content_1\"") ||
-    content.includes("id=\"av_content_2\"") ||
+    content.includes('id="av_top"') ||
+    content.includes('id="av_content_1"') ||
+    content.includes('id="av_content_2"') ||
     content.includes("<InlineActiveViewAd")
   ) {
     return content;
@@ -58,18 +58,10 @@ function InlineActiveViewAd({ slot }: { slot: ActiveViewSlot }) {
   const slotId = slotIdByType[slot];
 
   return (
-    <div
-      id={`${slotId}_wrapper`}
-      align="center"
-      style={{
-        width: "100%",
-        marginTop: "2rem",
-        marginBottom: "2rem",
-        minHeight: "400px",
-      }}
-    >
+    <div id={`${slotId}_wrapper`} className="activeview-inline-wrapper">
       <div>
         <p
+          className="activeview-inline-label"
           style={{
             fontSize: "10px",
             textTransform: "uppercase",
@@ -78,7 +70,13 @@ function InlineActiveViewAd({ slot }: { slot: ActiveViewSlot }) {
         >
           Ads
         </p>
-        <div id={slotId}></div>
+        <div
+          id={slotId}
+          className="activeview-inline-slot"
+          data-topads
+          data-topads-size="square"
+          data-actview-slot="square"
+        ></div>
       </div>
     </div>
   );

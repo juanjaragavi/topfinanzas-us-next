@@ -388,3 +388,47 @@ body:not(:has(#quiz-overlay)) .container {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* Personal Finance inline ActiveView mobile-square ad slots */
+.activeview-inline-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: 2rem auto;
+  min-height: 320px;
+}
+
+.activeview-inline-label {
+  margin-bottom: 0.5rem;
+}
+
+.activeview-inline-slot {
+  width: 100%;
+  min-height: 280px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.activeview-inline-slot iframe,
+.activeview-inline-slot ins,
+.activeview-inline-slot div[id^="google_ads_iframe_"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .activeview-inline-wrapper {
+    max-width: 380px;
+    min-height: 300px;
+  }
+
+  .activeview-inline-slot {
+    min-height: 260px;
+  }
+}
