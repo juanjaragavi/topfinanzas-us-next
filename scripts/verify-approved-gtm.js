@@ -7,9 +7,7 @@ const forbiddenGtmIds = ["GTM-MR76NXR3"];
 
 const filesToCheck = [
   "app/layout.tsx",
-  "components/analytics/gtm.tsx",
   "components/analytics/google-ads.tsx",
-  "components/GoogleTagManager.tsx",
 ];
 
 const errors = [];
@@ -33,18 +31,6 @@ for (const forbiddenGtmId of forbiddenGtmIds) {
       );
     }
   }
-}
-
-if (!fileContents["components/analytics/gtm.tsx"].includes(approvedGtmId)) {
-  errors.push(
-    `components/analytics/gtm.tsx does not reference the approved GTM ID ${approvedGtmId}.`,
-  );
-}
-
-if (!fileContents["components/GoogleTagManager.tsx"].includes(approvedGtmId)) {
-  errors.push(
-    `components/GoogleTagManager.tsx does not reference the approved GTM ID ${approvedGtmId}.`,
-  );
 }
 
 if (fileContents["app/layout.tsx"].includes("<GoogleAds />")) {

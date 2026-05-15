@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { formLogger } from "@/lib/logger";
-import { pushGTMConversion } from "@/components/analytics/gtm-partytown";
+import { pushGTMConversion } from "@/lib/gtm";
 import {
   MONTHLY_SPEND_OPTIONS,
   AFFILIATE_URL,

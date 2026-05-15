@@ -215,6 +215,19 @@ export default function UtmPersister() {
           "UTM Persister: Google Ads campaign context stored",
         );
       }
+
+      // Push UTM params to GTM dataLayer
+      if (typeof window !== "undefined" && window.dataLayer) {
+        const utmData: Record<string, string> = {};
+        Object.entries(validatedParams).forEach(([param, value]) => {
+          utmData[param] = value;
+        });
+        window.dataLayer.push({
+          event: "utm_parameters_loaded",
+          ...utmData
+        });
+        analyticsLogger.debug("UTM Persister: UTM parameters pushed to GTM dataLayer");
+      }
     }
   }, [searchParams]);
 

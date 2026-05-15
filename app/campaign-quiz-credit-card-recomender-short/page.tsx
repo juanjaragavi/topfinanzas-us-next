@@ -11,7 +11,7 @@ import Step3Short from "@/components/steps/step3-short";
 import Logo from "@/components/ui/logo";
 import { BRAND_STATIC_FIELDS, UTM_PARAM_KEYS } from "@/lib/constants";
 import { step1Strings, step2Strings } from "@/lib/strings";
-import { pushGTMConversion } from "@/components/analytics/gtm-partytown";
+import { pushGTMConversion } from "@/lib/gtm";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 import { redirectWithUtmParams } from "@/lib/utils/url-builder";
 import { formatTimestampForSheets } from "@/lib/utils";
