@@ -48,3 +48,6 @@ lib/documents/document.md
 
 # Ignore images for the new user journey, as they are stored in the CDN and not needed in the local repository
 lib/new-user-journey/images
+
+# Skills
+.agents/skills/topnetworks-sync-orchestrator/node_modules/

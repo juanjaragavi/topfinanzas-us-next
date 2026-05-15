@@ -1,4 +1,4 @@
-import { motion, type Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import React from "react";
 
 export const AnimatedProgressBar = ({
@@ -53,9 +53,5 @@ export const containerVariants: Variants = {
 
 export const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring" as const, bounce: 0.4 },
-  },
+  show: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.4 } },
 };

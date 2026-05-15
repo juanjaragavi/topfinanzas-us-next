@@ -1,92 +1,60 @@
 ---
 name: topfinanzas-us-next-agent
-description: Master skill for developing, maintaining, and understanding the TopFinanzas US codebase (us.topfinanzas.com). Captures the Next.js App Router architecture, strict US-specific conventions, monetization integrations, content update workflows, and Git deployment rules required to safely modify this property. Must be used when answering codebase queries or performing structural changes on topfinanzas-us-next.
+description: Comprehensive codebase guide and operational workflow skill for the TopFinanzas US (us.topfinanzas.com) Next.js 15 repository. Use for US-specific feature work, layout implementation, content pipeline management, and US compliance. Integrates with the topnetworks-sync-orchestrator.
 ---
 
 # TopFinanzas US Codebase Guide
 
-This skill encapsulates the full operational and architectural knowledge required to safely work within the `topfinanzas-us-next` repository. This repository powers `us.topfinanzas.com`, TopNetworks Inc.'s flagship US performance publishing and financial comparison platform.
+This skill governs development, feature additions, content generation, and compliance implementation within the `topfinanzas-us-next` repository.
 
-## 1. TopNetworks Inc. Ecosystem & Orchestrator Linkage
+## 1. Repository Context & Boundaries
+- **Project Purpose**: Flagship US digital advertising arbitrage property (`us.topfinanzas.com`) targeting English-speaking US consumers with financial comparison tools, credit card reviews, and personal finance education.
+- **Tech Stack**: Next.js 15.4 (App Router), TypeScript, React 19, Tailwind CSS v3.4, Shadcn/UI, Radix UI, MDX.
+- **Infrastructure**: GCP Compute Engine (34.45.27.247), PM2, Apache reverse proxy. Port 3040.
+- **Monetization**: AdZep, TopAds, and direct CPA partnerships (credit card / loan applications).
+- **Compliance Rules**: Use US terminology and formats (USD, MM/DD/YYYY, ZIP codes, +1 phone numbers). Avoid UK FCA and MX CONDUSEF/PROFECO language. Do not promise approvals or guaranteed rates.
 
-TopFinanzas US is one node in the broader TopNetworks Inc. digital arbitrage portfolio, whose goal is to maintain a positive spread between paid traffic acquisition (Meta/Google Ads) and session monetization (CPA, AdZep, TopAds).
+## 2. Integration with TopNetworks Orchestrator
+This skill represents the US-local implementation arm of the TopNetworks ecosystem. It explicitly connects to and is governed by the orchestrator skill located at `/Users/macbookpro/GitHub/topfinanzas-us-next/.agents/skills/topnetworks-sync-orchestrator/SKILL.md`.
 
-**Explicit Linkage to `topnetworks-sync-orchestrator`:**
-This codebase is governed by the sync patterns established in `.agents/skills/topnetworks-sync-orchestrator/SKILL.md`. When making changes that involve cross-market shared components (UI components, generic hooks, layouts), refer to the orchestrator to decide if the change should be propagated to other repositories (e.g., UK, MX, BudgetBee).
+**Coordination Contract**:
+- **US-Only Tasks**: (e.g., US-specific content, US GTM container `GTM-5568TKCX`, US `lib/data/posts.ts` edits, US legal pages) Use this skill to implement changes directly.
+- **Multi-Repo/Shared Tasks**: When a task involves shared architecture, SEO registries, or UI components that apply across TopNetworks properties (UK, MX, BudgetBee), delegate the high-level planning to `topnetworks-sync-orchestrator`. Use this skill *only* for the `topfinanzas-us-next` adaptation phase of that orchestrated task.
+- **Invariants**: Keep the US codebase isolated regarding environment variables, GTM tags, and US compliance requirements, even when synchronizing shared components.
 
-- **Local Dev Loop**: All active feature development in this repo happens on the `dev` branch.
-- **Deployment via Orchestrator**: You must prepare for deployment using `bash scripts/git-workflow.sh "<message>"` (which simultaneously commits, pushes, and synchronizes `dev` to `main`). After pushing, rely on the remote `deploy_update.sh` on the Ubuntu production server (where the app lives at `/var/www/html/topfinanzas-us-next`) to apply the changes.
+## 3. System Architecture & Module Map
+- `app/`: Next.js App Router. Contains static pages, blog layouts, and interactive quizzes (e.g., `campaign-quiz-credit-card-recomender`).
+- `app/financial-solutions/`: Contains bottom-of-funnel (BOFU) credit card and loan product pages.
+- `app/api/`: Contains Route Handlers for integrations (SendGrid, ActiveCampaign, etc.).
+- `components/`: UI components categorized into `ui/` (Shadcn), `layout/`, `forms/`, `steps/`, and `analytics/`.
+- `lib/`: Core utilities including `logger.ts` (structured Pino logging), `seo.ts`, `seo-route-registry.ts`, `search-index.ts` (in-memory search), and data helpers.
+- `content/`: MDX files containing the editorial content (TOFU/MOFU guides).
+- `scripts/`: Operational scripts including `git-workflow.sh`, deploy helpers, and integration tests (e.g., ActiveCampaign, Brevo).
+- `.github/instructions/`: Contains vital project rules and layout standards.
 
-## 2. System Architecture & Module Map
+## 4. Operational Workflows & Invariants
 
-The project is built on **Next.js 15.4.10** with **React 19**, **TypeScript** (Strict), and **Tailwind CSS**. It is configured for a Vercel/Docker standalone output.
+### 4.1. Financial Solutions Pages (BOFU)
+When creating or modifying credit card or personal loan product pages in `/app/financial-solutions/`:
+- **Mandatory Standard**: You MUST adhere to `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`.
+- **Split Flow**: Every product requires TWO separate pages: a Benefits page (`{slug}/`) and a Requirements page (`{slug}-requirements/`).
+- **Images**: Use `ResponsiveImage` on Benefits pages for hero images; use standard `Image` on Requirements pages.
+- **Styling**: Do not add colored boxes, grids, or SVG icon bullets. Use circular badges with arrows for bullet points. Include `AIContentDisclaimer` before the footer.
+- **Ads**: Ensure existing ad units remain intact in the specified layout.
 
-- **`/app/`**: Standard App Router hierarchy. Server Components are default. Port is **`3040`** locally.
-- **`/app/financial-solutions/`**: Core monetization pages. Contains 80+ hardcoded React component pages for individual credit cards and personal loans.
-- **`/app/blog/` & `/app/personal-finance/`**: Educational content (TOFU/MOFU) based on hardcoded arrays of metadata.
-- **`/components/`**:
-  - `ui/`: Radix primitives and Shadcn/UI elements.
-  - `analytics/`: GTM, UTM trackers, and the proprietary `actview.tsx` setup.
-  - `steps/` & `forms/`: Multi-step flows using `react-hook-form` and `zod`.
-- **`/lib/`**: Utilities, search index, Pino logger (`logger.ts`), US-specific data (`us/`), and `constants.ts`.
-- **`.github/instructions/`**: Project-specific rule documents overrides. (Read these before executing changes).
+### 4.2. Blog & Content Pipelines (TOFU/MOFU)
+When adding, updating, or deleting blog posts or educational articles:
+- Content is written in MDX and stored/configured properly.
+- You MUST sync the `allPosts` array across all listing pages (e.g., `app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, search index).
+- Consult `.github/instructions/BLOG_POST_INTEGRATION.instructions.md` and `lib/TOFU_BLOG_POST_GENERATION.instructions.md` for tone and structure.
 
-## 3. Data Flows & Key Integrations
+### 4.3. Analytics and Advertising (AdZep)
+- **GTM**: The US Google Tag Manager container (`GTM-5568TKCX`) is hardcoded in `app/layout.tsx`. Do NOT use third-party wrapper components for GTM.
+- **AdZep Integration**: Never call `window.AdZepActivateAds()` manually. Rely on the `AdZepNavigationHandler` or `actview-spa-handler.tsx` to handle ad refreshes on SPA transitions.
+- **UTM Tracking**: Follow the format `us_tf_[platform]_broad` for acquisition tracking.
 
-This project does not use an external database or CMS for its core content.
-
-- **Content**: 100% hardcoded in React files. Images are served from the external `media.topfinanzas.com` CDN.
-- **Search System**: Powered by `/lib/search-index.ts`, containing an in-memory index of ~400 items. **Must be manually updated when new pages are added.**
-- **Analytics & Ads (CRITICAL)**:
-  - **Google Tag Manager**: Loads before AdZep in `app/layout.tsx`.
-  - **ActView Ads / AdZep**: Proprietary programmatic display network auto-activated via `ActView AdsSPAHandler` calling `window.topAds.spa()` on route changes. **Do not manually call `window.topAds.spa()`**. Use the `useActView Ads()` hook only for programmatic activation.
-- **API Routes (`/app/api/`)**:
-  - `/api/contact` & `/api/subscribe`: Integrates with Brevo (Sendinblue). Captures UTM parameters from cookies and forwards them.
-  - `/api/sheets`: Posts lead data to Google Sheets API using service account credentials.
-
-## 4. Setup, Operational Workflows & Deployments
-
-- **Local Dev Engine**: Run via `pnpm dev` which spawns Turbopack on `http://localhost:3040`.
-- **Environment Variables**: Managed via `.env.production` on the production server (restricted permissions `/opt/app/`). `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`, and Brevo keys are mandatory for full testing.
-- See Section 6 for strict deployment, Git workflow, and logging constraints.
-
-## 5. Common Change Recipes & Safe Modifications
-
-### Adding a New Financial Product
-
-1. Duplicate a template folder (e.g., `app/financial-solutions/citi-simplicity-card-benefits` and `-requirements`).
-2. Adhere STRICTLY to the layout standard `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md` (which requires separating benefits/requirements pages, precise element ordering, avoiding colored grids/lists, and strict ad unit placement).
-3. Update `lib/search-index.ts` with the new product metadata so the search bar can find it.
-4. Ensure image references point to `https://media.topfinanzas.com`.
-
-### Creating a New Blog Post
-
-1. Add the component page to the appropriate path under `/app/blog/` or `/app/personal-finance/`.
-2. Sync the new post's metadata object across **all `allPosts` arrays** located in the various blog `page.tsx` listing components. Reference `.github/instructions/BLOG_POST_INTEGRATION.instructions.md`.
-3. Re-index the content in `/lib/search-index.ts`.
-
-### Modifying Multi-step Forms
-
-When working in `/components/steps/` or `/components/forms/`, ensure that advancing a step triggers `window.scrollTo(0, 0)`.
-
-## 6. Project-Specific Conventions & Guardrails
-
-To manage complexity and prevent errors, follow these prioritized constraints:
-
-### 🔴 CRITICAL INVARIANTS (Never Violate)
-
-- **Git & Deployment**: You **must** use `bash scripts/git-workflow.sh "<message>"` as your sole tool for commits and pushes. Never run raw `git commit` or `git push`. This script handles checks, formatting, and branch synchronization.
-- **Analytics Load Order**: Google Tag Manager must load before AdZep in `app/layout.tsx`. Do not manually call `window.topAds.spa()`.
-- **GTM Independence**: The US site exclusively uses Container ID `GTM-5568TKCX` hardcoded in `app/layout.tsx`. Do not extract this into a generalized cross-market component.
-- **Financial Solutions UI Constraints**: You must strictly separate benefits and requirements pages, follow exact element ordering, use specific image components, avoid colored background boxes/grids, and place specific ad units in exact spots.
-- **Logging Rule**: NEVER use `console.log`. Use `logger` imported from `@/lib/logger` (Pino implementation).
-
-### 🟡 HIGH PRIORITY (Market Compliance)
-
-- **Currency & Dates**: Must be USD (`$`) and use `MM/DD/YYYY`.
-- **Regulatory Tone**: Avoid UK-specific terms (FCA) or Mexico-specific terms (CAT, CONDUSEF, PROFECO). Never guarantee loan approvals or interest rates; use appropriate disclosures.
-
-### 🟢 RECOMMENDED PATTERNS (Code Style)
-
-- **Component Declarations**: Use standard `function ComponentName() { ... }` or `React.forwardRef` rather than arrow functions for top-level component exports.
-- **Forms**: When working in `/components/steps/` or `/components/forms/`, ensure that advancing a step triggers `window.scrollTo(0, 0)`.
+### 4.4. Development & Deployment
+- **Git Flow**: All local work occurs on `dev`. When ready, run `bash ./scripts/git-workflow.sh "<conventional commit message>"` to enforce TS strict mode, ESLint, and branch protection.
+- **Logging**: Never use `console.log()` in production code. Use `import { logger } from "@/lib/logger";`.
+- **Environment**: Never commit `.env` files or service account keys.
+- **Dependencies**: Use `pnpm`. Strict TypeScript checking is enforced. Do not use `any` types without explicit reasoning.

@@ -1,6 +1,6 @@
 ---
 name: topnetworks-sync-orchestrator
-description: Coordinate synchronized development across TopNetworks Next.js financial properties. Use this skill whenever a task should be propagated, compared, validated, or kept in parity across topfinanzas-us-next, uk-topfinanzas-com, topfinanzas-mx-next, and budgetbee-next, especially SEO/GEO/LLM indexing, shared components, analytics, ads, content structure, scripts, or documentation changes.
+description: Coordinate parity work across topfinanzas-us-next, uk-topfinanzas-com, topfinanzas-mx-next, and budgetbee-next for shared code, SEO/GEO/LLM indexing, analytics, ads, scripts, and documentation while preserving market-specific localization.
 ---
 
 # TopNetworks Sync Orchestrator
@@ -16,6 +16,65 @@ Use this skill to manage multi-repo parity across the local TopNetworks Next.js 
 - `scripts/topnetworks-deploy.mjs` provides the synchronized deployment-readiness workflow. It audits git/deploy scripts, runs local preflight validation, and prints deployment plans without running production deployment commands.
 
 Read `repositories.json` before changing any target repository. Read `SYNC_RUNBOOK.md` before executing a synchronized change.
+
+## Project skill routing map
+
+Use the central orchestrator as the entrypoint, then route implementation work to the repository-local skill that owns deep codebase behavior.
+
+- **TopFinanzas US skill**: `/Users/macbookpro/GitHub/topfinanzas-us-next/.agents/skills/topfinanzas-us-next-agent/SKILL.md`
+  - Invoke for US-local architecture, product pages, US compliance/copy, lead/API mappings, and ad/analytics behavior in `topfinanzas-us-next`.
+  - Trigger when a task touches US-only routes, US listing arrays, US integration behavior, or US deployment-readiness details.
+- **TopFinanzas MX skill**: `/Users/macbookpro/GitHub/topfinanzas-mx-next/.agents/skills/topfinanzas-mx-codebase/SKILL.md`
+  - Invoke for MX-local routes under `/mx`, `basePath` invariants, MX SEO/canonical rules, `ALL_POSTS` listing behavior, and MX API/integration workflows.
+  - Trigger when a task affects Spanish content, MX regulatory/localization requirements, or route handling unique to `topfinanzas-mx-next`.
+- **TopFinance UK skill**: `/Users/macbookpro/GitHub/uk-topfinanzas-com/.github/skills/topfinance-uk-codebase-map/SKILL.md`
+  - Invoke for UK architecture mapping, FCA-compliant wording constraints, en-GB/GBP adaptation, UK SEO registry updates, and UK analytics/ad stack specifics.
+  - Trigger when a task touches UK-only content, UK API workflows, UK recommender/quiz route behavior, or UK deployment/readiness flow.
+- **BudgetBee skill**: `/Users/macbookpro/GitHub/budgetbee-next/.agents/skills/budgetbee-codebase-ops/SKILL.md`
+  - Invoke for BudgetBee-specific catalog/listing synchronization, SEO route registry updates, UTM/analytics flows, and BudgetBee brand/audience constraints.
+  - Trigger when a task modifies `budgetbee-next` content catalogs, API pipelines, analytics wiring, or deployment-readiness checks.
+
+Routing rule:
+
+- If scope is single-repo, invoke that repo skill first.
+- If scope is multi-repo or parity-sensitive, use this orchestrator to classify and coordinate, then delegate per-repo implementation to the mapped local skill.
+
+Routing decision table:
+
+| Task scope            | Primary skill                   | Delegation rule                                                        |
+| --------------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| One repository only   | Matching repo-local skill       | Keep changes local unless parity is explicitly requested               |
+| Multiple repositories | `topnetworks-sync-orchestrator` | Classify shared/localized scope, then delegate per-repo implementation |
+| Unclear scope         | `topnetworks-sync-orchestrator` | Run classification first, then route to repo-local skill(s)            |
+
+## Project-local orchestrator harmonization
+
+The central orchestrator at `/Users/macbookpro/GitHub/.agents/skills/topnetworks-sync-orchestrator/SKILL.md` is authoritative and must stay synchronized with repository-local variants:
+
+- `/Users/macbookpro/GitHub/topfinanzas-us-next/.agents/skills/topnetworks-sync-orchestrator/SKILL.md`
+- `/Users/macbookpro/GitHub/topfinanzas-mx-next/.agents/skills/topnetworks-sync-orchestrator/SKILL.md`
+- `/Users/macbookpro/GitHub/budgetbee-next/.agents/skills/topnetworks-sync-orchestrator/SKILL.md`
+- `/Users/macbookpro/GitHub/docs-topnetworks-co/.agents/skills/topnetworks-sync-orchestrator/SKILL.md`
+
+When reconciling variants, keep one unified interface here and preserve repo-specific requirements as conditional guidance:
+
+- **US conditional guidance**:
+  - Preserve GTM container isolation (`GTM-5568TKCX`) and do not generalize to shared GTM components.
+  - Preserve approved ad activation flows (no manual `window.topAds.spa()` usage in page-level code).
+- **MX conditional guidance**:
+  - Preserve `basePath: "/mx"`, MX canonical/hreflang behavior, and noindex handling for funnel/test/admin paths.
+  - Keep category/listing behavior aligned with `lib/data/posts.ts` (`ALL_POSTS`) and route metadata registry updates where applicable.
+- **UK conditional guidance**:
+  - Preserve en-GB, GBP, FCA-compliant wording, representative APR conventions, and UK-specific canonical domain handling.
+  - Keep UK route-level metadata and sitemap integrity in sync with `lib/seo-route-registry.ts` and `lib/seo.ts` patterns.
+- **BudgetBee conditional guidance**:
+  - Preserve BudgetBee brand voice and audience framing (Gen-Z/Millennial).
+  - Keep SEO route registry and duplicated listing arrays synchronized across discovery surfaces.
+
+Cross-repo synchronization rule:
+
+- Merge shared commands/workflows/guardrails into this central file.
+- Keep repo-only implementation details inside each project skill and reference them through the routing map.
 
 ## Branch policy (Local vs. Remote)
 
@@ -47,9 +106,18 @@ Follow this sequence for every sync task:
 5. Validate per repository.
    - At minimum, run the commands configured in `repositories.json` when practical.
    - For documentation-only changes, validate file existence and manifest/CLI behavior.
+
+- If validation fails, stop propagation for the affected repository, provide a detailed error report, list corrective actions, and retry only after fixes are applied.
+
 6. Report divergence.
    - Summarize what is now aligned.
    - Call out intentional differences, skipped repositories, and validation failures.
+
+Use this decision shortcut to reduce ambiguity:
+
+- If the task changes shared architecture, propagate to all four repos with localized constants and copy preserved.
+- If the task changes market or brand behavior, apply only the localized adaptation for each target repo.
+- If the task is repo-specific, do not propagate unless the user explicitly requests parity.
 
 ## Deployment readiness model
 
@@ -64,17 +132,23 @@ Before any deployment request:
 5. Ensure the approved **local** deployment preparation process synchronizes `dev`, `main`, and the repository backup branch, pushes to origin, and then returns the working tree to `dev`.
 6. Only instruct or provide the remote `deploy_update.sh` command to update the production server _after_ local synchronization is pushed to origin.
 7. Never answer shell `Y/N` prompts on the user's behalf. Prefer flag-driven or orchestrator-scoped commands.
+8. If deployment partially fails, stop further deployment steps, report the exact failed repo and command, keep unaffected repos unchanged, and provide a rollback/recovery plan that restores the failed repo to the last known good `main` state before retry.
 
 ## Safety rules
 
-- Do not commit, push, deploy, or run production deployment scripts unless the user explicitly asks.
-- Do not edit `.env`, `.env.local`, `.env.production`, secrets, credentials, or generated build output.
-- Do not run `scripts/git-workflow.sh`, `scripts/deploy_update.sh`, or `scripts/sync-branches.sh` as part of ordinary sync implementation.
-- Use repository-specific git workflow scripts only when the user explicitly requests commit/push operations.
-- Always execute local git workflows using `cd /Users/macbookpro/GitHub/{top-networks-inc-site} && bash ./scripts/git-workflow.sh "$(cat lib/documents/commit-message.txt)"`. Ensure `lib/documents/commit-message.txt` is written beforehand to prevent non-forced errors, blocking prompts, or editor (VIM/Nano) popups during automated deployment.
-- Keep all filesystem operations scoped to repositories listed in `repositories.json`.
-- Do not run deployment scripts when validation fails. Deployment is blocked until lint, formatting checks, and build checks pass or the user explicitly narrows the requested scope.
-- Do not leave a synchronized repository checked out on `main` or a backup branch after deployment; return it to `dev`.
+- Validation rules:
+  - Validation-only checks (`audit-scripts`, `preflight`) are allowed without explicit instruction.
+  - If validation or synchronization fails, stop for the affected repository, report exact failing command/output, propose corrective actions, and do not continue deployment steps for that repository.
+  - Do not run deployment scripts when validation fails. Deployment is blocked until lint, formatting checks, and build checks pass or the user explicitly narrows the requested scope.
+- Deployment rules:
+  - Do not commit, push, deploy, or run production deployment scripts unless the user explicitly asks.
+  - Do not run `scripts/git-workflow.sh`, `scripts/deploy_update.sh`, or `scripts/sync-branches.sh` as part of ordinary sync implementation.
+  - Use repository-specific git workflow scripts only when the user explicitly requests commit/push operations.
+  - Do not leave a synchronized repository checked out on `main` or a backup branch after deployment; return it to `dev`.
+- Execution rules:
+  - Do not edit `.env`, `.env.local`, `.env.production`, secrets, credentials, or generated build output.
+  - Always execute local git workflows using `cd /Users/macbookpro/GitHub/{top-networks-inc-site} && bash ./scripts/git-workflow.sh "$(cat lib/documents/commit-message.txt)"` when commit/push execution is explicitly requested. Ensure `lib/documents/commit-message.txt` is written beforehand so the workflow remains non-interactive and does not require shell prompt answers.
+  - Keep all filesystem operations scoped to repositories listed in `repositories.json`.
 
 ## CLI quick reference
 
@@ -92,6 +166,14 @@ node .agents/skills/topnetworks-sync-orchestrator/scripts/topnetworks-deploy.mjs
 ```
 
 Use `--execute` only after reviewing what will run.
+
+Repository-local preflight wrappers (useful when validating one repository with its local integration context):
+
+```bash
+cd /Users/macbookpro/GitHub/topfinanzas-mx-next && node scripts/topnetworks-predeploy.mjs preflight --dry-run
+cd /Users/macbookpro/GitHub/uk-topfinanzas-com && node scripts/topnetworks-predeploy.mjs preflight --dry-run
+cd /Users/macbookpro/GitHub/budgetbee-next && node scripts/topnetworks-predeploy.mjs preflight --dry-run
+```
 
 ## Typical user requests that should trigger this skill
 

@@ -1,0 +1,11 @@
+{
+  "skills": {
+    "topnetworks-sync-orchestrator": {
+      "source": "topfinanzas/skills",
+      "sourceType": "github-release",
+      "versionTag": "v1.0.0-e239a74",
+      "computedHash": "c9c5702c194088cad8a1c35d50b8620ee43c25a1c1c70455275332262d1b834f",
+      "targetPath": ".agents/skills/topnetworks-sync-orchestrator/SKILL.md"
+    }
+  }
+}
