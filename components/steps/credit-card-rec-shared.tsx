@@ -545,6 +545,13 @@ export function AdSlot({
     };
 
     const adId = getAdId(unitIndex);
+
+    // Add the Ads label
+    const labelP = document.createElement("p");
+    labelP.style.cssText = "font-size: 10px; text-transform: uppercase; text-align: center;";
+    labelP.textContent = "Ads";
+    wrapper.appendChild(labelP);
+
     const adDiv = document.createElement("div");
     adDiv.id = adId;
     adDiv.className = "actview-placement";

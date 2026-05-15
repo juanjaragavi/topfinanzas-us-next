@@ -292,25 +292,15 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://scr.actview.net https://securepubads.g.doubleclick.net",
-              "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://securepubads.g.doubleclick.net https://pagead2.googlesyndication.com",
-              "img-src 'self' data: https://media.topfinanzas.com https://www.googletagmanager.com",
-              "frame-src 'self' https://www.googletagmanager.com",
-              "style-src 'self' 'unsafe-inline'",
-              "font-src 'self' data:",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: http:",
+              "connect-src 'self' https: http:",
+              "img-src 'self' data: blob: https: http:",
+              "frame-src 'self' https: http:",
+              "style-src 'self' 'unsafe-inline' https: http:",
+              "font-src 'self' data: https: http:",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self' https://us.topfinanzas.com",
-              // Allow all ad/analytics scripts - revenue critical
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: https://* http://*",
-              // Allow all ad/analytics images
-              "img-src 'self' data: https: https://* http://*",
-              // Allow all ad/analytics connections
-              "connect-src 'self' https: https://* http://*",
-              // Allow all ad frames
-              "frame-src 'self' https: https://* http://*",
-              // Styles
-              "style-src 'self' 'unsafe-inline' https: https://* http://*",
             ].join("; "),
           },
         ],
