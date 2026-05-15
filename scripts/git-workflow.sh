@@ -313,7 +313,7 @@ step "Running pre-push validation..."
 
 # 7a: TypeScript type checking
 step "  TypeScript type check (tsc --noEmit)..."
-if ! pnpm exec tsc --noEmit || true; then
+if ! pnpm exec tsc --noEmit; then
     error "TypeScript type check failed. Fix type errors before pushing."
     exit 1
 fi
