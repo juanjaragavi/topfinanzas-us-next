@@ -42,7 +42,6 @@ export default function SharedCreditCardRecommender({
   stepQuestion,
   stepSubtitle,
   nextRoute,
-  variant = "default",
 }: SharedCreditCardRecommenderProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [interactionCount, setInteractionCount] = useState(0);
@@ -81,7 +80,7 @@ export default function SharedCreditCardRecommender({
         router.push(nextRoute);
       }, 500);
     },
-    [router, trackInteraction],
+    [router, trackInteraction, logTag, nextRoute],
   );
 
   return (
