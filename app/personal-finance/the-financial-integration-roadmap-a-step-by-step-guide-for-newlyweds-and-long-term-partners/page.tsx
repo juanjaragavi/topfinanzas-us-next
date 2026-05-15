@@ -31,7 +31,7 @@ export default function FinancialIntegrationRoadmapPage() {
             </h1>
             <div
               id="av_top_wrapper"
-              align="center"
+              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -186,7 +186,7 @@ export default function FinancialIntegrationRoadmapPage() {
               </h2>
               <div
                 id="av_content_1_wrapper"
-                align="center"
+                
                 style={{
                   width: "100%",
                   marginTop: "2rem",
@@ -252,7 +252,7 @@ export default function FinancialIntegrationRoadmapPage() {
 
             <div
               id="av_content_2_wrapper"
-              align="center"
+              
               style={{
                 width: "100%",
                 marginTop: "2rem",

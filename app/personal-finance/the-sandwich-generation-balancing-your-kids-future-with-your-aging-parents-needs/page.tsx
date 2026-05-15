@@ -32,7 +32,7 @@ export default function SandwichGenerationPage() {
             </h1>
             <div
               id="av_top_wrapper"
-              align="center"
+              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -279,7 +279,7 @@ export default function SandwichGenerationPage() {
               </h2>
               <div
                 id="av_content_1_wrapper"
-                align="center"
+                
                 style={{
                   width: "100%",
                   marginTop: "2rem",
@@ -361,7 +361,7 @@ export default function SandwichGenerationPage() {
 
             <div
               id="av_content_2_wrapper"
-              align="center"
+              
               style={{
                 width: "100%",
                 marginTop: "2rem",

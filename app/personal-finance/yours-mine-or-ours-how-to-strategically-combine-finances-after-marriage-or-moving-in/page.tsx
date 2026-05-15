@@ -105,7 +105,7 @@ export default function PostPage() {
       >
         <div
           id="av_top_wrapper"
-          align="center"
+          
           style={{
             width: "100%",
             marginTop: "2rem",
@@ -187,7 +187,7 @@ export default function PostPage() {
 
         <div
           id="av_content_1_wrapper"
-          align="center"
+          
           style={{
             width: "100%",
             marginTop: "2rem",
@@ -279,7 +279,7 @@ export default function PostPage() {
 
         <div
           id="av_content_2_wrapper"
-          align="center"
+          
           style={{
             width: "100%",
             marginTop: "2rem",
