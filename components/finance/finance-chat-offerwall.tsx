@@ -210,7 +210,13 @@ export function FinanceChatOfferwall({
                     >
                       Ads
                     </p>
-                    <div id="av_top"></div>
+                    <div
+                      id="av_top"
+                      suppressHydrationWarning
+                      data-actview
+                      data-actview-slot="square"
+                      data-actview-size="square"
+                    ></div>
                   </div>
                 </div>
               </MessageBubble>

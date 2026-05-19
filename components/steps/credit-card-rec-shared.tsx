@@ -109,7 +109,7 @@ export const MONTHLY_SPEND_OPTIONS: readonly QuizOption[] = [
 ] as const;
 
 export const AFFILIATE_URL =
-  "https://route.topnetworks.co/api/redirect/58a90a39-9189-46f6-8f65-fcda695d2a28";
+  "https://redirect.topfinanzas.com/red_boton_landing_a_producto";
 
 export const GTM_CONVERSION_EVENT = "quiz_cc_recommender_completed";
 const TRUST_BAR_STORAGE_KEY = "tf_quiz_live_count_state_v1";

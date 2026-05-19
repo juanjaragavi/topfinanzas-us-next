@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const REDIRECT_URL =
-  "https://route.topnetworks.co/api/redirect/d0dc0c93-d1fa-4f5f-8fb4-ff7753eb3f20";
+  "http://redirect.topfinanzas.com/experiment_chat_top_1";
 
 export default function FinanceQuizRecommenderP2Page() {
   return (
