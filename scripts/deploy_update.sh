@@ -26,12 +26,8 @@ sudo rm -rf .next
 echo "[5/6] Building the application..."
 sudo env "PATH=$PATH" pnpm build
 
-# Copy static files for standalone server
-# Copy static files for standalone server
-sudo cp -r public .next/standalone/
-sudo cp -r .next/static .next/standalone/.next/
-
-sudo mkdir -p .next/standalone/app && sudo cp app/critical.css .next/standalone/app/
+echo "[5.1/6] Syncing standalone assets..."
+sudo bash ./scripts/sync-standalone-assets.sh
 
 echo "[6/6] Restarting PM2 process 'topfinanzas-us-next'..."
 sudo pm2 restart topfinanzas-us-next
