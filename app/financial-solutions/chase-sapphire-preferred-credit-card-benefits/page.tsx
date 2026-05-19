@@ -84,11 +84,10 @@ export default function ChaseSapphirePreferredBenefitsPage() {
                 data-actview=""
                 data-actview-slot="square"
                 data-actview-size="square"
-                data-actview-slot
                 className="w-full flex justify-center my-6"
               ></div>
 
-              {/* Intro */}
+              {/* Intro */
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 Your passport to unparalleled rewards and travel perks.
               </p>
@@ -211,7 +210,6 @@ export default function ChaseSapphirePreferredBenefitsPage() {
                 data-actview=""
                 data-actview-slot="square"
                 data-actview-size="square"
-                data-actview-slot
                 className="w-full flex justify-center my-6"
               ></div>
 
