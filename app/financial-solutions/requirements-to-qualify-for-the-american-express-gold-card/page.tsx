@@ -129,6 +129,10 @@ export default function AmexGoldRequirementsPage() {
               {/* Square04 could go here to be "after 3rd paragraph" if we count list items as blocks, or just insert it after this block */}
               <div
                 id="av_content_2"
+                suppressHydrationWarning
+                data-actview=""
+                data-actview-slot="square"
+                data-actview-size="square"
                 className="w-full flex justify-center my-6"
               ></div>
 

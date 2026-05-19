@@ -32,7 +32,6 @@ export default function RaisingFinanciallySmartKidsPage() {
             </h1>
             <div
               id="av_top_wrapper"
-              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -50,7 +49,13 @@ export default function RaisingFinanciallySmartKidsPage() {
                 >
                   Anúncios
                 </p>
-                <div id="av_top"></div>
+                <div
+                  id="av_top"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
+                ></div>
               </div>
             </div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
@@ -294,7 +299,6 @@ export default function RaisingFinanciallySmartKidsPage() {
               </h2>
               <div
                 id="av_content_1_wrapper"
-                
                 style={{
                   width: "100%",
                   marginTop: "2rem",
@@ -312,7 +316,13 @@ export default function RaisingFinanciallySmartKidsPage() {
                   >
                     Anúncios
                   </p>
-                  <div id="av_content_1"></div>
+                  <div
+                    id="av_content_1"
+                    suppressHydrationWarning
+                    data-actview=""
+                    data-actview-slot="square"
+                    data-actview-size="square"
+                  ></div>
                 </div>
               </div>
               <p className="text-gray-700 mb-4 leading-7">
@@ -373,7 +383,6 @@ export default function RaisingFinanciallySmartKidsPage() {
 
             <div
               id="av_content_2_wrapper"
-              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -391,7 +400,13 @@ export default function RaisingFinanciallySmartKidsPage() {
                 >
                   Anúncios
                 </p>
-                <div id="av_content_2"></div>
+                <div
+                  id="av_content_2"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
+                ></div>
               </div>
             </div>
             <AIContentDisclaimer />

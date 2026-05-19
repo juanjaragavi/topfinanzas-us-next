@@ -32,7 +32,6 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
             </h1>
             <div
               id="av_top_wrapper"
-              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -50,7 +49,13 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
                 >
                   Anúncios
                 </p>
-                <div id="av_top"></div>
+                <div
+                  id="av_top"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
+                ></div>
               </div>
             </div>
 
@@ -232,7 +237,6 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
             <section className="my-8">
               <div
                 id="av_content_1_wrapper"
-                
                 style={{
                   width: "100%",
                   marginTop: "2rem",
@@ -250,7 +254,13 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
                   >
                     Anúncios
                   </p>
-                  <div id="av_content_1"></div>
+                  <div
+                    id="av_content_1"
+                    suppressHydrationWarning
+                    data-actview=""
+                    data-actview-slot="square"
+                    data-actview-size="square"
+                  ></div>
                 </div>
               </div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -349,7 +359,6 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
 
             <div
               id="av_content_2_wrapper"
-              
               style={{
                 width: "100%",
                 marginTop: "2rem",
@@ -367,7 +376,13 @@ export default function DebtDetoxSnowballVsAvalanchePage() {
                 >
                   Anúncios
                 </p>
-                <div id="av_content_2"></div>
+                <div
+                  id="av_content_2"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
+                ></div>
               </div>
             </div>
             <AIContentDisclaimer />

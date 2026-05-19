@@ -102,7 +102,6 @@ export default function PostPage() {
       >
         <div
           id="av_top_wrapper"
-          
           style={{
             width: "100%",
             marginTop: "2rem",
@@ -120,7 +119,13 @@ export default function PostPage() {
             >
               Anúncios
             </p>
-            <div id="av_top"></div>
+            <div
+              id="av_top"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
+            ></div>
           </div>
         </div>
 
@@ -177,7 +182,6 @@ export default function PostPage() {
 
         <div
           id="av_content_1_wrapper"
-          
           style={{
             width: "100%",
             marginTop: "2rem",
@@ -195,7 +199,13 @@ export default function PostPage() {
             >
               Anúncios
             </p>
-            <div id="av_content_1"></div>
+            <div
+              id="av_content_1"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
+            ></div>
           </div>
         </div>
         <h2>What Makes Debt “Bad”? 🛍️</h2>
@@ -290,7 +300,6 @@ export default function PostPage() {
 
         <div
           id="av_content_2_wrapper"
-          
           style={{
             width: "100%",
             marginTop: "2rem",
@@ -308,7 +317,13 @@ export default function PostPage() {
             >
               Anúncios
             </p>
-            <div id="av_content_2"></div>
+            <div
+              id="av_content_2"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
+            ></div>
           </div>
         </div>
         <p>

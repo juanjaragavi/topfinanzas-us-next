@@ -97,6 +97,10 @@ export default function BenefitsTitaniumRewardsPage() {
             {/* Ad Unit: av_content_1 */}
             <div
               id="av_content_1"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
               className="w-full flex justify-center my-6"
             ></div>
 
@@ -194,6 +198,10 @@ export default function BenefitsTitaniumRewardsPage() {
             {/* Ad Unit: av_content_2 */}
             <div
               id="av_content_2"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
               className="w-full flex justify-center my-6"
             ></div>
 

@@ -12,6 +12,14 @@ declare global {
     google_tag_manager?: Record<string, unknown>;
     dataLayer?: DataLayerEntry[];
     gtag?: (...args: unknown[]) => void;
+    topAds?: {
+      spa?: () => void;
+      config?: Record<string, unknown>;
+    };
+    actviewAds?: {
+      spa?: () => void;
+      config?: Record<string, unknown>;
+    };
     googletag?: GoogletagNamespace;
     gamSlots?: Record<string, GoogletagSlot>;
     defineGAMAdSlots?: () => void;

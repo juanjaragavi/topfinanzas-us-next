@@ -72,10 +72,11 @@ function InlineActiveViewAd({ slot }: { slot: ActiveViewSlot }) {
         </p>
         <div
           id={slotId}
+          suppressHydrationWarning
           className="activeview-inline-slot"
-          data-topads
-          data-topads-size="square"
+          data-actview
           data-actview-slot="square"
+          data-actview-size="square"
         ></div>
       </div>
     </div>

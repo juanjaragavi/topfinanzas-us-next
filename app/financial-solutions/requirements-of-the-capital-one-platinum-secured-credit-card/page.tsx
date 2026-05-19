@@ -88,6 +88,10 @@ export default function RequirementsCapitalOnePlatinumSecuredPage() {
             {/* Ad Unit: av_content_2 */}
             <div
               id="av_content_2"
+              suppressHydrationWarning
+              data-actview=""
+              data-actview-slot="square"
+              data-actview-size="square"
               className="w-full flex justify-center my-6"
             ></div>
 

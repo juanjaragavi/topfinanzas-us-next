@@ -34,7 +34,24 @@ export default function AnalyticsValidationPanel() {
   };
 
   useEffect(() => {
-    // Auto-run validation after a delay to let all scripts load
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const forceAutoRun = params.get("analytics_validation") === "1";
+    const isLocalhost =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      window.location.hostname === "::1" ||
+      window.location.hostname === "[::1]";
+
+    if (isLocalhost && !forceAutoRun) {
+      return;
+    }
+
+    // Auto-run validation after a delay to let all scripts load.
+    // On localhost this is opt-in via ?analytics_validation=1 to reduce false alarms.
     const timer = setTimeout(() => {
       runValidation();
     }, 3000);

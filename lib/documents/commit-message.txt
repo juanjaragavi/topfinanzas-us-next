@@ -1,7 +1,15 @@
-fix: add 301 redirects for Search Console noindex/404 URLs (May 2026)
+fix(ads): phase 2 actview ad slot fixes
 
-Redirects added in next.config.mjs for 7 URLs flagged in Google Search Console
-as 'Excluded by noindex tag' due to missing routes returning 404+auto-noindex.
+- Move normalizeSquareAdSlots() inside triggerSpaRefresh() to fix
+  timing issue where elements weren't in DOM yet (updatedSlots: 0)
+- Add suppressHydrationWarning to all ad slot divs to prevent React
+  hydration mismatch from ActView script style injection
+- Add data-actview* attrs to all 12 personal-finance static pages
+  (av_top, av_content_1, av_content_2 on each)
+- Add suppressHydrationWarning to personal-finance [slug]/page.tsx
+  which already had data-actview-slot and data-actview-size
+- All 56 ad slot pages now have correct attrs (audit: need fix = 0)
+
 
 Routes with intentional noindex (funnel/invit pages) are left unchanged — correct behavior.
 

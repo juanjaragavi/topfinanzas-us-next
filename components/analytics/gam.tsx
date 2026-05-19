@@ -22,6 +22,9 @@ interface GoogletagNamespace {
   cmd: Array<() => void>;
   pubads: () => GoogletagPubAdsService;
   enableServices: () => void;
+  setConfig?: (config: {
+    targeting?: Record<string, string | string[]>;
+  }) => void;
   defineSlot: (
     adUnitPath: string,
     size: GoogletagSize,
@@ -64,20 +67,30 @@ export default function GoogleAdManager() {
             const utmCampaign = sessionStorage.getItem("utm_campaign");
             const utmMedium = sessionStorage.getItem("utm_medium");
 
+            const targeting: Record<string, string | string[]> = {
+              country: "US",
+              language: "en",
+              site: "topfinanzas_us",
+            };
+
             if (utmSource) {
-              googletag.pubads().setTargeting("utm_source", utmSource);
+              targeting.utm_source = utmSource;
             }
             if (utmCampaign) {
-              googletag.pubads().setTargeting("utm_campaign", utmCampaign);
+              targeting.utm_campaign = utmCampaign;
             }
             if (utmMedium) {
-              googletag.pubads().setTargeting("utm_medium", utmMedium);
+              targeting.utm_medium = utmMedium;
             }
 
-            // Set additional targeting for UK market
-            googletag.pubads().setTargeting("country", "UK");
-            googletag.pubads().setTargeting("language", "en");
-            googletag.pubads().setTargeting("site", "topfinanzas_uk");
+            if (typeof googletag.setConfig === "function") {
+              googletag.setConfig({ targeting });
+            } else {
+              const pubads = googletag.pubads();
+              Object.entries(targeting).forEach(([key, value]) => {
+                pubads.setTargeting(key, value);
+              });
+            }
 
             analyticsLogger.debug(
               "GAM: Services enabled and targeting configured",
@@ -130,14 +143,14 @@ export default function GoogleAdManager() {
               // Use the command queue to ensure execution happens after GPT is ready
               window.googletag.cmd.push(function() {
                 try {
-                  // Define common ad slots for UK TopFinanzas
+                  // Define common ad slots for US TopFinanzas
                   
                   // Header banner slot
                   if (!window.gamSlots) window.gamSlots = {};
                   
                   if (!window.gamSlots.header) {
                     window.gamSlots.header = window.googletag.defineSlot(
-                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_header',
+                      '/${GAM_NETWORK_CODE}/us_topfinanzas_header',
                       [[728, 90], [970, 90], [320, 50]],
                       'gam-header-ad'
                     ).addService(window.googletag.pubads());
@@ -146,7 +159,7 @@ export default function GoogleAdManager() {
                   // Sidebar ad slot
                   if (!window.gamSlots.sidebar) {
                     window.gamSlots.sidebar = window.googletag.defineSlot(
-                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_sidebar',
+                      '/${GAM_NETWORK_CODE}/us_topfinanzas_sidebar',
                       [[300, 250], [336, 280], [300, 600]],
                       'gam-sidebar-ad'
                     ).addService(window.googletag.pubads());
@@ -155,7 +168,7 @@ export default function GoogleAdManager() {
                   // Content ad slot
                   if (!window.gamSlots.content) {
                     window.gamSlots.content = window.googletag.defineSlot(
-                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_content',
+                      '/${GAM_NETWORK_CODE}/us_topfinanzas_content',
                       [[728, 90], [300, 250], [336, 280]],
                       'gam-content-ad'
                     ).addService(window.googletag.pubads());
@@ -164,7 +177,7 @@ export default function GoogleAdManager() {
                   // Footer ad slot
                   if (!window.gamSlots.footer) {
                     window.gamSlots.footer = window.googletag.defineSlot(
-                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_footer',
+                      '/${GAM_NETWORK_CODE}/us_topfinanzas_footer',
                       [[728, 90], [970, 90], [320, 50]],
                       'gam-footer-ad'
                     ).addService(window.googletag.pubads());

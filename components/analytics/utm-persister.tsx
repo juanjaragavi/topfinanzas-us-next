@@ -224,9 +224,11 @@ export default function UtmPersister() {
         });
         window.dataLayer.push({
           event: "utm_parameters_loaded",
-          ...utmData
+          ...utmData,
         });
-        analyticsLogger.debug("UTM Persister: UTM parameters pushed to GTM dataLayer");
+        analyticsLogger.debug(
+          "UTM Persister: UTM parameters pushed to GTM dataLayer",
+        );
       }
     }
   }, [searchParams]);

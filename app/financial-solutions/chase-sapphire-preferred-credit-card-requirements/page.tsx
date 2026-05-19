@@ -165,6 +165,10 @@ export default function RequirementsChaseSapphirePreferredPage() {
                 {/* ELEMENT 10: SECOND AD UNIT */}
                 <div
                   id="av_content_2"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
                   className="w-full flex justify-center my-6"
                 ></div>
 

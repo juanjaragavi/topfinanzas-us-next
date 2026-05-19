@@ -5,10 +5,7 @@ const rootDir = path.resolve(__dirname, "..");
 const approvedGtmId = "GTM-5568TKCX";
 const forbiddenGtmIds = ["GTM-MR76NXR3"];
 
-const filesToCheck = [
-  "app/layout.tsx",
-  "components/analytics/google-ads.tsx",
-];
+const filesToCheck = ["app/layout.tsx", "components/analytics/google-ads.tsx"];
 
 const errors = [];
 

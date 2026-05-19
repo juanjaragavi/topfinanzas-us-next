@@ -33,6 +33,16 @@ class AnalyticsValidator {
   private results: ValidationResult[] = [];
   private isValidating = false;
 
+  private isLocalhost(): boolean {
+    return (
+      typeof window !== "undefined" &&
+      (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname === "::1" ||
+        window.location.hostname === "[::1]")
+    );
+  }
+
   /**
    * Run comprehensive validation suite
    */
@@ -163,9 +173,15 @@ class AnalyticsValidator {
           });
 
           if (test.required && !result.passed) {
-            logger.error(
-              `Analytics Validator: Required test failed - ${test.name}`,
-            );
+            if (this.isLocalhost()) {
+              logger.warn(
+                `Analytics Validator: Required test failed on localhost - ${test.name}`,
+              );
+            } else {
+              logger.error(
+                `Analytics Validator: Required test failed - ${test.name}`,
+              );
+            }
           }
         } catch (error) {
           const errorMessage =
@@ -483,11 +499,34 @@ class AnalyticsValidator {
   private validateGtagFunction(): ValidationResult {
     const hasGtag = typeof window.gtag === "function";
 
+    if (hasGtag) {
+      return {
+        passed: true,
+        message: "Gtag function is available",
+        timestamp: new Date().toISOString(),
+      };
+    }
+
+    // This project primarily routes Google Ads through GTM/dataLayer events.
+    // In that setup a global `window.gtag` is optional and may not exist.
+    const hasGTM =
+      document.querySelector('script[src*="googletagmanager.com/gtm.js"]') !==
+      null;
+    const hasDirectGtagScript =
+      document.querySelector('script[src*="googletagmanager.com/gtag/js"]') !==
+      null;
+
+    if (hasGTM && !hasDirectGtagScript) {
+      return {
+        passed: true,
+        message: "GTM-managed Google Ads detected; global gtag is optional",
+        timestamp: new Date().toISOString(),
+      };
+    }
+
     return {
-      passed: hasGtag,
-      message: hasGtag
-        ? "Gtag function is available"
-        : "Gtag function not found",
+      passed: false,
+      message: "Gtag function not found",
       timestamp: new Date().toISOString(),
     };
   }
@@ -503,12 +542,6 @@ class AnalyticsValidator {
         timestamp: new Date().toISOString(),
       };
     }
-
-    // Check if we're on localhost
-    const isLocalhost =
-      typeof window !== "undefined" &&
-      (window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1");
 
     const googleAdsConfigs = window.dataLayer.filter((item) => {
       if (Array.isArray(item)) {
@@ -533,7 +566,7 @@ class AnalyticsValidator {
     });
 
     // On localhost, Google Ads config may not be initialized yet
-    if (isLocalhost && googleAdsConfigs.length === 0) {
+    if (this.isLocalhost() && googleAdsConfigs.length === 0) {
       return {
         passed: true,
         message:
@@ -564,6 +597,15 @@ class AnalyticsValidator {
       typeof window.googletag !== "undefined" &&
       typeof window.googletag.cmd !== "undefined";
 
+    if (!hasGPT && this.isLocalhost()) {
+      return {
+        passed: true,
+        message:
+          "SKIPPED on localhost (GPT library may be blocked or deferred)",
+        timestamp: new Date().toISOString(),
+      };
+    }
+
     return {
       passed: hasGPT,
       message: hasGPT
@@ -577,17 +619,11 @@ class AnalyticsValidator {
    * GAM Ad Slots Validation
    */
   private validateGAMSlots(): ValidationResult {
-    // Check if we're on localhost
-    const isLocalhost =
-      typeof window !== "undefined" &&
-      (window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1");
-
     const slotKeys = window.gamSlots ? Object.keys(window.gamSlots) : [];
     const hasSlots = slotKeys.length > 0;
 
     // On localhost, GAM slots may not be defined (especially on homepage)
-    if (isLocalhost && !hasSlots) {
+    if (this.isLocalhost() && !hasSlots) {
       // Check if we're on a page that should have ad slots
       const pathname = window.location.pathname;
       const shouldHaveAds =
@@ -626,6 +662,15 @@ class AnalyticsValidator {
     const googletag = window.googletag;
 
     if (!googletag) {
+      if (this.isLocalhost()) {
+        return {
+          passed: true,
+          message:
+            "SKIPPED on localhost (GAM services unavailable without GPT runtime)",
+          timestamp: new Date().toISOString(),
+        };
+      }
+
       return {
         passed: false,
         message: "GPT library not available",
@@ -636,15 +681,13 @@ class AnalyticsValidator {
     // Check if pubads service is available
     let servicesEnabled = false;
     try {
-      googletag.cmd.push(() => {
-        servicesEnabled = typeof googletag.pubads === "function";
-      });
+      // pubads being available indicates GPT services are initialized.
+      servicesEnabled = typeof googletag.pubads === "function";
     } catch (error) {
       logger.warn("[AnalyticsValidator] Error while verifying GAM services", {
         error,
       });
-      // Fallback check
-      servicesEnabled = typeof googletag.pubads === "function";
+      servicesEnabled = false;
     }
 
     return {
@@ -772,9 +815,15 @@ class AnalyticsValidator {
     );
 
     if (requiredTests.length > 0) {
-      logger.error(
-        `Analytics Validator: ${requiredTests.length} required tests failed`,
-      );
+      if (this.isLocalhost()) {
+        logger.warn(
+          `Analytics Validator: ${requiredTests.length} required tests failed on localhost`,
+        );
+      } else {
+        logger.error(
+          `Analytics Validator: ${requiredTests.length} required tests failed`,
+        );
+      }
     }
 
     // Log failed tests

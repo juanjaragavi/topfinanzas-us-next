@@ -200,7 +200,7 @@ export function Header() {
                   priority={true}
                   loading="eager"
                   sizes="(max-width: 768px) 252px, 306px"
-                  quality={95}
+                  quality={75}
                 />
               </Link>
             </div>

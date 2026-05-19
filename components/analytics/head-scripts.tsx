@@ -24,8 +24,8 @@ export default function HeadScripts() {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                window.topAds = window.topAds || {};
-                window.topAds.config = {
+                window.actviewAds = window.actviewAds || {};
+                window.actviewAds.config = {
                   domain: "TOPFIN_US",
                   networkCode: "23062212598",
                   lazyLoad: "soft",
@@ -53,8 +53,6 @@ export default function HeadScripts() {
                     }
                   }
                 };
-                window.actviewAds = window.actviewAds || window.topAds;
-                window.actviewAds.config = window.topAds.config;
               `,
             }}
           />

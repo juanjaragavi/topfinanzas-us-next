@@ -548,7 +548,8 @@ export function AdSlot({
 
     // Add the Ads label
     const labelP = document.createElement("p");
-    labelP.style.cssText = "font-size: 10px; text-transform: uppercase; text-align: center;";
+    labelP.style.cssText =
+      "font-size: 10px; text-transform: uppercase; text-align: center;";
     labelP.textContent = "Ads";
     wrapper.appendChild(labelP);
 

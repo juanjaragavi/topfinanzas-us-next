@@ -149,6 +149,10 @@ export default function RequirementsQuickBridgeLoansPage() {
                 <div
                   className="w-full flex justify-center my-6"
                   id="av_content_2"
+                  suppressHydrationWarning
+                  data-actview=""
+                  data-actview-slot="square"
+                  data-actview-size="square"
                 ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
