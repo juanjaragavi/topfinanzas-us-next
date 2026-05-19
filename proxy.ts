@@ -29,7 +29,7 @@ function buildHreflangHeader(pathname: string): string {
   return entries.join(", ");
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Check if the request is for a static file
   const { pathname } = request.nextUrl;
 

@@ -11,7 +11,7 @@ async function checkMetadataExistence(
   categoryName: string,
 ): Promise<void> {
   // Changed return type
-  const fullDirPath = path.join(process.cwd(), dirPath);
+  const fullDirPath = path.join(/*turbopackIgnore: true*/ process.cwd(), dirPath);
   apiLogger.debug("Checking metadata existence", { fullDirPath });
 
   try {

@@ -6,11 +6,8 @@ const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   // Optionally, add any other Next.js config below
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   // Output configuration for standalone mode
   output: "standalone",
@@ -218,30 +215,6 @@ const nextConfig = {
       {
         // Logo image caching
         source: "/images/logo-english.webp",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        // Next.js image optimization cache
-        source: "/_next/image",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "Vary",
-            value: "Accept",
-          },
-        ],
-      },
-      {
-        // JavaScript and CSS assets
-        source: "/_next/static/(css|js)/(.*)",
         headers: [
           {
             key: "Cache-Control",
