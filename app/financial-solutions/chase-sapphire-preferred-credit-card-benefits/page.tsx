@@ -87,7 +87,7 @@ export default function ChaseSapphirePreferredBenefitsPage() {
                 className="w-full flex justify-center my-6"
               ></div>
 
-              {/* Intro */
+              {/* Intro */}
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 Your passport to unparalleled rewards and travel perks.
               </p>
