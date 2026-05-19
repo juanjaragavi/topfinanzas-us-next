@@ -80,7 +80,7 @@ export default function FinanceChatIntroClient() {
             </h2>
 
             <Link
-              href="http://redirect.topfinanzas.com/experiment_chat_top_1"
+              href="credit-card-recommender-p2"
               className="group relative block w-full rounded-2xl bg-blue-600 text-white py-4 px-6 text-lg font-bold transition-all text-center overflow-hidden hover:bg-blue-700 active:scale-[0.98] shadow-[0_8px_20px_-6px_rgba(37,99,235,0.4)]"
             >
               <div className="absolute inset-0 bg-white/20 w-full h-full translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12"></div>
