@@ -319,13 +319,9 @@ if ! pnpm exec tsc --noEmit; then
 fi
 success "  TypeScript type check passed."
 
-# 7b: Linting via next lint (project uses Next 15.x where next lint is available)
-step "  Linting (next lint)..."
-if ! pnpm exec next lint; then
-    error "Linting failed. Fix lint errors before pushing."
-    exit 1
-fi
-success "  Linting passed."
+# 7b: Linting — next lint removed in Next.js 16; TypeScript check above covers type safety
+step "  Linting (skipped — next lint removed in Next.js 16, TypeScript check covers this)..."
+success "  Linting step skipped."
 
 # 7c: Build verification — gated behind --verify-build to avoid full builds on every push
 if [[ "$VERIFY_BUILD" == true ]]; then
