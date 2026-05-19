@@ -136,6 +136,46 @@ const nextConfig = {
         destination: "/financial-solutions",
         permanent: true,
       },
+      // === Search Console noindex fix — missing/removed pages (May 2026) ===
+      // These URLs were previously indexed but no longer have active routes.
+      // 301 redirects prevent 404+auto-noindex and preserve any link equity.
+      {
+        source: "/financial-solutions/lightstream-loans-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/american-express-platinum-card-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/benefits-of-credibly",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      {
+        source: "/financial-solutions/ibusiness-funding-benefits",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
+      // Tag archive pages don't exist in the Next.js migration; redirect to personal-finance
+      {
+        source: "/tag/:slug",
+        destination: "/personal-finance",
+        permanent: true,
+      },
+      {
+        source: "/tag",
+        destination: "/personal-finance",
+        permanent: true,
+      },
+      // Personal loan recommender was removed; redirect to financial solutions listing
+      {
+        source: "/personal-loan-recommender-p1",
+        destination: "/financial-solutions",
+        permanent: true,
+      },
     ];
   },
   // Add rewrites for static files - using simpler approach

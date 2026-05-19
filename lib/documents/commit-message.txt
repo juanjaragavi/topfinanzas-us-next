@@ -1,1 +1,15 @@
-chore(skills): migrate to centralized versioned orchestrator skill artifact
+fix: add 301 redirects for Search Console noindex/404 URLs (May 2026)
+
+Redirects added in next.config.mjs for 7 URLs flagged in Google Search Console
+as 'Excluded by noindex tag' due to missing routes returning 404+auto-noindex.
+
+Routes with intentional noindex (funnel/invit pages) are left unchanged — correct behavior.
+
+New redirects (all permanent: true):
+- /financial-solutions/lightstream-loans-benefits → /financial-solutions
+- /financial-solutions/american-express-platinum-card-benefits → /financial-solutions
+- /financial-solutions/benefits-of-credibly → /financial-solutions
+- /financial-solutions/ibusiness-funding-benefits → /financial-solutions
+- /tag/:slug → /personal-finance (tag archives not ported to Next.js)
+- /tag → /personal-finance
+- /personal-loan-recommender-p1 → /financial-solutions
