@@ -98,12 +98,15 @@ export default function ActViewSPAHandler() {
           return;
         }
 
-        logger.warn("[ActView] actviewAds.spa() not available after retry window", {
-          pathname,
-          isFirstLoad,
-          hasPathChanged,
-          updatedSlots,
-        });
+        logger.warn(
+          "[ActView] actviewAds.spa() not available after retry window",
+          {
+            pathname,
+            isFirstLoad,
+            hasPathChanged,
+            updatedSlots,
+          },
+        );
       } catch (error) {
         logger.error("[ActView] Failed to trigger SPA ad refresh:", error);
       }

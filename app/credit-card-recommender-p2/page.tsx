@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     "credit cards US, credit card recommender, card comparison USA, cashback, rewards, points, no annual fee, 0% APR",
 };
 
-const REDIRECT_URL =
-  "http://redirect.topfinanzas.com/experiment_chat_top_1";
+const REDIRECT_URL = "http://redirect.topfinanzas.com/experiment_chat_top_1";
 
 export default function CreditCardRecommenderP2Page() {
   return (
